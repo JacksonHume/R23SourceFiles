@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBAIRSUPPRT2" Hierarchy="GBAIRSUPPRT_SKL">
+		<SubObject SubObjectID="FX_LIGHTS03" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.FX_LIGHTS03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_LIGHTS02" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.FX_LIGHTS02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_LIGHTS01" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.FX_LIGHTS01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_LIGHTS04" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.FX_LIGHTS04</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRT.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRT.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRT.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LANDINGLIGHTS03" BoneIndex="5">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.LANDINGLIGHTS03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LANDINGLIGHTS02" BoneIndex="4">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.LANDINGLIGHTS02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LANDINGLIGHTS01" BoneIndex="3">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.LANDINGLIGHTS01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRT.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRT.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LANDINGLIGHTS04" BoneIndex="2">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.LANDINGLIGHTS04</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FLASHINGLIGHTS" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.FLASHINGLIGHTS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBAIRSUPPRT" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.GBAIRSUPPRT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="DISHSTAND" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.DISHSTAND</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TOWERDISH" BoneIndex="11">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRT.TOWERDISH</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+	</W3DContainer>
+</AssetDeclaration>

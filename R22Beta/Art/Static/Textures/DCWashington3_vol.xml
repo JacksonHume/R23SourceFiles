@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Texture id="DCWashington3_vol" File="DCWashington3_vol.dds" OutputFormat="X8R8G8B8" Type="VolumeTexture" GenerateMipMaps="false"/>
+</AssetDeclaration>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NBREFINERY2" Hierarchy="NBREFINERY2">
+		<SubObject SubObjectID="OBBOX12" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX12</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX11" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX11</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX10" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX10</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX09" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX09</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX08" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX08</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBREFINERY.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FXGLOWS" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBREFINERY.FXGLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BIB" BoneIndex="2">
+			<RenderObject>
+				<Mesh>NBREFINERY.BIB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="REFINERY" BoneIndex="1">
+			<RenderObject>
+				<Mesh>NBREFINERY.REFINERY</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

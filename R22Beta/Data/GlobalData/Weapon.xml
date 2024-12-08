@@ -1,0 +1,2558 @@
+<?xml version="1.0" encoding="us-ascii" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!--
+	<WeaponTemplate
+		id="MutantMarauderRifle"
+		Name="MutantMarauderRifle"
+		AttackRange="300"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="10d"
+		AimDirection="0d"
+		ScatterRadius="0"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="999999"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireSoundPerClip="AudioEvent:GDI_RifleSoldier_gunFire_v5"
+		FireFX="FX_GDIRifleManFire"
+		FireVeteranFX="FX_GDIRifleManFireHeroic"
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="3"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus=""
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_GROUND ANTI_AIRBORNE_INFANTRY"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<ClipReloadTime
+			MinSeconds="0.2s"
+			MaxSeconds="0.4s" />
+		<Nuggets>
+			<DamageNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				Damage="10"
+				DamageTaperOff="-1"
+				Radius="0"
+				MinRadius="0"
+				DamageArc="360d"
+				DamageMaxHeight="-1"
+				DamageMaxHeightAboveTerrain="-1"
+				FlankingBonus="0"
+				FlankedScalar="1"
+				DelayTimeSeconds="0s"
+				DamageType="GUN"
+				DeathType="NORMAL"
+				DamageFXType="GDI_MACHINEGUN"
+				DamageSubType="NORMAL"
+				DrainLifeMultiplier="1"
+				DamageSpeed="0"
+				VictimShroudRevealer=""
+				DamageArcInverted="False"
+				AcceptDamageAdd="True"
+				OnlyKillOwnerWhenTriggered="False"
+				DrainLife="False"
+				CylinderAOE="False" />
+			<SuppressionNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				Radius="20"
+				Suppression="40"
+				DurationSeconds="8s" />
+		</Nuggets>
+	</WeaponTemplate>
+	-->
+	<WeaponTemplate
+		id="NODLaserCannonHubWeapon"
+		Name="NODLaserCannonHubWeapon"
+		AttackRange="350.0"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="180d"
+		FireSound="AudioEvent:NOD_LaserCannon_WeaponFire"
+		FireFX="FX_NODSpitfireFire"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_02"
+		ReAcquireDetailType="POST_FIRE"
+		ClipSize="2"
+		ShotsPerBarrel="1"
+		NoVictimNeeded="true">
+		<FiringDuration
+			MinSeconds="1.1s"
+			MaxSeconds="1.1s" />
+		<ClipReloadTime
+			MinSeconds="2.2s"
+			MaxSeconds="2.2s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.8s"
+				LaserId="0"
+				HitGroundFX="FX_NODSpitfireHit"/>
+			<DamageNugget
+				Damage="140.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.3s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "50%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="NODLaserCannonWeapon"
+		Name="NODLaserCannonWeapon"
+		AttackRange="350.0"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="180d"
+		FireSound="AudioEvent:NOD_LaserCannon_WeaponFire"
+		FireFX="FX_NODSpitfireFire"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_02"
+		ReAcquireDetailType="POST_FIRE"
+		ClipSize="2"
+		ShotsPerBarrel="1"
+		NoVictimNeeded="true">
+		<FiringDuration
+			MinSeconds="1.1s"
+			MaxSeconds="1.1s" />
+		<ClipReloadTime
+			MinSeconds="2.2s"
+			MaxSeconds="2.2s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.8s"
+				LaserId="0"
+				HitGroundFX="FX_NODSpitfireHit"/>
+			<DamageNugget
+				Damage="140.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.3s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "50%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- tiberium core sams damage decreased to compensate for the 4th turret added by quad turrets -->
+	
+	<WeaponTemplate
+		  id="NODRocketBunkerSpawnTibCoreWeaponWarhead"
+		  Name="NODRocketBunkerSpawnTibCoreWeaponWarhead"
+		  ProjectileCollidesWith  = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		  AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+					  Damage="168.0"
+					  Radius="10.0"
+					  DelayTimeSeconds="0s"
+					  DamageType="ROCKET"
+					  DamageFXType="NOD_TIBCOREMISSILE"
+					  DeathType="EXPLODED" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- charged particle beam shredder damage decreased to compensate for the 4th turret added by quad turrets -->
+	
+	<WeaponTemplate
+		id="NODShredderTurretSpawnChargedParticleBeamWeapon"
+		Name="NODShredderTurretSpawnChargedParticleBeamWeapon"
+		AttackRange="350.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_BlackHand_ShredderTurret_ChargedParticleBeamFire"
+		FireVeteranFX="FX_BlackHand_ShredderTurret_ChargedParticleBeamFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="9"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="0.2s"
+		    MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.3s"
+			MaxSeconds="0.4s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.25s"
+				LaserId="1"
+				HitGroundFX="FX_ChargedParticleBeamHitG" />
+
+			<DamageNugget
+				Damage="30.0"
+				Radius="0.0"
+				DamageType="GUN"
+				DamageFXType="NOD_PARTICLEBM"
+				DeathType="LASERED">
+				<DamageScalarDetails Scalar="85%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
+			</DamageNugget>
+
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- super charged particle beam shredder damage decreased  to compensate for the 4th turret added by quad turrets -->
+	
+	<WeaponTemplate
+		id="MarkedOfKaneShredderTurretSpawnSuperChargedParticleBeamWeapon"
+		Name="MarkedOfKaneShredderTurretSpawnSuperChargedParticleBeamWeapon"
+		AttackRange="350.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_MarkedOfKane_ShredderTurret_ChargedParticleBeamFire"
+		FireVeteranFX="FX_MarkedOfKane_ShredderTurret_ChargedParticleBeamFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="9"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="0.2s"
+		    MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.3s"
+			MaxSeconds="0.4s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.25s"
+				LaserId="1"
+				HitGroundFX="FX_ChargedParticleBeamHit"	/>
+
+			<DamageNugget
+				Damage="30.0"
+				Radius="0.0"
+				DamageType="GUN"
+				DamageFXType="NOD_PARTICLEBM"
+				DeathType="LASERED" >
+				<DamageScalarDetails Scalar="85%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- shard aa turret clip size decreased from 15 to 7 -->
+	
+	<WeaponTemplate
+		id="AlienPlasmaMissileBatteryShardLauncherWeapon"
+		Name="AlienPlasmaMissileBatteryShardLauncherWeapon"
+		AttackRange="450.0"
+		WeaponSpeed="300"
+		FireSound="AudioEvent:ALI_PlasmaMissileBattery_ShardWeaponFire"
+		FireFX="FX_AlienTibShardFire"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="7"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+
+		<FiringDuration
+				MinSeconds="0.1s"
+				MaxSeconds="0.1s"
+		/>
+		<ClipReloadTime
+			MinSeconds="1s"
+			MaxSeconds="1s"
+		/>
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="AlienPlasmaMissileBatteryShardLauncherWarhead"
+				ProjectileTemplate="AlienTibShardProjectile">
+
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="50.0"
+				Suppression="50"
+				DurationSeconds="2s"
+			/>
+		</Nuggets>
+	</WeaponTemplate>
+	
+
+	<!-- cabal range finder increased from 180 to 250. -->
+	
+	
+	<WeaponTemplate
+		id="NODCabalSquadRangeFinder"
+			Name="NODMilitantSquadRangeFinder"
+			AttackRange="250"
+			LeechRangeWeapon="true"
+			AcceptableAimDelta="45d"
+			AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+			CanFireWhileMoving="true"
+			FinishAttackOnceStarted="false"
+ 		>
+		<FiringDuration
+				MinSeconds="1.0s"
+				MaxSeconds="1.0s" />
+
+	</WeaponTemplate>
+	
+	
+	<!--
+
+	<WeaponTemplate
+		id="NODConfessorMinigun"
+		Name="NODConfessorMinigun"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireSoundPerClip="AudioEvent:NOD_Confessor_MachineGunFire"
+		FireFX="FX_NODRifleManFire"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="3"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+		    MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.3s"
+			MaxSeconds="0.4s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="6.0"
+				Radius="0.0"
+				DamageType="GUN"
+				DamageFXType="NOD_MACHINEGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+	-->
+	<!-- cabal particle beam range normalized with minigun -->
+	<!--
+	<WeaponTemplate
+		id="NODConfessorChargedParticleBeam"
+		Name="NODConfessorChargedParticleBeam"
+		AttackRange="325.0"
+		WeaponSpeed="999999.0"
+		FireSound="AudioEvent:NOD_Confessor_ChargedParticleBeamWeaponFire"
+		FireFX="FX_ChargedParticleBeamFire"
+		FireVeteranFX="FX_ChargedParticleBeamFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+		ClipSize="5"
+			>
+		<PreAttackDelay
+		MinSeconds="0.3s"
+		MaxSeconds="0.3s" />
+
+		<FiringDuration
+			MinSeconds="1.4s"
+			MaxSeconds="1.5s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.6s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.25s"
+				LaserId="1"
+				HitGroundFX="FX_ChargedParticleBeamHitG" />
+			<DamageNugget
+					Damage="100.0"
+					Radius="0.0"
+					DelayTimeSeconds="0.0s"
+					DamageType="GUN"
+					DamageFXType="NOD_PARTICLEBM"
+					DeathType="NORMAL" />
+			<SuppressionNugget
+					Radius="10.0"
+					Suppression="25"
+					DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+		-->
+		
+	<!-- storm column now one deals bonus damage to firehawks -->
+	<!--
+	<WeaponTemplate
+		id="StormColumnLightningWeapon"
+		Name="StormColumnLightningWeapon"
+		ProjectileCollidesWith="ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		AttackRange="375.0"
+		WeaponSpeed="9999"
+		AcceptableAimDelta="180d"
+		FireSound="AudioEvent:ALI_StormColumn_BigWeaponFire"
+		FireFX="FX_LightningSpikeFire"
+		AutoReloadsClip="AUTO"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_INFANTRY ANTI_AIRBORNE_VEHICLE ANTI_PROJECTILE ANTI_MINE">
+		<FiringDuration
+			MinSeconds="4s"
+			MaxSeconds="4s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				HitGroundFX="FX_AlienTibLaserGroundHit"/>
+			<DamageNugget
+				Damage="2500.0"
+				Radius="5.0"
+				DamageType="ROCKET"
+				DeathType="BURNED"
+				DamageFXType="ALIEN_ION">
+				<DamageScalarDetails Scalar= "20%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>AlienStormrider</IncludeThing>
+						<IncludeThing>AlienDevastatorWarship</IncludeThing>
+						<IncludeThing>AlienMothership</IncludeThing>
+						<IncludeThing>AlienPlanetaryAssaultCarrier</IncludeThing>
+						<IncludeThing>AlienMCV</IncludeThing>
+						<IncludeThing>Traveler59Stormrider</IncludeThing>
+						<IncludeThing>Traveler59DevastatorWarship</IncludeThing>
+						<IncludeThing>Traveler59Mothership</IncludeThing>
+						<IncludeThing>Traveler59PlanetaryAssaultCarrier</IncludeThing>
+						<IncludeThing>Traveler59MCV</IncludeThing>
+						<IncludeThing>Reaper17Stormrider</IncludeThing>
+						<IncludeThing>Reaper17Mothership</IncludeThing>
+						<IncludeThing>Reaper17MCV</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "105%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>GDIFireHawk</IncludeThing>
+						<IncludeThing>SteelTalonsFireHawk</IncludeThing>
+						<IncludeThing>ZOCOMFireHawk</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+-->
+	<!--
+	<WeaponTemplate
+		id="StormColumnLightningWeapon"
+		Name="StormColumnLightningWeapon"
+		ProjectileCollidesWith="ENEMIES NEUTRAL STRUCTURES WALLS"
+		AttackRange="375.0"
+		WeaponSpeed="9999"
+		AcceptableAimDelta="180d"
+		FireSound="AudioEvent:ALI_StormColumn_BigWeaponFire"
+		FireFX="FX_LightningSpikeFire"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		AutoReloadsClip="AUTO"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_INFANTRY ANTI_AIRBORNE_VEHICLE ANTI_PROJECTILE ANTI_MINE"
+		ClipSize="1">
+		<FiringDuration
+			MinSeconds="2.5s"
+			MaxSeconds="2.5s" />
+		<ClipReloadTime
+			MinSeconds="1.5s"
+			MaxSeconds="1.5s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				HitGroundFX="FX_AlienTibLaserGroundHit"/>
+			<DamageNugget
+				Damage="2500.0"
+				Radius="5.0"
+				DamageType="ROCKET"
+				DeathType="BURNED"
+				DamageFXType="ALIEN_ION">
+				<DamageScalarDetails Scalar= "20%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>AlienStormrider</IncludeThing>
+						<IncludeThing>AlienDevastatorWarship</IncludeThing>
+						<IncludeThing>AlienMothership</IncludeThing>
+						<IncludeThing>AlienPlanetaryAssaultCarrier</IncludeThing>
+						<IncludeThing>AlienMCV</IncludeThing>
+						<IncludeThing>Traveler59Stormrider</IncludeThing>
+						<IncludeThing>Traveler59DevastatorWarship</IncludeThing>
+						<IncludeThing>Traveler59Mothership</IncludeThing>
+						<IncludeThing>Traveler59PlanetaryAssaultCarrier</IncludeThing>
+						<IncludeThing>Traveler59MCV</IncludeThing>
+						<IncludeThing>Reaper17Stormrider</IncludeThing>
+						<IncludeThing>Reaper17Mothership</IncludeThing>
+						<IncludeThing>Reaper17MCV</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<SpecialObjectFilter Rule="ALL">
+						<ExcludeThing>GDIFireHawk</ExcludeThing>
+						<ExcludeThing>ZOCOMFireHawk</ExcludeThing>
+						<ExcludeThing>SteelTalonsFireHawk</ExcludeThing>
+						<ExcludeThing>NODVertigo</ExcludeThing>
+						<ExcludeThing>MarkedOfKaneVertigo</ExcludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>	
+			
+			<DamageNugget
+				Damage="2600.0"
+				Radius="0.0"
+				DamageType="ROCKET"
+				DeathType="BURNED"
+				DamageFXType="ALIEN_ION">
+				<SpecialObjectFilter Rule="NONE">
+						<IncludeThing>GDIFireHawk</IncludeThing>
+						<IncludeThing>ZOCOMFireHawk</IncludeThing>
+						<IncludeThing>SteelTalonsFireHawk</IncludeThing>
+						<IncludeThing>NODVertigo</IncludeThing>
+						<IncludeThing>MarkedOfKaneVertigo</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	-->
+	
+	<WeaponTemplate
+		id="StormColumnLightningWeapon"
+		Name="StormColumnLightningWeapon"
+		ProjectileCollidesWith="ENEMIES NEUTRAL STRUCTURES WALLS"
+		AttackRange="375.0"
+		WeaponSpeed="9999"
+		AcceptableAimDelta="180d"
+		FireSound="AudioEvent:ALI_StormColumn_BigWeaponFire"
+		FireFX="FX_LightningSpikeFire"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		AutoReloadsClip="AUTO"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_INFANTRY ANTI_AIRBORNE_VEHICLE ANTI_PROJECTILE ANTI_MINE"
+		ClipSize="1">
+		<FiringDuration
+			MinSeconds="2.5s"
+			MaxSeconds="2.5s" />
+		<ClipReloadTime
+			MinSeconds="1.5s"
+			MaxSeconds="1.5s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				HitGroundFX="FX_AlienTibLaserGroundHit"/>
+			<DamageNugget
+				Damage="2500.0"
+				Radius="5.0"
+				DamageType="ROCKET"
+				DeathType="BURNED"
+				DamageFXType="ALIEN_ION">
+				<DamageScalarDetails Scalar= "20%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>AlienStormrider</IncludeThing>
+						<IncludeThing>AlienDevastatorWarship</IncludeThing>
+						<IncludeThing>AlienMothership</IncludeThing>
+						<IncludeThing>AlienPlanetaryAssaultCarrier</IncludeThing>
+						<IncludeThing>AlienMCV</IncludeThing>
+						<IncludeThing>Traveler59Stormrider</IncludeThing>
+						<IncludeThing>Traveler59DevastatorWarship</IncludeThing>
+						<IncludeThing>Traveler59Mothership</IncludeThing>
+						<IncludeThing>Traveler59PlanetaryAssaultCarrier</IncludeThing>
+						<IncludeThing>Traveler59MCV</IncludeThing>
+						<IncludeThing>Reaper17Stormrider</IncludeThing>
+						<IncludeThing>Reaper17Mothership</IncludeThing>
+						<IncludeThing>Reaper17MCV</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+	
+				<DamageScalarDetails Scalar= "105%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>GDIFireHawk</IncludeThing>
+						<IncludeThing>SteelTalonsFireHawk</IncludeThing>
+						<IncludeThing>ZOCOMFireHawk</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="GDIGolemCannonRailgun2"
+		Name="GDIGolemCannonRailgun2"
+		AttackRange="350.0"
+		MinTargetPitch="-15d"
+		MaxTargetPitch="15d"
+		WeaponSpeed="800"
+		WeaponRecoil="0d"
+		FireSound="Multisound:GDI_GuardianCannon_FireUpgradedMS"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		ShotsPerBarrel="1"
+		ProjectileCollidesWith  = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+ 		>
+		<FiringDuration
+				MinSeconds="0.3s"
+				MaxSeconds="0.3s" />
+
+		<ClipReloadTime
+			MinSeconds="1.5s"
+			MaxSeconds="1.5s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="1"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="625.0"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" >
+			</DamageNugget>
+
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="40"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GDIGolemCannonRailgun"
+		Name="GDIGolemCannonRailgun"
+		AttackRange="350.0"
+		MinTargetPitch="-15d"
+		MaxTargetPitch="15d"
+		WeaponSpeed="800"
+		WeaponRecoil="0d"
+		FireSound="Multisound:GDI_GuardianCannon_FireUpgradedMS"
+		FireFX="FX_RailGunFire"
+		FireVeteranFX="FX_RailGunFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		ShotsPerBarrel="1"
+		ProjectileCollidesWith  = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+ 		>
+		<FiringDuration
+				MinSeconds="0.3s"
+				MaxSeconds="0.3s" />
+
+		<ClipReloadTime
+			MinSeconds="1.5s"
+			MaxSeconds="1.5s" />
+
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.75s"
+				LaserId="0"
+				HitGroundFX="FX_RailGunHit"/>
+			<DamageNugget
+				Damage="625.0"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="NORMAL" >
+			</DamageNugget>
+
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="40"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+		
+	<!-- laser turret 33% rate of fire nerf to compensate for quad turrets and to permit more early game harassment prior to quad turrets -->
+	<!--
+	<WeaponTemplate
+		id="NODLaserCannonWeapon"
+		Name="NODLaserCannonWeapon"
+		AttackRange="350.0"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="180d"
+		FireSound="AudioEvent:NOD_LaserCannon_WeaponFire"
+		FireFX="FX_NODSpitfireFire"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		ReAcquireDetailType="POST_FIRE"
+		ClipSize="2"
+		ShotsPerBarrel="1"
+		NoVictimNeeded="true">
+		<FiringDuration
+			MinSeconds="1.1s"
+			MaxSeconds="1.1s" />
+		<ClipReloadTime
+			MinSeconds="2s"
+			MaxSeconds="2s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.8s"
+				LaserId="0"
+				HitGroundFX="FX_NODSpitfireHit"/>
+			<DamageNugget
+				Damage="140.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.1s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "50%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	-->
+	<!-- ravager range increased from 250 to 300 -->
+	
+	<WeaponTemplate
+			id="AlienStalkerShardWeapon"
+			Name="AlienStalkerShardWeapon"
+			AttackRange="315.0"
+			WeaponSpeed="500.0"
+			FireSound="AudioEvent:ALI_Stalker_ShardWeaponFire"
+			FireFX="FX_AlienTibShardFire"
+			FireVeteranFX="FX_AlienTibShardFireHeroic"
+			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+			AntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+			CanFireWhileMoving="true"
+			AcceptableAimDelta="45d"
+			PreAttackType="PER_CLIP"
+			ReAcquireDetailType="PER_CLIP"
+			ClipSize="3">
+		<PreAttackDelay
+			MinSeconds="0.7s"
+			MaxSeconds="0.7s" />
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="1.2s"
+			MaxSeconds="1.5s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlienTibShardProjectile"
+				WarheadTemplate="AlienStalkerTiberiumShardWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlienTibShardProjectile_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="AlienStalkerTiberiumShardWarhead"
+		Name="AlienTiberiumShardWarhead"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS"
+		AntiMask="ANTI_GROUND">
+		<Nuggets>
+			<DamageNugget
+				Damage="100.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<DamageScalarDetails Scalar= "225%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "75%">
+					<Filter
+						Rule="NONE"
+						Include="STRUCTURE" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="AlienStalkerBlueShardWeapon"
+		Name="AlienStalkerBlueShardWeapon"
+		AttackRange="315.0"
+		WeaponSpeed="500.0"
+		FireSound="AudioEvent:ALI_Stalker_ShardWeaponFireVeteran"
+		FireFX="FX_AlienTibShardFireBlue"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="45d"
+		PreAttackType="PER_CLIP"
+		ReAcquireDetailType="PER_CLIP"
+		ClipSize="3">
+		<PreAttackDelay
+			MinSeconds="0.7s"
+			MaxSeconds="0.7s" />
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="1.2s"
+			MaxSeconds="1.5s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlienBlueShardProjectile"
+				WarheadTemplate="AlienStalkerBlueShardWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlienBlueShardProjectile_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="AlienStalkerBlueShardWarhead"
+		Name="AlienBlueShardWarhead"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS"
+		AntiMask="ANTI_GROUND">
+		<Nuggets>
+			<DamageNugget
+				Damage="200.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARDBLUE" >
+				<DamageScalarDetails Scalar= "225%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "75%">
+					<Filter
+						Rule="NONE"
+						Include="STRUCTURE" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="StalkerRangefinder"
+		Name="StalkerRangefinder"
+		AttackRange="245"
+		LeechRangeWeapon="true"
+		AcceptableAimDelta="45d"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		CanFireWhileMoving="true"
+		FinishAttackOnceStarted="false"
+			>
+			<FiringDuration
+					MinSeconds="1s"
+					MaxSeconds="1s" />
+	</WeaponTemplate>
+
+	
+	<!-- 85% damagescalerdetail vs vehicles for ap ammo watchtower. -->
+	
+	<WeaponTemplate
+		id="GDIWatchTowerGunAPAmmo"
+		Name="GDIWatchTowerGunAPAmmo"
+		AttackRange="350.0"
+		WeaponSpeed="999999.0"
+		FireSoundPerClip="AudioEvent:GDI_WatchTower_GunFire_v2"
+		FireFX="FX_GDIWatchTowerFire"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="8"
+		AutoReloadsClip="AUTO"
+		AntiMask="ANTI_GROUND"
+		DisableScatterForTargetsOnWall="true"
+		CanFireWhileMoving="true"
+		RotatingTurret="true"
+		ReAcquireDetailType="PER_CLIP"
+		>
+		<ClipReloadTime
+			MinSeconds="0.01s"
+			MaxSeconds="0.01s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="30.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="GDI_MACHINEGUN"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar="85%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
+			</DamageNugget>	
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- shock trooper acceptable aim delta 10d -->
+	<!--
+	<WeaponTemplate
+		id="AlienShockTrooperPlasmaDisk"
+		Name="AlienShockTrooperPlasmaDisk"
+		AttackRange="300.0"
+		WeaponSpeed="400.0"
+		FireSound="AudioEvent:ALI_ShockTrooper_PlasmaDiskFire"
+		FireFX="FX_AlienPlasmaDiskFire"
+		FireVeteranFX="FX_AlienPlasmaDiskFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		AcceptableAimDelta="10d"
+		NoVictimNeeded="true">
+		<PreAttackDelay
+			MinSeconds=".1s"
+			MaxSeconds=".1s" />
+		<FiringDuration
+				MinSeconds="2.3s"
+				MaxSeconds="2.3s"
+		/>
+		<ClipReloadTime
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="AlienShockTrooperPlasmaDiskWarhead"
+				ProjectileTemplate="AlienPlasmaDisk">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlienPlasmaDisk_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	-->
+	<!-- ap ammo and regular hammerhead range nerf from 300 to 290 -->
+
+	<WeaponTemplate
+		  id="GDIHammerheadChaingun"
+			Name="GDIHammerheadChaingun"
+			AttackRange="285.0"
+			WeaponSpeed="999999.0"
+			FireFX="FX_GDIHammerheadChaingunAP"
+			FireVeteranFX="FX_GDIHammerheadChaingunAPHeroic"
+			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+			WeaponRecoil="20d"
+			ReAcquireDetailType="PER_SHOT"
+			AntiMask="ANTI_GROUND"
+			CanFireWhileMoving="true"
+			ClipSize="999999">
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s"/>
+		<Nuggets>
+			<DamageNugget
+				Damage="15.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="NOD_MACHINEGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="1.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		  id="GDIHammerheadUpgradedChaingun"
+			Name="GDIHammerheadUpgradedChaingun"
+			AttackRange="285.0"
+			WeaponSpeed="999999.0"
+			FireFX="FX_GDIHammerheadChaingunAP"
+			FireVeteranFX="FX_GDIHammerheadChaingunAPHeroic"
+			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+			AntiMask="ANTI_GROUND"
+			CanFireWhileMoving="true"
+			ClipSize="999999">
+
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s"/>
+		<Nuggets>
+			<DamageNugget
+				Damage="25.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="NOD_MACHINEGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="1.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- removed the seeker bonus damage vs raider buggies, the increased gun armor is sufficient here -->
+	<!--
+	<WeaponTemplate
+		id="AlienSeekerTankPlasmaDiskLauncherWarhead"
+		Name="AlienSeekerTankPlasmaDiskLauncherWarhead"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY" >
+		<Nuggets>
+			<DamageNugget
+				Damage="75.0"
+				Radius="10.0"
+				DamageType="ROCKET"
+				DamageFXType="ALIEN_PLASMADISK">
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						Rule="NONE"
+						Include="CIVILIAN_BUILDING" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "25%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>	
+			
+				<DamageScalarDetails Scalar= "110%">
+					<Filter Rule="NONE">
+						<IncludeThing>NODScorpionBuggy</IncludeThing>
+						<IncludeThing>BlackHandScorpionBuggy</IncludeThing>						
+						<IncludeThing>MarkedOfKaneScorpionBuggy</IncludeThing>												
+					</Filter>
+				</DamageScalarDetails> 
+				
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>				
+	
+	<WeaponTemplate
+		id="AlienSeekerTankShardLauncherWarhead"
+		Name="AlienSeekerTankShardLauncherWarhead"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY" >
+		<Nuggets>
+			<DamageNugget
+				Damage="75.0"
+				Radius="10.0"
+				DamageType="ROCKET"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						Rule="NONE"
+						Include="CIVILIAN_BUILDING" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "25%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+				
+				<DamageScalarDetails Scalar= "110%">
+					<Filter Rule="NONE">
+						<IncludeThing>NODScorpionBuggy</IncludeThing>
+						<IncludeThing>BlackHandScorpionBuggy</IncludeThing>						
+						<IncludeThing>MarkedOfKaneScorpionBuggy</IncludeThing>												
+					</Filter>
+				</DamageScalarDetails>
+				
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>	
+	-->
+	<!-- shadow team range nerf undone in 1.02+ -->
+	
+	<WeaponTemplate
+		id="NODShadowMachinePistol"
+		Name="NODShadowMachinePistol"
+		AttackRange="240.0"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		FireSound="AudioEvent:NOD_ShadowSquad_WeaponFirePistol"
+		FireFX="FX_NODRifleManFire"
+		FireVeteranFX="FX_GDIRifleManFireHeroic"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.25s"
+			MaxSeconds="0.35s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="30.0"
+				Radius="0.0"
+				DamageType="SNIPER"
+				DamageFXType="NOD_RIFLE"
+				DeathType="NORMAL">
+				<SpecialObjectFilter Rule="ALL" Exclude="STRUCTURE FS_BASE_DEFENSE VEHICLE" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="ShadowMachineGunRangefinder"
+		Name="ShadowMachineGunRangefinder"
+		AttackRange="190"
+		LeechRangeWeapon="true"
+		AcceptableAimDelta="45d"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		FinishAttackOnceStarted="false"
+ 		>
+		<FiringDuration
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+	</WeaponTemplate>
+	
+	<!-- added ravagers to the damagescalerdetail list -->
+	
+	<WeaponTemplate
+		id="CloakingFieldKillInfantryWeaponWarhead"
+		Name="CloakingFieldKillInfantryWeaponWarhead"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AttackRange="50000.0"
+		WeaponSpeed="9999.0"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_INFANTRY"
+		>
+		<Nuggets>
+			<DamageNugget
+				Damage="400"
+				Radius="100"
+				DamageType="UNRESISTABLE"
+				DeathType="NORMAL">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="INFANTRY"
+					Exclude="VEHICLE HUGE_VEHICLE AIRCRAFT"/>
+
+				<!-- EA forgot scalars for KW stuff... lol & CGF forgot to include ravagers -->
+				<DamageScalarDetails Scalar= "25%">
+					<Filter Rule="NONE">
+						<IncludeThing>GDIZoneTrooper</IncludeThing>
+						<IncludeThing>ZOCOMZoneRaider</IncludeThing>						
+						<IncludeThing>GDICommando</IncludeThing>
+						<IncludeThing>ZOCOMCommando</IncludeThing>						
+						<IncludeThing>AlienMastermind</IncludeThing>
+						<IncludeThing>Traveler59BlinkMastermind</IncludeThing>						
+						<IncludeThing>AlienShockTrooper</IncludeThing>
+						<IncludeThing>Reaper17ShockTrooper</IncludeThing>
+						<IncludeThing>Traveler59ShockTrooper</IncludeThing>	
+						<IncludeThing>Traveler59Stalker</IncludeThing>	
+						<IncludeThing>AlienStalker</IncludeThing>
+						<IncludeThing>Reaper17Stalker</IncludeThing>
+						<IncludeThing>NODCommando</IncludeThing>
+						<IncludeThing>BlackHandCommando</IncludeThing>
+						<IncludeThing>MarkedOfKaneCommando</IncludeThing>							
+						<IncludeThing>NODBlackhand</IncludeThing>
+						<IncludeThing>BlackHandBlackhand</IncludeThing>						
+						<IncludeThing>MarkedOfKaneTibTrooper</IncludeThing>						
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- vertigo reload reduced by 2 seconds -->
+	
+	<WeaponTemplate
+		  id="NODVertigoBomb"
+		  Name="NODVertigoBomb"
+		  AttackRange="100.0"
+		  WeaponSpeed="220"
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		  AcceptableAimDelta="20d"
+		  CanFireWhileMoving="true"
+		  ClipSize="1"
+			FireSound="AudioEvent:NOD_VertigoDropBomb"
+		  AutoReloadsClip="RETURN_TO_BASE"
+		SingleAmmoReloadedNotFullSound="AudioEvent:NOD_VertigoBomber_AmmoLoadOne"
+		ClipReloadedSound="AudioEvent:NOD_VertigoBomber_AmmoReloaded"
+		  AntiMask="ANTI_GROUND"
+ 		>
+		<FiringDuration
+				MinSeconds="3.0s"
+				MaxSeconds="3.0s" />
+		<ClipReloadTime
+			MinSeconds="10.0s"
+			MaxSeconds="10.0s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="NODVertigoBombProjectile"
+				WarheadTemplate="NODVertigoBombWarhead" >
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="NODVertigoBombProjectile_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- hexapod heal rate reduced by 25% -->
+	
+	<WeaponTemplate id="AlienMechapedeTioxinBlastCannon"
+			Name="AlienMechapedeTioxinBlastCannon"
+			AttackRange="150.0"
+			WeaponSpeed="999999.0"
+			FiringLoopSound="Multisound:ALI_Corrupter_BeamWeaponLoopMS"
+			FiringLoopSoundContinuesDuringReload="true"
+			AcceptableAimDelta="10d"
+			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+			AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+			ClipSize="2"
+			CanFireWhileMoving="true"
+			ReAcquireDetailType="PER_CLIP">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s"/>
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s" />
+		<Nuggets>
+
+			<ActivateStreamNugget
+				Lifetime="0.75s"
+				StreamId="0"/>
+			<!-- Damage to all enemy infantry, with spawning if dead 40 default-->
+					<DamageAndSpawnNugget
+						Damage="10.0"
+						Radius="5.0"
+						DamageFXType="ALIEN_TIOXIN"
+						DamageType="GRENADE"
+						SpawnProbability="0.05"
+						SpawnedModelConditionFlags="EMOTION_DISSIDENT"
+						SpawnTemplate="Viceroid">
+						<SpecialObjectFilter
+							Rule="NONE"
+							Include="INFANTRY"
+							Exclude="HORDE"
+							Relationship="ENEMIES NEUTRAL">
+							<ExcludeThing>Viceroid</ExcludeThing>
+							<ExcludeThing>AlienBuzzers</ExcludeThing>
+							<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+							<ExcludeThing>AlienRazorDrones</ExcludeThing>
+							<ExcludeThing>AlienRazorDroneSquad</ExcludeThing>
+							<ExcludeThing>AlienAssimilator</ExcludeThing>
+							<ExcludeThing>AlienShockTrooper</ExcludeThing>
+							<ExcludeThing>AlienShockTrooperSquad</ExcludeThing>
+							<ExcludeThing>AlienStalker</ExcludeThing>
+							<ExcludeThing>AlienStalkerSquad</ExcludeThing>
+							<ExcludeThing>AlienMastermind</ExcludeThing>
+							<ExcludeThing>AlienBlinkMastermind</ExcludeThing>
+							<ExcludeThing>Reaper17ShockTrooper</ExcludeThing>
+							<ExcludeThing>Reaper17ShockTrooperSquad</ExcludeThing>
+							<ExcludeThing>Reaper17Stalker</ExcludeThing>
+							<ExcludeThing>Reaper17StalkerSquad</ExcludeThing>
+							<ExcludeThing>Traveler59RazorDrone</ExcludeThing>
+							<ExcludeThing>Traveler59RazorDroneSquad</ExcludeThing>
+							<ExcludeThing>Traveler59ShockTrooper</ExcludeThing>
+							<ExcludeThing>Traveler59ShockTrooperSquad</ExcludeThing>
+							<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+							<ExcludeThing>Traveler59StalkerSquad</ExcludeThing>
+							<ExcludeThing>Traveler59Stalker</ExcludeThing>
+						</SpecialObjectFilter>
+					</DamageAndSpawnNugget>					
+			<!-- damage vs scrin infantry -->
+
+			<DamageNugget
+				Damage="10.0"
+				Radius="5.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ENEMIES">
+					<IncludeThing>AlienBuzzers</IncludeThing>
+					<IncludeThing>AlienBuzzers_Slaved</IncludeThing>
+					<IncludeThing>AlienRazorDrones</IncludeThing>
+					<IncludeThing>AlienRazorDroneSquad</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>AlienShockTrooper</IncludeThing>
+					<IncludeThing>AlienShockTrooperSquad</IncludeThing>
+					<IncludeThing>AlienStalker</IncludeThing>
+					<IncludeThing>AlienStalkerSquad</IncludeThing>
+					<IncludeThing>AlienMastermind</IncludeThing>
+					<IncludeThing>AlienBlinkMastermind</IncludeThing>
+					<IncludeThing>Reaper17ShockTrooper</IncludeThing>
+					<IncludeThing>Reaper17ShockTrooperSquad</IncludeThing>
+					<IncludeThing>Reaper17Stalker</IncludeThing>
+					<IncludeThing>Reaper17StalkerSquad</IncludeThing>
+					<IncludeThing>Traveler59RazorDrone</IncludeThing>
+					<IncludeThing>Traveler59RazorDroneSquad</IncludeThing>
+					<IncludeThing>Traveler59ShockTrooper</IncludeThing>
+					<IncludeThing>Traveler59ShockTrooperSquad</IncludeThing>
+					<IncludeThing>Traveler59BlinkMastermind</IncludeThing>
+					<IncludeThing>Traveler59StalkerSquad</IncludeThing>
+					<IncludeThing>Traveler59Stalker</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		
+			<DamageNugget
+				Damage="1.0"
+				Radius="5.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES ENEMIES NEUTRAL">
+					<IncludeThing>Viceroid</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+	
+			<!-- Damage to all enemy non-infantry -->
+			<DamageNugget
+				Damage="15.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="INFANTRY HORDE"
+					Relationship="ENEMIES NEUTRAL">
+					<ExcludeThing>Viceroid</ExcludeThing>
+				</SpecialObjectFilter>	
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="15.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="HUSK"
+					Relationship="ALLIES">
+					<ExcludeThing>Reaper17AnnihilatorTripodHusk</ExcludeThing>
+					<ExcludeThing>Traveler59AnnihilatorTripodHusk</ExcludeThing>
+					<ExcludeThing>AlienAnnihilatorTripodHusk</ExcludeThing>
+				</SpecialObjectFilter>	
+			</DamageNugget>
+
+			<!-- Heal to all allies -->
+			<!-- IF YOU ADD A UNIT HERE, ADD IT TO THE CORRUPTER WEAPON AS WELL -->
+			<DamageNugget
+				Damage="5.0"
+				Radius="30.0"
+				ForbiddenTargetObjectStatus="OUT_OF_PHASE"
+				DamageType="HEALING">
+				<SpecialObjectFilter Rule="NONE" Relationship="ALLIES">
+					<IncludeThing>Reaper17AnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>Traveler59AnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>AlienAnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>AlienAnnihilatorTripod</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>AlienBuzzers</IncludeThing>
+					<IncludeThing>AlienCorrupter</IncludeThing>
+					<IncludeThing>AlienDevastatorWarship</IncludeThing>
+					<IncludeThing>AlienDevourerTank</IncludeThing>
+					<IncludeThing>AlienExplorer</IncludeThing>
+					<IncludeThing>AlienGunWalker</IncludeThing>
+					<IncludeThing>AlienHarvester</IncludeThing>
+					<IncludeThing>AlienInvaderFighter</IncludeThing>
+					<IncludeThing>AlienMastermind</IncludeThing>
+					<IncludeThing>AlienBlinkMastermind</IncludeThing>
+					<IncludeThing>AlienMCV</IncludeThing>
+					<IncludeThing>AlienMothership</IncludeThing>
+					<IncludeThing>AlienPlanetaryAssaultCarrier</IncludeThing>
+					<IncludeThing>AlienRazorDrones</IncludeThing>
+					<IncludeThing>AlienRazorDroneSquad</IncludeThing>
+					<IncludeThing>AlienSeekerTank</IncludeThing>
+					<IncludeThing>AlienShockTrooper</IncludeThing>
+					<IncludeThing>AlienShockTrooperSquad</IncludeThing>
+					<IncludeThing>AlienStalker</IncludeThing>
+					<IncludeThing>AlienStalkerSquad</IncludeThing>
+					<IncludeThing>AlienStormrider</IncludeThing>
+					<IncludeThing>AlienCustomizableVehicle</IncludeThing>
+					<IncludeThing>AlienMillipedeHead</IncludeThing>
+					<IncludeThing>AlienMillipedeBody</IncludeThing>
+					<IncludeThing>Reaper17AnnihilatorTripod</IncludeThing>
+					<IncludeThing>Reaper17Harvester</IncludeThing>
+					<IncludeThing>Reaper17ShardWalker</IncludeThing>
+					<IncludeThing>Reaper17SeekerTank</IncludeThing>
+					<IncludeThing>Reaper17DevourerTank</IncludeThing>
+					<IncludeThing>Reaper17ShockTrooper</IncludeThing>
+					<IncludeThing>Reaper17ShockTrooperSquad</IncludeThing>
+					<IncludeThing>Reaper17Stalker</IncludeThing>
+					<IncludeThing>Reaper17StalkerSquad</IncludeThing>
+					<IncludeThing>Reaper17Corrupter</IncludeThing>
+					<IncludeThing>Traveler59SeekerTank</IncludeThing>
+					<IncludeThing>Traveler59AnnihilatorTripod</IncludeThing>
+					<IncludeThing>Traveler59Harvester</IncludeThing>
+					<IncludeThing>Traveler59BlinkMastermind</IncludeThing>
+					<IncludeThing>Traveler59Cultist</IncludeThing>
+					<IncludeThing>Traveler59CultistSquad</IncludeThing>
+					<IncludeThing>Traveler59GunWalker</IncludeThing>
+					<IncludeThing>Traveler59Corrupter</IncludeThing>
+					<IncludeThing>Traveler59RazorDrone</IncludeThing>
+					<IncludeThing>Traveler59RazorDroneSquad</IncludeThing>
+					<IncludeThing>Traveler59ShockTrooper</IncludeThing>
+					<IncludeThing>Traveler59ShockTrooperSquad</IncludeThing>
+					<IncludeThing>Traveler59StalkerSquad</IncludeThing>
+					<IncludeThing>Traveler59Stalker</IncludeThing>
+					<IncludeThing>AlienEradicatorHexapod</IncludeThing>
+					<IncludeThing>Reaper17EradicatorHexapod</IncludeThing>
+					<IncludeThing>Traveler59EradicatorHexapod</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+	id="AlienCorrupterTioxinBlastCannon"
+	Name="AlienCorrupterTioxinBlastCannon"
+	AttackRange="150.0"
+	WeaponSpeed="999999.0"
+	FiringLoopSound="Multisound:ALI_Corrupter_BeamWeaponLoopMS"
+	FiringLoopSoundContinuesDuringReload="true"
+	AcceptableAimDelta="10d"
+	RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+	AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+	ClipSize="2"
+	CanFireWhileMoving="true"
+	ReAcquireDetailType="PER_CLIP">
+	<FiringDuration
+		MinSeconds="0.1s"
+		MaxSeconds="0.1s"/>
+	<ClipReloadTime
+		MinSeconds="0s"
+		MaxSeconds="0s"/>
+	<Nuggets>
+		<ActivateStreamNugget
+			Lifetime="0.75s"
+			StreamId="0"/>
+		<!-- Removing this for now, it spawns them too fast.-->
+		<DamageAndSpawnNugget
+			Damage="40.0"
+			Radius="40.0"
+			DamageFXType="ALIEN_TIOXIN"
+			DamageType="GRENADE"
+			SpawnProbability="0.05"
+			SpawnedModelConditionFlags="EMOTION_DISSIDENT"
+			SpawnTemplate="Viceroid">
+			<SpecialObjectFilter
+				Rule="NONE"
+				Include="INFANTRY"
+				Exclude="HORDE"
+				Relationship="ENEMIES NEUTRAL">
+				<ExcludeThing>Viceroid</ExcludeThing>
+				<ExcludeThing>AlienBuzzers</ExcludeThing>
+				<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+				<ExcludeThing>AlienRazorDrones</ExcludeThing>
+				<ExcludeThing>AlienRazorDroneSquad</ExcludeThing>
+				<ExcludeThing>AlienAssimilator</ExcludeThing>
+				<ExcludeThing>AlienShockTrooper</ExcludeThing>
+				<ExcludeThing>AlienShockTrooperSquad</ExcludeThing>
+				<ExcludeThing>AlienStalker</ExcludeThing>
+				<ExcludeThing>AlienStalkerSquad</ExcludeThing>
+				<ExcludeThing>AlienMastermind</ExcludeThing>
+				<ExcludeThing>AlienBlinkMastermind</ExcludeThing>
+				<ExcludeThing>Reaper17ShockTrooper</ExcludeThing>
+				<ExcludeThing>Reaper17ShockTrooperSquad</ExcludeThing>
+				<ExcludeThing>Reaper17Stalker</ExcludeThing>
+				<ExcludeThing>Reaper17StalkerSquad</ExcludeThing>
+				<ExcludeThing>Traveler59RazorDrone</ExcludeThing>
+				<ExcludeThing>Traveler59RazorDroneSquad</ExcludeThing>
+				<ExcludeThing>Traveler59ShockTrooper</ExcludeThing>
+				<ExcludeThing>Traveler59ShockTrooperSquad</ExcludeThing>
+				<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+				<ExcludeThing>Traveler59StalkerSquad</ExcludeThing>
+				<ExcludeThing>Traveler59Stalker</ExcludeThing>
+			</SpecialObjectFilter>
+		</DamageAndSpawnNugget>
+		
+		<!-- damage vs scrin infantry -->
+
+			<DamageNugget
+				Damage="40.0"
+				Radius="40.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ENEMIES">
+					<IncludeThing>AlienBuzzers</IncludeThing>
+					<IncludeThing>AlienBuzzers_Slaved</IncludeThing>
+					<IncludeThing>AlienRazorDrones</IncludeThing>
+					<IncludeThing>AlienRazorDroneSquad</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>AlienShockTrooper</IncludeThing>
+					<IncludeThing>AlienShockTrooperSquad</IncludeThing>
+					<IncludeThing>AlienStalker</IncludeThing>
+					<IncludeThing>AlienStalkerSquad</IncludeThing>
+					<IncludeThing>AlienMastermind</IncludeThing>
+					<IncludeThing>AlienBlinkMastermind</IncludeThing>
+					<IncludeThing>Reaper17ShockTrooper</IncludeThing>
+					<IncludeThing>Reaper17ShockTrooperSquad</IncludeThing>
+					<IncludeThing>Reaper17Stalker</IncludeThing>
+					<IncludeThing>Reaper17StalkerSquad</IncludeThing>
+					<IncludeThing>Traveler59RazorDrone</IncludeThing>
+					<IncludeThing>Traveler59RazorDroneSquad</IncludeThing>
+					<IncludeThing>Traveler59ShockTrooper</IncludeThing>
+					<IncludeThing>Traveler59ShockTrooperSquad</IncludeThing>
+					<IncludeThing>Traveler59BlinkMastermind</IncludeThing>
+					<IncludeThing>Traveler59StalkerSquad</IncludeThing>
+					<IncludeThing>Traveler59Stalker</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="8.0"
+				Radius="40.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE"
+				Relationship="ALLIES ENEMIES NEUTRAL">
+				<SpecialObjectFilter
+					Rule="NONE">
+					<IncludeThing>Viceroid</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		
+		<!-- Damage to all enemy non-infantry -->
+		<DamageNugget
+			Damage="40.0"
+			Radius="25.0"
+			DamageFXType="ALIEN_TIOXIN"
+			DamageType="GRENADE">
+			<SpecialObjectFilter
+				Rule="ALL"
+				Exclude="INFANTRY HORDE"
+				Relationship="ENEMIES NEUTRAL">
+				<ExcludeThing>Viceroid</ExcludeThing>
+			</SpecialObjectFilter>
+		</DamageNugget>
+		<DamageNugget
+			Damage="40.0"
+			Radius="25.0"
+			DamageFXType="ALIEN_TIOXIN"
+			DamageType="GRENADE">
+			<SpecialObjectFilter
+				Rule="NONE"
+				Include="HUSK"
+				Relationship="ALLIES">
+				<ExcludeThing>Reaper17AnnihilatorTripodHusk</ExcludeThing>
+				<ExcludeThing>Traveler59AnnihilatorTripodHusk</ExcludeThing>
+				<ExcludeThing>AlienAnnihilatorTripodHusk</ExcludeThing>
+			</SpecialObjectFilter>
+		</DamageNugget>
+		<!-- Heal to all allies -->
+		<!-- IF YOU ADD A UNIT HERE, ADD IT TO THE MECHAPEDE CORRUPTER WEAPON TOO -->
+		<DamageNugget
+			Damage="20.0"
+			Radius="30.0"
+			ForbiddenTargetObjectStatus="OUT_OF_PHASE"
+			DamageType="HEALING">
+			<SpecialObjectFilter
+				Rule="NONE"
+				Relationship="ALLIES">
+				<IncludeThing>Reaper17AnnihilatorTripodHusk</IncludeThing>
+				<IncludeThing>Traveler59AnnihilatorTripodHusk</IncludeThing>
+				<IncludeThing>AlienAnnihilatorTripodHusk</IncludeThing>
+				<IncludeThing>AlienAnnihilatorTripod</IncludeThing>
+				<IncludeThing>AlienAssimilator</IncludeThing>
+				<IncludeThing>AlienBuzzers</IncludeThing>
+				<IncludeThing>AlienCorrupter</IncludeThing>
+				<IncludeThing>AlienDevastatorWarship</IncludeThing>
+				<IncludeThing>AlienDevourerTank</IncludeThing>
+				<IncludeThing>AlienExplorer</IncludeThing>
+				<IncludeThing>AlienGunWalker</IncludeThing>
+				<IncludeThing>AlienHarvester</IncludeThing>
+				<IncludeThing>AlienInvaderFighter</IncludeThing>
+				<IncludeThing>AlienMastermind</IncludeThing>
+				<IncludeThing>AlienBlinkMastermind</IncludeThing>
+				<IncludeThing>AlienMCV</IncludeThing>
+				<IncludeThing>AlienMothership</IncludeThing>
+				<IncludeThing>AlienPlanetaryAssaultCarrier</IncludeThing>
+				<IncludeThing>AlienRazorDrones</IncludeThing>
+				<IncludeThing>AlienRazorDroneSquad</IncludeThing>
+				<IncludeThing>AlienSeekerTank</IncludeThing>
+				<IncludeThing>AlienShockTrooper</IncludeThing>
+				<IncludeThing>AlienShockTrooperSquad</IncludeThing>
+				<IncludeThing>AlienStalker</IncludeThing>
+				<IncludeThing>AlienStalkerSquad</IncludeThing>
+				<IncludeThing>AlienStormrider</IncludeThing>
+				<IncludeThing>AlienCustomizableVehicle</IncludeThing>
+				<IncludeThing>AlienMillipedeHead</IncludeThing>
+				<IncludeThing>AlienMillipedeBody</IncludeThing>
+				<IncludeThing>Reaper17AnnihilatorTripod</IncludeThing>
+				<IncludeThing>Reaper17Harvester</IncludeThing>
+				<IncludeThing>Reaper17ShardWalker</IncludeThing>
+				<IncludeThing>Reaper17SeekerTank</IncludeThing>
+				<IncludeThing>Reaper17DevourerTank</IncludeThing>
+				<IncludeThing>Reaper17ShockTrooper</IncludeThing>
+				<IncludeThing>Reaper17ShockTrooperSquad</IncludeThing>
+				<IncludeThing>Reaper17Stalker</IncludeThing>
+				<IncludeThing>Reaper17StalkerSquad</IncludeThing>
+				<IncludeThing>Reaper17Corrupter</IncludeThing>
+				<IncludeThing>Traveler59SeekerTank</IncludeThing>
+				<IncludeThing>Traveler59AnnihilatorTripod</IncludeThing>
+				<IncludeThing>Traveler59Harvester</IncludeThing>
+				<IncludeThing>Traveler59BlinkMastermind</IncludeThing>
+				<IncludeThing>Traveler59Cultist</IncludeThing>
+				<IncludeThing>Traveler59CultistSquad</IncludeThing>
+				<IncludeThing>Traveler59GunWalker</IncludeThing>
+				<IncludeThing>Traveler59Corrupter</IncludeThing>
+				<IncludeThing>Traveler59RazorDrone</IncludeThing>
+				<IncludeThing>Traveler59RazorDroneSquad</IncludeThing>
+				<IncludeThing>Traveler59ShockTrooper</IncludeThing>
+				<IncludeThing>Traveler59ShockTrooperSquad</IncludeThing>
+				<IncludeThing>Traveler59StalkerSquad</IncludeThing>
+				<IncludeThing>Traveler59Stalker</IncludeThing>
+			</SpecialObjectFilter>
+		</DamageNugget>
+		<DamageNugget
+			Damage="17.0"
+			Radius="30.0"
+			ForbiddenTargetObjectStatus="OUT_OF_PHASE"
+			DamageType="HEALING">
+			<SpecialObjectFilter
+				Rule="NONE"
+				Relationship="ALLIES">
+				<IncludeThing>AlienEradicatorHexapod</IncludeThing>
+				<IncludeThing>Reaper17EradicatorHexapod</IncludeThing>
+				<IncludeThing>Traveler59EradicatorHexapod</IncludeThing>
+			</SpecialObjectFilter>
+		</DamageNugget>
+		<!-- Garrison clear -->
+		<DamageContainedNugget
+			MaxUnitsToDamage="100"
+			WindowBlastFX="FX_AlienInfantryDeathFX"
+			Damage="1500000"
+			DamageType="GRENADE"
+			DeathType="EXPLODED">
+			<DamageObjectFilter
+				Rule="NONE"
+				Include="INFANTRY"/>
+		</DamageContainedNugget>
+	</Nuggets>
+</WeaponTemplate>
+	
+	<!-- laser capacitor buggy adjustment so damage to infantry is not less -->
+	
+	<WeaponTemplate
+		  id="NODScorpionBuggyGatlingLaser"
+			Name="NODScorpionBuggyGatlingLaser"
+			AttackRange="250.0"
+			WeaponSpeed="999999.0"
+			ClipSize="1"
+			FireSound="AudioEvent:NOD_RaiderBuggy_CapacitorFire"
+			FireFX="FX_NODSpitfireFire"
+			FireVeteranFX="FX_NODSpitfireFireHeroic"
+			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+			CanFireWhileMoving="true"
+			ReAcquireDetailType="POST_FIRE"
+			AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		>
+		<FiringDuration
+			MinSeconds="0.6s"
+			MaxSeconds="0.6s" />
+		<ClipReloadTime
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.5s"
+				LaserId="1"
+				HitGroundFX="FX_NODSpitfireHit"/>
+			<DamageNugget
+				Damage="100.0"
+				Radius="0.0"
+				DamageType="GUN"
+				DamageFXType="NOD_LASER"
+				DeathType="LASERED">
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						Rule="NONE"
+						Include="AIRCRAFT" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "75%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+
+			</DamageNugget>
+
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- ravager tiberium agitation reverted -->
+	
+	<WeaponTemplate
+		id="AlienStalkerTiberiumAgitation"
+		Name="AlienStalkerTiberiumAgitation"
+		AttackRange="450.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_AlienTibAgitationFire"
+		MinWeaponSpeed="999999.0"
+		MaxWeaponSpeed="999999.0"
+		AcceptableAimDelta="45d"
+		AutoReloadsClip="AUTO"
+		ClipSize="0"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="false"
+		PreAttackType="PER_SHOT"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS NOT_SIMILAR">
+		<PreAttackDelay
+					MinSeconds="0.9s"
+					MaxSeconds="0.9s"
+		/>
+		<FiringDuration
+				MinSeconds="1.1s"
+				MaxSeconds="1.1s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlienTibAgitationProjectile"
+				WarheadTemplate="AlienTiberiumAgitationExplosiveWeapon"/>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!--
+	<WeaponTemplate
+		id="AlienStalkerTiberiumAgitation"
+		Name="AlienStalkerTiberiumAgitation"
+		AttackRange="375.0"
+		WeaponSpeed="400.0"
+		FireFX="FX_AlienTibAgitationFire"
+		MinWeaponSpeed="400.0"
+		MaxWeaponSpeed="400.0"
+		AcceptableAimDelta="20d"
+		AutoReloadsClip="AUTO"
+		ClipSize="0"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="false"
+		PreAttackType="PER_SHOT"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS NOT_SIMILAR">
+		<PreAttackDelay
+					MinSeconds="0.9s"
+					MaxSeconds="0.9s"
+		/>
+		<FiringDuration
+				MinSeconds="1.5s"
+				MaxSeconds="1.5s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlienTibAgitationProjectile"
+				WarheadTemplate="AlienTiberiumAgitationExplosiveWeapon"/>
+		</Nuggets>
+	</WeaponTemplate>
+-->
+	
+	<WeaponTemplate
+		id="AlienTiberiumAgitationExplosiveWeapon"
+		Name="AlienTiberiumAgitationExplosiveWeapon"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS NOT_SIMILAR"
+		FireFX="FX_TibHitFX">
+		<Nuggets>
+			<DamageNugget
+				Damage="1000.0"
+				Radius="25.0"
+				DamageType="TIBERIUM"
+				DeathType="NORMAL" >
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						AcceptModelCondition="MONEY_STORED_AMOUNT_4" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "150%">
+					<Filter
+						AcceptModelCondition="MONEY_STORED_AMOUNT_3" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "50%">
+					<Filter
+						AcceptModelCondition="MONEY_STORED_AMOUNT_1" />
+				</DamageScalarDetails>
+				<DamageScalarDetails
+					Scalar="50%">
+					<Filter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>AlienMillipedeHead</IncludeThing>
+						<IncludeThing>AlienMillipedeBody</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	
+	<!-- 200% damage scaler vs cultists for shard/gunwalkers -->
+	
+	<WeaponTemplate
+		id="AlienShardWalkerWeaponWarhead"
+		Name="AlienShardWalkerWeaponWarhead"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+				Damage="120.0"
+				Radius="0.0"
+				DamageType="GUN"
+				DeathType="NORMAL"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						Rule="NONE"
+						Include="AIRCRAFT" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>Traveler59Cultist</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>					
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<WeaponTemplate
+		id="AlienShardWalkerBlueShardWeaponWarhead"
+		Name="AlienShardWalkerBlueShardWeaponWarhead"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+				Damage="160.0"
+				Radius="0.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARDBLUE"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						Rule="NONE"
+						Include="AIRCRAFT" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>Traveler59Cultist</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>									
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		  id="AlienGunWalkerPlasmaAutoCannon"
+		  Name="AlienGunWalkerPlasmaAutoCannon"
+		  AttackRange="300.0"
+		  WeaponSpeed="999999.0"
+		  FireSound="AudioEvent:ALI_GunWalker_WeaponFire"
+		  FireFX="FX_AlienAutoCannonFire"
+		  FireVeteranFX="FX_AlienAutoCannonFireHeroic"
+		  ClipSize="5"
+		  CanFireWhileMoving="true"
+		  AcceptableAimDelta="25d"
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		  AntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<FiringDuration
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s"
+		/>
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.6s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="80.0"
+				Radius="0.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_CANNON"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "200%">
+					<Filter
+						Rule="NONE"
+						Include="AIRCRAFT" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "150%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>Traveler59Cultist</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>				
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		  id="AlienShardWalkerBlueShardWeapon"
+		  Name="AlienShardWalkerBlueShardWeapon"
+		  AttackRange="300.0"
+		  WeaponSpeed="500.0"
+		  FireSound="Multisound:ALI_GunWalker_BlueShardWeaponFireMS"
+		  FireFX="FX_AlienTibShardFireBlue"
+		  FireVeteranFX="FX_AlienTibShardFireHeroic"
+		  ClipSize="5"
+		  CanFireWhileMoving="true"
+		  AcceptableAimDelta="25d"	  
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		  AntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<FiringDuration
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s"
+		  />
+		<ClipReloadTime
+		MinSeconds="0.5s"
+		MaxSeconds="0.6s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlienBlueShardProjectile"
+				WarheadTemplate="AlienShardWalkerBlueShardWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlienBlueShardProjectile_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		  id="AlienShardWalkerWeapon"
+		  Name="AlienShardWalkerWeapon"
+		  AttackRange="300.0"
+		  WeaponSpeed="500.0"
+		  FireSound="Multisound:ALI_GunWalker_ShardWeaponFireMS"
+		  FireFX="FX_AlienTibShardFire"
+		  FireVeteranFX="FX_AlienTibShardFireHeroic"
+		  ClipSize="5"
+		  CanFireWhileMoving="true"
+		  AcceptableAimDelta="25d"	  
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		  AntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<FiringDuration
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s"
+		  />
+		<ClipReloadTime
+		MinSeconds="0.5s"
+		MaxSeconds="0.6s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlienTibShardProjectile"
+				WarheadTemplate="AlienShardWalkerWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlienTibShardProjectile_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- ##################################### MECHAPEDE WEAPONS ################################################# -->
+	
+	<WeaponTemplate
+	id="MechapedeRangefinder"
+	Name="MechapedeRangefinder"
+	AttackRange="120"
+	LeechRangeWeapon="true"
+	AcceptableAimDelta="360d"
+	AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+	CanFireWhileMoving="true"
+	FinishAttackOnceStarted="false"
+ 		>
+		<FiringDuration
+				MinSeconds="1s"
+				MaxSeconds="1s" />
+	</WeaponTemplate>
+	
+
+	<!-- Same as Razor Drone weapon with an offset on the muzzle flash -->
+	<!-- not quite the same in that the ClipSize is different so audio is not hooked the same -->
+	<WeaponTemplate
+				id="AlienMechapedeHeadWeapon"
+				Name="AlienMechapedeHeadWeapon"
+				AttackRange="150.0"
+				FireSound="AudioEvent:ALI_RazorDrone_Weapon1Fire"
+				FireFX="FX_AlienBuzzerFireOffset"
+				FireVeteranFX="FX_AlienBuzzerFireOffsetHeroic"
+				WeaponSpeed="999999.0"
+				RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+				ReAcquireDetailType="PRE_FIRE"
+				ClipSize="3"
+				AcceptableAimDelta="90d"
+				CanFireWhileMoving="true"
+				NoVictimNeeded="true">
+		<FiringDuration
+			MinSeconds="0.75s"
+			MaxSeconds="0.75s" />
+		<ClipReloadTime
+			MinSeconds="0.2s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.5s"
+				LaserId="0"/>
+			<DamageNugget
+				Damage="52.5"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="INFANTRY STRUCTURE"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="70.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Exclude="INFANTRY STRUCTURE"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="70.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+			
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+				id="AlienMechapedeRazorDroneWeapon"
+				Name="AlienMechapedeRazorDroneWeapon"
+				AttackRange="175.0"
+				FireSound="AudioEvent:ALI_RazorDrone_Weapon1Fire"
+				FireFX="FX_AlienBuzzerFire"
+				FireVeteranFX="FX_AlienBuzzerFireHeroic"
+				WeaponSpeed="999999.0"
+				RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+				ReAcquireDetailType="PRE_FIRE"
+				ClipSize="3"
+				AcceptableAimDelta="10d"
+				CanFireWhileMoving="true"
+				NoVictimNeeded="true">
+		<FiringDuration
+			MinSeconds="0.75s"
+			MaxSeconds="0.75s" />
+		<ClipReloadTime
+			MinSeconds="0.2s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.5s"
+				LaserId="0"/>
+			<DamageNugget
+				Damage="70.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Exclude="INFANTRY STRUCTURE"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="52.5"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="INFANTRY STRUCTURE"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="70.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+			
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- Mecha Disc segment -->
+		
+	<WeaponTemplate
+		  id="AlienMechapedeProtonCannon"
+		  Name="AlienMechapedeProtonCannon"
+		  AttackRange="340.0"
+		  WeaponSpeed="400.0"
+		  FireSound="AudioEvent:ALI_SeekerTank_DiskWeaponFire"
+		  FireFX="FX_AlienMechapedePlasmaDiskFire"
+		  FireVeteranFX="FX_AlienMechapedePlasmaDiskFireHeroic"
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		  AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		  ClipSize="5"
+		  AcceptableAimDelta="10d"
+		  CanFireWhileMoving="true"
+		  ReAcquireDetailType="PER_SHOT">
+
+		<FiringDuration
+				MinSeconds="0.1s"
+				MaxSeconds="0.1s"
+		/>
+
+		<ClipReloadTime
+			MinSeconds="1.7s"
+			MaxSeconds="1.7s"
+		/>
+
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="AlienMechapedeProtonCannonWarhead"
+				ProjectileTemplate="AlienPlasmaDisk">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlienPlasmaDisk_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlienMechapedeProtonCannonWarhead"
+		Name="AlienMechapedeProtonCannonWarhead"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="ENEMIES NEUTRAL STRUCTURES WALLS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY" >
+		<Nuggets>
+			<DamageNugget
+				Damage="72.0"
+				Radius="10.0"
+				DamageType="ROCKET"
+				DamageFXType="ALIEN_PLASMADISK">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="AIRCRAFT"/>
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="16.0"
+				Radius="10.0"
+				DamageType="ROCKET"
+				DamageFXType="ALIEN_PLASMADISK">
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Exclude="AIRCRAFT"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="16.0"
+				Radius="10.0"
+				DamageType="ROCKET"
+				DamageFXType="ALIEN_PLASMADISK">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+			
+		</Nuggets>
+	</WeaponTemplate>
+		
+	<!-- Mecha AA bug: the disc and shard weapons need to have a good range difference, or it bugs out-->	
+	<!-- Mecha Shard segment -->		
+	<WeaponTemplate
+		id="AlienMechapedeShardWeapon"
+		Name="AlienMechapedeShardWeapon"
+		AttackRange="315.0"
+		WeaponSpeed="500.0"
+		FireSound="AudioEvent:ALI_Stalker_ShardWeaponFire"
+		FireFX="FX_AlienTibShardFire"
+		FireVeteranFX="FX_AlienTibShardFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="10d"
+		PreAttackType="PER_CLIP"
+		ReAcquireDetailType="PER_CLIP"
+		ClipSize="3">
+		<PreAttackDelay
+			MinSeconds="0.7s"
+			MaxSeconds="0.7s" />
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="0.2s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlienTibShardProjectile"
+				WarheadTemplate="AlienMechapedeTiberiumShardWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlienTibShardProjectile_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	<!--
+	<WeaponTemplate
+	id="AlienMechapedeShardWeapon2"
+	Name="AlienMechapedeShardWeapon2"
+	AttackRange="350.0"
+	WeaponSpeed="999999.0"
+	RadiusDamageAffects="ALLIES NEUTRALS"
+	AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+	ClipSize="1"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="9999s"
+			MaxSeconds="9999s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL" />
+		</Nuggets>
+	</WeaponTemplate>
+		-->
+	<WeaponTemplate
+		id="AlienMechapedeTiberiumShardWarhead"
+		Name="AlienMechapedeTiberiumShardWarhead"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+				Damage="169.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="VEHICLE"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="57.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="STRUCTURE"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="15.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="AIRCRAFT"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="75.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="75.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Exclude="VEHICLE STRUCTURE AIRCRAFT"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<!--
+			
+			<DamageNugget
+				Damage="75.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<DamageScalarDetails Scalar= "225%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "75%">
+					<Filter
+						Rule="NONE"
+						Include="STRUCTURE" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "20%">
+					<Filter
+						Rule="NONE"
+						Include="AIRCRAFT" />
+				</DamageScalarDetails>
+			</DamageNugget>
+			-->
+			
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		  id="FireHawkBombWarhead"
+		  Name="FireHawkBombWarhead"
+		  ProjectileCollidesWith  = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		  FireFX="FX_GDIBombHit"
+		  AntiMask="ANTI_GROUND ANTI_STRUCTURE">
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="100"
+				Damage="1500000"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DeathType="EXPLODED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageContainedNugget>
+
+			<DamageNugget
+				Damage="1500.0"
+				Radius="25.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DamageFXType="GDI_BOMB"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="1500.0"
+				Radius="25.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DamageFXType="GDI_BOMB"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+			
+			<MetaImpactNugget
+				ShockWaveAmount="90.0"
+				ShockWaveRadius="100.0"
+				ShockWaveZMult="1.50" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="NODFlameTankFlamer"
+		Name="NODFlameTankFlamer"
+		AttackRange="150.0"
+		WeaponSpeed="150.0"
+		RadiusDamageAffects="ENEMIES NEUTRALS ALLIES"
+		ClipSize="10"
+		FiringLoopSound="AudioEvent:NOD_FlameTank_FlameWeaponLoop"
+		FiringLoopSoundContinuesDuringReload="true"
+		AcceptableAimDelta="20d"
+		CanFireWhileMoving="true"
+		ReAcquireDetailType="PER_CLIP"   >
+		<!-- FireSound="NOD_BlackHand_FlameWeaponStart" -->
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="216.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED">			
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="STRUCTURE"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="144.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED">			
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Exclude="STRUCTURE"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="144.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED">			
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+			
+			<ProjectileNugget
+				WarheadTemplate="NODFlameTankFlamerWarhead"
+				ProjectileTemplate="NODBlackHandFlamerProjectile"/>
+			<SuppressionNugget
+				Radius="40.0"
+				Suppression="200"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="OrcaEchoCannonWarhead"
+		Name="OrcaEchoCannonWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE">
+		<PreAttackDelay
+			MinSeconds="0.1s"
+			MaxSeconds="0.2s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="750"
+				Radius="60.0"
+				DamageTaperOff="15"
+				DamageType="ROCKET"
+				DamageFXType="GDI_ECHOCANNON"
+				DeathType="EXPLODED">
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="750"
+				Radius="60.0"
+				DamageTaperOff="15"
+				DamageType="ROCKET"
+				DamageFXType="GDI_ECHOCANNON"
+				DeathType="EXPLODED">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+</AssetDeclaration>

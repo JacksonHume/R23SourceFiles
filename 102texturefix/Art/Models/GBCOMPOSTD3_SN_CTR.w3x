@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBCOMPOSTD3_SN2" Hierarchy="GBCOMPOSTD3_SK2">
+		<SubObject SubObjectID="UG_STEALTHDETECTOR03" BoneIndex="40">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.UG_STEALTHDETECTOR03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_APAMMO01" BoneIndex="39">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.UG_APAMMO01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_SCAN01" BoneIndex="38">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.UG_SCAN01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_APAMMO02" BoneIndex="37">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.UG_APAMMO02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_APAMMO" BoneIndex="36">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.UG_APAMMO</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_SCAN02" BoneIndex="35">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.UG_SCAN02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_SCAN" BoneIndex="32">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.UG_SCAN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKINR" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.NEWSKINR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BIB" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD3_SN.BIB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject BoneIndex="42" SubObjectID="UG_STEALTHDETECTOR">
+		  <RenderObject>
+			<Mesh>GBCOMPOSTD3.UG_STEALTHDETECTOR</Mesh>
+		  </RenderObject>
+		</SubObject>
+		<SubObject BoneIndex="43" SubObjectID="UG_STEALTHDETECTOR02">
+		  <RenderObject>
+			<Mesh>GBCOMPOSTD3.UG_STEALTHDETECTOR02</Mesh>
+		  </RenderObject>
+		</SubObject>
+		<SubObject BoneIndex="41" SubObjectID="UG_STEALTHDETECTOR01">
+		  <RenderObject>
+			<Mesh>GBCOMPOST2.UG_STEALTHDETECTOR01</Mesh>
+		  </RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

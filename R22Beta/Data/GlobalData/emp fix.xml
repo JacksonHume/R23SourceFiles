@@ -1,0 +1,83 @@
+	<WeaponTemplate
+		id="GDIGrenadeSoldierEMPGrenadeWarhead"
+		Name="GDIGrenadeSoldierEMPGrenadeWarhead"
+		AttackRange="500.0">
+		<Nuggets>
+
+			<WeaponOCLNugget WeaponOCL="OCL_EMPWeaponObject" />
+
+
+			<!--
+			<MetaImpactNugget
+				ShockWaveAmount="30.0"
+				ShockWaveRadius="200.0"
+				CyclonicFactor="0.8"
+				FlipDirection="true"
+				ShockWaveZMult="2.0"
+			/>
+			-->
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- for the fx to play once and to mark units that empd with attributemodifiernugget -->
+	<WeaponTemplate
+		id="EMPWeapon"
+		Name="EMPWeapon"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AttackRange="500.0"
+	>
+		<Nuggets>
+
+			<ParalyzeNugget
+				Radius="60.0"
+				DurationSeconds="0.1s"
+				ParalyzeType="EMP"
+				ParalyzeFX="FX_NODBuggyEmpHit">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT" />
+			</ParalyzeNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- actual emp weapon -->
+	<WeaponTemplate
+		id="EMPWeapon2"
+		Name="EMPWeapon2"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AttackRange="500.0"
+	>
+		<Nuggets>
+			<ParalyzeNugget
+				Radius="60.0"
+				DurationSeconds="0.5s"
+				ParalyzeType="EMP"
+				ParalyzeFX="">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT" />
+			</ParalyzeNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- for the metaimpactnugget-->
+	<WeaponTemplate
+		id="EMPWeaponImpact"
+		Name="EMPWeaponImpact"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AttackRange="500.0"
+	>
+		<Nuggets>
+
+			<MetaImpactNugget
+				ShockWaveAmount="30.0"
+				ShockWaveRadius="200.0"
+				CyclonicFactor="0.8"
+				FlipDirection="true"
+				ShockWaveZMult="0.0">
+				<!--<SpecialObjectFilter
+					Rule="ANY"
+					RejectModelCondition="AFFECTED_BY_EMP" /> -->
+			</MetaImpactNugget>
+		</Nuggets>
+	</WeaponTemplate>

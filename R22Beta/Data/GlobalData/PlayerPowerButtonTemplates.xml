@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--
+      <PowerButton
+				id="SpecialPowerComputerCounterMeasures">
+        <State
+					Image="Button_PlayerPowerComputerCountermeasures"
+					Title="NAME:PlayerPowerComputerCounterMeasures"
+					TypeDescription="TYPE:PlayerPowerComputerCounterMeasures"
+					Description="DESC:PlayerPowerComputerCounterMeasures" />
+      </PowerButton>
+	 --> 
+	  <PlayerPowerButtonTemplate
+		id="ButtonComputerCounterMeasures"
+		SpecialPower="SpecialPowerComputerCounterMeasures">
+	 </PlayerPowerButtonTemplate>	
+
+	<ButtonSingleStateData
+		id="ButtonPlayerPowerComputerCounterMeasures">
+		<State
+			Image="Button_PlayerPowerComputerCountermeasures"
+			Title="NAME:PlayerPowerComputerCounterMeasures"
+			TypeDescription="TYPE:PlayerPowerComputerCounterMeasures"
+			Description="DESC:PlayerPowerComputerCounterMeasures" />
+</ButtonSingleStateData>
+</AssetDeclaration>

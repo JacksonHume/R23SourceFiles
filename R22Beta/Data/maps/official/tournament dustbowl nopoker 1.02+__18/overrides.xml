@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration
+	xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags/>
+	<Includes>
+	</Includes>
+	<!--
+	<GameObject
+		id="AmbStream_YellowZone04_Bleach_5point1"
+		Side="Neutral"
+		EditorSorting="AUDIO"
+		KindOf="=$AMBIENTSOUND_KINDOF"
+		EditorName="AmbStream_YellowZone04_Bleach_5point1">
+		<ArmorSet
+			Armor="NoArmor" />
+		<Body>
+			<ImmortalBody
+				id="ModuleTag_DummyBody"
+				MaxHealth="1.0" />
+		</Body>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:Ambient_Rain1_Loop" AudioType="soundAmbient" />
+		</AudioArraySound>
+	</GameObject>
+	-->
+</AssetDeclaration>

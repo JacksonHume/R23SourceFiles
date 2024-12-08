@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GUZOCOMHARV_SKN1" Hierarchy="GUHRVSTR_SKL">
+		<SubObject SubObjectID="GUZOCOMHARV" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUZOCOMHARV_SKN.GUZOCOMHARV</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSTURNRIGHT" BoneIndex="18">
+			<RenderObject>
+				<Mesh>GUZOCOMHARV_SKN.TREADSTURNRIGHT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSTURNLEFT" BoneIndex="17">
+			<RenderObject>
+				<Mesh>GUZOCOMHARV_SKN.TREADSTURNLEFT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSSTOP" BoneIndex="16">
+			<RenderObject>
+				<Mesh>GUZOCOMHARV_SKN.TREADSSTOP</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSMOVE" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GUZOCOMHARV_SKN.TREADSMOVE</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TURRET" BoneIndex="10">
+			<RenderObject>
+				<Mesh>GUZOCOMHARV_SKN.TURRET</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIB_STOP" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GUZOCOMHARV_SKN.TIB_STOP</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIB_STOPBLUE" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GUHRVSTR_SKN1.TIB_STOPBLUE</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIB" BoneIndex="8">
+			<RenderObject>
+				<Mesh>GUZOCOMHARV_SKN.TIB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIBBLUE" BoneIndex="8">
+			<RenderObject>
+				<Mesh>GUHRVSTR_SKN1.TIBBLUE</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GUZOCOMHARV_SKN.OBBOX</CollisionBox>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

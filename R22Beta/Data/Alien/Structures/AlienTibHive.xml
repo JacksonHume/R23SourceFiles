@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="AlienTibHive"
+		KindOf="SELECTABLE IMMOBILE CAN_ATTACK CAN_CAST_REFLECTIONS STRUCTURE CAN_SEE_THROUGH_STRUCTURE IGNORE_FOR_VICTORY TIBERIUM_BASED CAN_ATTACK_STEALTHED AUTO_ACQUIRABLE_BY_AI"
+		Description="DESC:TiberiumHive"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="INVALID"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="270d"
+		BuildFadeInOnCreateTimeSeconds="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="ALIEN"
+		EditorName="AlienTibHive"
+		EditorSorting="STRUCTURE"
+		BountyValue="0"
+		BuildTime="10"
+		BuildFadeInOnCreateTime="0"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet="AlienPhotonCannonCommandSet"
+		SelectPortrait="Portrait_TiberiumHive"
+		ButtonImage="Portrait_TiberiumHive"
+		VoicePriority="0"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CrowdResponse=""
+		CampnessValue="2000"
+		CampnessValueRadius="300"
+		Scale="1"
+		HealthBoxScale="1.5"
+		HealthBoxHeightOffset="10"
+		OcclusionDelay="0"
+		LiveCameraPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		ThreatRadius="-1"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="0"
+		CommandPoints="0"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="0"
+		MaxDistanceForEngaged="0"
+		EngagedStateTimeout="0"
+		ThreatLevel="1"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		DisplayMeleeDamage="-1"
+		DisplayRangedDamage="-1"
+		HeroSortOrder="2147483647"
+		FiringArc="360"
+		CamouflageDetectionMultiplier="1"
+		SelectionPriority="2147483647"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="TIBERIUM_FIELD"
+		BuildOnRequiredObjectKindOf="TIBERIUM_FIELD HARVESTABLE"
+		UnitCategory="STRUCTURE"
+		WeaponCategory="NONE"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon=""
+		ReinvisibilityDelay="4s"
+		CaptureTime="0s"
+		BuildCost="800"
+		RefundValue="400"
+		ThreatValue="0"
+		MaxSimultaneousOfType="0"
+		TransportSlotCount="0"
+		IsTrainable="True"
+		IsForbidden="False"
+		IsPrerequisite="False"
+		IsGrabbable="False"
+		IsHarvestable="False"
+		StructureRubbleHeight="0"
+		ForceLuaRegistration="False"
+		ShowHealthInSelectionDecal="False"
+		KeepSelectableWhenDead="False"
+		IsAutoBuilt="False"
+		CanPathThroughGates="True"
+		ShouldClearShotsOnIdle="False"
+		BuildInProximityToSamePlayerStucture="False">
+		<DisplayName>NAME:TiberiumHive</DisplayName>
+		<ArmorSet
+			Armor="AlienTibHiveArmor"
+			DamageFX="FactionStructureDamageFX"
+			Conditions="" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="SIDE"
+			ConquerMetricsOverrideDamageType="UNDEFINED"
+			ConquerMetricsOverrideAntiMask="ANTI_GROUND"
+			UnitBuilderStandardCombatUnit="False" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:ABTibBHive" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="W3DContainer:ABTibBHiveBld_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="W3DContainer:ABTibBHive_D3SN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="W3DContainer:ABTibBHive_D2SN" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="W3DContainer:ABTibBHive" />
+					<Texture
+						Original="ABTibBHive"
+						New="ABTibHiveD" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+				</ModelConditionState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="ABTibBHiveBld_AAN"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABTibBHive_D3AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABTibBHive_D2AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged">
+					<Animation
+						AnimationName="ABTibBHive_D2AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABTibBHive_D3AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			
+			<!-- draw door -->
+			<ScriptedModelDraw
+				id="ModuleTag_DrawDoor"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:ABTibBHiveDr_SKN" />
+					<ParticleSysBone
+						BoneName="none"
+						FXParticleSystemTemplate="TibInfestationBugsSpew"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="none"
+						FXParticleSystemTemplate="TibInfestationBugsSpewGlow"
+						FollowBone="true" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="RESTART_ANIM_WHEN_COMPLETE DO_NOT_PLAY_WHEN_UNPOWERED">
+					<Animation
+						AnimationName="ABTibBHiveDr_OPN"
+						AnimationMode="ONCE"
+						AnimationPriority="30" 
+						AnimationBlendTime="15" />
+					<Animation
+						AnimationName="ABTibBHiveDr_CLS"
+						AnimationMode="ONCE"
+						AnimationPriority="10" 
+						AnimationBlendTime="15" />
+					<FXEvent
+						Frame="29"
+						FireWhenSkipped="true"
+						Effect="FX_AlienTiberiumInfestation"
+						Bone="ABBHiveB" />
+
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble">
+				</AnimationState>			
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate
+				id="788FFB50" />
+			<FireWeaponWhenDead
+				id="E84F2471"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				DelayTime="0s"
+				DeathWeapon="CatalystBuildingDeathWeapon"
+				FocusFireKindOfFlag=""
+				InitiallyActive="True"
+				ActiveDuringConstruction="False"
+				ContinueToBezierDestination="False">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="CATALYST"
+					DeathTypesForbidden="" />
+			</FireWeaponWhenDead>
+			<TemporarilyDefectUpdate
+				id="01009D1F"
+				DefectionFrameCount="100" />
+			<FXListBehavior
+				id="57E81491">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_AlienBuildingDamagedS"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedS"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleS"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+			</FXListBehavior>
+			<SlowDeath
+				id="1673247C"
+				SinkRate="4"
+				ProbabilityModifier="10"
+				ModifierBonusPerOverkillPercent="0%"
+				SinkDelay="3s"
+				SinkDelayVariance="0s"
+				DestructionDelay="8s"
+				DestructionDelayVariance="0s"
+				DecayBeginTime="0s"
+				FlingForce="0"
+				FlingForceVariance="0"
+				FlingPitch="0d"
+				FlingPitchVariance="0d"
+				DeathFlags=""
+				FadeTime="0s"
+				FadeDelay="0s"
+				DeathTypes=""
+				DeathObjectStatusBits=""
+				ShadowWhenDead="False"
+				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="ALI_Building_Die" />
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</SlowDeath>
+			<TiberiumFieldModBehavior
+				id="60636857"
+				ObjectStatus="WEAPON_UPGRADED_01"
+				ModelCondition="USER_4">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</TiberiumFieldModBehavior>
+			<FireWeaponUpdate
+				id="62997CF4"
+				ActiveWhenDisabled=""
+				HeroModeTrigger="False"
+				ChargingModeTrigger="False"
+				AliveOnly="False">
+				<FireWeaponNugget
+					WeaponName="TiberiumHiveWeapon"
+					FireDelay="1s"
+					FireInterval="0s"
+					OneShot="False" />
+			</FireWeaponUpdate>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<RepairUpdate
+				id="23C74182"
+				RepopThreshold="0.2"
+				HealAmountPerSecond="90"
+				Toggleable="True"
+				RepairableWhenDead="False">
+				<PercentOfBuildCostToRebuildInfo
+					Pristine="50%"
+					Damaged="50%"
+					ReallyDamaged="50%"
+					Rubble="50%" />
+				<SelfAudio
+					SelfRepairFromDamageLoop=""
+					SelfRepairFromRubbleLoop="" />
+			</RepairUpdate>
+			
+			<HealContain
+				id="ModuleTag_HordeGarrison"
+				ObjectStatusOfContained="UNSELECTABLE ENCLOSED"
+				ContainMax="1"
+				AllowEnemiesInside="true"
+				AllowAlliesInside="false"
+				AllowNeutralInside="false"
+				AllowOwnPlayerInsideOverride="true"
+				ShowPips="false"
+				KillPassengersOnDeath="false"
+				TimeForFullHeal="5s"
+				ResetInitialTeamOnCapture="true">
+				<PassengerFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Include="ENGINEER" />
+				<DieMuxData
+					DeathTypes="ALL" />
+				<PassengerData
+					BonePrefix="BONEGARRISON">
+					<Filter
+						Rule="NONE"
+						Relationship="ENEMIES"
+						Include="ENGINEER" />
+				</PassengerData>
+				<ExitOffset
+					x="50"
+					y="0"
+					z="0" />
+			</HealContain>
+			
+			<EngineerContain
+				id="D16751DE"
+				ReplaceWith=""
+				NameOfVoiceToUseForFriendlyEnter="VoiceEngineerRepair"
+				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding" 
+				FXForRepair="FX_Building_Repaired"
+				FXForCapture="FX_Building_Captured"
+				FXForCaptureAndReplace="FX_Building_Captured"
+				EvaEventForRepair="BuildingRepaired"
+				EvaEventForCapture="EnemyBuildingCaptured">
+				<CanEnterFilter
+					Rule="NONE"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
+				</CanEnterFilter>
+			</EngineerContain>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="C026F3D9"
+				MaxHealth="1000"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				InitialHealth="-1"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+		</Body>
+		<Geometry
+			IsSmall="False">
+			<Shape
+				Type="CYLINDER"
+				ContactPointGeneration="NONE"
+				MajorRadius="12.1114"
+				MinorRadius="12.1114"
+				Height="52.6624"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="0"
+					y="0"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="CYLINDER"
+				ContactPointGeneration="NONE"
+				MajorRadius="23.2912"
+				MinorRadius="23.2912"
+				Height="26.3312"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="0"
+					y="-9.53674E-07"
+					z="0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="-14.9777"
+					y="-15.975"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="5.87087"
+					y="-6.02351"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="15.8223"
+					y="14.825"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-5.02617"
+					y="4.87353"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-5.02617"
+					y="-6.02351"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="15.8223"
+					y="-15.975"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="5.87087"
+					y="4.87353"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-14.9777"
+					y="14.825"
+					z="0" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				EvaEvent="BuildingStolen"
+				AudioType="voiceDefectingAway" />
+			<AudioEntry
+				EvaEvent="EnemyBuildingCaptured"
+				AudioType="voiceDefectingTowards" />
+			<AudioEntry
+				Sound="AudioEvent:ALI_TiberiumHive_Select"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:GDI_BuildingPlaced"
+				AudioType="soundUnderConstruction" />
+			<AudioEntry
+				Sound="AudioEvent:ALI_Building_LightDamage"
+				AudioType="soundOnDamaged" />
+			<AudioEntry
+				Sound="AudioEvent:ALI_Building_HeavyDamage"
+				AudioType="soundOnReallyDamaged" />
+			<AudioEntry
+				Sound="AudioEvent:ALI_Building_Placed"
+				AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventSoldOwner="StructureSold"
+			EvaEventDamagedOwner="StructureUnderAttack"
+			EvaEventSecondDamageFarFromFirstScanRange="200"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
+			EvaEventRepairingOwner="StructureRepairing"
+			EvaEnemyObjectSightedEvent="EnemyCampSighted"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventProductionStarted="BuildingConstructionStarted"
+			EvaEventProductionComplete="BuildingConstructionComplete"
+			EvaEventPlacementFailed="StructurePlacementFailed"
+			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled"
+			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
+			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
+		<ShadowInfo
+			Type="VOLUME"
+			Texture=""
+			AdditionalTexture=""
+			SizeX="0"
+			SizeY="0"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="0s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="0s"
+			OpacityEnd="0"
+			MaxHeight="20"
+			SunAngle="0"
+			OverrideLODVisibility="False"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
+		<VisionInfo
+			VisionRange="200"
+			ShroudClearingRange="400"
+			VisionSide="100%"
+			VisionRear="100%"
+			VisionBonusTestRadius="100"
+			VisionBonusTestSegments="8"
+			VisionBonusPercentPerFoot="0%"
+			MaxVisionBonusPercent="50%"
+			MinVisionBonusPercent="-50%" />
+		<ProjectedBuildabilityInfo
+			Radius="10"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE"
+			StatusToReject=""
+			ModelConditionsToReject="" />
+	</GameObject>
+</AssetDeclaration>

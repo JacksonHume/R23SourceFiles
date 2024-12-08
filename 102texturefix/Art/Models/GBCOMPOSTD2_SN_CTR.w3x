@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBCOMPOSTD2_SN2" Hierarchy="GBCOMPOSTD2_SK2">
+		<SubObject SubObjectID="OBBOX10" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX10</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX09" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX09</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX08" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX08</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_STEALTHDETECTOR03" BoneIndex="18">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.UG_STEALTHDETECTOR03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_APAMMO01" BoneIndex="17">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.UG_APAMMO01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_SCAN01" BoneIndex="16">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.UG_SCAN01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_APAMMO02" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.UG_APAMMO02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_APAMMO" BoneIndex="14">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.UG_APAMMO</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_SCAN02" BoneIndex="13">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.UG_SCAN02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_SCAN" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.UG_SCAN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOSTD2_SN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BIB" BoneIndex="2">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.BIB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="FLASHINGLIGHTS" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBCOMPOSTD2_SN.FLASHINGLIGHTS</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+		<SubObject BoneIndex="20" SubObjectID="UG_STEALTHDETECTOR">
+		  <RenderObject>
+			<Mesh>GBCOMPOSTD2_SN2.UG_STEALTHDETECTOR</Mesh>
+		  </RenderObject>
+		</SubObject>
+		<SubObject BoneIndex="21" SubObjectID="UG_STEALTHDETECTOR02">
+		  <RenderObject>
+			<Mesh>GBCOMPOSTD2_SN2.UG_STEALTHDETECTOR02</Mesh>
+		  </RenderObject>
+		</SubObject>
+		<SubObject BoneIndex="19" SubObjectID="UG_STEALTHDETECTOR01">
+		  <RenderObject>
+			<Mesh>GBCOMPOSTD2_SN2.UG_STEALTHDETECTOR01</Mesh>
+		  </RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

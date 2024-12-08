@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NUWODTNK_SKN_UG1" Hierarchy="NUWODTNK_SKL2">
+		<SubObject SubObjectID="WODBODY" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUWODTNK_SKN_UG.WODBODY</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIBCOREMISSILEL" BoneIndex="17">
+			<RenderObject>
+				<Mesh>NUWODTNK_SKN_UG.TIBCOREMISSILEL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="B_SPOTLIGHT" BoneIndex="5">
+			<RenderObject>
+				<Mesh>NUWODTNK_SKN_UG.B_SPOTLIGHT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUWODTNK_SKN_UG.OBBOX</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSSTOP" BoneIndex="4">
+			<RenderObject>
+				<Mesh>NUWODTNK_SKN_UG.TREADSSTOP</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSTURNRIGHT" BoneIndex="3">
+			<RenderObject>
+				<Mesh>NUWODTNK_SKN_UG.TREADSTURNRIGHT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSMOVE" BoneIndex="2">
+			<RenderObject>
+				<Mesh>NUWODTNK_SKN_UG.TREADSMOVE</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSTURNLEFT" BoneIndex="1">
+			<RenderObject>
+				<Mesh>NUWODTNK_SKN_UG.TREADSTURNLEFT</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

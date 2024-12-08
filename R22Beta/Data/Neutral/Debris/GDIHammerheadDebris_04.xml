@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<GameObject
+		id="GDIHammerheadDebris_04"
+		Side="Neutral"		
+		EditorName="GDIHammerheadDebris_04"
+		EditorSorting="MISC_MAN_MADE"
+		TransportSlotCount="0"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE INERT_SHROUD_REVEALER UNATTACKABLE NOT_AUTOACQUIRABLE INERT"
+		RadarPriority="NOT_ON_RADAR">	
+		<DisplayName>Debris</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:GUHamheadR04" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />												
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6">
+					<Model
+						Name="W3DContainer:GUHamheadR04" />
+					<Texture
+						Original="GUHamheadD"
+						New="GUHamhead_UGCA_D" />	
+					<Texture
+						Original="GUHamHead_SPM"
+						New="GUHamHead_UGCA_SPM" />
+					<Texture
+						Original="GUHamHead_NRM"
+						New="GUHamhead_UGCA_NRM" />
+						<Texture
+						Original="HC_GUHamhead"
+						New="HC_GUHamhead_UGCA" />	
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>		
+			</ScriptedModelDraw>
+		</Draws>		
+		<Behaviors>
+			<Physics
+				id="ModuleTag_Physics"
+				TumbleRandomly="true"
+				BounceCount="3" />
+			<LifetimeUpdate
+				id="ModuleTag_LifeTime"
+				MinLifetime="1s"
+				MaxLifetime="1s" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="2s"
+				SinkRate=".5"
+				DestructionDelay="4s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<ModelConditionUpgrade
+				id="772D4894"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_6"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_CeramicArmor</TriggeredBy>
+			</ModelConditionUpgrade>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="100.0" />
+		</Body>
+		<Geometry IsSmall="true" >
+			<Shape Type="BOX" 
+				MajorRadius="10.0" 
+				MinorRadius="10.0" 
+				Height="10.0"/>
+		</Geometry>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="1"
+			ShroudClearingRange="1" />
+	</GameObject>
+</AssetDeclaration>

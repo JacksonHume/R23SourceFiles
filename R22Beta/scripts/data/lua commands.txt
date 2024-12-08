@@ -1,0 +1,348 @@
+	ObjectSetObjectStatus(#)
+void	ObjectForbidPlayerCommands(GameObject target, bool bIsForbidden)
+void	ObjectChangeAllegianceFromNonPlayablePlayer(GameObject target, GameObject source)
+void	ObjectSetGeometryActive(GameObject target, string geometryName, bool bIsActive)
+void	ObjectHideSubObjectPermanently(GameObject target, string subObjectName, bool bIsHide)
+void	ObjectHideSubObject(GameObject target, string subObjectName, bool bIsHide)
+	ObjectSetDelayedDeath(#)
+void	ObjectRemoveUpgrade(GameObject target, string upgradeName)
+void	ObjectGrantUpgrade(GameObject target, string upgradeName)
+int	ObjectHasUpgrade(GameObject target, string upgradeName)			--? maybe bool as int as == 0 works
+void	ObjectCreateAndFireTempWeapon(GameObject target, string weaponName)
+void	ObjectDoSpecialPower(GameObject target, string specialPowerName)
+void	ObjectSetFearFactor(#)
+void	ObjectSetChanting(GameObject target, bool bIsChanting)
+void	ObjectPlaySound(GameObject target, string soundName)
+void	ObjectEnterRampageState(GameObject target)
+void	ObjectEnterAlertState(GameObject target)
+void	ObjectEnterUncontrollableCowerState(GameObject target, GameObject source)
+void	ObjectEnterCowerState(GameObject target, GameObject source)
+void	ObjectEnterRunAwayPanicState(GameObject target, GameObject source)
+void	ObjectEnterFearState(GameObject target, GameObject source, bool bNotAfraid)	--(self, other, false) seems to be correct to become afraid as used in BFME II
+int	ObjectCountNearbyEnemies(GameObject target, int radius)
+bool	ObjectTestCanSufferFear(GameObject target)
+bool	ObjectTestModelCondition(GameObject target, string modelConditionName)
+	ObjectTemplateName(#)
+string	ObjectCapturingObjectPlayerSide(GameObject source)
+string	ObjectPlayerSide(GameObject source)
+	ObjectTeamName(#)
+void	ObjectBroadcastEventToUnits(GameObject source, string message, int radius)
+void	ObjectBroadcastEventToCivilians(GameObject source, string message, int radius)
+void	ObjectBroadcastEventToAllies(GameObject source, string message, int radius)
+void	ObjectBroadcastEventToEnemies(GameObject source, string message, int radius)
+	ObjectDispatchEvent(#)
+	ObjectSpy(#)
+string	ObjectDescription(GameObject target)
+
+	HordeBroadcastEventToMembers(#)
+
+void	ExecuteAction(string actionName, object[] params)
+	EvaluateCondition(#)
+
+float	GetRandomNumber()
+
+
+ScriptedModelDraw Scripts:
+
+float	GetClientRandomNumberReal(int low, int high)
+bool	CurDrawableIsCurrentTargetKindof(string kindOfName)
+void	CurDrawablePlaySound(string soundName)
+void	CurDrawableAllowToContinue()
+void	CurDrawableSetTransitionAnimState(string transitionStateName)
+float	CurDrawablePrevAnimFraction()
+float	CurDrawableGetCurrentTargetBearing()
+	CurDrawableGetCurrentTargetHeight(#)
+	CurDrawableGetCurrentDistance(#)
+string	CurDrawablePrevAnimation()
+string	CurDrawablePrevAnimationState()
+void	CurDrawableShowModule(string moduleTagName)
+void	CurDrawableHideModule(string moduleTagName)
+void	CurDrawableHideSubObjectPermanently(string subObjectName)
+void	CurDrawableShowSubObjectPermanently(string subObjectName)
+void	CurDrawableHideSubObject(string subObjectName)
+void	CurDrawableShowSubObject(string subObjectName)
+	CurDrawableObjectStatus(#)
+bool	CurDrawableModelCondition(string modelConditionName)
+int	GetFrame()
+
+LUA:
+ge
+le
+gc
+unm
+div
+mul
+sub
+settable
+gettable
+table
+userdata
+<eof>
+~=
+<=
+>=
+==
+...
+..
+while
+until
+when
+return
+repeat
+or
+not
+nil
+local
+if
+for
+elseif
+else
+do
+break
+and
+gsub
+strfind
+format
+strbyte
+ascii
+strrep
+strchar
+strupper
+strlower
+strsub
+strlen
+randomseed
+rad
+deg
+log10
+ldexp
+frexp
+mod
+writeto
+write
+seek
+readfrom
+read
+openfile
+flush
+closefile
+appendto
+tmpname
+setlocale
+rename
+getenv
+execute
+clock
+time
+numeric
+monetary
+ctype
+collate
+all
+end
+set
+_OUTPUT
+_INPUT
+setlocal
+setlinehook
+setcallhook
+getinfo
+getlocal
+tremove
+tinsert
+getn
+assert
+tostring
+tonumber
+tag
+settagmethod
+settag
+setglobal
+rawsettable
+rawgettable
+rawset
+rawget
+print
+next
+newtag
+globals
+gettagmethod
+getglobal
+gcinfo
+foreachi
+foreach
+dostring
+dofile
+copytagmethods
+collectgarbage
+_ERRORMESSAGE
+rawsetglobal
+rawgetglobal
+nextvar
+foreachvar
+
+
+
+
+
+0 DESTROYED
+1 CAN_ATTACK
+2 UNDER_CONSTRUCTION
+3 UNSELECTABLE
+4 NO_COLLISIONS
+5 NO_ATTACK
+6 AIRBORNE_TARGET
+7 PARACHUTING
+8 REPULSOR
+9 DECOY
+10 AFLAME
+11 BURNED
+12 CANNOT_BE_SOLD
+13 IS_FIRING_WEAPON
+14 IS_BRAKING
+15 STEALTHED
+16 HIDDEN
+17 DETECTED
+18 CAN_STEALTH
+19 SOLD
+20 UNDERGOING_REPAIR
+21 RECONSTRUCTING
+22 IS_ATTACKING
+23 NO_AUTO_ACQUIRE
+24 USING_ABILITY
+25 IS_AIMING_WEAPON
+26 NO_ATTACK_FROM_AI
+27 IGNORING_STEALTH
+28 IS_MELEE_ATTACKING
+29 GUARD_SELECTION
+30 LEASHED_RETURNING
+31 DEATH_1
+32 DEATH_2
+33 DEATH_3
+34 DEATH_4
+35 DEATH_5
+36 CONTESTED
+37 CONTESTING_BUILDING
+38 HORDE_MEMBER
+39 RIDERLESS
+40 RIDER_IS_PILOT
+41 RIDER1
+42 RIDER2
+43 RIDER3
+44 RIDER4
+45 NO_SHADOW
+46 IN_STASIS
+47 OUT_OF_PHASE
+48 NEXT_MOVE_IS_REVERSE
+49 IMMOBILE
+50 FLEE_OFF_MAP
+51 NOT_IN_WORLD
+52 INAUDIBLE
+53 CHANTING
+54 ENRAGED
+55 CREATE_DRAWABLE_WITH_LOW_DETAIL
+56 SINKING
+57 RAMPAGING
+58 INSIDE_GARRISON
+59 DEPLOYED
+60 UNATTACKABLE
+61 ENCLOSED
+62 TEMPORARILY_DEFECTED
+63 TAGGED
+64 DEPLOYING
+65 PRIMARY_MEMBER_PRESENT
+66 PORTER_TAGGED
+67 GRAB_AND_DROP
+68 STAND_GROUND
+69 UNCONTROLLABLY_SCARED
+70 SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING
+71 TIBERIUM_VIBRATING
+72 UPDATING_AI
+73 CLONED
+74 IGNORE_AI_COMMAND
+75 RUNNING_DOWN_FROM_BEHIND
+76 DO_NOT_SCORE
+77 CAN_NOT_WALK_ON
+78 MARCH_OF_DEATH
+79 DO_NOT_PICK_ME
+80 INHERITED_FROM_ALLY_TEAM
+81 SWITCHED_WEAPONS
+82 END_FIRE_STATE
+83 BOOKENDING
+84 ELVISH_EXPRESSLY
+85 INSIDE_CASTLE
+86 BUILD_BEING_CANCELED
+87 PENDING_CONSTRUCTION
+88 PHANTOM_STRUCTURE
+89 IN_FORMATION_TEMPLATE
+90 IS_LEAVING_FACTORY
+91 MOVING_TO_DISMOUNT
+92 NO_HERO_PROPERTIES
+93 CAN_ENTER_ANYTHING
+94 HOLDING_THE_RING
+95 INVISIBLE_DETECTED_BY_FRIEND
+96 INVISIBLE_DETECTED
+97 WORKER_REPAIRING
+98 ATTACHED
+99 WONT_RIDE_WITH_YOU
+100 COMMAND_BUTTON_TOGGLED
+101 OCLMONITOR_COMPLETED_TASK
+102 OCLMONITOR_MONITOR_RELEASED
+103 USER_POWERED_DOWN
+104 GARRISONED
+105 BOOBY_TRAPPED
+106 IS_HIDEOUT
+107 SUICIDE_BOMBER_HAS_TARGET
+108 UNIT_WANTS_TO_REGARRISON
+109 IN_COVER
+110 DONT_CLEAR_FOR_BUILD
+111 MATCH_TARGETS_SPEED
+112 HAS_TIBERIUM_GROWTH_MOD
+113 HAS_TIBERIUM_UPGRADE
+114 STEAL_NEXT_UNIT_TRAPPED
+115 DOES_CONTAIN_TIBERIUM
+116 IS_BEING_HARVESTED
+117 HAS_TIBERIUM_AMMO
+118 SHIELDBODY_ENABLED
+119 HEALTH_PERCENT_0
+120 HEALTH_PERCENT_25
+121 HEALTH_PERCENT_50
+122 HEALTH_PERCENT_75
+123 HEALTH_PERCENT_100
+124 WEAPON_UPGRADED_01
+125 WEAPON_UPGRADED_02
+126 WEAPON_UPGRADED_03
+127 COMBINED_PARENT
+128 COMBINED_CHILD
+129 COMBINED_ATTACHED
+130 LOADED_FROM_MAP
+131 ATTACKING_GARRISONED_STRUCTURE
+132 EXITING_COMBINED
+133 DELAYED_ENTER_STRUCTURE
+134 DOCKING
+135 HARVESTING
+136 BRIDGE_IMPASSABLE
+137 POWERED_DOWN_EMP
+138 FORCE_ATTACKING
+139 FORCE_ATTACK_MOVING
+140 SCARED_CIVILIAN_CAR
+141 USER_PARALYZED
+142 BOOBY_TRAP_EXPLODE
+143 IS_ENGAGED
+144 CARRYING_FLAG
+145 IS_MOVING_TO_RALLY_POINT
+146 CAN_SPOT_FOR_BOMBARD
+147 AIRCRAFT_IGNORE_SAMEPLAYER_HANGAR_RULE
+148 NEXT_MOVE_IS_FORCE_ATTACK_MOVE
+149 SPECIALABILITY_ACTIVE
+150 CAN_STEALTH_FROM_PRODUCER
+151 CAPTURING
+152 TIER_2_BASE
+153 TIER_3_BASE
+154 UPGRADE_BASE_POWER
+155 UPGRADE_BASE_DEFENSE
+156 UPGRADE_BASE_STRAT_1
+157 UPGRADE_BASE_STRAT_2
+158 UPGRADE_BASE_STRAT_3
+159 UPGRADE_BASE_STRAT_4
+160 UPGRADE_BASE_STRAT_5

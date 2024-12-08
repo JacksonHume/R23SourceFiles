@@ -1,0 +1,2138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="ZOCOMFireHawk"
+		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS AIRCRAFT PRELOAD NO_COLLIDE SCORE ATTACK_NEEDS_LINE_OF_SIGHT VEHICLE BOMBER_AIRCRAFT LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_BE_FAVORITE_UNIT RELOAD_AIRCRAFT"
+		Description="DESC:ZOCOMFirehawk"
+		TypeDescription="Type:GDIFirehawk"
+		RadarPriority="UNIT"
+		BuildCompletion="INVALID"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="0d"
+		BuildFadeInOnCreateTimeSeconds="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="ZOCOM"
+		EditorName="ZOCOMFireHawk"
+		EditorSorting="UNIT"
+		BountyValue="0"
+		BuildTime="15"
+		BuildFadeInOnCreateTime="0"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet="GDIFireHawkCommandSet"
+		SelectPortrait="Portrait_GDIFirehawk"
+		ButtonImage="Portrait_GDIFirehawk"
+		VoicePriority="144"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CrowdResponse=""
+		CampnessValue="0"
+		CampnessValueRadius="600"
+		Scale="1"
+		HealthBoxScale="1.5"
+		HealthBoxHeightOffset="10"
+		OcclusionDelay="0"
+		LiveCameraPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		ThreatRadius="-1"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="100"
+		CommandPoints="100"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="0"
+		MaxDistanceForEngaged="0"
+		EngagedStateTimeout="0"
+		ThreatLevel="10"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		DisplayMeleeDamage="-1"
+		DisplayRangedDamage="-1"
+		HeroSortOrder="2147483647"
+		FiringArc="360"
+		CamouflageDetectionMultiplier="1"
+		SelectionPriority="2147483647"
+		ProductionQueueType="AIRCRAFT"
+		BuildPlacementTypeFlag="INVALID"
+		BuildOnRequiredObjectKindOf=""
+		UnitCategory="AIRCRAFT"
+		WeaponCategory="MISSILE"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon=""
+		ReinvisibilityDelay="7s"
+		WorldMapArmoryUpgradesAllowed="Upgrade_CeramicArmor Upgrade_FirehawkStratofighterBooster"
+		CaptureTime="0s"
+		BuildCost="1500"
+		RefundValue="0"
+		ThreatValue="0"
+		MaxSimultaneousOfType="0"
+		TransportSlotCount="0"
+		IsTrainable="True"
+		IsForbidden="False"
+		IsPrerequisite="False"
+		IsGrabbable="False"
+		IsHarvestable="False"
+		StructureRubbleHeight="0"
+		ForceLuaRegistration="False"
+		ShowHealthInSelectionDecal="False"
+		KeepSelectableWhenDead="False"
+		IsAutoBuilt="False"
+		CanPathThroughGates="True"
+		ShouldClearShotsOnIdle="False"
+		BuildInProximityToSamePlayerStucture="True">
+		<DisplayName>Name:GDIFirehawk</DisplayName>
+		<GameDependency
+			RequiredModelConditionsAny=""
+			ForbiddenModelConditions=""
+			RequiredObjectStatusAny="">
+			<RequiredObject>ZOCOMArmory</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="GDIFirehawkArmor"
+			DamageFX="VehicleDamageFX"
+			Conditions="" />
+		<ArmorSet
+			Armor="ZOCOMFirehawkCeramicArmor"
+			DamageFX="VehicleDamageFX"
+			Conditions="PLAYER_UPGRADE" />
+		<LocomotorSet
+			Speed="190"
+			Condition="NORMAL"
+			Locomotor="FirehawkLocomotor" />
+		<LocomotorSet
+			Speed="10"
+			Condition="TAXIING"
+			Locomotor="BasicHelicopterTaxiLocomotor" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT"
+			ConquerMetricsOverrideDPS="100"
+			ConquerMetricsOverrideDamageType="GRENADE"
+			ConquerMetricsOverrideAntiMask="ANTI_GROUND"
+			UnitBuilderStandardCombatUnit="True" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<ShadowInfo
+						Type="VOLUME" 
+						MaxHeight="131"
+						OpacityStart="0"
+						OpacityFadeInTime="3s"
+						OpacityPeak="1"
+						OpacityFadeOutTime="3s"
+						OpacityEnd="0"/>	
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FIREHAWK01" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED LOCOMOTOR_TAXIING USER_1 USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_Firehawk_UGCA_D" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />						
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>		
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED LOCOMOTOR_TAXIING USER_1 USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_Firehawk_UGCA" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />						
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="LOCOMOTOR_TAXIING USER_1 USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN"/>
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_Firehawk_UGCA" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FIREHAWK01" />
+				</ModelConditionState>	
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_1 USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_Firehawk_UGCA_D" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />						
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_1 USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_Firehawk_UGCA" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />	
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />							
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1 USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN"/>
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_Firehawk_UGCA" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />						
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FIREHAWK01" />
+				</ModelConditionState>		
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_Firehawk_UGCA" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />						
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_Firehawk_UGCA_D" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<!--
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwkr_SKN" />
+					<Texture
+						Original="GU_FireHawkD"
+						New="GU_Firehawk_UGCA_D" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />
+				</ModelConditionState>
+				-->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_Firehawk_UGCA" />
+					<Texture
+						Original="GU_FireHawk_NRM"
+						New="GU_Firehawk_UGCA_NRM" />
+					<Texture
+						Original="GU_FireHawk_SPM"
+						New="GU_Firehawk_UGCA_SPM" />
+					<Texture
+						Original="HC_GU_FireHawk"
+						New="HC_GUFirehawk_UGCA" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED LOCOMOTOR_TAXIING USER_1 USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawkD_K" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>		
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED LOCOMOTOR_TAXIING USER_1 USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawk_K" />						
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="LOCOMOTOR_TAXIING USER_1 USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN"/>
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawk_K" />								
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FIREHAWK01" />
+				</ModelConditionState>	
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_1 USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawkD_K" />
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_1 USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawk_K" />								
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1 USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN"/>
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawk_K" />						
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FIREHAWK01" />
+				</ModelConditionState>		
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_1 LOCOMOTOR_TAXIING">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawkD" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_1 LOCOMOTOR_TAXIING">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="LOCOMOTOR_TAXIING USER_1">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN"/>
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FIREHAWK01" />
+				</ModelConditionState>	
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_1">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawkD" />
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_1">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN"/>
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FIREHAWK01" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawk_K" />								
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawkD_K" />		
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwkr_SKN" />
+					<Texture
+						Original="GU_FireHawkD"
+						New="GU_FireHawkD_K" />		
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN"/>
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawk_K" />						
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FIREHAWK01" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FIREHAWK01" />
+				</ModelConditionState>									
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawkD" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="W3DContainer:GUFireHwkr_SKN" />
+					<Texture
+						Original="GU_FireHawkD"
+						New="GU_FireHawkD" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="W3DContainer:GUFireHwk_FP" />
+				</ModelConditionState>	
+
+
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+			<!-- -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1 CLIMBING">
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PACKING_TYPE_1 UNPACKING USER_1">
+					<Animation
+						AnimationName="GUFireHwk_STRA"
+						AnimationMode="ONCE" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PACKING_TYPE_1 PACKING USER_1">
+					<Animation
+						AnimationName="GUFireHwk_STRB"
+						AnimationMode="ONCE" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="JUST_BUILT USER_1">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="ONCE" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT_HIGH_SPEED USER_1">
+					<Animation
+						AnimationName="GUFireHwk_HSTL"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED USER_1">
+					<Animation
+						AnimationName="GUFireHwk_HSTR"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT USER_1">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT USER_1">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_RIGHT_HIGH_SPEED USER_1">
+					<Animation
+						AnimationName="GUFireHwk_HSTR"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING USER_1">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="CLIMBING USER_1">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DECELERATE USER_1">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("Plane04")
+						CurDrawableShowSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+<!-- -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PACKING_TYPE_1 UNPACKING">
+					<Animation
+						AnimationName="GUFireHwk_STRA"
+						AnimationMode="ONCE" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PACKING_TYPE_1 PACKING">
+					<Animation
+						AnimationName="GUFireHwk_STRB"
+						AnimationMode="ONCE" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="JUST_BUILT">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="ONCE" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="LOCOMOTOR_TAXIING">
+					<!-- PRK does not exist -->
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT_HIGH_SPEED">
+					<Animation
+						AnimationName="GUFireHwk_HSTL"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED">
+					<Animation
+						AnimationName="GUFireHwk_HSTR"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_RIGHT_HIGH_SPEED">
+					<Animation
+						AnimationName="GUFireHwk_HSTR"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="CLIMBING">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("Plane04")
+						CurDrawableHideSubObject("exhaust02")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DECELERATE">
+					<Animation
+						AnimationName="GUFireHwk_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+				</AnimationState>
+			</ScriptedModelDraw>		
+			<ScriptedModelDraw
+				id="ModuleTag_FX"
+				OkToChangeModelColor="true"
+				AttachToBoneInAnotherModule="contrail01"
+				ExtraPublicBone="contrail01">
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+					<ParticleSysBone
+						BoneName="invisbone01"
+						FXParticleSystemTemplate="FireHawkConTrail"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<!-- These blank states are here to prevent contrail drawing during Stratofighter -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PACKING_TYPE_1 UNPACKING USER_1">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PACKING_TYPE_1 PACKING USER_1">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+				</ModelConditionState>
+			</ScriptedModelDraw>	
+			<ScriptedModelDraw
+				id="ModuleTag_FX2"
+				OkToChangeModelColor="true"
+				AttachToBoneInAnotherModule="contrail02"
+				ExtraPublicBone="contrail02">
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+					<ParticleSysBone
+						BoneName="invisbone01"
+						FXParticleSystemTemplate="FireHawkConTrail"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<!-- These blank states are here to prevent contrail drawing during Stratofighter -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PACKING_TYPE_1 UNPACKING USER_1">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PACKING_TYPE_1 PACKING USER_1">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+			
+		
+			<!--			<ScriptedModelDraw
+				id="ModuleTag_Particles">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="CLIMBING">
+					<Model Name="" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIOxGroundFX"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RAPPELLING">
+					<Model Name="" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIOxGroundFX"
+						FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw> -->
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate
+				id="513BC476" />
+			<SquishCollide
+				id="8CCB269A"
+				CrushAnimTime="1s"
+				CrushKillDelay="0.5s"
+				UseDirectionCheck="True" />
+			<FireWeaponWhenDead
+				id="DDED328F"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				DelayTime="0s"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				FocusFireKindOfFlag=""
+				InitiallyActive="True"
+				ActiveDuringConstruction="False"
+				ContinueToBezierDestination="False">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="CATALYST"
+					DeathTypesForbidden="" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="C07BF5C0"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				HealingAmount="100"
+				HealingDelay="0.5s"
+				StartHealingDelay="1s"
+				Radius="0"
+				KindOf=""
+				HealFXList=""
+				SpawnFXList=""
+				RespawnMinimumDelay="0s"
+				InitiallyActive="False"
+				AffectsWholePlayer="False"
+				AffectsContained="False"
+				HealOnlyIfNotUnderAttack="False"
+				HealOnlyIfNotInCombat="False"
+				HealOnlyOthers="False"
+				NonStackable="False"
+				RespawnNearbyHordeMembers="False">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="AA36A1AA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="81C6F752"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="E35F7EC4"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="54CA416E"
+				StanceTemplate="Generic" />
+			<LevelUpUpgrade
+				id="A92BDFEA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="5C3F216A"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="2"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="379F3CE2"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="3"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<InvisibilityUpdate
+				id="3BD7F2F5"
+				Options=""
+				UpdatePeriod="0.5s"
+				BroadcastRange="0"
+				OpacityMin="40%"
+				OpacityMax="100%">
+				<InvisibilityNugget
+					ForbiddenConditions="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_A USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenConditionExceptions=""
+					ForbiddenWeaponSets=""
+					ForbiddenStatus="IS_FIRING_WEAPON USING_ABILITY IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"
+					CamouflageLevel="0"
+					InvisibilityType="STEALTH"
+					Options=""
+					EnteringStealthFX=""
+					LeavingStealthFX=""
+					HintDetectableStates="IS_ATTACKING"
+					NoStealthForAttackWindow="0s" />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="F2B9DFBE"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="3473AFD2"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="720F4A50">
+				<WeaponSlotHardpoint
+					ID="1"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIFirehawkMissileMainLoad"
+						Upgrade=""
+						ObjectStatus="WEAPON_UPGRADED_01"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIFirehawkHardpointsUpgradeMissileMainLoad"
+						Upgrade=""
+						ObjectStatus="WEAPON_UPGRADED_01 WEAPON_UPGRADED_03"
+						IsPlayerUpgradePermanent="False" />
+				</WeaponSlotHardpoint>
+				<WeaponSlotHardpoint
+					ID="2"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIFirehawkBombMainLoad"
+						Upgrade=""
+						ObjectStatus="WEAPON_UPGRADED_02"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIFirehawkHardpointsUpgradeBombMainLoad"
+						Upgrade=""
+						ObjectStatus="WEAPON_UPGRADED_02 WEAPON_UPGRADED_03"
+						IsPlayerUpgradePermanent="False" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<Physics
+				id="6D41764B"
+				MaxXRotationVelocity="360"
+				MaxYRotationVelocity="360"
+				MaxZRotationVelocity="360"
+				GravityMultiplier="1"
+				ShockStunnedTimeLow="5"
+				ShockStunnedTimeHigh="10"
+				ShockStandingTime="5"
+				FirstHeight="1.3"
+				SecondHeight="1.3"
+				FirstPercentIndent="33%"
+				SecondPercentIndent="66%"
+				BounceCount="2"
+				BounceDistance="5"
+				BounceFirstHeight="1.3"
+				BounceSecondHeight="1.3"
+				BounceFirstPercentIndent="33%"
+				BounceSecondPercentIndent="66%"
+				GroundHitFX=""
+				GroundBounceFX=""
+				FirstPercentHeight="33%"
+				SecondPercentHeight="66%"
+				CurveFlattenMinDist="0"
+				TumbleRandomly="False"
+				AllowBouncing="False"
+				KillWhenRestingOnGround="False"
+				OrientToFlightPath="False"
+				IgnoreTerrainHeight="False" />
+			<ProductionUpdate
+				id="ED4A53AD"
+				MaxQueueEntries="99"
+				NumDoorAnimations="0"
+				DoorOpeningTime="0s"
+				DoorOpeningTimeMetaUnit="0s"
+				DoorWaitOpenTime="0s"
+				DoorCloseTime="0s"
+				ConstructionCompleteDuration="0"
+				DisabledTypesToProcess=""
+				UnitInvulnerableTime="0"
+				SpecialPrepModelconditionTime="0"
+				BonusForType=""
+				SpeedBonusAudioLoop=""
+				Type="INVALID"
+				ProductionTimeDelayScalar="0s"
+				GiveNoXP="False"
+				VeteranUnitsFromVeteranFactory="False"
+				SetBonusModelConditionOnSpeedBonus="False"
+				SecondaryQueue="False"
+				IgnorePreReqs="False" />
+			<FlammableUpdate
+				id="D40EA3B5"
+				BurnedDelay="0s"
+				AflameDuration="5s"
+				AflameDamageAmount="3"
+				AflameDamageDelay="0.5s"
+				BurningSoundName=""
+				FlameDamageLimit="20"
+				FlameDamageExpiration="10s"
+				RunToWaterDepth="0"
+				RunToWaterSearchRadius="200"
+				RunToWaterSearchIncrement="60"
+				DamageType="FORCE"
+				SetBurnedStatus="True"
+				SwapModelWhenAflame="False"
+				SwapModelWhenQuenched="False"
+				SwapTextureWhenAflame="False"
+				SwapTextureWhenQuenched="False"
+				BurnContained="False"
+				RunToWater="False"
+				PanicLocomotorWhileAflame="False" />
+			<GrantUpgradeCreate
+				id="77FA1297"
+				UpgradeToGrant="Upgrade_SelectLoad_02"
+				ExemptStatus=""
+				GiveOnBuildComplete="False" />
+			<UnpauseSpecialPowerUpgrade
+				id="DD1AE131"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="True"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SpecialPowerTemplate="SpecialAbilityStratoFighter"
+				ObeyRechageOnTrigger="False">
+				<TriggeredBy>Upgrade_FirehawkStratofighterBooster</TriggeredBy>
+			</UnpauseSpecialPowerUpgrade>
+			<SpecialPower
+				id="03429543"
+				SpecialPowerTemplate="SpecialAbilityStratoFighter"
+				AntiCategory=""
+				AntiFX=""
+				AttributeModifier=""
+				AttributeModifierRange="0"
+				AttributeModifierFX=""
+				WeatherDuration="0"
+				InitiateFX=""
+				TriggerFX=""
+				SetModelCondition="TOPPLED"
+				SetModelConditionTime="0s"
+				GiveLevels="0"
+				ChangeWeather="NORMAL"
+				OnTriggerRechargeSpecialPower=""
+				BurnDecayModifier="0"
+				MaxDistanceFromCommandCenter="0"
+				UpdateModuleStartsAttack="True"
+				StartsPaused="True"
+				ReEnableAntiCategory="False"
+				AttributeModifierAffectsSelf="False"
+				AttributeModifierWeatherBased="False"
+				TargetEnemy="False"
+				TargetAllSides="False"
+				DisableDuringAnimDuration="False"
+				IdleWhenStartingPower="False"
+				AffectGood="False"
+				AffectEvil="False"
+				AffectAllies="True"
+				AvailableAtStart="True"
+				AdjustVictim="False"
+				UseDistanceFromCommandCenter="False"
+				ChildModuleHandlesFX="False">
+				<AttributeModifierAffects
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterMP
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterStrategic
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+			</SpecialPower>
+			<TeleportSpecialAbilityUpdate
+				id="6E468FA8"
+				GrabPassengerHealGain="0%"
+				SpecialPowerTemplate="SpecialAbilityStratoFighter"
+				StartAbilityRange="1E+07"
+				AbilityAbortRange="1E+07"
+				PreparationTime="0s"
+				PersistentPrepTime="0s"
+				PersistentCount="-1"
+				PackTime="0s"
+				UnpackTime="1s"
+				PreTriggerUnstealthTime="0s"
+				Options="IGNORE_FACING_CHECK"
+				PackUnpackVariationFactor="0"
+				ParalyzeDurationWhenCompleted="0s"
+				ParalyzeDurationWhenAborted="0s"
+				SpecialObject=""
+				MaxSpecialObjects="1"
+				EffectDuration="0s"
+				EffectValue="1"
+				EffectRange="0"
+				FleeRangeAfterCompletion="0"
+				DisableFXParticleSystem=""
+				PackSound=""
+				UnpackSound="Multisound:GGDI_FireHawk_StratoFighterMS"
+				PrepSoundLoop=""
+				TriggerSound=""
+				ActiveLoopSound=""
+				AwardXPForTriggering="0"
+				SkillPointsForTriggering="-1"
+				UnpackingVariation="1"
+				FreezeAfterTriggerDuration="0s"
+				RequiredConditions=""
+				RejectedConditions=""
+				SetObjectStatusOnTrigger=""
+				ClearObjectStatusOnExit=""
+				TriggerAttributeModifier=""
+				AttributeModifierDuration="0s"
+				ChainedButton=""
+				RequireAndSpendTiberiumOnCaster="0"
+				DisabledTypesToProcess="HELD"
+				DisabledTypesToContinueSoundsFor="HELD"
+				StartRechargeOnExit="False"
+				GoIdleInStartPreparation="True"
+				FaceTarget="True"
+				BusyDuration="3s"
+				DestinationWeapon=""
+				SourceWeapon=""
+				MaxDistance="10000"
+				HeightToTeleportTo="300"
+				FadeInTime="0s" />
+			<RemoveUpgradeUpgrade
+				id="3734843C"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SuppressEvaEventForRemoval="False"
+				RemoveFromAllPlayerObjects="False">
+				<TriggeredBy>Upgrade_SelectLoad_01</TriggeredBy>
+				<UpgradeToRemove>Upgrade_SelectLoad_02</UpgradeToRemove>
+			</RemoveUpgradeUpgrade>
+			<RemoveUpgradeUpgrade
+				id="3DBA0F36"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SuppressEvaEventForRemoval="False"
+				RemoveFromAllPlayerObjects="False">
+				<TriggeredBy>Upgrade_SelectLoad_02</TriggeredBy>
+				<UpgradeToRemove>Upgrade_SelectLoad_01</UpgradeToRemove>
+			</RemoveUpgradeUpgrade>
+			<StatusBitsUpgrade
+				id="77F878CA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				StatusToSet="WEAPON_UPGRADED_01"
+				StatusToClear="WEAPON_UPGRADED_02"
+				ApplyToContained="False">
+				<TriggeredBy>Upgrade_SelectLoad_01</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StatusBitsUpgrade
+				id="CAEBBFC8"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				StatusToSet="WEAPON_UPGRADED_02"
+				StatusToClear="WEAPON_UPGRADED_01"
+				ApplyToContained="False">
+				<TriggeredBy>Upgrade_SelectLoad_02</TriggeredBy>
+			</StatusBitsUpgrade>
+			<ReturnToProducerSpecialPower
+				id="53D58533"
+				SpecialPowerTemplate="SpecialPowerReturnToProducer"
+				AntiCategory=""
+				AntiFX=""
+				AttributeModifier=""
+				AttributeModifierRange="0"
+				AttributeModifierFX=""
+				WeatherDuration="0"
+				InitiateFX=""
+				TriggerFX=""
+				SetModelCondition="TOPPLED"
+				SetModelConditionTime="0s"
+				GiveLevels="0"
+				ChangeWeather="NORMAL"
+				OnTriggerRechargeSpecialPower=""
+				BurnDecayModifier="0"
+				MaxDistanceFromCommandCenter="0"
+				UpdateModuleStartsAttack="False"
+				StartsPaused="False"
+				ReEnableAntiCategory="False"
+				AttributeModifierAffectsSelf="False"
+				AttributeModifierWeatherBased="False"
+				TargetEnemy="False"
+				TargetAllSides="False"
+				DisableDuringAnimDuration="False"
+				IdleWhenStartingPower="False"
+				AffectGood="False"
+				AffectEvil="False"
+				AffectAllies="True"
+				AvailableAtStart="True"
+				AdjustVictim="False"
+				UseDistanceFromCommandCenter="False"
+				ChildModuleHandlesFX="False">
+				<AttributeModifierAffects
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterMP
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterStrategic
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+			</ReturnToProducerSpecialPower>
+			<AISpecialPowerUpdate
+				id="B25CB481"
+				CommandButtonName="Command_GDI_FireHawkStratoFighterAbility"
+				SecondaryCommandButtonName=""
+				SpecialPowerAIType="SPECIAL_POWER_MOVEMENT"
+				SpecialPowerRadius="-1"
+				ReinforceDistance="0"
+				SpellMakesAStructure=""
+				SpecificUnit=""
+				UnitKindOf=""
+				AllyUnitInclude=""
+				AllyUnitExclude=""
+				EnemyUnitInclude=""
+				EnemyUnitExclude=""
+				MinimumCutoff="500"
+				UpdateTime="1s"
+				MaxFrequency="0"
+				RandomizeTargetLocation="False" />
+			<SlowDeath
+				id="73542D4A"
+				SinkRate="0.5"
+				ProbabilityModifier="10"
+				ModifierBonusPerOverkillPercent="0%"
+				SinkDelay="0s"
+				SinkDelayVariance="0s"
+				DestructionDelay="0s"
+				DestructionDelayVariance="0s"
+				DecayBeginTime="0s"
+				FlingForce="0"
+				FlingForceVariance="0"
+				FlingPitch="0d"
+				FlingPitchVariance="0d"
+				DeathFlags=""
+				FadeTime="0s"
+				FadeDelay="0s"
+				DeathTypes=""
+				DeathObjectStatusBits=""
+				ShadowWhenDead="False"
+				Fade="False">
+				<FX
+					Type="INITIAL">
+					<FX>FX_GDI_FireHawk_VoiceDie</FX>
+				</FX>
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_GDIFireHawkDebris</OCL>
+				</OCL>
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+			</SlowDeath>
+			<FXListBehavior
+				id="C74C39D8">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIAirVehicleExplode"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+			</FXListBehavior>
+			<ModelConditionUpgrade
+				id="F4034908"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_1"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_FirehawkStratofighterBooster</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="081018FB"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_5"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
+			</ModelConditionUpgrade>
+			<AudioLoopUpgrade
+				id="0356B64D"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:GGDI_Firehawk_StratoFighterUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_FirehawkStratofighterBooster</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="84F6960A"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:GDI_FireHawk_MissileLoadoutButton"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_SelectLoad_01</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="02403A6B"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:GDI_FireHawk_BombLoadoutButton"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_SelectLoad_02</TriggeredBy>
+			</AudioLoopUpgrade>
+			<ArmorUpgrade
+				id="8A7E644E"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="True"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ArmorSetFlag="PLAYER_UPGRADE"
+				KillArmorUpgrade="False"
+				IgnoreArmorUpgrade="False">
+				<TriggeredBy>Upgrade_CeramicArmor</TriggeredBy>
+			</ArmorUpgrade>
+			<ModelConditionUpgrade
+				id="772D4894"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_6"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_CeramicArmor</TriggeredBy>
+			</ModelConditionUpgrade>
+		</Behaviors>
+		<AI>
+			<JetAIUpdate
+				id="B27BFE0A"
+				AutoAcquireEnemiesWhenIdle="YES"
+				StopChaseDistance="500"
+				HoldGroundCloseRangeDistance="0"
+				AILuaEventsList="GDIFirehawkFunctions"
+				MinCowerTime="0s"
+				MaxCowerTime="0s"
+				RampageTime="0s"
+				BurningDeathTime="0s"
+				TimeToEjectPassengersOnRampage="0"
+				ComboLocomotorSet="NORMAL"
+				ComboLocoAttackDistance="80"
+				IdleTargetTime="0s"
+				MaxCombineChildren="1"
+				SpawnOffsetRadius="0"
+				StandGround="False"
+				CanAttackWhileContained="False"
+				RampageRequiresAflame="False"
+				FadeOnPortals="False"
+				OutOfAmmoDamagePerSecond="1.5%"
+				OutOfAmmoDamageDelay="0s"
+				TakeoffSpeedForMaxLift="100%"
+				TakeoffPause="0"
+				MinHeight="5"
+				ParkingOffset="0"
+				SneakyOffsetWhenAttacking="0"
+				AttackLocomotorType="NORMAL"
+				AttackLocomotorPersistTime="0"
+				AttackersMissPersistTime="0"
+				ReturnForAmmoLocomotorType="NORMAL"
+				ReturnToBaseIdleTime="0"
+				UseForOutOfAmmoCheck=""
+				NeedsRunway="False"
+				ReturnToBaseWhenVictimDead="True"
+				KeepsParkingSpaceWhenAirborne="True"
+				CirclesForAttack="True">
+				<UnitAITargetChooserData
+					IdleScanDelay="0.8s"
+					ReacquireDelay="5s"
+					StartupDelay="0s"
+					SympathyRange="100"
+					CheckVisionRange="False"
+					CanPickDynamicTargets="True"
+					RotateToTargetWhenAiming="True"
+					CanAutoAcquireNonAutoAcquirable="False"
+					TargetingCompareList="DefaultTargetingCompareList" />
+				<LockonInfo
+					LockonTime="0"
+					LockonInitialDist="100"
+					LockonFreq="0.5"
+					LockonAngleSpin="720d"
+					LockonBlinky="False" />
+			</JetAIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="B313F576"
+				MaxHealth="2625"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				InitialHealth="-1"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+		</Body>
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior
+				id="4942AA42">
+				<ModelConditionSound
+					Sound="AudioEvent:FireHawkMoveStart"
+					RequiredFlags="LANDING"
+					ExcludedFlags="" />
+				<ModelConditionSound
+					Sound="AudioEvent:FireHawkMoveStart"
+					RequiredFlags="TAKING_OFF"
+					ExcludedFlags="" />
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="False">
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="20"
+				MinorRadius="18"
+				Height="7"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceAttack"
+				AudioType="voiceAttack" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceAttackBuildingClear"
+				AudioType="voiceAttackGarrisonedStructure" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceCreate"
+				AudioType="voiceCreated" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceMove"
+				AudioType="voiceMove" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceMove"
+				AudioType="voiceGuard" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceMoveAirfield"
+				AudioType="voiceDock" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceMoveAirfield"
+				AudioType="voiceEnter" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceMoveAirfield"
+				AudioType="voiceSendToSlaughterhouse" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceRetreat"
+				AudioType="voiceRetreatToCastle" />
+			<AudioEntry
+				Sound="Multisound:GDI_Firehawk_VoiceSelectMS"
+				AudioType="voiceSelect" />
+			<NamedEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceElevate"
+				Name="InitiateFirehawkStratoFighter" />
+			<NamedEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceMoveAirfield"
+				Name="ReturnToProducer" />
+			<NamedEntry
+				Sound="AudioEvent:GDI_Firehawk_VoiceRetreat"
+				Name="ReturnToProducer" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:FireHawkMoveStart"
+				AudioType="soundMoveStart" />
+			<AudioEntry
+				Sound="AudioEvent:TEMP_FireHawkAmbientLoop"
+				AudioType="soundAmbient" />
+			<AudioEntry
+				Sound="AudioEvent:TEMP_FireHawkMoveLoop"
+				AudioType="soundMoveLoop" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventDamagedOwner="UnitUnderAttack"
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventAmbushed="UnitAmbushed"
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled"
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME"
+			Texture=""
+			AdditionalTexture=""
+			SizeX="0"
+			SizeY="0"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="3s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="3s"
+			OpacityEnd="0"
+			MaxHeight="131"
+			SunAngle="0"
+			OverrideLODVisibility="False"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="450"
+			VisionSide="100%"
+			VisionRear="100%"
+			VisionBonusTestRadius="100"
+			VisionBonusTestSegments="8"
+			VisionBonusPercentPerFoot="0%"
+			MaxVisionBonusPercent="50%"
+			MinVisionBonusPercent="-50%" />
+		<CrusherInfo
+			CrushKnockback="0"
+			CrushZFactor="1"
+			MinCrushVelocityPercent="1%"
+			CrushDecelerationPercent="0%"
+			CrushWeapon=""
+			CrushRevengeWeapon=""
+			CrusherLevel="1"
+			CrushableLevel="2"
+			MountedCrusherLevel="255"
+			MountedCrushableLevel="255"
+			CrushEqualLevelProps="False"
+			UseCrushAttack="True"
+			CrushOnlyWhileCharging="False"
+			CrushAllies="False" />
+		<DisplayUpgrade>Upgrade_FirehawkStratofighterBooster</DisplayUpgrade>
+		<DisplayUpgrade>Upgrade_CeramicArmor</DisplayUpgrade>
+	</GameObject>
+</AssetDeclaration>

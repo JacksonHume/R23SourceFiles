@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="FXINVISBONE2" Hierarchy="FXINVISBONE2">
+		<SubObject SubObjectID="MESH" BoneIndex="1">
+			<RenderObject>
+				<Mesh>FXINVISBONE.MESH</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>
+		<Include source="Units/MoKVenom.xml" type="all" />
+		<Include source="Structures/MarkedOfKaneDisruptionTower.xml" type="all" />
+		<!--
+		<Include source="Units/MoKRedeemer.xml" type="all"/>
+
+		<Include source="Units/MarkedofKaneBunkerTruck.xml" type="all"/>
+		<Include source="Units/MoKAvatar.xml" type="all"/> 
+		<Include source="Units/MarkedOfKaneMilitantRocketSquad.xml" type="all"/> 
+		<Include source="Units/markedofkanebeamcannon.xml" type="all"/>
+		<Include source="Structures/MoKPropagandaTower.xml" type="all"/>
+		<Include source="Units/markedofkanemobileartillery.xml" type="all"/>  
+
+		<Include source="Structures/MoKPowerPlant.xml" type="all" /> 
+		<Include source="Units/MOKAwakenedSquad.xml" type="all"/>	
+		<Include source="Units/MoKHarvester.xml" type="all"/>
+		<Include source="Units/MOKAwakened.xml" type="all"/> 
+		<Include source="Units/markedofkanesaboteur.xml" type="all"/> 
+		<Include source="Structures/MarkedOfKaneTiberiumSilo.xml" type="all" /> 
+		<Include source="Units/markedofkanevertigo.xml" type="all"/>
+		<Include source="Units/markedofkanemcv.xml" type="all"/>
+		<Include source="Structures/MoKHangar.xml" type="all"/>
+		<Include source="Structures/MoKMiniMCVOutpost.xml" type="all"/>
+		<Include source="Units/MoKEmissary.xml" type="all"/>
+		<Include source="Units/MOKShadowSquad.xml" type="all"/> 
+		<Include source="Units/MOKShadowSquad_Veteran.xml" type="all"/> 
+		<Include source="Units/MarkedOfKaneFanaticSquad.xml" type="all"/> 
+		<Include source="Units/MarkedOfKaneFanatic.xml" type="all"/> 
+		<Include source="Structures/MoKCrane.xml" type="all"/>
+		<Include source="Structures/MoKShredderTurretHub.xml" type="all"/>
+		<Include source="Units/MarkedOfKaneScorpionBuggy.xml" type="all"/>
+	
+		<Include source="Units/MoKAvatarHusk.xml" type="all"/> 
+		<Include source="Structures/MoKConstructionYard.xml" type="all"/>
+		<Include source="Units/MarkedOfKaneMilitantRocket.xml" type="all"/> 
+		<Include source="Units/MOKEnlightened.xml" type="all"/>
+		<Include source="Units/markedofkaneattackbike.xml" type="all"/> 
+
+		<Include source="Structures/MarkedOfKaneShredderTurret.xml" type="all"/>
+ 
+		<Include source="Structures/MG_MoK_WarmechFacility.xml" type="all"/>
+		<Include source="Units/MOKEnlightenedSquad.xml" type="all"/>
+		<Include source="Units/markedofkanesaboteur.xml" type="all"/> 
+		<Include source="Units/MOKTibTrooper.xml" type="all"/>  
+		<Include source="Units/markedofkanestealthtank.xml" type="all"/>		
+		<Include source="Units/MoKCommando.xml" type="all"/>  				
+		<Include source="Structures/MOKRef.xml" type="all"/>
+		<Include source="Structures/MoKSecretShrine.xml" type="all"/>
+		<Include source="Structures/markedofkaneoperationscenter.xml" type="all"/> 
+		<Include source="Structures/mokrocketbunkerspawn.xml" type="all"/>
+		<Include source="Structures/MoKLaserCannonHub.xml" type="all"/>
+		<Include source="Structures/MOKRocketBunkerHub.xml" type="all"/>
+		<Include source="Structures/MOKTempleOfNod.xml" type="all"/>
+		<Include source="Structures/MOKTibChemPlant.xml" type="all"/>
+		<Include source="Structures/MoKTechCenter.xml" type="all"/>
+		<Include source="Structures/MoKDropZone.xml" type="all"/>
+		<Include source="Structures/MoKhandofnod.xml" type="all"/>
+	-->
+	</Includes>
+
+</AssetDeclaration>

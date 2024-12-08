@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>
+		<Include source="Units/ZOCOMMARV.xml" type="all"/>	
+		<!--
+		<Include source="Units/ZOCOMAPC.xml" type="all"/>
+		<Include source="Units/ZOCOMHammerhead.xml" type="all"/>
+		<Include source="Units/ZOCOMGrenadeSoldierSquad.xml" type="all"/>
+		<Include source="Units/ZOCOMGrenadeSoldier.xml" type="all"/>
+		<Include source="Structures/ZOCOMAirTower.xml" type="all"/>
+		<Include source="Structures/ZOCOMRef.xml" type="all"/>
+		<Include source="Units/ZOCOMHarv.xml" type="all"/>
+		<Include source="Structures/ZOCOMIonCannonControl.xml" type="all"/>
+		<Include source="Structures/ZOCOMPowerPlant.xml" type="all"/>
+		<Include source="Units/ZOCOMEngineer.xml" type="all"/>
+		<Include source="Structures/ZOCOMMiniMCVOutpost.xml" type="all"/>
+		<Include source="Units/ZOCOMSurveyor.xml" type="all"/>
+		<Include source="Units/ZOCOMZoneInf.xml" type="all"/> 
+		<Include source="Units/ZOCOMV35Vehicle.xml" type="all"/> 
+		<Include source="Structures/ZOCOMCrane.xml" type="all"/>
+		<Include source="Structures/zocommedicalbay.xml" type="all"/>
+		<Include source="Units/ZOCOMMCV.xml" type="all"/>
+		<Include source="Structures/ZOCOMBattlebase.xml" type="all"/>
+		<Include source="Structures/MG_ZOCOM_ReclamatorHub.xml" type="all"/> 
+		<Include source="Units/Orcas.xml" type="all"/>
+		<Include source="Units/ZOCOMFireHawk.xml" type="all"/>
+		<Include source="Units/ZOCOMMammoth.xml" type="all"/>
+		<Include source="Units/ZOCOMCommando.xml" type="all"/>
+		<Include source="Units/ZOCOMRig.xml" type="all"/>
+		<Include source="Units/ZOCOMMissileSoldierVeteranSquad.xml" type="all"/>
+		<Include source="Units/ZOCOMRifleSoldierVeteranSquad.xml" type="all"/>
+		<Include source="Units/ZOCOMMissileSoldierVeteran.xml" type="all"/>
+		<Include source="Units/ZOCOMRifleSoldierVeteran.xml" type="all"/>
+		<Include source="Units/ZOCOMRifleSoldier.xml" type="all"/>
+		<Include source="Props/zocomdroppod.xml" type="all"/>
+		<Include source="Structures/zocomcommandpost.xml" type="all"/>
+		<Include source="Structures/zocomarmory.xml" type="all"/>
+		<Include source="Structures/ZOCOMSpaceCommandUplink.xml" type="all"/>
+		<Include source="Structures/ZOCOMBarracks.xml" type="all"/>
+		<Include source="Structures/ZOCOMWarfactory.xml" type="all"/>
+		<Include source="Structures/ZOCOMConstructionYard.xml" type="all"/>
+		<Include source="Structures/ZOCOMTiberiumSilo.xml" type="all"/>
+-->
+	</Includes>
+
+</AssetDeclaration>

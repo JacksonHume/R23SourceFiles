@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>	 
+		 <Include type="reference" source="Global.xml" />
+		<!-- <Include type="all" source="ART:Models/NUMECHH_SKN.FLAMETANK.w3x" /> -->
+		<!-- R21 -->
+		<Include type="all" source="ART:Models/FXSPOTLIGHT.w3x" />
+		<Include type="all" source="ART:Models/FXASPOTLIGHT.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDCARRIER.DIFFUSE.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDCARRIER.DISTORTION.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDGUNWALKER.DIFFUSE.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDGUNWALKER.DISTORTION.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDHARVESTER.DIFFUSE.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDHARVESTER.DISTORTION.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDSEEKERTANK.DIFFUSE.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDSEEKERTANK.DISTORTION.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDTRIPOD.DIFFUSE.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDTRIPOD.DISTORTION.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDWARSHIP.DIFFUSE.w3x" />
+		<Include type="all" source="ART:Models/FXSHLDWARSHIP.DISTORTION.w3x" />
+		<Include type="all" source="ART:Models/GUHRVSTR_TIB1_CTR.w3x" />
+		<Include type="all" source="ART:Models/GUHRVSTR_TIB2_CTR.w3x" />
+		<Include type="all" source="ART:Models/GUHRVSTR_TIB3_CTR.w3x" />
+		<Include type="all" source="ART:Models/GUHRVSTR_TIB4_CTR.w3x" />			
+		<Include type="all" source="ART:Models/GUHRVSTR_TIB.TIB_25.w3x" />
+		<Include type="all" source="ART:Models/GUHRVSTR_TIB.TIB_50.w3x" />
+		<Include type="all" source="ART:Models/GUHRVSTR_TIB.TIB_75.w3x" />
+		<Include type="all" source="ART:Models/GUHRVSTR_TIB.TIB_100.w3x" />	
+		<Include type="all" source="ART:Models/GUHRVSTR_SKN.TIBBLUE.w3x" />
+		<Include type="all" source="ART:Models/GUHRVSTR_SKN.TIB_STOPBLUE.w3x" />		
+		<Include type="all" source="ART:Models/GUHRVSTR_SKN.w3x" />
+		<Include type="all" source="ART:Models/GUHRVSTRR_SKN.w3x" />
+		<Include type="all" source="ART:Models/GUHVYHARV_SKN.w3x" />
+		<Include type="all" source="ART:Models/GUZocomHarvR_SKN1.W3X" />
+		<Include type="all" source="ART:Models/GUZOCOMHARV_SKN1.w3x" />
+		<Include type="all" source="ART:Models/GUZocomHarv_FP.w3x" />
+		<Include type="all" source="ART:Models/NU_HRVSTR_TIB4_CTR.w3x" />
+		<Include type="all" source="ART:Models/NU_HRVSTR_TIB3_CTR.w3x" />
+		<Include type="all" source="ART:Models/NU_HRVSTR_TIB1_CTR.w3x" />
+		<Include type="all" source="ART:Models/NU_HRVSTR_TIB2_CTR.w3x" />
+		<Include type="all" source="ART:Models/NU_HRVSTR_TIB.TIB_100.w3x" />
+		<Include type="all" source="ART:Models/NU_HRVSTR_TIB.TIB_75.w3x" />
+		<Include type="all" source="ART:Models/NU_HRVSTR_TIB.TIB_50.w3x" />
+		<Include type="all" source="ART:Models/NU_HRVSTR_TIB.TIB_25.w3x" />
+		 
+		<!-- R20 -->
+	    <Include type="all" source="GlobalData/UnitAbilityButtonTemplates.xml" />		
+		<Include type="all" source="ART:Models/ABPMBATBLD_SKN.ABPMBAT.w3x" />
+		<Include type="all" source="ART:Models/GBTECHCEN_SKL.w3x" />
+		<Include type="all" source="ART:Models/GBTECHCEN_IDLA.w3x" />				
+		<Include type="all" source="ART:Models/GURflManUPG_SKN.w3x" />
+		<Include type="all" source="ART:Models/GURFLMAN_UGTS_SKN.RIFLEMAN02.w3x" />
+		<Include type="all" source="ART:Models/AUAnlTrpd_DIEB.w3x" /> 
+		<Include type="all" source="ART:Models/GUZNRAIDER_SKN.w3x" /> 
+		<Include type="all" source="ART:Models/GUZNTRPR_SKN.UGJUMP.w3x" />
+		<Include type="all" source="ART:Models/GUZNTRPR_SKN.w3x" />
+		<Include type="all" source="ART:Models/GUZNTRPR_SKL.w3x" />				
+		<Include type="all" source="ART:Models/ABTIBERTOW_D2SK_HRC.w3x" />
+		<Include type="all" source="ART:Models/ABTIBERTOW_D2SN_CTR.w3x" />
+		<Include type="all" source="ART:Models/ABTIBERTOW_SKL.w3x" />
+		<Include type="all" source="ART:Models/ABTIBERTOW_SKN.w3x" />
+		<Include type="all" source="ART:Models/GBREFINERY_CTR.w3x" />
+		<Include type="all" source="ART:Models/GBREFINERY_D2_CTR.w3x" />
+		<Include type="all" source="ART:Models/GBREFINERY_D2S_HRC.w3x" />
+		<Include type="all" source="ART:Models/GBREFINERY_HRC.w3x" />
+		<Include type="all" source="ART:Models/NBREFINERY_CTR.w3x" />
+		<Include type="all" source="ART:Models/NBREFINERY_HRC.w3x" />
+		<Include type="all" source="ART:Models/NBREFINERYD2_SK_HRC.w3x" />
+		<Include type="all" source="ART:Models/NBREFINERYD2_SN_CTR.w3x" />
+				
+		<Include type="all" source="ART:Models/GBRECDOOR1_SKN.FX_GUIDEARROWS.w3x" />
+		<Include type="all" source="ART:Models/GUMARV_BLDA.w3x" />
+		<Include type="all" source="ART:Models/GUMARV_CRSH1.w3x" />
+		<Include type="all" source="ART:Models/GUMARV_MOV.w3x" />
+		<Include type="all" source="ART:Models/GUMARV_SKL.w3x" />
+		<Include type="all" source="ART:Models/GUMARV_SKN.w3x" />
+		<!--<Include type="all" source="ART:Models/GUMARV_SKN_L.w3x" /> --> <!-- FOR LOW RES STREAM -->
+		<Include type="all" source="ART:Models/GUMARV_TRNL.w3x" />
+		<Include type="all" source="ART:Models/GUMARV_TRNR.w3x" />
+		<Include type="all" source="ART:Models/GUMARVCANNON_ATKA.w3x" />
+		<Include type="all" source="ART:Models/GUMARVCANNON_BLDA.w3x" />
+		<Include type="all" source="ART:Models/GUMARVCANNON_IDLE.w3x" />
+		<Include type="all" source="ART:Models/GUMARVCANNON_SKL.w3x" />
+		<Include type="all" source="ART:Models/GUMARVCANNON_SKN.w3x" />
+		<!--<Include type="all" source="ART:Models/GUMARVCANNON_SKN_L.w3x" /> -->		 
+		<Include type="all" source="ART:Models/NUVERTSTLTH_SKN.w3x" />
+		<Include type="all" source="ART:Models/NUVERTSTLTH_SKN.DISTORTION01.w3x" />
+		<Include type="all" source="ART:Models/NUVERTSTLTH_SKNUG.w3x" />
+		<Include type="all" source="ART:Models/NUVERTSTLTH_SKNUG_RD.w3x" />	
+		<Include type="all" source="ART:Models/NUVERT_SKL.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRT_ANM2.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRT_CTR2.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRTD2_SKN2.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRTDISH.DISHSTAND.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRTDISH.TOWERDISH.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRTDISH_SKL.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRTDISH_CTR.w3x" />
+		<!--<Include type="all" source="ART:ModelsGBAIRSUPPRTD2_SKN.TOWER.w3x" /> -->
+		<Include type="all" source="ART:Models/GBAIRSUPPRTD2_SKL.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRTD2_SKN.DISHSTAND.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRTD2_SKN.TOWERDISH.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRTD2_SKN.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRT_SKL.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRT_CTR.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRT.DISHSTAND.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRT.GBAIRSUPPRT.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRT.TOWERDISH.w3x" />
+		<Include type="all" source="ART:Models/GBAIRSUPPRT_ANM.w3x" />
+		<Include type="all" source="ART:Models/GUENGINEER_SKN.w3x" />
+		<Include type="all" source="ART:Models/GUCENGINEER_SKN.LASER.w3x" />
+		<Include type="all" source="ART:Models/GBMEDBAY_HRC.w3x" />
+		<Include type="all" source="ART:Models/GBMEDBAY_CTR.w3x" />
+		<Include type="all" source="ART:Models/GBMEDBAYD2_SKN.FLASHINGLIGHTS.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOST_SKL.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOST_SKN.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOST.UG_GRENADEEMP01.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOST.UG_GRENADEEMP.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOST.CONNECTOR.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOSTD2_SK_HRC.w3x" />
+		<Include type="all" source="ART:Models/GBMEDBAYD2_SKN.UG_GRENADEEMP.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOSTD2_SN2.UG_GRENADEEMP01.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOSTD2_SN2.CONNECTOR.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOSTD2_SN_CTR.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOSTD3_SK_HRC.w3x" />
+		<Include type="all" source="ART:Models/GBMEDBAYD3_SKN.UG_GRENADEEMP.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOSTD3.GRENADEEMP01.w3x" />
+		<Include type="all" source="ART:Models/GBCOMPOSTD3_SN_CTR.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_ASKN_CTR2.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_ASKL_HRC.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_D2SN_CTR2.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_D2SK_HRC.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_D3SN_CTR2.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_D3SK_HRC.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_SKN2.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_SKL.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_D3SN.UG_COMPOSITEARMOR.w3x" />
+		<Include type="all" source="ART:Models/GBBARRACKS_D3SN.UG_COMPOSITEARMOR02.w3x" />	 
+		 
+		 <!-- -->
+		 
+		<Include type="all" source="ART:Models/GBRECDOOR1_SKN.FX_GUIDEARROWS.w3x" />		 
+		<Include type="all" source="ART:Models/GURIGUPAK_AN.w3x" />
+		<Include type="all" source="ART:Models/AUCULTIST_SKL.w3x" />
+		<Include type="all" source="ART:Models/AUCULTIST_SKN.OBBOX.w3x" />
+		<Include type="all" source="ART:Models/AUCULTIST_SKN.SUCULTIST.w3x" />
+		<Include type="all" source="ART:Models/AUCULTIST_SKN.w3x" />
+		<Include type="all" source="ART:Models/FXGrenade_FP.w3x" />
+		<Include type="all" source="ART:Models/FXSilentOne_FP.w3x" />
+		<Include type="all" source="ART:Models/GBGOLUMCAN_D2SNA.w3x" />
+		<Include type="all" source="ART:Models/GBGOLUMCAN_D2SNR.w3x" />
+		<Include type="all" source="ART:Models/GBGOLUMCAN_D3SNA.w3x" />
+		<Include type="all" source="ART:Models/GBGOLUMCAN_D3SNR.w3x" />
+		<Include type="all" source="ART:Models/GBGolumCan_SKLA.w3x" />
+		<Include type="all" source="ART:Models/GBGOLUMCAN_SKNA.w3x" />
+		<Include type="all" source="ART:Models/GBGOLUMCAN_SKNR.w3x" />
+		<Include type="all" source="ART:Models/GUHAMHEADR.GUHELI.w3x" />
+		<Include type="all" source="ART:Models/GUHAMHEADR_CTR.w3x" />
+		<Include type="all" source="ART:Models/GUHAMHEADR_HRC.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_D3SN2_CTR.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM_UGTCM_D2_AAN.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM_UGTCM_D2_SKL.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM_UGTCM_D2_SKN.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM_UGTCM_D3_SKN.NEWSKIN_NBDHUB_TCM.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM2_UGTCM_D3_AAN.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM2_UGTCM_D3_SKL.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM2_UGTCM_D3_SKN.w3x" />
+		<Include type="all" source="ART:Models/NBDHub_QSBLD_AAN.w3x" />
+		<Include type="all" source="ART:Models/NBDHub_QSBld_SKL.w3x" />
+		<Include type="all" source="ART:Models/NBDHub_QSBLD_SKN.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_UGTCMBLD_SKL..w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_UGTCMBLD2_SKN.w3x" />
+		<Include type="all" source="ART:Models/NBENGFABLD_AAN.w3x" />
+		<Include type="all" source="ART:Models/NBENGFABLD_SKL.w3x" />
+		<Include type="all" source="ART:Models/NBENGFABLD_SKN.FXTOPGLOW.w3x" />
+		<Include type="all" source="ART:Models/NBENGFABLD_SKN.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOOR_SKN.DOORS.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOOR01D2_CLS2.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOOR01D2_OPN.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOOR01D2_OPNS.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOOR01D2_SKL.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOOR01D2_SKN.FXTOPGLOW.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOOR01D2_SKN2.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOOR03D2_CLS.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOORD2_SKL.w3x" />
+		<Include type="all" source="ART:Models/NBENGFADOORD2_SKN.FXTOPGLOW.w3x" />
+		<Include type="all" source="ART:Models/NBOPCENTERX_SKN.MISSILE.w3x" />
+		<Include type="all" source="ART:Models/NBOpCenterX2_FIRA.w3x" />
+		<Include type="all" source="ART:Models/NBOpCenterX2_IDLA.w3x" />
+		<Include type="all" source="ART:Models/NBOpCenterX2_RDY.w3x" />
+		<Include type="all" source="ART:Models/NBOpCenterX2_SKL.w3x" />
+		<Include type="all" source="ART:Models/NBOpCenterX2_SKN.w3x" />
+		<Include type="all" source="ART:Models/NUREDMRBLDA_D2SKN.w3x" />
+		<Include type="all" source="ART:Models/NUSTLTHTNKSTLTH.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Models/NUSTLTHTNKSTLTH_CTR2.w3x" />
+		<Include type="all" source="ART:Models/NUSTLTHTNKSTLTHTIBCORE.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Models/NUSTLTHTNKSTLTHTIBCORE.TIBCOREMISSILEL.w3x" />
+		<Include type="all" source="ART:Models/NUSTLTHTNKSTLTHTIBCORE.TIBCOREMISSILER.w3x" />
+		<Include type="all" source="ART:Models/NUSTLTHTNKSTLTHTIBCORE.TREADSMOVE.w3x" />
+		<Include type="all" source="ART:Models/NUSTLTHTNKSTLTHTIBCORE.TREADSSTOP.w3x" />
+		<Include type="all" source="ART:Models/NUSTLTHTNKSTLTHTIBCORE.TREADSTURNLEFT.w3x" />
+		<Include type="all" source="ART:Models/NUSTLTHTNKSTLTHTIBCORE.TREADSTURNRIGHT.w3x" />
+		<Include type="all" source="ART:Models/NBOpCenter_Dish.w3x" />		
+		<Include type="all" source="ART:Models/NBHAND_CTR2.w3x" />
+		<Include type="all" source="ART:Models/NBHAND_HRC2.w3x" />
+		<Include type="all" source="ART:Models/NBHANDD2_AN2.w3x" />
+		<Include type="all" source="ART:Models/NBHANDD2_SK_HRC2.w3x" />
+		<Include type="all" source="ART:Models/NBHANDD2_SN_CTR2.w3x" />
+		<Include type="all" source="ART:Models/NBHANDD3_AN2.w3x" />
+		<Include type="all" source="ART:Models/NBHANDD3_SK_HRC2.w3x" />
+		<Include type="all" source="ART:Models/NBHANDD3_SN_CTR2.w3x" />
+		<Include type="all" source="ART:Models/GUVEHICLEFADAR.GUVEHICLEF.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM_UGTCM_D2_SKN.FLASHINGLIGHTS.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM_UGTCM_D2_SKN.NEWSKIN_NBDHUB.w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_QM_UGTCM_D2_SKN.TCMHUB_UPGRADE.w3x" />
+		<Include type="all" source="ART:Models/GBBTLEBASE.w3x" />
+		<Include type="all" source="ART:Models/GBBTLEBASE.RADARGLOWS.w3x" />
+		<Include type="all" source="ART:Models/GBBTLEBASE.POWERPLANTGLOWS.w3x" />	
+		<Include type="all" source="ART:Models/GBBTLEBASE.UG_RAILACCELERATORBARREL1.w3x" />
+		<Include type="all" source="ART:Models/GBBTLEBASE.UG_RAILBARREL1.w3x" />
+		<Include type="all" source="ART:Models/GBBTLEBASE.UGRAILACCELERATORMAIN.w3x" />
+		<Include type="all" source="ART:Models/GBBTLEBASE.UGRAILMAIN.w3x" />
+		<Include type="all" source="ART:Models/GURIGUPAK_SK_HRC.w3x" />
+		<Include type="all" source="ART:Models/GURIGUPAK_SN_CTR.w3x" />
+		<Include type="all" source="ART:Models/AURPRTRIPOD_R.REAPERD.w3x" />
+		<Include type="all" source="ART:Models/AURprTripodH_SKN.w3x" />
+		<Include type="all" source="ART:Models/GBDUGOUT.DIGIN.w3x" />
+		<Include type="all" source="ART:Models/GBDUGOUT_D2SN.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Models/GBDUGOUT_ASN.NEWSKIN.w3x" />
+		<!-- <Include type="all" source="ART:Models/AUMILLIPEDEHEAD_SKL.w3x" /> -->
+		<!--
+		<Include type="all" source="ART:Models/NBDHub_QS_D2_SKN.w3x" />
+		<Include type="all" source="ART:Models/NBDHub_QS_D2_AAN.w3x" /> -->
+	    <Include type="all" source="MPSettings.xml" />
+		<Include type="all" source="GlobalData/FXParticleSystem.xml" /> <!-- alt rocket trails -->
+ 	</Includes>
+	<!-- R22 -->
+	<Texture id="PackedImages_025" File="ART:Textures/PackedImages_025.dds" />
+	<Texture id="PackedImages_003" File="ART:Textures/PackedImages_003.dds" />
+	
+	<!-- R21 -->
+	<Texture id="GB_Mine" File="ART:Textures/GB_Mine.dds" />
+	<Texture id="GBRefineryBlue" File="ART:Textures/GBRefineryBlue.dds" /> 
+	<Texture id="GUHarvester_TibBlue" File="ART:Textures/GUHarvester_TibBlue.dds" /> 
+	<Texture id="NU_HarvBlue" File="ART:Textures/NU_HarvBlue.dds" />
+	<Texture id="NU_Harv_SIM" File="ART:Textures/NU_Harv_SIM.dds" />
+	
+	<!-- R20 -->
+	<!--<Texture id="Portrait_TargetingDecal04" File="ART:Textures/Portrait_TargetingDecal04.dds" /> -->
+	
+	<Texture id="AUEradHex2BT_D" File="ART:Textures/AUEradHex2BT_D.dds" />
+	<Texture id="AUEradHex2BT" File="ART:Textures/AUEradHex2BT.dds" />
+	
+	<Texture id="GUZnTrpr" File="ART:Textures/GUZnTrpr.dds" />
+	<Texture id="GUZnTrpr01" File="ART:Textures/GUZnTrpr01.dds" />
+	<Texture id="GUZnTrpr02" File="ART:Textures/GUZnTrpr02.dds" />
+	<Texture id="GUZnTrpr03" File="ART:Textures/GUZnTrpr03.dds" />
+	<Texture id="GUZnTrpr04" File="ART:Textures/GUZnTrpr04.dds" />
+	<Texture id="GUZnTrpr05" File="ART:Textures/GUZnTrpr05.dds" />
+	
+	<Texture id="Portrait_TargetingDecalCatalystMissile" File="ART:Textures/Portrait_TargetingDecalCatalystMissile.dds" />
+	<Texture id="AUEradHex2_D_SPM" File="ART:Textures/AUEradHex2_D_SPM.dds" />
+	<Texture id="AUEradHex2_D" File="ART:Textures/AUEradHex2_D.dds" />
+	<Texture id="NUFlameTank_UG_NRM" File="ART:Textures/NUFlameTank_UG_NRM.dds" />
+	<Texture id="FXMuzzleTEMP" File="ART:Textures/FXMuzzleTEMP.dds" />
+	<Texture id="NURedeemer3_UG" File="ART:Textures/NURedeemer3_UG.dds" />
+	<Texture id="NURedeemer3_SPM_UG" File="ART:Textures/NURedeemer3_SPM_UG.dds" />
+	<Texture id="NURedeemer3_D_UG" File="ART:Textures/NURedeemer3_D_UG.dds" />
+	<Texture id="NURedeemer3_NRM_UG" File="ART:Textures/NURedeemer3_NRM_UG.dds" />
+	<Texture id="Empty_ScrollTest" File="ART:Textures/Empty_ScrollTest.dds" />
+	<Texture id="FXAbaloneEnv" File="ART:Textures/FXAbaloneEnv.dds" />
+	<Texture id="Decal_LeadershipBuff" File="ART:Textures/Decal_LeadershipBuff.dds" />
+	
+	<!-- -->
+	<Texture id="CUMisslemanAG" File="ART:Textures/CUMisslemanAG.dds" />
+	<Texture id="CUMisslemanCG" File="ART:Textures/CUMisslemanCG.dds" />
+	<Texture id="CURiflemanAG" File="ART:Textures/CURiflemanAG.dds" />
+	<Texture id="CURiflemanCG" File="ART:Textures/CURiflemanCG.dds" />
+	
+	<Texture id="FXRainDrop" File="ART:Textures/FXRainDrop.dds" />
+	<Texture id="FXSnowFlake" File="ART:Textures/FXSnowFlake.dds" />
+	<Texture id="GU_Firehawk_UGCA_D" File="ART:Textures/GU_Firehawk_UGCA_D.dds" />
+	<Texture id="GU_Firehawk_UGCA_SPM" File="ART:Textures/GU_Firehawk_UGCA_SPM.dds" />
+	<Texture id="GUBehemoth_K" File="ART:Textures/GUBehemoth_K.dds" />
+	<Texture id="GUHamhead_UGCA_D" File="ART:Textures/GUHamhead_UGCA_D.dds" />
+	<Texture id="GUHamhead_UGCA_NRM" File="ART:Textures/GUHamhead_UGCA_NRM.dds" />
+	<Texture id="GUHamHead_UGCA_SPM" File="ART:Textures/GUHamHead_UGCA_SPM.dds" />
+	<Texture id="GUOrca_UGCA_D" File="ART:Textures/GUOrca_UGCA_D.dds" />
+	<Texture id="GUOrca_UGCA_SPM" File="ART:Textures/GUOrca_UGCA_SPM.dds" />
+	<Texture id="GUVehicleF_AAUG_D" File="ART:Textures/GUVehicleF_AAUG_D.dds" />
+	<Texture id="GUZocomHarvD" File="ART:Textures/GUZocomHarvD.dds" />
+	<Texture id="HC_GUOrca_UGCAD" File="ART:Textures/HC_GUOrca_UGCAD.dds" />
+	<Texture id="HC_NUEnlightened_UGCL" File="ART:Textures/HC_NUEnlightened_UGCL.dds" />
+	<Texture id="HC_NUTibTroop_UGCL" File="ART:Textures/HC_NUTibTroop_UGCL.dds" />
+	<Texture id="AUStalker_UPBT" File="ART:Textures/AUStalker_UPBT.dds" />
+	<Texture id="GUMamm_AAUG_D" File="ART:Textures/GUMamm_AAUG_D.dds" />
+	<Texture id="GUMamm_AA_Enabled_SPM" File="ART:Textures/GUMamm_AA_Enabled_SPM.dds" />
+	<Texture id="GUMamm_AA_Enabled_D" File="ART:Textures/GUMamm_AA_Enabled_D.dds" />
+	<Texture id="GUMamm_AA_Enabled" File="ART:Textures/GUMamm_AA_Enabled.dds" />
+	<Texture id="HC_NUSabtr_UGCL" File="ART:Textures/HC_NUSabtr_UGCL.dds" />
+	<Texture id="NUFlameTank_UG_SPM" File="ART:Textures/NUFlameTank_UG_SPM.dds" />
+	<Texture id="Decal_Rig_CO" File="ART:Textures/Decal_Rig_CO.dds" />
+	<Texture id="GUDropPodZOCOM" File="ART:Textures/GUDropPodZOCOM.dds" />
+	<Texture id="FXObeliskLaser3" File="ART:Textures/FXObeliskLaser3.dds" />
+</AssetDeclaration>

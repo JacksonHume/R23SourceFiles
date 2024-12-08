@@ -1,0 +1,4195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="MarkedOfKaneMetaUnit"
+		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS PRELOAD SCORE ATTACK_NEEDS_LINE_OF_SIGHT GARRISONABLE_UNTIL_DESTROYED VEHICLE CAN_SHOOT_OVER_WALLS UNIQUE_UNIT CAN_BE_FAVORITE_UNIT METAUNIT USE_STRICT_PATHING"
+		Description="Desc:MarkedOfKaneMetaUnit"
+		WorldMapArmoryUpgradesAllowed="Upgrade_BlackHandSecretShrinePurifyingFlame"
+		TypeDescription="Type:NODMetaUnit"
+		RadarPriority="UNIT"
+		BuildCompletion="INVALID"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="0d"
+		BuildFadeInOnCreateTimeSeconds="0.25s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="MarkedOfKane"
+		EditorName="MarkedOfKaneMetaUnit"
+		EditorSorting="UNIT"
+		BountyValue="0"
+		BuildTime="50"
+		BuildFadeInOnCreateTime="0"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet="NODMetaUnitCommandSet"
+		SelectPortrait="Portrait_Redeemer"
+		ButtonImage="Portrait_Redeemer"
+		VoicePriority="242"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CrowdResponse=""
+		CampnessValue="0"
+		CampnessValueRadius="600"
+		Scale="1"
+		HealthBoxScale="1.5"
+		HealthBoxHeightOffset="10"
+		OcclusionDelay="0"
+		LiveCameraPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		ThreatRadius="-1"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="100"
+		CommandPoints="100"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="0"
+		MaxDistanceForEngaged="0"
+		EngagedStateTimeout="0"
+		ThreatLevel="1"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		DisplayMeleeDamage="-1"
+		DisplayRangedDamage="-1"
+		HeroSortOrder="2147483647"
+		FiringArc="360"
+		CamouflageDetectionMultiplier="1"
+		SelectionPriority="2147483647"
+		ProductionQueueType="VEHICLE"
+		BuildPlacementTypeFlag="INVALID"
+		BuildOnRequiredObjectKindOf=""
+		UnitCategory="VEHICLE"
+		WeaponCategory="CANNON"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon=""
+		ReinvisibilityDelay="7s"
+		CaptureTime="0s"
+		BuildCost="5000"
+		RefundValue="0"
+		ThreatValue="0"
+		MaxSimultaneousOfType="1"
+		TransportSlotCount="1"
+		IsTrainable="True"
+		IsForbidden="False"
+		IsPrerequisite="False"
+		IsGrabbable="False"
+		IsHarvestable="False"
+		StructureRubbleHeight="0"
+		ForceLuaRegistration="False"
+		ShowHealthInSelectionDecal="False"
+		KeepSelectableWhenDead="False"
+		IsAutoBuilt="False"
+		CanPathThroughGates="True"
+		ShouldClearShotsOnIdle="False"
+		BuildInProximityToSamePlayerStucture="True">
+		<DisplayName>Name:NODMetaUnit</DisplayName>
+		<!--<DisplayUpgrade>Upgrade_BlackHandSecretShrinePurifyingFlame</DisplayUpgrade> -->
+		<GameDependency
+			RequiredModelConditionsAny=""
+			ForbiddenModelConditions=""
+			RequiredObjectStatusAny="">
+			<RequiredObject>MarkedOfKaneTechAssemblyPlant</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="NODRedeemerArmor"
+			DamageFX="VehicleDamageFX"
+			Conditions="" />
+		<LocomotorSet
+			Speed="40"
+			Condition="NORMAL"
+			Locomotor="NODRedeemerLocomotor" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT"
+			ConquerMetricsOverrideDamageType="UNDEFINED"
+			ConquerMetricsOverrideAntiMask="ANTI_GROUND"
+			UnitBuilderStandardCombatUnit="True" />
+		<Draws>
+			<ScriptedModelDraw
+				id="50DF2C46"
+				RecoilDamping="0.4"
+				MaxRecoilDistance="3"
+				InitialRecoilSpeed="2"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				ExtraPublicBone="MUZZLEFLASH_01 MUZZLEFLASH_02 B_FTturretR FX_FTFireR FX_FTFireL B_FTturretL FX_HvyMGFlashR B_HvyMGturretR B_HvyMGturretR FX_HvyMGFlashL B_HvyMGturretL SecondaryWepBone04 SubSystemBone01 SubSystemBone02 SubSystemBone03"
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="True"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NUREDEEMER_SKN"
+						ExtraMesh="False" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_LazerBlast" />
+					<WeaponFireFXBone
+						WeaponSlotID="12"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_LazerBlast2" />
+					<WeaponFireFXBone
+						WeaponSlotID="13"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_LazerBlast3" />
+					<WeaponFireFXBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponFireFXBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+						<!-- new -->
+					<WeaponFireFXBone
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponFireFXBone
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+						<!-- new -->
+					<WeaponFireFXBone
+						WeaponSlotID="15"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashR" />
+					<WeaponFireFXBone
+						WeaponSlotID="14"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashL" />
+					<WeaponFireFXBone
+						WeaponSlotID="6"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_RocketPodR" />
+					<WeaponFireFXBone
+						WeaponSlotID="7"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_RocketPodL" />
+					<WeaponFireFXBone
+						WeaponSlotID="8"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponFireFXBone
+						WeaponSlotID="9"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+					<WeaponFireFXBone
+						WeaponSlotID="10"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FX_RageGlow" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_LazerBlast" />
+					<WeaponLaunchBone
+						WeaponSlotID="12"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_LazerBlast2" />
+					<WeaponLaunchBone
+						WeaponSlotID="13"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_LazerBlast3" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+						<!-- new -->
+					<WeaponLaunchBone
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponLaunchBone
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />					
+						<!-- new -->
+					<WeaponLaunchBone
+						WeaponSlotID="15"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashR" />
+					<WeaponLaunchBone
+						WeaponSlotID="14"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashL" />
+					<WeaponLaunchBone
+						WeaponSlotID="6"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_RocketPodR" />
+					<WeaponLaunchBone
+						WeaponSlotID="7"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_RocketPodL" />
+					<WeaponLaunchBone
+						WeaponSlotID="8"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponLaunchBone
+						WeaponSlotID="9"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+					<Turret
+						TurretNameKey="B_FTturretR"
+						TurretArtAngle="0d"
+						TurretPitch=""
+						TurretArtPitch="0d"
+						TurretID="2" />
+					<Turret
+						TurretNameKey="B_FTturretL"
+						TurretArtAngle="0d"
+						TurretPitch=""
+						TurretArtPitch="0d"
+						TurretID="3" />
+						<!-- new -->
+					<Turret
+						TurretNameKey="B_FTturretR2"
+						TurretArtAngle="0d"
+						TurretPitch=""
+						TurretArtPitch="0d"
+						TurretID="5" />
+					<Turret
+						TurretNameKey="B_FTturretL2"
+						TurretArtAngle="0d"
+						TurretPitch=""
+						TurretArtPitch="0d"
+						TurretID="4" />	
+						
+						<!-- new -->
+					<Turret
+						TurretNameKey="B_HvyMGturretR"
+						TurretArtAngle="0d"
+						TurretPitch="B_HvyMGturretR"
+						TurretArtPitch="0d"
+						TurretID="15" />
+					<Turret
+						TurretNameKey="B_HvyMGturretL"
+						TurretArtAngle="0d"
+						TurretPitch="B_HvyMGturretL"
+						TurretArtPitch="0d"
+						TurretID="14" />
+					<Turret
+						TurretNameKey="B_RocketPodturretR"
+						TurretArtAngle="0d"
+						TurretPitch="B_RocketPodturretR"
+						TurretArtPitch="0d"
+						TurretID="6" />
+					<Turret
+						TurretNameKey="B_RocketPodturretL"
+						TurretArtAngle="0d"
+						TurretPitch="B_RocketPodturretL"
+						TurretArtPitch="0d"
+						TurretID="7" />
+					<Turret
+						TurretNameKey="B_FTturretR"
+						TurretArtAngle="0d"
+						TurretPitch="B_FTturretR"
+						TurretArtPitch="0d"
+						TurretID="8" />
+					<Turret
+						TurretNameKey="B_FTturretL"
+						TurretArtAngle="0d"
+						TurretPitch="B_FTturretL"
+						TurretArtPitch="0d"
+						TurretID="9" />
+				</ModelConditionState>
+					<!-- RAGE ANIMATION -->
+				<AnimationState 
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SPECIAL_WEAPON_ONE">
+					<Animation
+						AnimationName="NURedeemer_SPCA"
+						AnimationMode="ONCE" />	
+					<Script>
+						CurDrawableShowSubObject("FX_RAGEGLOW")						
+					</Script>		
+				</AnimationState>	
+
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="W3DContainer:NURedeemer_FP" />
+				</ModelConditionState>	
+
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Animation
+						AnimationName=""
+						AnimationMode="LOOP" />
+					<Script>
+						CurDrawableHideSubObject("B_FTR")
+						CurDrawableHideSubObject("FTR")
+						CurDrawableHideSubObject("FX_FTpilotflameR")
+						CurDrawableHideSubObject("B_FTL")
+						CurDrawableHideSubObject("FTL")	
+						CurDrawableHideSubObject("FX_FTpilotflameL")	
+						CurDrawableHideSubObject("HvyMGL")
+						CurDrawableHideSubObject("HvyMGBarrelL")
+						CurDrawableHideSubObject("MuzzleFlash_01")	
+						CurDrawableHideSubObject("HvyMGR")
+						CurDrawableHideSubObject("HvyMGBarrelR")
+						CurDrawableHideSubObject("MuzzleFlash_02")	
+						CurDrawableHideSubObject("RocketPodL")
+						CurDrawableHideSubObject("RocketPodR")	
+						CurDrawableHideSubObject("ModuleR")
+						CurDrawableHideSubObject("ModuleBeacontR")
+						CurDrawableHideSubObject("ModuleLightR")	
+						CurDrawableHideSubObject("ModuleL")	
+						CurDrawableHideSubObject("ModuleBeaconL")
+						CurDrawableHideSubObject("ModuleLightL")					
+					</Script>
+				</AnimationState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_6"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NUREDEEMER_SKN"
+						ExtraMesh="False" />
+					<Texture
+						Original="NURedeemer"
+						New="NURedeemer_D" />
+					<Texture
+						Original="NURedeemer2"
+						New="NURedeemer2_D" />
+					<Texture
+						Original="NURedeemer3"
+						New="NURedeemer3_D_UG" />
+					<Texture
+						Original="NURedeemer3_SPM"
+						New="NURedeemer3_SPM_UG" />
+					<Texture
+						Original="NURedeemer3_NRM"
+						New="NURedeemer3_NRM_UG" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NUREDEEMER_SKN"
+						ExtraMesh="False" />
+					<Texture
+						Original="NURedeemer"
+						New="NURedeemer_D" />
+					<Texture
+						Original="NURedeemer2"
+						New="NURedeemer2_D" />
+					<Texture
+						Original="NURedeemer3"
+						New="NURedeemer3_D" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_6"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NUREDEEMER_SKN"
+						ExtraMesh="False" />
+					<Texture
+						Original="NURedeemer"
+						New="NURedeemer_D" />
+					<Texture
+						Original="NURedeemer2"
+						New="NURedeemer2_D" />
+					<Texture
+						Original="NURedeemer3"
+						New="NURedeemer3_D_UG" />
+					<Texture
+						Original="NURedeemer3_SPM"
+						New="NURedeemer3_SPM_UG" />
+					<Texture
+						Original="NURedeemer3_NRM"
+						New="NURedeemer3_NRM_UG" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="RedeemerDamagedSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Thigh2"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Thigh2"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Thigh2"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Thigh2"
+						FXParticleSystemTemplate="RedeemerDamagedSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamageBlueFlashes"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamageBlueSpark"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamageBlueZap"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NUREDEEMER_SKN"
+						ExtraMesh="False" />
+					<Texture
+						Original="NURedeemer"
+						New="NURedeemer_D" />
+					<Texture
+						Original="NURedeemer2"
+						New="NURedeemer2_D" />
+					<Texture
+						Original="NURedeemer3"
+						New="NURedeemer3_D" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="RedeemerDamagedSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Thigh2"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Thigh2"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Thigh2"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Thigh2"
+						FXParticleSystemTemplate="RedeemerDamagedSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamageBlueFlashes"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamageBlueSpark"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamageBlueZap"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_6"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NUREDEEMER_R"
+						ExtraMesh="False" />
+					<Texture
+						Original="NURedeemer3_SPM"
+						New="NURedeemer3_SPM_UG" />
+					<Texture
+						Original="NURedeemer3_D"
+						New="NURedeemer3_D_UG" />
+					<Texture
+						Original="NURedeemer3_NRM"
+						New="NURedeemer3_NRM_UG" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Foot1"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Foot1"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Foot1"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamageBlueZap"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerExplodeBlueFlashes"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerExplodeBlueSpark"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerExplodeBlueZap"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NUREDEEMER_R"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_ShoulderL"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Foot1"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Foot1"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Foot1"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerDamageBlueZap"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerExplodeBlueFlashes"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerExplodeBlueSpark"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="B_Torso"
+						FXParticleSystemTemplate="RedeemerExplodeBlueZap"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				
+				<!-- PURIFYING FLAME -->
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6">
+					<Model
+						Name="W3DContainer:NUREDEEMER_SKN"
+						ExtraMesh="False" />
+					<Texture
+						Original="NURedeemer3"
+						New="NURedeemer3_UG" />
+					<Texture
+						Original="NURedeemer3_SPM"
+						New="NURedeemer3_SPM_UG" />	
+					<Texture
+						Original="NURedeemer3_NRM"
+						New="NURedeemer3_NRM_UG" />
+				</ModelConditionState>		
+<!--
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_7">
+					<Model
+						Name="W3DContainer:FXINVISBONE2"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="FX_FTpilotflameL"
+						FXParticleSystemTemplate="NODFlameTankPilotDistortion"
+						FollowBone="true" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_8">
+					<Model
+						Name="W3DContainer:FXINVISBONE2"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="FX_FTpilotflameR"
+						FXParticleSystemTemplate="NODFlameTankPilotDistortion"
+						FollowBone="true" />
+				</ModelConditionState>
+	-->
+				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_bored">
+					<Animation
+						AnimationName="NURedeemer_BIDZ"
+						AnimationMode="ONCE"
+						AnimationPriority="2"
+						AnimationBlendTime="15" />
+					<Animation
+						AnimationName="NURedeemer_BIDB"
+						AnimationMode="ONCE"
+						AnimationPriority="5"
+						AnimationBlendTime="15" />
+					<Animation
+						AnimationName="NURedeemer_BIDC"
+						AnimationMode="ONCE"
+						AnimationPriority="4"
+						AnimationBlendTime="15" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_SelectedPose" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
+						end
+					</Script>
+				</AnimationState>
+			<!-- build animation handled in warmech facility xml-->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COMING_OUT_OF_FACTORY"
+					StateName="STATE_built">
+					<Animation
+						AnimationName="NURedeemer_ACCL"
+						AnimationBlendTime="15"
+						AnimationMode="ONCE" />
+				</AnimationState>
+			
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NURedeemer_DIEA"
+						AnimationMode="ONCE" 
+						AnimationBlendTime="15"/>
+					<Animation
+						AnimationName="NURedeemer_DIEB"
+						AnimationMode="ONCE" 
+						AnimationBlendTime="15"/>
+					<Animation
+						AnimationName="NURedeemer_DIEC"
+						AnimationMode="ONCE" 
+						AnimationBlendTime="15"/>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="AFFECTED_BY_EMP">
+					<Animation
+						AnimationName="NURedeemer_BIDZ"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_LEFT_HIGH_SPEED"
+					Flags="MAINTAIN_FRAME_ACROSS_STATES">
+					<Animation
+						AnimationName="NURedeemer_WLKA"
+						AnimationMode="LOOP"
+						Distance="80" />
+					<FXEvent
+						Frame="33"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="18"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="49"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="38"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+					<FXEvent
+						Frame="83"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="68"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="99"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="88"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_RIGHT_HIGH_SPEED"
+					Flags="MAINTAIN_FRAME_ACROSS_STATES">
+					<Animation
+						AnimationName="NURedeemer_WLKA"
+						AnimationMode="LOOP"
+						Distance="80" />
+					<FXEvent
+						Frame="33"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="18"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="49"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="38"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+					<FXEvent
+						Frame="83"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="68"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="99"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="88"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_LEFT">
+					<Animation
+						AnimationName="NURedeemer_TRNL"
+						AnimationMode="LOOP" />
+					<FXEvent
+						Frame="31"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="17"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="49"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="38"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+					<FXEvent
+						Frame="83"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="68"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="99"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="88"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_RIGHT">
+					<Animation
+						AnimationName="NURedeemer_TRNR"
+						AnimationMode="LOOP" />
+					<FXEvent
+						Frame="31"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="18"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="49"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="38"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+					<FXEvent
+						Frame="83"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="68"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="99"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="88"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ACCELERATE">
+					<Animation
+						AnimationName="NURedeemer_ACCL"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DECELERATE">
+					<Animation
+						AnimationName="NURedeemer_DECL"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					Flags="">
+          				<Animation
+						AnimationName="NURedeemer_WLKA"
+						AnimationMode="LOOP"
+            					AnimationBlendTime="15"
+            					Distance="80"/>
+					<FXEvent
+						Frame="33"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="18"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="49"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="38"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+					<FXEvent
+						Frame="83"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot1" />
+					<FXEvent
+						Frame="68"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot2" />
+					<FXEvent
+						Frame="99"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot3" />
+					<FXEvent
+						Frame="88"
+						FireWhenSkipped="true"
+						Effect="FX_NODRedeemerFootprint"
+						Bone="b_foot4" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_built" then
+						CurDrawableSetTransitionAnimState("TRANS_built")
+						end
+					</Script>						
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_01">
+					<Animation
+						AnimationName="NURedeemer_ATKA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>				
+		<!--		<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USING_WEAPON_A WEAPONSLOTID_01">
+					<Animation
+						AnimationName="NURedeemer_ATKA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="0" />
+				</AnimationState>				
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ATTACKING USER_10">
+					<Animation
+						AnimationName="NURedeemer_ATKA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="0" />
+				</AnimationState>
+		-->
+				    <AnimationState
+				         ParseCondStateType="PARSE_NORMAL"
+				         ConditionsYes="ATTACKING"
+				         StateName="STATE_SelectedPose">
+				         <Animation
+				                AnimationName="NURedeemer_ATKA"
+				                AnimationMode="MANUAL" />
+                		</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					StateName="STATE_SelectedPose">
+					<Animation
+						AnimationName="NURedeemer_AIDA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15"
+						AnimationPriority="40"/>
+					<Animation
+						AnimationName="NURedeemer_AIDB"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" 
+						AnimationPriority="40"/>
+					<Animation
+						AnimationName="NURedeemer_AIDC"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" 
+						AnimationPriority="20"/>						
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_bored" then
+						CurDrawableSetTransitionAnimState("TRANS_IdleToSelected")
+						end
+					</Script>
+				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IdleToSelected">
+					<Animation
+						AnimationName="NURedeemer_BATA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_SelectedToIdle">
+					<Animation
+						AnimationName="NURedeemer_ABTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_built">
+					<Animation
+						AnimationName="NURedeemer_WLKA"
+						AnimationBlendTime="15"
+						AnimationMode="ONCE"></Animation>
+				</AnimationState>
+		
+			</ScriptedModelDraw>
+			<ScriptedModelDraw
+				id="1EABA9C6"
+				RecoilDamping="0.4"
+				MaxRecoilDistance="3"
+				InitialRecoilSpeed="2"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				AttachToBoneInAnotherModule="FX_FTFireL"
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="False"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:FXINVISBONE"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False" />
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A WEAPONSLOTID_03"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankAdd"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankAdd02"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankStart"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankDistort"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankGround"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</AnimationState>
+				
+			</ScriptedModelDraw>
+			<ScriptedModelDraw
+				id="74C70B88"
+				RecoilDamping="0.4"
+				MaxRecoilDistance="3"
+				InitialRecoilSpeed="2"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				AttachToBoneInAnotherModule="FX_FTFireR"
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="False"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:FXINVISBONE"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A WEAPONSLOTID_02"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankAdd"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankAdd02"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankStart"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankDistort"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankGround"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</AnimationState>
+				
+			</ScriptedModelDraw>
+			
+			
+			<!-- purifying flame -->
+
+			<ScriptedModelDraw
+				id="ModuleTag_DrawFXLeftPurifyingflame"
+				AttachToBoneInAnotherModule="FX_FTFireL">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+				</ModelConditionState>
+		
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A WEAPONSLOTID_04 USER_6">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingStart"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingDistort"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingGround"
+						FollowBone="true" />
+				</AnimationState>
+				<!--
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_04 USER_6 TURN_LEFT_HIGH_SPEED" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_04 USER_6 TURN_RIGHT_HIGH_SPEED" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_04 USER_6 TURN_LEFT" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_04 USER_6 TURN_RIGHT" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_04 USER_6 MOVING" />		
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_04 USER_6">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="NODFlameTankPilotDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="NODFlameTankPilotFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="NODFlameTankPilotGlow"
+						FollowBone="true" />
+				</AnimationState>
+				-->
+			</ScriptedModelDraw>
+			<ScriptedModelDraw
+				id="ModuleTag_DrawFXRightPurifyingflame"
+				AttachToBoneInAnotherModule="FX_FTFireR">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+				</ModelConditionState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A WEAPONSLOTID_05 USER_6">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingStart"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingDistort"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingGround"
+						FollowBone="true" />
+				</AnimationState>
+				<!--
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_05 USER_6 TURN_LEFT_HIGH_SPEED" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_05 USER_6 TURN_RIGHT_HIGH_SPEED" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_05 USER_6 TURN_LEFT" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_05 USER_6 TURN_RIGHT" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_05 USER_6 MOVING" />		
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_05 USER_6">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="NODFlameTankPilotDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="NODFlameTankPilotFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="NODFlameTankPilotGlow"
+						FollowBone="true" />
+				</AnimationState>
+				-->
+			</ScriptedModelDraw>			
+
+			<!-- end of purifying flame -->
+			
+			<ScriptedModelDraw
+				id="ModuleTag_DrawFXLeftDistortion"
+				AttachToBoneInAnotherModule="B_FTTURRETL">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_7">
+					<Model
+						Name="W3DContainer:FXINVISBONE2" />
+					<ParticleSysBone
+						BoneName="FTPILOTFLAMEL"
+						FXParticleSystemTemplate="NUBlkHndPilotDistortion2"
+						FollowBone="true" />
+				</ModelConditionState>
+		
+			</ScriptedModelDraw>
+			
+			
+			<ScriptedModelDraw
+				id="ModuleTag_DrawFXRightDistortion"
+				AttachToBoneInAnotherModule="B_FTTURRETR">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:FXInvisBone" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_8">
+					<Model
+						Name="W3DContainer:FXINVISBONE2" />
+					<ParticleSysBone
+						BoneName="FTPILOTFLAMER"
+						FXParticleSystemTemplate="NUBlkHndPilotDistortion2"
+						FollowBone="true" />
+				</ModelConditionState>
+		
+			</ScriptedModelDraw>
+			
+			
+			<TracerModelDraw
+				id="24C17558"
+				MinLength="50"
+				MaxLength="50"
+				Width="3"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1"
+				SpreadAngle="2"
+				MinTracersPerFrame="0.8"
+				MaxTracersPerFrame="0.9"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				WeaponSlotID="14"
+				Texture="FXTracerNODThick"
+				TracerHitFx="FX_BulletHitNOD"
+				TracerEmitFx=""
+				TextureIndex="0"
+				UseAdditiveBlending="True">
+				<HeadColor
+					r="1"
+					g="1"
+					b="1"
+					a="1" />
+				<TailColor
+					r="0"
+					g="0"
+					b="0"
+					a="0" />
+				<ObjectStatusValidation
+					ForbiddenStatus=""
+					RequiredStatus="" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="C9052EB1"
+				MinLength="50"
+				MaxLength="50"
+				Width="3"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1"
+				SpreadAngle="2"
+				MinTracersPerFrame="0.8"
+				MaxTracersPerFrame="0.9"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				WeaponSlotID="15"
+				Texture="FXTracerNODThick"
+				TracerHitFx="FX_BulletHitNOD"
+				TracerEmitFx=""
+				TextureIndex="0"
+				UseAdditiveBlending="True">
+				<HeadColor
+					r="1"
+					g="1"
+					b="1"
+					a="1" />
+				<TailColor
+					r="0"
+					g="0"
+					b="0"
+					a="0" />
+				<ObjectStatusValidation
+					ForbiddenStatus=""
+					RequiredStatus="" />
+			</TracerModelDraw>
+			<LaserDraw
+				id="70418993"
+				Texture1_UTile="1"
+				Texture1_VTile="0.5"
+				Texture2_UTile="1"
+				Texture2_VTile="0.03"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate="0.2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="1"
+				LaserStateID="1"
+				UseDistortionShader="False">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueName=""
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaser</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw
+				id="1FD2121C"
+				Texture1_UTile="1"
+				Texture1_VTile="0.5"
+				Texture2_UTile="1"
+				Texture2_VTile="0.01"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate="0.2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="1"
+				LaserWidth="50"
+				WeaponSlotID="1"
+				LaserStateID="1"
+				UseDistortionShader="True">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueName=""
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXRailgunCoreDistortion</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXRailGunCoreMask</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw
+				id="6ACF3B13"
+				Texture1_UTile="1"
+				Texture1_VTile="0.5"
+				Texture2_UTile="1"
+				Texture2_VTile="0.03"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate="0.2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="12"
+				LaserStateID="2"
+				UseDistortionShader="False">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueName=""
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaser</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw
+				id="D161EE17"
+				Texture1_UTile="1"
+				Texture1_VTile="0.5"
+				Texture2_UTile="1"
+				Texture2_VTile="0.01"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate="0.2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="1"
+				LaserWidth="50"
+				WeaponSlotID="12"
+				LaserStateID="2"
+				UseDistortionShader="True">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueName=""
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXRailgunCoreDistortion</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXRailGunCoreMask</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw
+				id="AC986E98"
+				Texture1_UTile="1"
+				Texture1_VTile="0.5"
+				Texture2_UTile="1"
+				Texture2_VTile="0.03"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate="0.2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="13"
+				LaserStateID="3"
+				UseDistortionShader="False">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueName=""
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaser</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw
+				id="19EF9526"
+				Texture1_UTile="1"
+				Texture1_VTile="0.5"
+				Texture2_UTile="1"
+				Texture2_VTile="0.01"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate="0.2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="1"
+				LaserWidth="50"
+				WeaponSlotID="13"
+				LaserStateID="3"
+				UseDistortionShader="True">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueName=""
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXRailgunCoreDistortion</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXRailGunCoreMask</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw
+				id="B74F5F65"
+				Texture1_UTile="1"
+				Texture1_VTile="0.5"
+				Texture2_UTile="1"
+				Texture2_VTile="0.03"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate="0.2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="1"
+				LaserStateID="1"
+				UseDistortionShader="False">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueName=""
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaserHeroic</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ObjectStatusValidation
+					ForbiddenStatus=""
+					RequiredStatus="WEAPON_UPGRADED_03" />
+			</LaserDraw>
+			<LaserDraw
+				id="E5D4C885"
+				Texture1_UTile="1"
+				Texture1_VTile="0.5"
+				Texture2_UTile="1"
+				Texture2_VTile="0.03"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate="0.2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="1"
+				LaserStateID="2"
+				UseDistortionShader="False">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueName=""
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaserHeroic</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ObjectStatusValidation
+					ForbiddenStatus=""
+					RequiredStatus="WEAPON_UPGRADED_03" />
+			</LaserDraw>
+			<LaserDraw
+				id="5FDE2B73"
+				Texture1_UTile="1"
+				Texture1_VTile="0.5"
+				Texture2_UTile="1"
+				Texture2_VTile="0.03"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate="0.2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="1"
+				LaserStateID="3"
+				UseDistortionShader="False">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueName=""
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaserHeroic</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ObjectStatusValidation
+					ForbiddenStatus=""
+					RequiredStatus="WEAPON_UPGRADED_03" />
+			</LaserDraw>
+			<StreamDraw
+				id="A2C70402"
+				Velocity="200"
+				ArcHeightFactor="0.0625"
+				UVWorldSize="100"
+				NumTubeSides="8"
+				TubeRadius="1.5"
+				HitFx="FX_BulletHitGDI"
+				WeaponSlotID="8"
+				StreamStateID="0"
+				UseDistortionShader="False">
+				<FXShader
+					ShaderName="Stream.fx"
+					TechniqueName=""
+					TechniqueIndex="1">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXTiberiumStream</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXTiberiumStream</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ParticleSystems>
+					<ParticleSys>TiberiumLiquidStreamDrip</ParticleSys>
+					<ParticleSys>TiberiumLiquidStreamDistort</ParticleSys>
+					<ParticleSys>TiberiumLiquidStreamGas</ParticleSys>
+					<ParticleSys>TiberiumLiquidStreamGas1</ParticleSys>
+				</ParticleSystems>
+			</StreamDraw>
+			<StreamDraw
+				id="2D73A8AE"
+				Velocity="200"
+				ArcHeightFactor="0.0625"
+				UVWorldSize="100"
+				NumTubeSides="8"
+				TubeRadius="1.5"
+				HitFx="FX_BulletHitGDI"
+				WeaponSlotID="9"
+				StreamStateID="1"
+				UseDistortionShader="False">
+				<FXShader
+					ShaderName="Stream.fx"
+					TechniqueName=""
+					TechniqueIndex="1">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXTiberiumStream</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXTiberiumStream</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ParticleSystems>
+					<ParticleSys>TiberiumLiquidStreamDrip</ParticleSys>
+					<ParticleSys>TiberiumLiquidStreamDistort</ParticleSys>
+					<ParticleSys>TiberiumLiquidStreamGas</ParticleSys>
+					<ParticleSys>TiberiumLiquidStreamGas1</ParticleSys>
+				</ParticleSystems>
+			</StreamDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate
+				id="513BC476" />
+			<SquishCollide
+				id="8CCB269A"
+				CrushAnimTime="1s"
+				CrushKillDelay="0.5s"
+				UseDirectionCheck="True" />
+			<FireWeaponWhenDead
+				id="DDED328F"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				DelayTime="0s"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				FocusFireKindOfFlag=""
+				InitiallyActive="True"
+				ActiveDuringConstruction="False"
+				ContinueToBezierDestination="False">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="CATALYST"
+					DeathTypesForbidden="" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="C07BF5C0"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				HealingAmount="100"
+				HealingDelay="0.5s"
+				StartHealingDelay="1s"
+				Radius="0"
+				KindOf=""
+				HealFXList=""
+				SpawnFXList=""
+				RespawnMinimumDelay="0s"
+				InitiallyActive="False"
+				AffectsWholePlayer="False"
+				AffectsContained="False"
+				HealOnlyIfNotUnderAttack="False"
+				HealOnlyIfNotInCombat="False"
+				HealOnlyOthers="False"
+				NonStackable="False"
+				RespawnNearbyHordeMembers="False">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="AA36A1AA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="81C6F752"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="E35F7EC4"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="54CA416E"
+				StanceTemplate="Generic" />
+			<LevelUpUpgrade
+				id="A92BDFEA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="5C3F216A"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="2"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="379F3CE2"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="3"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<InvisibilityUpdate
+				id="3BD7F2F5"
+				Options=""
+				UpdatePeriod="0.5s"
+				BroadcastRange="0"
+				OpacityMin="40%"
+				OpacityMax="100%">
+				<InvisibilityNugget
+					ForbiddenConditions="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_A USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenConditionExceptions=""
+					ForbiddenWeaponSets=""
+					ForbiddenStatus="IS_FIRING_WEAPON USING_ABILITY IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"
+					CamouflageLevel="0"
+					InvisibilityType="STEALTH"
+					Options=""
+					EnteringStealthFX=""
+					LeavingStealthFX=""
+					HintDetectableStates="IS_ATTACKING"
+					NoStealthForAttackWindow="0s" />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="F2B9DFBE"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="3473AFD2"
+				DefectionFrameCount="150" />
+			<WeaponSetUpdate
+				id="720F4A50">
+				<WeaponSlotHardpoint
+					ID="1"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="True">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechTriPointLaser1"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+				</WeaponSlotHardpoint>
+				<WeaponSlotHardpoint
+					ID="12"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="True">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechTriPointLaser2"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+				</WeaponSlotHardpoint>
+				<WeaponSlotHardpoint
+					ID="13"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="True">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechTriPointLaser3"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+				</WeaponSlotHardpoint>
+				<WeaponSlotTurret
+					ID="2"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="BHWarmechFlamer"
+						Upgrade="Upgrade_RedeemerFlameThrowerRight"
+						IsPlayerUpgradePermanent="False" />
+					<!--	
+					<Weapon
+						Ordering="SECONDARY_WEAPON"
+						ObjectStatus="WEAPON_UPGRADED_01"
+						Upgrade="Upgrade_RedeemerFlameThrowerRight"
+						Template="BHRedeemerFlamer"/> -->
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						AllowsPitch="true"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="3.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="35.0">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret
+					ID="3"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="BHWarmechFlamer"	
+						Upgrade="Upgrade_RedeemerFlameThrowerLeft"						
+						IsPlayerUpgradePermanent="False" />
+					<!--
+					<Weapon
+						Ordering="SECONDARY_WEAPON"
+						ObjectStatus="WEAPON_UPGRADED_01"
+						Upgrade="Upgrade_RedeemerFlameThrowerLeft"	
+						Template="BHRedeemerFlamer"/> -->
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						AllowsPitch="true"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="3.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="35.0">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				
+				<!-- purifying flame turrets -->
+				
+				<WeaponSlotTurret
+					ID="5"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Upgrade="Upgrade_RedeemerFlameThrowerRight"	
+						Template="BHRedeemerFlamer"/>
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						AllowsPitch="true"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="3.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="35.0">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				
+				<WeaponSlotTurret
+					ID="4"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Upgrade="Upgrade_RedeemerFlameThrowerLeft"	
+						Template="BHRedeemerFlamer"/>
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						AllowsPitch="true"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="3.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="35.0">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				
+				<!-- -->
+				
+				
+				<WeaponSlotTurret
+					ID="15"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechMachinegun"
+						Upgrade="Upgrade_RedeemerHvyMachineGunRight"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="3s"
+						MinIdleScanAngle="10"
+						MaxIdleScanAngle="180"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret
+					ID="14"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechMachinegun"
+						Upgrade="Upgrade_RedeemerHvyMachineGunLeft"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="3s"
+						MinIdleScanAngle="10"
+						MaxIdleScanAngle="180"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret
+					ID="6"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechRocket"
+						Upgrade="Upgrade_RedeemerRocketPodRight"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="3s"
+						MinIdleScanAngle="10"
+						MaxIdleScanAngle="180"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret
+					ID="7"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechRocket"
+						Upgrade="Upgrade_RedeemerRocketPodLeft"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="3s"
+						MinIdleScanAngle="10"
+						MaxIdleScanAngle="180"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret
+					ID="8"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechTibWeaponRight"
+						Upgrade="Upgrade_RedeemerTibTrooperRight"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="3s"
+						MinIdleScanAngle="10"
+						MaxIdleScanAngle="180"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret
+					ID="9"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechTibWeaponLeft"
+						Upgrade="Upgrade_RedeemerTibTrooperLeft"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						MinimumPitch="-90d"
+						PitchHeight="90%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="3s"
+						MinIdleScanAngle="10"
+						MaxIdleScanAngle="180"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			<SlaughterHordeContain
+				id="9DC593B0"
+				ContainMax="2"
+				EnterSound="AudioEvent:VehicleEnter"
+				ExitSound="AudioEvent:VehicleExit"
+				DamagePercentToUnits="0%"
+				PassengersTestCollisionHeight="-1000"
+				NumberOfExitPaths="1"
+				DoorOpenTime="1"
+				ObjectStatusOfContained=""
+				ModifierRequiredTime="100"
+				KillIfEmptyTime="0s"
+				ModelConditionsWhenNotEmpty=""
+				PassengersInTurret="False"
+				AllowOwnPlayerInsideOverride="True"
+				AllowAlliesInside="True"
+				AllowEnemiesInside="False"
+				AllowNeutralInside="False"
+				ShowPips="True"
+				CollidePickup="True"
+				EjectPassengersOnDeath="True"
+				KillPassengersOnDeath="True"
+				HasObjectStatusOfContainedEntry="True"
+				Enabled="True"
+				MobileGarrison="True"
+				ImmuneToClearBuildingAttacks="True"
+				ResetInitialTeamOnCapture="False"
+				ExitDelay="0"
+				CashBackPercent="100"
+				CanAlwaysEnterStatus="">
+				<PassengerFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="EMOTION_DISSIDENT">
+					<IncludeThing>NODMilitant</IncludeThing>
+					<IncludeThing>NODBlackHand</IncludeThing>
+					<IncludeThing>NODMilitantRocket</IncludeThing>
+					<IncludeThing>NODMilitantSquad</IncludeThing>
+					<IncludeThing>NODBlackHandSquad</IncludeThing>
+					<IncludeThing>NODMilitantRocketSquad</IncludeThing>
+					<IncludeThing>NODConfessor</IncludeThing>					
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandConfessor</IncludeThing>
+					<IncludeThing>BlackHandBlackHand</IncludeThing>
+					<IncludeThing>BlackHandBlackDisciple</IncludeThing>							
+					<IncludeThing>BlackHandMilitantRocket</IncludeThing>
+					<IncludeThing>BlackHandConfessorSquad</IncludeThing>
+					<IncludeThing>BlackHandBlackHandSquad</IncludeThing>
+					<IncludeThing>BlackHandMilitantRocketSquad</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MOKCyborgInfantry</IncludeThing>
+					<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>					
+					<IncludeThing>MarkedOfKaneTibTrooper</IncludeThing>
+					<IncludeThing>MarkedOfKaneTibTrooperSquad</IncludeThing>					
+					<IncludeThing>MarkedOfKaneMilitantRocket</IncludeThing>
+					<IncludeThing>MarkedOfKaneMilitantRocketSquad</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+				</PassengerFilter>
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<PassengerData
+					BonePrefix="SUBBONE_">
+					<Filter
+						Rule="NONE"
+						Relationship="SAME_PLAYER"
+						Alignment="NONE"
+						Include="INFANTRY"
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="" />
+				</PassengerData>
+				<MemberTemplateStatusInfo
+					ThingTemplate="GDISniperSquad"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<UpgradeContainerOnContain
+					ID="Mills">
+					<UnitFilter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>NODMilitant</IncludeThing>
+						<IncludeThing>NODMilitantSquad</IncludeThing>
+						<IncludeThing>BlackHandConfessor</IncludeThing>
+						<IncludeThing>BlackHandConfessorSquad</IncludeThing>						
+						<IncludeThing>MOKCyborgInfantry</IncludeThing>
+						<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_RedeemerHvyMachineGunRight</UpgradeList>
+					<UpgradeList>Upgrade_RedeemerHvyMachineGunLeft</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="Flames">
+					<UnitFilter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>NODBlackHand</IncludeThing>
+						<IncludeThing>NODBlackHandSquad</IncludeThing>
+						<IncludeThing>BlackHandBlackHand</IncludeThing>
+						<IncludeThing>BlackHandBlackHandSquad</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_RedeemerFlameThrowerRight</UpgradeList>
+					<UpgradeList>Upgrade_RedeemerFlameThrowerLeft</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="TibTroopers">
+					<UnitFilter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>MarkedOfKaneTibTrooper</IncludeThing>
+						<IncludeThing>MarkedOfKaneTibTrooperSquad</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_RedeemerTibTrooperRight</UpgradeList>
+					<UpgradeList>Upgrade_RedeemerTibTrooperLeft</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="Rockets">
+					<UnitFilter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>NODMilitantRocket</IncludeThing>
+						<IncludeThing>NODMilitantRocketSquad</IncludeThing>
+						<IncludeThing>MarkedOfKaneMilitantRocket</IncludeThing>
+						<IncludeThing>MarkedOfKaneMilitantRocketSquad</IncludeThing>
+						<IncludeThing>BlackHandMilitantRocket</IncludeThing>
+						<IncludeThing>BlackHandMilitantRocketSquad</IncludeThing>						
+					</UnitFilter>
+					<UpgradeList>Upgrade_RedeemerRocketPodRight</UpgradeList>
+					<UpgradeList>Upgrade_RedeemerRocketPodLeft</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="Regen">
+					<UnitFilter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>NODSaboteur</IncludeThing>
+						<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+						<IncludeThing>BlackHandSaboteur</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_RedeemerRegenModuleRight</UpgradeList>
+					<UpgradeList>Upgrade_RedeemerRegenModuleLeft</UpgradeList>
+				</UpgradeContainerOnContain>
+				<InitialRoster
+					TemplateId=""
+					Count="0" />
+				<CanAlwaysEnterObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="EMOTION_DISSIDENT">
+					<IncludeThing>NODMilitant</IncludeThing>
+					<IncludeThing>NODBlackHand</IncludeThing>
+					<IncludeThing>NODMilitantRocket</IncludeThing>
+					<IncludeThing>NODMilitantSquad</IncludeThing>
+					<IncludeThing>NODBlackHandSquad</IncludeThing>
+					<IncludeThing>NODMilitantRocketSquad</IncludeThing>
+					<IncludeThing>NODConfessor</IncludeThing>					
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandConfessor</IncludeThing>
+					<IncludeThing>BlackHandBlackHand</IncludeThing>
+					<IncludeThing>BlackHandBlackDisciple</IncludeThing>							
+					<IncludeThing>BlackHandMilitantRocket</IncludeThing>
+					<IncludeThing>BlackHandConfessorSquad</IncludeThing>
+					<IncludeThing>BlackHandBlackHandSquad</IncludeThing>
+					<IncludeThing>BlackHandMilitantRocketSquad</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MOKCyborgInfantry</IncludeThing>
+					<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>					
+					<IncludeThing>MarkedOfKaneTibTrooper</IncludeThing>
+					<IncludeThing>MarkedOfKaneTibTrooperSquad</IncludeThing>					
+					<IncludeThing>MarkedOfKaneMilitantRocket</IncludeThing>
+					<IncludeThing>MarkedOfKaneMilitantRocketSquad</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+				</CanAlwaysEnterObjectFilter>
+			</SlaughterHordeContain>
+			<SubObjectsUpgrade
+				id="60EDFCA4"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ShowSubObjects="HvyMGR HvyMGBarrelR"
+				FadeTimeInSeconds="0.5"
+				WaitBeforeFadeInSeconds="0"
+				RecolorHouse="False"
+				SkipFadeOnCreate="False"
+				HideSubObjectsOnRemove="False"
+				UnHideSubObjectsOnRemove="False">
+				<TriggeredBy>Upgrade_RedeemerHvyMachineGunRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<StatusBitsUpgrade
+				id="E3D721CD"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				StatusToSet=""
+				StatusToClear=""
+				ApplyToContained="False">
+				<TriggeredBy>Upgrade_RedeemerHvyMachineGunRight</TriggeredBy>
+			</StatusBitsUpgrade>
+			<SubObjectsUpgrade
+				id="D7D36B9F"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ShowSubObjects="HvyMGL HvyMGBarrelL"
+				FadeTimeInSeconds="0.5"
+				WaitBeforeFadeInSeconds="0"
+				RecolorHouse="False"
+				SkipFadeOnCreate="False"
+				HideSubObjectsOnRemove="False"
+				UnHideSubObjectsOnRemove="False">
+				<TriggeredBy>Upgrade_RedeemerHvyMachineGunLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<StatusBitsUpgrade
+				id="48DC6084"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				StatusToSet=""
+				StatusToClear=""
+				ApplyToContained="False">
+				<TriggeredBy>Upgrade_RedeemerHvyMachineGunLeft</TriggeredBy>
+			</StatusBitsUpgrade>
+			<!--
+			<SubObjectsUpgrade
+				id="D93F3E92"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ShowSubObjects="B_FTL FTL FX_FTpilotflameL"
+				FadeTimeInSeconds="0.5"
+				WaitBeforeFadeInSeconds="0"
+				RecolorHouse="False"
+				SkipFadeOnCreate="False"
+				HideSubObjectsOnRemove="False"
+				UnHideSubObjectsOnRemove="False">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
+				<TriggeredBy>Upgrade_RedeemerTibTrooperLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="903DA5CA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ShowSubObjects="B_FTR FTR FX_FTpilotflameR"
+				FadeTimeInSeconds="0.5"
+				WaitBeforeFadeInSeconds="0"
+				RecolorHouse="False"
+				SkipFadeOnCreate="False"
+				HideSubObjectsOnRemove="False"
+				UnHideSubObjectsOnRemove="False">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
+				<TriggeredBy>Upgrade_RedeemerTibTrooperRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			-->
+			
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowFlamerLeft"
+				ShowSubObjects="B_FTL FTL FX_FTpilotflameL">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowFlamerRight"
+				ShowSubObjects="B_FTR FTR FX_FTpilotflameR">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
+			</SubObjectsUpgrade>		
+
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowTibTrooperLeft"
+				ShowSubObjects="B_FTL FTL">
+				<TriggeredBy>Upgrade_RedeemerTibTrooperLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowTibTrooperRight"
+				ShowSubObjects="B_FTR FTR">
+				<TriggeredBy>Upgrade_RedeemerTibTrooperRight</TriggeredBy>
+			</SubObjectsUpgrade>      
+			
+			
+			<SubObjectsUpgrade
+				id="27928C09"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ShowSubObjects="RocketPodL"
+				FadeTimeInSeconds="0.5"
+				WaitBeforeFadeInSeconds="0"
+				RecolorHouse="False"
+				SkipFadeOnCreate="False"
+				HideSubObjectsOnRemove="False"
+				UnHideSubObjectsOnRemove="False">
+				<TriggeredBy>Upgrade_RedeemerRocketPodLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="CC544166"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ShowSubObjects="RocketPodR"
+				FadeTimeInSeconds="0.5"
+				WaitBeforeFadeInSeconds="0"
+				RecolorHouse="False"
+				SkipFadeOnCreate="False"
+				HideSubObjectsOnRemove="False"
+				UnHideSubObjectsOnRemove="False">
+				<TriggeredBy>Upgrade_RedeemerRocketPodRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="40A83641"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ShowSubObjects="ModuleR ModuleBeacontR ModuleLightR"
+				FadeTimeInSeconds="0.5"
+				WaitBeforeFadeInSeconds="0"
+				RecolorHouse="False"
+				SkipFadeOnCreate="False"
+				HideSubObjectsOnRemove="False"
+				UnHideSubObjectsOnRemove="False">
+				<TriggeredBy>Upgrade_RedeemerRegenModuleRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="2E0FAD47"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ShowSubObjects="ModuleL ModuleBeaconL ModuleLightL"
+				FadeTimeInSeconds="0.5"
+				WaitBeforeFadeInSeconds="0"
+				RecolorHouse="False"
+				SkipFadeOnCreate="False"
+				HideSubObjectsOnRemove="False"
+				UnHideSubObjectsOnRemove="False">
+				<TriggeredBy>Upgrade_RedeemerRegenModuleLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			
+			<!-- redeemer purifying flame -->
+<!--
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowRedeemerFlameThrowerRightUpgrade"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
+			</StatusBitsUpgrade>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowRedeemerFlameThrowerLeftUpgrade"
+				StatusToSet="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
+			</StatusBitsUpgrade>
+-->
+
+			<StatusBitsUpgrade
+				id="ModuleTag_UpgradeBlueWeapon"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
+			</StatusBitsUpgrade> 
+			<!--
+			<ModelConditionUpgrade
+				id="ModuleTag_BlackHandNormalFlameUpgrade"
+				AddConditionFlags="USER_7">	
+				<TriggeredBy>Upgrade_BlackHandFaction</TriggeredBy>
+			</ModelConditionUpgrade> -->
+			<ModelConditionUpgrade
+				id="ModuleTag_PurifyingFlameUpgrade"
+				AddConditionFlags="USER_6">
+				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
+			</ModelConditionUpgrade>
+
+			<ModelConditionUpgrade
+				id="ModuleTag_RedeemerFlameThrowerLeftUpgrade"
+				AddConditionFlags="USER_7">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_RedeemerFlameThrowerRightUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
+			</ModelConditionUpgrade>
+		
+			<!-- -->
+			
+			<StreamState
+				id="3B917EAF"
+				StreamId="0" />
+			<StreamState
+				id="EE41EBE8"
+				StreamId="1" />
+			<SweepingLaserState
+				id="CBA89AB4"
+				LaserId="1"
+				Radius="20"
+				SweepFXList="FX_NodLaserSweep"
+				VeteranSweepFXList=""
+				SweepFXTimeout="1.25s"
+				SweepWeapon="" />
+			<SweepingLaserState
+				id="D33C9A3D"
+				LaserId="2"
+				Radius="20"
+				SweepFXList="FX_NodLaserSweep"
+				VeteranSweepFXList=""
+				SweepFXTimeout="1.25s"
+				SweepWeapon="" />
+			<SweepingLaserState
+				id="405A7EB0"
+				LaserId="3"
+				Radius="20"
+				SweepFXList="FX_NodLaserSweep"
+				VeteranSweepFXList=""
+				SweepFXTimeout="1.25s"
+				SweepWeapon="" />
+			<Physics
+				id="6D41764B"
+				MaxXRotationVelocity="360"
+				MaxYRotationVelocity="360"
+				MaxZRotationVelocity="360"
+				GravityMultiplier="1"
+				ShockStunnedTimeLow="5"
+				ShockStunnedTimeHigh="10"
+				ShockStandingTime="5"
+				FirstHeight="1.3"
+				SecondHeight="1.3"
+				FirstPercentIndent="33%"
+				SecondPercentIndent="66%"
+				BounceCount="2"
+				BounceDistance="5"
+				BounceFirstHeight="1.3"
+				BounceSecondHeight="1.3"
+				BounceFirstPercentIndent="33%"
+				BounceSecondPercentIndent="66%"
+				GroundHitFX=""
+				GroundBounceFX=""
+				FirstPercentHeight="33%"
+				SecondPercentHeight="66%"
+				CurveFlattenMinDist="0"
+				TumbleRandomly="False"
+				AllowBouncing="False"
+				KillWhenRestingOnGround="False"
+				OrientToFlightPath="False"
+				IgnoreTerrainHeight="False" />
+			<ProductionUpdate
+				id="749674DE"
+				MaxQueueEntries="99"
+				NumDoorAnimations="0"
+				DoorOpeningTime="0s"
+				DoorOpeningTimeMetaUnit="0s"
+				DoorWaitOpenTime="0s"
+				DoorCloseTime="0s"
+				ConstructionCompleteDuration="0"
+				DisabledTypesToProcess=""
+				UnitInvulnerableTime="0"
+				SpecialPrepModelconditionTime="0"
+				BonusForType=""
+				SpeedBonusAudioLoop=""
+				Type="INVALID"
+				ProductionTimeDelayScalar="0s"
+				GiveNoXP="False"
+				VeteranUnitsFromVeteranFactory="False"
+				SetBonusModelConditionOnSpeedBonus="False"
+				SecondaryQueue="False"
+				IgnorePreReqs="False" />
+			<FXListBehavior
+				id="C74C39D8">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<Event
+					Index="onDeath"
+					FX="FX_NOD_RedeemerExplodeWithVoice"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+			</FXListBehavior>
+			<CreateObjectDie
+				id="36031C5A"
+				CreationList="OCL_NODMetaUnitDebris">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</CreateObjectDie>
+			<SlowDeath
+				id="73542D4A"
+				SinkRate="2"
+				ProbabilityModifier="10"
+				ModifierBonusPerOverkillPercent="0%"
+				SinkDelay="6s"
+				SinkDelayVariance="0s"
+				DestructionDelay="12s"
+				DestructionDelayVariance="0s"
+				DecayBeginTime="0s"
+				FlingForce="0"
+				FlingForceVariance="0"
+				FlingPitch="0d"
+				FlingPitchVariance="0d"
+				DeathFlags=""
+				FadeTime="0s"
+				FadeDelay="0s"
+				DeathTypes=""
+				DeathObjectStatusBits=""
+				ShadowWhenDead="False"
+				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="NOD_Generic_VoiceDieMS" />
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</SlowDeath>
+			<AISpecialPowerUpdate
+				id="404E4BA6"
+				CommandButtonName="Command_AvatarCommandeerGetInRange"
+				SecondaryCommandButtonName=""
+				SpecialPowerAIType="SPECIAL_POWER_BASIC_SELF_BUFF"
+				SpecialPowerRadius="-1"
+				ReinforceDistance="0"
+				SpellMakesAStructure=""
+				SpecificUnit=""
+				UnitKindOf=""
+				AllyUnitInclude=""
+				AllyUnitExclude=""
+				EnemyUnitInclude=""
+				EnemyUnitExclude=""
+				MinimumCutoff="0"
+				UpdateTime="1s"
+				MaxFrequency="0"
+				RandomizeTargetLocation="False" />
+			<SpecialPower
+				id="1EE61750"
+				SpecialPowerTemplate="NodRageGenerator"
+				AntiCategory=""
+				AntiFX=""
+				AttributeModifier=""
+				AttributeModifierRange="0"
+				AttributeModifierFX=""
+				WeatherDuration="0"
+				InitiateFX=""
+				TriggerFX=""
+				SetModelCondition="TOPPLED"
+				SetModelConditionTime="0s"
+				GiveLevels="0"
+				ChangeWeather="NORMAL"
+				OnTriggerRechargeSpecialPower=""
+				BurnDecayModifier="0"
+				MaxDistanceFromCommandCenter="0"
+				UpdateModuleStartsAttack="True"
+				StartsPaused="False"
+				ReEnableAntiCategory="False"
+				AttributeModifierAffectsSelf="False"
+				AttributeModifierWeatherBased="False"
+				TargetEnemy="False"
+				TargetAllSides="False"
+				DisableDuringAnimDuration="False"
+				IdleWhenStartingPower="False"
+				AffectGood="False"
+				AffectEvil="False"
+				AffectAllies="True"
+				AvailableAtStart="True"
+				AdjustVictim="False"
+				UseDistanceFromCommandCenter="False"
+				ChildModuleHandlesFX="False">
+				<AttributeModifierAffects
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterMP
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterStrategic
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+			</SpecialPower>
+			<WeaponFireSpecialAbilityUpdate
+				id="CC903A7B"
+				GrabPassengerHealGain="0%"
+				SpecialPowerTemplate="NodRageGenerator"
+				StartAbilityRange="400"
+				AbilityAbortRange="1E+07"
+				PreparationTime="0s"
+				PersistentPrepTime="0s"
+				PersistentCount="-1"
+				PackTime="0.5s"
+				UnpackTime="0.5s"
+				PreTriggerUnstealthTime="0s"
+				Options=""
+				PackUnpackVariationFactor="0"
+				ParalyzeDurationWhenCompleted="0s"
+				ParalyzeDurationWhenAborted="0s"
+				SpecialObject=""
+				MaxSpecialObjects="1"
+				EffectDuration="0s"
+				EffectValue="1"
+				EffectRange="0"
+				FleeRangeAfterCompletion="0"
+				DisableFXParticleSystem=""
+				PackSound=""
+				UnpackSound=""
+				PrepSoundLoop=""
+				TriggerSound="Multisound:NOD_Redeemer_RageGeneratorMS"
+				ActiveLoopSound=""
+				AwardXPForTriggering="0"
+				SkillPointsForTriggering="-1"
+				UnpackingVariation="0"
+				FreezeAfterTriggerDuration="0s"
+				RequiredConditions=""
+				RejectedConditions=""
+				SetObjectStatusOnTrigger=""
+				ClearObjectStatusOnExit=""
+				TriggerAttributeModifier=""
+				AttributeModifierDuration="0s"
+				ChainedButton=""
+				RequireAndSpendTiberiumOnCaster="0"
+				DisabledTypesToProcess="HELD"
+				DisabledTypesToContinueSoundsFor="HELD"
+				StartRechargeOnExit="False"
+				GoIdleInStartPreparation="True"
+				FaceTarget="False"
+				SpecialWeapon="NODWarmechRageGenerator"
+				WhichSpecialWeapon="1"
+				BusyForDuration="1s"
+				WeaponSlotID="10"
+				WeaponSlotType="SECONDARY_WEAPON"
+				SkipContinue="False"
+				NeedLivingTargets="False"
+				PlayWeaponPreFireFX="False"
+				OffsetTargetLocationFromObject="False"
+				DestealthClosestObjectMatchingFilter="False" />
+			<AISpecialPowerUpdate
+				id="2EFA6689"
+				CommandButtonName="Command_FireRageGenerator"
+				SecondaryCommandButtonName=""
+				SpecialPowerAIType="SPECIAL_POWER_RANGED_AOE_ATTACK"
+				SpecialPowerRadius="-1"
+				ReinforceDistance="0"
+				SpellMakesAStructure=""
+				SpecificUnit=""
+				UnitKindOf=""
+				AllyUnitInclude=""
+				AllyUnitExclude=""
+				EnemyUnitInclude=""
+				EnemyUnitExclude=""
+				MinimumCutoff="0"
+				UpdateTime="1s"
+				MaxFrequency="0"
+				RandomizeTargetLocation="False" />
+			<AutoHealBehavior
+				id="4C657944"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				HealingAmount="60"
+				HealingDelay="2s"
+				StartHealingDelay="0s"
+				Radius="0"
+				KindOf=""
+				HealFXList="FX_NODRedeemerUpgradeSabateurR"
+				SpawnFXList=""
+				RespawnMinimumDelay="0s"
+				InitiallyActive="False"
+				AffectsWholePlayer="False"
+				AffectsContained="False"
+				HealOnlyIfNotUnderAttack="False"
+				HealOnlyIfNotInCombat="False"
+				HealOnlyOthers="False"
+				NonStackable="False"
+				RespawnNearbyHordeMembers="False">
+				<TriggeredBy>Upgrade_RedeemerRegenModuleRight</TriggeredBy>
+			</AutoHealBehavior>
+			<AutoHealBehavior
+				id="12AEFE34"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				HealingAmount="60"
+				HealingDelay="2s"
+				StartHealingDelay="0s"
+				Radius="0"
+				KindOf=""
+				HealFXList="FX_NODRedeemerUpgradeSabateurL"
+				SpawnFXList=""
+				RespawnMinimumDelay="0s"
+				InitiallyActive="False"
+				AffectsWholePlayer="False"
+				AffectsContained="False"
+				HealOnlyIfNotUnderAttack="False"
+				HealOnlyIfNotInCombat="False"
+				HealOnlyOthers="False"
+				NonStackable="False"
+				RespawnNearbyHordeMembers="False">
+				<TriggeredBy>Upgrade_RedeemerRegenModuleLeft</TriggeredBy>
+			</AutoHealBehavior>
+			<StatusBitsUpgrade
+				id="D305500E"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				StatusToSet="WEAPON_UPGRADED_03"
+				StatusToClear=""
+				ApplyToContained="False">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+			<AudioLoopUpgrade
+				id="1BF391CF"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerHvyMachineGunLeft</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="D125B2DA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerHvyMachineGunRight</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="2BBECB56"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerRegenModuleLeft</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="6AAE2C00"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerRegenModuleRight</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="8CD104CA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerRocketPodLeft</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="47D66499"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerRocketPodRight</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="7880606E"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerTibTrooperLeft</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="F8E567FE"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerTibTrooperRight</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="C9DFE58A"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade
+				id="33E45214"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:NOD_Redeemer_GarrisonUpgrade"
+				KillAfterMS="0">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade id="NOD_PurifyingFlame_Upgrade" SoundToPlay="Multisound:NOD_PurifyingFlame_UpgradeMS">
+				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
+			</AudioLoopUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="12FA48BA"
+				AutoAcquireEnemiesWhenIdle="YES"
+				StopChaseDistance="500"
+				HoldGroundCloseRangeDistance="0"
+				AILuaEventsList="NODMetaUnitFunctions"
+				MinCowerTime="0s"
+				MaxCowerTime="0s"
+				RampageTime="0s"
+				BurningDeathTime="0s"
+				TimeToEjectPassengersOnRampage="0"
+				ComboLocomotorSet="NORMAL"
+				ComboLocoAttackDistance="80"
+				IdleTargetTime="0s"
+				MaxCombineChildren="1"
+				SpawnOffsetRadius="0"
+				StandGround="False"
+				CanAttackWhileContained="False"
+				RampageRequiresAflame="False"
+				FadeOnPortals="False">
+				<UnitAITargetChooserData
+					IdleScanDelay="0.8s"
+					ReacquireDelay="5s"
+					StartupDelay="0s"
+					SympathyRange="25"
+					CheckVisionRange="False"
+					CanPickDynamicTargets="True"
+					RotateToTargetWhenAiming="True"
+					CanAutoAcquireNonAutoAcquirable="False"
+					TargetingCompareList="DefaultTargetingCompareList" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="B313F576"
+				MaxHealth="13500"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				InitialHealth="-1"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+		</Body>
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior
+				id="D9AB53CA">
+				<ModelConditionSound
+					Sound="AudioEvent:NOD_Redeemer_DieSpark"
+					RequiredFlags="DYING"
+					ExcludedFlags="" />
+			</ModelConditionAudioLoopClientBehavior>
+			<AnimationSoundClientBehavior
+				id="7A2074AA"
+				MaxUpdateRangeCap="0">
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Spin"
+					Animation="NUREDEEMER_BIDZ"
+					Frame="92" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Bodyfall"
+					Animation="NUREDEEMER_DIEA"
+					Frame="125" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_DieCreak"
+					Animation="NUREDEEMER_DIEA"
+					Frame="95" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Bodyfall"
+					Animation="Asset not found in stream: [C2995DE9]"
+					Frame="60 105" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Bodyfall"
+					Animation="Asset not found in stream: [A544C894]"
+					Frame="118" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_DieCreak"
+					Animation="NUREDEEMER_DIEA"
+					Frame="73" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Footstep"
+					Animation="NUMEGAUNIT_AIDA"
+					Frame="139 168" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Footstep"
+					Animation="NUMEGAUNIT_GRBA"
+					Frame="18 59" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Footstep"
+					Animation="NUMEGAUNIT_GRBB"
+					Frame="17 60" />
+				<Sound
+					Sound="AudioEvent:AudioEvent:NOD_Redeemer_Footstep"
+					Animation="NUMEGAUNIT_GRBC"
+					Frame="17 60" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Footstep"
+					Animation="NUMEGAUNIT_GRBD"
+					Frame="18 59" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Footstep"
+					Animation="NUREDEEMER_TRNL"
+					Frame="25 50 75 100" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Footstep"
+					Animation="NUREDEEMER_TRNR"
+					Frame="25 50 75 100" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Footstep"
+					Animation="NUREDEEMER_WLKA"
+					Frame="25 50 75 100" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Footstep"
+					Animation="Asset not found in stream: [0149273C]"
+					Frame="25 50 75 100" />
+				<Sound
+					Sound="AudioEvent:NOD_Redeemer_Footstep"
+					Animation="Asset not found in stream: [D06270E8]"
+					Frame="25 50 75 100" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_Commandeer"
+					Animation="NUMEGAUNIT_GRBA"
+					Frame="50" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_Commandeer"
+					Animation="NUMEGAUNIT_GRBB"
+					Frame="53" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_Commandeer"
+					Animation="NUMEGAUNIT_GRBC"
+					Frame="48" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_Commandeer"
+					Animation="NUMEGAUNIT_GRBD"
+					Frame="54" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short"
+					Animation="NUMEGAUNIT_GRBA"
+					Frame="7 51" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long"
+					Animation="NUMEGAUNIT_GRBA"
+					Frame="14 34 66" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short"
+					Animation="NUMEGAUNIT_GRBB"
+					Frame="10 51" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long"
+					Animation="NUMEGAUNIT_GRBB"
+					Frame="11 37" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short"
+					Animation="NUMEGAUNIT_GRBC"
+					Frame="10 53" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long"
+					Animation="NUMEGAUNIT_GRBC"
+					Frame="12 35" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short"
+					Animation="NUMEGAUNIT_GRBD"
+					Frame="10 54" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long"
+					Animation="NUMEGAUNIT_GRBD"
+					Frame="24 42" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short"
+					Animation="NUREDEEMER_AIDA"
+					Frame="47 76 88" />
+				<Sound
+					Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long"
+					Animation="NUREDEEMER_AIDA"
+					Frame="47 103" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="False">
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="8.51816"
+				MinorRadius="8.51816"
+				Height="10.3193"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="0"
+					y="-9.53674E-07"
+					z="26.3308" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="5.21808"
+				MinorRadius="5.336"
+				Height="13.4425"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="0"
+					y="0"
+					z="35.6042" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="12.6407"
+				MinorRadius="17.2131"
+				Height="22.8021"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-1.17912"
+					y="-9.53674E-07"
+					z="49.0604" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="11.1128"
+				MinorRadius="4.75501"
+				Height="10.5915"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-1.34719"
+					y="-10.9176"
+					z="71.8467" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="11.1117"
+				MinorRadius="4.65535"
+				Height="10.5904"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-1.34719"
+					y="11.0335"
+					z="71.8467" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="7.55598"
+				MinorRadius="4.92368"
+				Height="14.8001"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-0.809991"
+					y="22.2179"
+					z="50.6285" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="7.55598"
+				MinorRadius="4.92368"
+				Height="14.8001"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-0.809989"
+					y="-22.2458"
+					z="50.6285" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="7.55598"
+				MinorRadius="4.92368"
+				Height="10.2121"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="1.84822"
+					y="24.0525"
+					z="33.6742" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="3.97131"
+				MinorRadius="4.43574"
+				Height="17.6138"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-0.809989"
+					y="-28.7502"
+					z="21.6579" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="5.59142"
+				MinorRadius="4.92368"
+				Height="28.4162"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="12.7908"
+					y="12.396"
+					z="4.70664E-07" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="5.59143"
+				MinorRadius="4.92368"
+				Height="28.4162"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="12.7908"
+					y="-12.4118"
+					z="-6.13718E-07" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="5.59143"
+				MinorRadius="4.92368"
+				Height="28.4162"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-12.4019"
+					y="-12.4118"
+					z="-6.13718E-07" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="5.59143"
+				MinorRadius="4.92368"
+				Height="28.4162"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-12.4019"
+					y="12.396"
+					z="4.70664E-07" />
+			</Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="AudioEvent:NOD_Redeemer_VoiceAttack"
+				AudioType="voiceAttack" />
+			<AudioEntry
+				Sound="Multisound:NOD_Redeemer_VoiceCreateMS"
+				AudioType="voiceCreated" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Redeemer_VoiceMove"
+				AudioType="voiceMove" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Redeemer_VoiceMove"
+				AudioType="voiceGuard" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Redeemer_VoiceRetreat"
+				AudioType="voiceRetreatToCastle" />
+			<AudioEntry
+				Sound="Multisound:NOD_Redeemer_VoiceSelectMS"
+				AudioType="voiceSelect" />
+			<AudioEntry
+				Sound="Multisound:NOD_Redeemer_VoiceSelectBattleMS"
+				AudioType="voiceSelectBattle" />
+			<NamedEntry
+				Sound="AudioEvent:NOD_Redeemer_VoiceRage"
+				Name="VoiceRageGenerator" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:NOD_Redeemer_MoveStart"
+				AudioType="soundMoveStart" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Redeemer_IdleLoop"
+				AudioType="soundAmbient" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventDamagedOwner="UnitUnderAttack"
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventAmbushed="UnitAmbushed"
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled"
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME"
+			Texture=""
+			AdditionalTexture=""
+			SizeX="0"
+			SizeY="0"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="0s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="0s"
+			OpacityEnd="0"
+			MaxHeight="20"
+			SunAngle="0"
+			OverrideLODVisibility="False"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
+		<VisionInfo
+			VisionRange="400"
+			ShroudClearingRange="500"
+			VisionSide="100%"
+			VisionRear="100%"
+			VisionBonusTestRadius="100"
+			VisionBonusTestSegments="8"
+			VisionBonusPercentPerFoot="0%"
+			MaxVisionBonusPercent="50%"
+			MinVisionBonusPercent="-50%" />
+		<CrusherInfo
+			CrushKnockback="0"
+			CrushZFactor="1"
+			MinCrushVelocityPercent="1%"
+			CrushDecelerationPercent="40%"
+			CrushWeapon=""
+			CrushRevengeWeapon=""
+			CrusherLevel="4"
+			CrushableLevel="4"
+			MountedCrusherLevel="255"
+			MountedCrushableLevel="255"
+			CrushEqualLevelProps="False"
+			UseCrushAttack="True"
+			CrushOnlyWhileCharging="False"
+			CrushAllies="False" />
+	</GameObject>
+</AssetDeclaration>

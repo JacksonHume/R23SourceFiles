@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<GameObject
+		id="NODVertigoDisruptionStickyPod"
+		SelectPortrait="Portrait_NeutralSensorPod"
+		ButtonImage="Portrait_NeutralSensorPod"
+		Side="NOD"
+		EditorSorting="UNIT"
+		TransportSlotCount="0"
+		CommandSet="EmptyCommandSet"
+		IsTrainable="false"
+		KindOf="PRELOAD NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE IGNORE_FOR_VICTORY"
+		RadarPriority="UNIT"
+		EditorName="NODVertigoDisruptionStickyPod">
+		<DisplayName>Name:AbilityDisruptionPod</DisplayName>
+		<ArmorSet
+			Armor="GDIOrcaSensorPodArmor"
+			DamageFX="NormalDamageFX" />
+		<LocomotorSet
+			Locomotor="HumanLocomotor"
+			Condition="NORMAL"
+			Speed="0.0" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:FXDisruptionPod" />
+				</ModelConditionState>
+				<!--
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:FXDISRUPTIONPOD"
+						ExtraMesh="False" />
+					<ShadowInfo
+						Type="ADDITIVE_DECAL"
+						Texture="Decal_Sensor_CO"
+						AdditionalTexture=""
+						SizeX="400"
+						SizeY="400"
+						OffsetX="0"
+						OffsetY="0"
+						OpacityStart="0"
+						OpacityFadeInTime="0s"
+						OpacityPeak="1"
+						OpacityFadeOutTime="0s"
+						OpacityEnd="0"
+						MaxHeight="200"
+						SunAngle="0"
+						OverrideLODVisibility="True"
+						UseHouseColor="True"
+						IsRotatingWithObject="True"
+						LocalPlayerOnly="True" />
+				</ModelConditionState>
+				-->
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<Physics
+				id="ModuleTag_Physics" />
+
+
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				Options="BROADCAST STARTS_ACTIVE"
+				BroadcastRange="200"
+				UpdatePeriod="1.0s">
+				<InvisibilityNugget
+					ForbiddenStatus="TIBERIUM_VIBRATING IS_FIRING_WEAPON USING_ABILITY IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING" />
+				<BroadcastObjectFilter
+					Rule="ANY"
+					Relationship="ALLIES"
+					Include="STRUCTURE INFANTRY VEHICLE AIRCRAFT">
+					<IncludeThing>NODVertigoDisruptionStickyPod</IncludeThing>
+					<ExcludeThing>MarkedOfKaneVenom</ExcludeThing>
+					<ExcludeThing>NODVenom</ExcludeThing>
+					<ExcludeThing>Viceroid</ExcludeThing>
+					<ExcludeThing>AlienCrystalShield</ExcludeThing>
+				</BroadcastObjectFilter>
+			</InvisibilityUpdate>
+
+			<InvisibilityUpdate
+				id="ModuleTag_InvisibilityVenoms"
+				Options="BROADCAST STARTS_ACTIVE"
+				BroadcastRange="200"
+				UpdatePeriod="1.0s">
+				<InvisibilityNugget
+					HintDetectableStates="IS_ATTACKING"
+					ForbiddenConditions="WEAPONSLOTID_01"
+					ForbiddenStatus="TIBERIUM_VIBRATING USING_ABILITY SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING IS_AIMING_WEAPON" />
+				<BroadcastObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES"
+					RejectStatusBitFlags=""
+					RejectModelCondition="">
+					<IncludeThing>MarkedOfKaneVenom</IncludeThing>
+					<IncludeThing>NODVenom</IncludeThing>
+				</BroadcastObjectFilter>
+			</InvisibilityUpdate>
+
+			<LifetimeUpdate
+				id="ModuleTag_LifeTime"
+				MinLifetime="240s"
+				MaxLifetime="240s" />
+			<AttachUpdate
+				id="ModuleTag_Attach"
+				Range="10.0"
+				Teleport="true"
+				UseGeometry="true"
+				DetachWhenParentHealed="false">
+				<ObjectFilter
+					Rule="ALL">
+					<ExcludeThing>AlienCrystalShield</ExcludeThing>
+				</ObjectFilter>
+			</AttachUpdate>
+			<DestroyDie
+				id="ModuleTag_DestroyDie">
+				<DieMuxData
+					DeathTypes="ALL"
+				/>
+			</DestroyDie>
+			<!--
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				FirstHeightMin="5" 
+				FirstHeightMax="5" 
+				SecondHeightMin="5" 
+				SecondHeightMax="5" 
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				OrientToFlightPath="true"
+				
+				GroundHitFX="FX_DirtHit"/>
+				-->
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="20" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="7.0"
+				Height="13.0"></Shape>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:NOD_Vertigo_DisruptionPodImpact" AudioType="soundAmbient" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+		<VisionInfo
+			VisionRange="0" />
+		<CrusherInfo
+			CrushableLevel="0" />
+	</GameObject>
+</AssetDeclaration>

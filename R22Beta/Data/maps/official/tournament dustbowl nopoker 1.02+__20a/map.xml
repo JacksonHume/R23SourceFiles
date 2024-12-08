@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>
+	
+		<Include
+			source="DATA:static.xml"
+			type="reference"/>
+		<Include
+			source="DATA:global.xml"
+			type="reference"/>
+		<Include type="all" source="DATA:StaticMap.xml" />
+		
+		<Include type="all" source="ART:Static/Textures/GRStuttgart_vol.xml" />
+		<Include type="all" source="ART:Static/Textures/CM3_cloud.xml" />
+		<Include type="all" source="ART:Static/Textures/CM15_cloudRays.xml" />
+		<Include type="all" source="overrides.xml" />
+		
+	</Includes>
+</AssetDeclaration>

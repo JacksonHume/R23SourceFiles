@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<GameObject
+		id="ZOCOMMissileSoldierVeteran"
+		inheritFrom="BaseInfantry"
+		SelectPortrait="Portrait_GDIMissileSquad"
+		ButtonImage="Portrait_GDIMissileSquad"
+		Side="ZOCOM"
+		TransportSlotCount="1"
+		BuildCost="200"
+		BuildTime="2"
+		CommandSet="EmptyCommandSet"
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY PATH_THROUGH_INFANTRY"
+		RadarPriority="UNIT"
+		ThreatLevel="10"
+		ProductionQueueType="INFANTRY"
+		UnitCategory="INFANTRY"
+		WeaponCategory="MISSILE"
+		VoicePriority="100"
+		EditorName="ZOCOMMissileSoldier"
+		EditorSorting="UNIT"
+		Description="DESC:ZOCOMMissileSquad"
+				WorldMapArmoryUpgradesAllowed="Upgrade_ZOCOMFieldSuits"
+TypeDescription="Type:GDIMissileSquad">
+		<DisplayName>Name:GDIMissileSquad</DisplayName>
+		<DisplayUpgrade id="ModuleTag_DisplayCompositeArmorUpgrade">Upgrade_ZOCOMFieldSuits</DisplayUpgrade>
+		<ArmorSet
+			Armor="GDIMissileSoldierArmor"
+			DamageFX="NormalDamageFX" />
+		<ArmorSet
+			id="UpgradeTag_UnitArmor"
+			Conditions="PLAYER_UPGRADE"
+			Armor="ZOCOMMissileSoldierFieldSuits"
+			DamageFX="InfantryDamageFX" />
+		<LocomotorSet
+			Locomotor="HumanLocomotor"
+			Condition="NORMAL"
+			Speed="60" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:GUMissleman_SKN" />
+					<Texture
+						Original="cumisslemana"
+						New="CUMisslemanAG" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_WEAPONA_FX" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_WEAPONA_FX" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="W3DContainer:FXInfantry_FP" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<!-- no anim -->
+				</AnimationState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<Model
+						Name="W3DContainer:GUGar_Miss" />
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_WEAPONA_FX" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_WEAPONA_FX" />
+				</ModelConditionState>
+				<ModelConditionState
+						ParseCondStateType="PARSE_NORMAL"
+						ConditionsYes="UPGRADED_ARMOR">
+						<Model
+							Name="W3DContainer:GUMissleman_UGTS_SKN" />
+
+					</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STUNNED_FLAILING"
+					StateName="STATE_stunned_flailing">
+					<Animation
+						AnimationName="GUMisslmn_FLYA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					StateName="STATE_stunned_landing">
+					<Animation
+						AnimationName="GUMisslmn_LNDA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FRONTCRUSHED">
+					<Animation
+						AnimationName="GUMisslmn_CDTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BACKCRUSHED">
+					<Animation
+						AnimationName="GUMisslmn_CDTB"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED DYING"
+					StateName="STATE_Suppressed">
+					<Animation
+						AnimationName="GUMisslMn_SDIA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER DYING"
+					StateName="STATE_Cover">
+					<Animation
+						AnimationName="GUMisslMn_KDIA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="GUMisslMn_KDIB"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="GUMisslMn_KDIC"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimNickName="DTA"
+						AnimationName="GUMisslMn_DIEA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimNickName="DTB"
+						AnimationName="GUMisslMn_DIEB"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimNickName="DTB"
+						AnimationName="GUMisslMn_DIEC"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<!-- SUPPRESSION ANIMATIONS -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED MOVING"
+					StateName="STATE_Suppressed"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="GUMisslMn_SMVA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED USING_WEAPON_A"
+					StateName="STATE_Suppressed">
+					<Animation
+						AnimationName="GUMisslMn_SATA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Suppressed">
+					<Animation
+						AnimationName="GUMisslMn_SIDA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="GUMisslMn_SIFA"
+						AnimationMode="ONCE" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev ~= "STATE_Suppressed" and Prev ~= "TRANS_toSuppressed" then CurDrawableSetTransitionAnimState("TRANS_toSuppressed")	end;
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_toSuppressed">
+					<Animation
+						AnimationName="GUMisslMn_SDVA"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="GUMisslMn_SDVB"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_fromSuppressed"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GUMisslMn_SDVA"
+						AnimationMode="ONCE_BACKWARDS"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="GUMisslMn_SDVB"
+						AnimationMode="ONCE_BACKWARDS"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER MOVING">
+					<Animation
+						AnimationName="GUMisslMn_RUNC"
+						AnimationMode="LOOP" />
+				</AnimationState>
+                <AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER USING_WEAPON_A AIM_HIGH"
+					StateName="STATE_Cover">
+                    <Animation
+                        AnimationName="GUMisslMn_KAKB"
+                        AnimationMode="LOOP" />
+                </AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER FIRING_OR_PREATTACK_A"
+					StateName="STATE_Cover"
+					FrameForPristineBonePositions="1">
+					<Animation
+						AnimationName="GUMisslMn_KAKA"
+						AnimationMode="ONCE"
+						UseWeaponTiming="true" />
+				</AnimationState>
+        <AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER ATTACKING">
+          <Animation
+						AnimationName="GUMisslMn_KAKA"
+						AnimationMode="MANUAL" />
+        </AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER SELECTED"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_CoverAttention">
+					<Animation
+						AnimationName="GUMisslMn_KAIA"
+						AnimationMode="ONCE"
+						AnimationPriority="80"
+						AnimationBlendTime="10" />
+					<Animation
+						AnimationName="GUMisslMn_KAIB"
+						AnimationMode="ONCE"
+						AnimationPriority="15"
+						AnimationBlendTime="5" />
+					<Animation
+						AnimationName="GUMisslMn_KAFA"
+						AnimationMode="ONCE"
+						AnimationPriority="30"
+						AnimationBlendTime="5" />
+					<Animation
+						AnimationName="GUMisslMn_KAFB"
+						AnimationMode="ONCE"
+						AnimationPriority="30"
+						AnimationBlendTime="5" />
+					<Animation
+						AnimationName="GUMisslMn_KAFC"
+						AnimationMode="ONCE"
+					AnimationPriority="30"
+					AnimationBlendTime="5" />
+                    <Script>
+                        Prev = CurDrawablePrevAnimationState()
+                        if Prev == "STATE_Cover" then
+                        CurDrawableSetTransitionAnimState("TRANS_CoverToCoverAttention")
+                        end
+                    </Script>
+                </AnimationState>
+                <AnimationState
+						ParseCondStateType="PARSE_NORMAL"
+						ConditionsYes="COVER"
+						AllowRepeatInRandomPick="true"
+						Flags="RESTART_ANIM_WHEN_COMPLETE"
+						StateName="STATE_Cover">
+                    <Animation
+						AnimationName="GUMisslMn_KBIA"
+						AnimationMode="ONCE"
+						AnimationPriority="15" 
+					    AnimationBlendTime="10"/>
+                    <Animation
+						AnimationName="GUMisslMn_KBIB"
+						AnimationMode="ONCE"
+						AnimationPriority="15" 
+					    AnimationBlendTime="10"/>
+                    <Animation
+						AnimationName="GUMisslMn_KBFA"
+						AnimationMode="ONCE"
+						AnimationPriority="2" 
+					    AnimationBlendTime="10"/>
+                    <Animation
+						AnimationName="GUMisslMn_KBFB"
+						AnimationMode="ONCE"
+						AnimationPriority="1" 
+					    AnimationBlendTime="10"/>
+                    <Animation
+						AnimationName="GUMisslMn_KBFC"
+						AnimationMode="ONCE"
+						AnimationPriority="1" />
+                    <Script>
+                        Prev = CurDrawablePrevAnimationState()
+                        if Prev == "STATE_CoverAttention" then
+                        CurDrawableSetTransitionAnimState("TRANS_CoverAttentionToCover")
+                        end
+                    </Script>
+                </AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING USING_WEAPON_A"
+					StateName="STATE_Run"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="GUMisslMn_RUNC"
+						AnimationMode="LOOP"
+						Distance="75" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					StateName="STATE_Run"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="GUMisslMn_RUNA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="10"
+						Distance="75" />
+					<Animation
+						AnimationName="GUMisslMn_RUNB"
+						AnimationMode="LOOP"
+						AnimationBlendTime="10"
+						Distance="75" />
+					<Animation
+						AnimationName="GUMisslMn_RUNC"
+						AnimationMode="LOOP"
+						AnimationBlendTime="10"
+						Distance="75" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USING_WEAPON_A AIM_HIGH FIRING_OR_PREATTACK_A"
+					FrameForPristineBonePositions="8">
+					<Animation
+						AnimationName="GUMisslMn_ATKB"
+						AnimationMode="ONCE"
+            UseWeaponTiming="true"/>
+				</AnimationState>
+        <AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="AIM_HIGH ATTACKING">
+          <Animation
+						AnimationName="GUMisslMn_ATKB"
+						AnimationMode="MANUAL" />
+        </AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USING_WEAPON_A FIRING_OR_PREATTACK_A"
+					FrameForPristineBonePositions="7">
+					<Animation
+						AnimationName="GUMisslMn_ATKA"
+						AnimationMode="ONCE"
+            UseWeaponTiming="true" />
+				</AnimationState>
+        <AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ATTACKING">
+          <Animation
+						AnimationName="GUMisslMn_ATKA"
+						AnimationMode="MANUAL" />
+        </AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="EMOTION_CELEBRATING"
+			          Flags="RESTART_ANIM_WHEN_COMPLETE">
+					<Animation
+						AnimationName="GUMisslMn_CHRA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="GUMisslMn_CHRB"
+						AnimationMode="ONCE"
+            AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="GUMisslMn_CHRC"
+						AnimationMode="ONCE"
+            AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<!-- SELECTED -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+          Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Selected">
+					<Animation
+						AnimNickName="ATNB"
+						AnimationName="GUMisslMn_AIDA"
+						AnimationMode="ONCE"
+            AnimationPriority="75"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+					<Animation
+						AnimNickName="ATNB"
+						AnimationName="GUMisslMn_AIDB"
+						AnimationMode="ONCE"
+            AnimationPriority="10"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+          <Animation
+						AnimNickName="ATNB"
+						AnimationName="GUMisslMn_AIFA"
+						AnimationMode="ONCE"
+            AnimationPriority="30"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+					<Animation
+						AnimNickName="ATNB"
+						AnimationName="GUMisslMn_AIFB"
+            AnimationMode="ONCE"
+            AnimationPriority="30"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+					<Animation
+						AnimNickName="ATNB"
+						AnimationName="GUMisslMn_AIFC"
+						AnimationMode="ONCE"
+            AnimationPriority="30"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+							if Prev == "STATE_bored" then CurDrawableSetTransitionAnimState("TRANS_boredToAttention") end;
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					StateName="STATE_bored"
+					AllowRepeatInRandomPick="true"
+					Flags="RESTART_ANIM_WHEN_COMPLETE">
+					<Animation
+						AnimationName="GUMisslMn_BIDB"
+						AnimationMode="ONCE"
+            AnimationBlendTime="15"
+						AnimationPriority="80"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+          <Animation
+            AnimationName="GUMisslMn_BIDA"
+            AnimationMode="ONCE"
+            AnimationBlendTime="15"
+            AnimationPriority="10" />
+          <Animation
+            AnimationName="GUMisslMn_BIDC"
+            AnimationMode="ONCE"
+            AnimationBlendTime="15"
+            AnimationPriority="35" />
+					<Animation
+						AnimationName="GUMisslMn_BIFA"
+						AnimationMode="ONCE"
+            AnimationBlendTime="15"
+						AnimationPriority="35" />
+          <Animation
+						AnimationName="GUMisslMn_BIFB"
+						AnimationMode="ONCE"
+            AnimationBlendTime="15"
+						AnimationPriority="35" />
+					<Animation
+						AnimationName="GUMisslMn_BIFC"
+						AnimationMode="ONCE"
+            AnimationBlendTime="15"
+						AnimationPriority="35" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev == "STATE_Suppressed" then CurDrawableSetTransitionAnimState("TRANS_fromSuppressed") end;
+						if Prev == "STATE_Selected" or Prev == "ATNB" or Prev == "STATE_Run" then CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle") end;
+						if Prev == "STATE_stunned_flailing" then
+						CurDrawableSetTransitionAnimState("STATE_stunned_landing")
+						end
+					</Script>
+				</AnimationState>
+				<!-- TRANSITIONS -->
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_boredToAttention">
+					<Animation
+						AnimationName="GUMisslMn_BATA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="GUMisslMn_BATB"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_attentionToBored">
+					<Animation
+						AnimationName="GUMisslMn_ABTA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="GUMisslMn_ABTB"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IdleToSelected">
+					<Animation
+						AnimationName="GUMisslMn_BATA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="GUMisslMn_BATB"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_SelectedToIdle">
+					<Animation
+						AnimationName="GUMisslMn_ABTA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="GUMisslMn_ABTB"
+						AnimationMode="ONCE" />
+				</AnimationState>
+                <AnimationState
+							ParseCondStateType="PARSE_TRANSITION"
+							StateName="TRANS_CoverAttentionToCover">
+                    <Animation
+								  AnimationName="GUMisslMn_KATA"
+								  AnimationMode="ONCE" />
+                </AnimationState>
+                <AnimationState
+							ParseCondStateType="PARSE_TRANSITION"
+							StateName="TRANS_CoverToCoverAttention">
+                    <Animation
+								  AnimationName="GUMisslMn_KBTA"
+								  AnimationMode="ONCE" />
+                </AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate
+				id="513BC476" />
+			<SquishCollide
+				id="8CCB269A"
+				CrushAnimTime="1s"
+				CrushKillDelay="0.5s"
+				UseDirectionCheck="True" />
+			<CrushDie
+				id="D696466A"
+				TotalCrushSound=""
+				BackEndCrushSound=""
+				FrontEndCrushSound=""
+				TotalCrushSoundPercent="100%"
+				BackEndCrushSoundPercent="100%"
+				FrontEndCrushSoundPercent="100%">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="CRUSHED"
+					DeathTypesForbidden="" />
+			</CrushDie>
+			<FXListBehavior
+				id="BC2FBBCA">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="CRUSHED"
+					DeathTypesForbidden="" />
+				<Event
+					Index="onDeath"
+					FX="FX_InfantrySquished"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="DDED328F"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				DelayTime="0s"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				FocusFireKindOfFlag=""
+				InitiallyActive="True"
+				ActiveDuringConstruction="False"
+				ContinueToBezierDestination="False">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="CATALYST"
+					DeathTypesForbidden="" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="C07BF5C0"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				HealingAmount="10"
+				HealingDelay="0.5s"
+				StartHealingDelay="1s"
+				Radius="0"
+				KindOf=""
+				HealFXList=""
+				SpawnFXList=""
+				RespawnMinimumDelay="0s"
+				InitiallyActive="False"
+				AffectsWholePlayer="False"
+				AffectsContained="False"
+				HealOnlyIfNotUnderAttack="False"
+				HealOnlyIfNotInCombat="False"
+				HealOnlyOthers="False"
+				NonStackable="False"
+				RespawnNearbyHordeMembers="False">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="AA36A1AA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="81C6F752"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="E35F7EC4"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<LevelUpUpgrade
+				id="A92BDFEA"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="5C3F216A"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="2"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="379F3CE2"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="3"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<TemporarilyDefectUpdate
+				id="3473AFD2"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="720F4A50">
+				<WeaponSlotHardpoint
+					ID="1"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIMissileSoldierMissileLauncher"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<Physics
+				id="6D41764B"
+				MaxXRotationVelocity="360"
+				MaxYRotationVelocity="360"
+				MaxZRotationVelocity="360"
+				GravityMultiplier="1"
+				ShockStunnedTimeLow="5"
+				ShockStunnedTimeHigh="10"
+				ShockStandingTime="5"
+				FirstHeight="1.3"
+				SecondHeight="1.3"
+				FirstPercentIndent="33%"
+				SecondPercentIndent="66%"
+				BounceCount="2"
+				BounceDistance="5"
+				BounceFirstHeight="1.3"
+				BounceSecondHeight="1.3"
+				BounceFirstPercentIndent="33%"
+				BounceSecondPercentIndent="66%"
+				GroundHitFX=""
+				GroundBounceFX=""
+				FirstPercentHeight="33%"
+				SecondPercentHeight="66%"
+				CurveFlattenMinDist="0"
+				TumbleRandomly="False"
+				AllowBouncing="False"
+				KillWhenRestingOnGround="False"
+				OrientToFlightPath="False"
+				IgnoreTerrainHeight="False" />
+			<SlowDeath
+				id="73542D4A"
+				SinkRate="2.4"
+				ProbabilityModifier="10"
+				ModifierBonusPerOverkillPercent="0%"
+				SinkDelay="3s"
+				SinkDelayVariance="0s"
+				DestructionDelay="4.5s"
+				DestructionDelayVariance="0s"
+				DecayBeginTime="0s"
+				FlingForce="0"
+				FlingForceVariance="0"
+				FlingPitch="0d"
+				FlingPitchVariance="0d"
+				DeathFlags=""
+				FadeTime="0s"
+				FadeDelay="0s"
+				DeathTypes=""
+				DeathObjectStatusBits=""
+				ShadowWhenDead="False"
+				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="GDI_Generic_VoiceDieMS" />
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</SlowDeath>
+			<SuppressionUpdate
+				id="3AE0061F"
+				UpdateDelay="1s"
+				Suppressability="75"
+				SuppressionDuration="5s"
+				AttributeModifierSuppressed="Modifier_Test_Suppression"
+				AttributeModifierForceMove="Modifier_Test_Suppression_ForceMove"
+				IgnoreSuppressionObjectStatus="" />
+			<CreateAndEnterObjectSpecialPower
+				id="6D44A823"
+				SpecialPowerTemplate="SpecialPowerCallForTransportGDI"
+				AntiCategory=""
+				AntiFX=""
+				AttributeModifier=""
+				AttributeModifierRange="0"
+				AttributeModifierFX=""
+				WeatherDuration="0"
+				InitiateFX=""
+				TriggerFX="FX_GDICallForTransportFlare"
+				SetModelCondition="TOPPLED"
+				SetModelConditionTime="0s"
+				GiveLevels="0"
+				ChangeWeather="NORMAL"
+				OnTriggerRechargeSpecialPower=""
+				BurnDecayModifier="0"
+				MaxDistanceFromCommandCenter="0"
+				UpdateModuleStartsAttack="False"
+				StartsPaused="False"
+				ReEnableAntiCategory="False"
+				AttributeModifierAffectsSelf="False"
+				AttributeModifierWeatherBased="False"
+				TargetEnemy="False"
+				TargetAllSides="False"
+				DisableDuringAnimDuration="False"
+				IdleWhenStartingPower="True"
+				AffectGood="False"
+				AffectEvil="False"
+				AffectAllies="True"
+				AvailableAtStart="True"
+				AdjustVictim="False"
+				UseDistanceFromCommandCenter="False"
+				ChildModuleHandlesFX="True"
+				OCL="OCL_GDICallForTransport"
+				CreateLocation="CREATE_ABOVE_LOCATION"
+				MaxCreateCount="0"
+				NumberToSpawn="1"
+				DestinationOCL=""
+				RegisterObjectsWithSpecialAbilityUpdate="False">
+				<AttributeModifierAffects
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterMP
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterStrategic
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<FXOffset
+					x="25"
+					y="0"
+					z="0" />
+			</CreateAndEnterObjectSpecialPower>
+			<FindCoverBehavior
+				id="53580964"
+				AttributeModifierInCover="Modifier_Cover"
+				CoverScanRange="10" />
+			<LargeGroupAudioUpdate
+				id="00F75CF5"
+				FramesBetweenUpdatesMin="3"
+				FramesBetweenUpdatesVariation="2"
+				UnitWeight="1">
+				<Key>8780BCFD</Key>
+			</LargeGroupAudioUpdate>
+			<StatusBitsUpgrade
+				id="D305500E"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				StatusToSet="WEAPON_UPGRADED_03"
+				StatusToClear=""
+				ApplyToContained="False">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+			<AudioLoopUpgrade
+				id="5BE016B3"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				SoundToPlay="AudioEvent:Generic_Infantry_Upgrade"
+				KillAfterMS="0"
+				KillOnDeath="False">
+				<TriggeredBy>Upgrade_GDICompositeArmor</TriggeredBy>
+			</AudioLoopUpgrade>
+			<ModelConditionUpgrade
+				id="B9C914A4"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="True"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="UPGRADED_ARMOR"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_ZOCOMFieldSuits</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ArmorUpgrade
+				id="00E414BC"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="True"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				ArmorSetFlag="PLAYER_UPGRADE"
+				KillArmorUpgrade="False"
+				IgnoreArmorUpgrade="False">
+				<TriggeredBy>Upgrade_ZOCOMFieldSuits</TriggeredBy>
+			</ArmorUpgrade>
+			<StatusBitsUpgrade
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				StatusToSet="SHIELDBODY_ENABLED"
+				StatusToClear=""
+				ApplyToContained="False">
+				<TriggeredBy>Upgrade_ZOCOMFieldSuits</TriggeredBy>
+			</StatusBitsUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES">
+				<UnitAITargetChooserData
+					SympathyRange="100.0" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="300" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior id="ModuleTag_ASCB">
+				<Sound Sound="Bodyfall" Animation="GUMisslMn_LNDA" Frame="5" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="7.0"
+				Height="13.0"
+				ContactPointGeneration="SQUAD_MEMBER"/>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="Multisound:GDI_MissileSoldier_VoiceAttackMS"
+				AudioType="voiceAttack" />
+			<AudioEntry
+				Sound="Multisound:GDI_MissileSoldier_VoiceCreateMS"
+				AudioType="voiceFullyCreated" />
+			<AudioEntry
+				Sound="Multisound:GDI_MissileSoldier_VoiceGarrisonMS"
+				AudioType="voiceGarrison" />
+			<AudioEntry
+				Sound="Multisound:GDI_MissileSoldier_VoiceMoveMS"
+				AudioType="voiceGuard" />
+			<AudioEntry
+				Sound="Multisound:GDI_MissileSoldier_VoiceMoveMS"
+				AudioType="voiceMove" />
+      <AudioEntry
+				Sound="AudioEvent:GDI_MissileSoldier_VoiceMoveAttack"
+				AudioType="voiceAttackAfterMoving" />
+      <AudioEntry
+				Sound="Multisound:GDI_MissileSoldier_VoiceRetreatMS"
+				AudioType="voiceRetreatToCastle" />
+			<AudioEntry
+				Sound="Multisound:GDI_MissileSoldier_VoiceSelectMS"
+				AudioType="voiceSelect" />
+			<AudioEntry
+				Sound="Multisound:GDI_MissileSoldier_VoiceSelectBattleMS"
+				AudioType="voiceSelectBattle" />
+		</AudioArrayVoice>
+		<!--
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:TEMP_PredatorMoveStart" AudioType="soundMoveStart" />
+			<AudioEntry Sound="AudioEvent:PredatorAmbientLoop" AudioType="soundAmbient" />
+		</AudioArraySound>
+-->
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400"
+			MaxVisionBonusPercent="300"
+			VisionBonusTestRadius="200"
+			VisionBonusPercentPerFoot="1" />
+			
+			<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+			<!-- EvaEventSecondDamageFarFromFirstOwner="UnitUnderAttackAgain"  -->
+		<CrusherInfo
+			CrushableLevel="0" />
+	</GameObject>
+</AssetDeclaration>

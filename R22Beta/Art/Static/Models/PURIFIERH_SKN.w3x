@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="PURIFIERH_SKN" Hierarchy="NUMECH_SKL">
+		<SubObject SubObjectID="S_GENERATOR" BoneIndex="54">
+			<RenderObject>
+				<Mesh>NUMECHH_SKN.S_GENERATOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="S_DETECTOR" BoneIndex="53">
+			<RenderObject>
+				<Mesh>NUMECHH_SKN.S_DETECTOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUMECHH_SKN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="AVATAR_BOTTOM01" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUMECHH_SKN.AVATAR_BOTTOM01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="AVATAR_TOP01" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUMECHH_SKN.AVATAR_TOP01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NUBEAM" BoneIndex="52">
+			<RenderObject>
+				<Mesh>NUMECHH_SKN.NUBEAM</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FLAMETANK" BoneIndex="0">
+			<RenderObject>
+				<Mesh>PURIFIERH_SKN.FLAMETANK</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

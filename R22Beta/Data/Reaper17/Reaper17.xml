@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>
+		<Include source="Units/R17Tripod.xml" type="all"/>	
+		<Include source="Structures/R17Reactor.xml" type="all"/>
+		<!--
+		<Include source="Units/R17DevourerTank.xml" type="all"/>
+		<Include source="Units/r17eradicatorhexapod.xml" type="all"/>	
+		<Include source="Units/R17CustomizableVehicle.xml" type="all"/>
+		<Include source="Units/Reaper17Mothership.xml" type="all"/>
+
+
+
+		<Include source="Structures/R17Gateway.xml" type="all"/>
+		<Include source="Structures/R17RiftGenerator.xml" type="all"/>
+		<Include source="Structures/R17SignalTransmitter.xml" type="all"/>
+		<Include source="Structures/R17StasisChamber.xml" type="all"/>	
+		<Include source="Structures/R17PowerProjector.xml" type="all"/>			
+	
+		<Include source="Units/R17Harv.xml" type="all"/>
+		<Include source="Units/reaper17seekertank.xml" type="all"/>
+		<Include source="Units/R17Stalker.xml" type="all"/>
+		<Include source="Units/R17StalkerSquad.xml" type="all"/>
+		<Include source="Structures/R17MiniMCVOutpost.xml" type="all"/>	
+		<Include source="Structures/R17Foundry.xml" type="all"/>	
+		<Include source="Structures/R17WarpBeacon.xml" type="all"/>	
+		<Include source="Units/R17Explorer.xml" type="all"/>
+	
+		<Include source="Structures/R17StormColumn.xml" type="all"/>	
+		<Include source="Units/R17MCV.xml" type="all"/>
+		<Include source="Units/R17MCVUnpacking.xml" type="all"/>		
+		<Include source="Structures/R17Portal.xml" type="all"/>	
+		<Include source="Structures/R17SporePod.xml" type="all"/>	
+		<Include source="Units/reaper17annihilatortripodhusk.xml" type="all"/>
+		<Include source="Units/R17ShockTrooper.xml" type="all"/>
+		<Include source="Structures/R17Ref.xml" type="all"/>			
+		<Include source="Structures/R17WarpChasm.xml" type="all"/>
+		<Include source="Structures/Reaper17DronePlatform.xml" type="all"/> 
+	-->
+	</Includes>
+
+</AssetDeclaration>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NUMECH_SKN2" Hierarchy="NUMECH_SKL2">
+		<SubObject SubObjectID="S_GENERATOR" BoneIndex="54">
+			<RenderObject>
+				<Mesh>NUMECH_SKN.S_GENERATOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="S_DETECTOR" BoneIndex="53">
+			<RenderObject>
+				<Mesh>NUMECH_SKN.S_DETECTOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NUBEAM" BoneIndex="52">
+			<RenderObject>
+				<Mesh>NUMECH_SKN.NUBEAM</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FLAMETANK" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUMECH_SKN.FLAMETANK</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUMECH_SKN.OBBOX</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="AVATAR_TOP" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUMECH_SKN.AVATAR_TOP</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="AVATAR_BOTTOM" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUMECH_SKN.AVATAR_BOTTOM</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

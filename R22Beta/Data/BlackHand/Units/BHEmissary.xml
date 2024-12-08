@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<GameObject
+		id="BlackHandEmissary"
+		inheritFrom="NODEmissary"
+		SelectPortrait="Portrait_NODEmissary"
+		ButtonImage="Portrait_NODEmissary"
+		Side="BlackHand"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="1300"
+		BuildTime="13"
+		CommandSet="BlackHandEmissaryCommandSet"
+		KindOf="PRELOAD SELECTABLE CAN_CAST_REFLECTIONS SCORE VEHICLE FS_FACTORY CAN_REVERSE_MOVE EXPANSION_UNIT CAN_BE_FAVORITE_UNIT IGNORES_SELECT_ALL"
+		RadarPriority="UNIT"
+		PlacementViewAngle="315d"
+		ProductionQueueType="OTHER_STRUCTURE"
+		UnitCategory="VEHICLE"
+		VoicePriority="44"
+		EditorName="BlackHandEmissary"
+		Description="Desc:BlackHandEmissary"
+		TypeDescription="Type:BlackHandEmissary">
+		<DisplayName>Name:NODEmissary</DisplayName>
+		<GameDependency>
+			<RequiredObject>BlackHandConstructionYard</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="NODEmissaryArmor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			Locomotor="NODEmissaryLocomotor"
+			Condition="NORMAL"
+			Speed="60.0" />
+		<Draws>
+			<TruckDraw
+				id="ModuleTag_01"
+				OkToChangeModelColor="true"
+				LeftFrontTireBone="Bone_TireLF"
+				RightFrontTireBone="Bone_TireRF"
+				MidLeftRearTireBone="Bone_TireLM"
+				MidRightRearTireBone="Bone_TireRM"
+				LeftRearTireBone="Bone_TireLR"
+				RightRearTireBone="Bone_TireRR"
+				TireRotationMultiplier="0.2"
+				PowerslideRotationAddition="1.25">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:NUSUV_SN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="W3DMesh:NUSUV_FP" />
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="W3DContainer:NUSUVR_SN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="W3DContainer:NUSUV_SN" />
+					<Texture
+						Original="NUSuv"
+						New="NUSuv_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
+			</TruckDraw>
+		</Draws>
+		<Behaviors>
+
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+      <TemporarilyDefectUpdate
+        id="ModuleTag_TemporarilyDefect"
+        DefectionFrameCount="300" />
+
+			<Physics
+				id="ModuleTag_04" />
+			<ProductionUpdate
+				id="ModuleTag_08" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				DeathObjectStatusBits="DONT_CLEAR_FOR_BUILD"
+				SinkDelay="3s"
+				SinkRate="2.0"
+				DestructionDelay="7s">
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_NODSurveyorDebris</OCL>
+				</OCL>
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+				<Sound Type="INITIAL" List="NOD_Generic_VoiceDieMS" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIVehicleExplodeNoScorch" />
+			</FXListBehavior>
+			<SpecialPower 
+				id="ModuleTag_GiveUnpackUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveUnpackUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
+				UpgradeToGive="Upgrade_UnPack"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="20.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_UnPack</TriggeredBy>
+				<ReplacementTemplate>BlackHandMiniMCVOutpost</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<AISpecialPowerUpdate
+				id="ModuleTag_EmissaryDeployOutpost"
+				CommandButtonName="Command_UnPackEmissary"
+				SpecialPowerAIType="SPECIAL_POWER_BUILD_CONYARD" />
+			<!-- No stances because there's no weapon -->
+			<CreateAndEnterObjectSpecialPower
+				id="ModuleTag_CallForTransport"
+				SpecialPowerTemplate="SpecialPowerCallForTransportNOD"
+				OCL="OCL_NodCallForTransportVehicle"
+				CreateLocation="CREATE_ABOVE_LOCATION"
+				TriggerFX="FX_NODCallForTransportFlare"
+				ChildModuleHandlesFX="true"
+				IdleWhenStartingPower="true">
+				<FXOffset x="25" y="0" z="0"></FXOffset>
+			</CreateAndEnterObjectSpecialPower>
+			<AISpecialPowerUpdate
+			  id ="ModuleTag_NODCallForTransportVehicleAI"
+			  CommandButtonName="Command_NodCallForTransportVehicle"
+			  SpecialPowerAIType="SPECIAL_POWER_MOVEMENT"
+			  MinimumCutoff="5000"
+			  UpdateTime="5.0s"
+			   />
+		
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_03"
+				AutoAcquireEnemiesWhenIdle="YES"></AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_02"
+				MaxHealth="2600.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="BOX"
+				MajorRadius="14.0"
+				MinorRadius="7.0"
+				Height="11.5"></Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="AudioEvent:NOD_Emissary_VoiceCreate"
+				AudioType="voiceCreated" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Emissary_VoiceMove"
+				AudioType="voiceMove" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Emissary_VoiceRetreat"
+				AudioType="voiceRetreatToCastle" />
+			<AudioEntry
+				Sound="Multisound:NOD_Emissary_VoiceSelectMS"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:NOD_Emissary_MoveStart"
+				AudioType="soundMoveStart" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Emissary_IdleLoop"
+				AudioType="soundAmbient" />
+		</AudioArraySound>
+		<EvaEvents
+      EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+			<!-- EvaEventSecondDamageFarFromFirstOwner="UnitUnderAttackAgain"  -->
+		<CrusherInfo
+			CrusherLevel="1" 
+			CrushableLevel="2" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="150"
+			ShroudClearingRange="320" />
+	</GameObject>
+</AssetDeclaration>

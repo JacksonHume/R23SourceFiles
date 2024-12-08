@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- sam turret dummy -->
+	<WeaponTemplate
+		id="NODRocketBunkerHubWeaponDummy"
+		Name="NODRocketBunkerHubWeaponDummy"
+		AttackRange="450.0"
+		WeaponSpeed="250"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+	 	AcceptableAimDelta="180d"
+		FireSound=""
+		FireFX=""
+		ClipSize="3"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		ReAcquireDetailType="PER_CLIP"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+	</WeaponTemplate>
+	
+	<!-- shredder turret dummy -->
+	
+	<WeaponTemplate
+		  id="NODShredderHubWeaponDummy"
+		  Name="NODShredderHubWeaponDummy"
+		  AttackRange="350.0"
+		  MinTargetPitch="-15d"
+		  MaxTargetPitch="15d"
+		  WeaponSpeed="750"
+		  FireFX=""
+		  FireSound=""
+		  WeaponRecoil="0d"
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		  ClipSize="2"
+		  ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		  ShotsPerBarrel="1"
+		  ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS">
+	</WeaponTemplate>	
+	
+	<!-- laser turret dummy -->
+	
+	<WeaponTemplate
+		id="NODLaserCannonHubWeaponDummy"
+		Name="NODLaserCannonHubWeaponDummy"
+		AttackRange="350.0"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="180d"
+		FireSound=""
+		FireFX=""
+		ReAcquireDetailType="POST_FIRE"
+		ClipSize="2"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		ShotsPerBarrel="1"
+		NoVictimNeeded="true">
+	</WeaponTemplate>
+
+</AssetDeclaration>

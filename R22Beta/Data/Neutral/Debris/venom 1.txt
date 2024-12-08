@@ -1,0 +1,445 @@
+Generated in: 00:00:02.6033228
+
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="NODVenomDebris_01"
+		KindOf="NO_COLLIDE UNATTACKABLE INERT INERT_SHROUD_REVEALER NOT_AUTOACQUIRABLE"
+		RadarPriority="NOT_ON_RADAR"
+		BuildCompletion="INVALID"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="0d"
+		BuildFadeInOnCreateTimeSeconds="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="Neutral"
+		EditorName="NODVenomDebris_01"
+		EditorSorting="MISC_MAN_MADE"
+		BountyValue="0"
+		BuildTime="0"
+		BuildFadeInOnCreateTime="0"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet="EmptyCommandSet"
+		SelectPortrait=""
+		ButtonImage=""
+		VoicePriority="0"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CrowdResponse=""
+		CampnessValue="0"
+		CampnessValueRadius="600"
+		Scale="1"
+		HealthBoxScale="1.5"
+		HealthBoxHeightOffset="10"
+		OcclusionDelay="0"
+		LiveCameraPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		ThreatRadius="-1"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="0"
+		CommandPoints="0"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="0"
+		MaxDistanceForEngaged="0"
+		EngagedStateTimeout="0"
+		ThreatLevel="1"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		DisplayMeleeDamage="-1"
+		DisplayRangedDamage="-1"
+		HeroSortOrder="2147483647"
+		FiringArc="360"
+		CamouflageDetectionMultiplier="1"
+		SelectionPriority="2147483647"
+		ProductionQueueType="INVALID"
+		BuildPlacementTypeFlag="INVALID"
+		BuildOnRequiredObjectKindOf=""
+		UnitCategory="NONE"
+		WeaponCategory="NONE"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon=""
+		ReinvisibilityDelay="4s"
+		CaptureTime="0s"
+		BuildCost="0"
+		RefundValue="0"
+		ThreatValue="0"
+		MaxSimultaneousOfType="0"
+		TransportSlotCount="0"
+		IsTrainable="True"
+		IsForbidden="False"
+		IsPrerequisite="False"
+		IsGrabbable="False"
+		IsHarvestable="False"
+		StructureRubbleHeight="0"
+		ForceLuaRegistration="False"
+		ShowHealthInSelectionDecal="False"
+		KeepSelectableWhenDead="False"
+		IsAutoBuilt="False"
+		CanPathThroughGates="True"
+		ShouldClearShotsOnIdle="False"
+		BuildInProximityToSamePlayerStucture="True">
+		<DisplayName>Debris</DisplayName>
+		<ArmorSet
+			Armor="NoArmor"
+			DamageFX=""
+			Conditions="" />
+		<Draws>
+			<ScriptedModelDraw
+				id="50DF2C46"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="True"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="NUVENOMR01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<Physics
+				id="6D41764B"
+				MaxXRotationVelocity="360"
+				MaxYRotationVelocity="360"
+				MaxZRotationVelocity="360"
+				GravityMultiplier="1"
+				ShockStunnedTimeLow="5"
+				ShockStunnedTimeHigh="10"
+				ShockStandingTime="5"
+				FirstHeight="1.3"
+				SecondHeight="1.3"
+				FirstPercentIndent="33%"
+				SecondPercentIndent="66%"
+				BounceCount="3"
+				BounceDistance="5"
+				BounceFirstHeight="1.3"
+				BounceSecondHeight="1.3"
+				BounceFirstPercentIndent="33%"
+				BounceSecondPercentIndent="66%"
+				GroundHitFX=""
+				GroundBounceFX=""
+				FirstPercentHeight="33%"
+				SecondPercentHeight="66%"
+				CurveFlattenMinDist="0"
+				TumbleRandomly="True"
+				AllowBouncing="False"
+				KillWhenRestingOnGround="False"
+				OrientToFlightPath="False"
+				IgnoreTerrainHeight="False" />
+			<LifetimeUpdate
+				id="6D14780C"
+				MinLifetime="1s"
+				MaxLifetime="1s"
+				DeathType="NONE"
+				WaitForWakeUp="False"
+				ScoreKill="False"
+				IgnoreProjectileState="False" />
+			<SlowDeath
+				id="73542D4A"
+				SinkRate="0.5"
+				ProbabilityModifier="10"
+				ModifierBonusPerOverkillPercent="0%"
+				SinkDelay="2s"
+				SinkDelayVariance="0s"
+				DestructionDelay="4s"
+				DestructionDelayVariance="0s"
+				DecayBeginTime="0s"
+				FlingForce="0"
+				FlingForceVariance="0"
+				FlingPitch="0d"
+				FlingPitchVariance="0d"
+				DeathFlags=""
+				FadeTime="0s"
+				FadeDelay="0s"
+				DeathTypes=""
+				DeathObjectStatusBits=""
+				ShadowWhenDead="False"
+				Fade="False">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</SlowDeath>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="B313F576"
+				MaxHealth="100"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				InitialHealth="-1"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+		</Body>
+		<Geometry
+			IsSmall="True">
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="10"
+				MinorRadius="10"
+				Height="10"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True" />
+		</Geometry>
+		<ShadowInfo
+			Type="VOLUME"
+			Texture=""
+			AdditionalTexture=""
+			SizeX="0"
+			SizeY="0"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="0s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="0s"
+			OpacityEnd="0"
+			MaxHeight="20"
+			SunAngle="0"
+			OverrideLODVisibility="False"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
+		<VisionInfo
+			VisionRange="1"
+			ShroudClearingRange="1"
+			VisionSide="100%"
+			VisionRear="100%"
+			VisionBonusTestRadius="100"
+			VisionBonusTestSegments="8"
+			VisionBonusPercentPerFoot="0%"
+			MaxVisionBonusPercent="50%"
+			MinVisionBonusPercent="-50%" />
+	</GameObject>
+</AssetDeclaration>
+
+Asset Dump:
+GameObject:NODVenomDebris_01
+DATA:neutral/debris/nodvenomdebris_01.xml
+942FFF2D:48A06494:50612DE9:953A9152
+
+AssetReferences: 5
+
+
+Binary: 2104 Offset: 383263208
+000000: 00000000 00000000 01000001 00000008
+000010: 00000010 20000000 00000000 00000000
+000020: 00000000 00000000 00000000 00000000
+000030: 00000000 00000000 00000000 00000000
+000040: 00000000 00000000 00000000 00000000
+000050: 00000000 00000000 01000000 00000000
+000060: 00000000 00000000 00000000 00000000
+000070: 00000000 00000000 00000000 00000000
+000080: 07000000 5C020000 11000000 64020000
+000090: 04000000 00000000 00000000 00000000
+0000A0: 00000000 00000000 A6A9F39A 00000000
+0000B0: 78020000 00000000 7C020000 00000000
+0000C0: 000080BF 00000000 00000000 00001644
+0000D0: 0000803F 0000C03F 00002041 00000000
+0000E0: 00000000 01000000 01000000 00000000
+0000F0: 000080BF 00000000 0000803F 00000000
+000100: 00000000 00000000 00000000 00000000
+000110: 00000000 0000803F 00000000 000080BF
+000120: 00000000 FFFFFFFF FFFFFFFF FFFFFF7F
+000130: 00000000 00000000 0000B443 0000803F
+000140: FFFFFF7F FFFFFFFF 00000000 00000000
+000150: 00000000 00000000 00000000 00000000
+000160: 00000000 00000000 00000000 00000000
+000170: FFFFFFFF FFFFFFFF 00000040 00000000
+000180: 00008040 00000000 00000000 00000000
+000190: 80020000 00000000 01000000 90020000
+0001A0: 00000000 00000000 00000000 00000000
+0001B0: 00000000 00000000 00000000 00000000
+0001C0: 00000000 00000000 00000000 00000000
+0001D0: 00000000 00000000 9C020000 1C050000
+0001E0: 00000000 24070000 00000000 00000000
+0001F0: 00000000 90070000 00000000 00000000
+000200: 00000000 00000000 00000000 00000000
+000210: 00000000 00000000 00000000 00000000
+000220: 00000000 00000000 D8070000 00000000
+000230: 14080000 00000000 00000000 00000000
+000240: 00000000 00000000 00000000 00010000
+000250: 00000000 00000001 00010000 4E657574
+000260: 72616C00 4E4F4456 656E6F6D 44656272
+000270: 69735F30 31000000 00000000 00000000
+000280: 06000000 88020000 44656272 69730000
+000290: 00000000 00000000 00000000 01000000
+0002A0: A4020000 A8020000 4B2ACF4E 462CDF50
+0002B0: 00000000 00000000 CDCCCC3E 00004040
+0002C0: CDCCCC3E F3FD543C 00000000 00000000
+0002D0: 00000000 00000000 00000000 00000000
+0002E0: 00000000 00000000 00000000 00000000
+0002F0: 00000000 00000000 00000000 00000000
+000300: 00000000 00000000 00000000 00000000
+000310: 00000000 00000000 00000000 00000000
+000320: 00000000 00000000 00000000 00000000
+000330: 00000000 00000000 00000000 00000000
+000340: 00000000 00000000 00000000 00000000
+000350: 00000000 00000000 00000000 00000000
+000360: 00000000 00000000 00000000 00000000
+000370: 00000000 00000000 00000000 0000803F
+000380: FFFFFFFF 00000000 01000000 D4030000
+000390: 00000000 00000000 00000000 00000000
+0003A0: 00000000 00000000 00000000 00000000
+0003B0: 00000000 00000000 00000000 01010000
+0003C0: 00000001 00000000 00000000 00000000
+0003D0: 01000001 01000000 00000000 00000000
+0003E0: 00000000 00000000 00000000 00000000
+0003F0: 00000000 00000000 00000000 00000000
+000400: 00000000 00000000 00000000 00000000
+000410: 01000000 60040000 00000000 00000000
+000420: 00000000 00000000 00000000 00000000
+000430: 00000000 00000000 00000000 00000000
+000440: 03000000 68040000 00000000 00000000
+000450: 00000000 00000000 00000000 00000000
+000460: 01000000 00000000 0D000000 EC040000
+000470: 02000000 00000000 00000000 00000000
+000480: 00000000 00000000 00000000 00000000
+000490: 01000000 0D000000 FC040000 03000000
+0004A0: 00000000 00000000 00000000 00000000
+0004B0: 00000000 00000000 00000000 01000000
+0004C0: 0D000000 0C050000 04000000 00000000
+0004D0: 00000000 00000000 00000000 00000000
+0004E0: 00000000 00000000 01000000 524F4F54
+0004F0: 5452414E 53464F52 4D000000 524F4F54
+000500: 5452414E 53464F52 4D000000 524F4F54
+000510: 5452414E 53464F52 4D000000 03000000
+000520: 24050000 30050000 98050000 B0050000
+000530: CBEDBF79 4B76416D 0000B443 0000B443
+000540: 0000B443 0000803F 05000000 0A000000
+000550: 05000000 6666A63F 6666A63F C2F5A83E
+000560: C2F5283F 03000000 0000A040 6666A63F
+000570: 6666A63F C2F5A83E C2F5283F 00000000
+000580: 00000000 C2F5A83E C2F5283F 00000000
+000590: 01000000 00000000 723C286C 0C78146D
+0005A0: 0000803F 0000803F 00000000 00000000
+0005B0: 94977698 4A2D5473 CDCCCC3D 0A000000
+0005C0: 00000000 00000040 00000000 00008040
+0005D0: 00000000 00000000 00000000 00000000
+0005E0: 00000000 00000000 00000000 00000000
+0005F0: 00000000 00000000 00000000 00000000
+000600: 00000000 00000000 00000000 00000000
+000610: 00000000 00000000 00000000 00000000
+000620: 00000000 00000000 00000000 00000000
+000630: 00000000 00000000 00000000 00000000
+000640: 00000000 00000000 00000000 00000000
+000650: 00000000 00000000 00000000 00000000
+000660: 00000000 00000000 00000000 00000000
+000670: 00000000 00000000 00000000 00000000
+000680: 00000000 00000000 00000000 00000000
+000690: 00000000 00000000 00000000 00000000
+0006A0: 00000000 00000000 00000000 00000000
+0006B0: 00000000 00000000 00000000 00000000
+0006C0: 00000000 00000000 00000000 00000000
+0006D0: D8060000 00000000 00000000 00000000
+0006E0: 00000000 00000000 00000000 00000000
+0006F0: 00000000 00000000 00000000 00000000
+000700: 00000000 00000000 00000000 00000000
+000710: 000080BF 35FA8E3C 35FA8EBC FFFFFFFF
+000720: 00000000 9B3D0E5A 76F513B3 0000C842
+000730: 00000000 00000000 000080BF 00000000
+000740: 00000000 00000000 00000000 00000000
+000750: 00000000 00000000 00004843 00000000
+000760: 00000000 00000000 00004843 00000000
+000770: 00000000 00000000 00000000 00000000
+000780: 00000000 00000000 00000000 01000000
+000790: 00000000 01000000 A8070000 00000000
+0007A0: 00000000 01000000 01000000 00000000
+0007B0: 00000000 00000000 00002041 00002041
+0007C0: 00000000 00000000 00002041 00000000
+0007D0: 00000000 01010000 02000000 00000000
+0007E0: 00000000 00000000 00000000 00000000
+0007F0: 00000000 00000000 00000000 0000803F
+000800: 00000000 00000000 0000A041 00000000
+000810: 00000100 0000803F 0000803F 0000803F
+000820: 0000803F 0000C842 08000000 00000000
+000830: 0000003F 000000BF

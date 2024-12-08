@@ -1,0 +1,2017 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- no longer needed
+
+	<SpecialPowerTemplate
+		id="SpecialPower_FireEMPGrenades"
+		ReloadTime="30s"
+		RadiusCursorRadius="60"
+		TargetType="LOCATION"
+		RestrictionType="1"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceAttackEMPGrenades" >
+		<GameDependency>
+			<NeededUpgrade>Upgrade_EMPGrenades</NeededUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_TeleportObjectsDispatch"
+		TargetType="OBJECT_OR_LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice=""
+		ReloadTime="0s" />
+
+	<SpecialPowerTemplate
+		id="SpecialPower_TempRemoveEMP"
+		TargetType="OBJECT_OR_LOCATION" />
+-->
+
+
+<!--
+	<SpecialPowerTemplate
+	id="SpecialPower_RiftGeneratorWeapon"
+	DisplayName="NAME:SuperweaponTimerRiftGenerator"
+	Description="DESC:SuperweaponTimerRiftGenerator"
+	Flags="HAS_PUBLIC_TIMER IS_PLAYER_POWER FOGGED_SHROUDED_CELLS_OK WATER_OK IGNORE_MAP_EXTENTS SHARED_SYNC"
+	ReloadTime="0s"
+	TargetType="LOCATION"
+	EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+	EvaEventToPlayOnInitiateOwner="OwnRiftGeneratorActivated"
+	EvaEventToPlayOnInitiateAlly="AlliedRiftGeneratorActivated"
+	EvaEventToPlayOnInitiateEnemy="EnemyRiftGeneratorActivated"
+	RadiusCursorRadius="250"
+	RestrictionType="1"
+	TimerImage="Button_PlayerPowerRiftGenerator" />
+-->
+
+<!-- rage cooldown test -->
+<!--
+<SpecialPowerTemplate
+		id="NodRageGenerator"
+		ReloadTime="0s"
+		TargetType="NONE"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceRageGenerator">
+	</SpecialPowerTemplate>
+-->
+
+<!-- Ion Cannon -->
+<!--
+<SpecialPowerTemplate
+		id="SpecialPowerIonCannonControlIonCannon"
+		DisplayName="NAME:SuperweaponTimerIonCannon"
+		Description="DESC:SuperweaponTimerIonCannon"
+		Flags="HAS_PUBLIC_TIMER IS_PLAYER_POWER FOGGED_SHROUDED_CELLS_OK WATER_OK IGNORE_MAP_EXTENTS SHARED_SYNC"
+		ReloadTime="0s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="300"
+		RestrictionType="1"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		EvaEventToPlayOnInitiateOwner="OwnIonCannonActivated"
+		EvaEventToPlayOnInitiateAlly="AlliedIonCannonActivated"
+		EvaEventToPlayOnInitiateEnemy="EnemyIonCannonActivated"
+		TimerImage="Button_PlayerPowerIonCannon" />
+-->
+<!--
+<SpecialPowerTemplate
+		id="SpecialPower_ReflectorAttack"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE TARGET_NEEDS_OBJECT_STATUS FIND_REACHABLE_TARGETS"
+		ReloadTime="0s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="0"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus="CONTESTED"
+		DisallowedTargetObjectStatus=""
+		MaxCastRange="50000"
+		MinCastRange="100"
+		ForbiddenObjectRange="0"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice=""
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="550"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="False"
+		StrikeForceRejectMatchAll="False">
+		<ObjectFilter
+			Rule="ALL"
+			Relationship="ENEMIES"
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+		<ForbiddenObjectFilter
+			id="B98125DD"
+			Rule="NONE"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+		<GameDependency
+			RequiredModelConditionsAny=""
+			ForbiddenModelConditions=""
+			RequiredObjectStatusAny="">
+			<ObjectFilter
+				Rule="ANY"
+				Relationship="ALLIES"
+				Alignment="NONE"
+				Include=""
+				Exclude=""
+				StatusBitFlags=""
+				RejectStatusBitFlags=""
+				AcceptModelCondition=""
+				RejectModelCondition="">
+				<IncludeThing>NODVenom</IncludeThing>
+				<IncludeThing>MarkedOfKaneVenom</IncludeThing>
+				<IncludeThing>BlackHandVenom</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+	</SpecialPowerTemplate>
+-->
+<!--
+<SpecialPowerTemplate
+		id="SpecialPower_EngineerCapture"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter
+			Rule="ALL" />
+	</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+		id="SpecialPower_EngineerCapture"
+		TargetType="OBJECT" />
+
+
+
+-->	
+
+<!-- seeker fix -->
+<!--
+<SpecialPowerTemplate
+		id="SpecialPowerUncombineWithUnit2"
+		TargetType="NONE"
+		RequiredConditions="COMBINED_PARENT" />
+		
+<SpecialPowerTemplate
+		id="SpecialPowerUncombineWithUnit3"
+		TargetType="NONE" />
+-->
+
+<SpecialPowerTemplate
+		id="SpecialPowerDisruptionPod_Dispatch"
+		ReloadTime="30s"
+		TargetType="OBJECT_OR_LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceDisruptionPod"
+		WaypointModeTerminal="false"
+		Flags="FOGGED_SHROUDED_CELLS_OK"
+		Money="-300">
+		<GameDependency>
+			<NeededUpgrade>Upgrade_VertigoDisruptionPod</NeededUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPowerDisruptionPod_UnTargeted"
+		TargetType="LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceDisruptionPod"
+		ReloadTime="30s"
+		Money="-300">
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPowerDisruptionPod_Targeted"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceDisruptionPod"
+		Flags="NO_FORBIDDEN_OBJECTS"
+		ReloadTime="30s"
+		Money="-300">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="INFANTRY HORDE AIRCRAFT" />
+	</SpecialPowerTemplate>
+
+
+<SpecialPowerTemplate
+		id="TiberiumAgitationGetInRange"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceTiberiumAgitation"
+		Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="DOES_CONTAIN_TIBERIUM"
+		DisallowedTargetModelStates="USER_28"
+		ReloadTime="45s"
+		PreventConditions="AIRBORNE_TARGET IGNORE_AI_COMMAND">
+		<ObjectFilter
+			Rule="ANY"
+			Exclude="UNATTACKABLE"
+			Include="FS_MONEY_STORAGE TIBERIUM_BASED"
+			Relationship="ENEMIES NEUTRAL ALLIES">
+			<!-- Refineries -->
+			<IncludeThing>NODRefinery</IncludeThing>
+			<IncludeThing>BlackHandRefinery</IncludeThing>
+			<IncludeThing>MarkedOfKaneRefinery</IncludeThing>
+			<IncludeThing>GDIRefinery</IncludeThing>
+			<IncludeThing>SteelTalonsRefinery</IncludeThing>
+			<IncludeThing>ZOCOMRefinery</IncludeThing>
+			<IncludeThing>AlienTiberiumTower</IncludeThing>
+			<IncludeThing>Traveler59TiberiumTower</IncludeThing>
+			<IncludeThing>Reaper17TiberiumTower</IncludeThing>
+			<!-- Silos -->
+			<IncludeThing>GDITiberiumSilo</IncludeThing>
+			<IncludeThing>SteelTalonsTiberiumSilo</IncludeThing>
+			<IncludeThing>ZOCOMTiberiumSilo</IncludeThing>
+			<IncludeThing>NodTiberiumSilo</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumSilo</IncludeThing>
+			<IncludeThing>BlackHandTiberiumSilo</IncludeThing>
+			<IncludeThing>TiberiumSpike</IncludeThing>
+			<IncludeThing>TiberiumSilo</IncludeThing>
+			<!-- Harvs -->
+			<IncludeThing>NODHarvester</IncludeThing>
+			<IncludeThing>BlackHandHarvester</IncludeThing>
+			<IncludeThing>MarkedOfKaneHarvester</IncludeThing>
+			<IncludeThing>GDIHarvester</IncludeThing>
+			<IncludeThing>SteelTalonsHeavyHarvester</IncludeThing>
+			<IncludeThing>ZOCOMHarvester</IncludeThing>
+			<IncludeThing>AlienHarvester</IncludeThing>
+			<IncludeThing>Traveler59Harvester</IncludeThing>
+			<IncludeThing>Reaper17Harvester</IncludeThing>
+			<!-- Growth Accs -->
+			<IncludeThing>AlienSporePod</IncludeThing>
+			<IncludeThing>Traveler59SporePod</IncludeThing>
+			<IncludeThing>Reaper17GrowthStimulator</IncludeThing>
+			<!-- Units -->
+			<IncludeThing>Reaper17AnnihilatorTripod</IncludeThing>				
+			<IncludeThing>AlienDevourerTank</IncludeThing>
+			<IncludeThing>Reaper17DevourerTank</IncludeThing>			
+			<IncludeThing>Reaper17Corrupter</IncludeThing>
+			<IncludeThing>Traveler59Corrupter</IncludeThing>
+			<IncludeThing>AlienCorrupter</IncludeThing>	
+			<IncludeThing>MarkedOfKaneTiberiumTrooperSquad</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumTrooper</IncludeThing>
+			<!-- PPs -->
+			<IncludeThing>NodPowerPlant</IncludeThing>
+			<IncludeThing>BlackHandPowerPlant</IncludeThing>
+			<IncludeThing>MarkedOfKanePowerPlant</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>	
+
+<!-- fixed radius -->
+<SpecialPowerTemplate
+		id="SpecialPowerEMPControlCenter"
+		Flags="IS_PLAYER_POWER SHARED_SYNC"
+		ReloadTime="180s"
+		RadiusCursorRadius="150"
+		TargetType="LOCATION"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget" />
+
+<SpecialPowerTemplate
+	id="SpecialPower_ConversionBeam"
+	TargetType="OBJECT"
+	MaxCastRange="100"
+	ReloadTime="3s"
+	Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+	RequiredTargetObjectStatus="DOES_CONTAIN_TIBERIUM"
+	DisallowedTargetObjectStatus="IS_BEING_HARVESTED"
+	NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateConversionBeam"
+	WaypointModeTerminal="false">
+	<ObjectFilter
+		Rule="ANY"
+		Include="FS_MONEY_STORAGE TIBERIUM">
+		<IncludeThing>TiberiumCrystal</IncludeThing>
+		<IncludeThing>TiberiumCrystalBlue</IncludeThing>
+	</ObjectFilter>
+</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+		id="SpecialPower_PhaseField"
+		TargetType="LOCATION"
+		Flags="NEEDS_OBJECT_FILTER WATER_OK TARGET_NEEDS_OBJECT_STATUS SHARED_SYNC IS_PLAYER_POWER NO_FORBIDDEN_MODEL_STATES"
+		ReloadTime="180s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="100"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates="EMOTION_DISSIDENT"
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus="AIRBORNE_TARGET IN_STASIS"
+		MaxCastRange="1000000"
+		MinCastRange="0"
+		ForbiddenObjectRange="0"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RestrictionType="UNRESTRICTED"
+		Money="-1500"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="True"
+		StrikeForceRejectMatchAll="False">
+		<ObjectFilter
+			Rule="ANY"
+			Relationship="ALLIES"
+			Alignment="NONE"
+			Include="VEHICLE"
+			Exclude="INFANTRY AIRCRAFT"
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="">
+			<IncludeThing>AlienMCV</IncludeThing>
+			<IncludeThing>AlienMCVUnpacking</IncludeThing>
+			<IncludeThing>Reaper17MCV</IncludeThing>
+			<IncludeThing>Reaper17MCVUnpacking</IncludeThing>
+			<IncludeThing>Traveler59MCV</IncludeThing>
+			<IncludeThing>Traveler59MCVUnpacking</IncludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+		</ObjectFilter>
+		<ForbiddenObjectFilter
+			id="BD1F4674"
+			Rule="NONE"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+	</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+		id="SpecialPower_TargetedRepairVehicle"
+		ReloadTime="1s"
+		InitiateAtLocationSound="GuiCommandButtonClick"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateRepair"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE"
+		MaxCastRange="200">
+		<ObjectFilter
+			Rule="ANY"
+			Include="VEHICLE HUGE_VEHICLE AIRCRAFT">
+			<IncludeThing>NODCyborgInfantry</IncludeThing>
+			<IncludeThing>MarkedOfKaneImprovedCyborgInfantry</IncludeThing>
+			<IncludeThing>MOKCyborgInfantry</IncludeThing>
+			<IncludeThing>MarkedOfKaneImprovedCyborgInfantrySquad</IncludeThing>
+			<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>
+			<IncludeThing>NODCyborgInfantrySquad</IncludeThing>
+		</ObjectFilter>
+</SpecialPowerTemplate>
+
+<!-- traveler wormhole cooldown increased by 50% -->
+
+<SpecialPowerTemplate
+		id="SpecialPower_Traveler59WormHole"
+		DisplayName="SPECIALPOWER:Traveler59WormHole"
+		Flags="IS_PLAYER_POWER NOT_CLIFF_CELL PATHABLE_ONLY SHARED_SYNC"
+		ReloadTime="180s"
+		TargetType="LOCATION"
+		EvaEventToPlayWhenSelectingTarget="SelectWormholeLocation"
+		RadiusCursorRadius="50"
+		Money="-2000" />
+
+<!-- infestation hive cost reduced from 1000$ to 800$ -->
+
+<SpecialPowerTemplate
+		id="SpecialPower_SummonTibHive"
+		Flags="IS_PLAYER_POWER NEEDS_OBJECT_FILTER NO_FORBIDDEN_OBJECTS SHARED_SYNC"
+		TargetType="LOCATION"
+		ReloadTime="120s"
+		RadiusCursorRadius="20"
+		ForbiddenObjectRange="100"
+		Money="-800">
+		<ObjectFilter
+			Rule="ANY">
+			<IncludeThing>TiberiumField</IncludeThing>
+			<IncludeThing>TiberiumFieldBlue</IncludeThing>
+			<IncludeThing>TiberiumFieldRedZone</IncludeThing>
+		</ObjectFilter>
+		<ForbiddenObjectFilter
+			Rule="ANY">
+			<IncludeThing>AlienTibHive</IncludeThing>
+			<IncludeThing>AlienSporePod</IncludeThing>
+			<IncludeThing>Reaper17GrowthStimulator</IncludeThing>
+			<IncludeThing>Traveler59SporePod</IncludeThing>
+			<IncludeThing>Tiberium</IncludeThing>
+		</ForbiddenObjectFilter>
+	</SpecialPowerTemplate>
+
+<!-- fix this so mastermind/prodigy doesnt use ability when enemy sells try DESTROYED or SOLD ObjectStatus if just UNATTACKABLE doesnt fix it. -->
+
+<SpecialPowerTemplate
+		id="SpecialPower_ManipulateObject_Structure"
+		TargetType="OBJECT"
+		ReloadTime="30s"
+		DisallowedTargetModelStates="DYING RUBBLE"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateManipulateObject"
+		WaypointModeTerminal="false"
+		Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES">
+		<ObjectFilter
+			Rule="ANY"
+			Relationship="ENEMIES NEUTRAL"
+			Include="STRUCTURE"
+			Exclude="HUSK CIVILIAN_BUILDING FS_BASE_DEFENSE METAUNIT SUPER_WEAPON BRIDGE BRIDGE_SEGMENT BRIDGE_ENDCAP BRIDGE_GATEHOUSE CRATE TIBERIUM TIBERIUM_FIELD CAN_TOPPLE SIMPLE_OBJECT_PROP OPTIMIZED_PROP WALL_HUB WALL_SEGMENT">
+			<!-- Misc Structures -->
+			<ExcludeThing>SubwayNode</ExcludeThing>
+			<ExcludeThing>AlienWormHole</ExcludeThing>
+			<ExcludeThing>ABTower</ExcludeThing>				
+		</ObjectFilter>
+	</SpecialPowerTemplate>	
+
+<!-- no more sensor pods on tiberium or enemy buildings -->
+
+<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerGetInRange"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		ReloadTime="0s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="0"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus="INSIDE_GARRISON CLONED USER_PARALYZED"
+		MaxCastRange="1000000"
+		MinCastRange="0"
+		ForbiddenObjectRange="0"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateTakeTechnology"
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="False"
+		StrikeForceRejectMatchAll="False">
+		<ObjectFilter
+			Rule="NONE"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="">
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>NODFlameTank</IncludeThing>
+			<IncludeThing>NODAttackBike</IncludeThing>
+			<IncludeThing>NODStealthTank</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandFlameTank</IncludeThing>
+			<IncludeThing>BlackHandAttackBike</IncludeThing>
+			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+		</ObjectFilter>
+		<ForbiddenObjectFilter
+			Rule="UNPARSED"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+	</SpecialPowerTemplate>
+
+
+<SpecialPowerTemplate
+		id="SpecialPowerSensorPod_Targeted_Neutral"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER"
+		ReloadTime="1.5s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="0"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus=""
+		MaxCastRange="1000000"
+		MinCastRange="0"
+		ForbiddenObjectRange="0"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceSensorPod"
+		RestrictionType="UNRESTRICTED"
+		Money="-100"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="True"
+		StrikeForceRejectMatchAll="False">
+		<ObjectFilter
+			Rule="ANY"
+			Relationship="NEUTRAL"
+			Alignment="NONE"
+			Include="STRUCTURE VEHICLE"
+			Exclude="INFANTRY AIRCRAFT HORDE TIBERIUM"
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+		<ForbiddenObjectFilter
+			id="9B29A27D"
+			Rule="NONE"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+	</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+		id="SpecialPowerSensorPod_Targeted"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER"
+		ReloadTime="1.5s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="0"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus=""
+		MaxCastRange="1000000"
+		MinCastRange="0"
+		ForbiddenObjectRange="0"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceSensorPod"
+		RestrictionType="UNRESTRICTED"
+		Money="-100"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="True"
+		StrikeForceRejectMatchAll="False">
+		<ObjectFilter
+			Rule="ANY"
+			Relationship="ENEMIES"
+			Alignment="NONE"
+			Include="STRUCTURE VEHICLE"
+			Exclude="INFANTRY AIRCRAFT HORDE TIBERIUM"
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+		<ForbiddenObjectFilter
+			id="9460B9CB"
+			Rule="NONE"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+	</SpecialPowerTemplate>
+
+<!-- AVATAR FIX -->
+
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarInvisibility"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="USER_PARALYZED"
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		TargetType="OBJECT">
+		<ObjectFilter>
+			<IncludeThing>NODStealthTank</IncludeThing>
+			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarStealthDetect"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="USER_PARALYZED"
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		TargetType="OBJECT">
+		<ObjectFilter>
+			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+			<IncludeThing>NODAttackBike</IncludeThing>
+			<IncludeThing>BlackHandAttackBike</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarFlamer"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="USER_PARALYZED"
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		TargetType="OBJECT">
+		<ObjectFilter>
+			<IncludeThing>NODFlameTank</IncludeThing>
+			<IncludeThing>BlackHandFlameTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarBeamCannon"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="USER_PARALYZED"
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		TargetType="OBJECT">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+	<!--Avatar Commandeer Paralyze Templates-->
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerParalyzeBeamCannon"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerParalyzeBike"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		<ObjectFilter>
+			<IncludeThing>NODAttackBike</IncludeThing>
+			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+			<IncludeThing>BlackHandAttackBike</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerParalyzeStealthTank"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		<ObjectFilter>
+			<IncludeThing>NODStealthTank</IncludeThing>
+			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerParalyzeFlameTank"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		<ObjectFilter>
+			<IncludeThing>NODFlameTank</IncludeThing>
+			<IncludeThing>BlackHandFlameTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerGetInRangeBeam"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		WaypointModeTerminal="false">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerGetInRangeFlame"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		WaypointModeTerminal="false">
+		<ObjectFilter>
+			<IncludeThing>NODFlameTank</IncludeThing>
+			<IncludeThing>BlackHandFlameTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerGetInRangeBike"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		WaypointModeTerminal="false">
+		<ObjectFilter>
+			<IncludeThing>NODAttackBike</IncludeThing>
+			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+			<IncludeThing>BlackHandAttackBike</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerGetInRangeStealth"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		WaypointModeTerminal="false">
+		<ObjectFilter>
+			<IncludeThing>NODStealthTank</IncludeThing>
+			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerDestroyBeamCannon"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerDestroyBike"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter>
+			<IncludeThing>NODAttackBike</IncludeThing>
+			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+			<IncludeThing>BlackHandAttackBike</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerDestroyStealthTank"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter>
+			<IncludeThing>NODStealthTank</IncludeThing>
+			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerDestroyFlameTank"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter>
+			<IncludeThing>NODFlameTank</IncludeThing>
+			<IncludeThing>BlackHandFlameTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+<!--
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerGetInRangeBeam"
+	TargetType="OBJECT"
+	Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetModelStates="DYING RUBBLE PARALYZED"
+	DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+	WaypointModeTerminal="false">
+	<ObjectFilter>
+		<IncludeThing>NODBeamCannon</IncludeThing>
+		<IncludeThing>BlackHandBeamCannon</IncludeThing>
+		<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerDestroyBeamCannon"
+		TargetType="OBJECT"
+		DisallowedTargetModelStates="DYING RUBBLE MOVING"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="DESTROYED">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerParalyzeBeamCannon"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		DisallowedTargetModelStates="DYING RUBBLE PARALYZED"
+		Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerGetInRangeFlame"
+	TargetType="OBJECT"
+	Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetModelStates="DYING RUBBLE PARALYZED"
+	DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+	WaypointModeTerminal="false">
+	<ObjectFilter>
+		<IncludeThing>NODFlameTank</IncludeThing>
+		<IncludeThing>BlackHandFlameTank</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+	
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerDestroyFlameTank"
+	TargetType="OBJECT"
+	DisallowedTargetModelStates="DYING RUBBLE MOVING"
+	MaxCastRange="100"
+	Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetObjectStatus="DESTROYED">
+	<ObjectFilter>
+		<IncludeThing>NODFlameTank</IncludeThing>
+		<IncludeThing>BlackHandFlameTank</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+	
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerParalyzeFlameTank"
+	TargetType="OBJECT"
+	MaxCastRange="100"
+	DisallowedTargetModelStates="DYING RUBBLE MOVING PARALYZED"
+	Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED">
+	<ObjectFilter>
+		<IncludeThing>NODFlameTank</IncludeThing>
+		<IncludeThing>BlackHandFlameTank</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerGetInRangeBike"
+	TargetType="OBJECT"
+	Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetModelStates="DYING RUBBLE PARALYZED"
+	DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+	WaypointModeTerminal="false">
+	<ObjectFilter>
+		<IncludeThing>NODAttackBike</IncludeThing>
+		<IncludeThing>BlackHandAttackBike</IncludeThing>
+		<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerDestroyBike"
+	TargetType="OBJECT"
+	DisallowedTargetModelStates="DYING RUBBLE MOVING"
+	MaxCastRange="100"
+	Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetObjectStatus="DESTROYED">
+	<ObjectFilter>
+		<IncludeThing>NODAttackBike</IncludeThing>
+		<IncludeThing>BlackHandAttackBike</IncludeThing>
+		<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerParalyzeBike"
+	TargetType="OBJECT"
+	MaxCastRange="100"
+	DisallowedTargetModelStates="DYING RUBBLE MOVING PARALYZED"
+	Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED">
+	<ObjectFilter>
+		<IncludeThing>NODAttackBike</IncludeThing>
+		<IncludeThing>BlackHandAttackBike</IncludeThing>
+		<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+
+
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerGetInRangeStealth"
+	TargetType="OBJECT"
+	Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetModelStates="DYING RUBBLE PARALYZED"
+	DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+	WaypointModeTerminal="false">
+	<ObjectFilter>
+		<IncludeThing>NODStealthTank</IncludeThing>
+		<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerDestroyStealthTank"
+	TargetType="OBJECT"
+	DisallowedTargetModelStates="DYING RUBBLE MOVING"
+	MaxCastRange="100"
+	Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetObjectStatus="DESTROYED">
+	<ObjectFilter>
+		<IncludeThing>NODStealthTank</IncludeThing>
+		<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+
+<SpecialPowerTemplate
+	id="SpecialPower_AvatarCommandeerParalyzeStealthTank"
+	TargetType="OBJECT"
+	MaxCastRange="100"
+	DisallowedTargetModelStates="DYING RUBBLE MOVING PARALYZED"
+	Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
+	DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED">
+	<ObjectFilter>
+		<IncludeThing>NODStealthTank</IncludeThing>
+		<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+	</ObjectFilter>
+	<GameDependency>
+		<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+	</GameDependency>
+</SpecialPowerTemplate>
+-->
+
+<!-- END OF AVATAR FIX -->
+
+<!-- NUKE NO COOLDOWN -->
+<!--
+<SpecialPowerTemplate
+		id="SpecialPowerNuclearMissile"
+		DisplayName="NAME:SuperweaponTimerNuclearMissile"
+		Description="DESC:SuperweaponTimerNuclearMissile"
+		Flags="HAS_PUBLIC_TIMER IS_PLAYER_POWER FOGGED_SHROUDED_CELLS_OK WATER_OK IGNORE_MAP_EXTENTS SHARED_SYNC"
+		ReloadTime="0s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="300"
+		RestrictionType="1"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		EvaEventToPlayOnInitiateOwner="OwnNuclearMissileLaunched"
+		EvaEventToPlayOnInitiateAlly="AlliedNuclearMissileLaunched"
+		EvaEventToPlayOnInitiateEnemy="EnemyNuclearMissileLaunched"
+		TimerImage="Button_PlayerPowerNuclearMissile" />
+-->
+<!-- END OF NUKE NO COOLDOWN -->
+
+<SpecialPowerTemplate
+		id="SpecialPowerLaunchCatalystMissile"
+		Flags="IS_PLAYER_POWER WATER_OK SHARED_SYNC"
+		RadiusCursorRadius="120"
+		ReloadTime="300s"
+		TargetType="LOCATION"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		Money="-2000"/>
+
+<SpecialPowerTemplate
+		id="SpecialPower_ReflectorAttack"
+		Flags="LIMIT_DISTANCE FIND_REACHABLE_TARGETS NEEDS_OBJECT_FILTER"
+		TargetType="OBJECT"
+		MinCastRange="100"
+		MaxCastRange="50000"
+		WaypointModeTerminal="false"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateReflectorAttackHighlight"
+		ReachableTargetsCircleDisplayRadius="500">
+		<ObjectFilter
+			Relationship="ENEMIES NEUTRAL"
+			RejectModelCondition="USER_68"
+			Rule="ALL" />
+		<GameDependency>
+			<ObjectFilter
+				Rule="ANY"
+				Relationship="ALLIES">
+				<IncludeThing>NODVenom</IncludeThing>
+				<IncludeThing>MarkedOfKaneVenom</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+	</SpecialPowerTemplate>
+<SpecialPowerTemplate
+		id="SpecialPower_SonicRepulsionField"
+		TargetType="OBJECT"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		Flags="NEEDS_OBJECT_FILTER IS_PLAYER_POWER NOT_CLIFF_CELL SHARED_SYNC NO_FORBIDDEN_MODEL_STATES"
+		ReloadTime="15s"
+		DisallowedTargetModelStates="USER_6"
+		Money="-500">
+		<ObjectFilter
+			Relationship="SAME_PLAYER"
+			Rule="ANY"
+			RejectModelCondition="DAMAGED REALLYDAMAGED">
+			<IncludeThing>GDIAirTower</IncludeThing>
+			<IncludeThing>GDIArmory</IncludeThing>
+			<IncludeThing>GDIBarracks</IncludeThing>
+			<IncludeThing>GDICommandPost</IncludeThing>
+			<IncludeThing>GDIConstructionYard</IncludeThing>
+			<IncludeThing>GDICrane</IncludeThing>
+			<IncludeThing>GDIIonCannonControl</IncludeThing>
+			<IncludeThing>GDIMedicalBay</IncludeThing>
+			<IncludeThing>GDIRefinery</IncludeThing>
+			<IncludeThing>GDISpaceCommandUplink</IncludeThing>
+			<IncludeThing>GDIWarFactory</IncludeThing>
+			<IncludeThing>MG_GDI_ReclamatorHub</IncludeThing>
+
+			<IncludeThing>ZOCOMAirTower</IncludeThing>
+			<IncludeThing>ZOCOMArmory</IncludeThing>
+			<IncludeThing>ZOCOMBarracks</IncludeThing>
+			<IncludeThing>ZOCOMCommandPost</IncludeThing>
+			<IncludeThing>ZOCOMConstructionYard</IncludeThing>
+			<IncludeThing>ZOCOMCrane</IncludeThing>
+			<IncludeThing>ZOCOMIonCannonControl</IncludeThing>
+			<IncludeThing>ZOCOMMedicalBay</IncludeThing>
+			<IncludeThing>ZOCOMRefinery</IncludeThing>
+			<IncludeThing>ZOCOMSpaceCommandUplink</IncludeThing>
+			<IncludeThing>ZOCOMWarFactory</IncludeThing>
+			<IncludeThing>MG_ZOCOM_ReclamatorHub</IncludeThing>
+
+			<IncludeThing>SteelTalonsAirTower</IncludeThing>
+			<IncludeThing>SteelTalonsTechCenter</IncludeThing>
+			<IncludeThing>SteelTalonsBarracks</IncludeThing>
+			<IncludeThing>SteelTalonsCommandPost</IncludeThing>
+			<IncludeThing>SteelTalonsConstructionYard</IncludeThing>
+			<IncludeThing>SteelTalonsCrane</IncludeThing>
+			<IncludeThing>SteelTalonsIonCannonControl</IncludeThing>
+			<IncludeThing>SteelTalonsRefinery</IncludeThing>
+			<IncludeThing>SteelTalonsSpaceCommandUplink</IncludeThing>
+			<IncludeThing>SteelTalonsWarFactory</IncludeThing>
+			<IncludeThing>MG_SteelTalons_ReclamatorHub</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_LaserFencing"
+		TargetType="OBJECT"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		Flags="NEEDS_OBJECT_FILTER IS_PLAYER_POWER NOT_CLIFF_CELL SHARED_SYNC NO_FORBIDDEN_MODEL_STATES"
+		ReloadTime="15s"
+		DisallowedTargetModelStates="USER_6"
+		Money="-500">
+		<ObjectFilter
+			Relationship="SAME_PLAYER"
+			Rule="ANY"
+			RejectModelCondition="DAMAGED REALLYDAMAGED">
+			<IncludeThing>MG_NOD_WarmechFacility</IncludeThing>
+			<IncludeThing>NODConstructionYard</IncludeThing>
+			<IncludeThing>NODCrane</IncludeThing>
+			<IncludeThing>NODDropZone</IncludeThing>
+			<IncludeThing>NODHandOfNOD</IncludeThing>
+			<IncludeThing>NODHangar</IncludeThing>
+			<IncludeThing>NODOperationsCenter</IncludeThing>
+			<IncludeThing>NODRefinery</IncludeThing>
+			<IncludeThing>NODSecretShrine</IncludeThing>
+			<IncludeThing>NODTechAssemblyPlant</IncludeThing>
+			<IncludeThing>NODTempleOfNOD</IncludeThing>
+			<IncludeThing>NODTiberiumLiquidationFacility</IncludeThing>
+
+			<IncludeThing>MG_BlackHand_WarmechFacility</IncludeThing>
+			<IncludeThing>BlackHandConstructionYard</IncludeThing>
+			<IncludeThing>BlackHandCrane</IncludeThing>
+			<IncludeThing>BlackHandDropZone</IncludeThing>
+			<IncludeThing>BlackHandHandOfNOD</IncludeThing>
+			<IncludeThing>BlackHandHangar</IncludeThing>
+			<IncludeThing>BlackHandOperationsCenter</IncludeThing>
+			<IncludeThing>BlackHandRefinery</IncludeThing>
+			<IncludeThing>BlackHandSecretShrine</IncludeThing>
+			<IncludeThing>BlackHandTechAssemblyPlant</IncludeThing>
+			<IncludeThing>BlackHandTempleOfNOD</IncludeThing>
+			<IncludeThing>BlackHandDecoyTempleOfNOD</IncludeThing>
+			<IncludeThing>BlackHandTiberiumLiquidationFacility</IncludeThing>
+
+			<IncludeThing>MG_MarkedOfKane_WarmechFacility</IncludeThing>
+			<IncludeThing>MarkedOfKaneConstructionYard</IncludeThing>
+			<IncludeThing>MarkedOfKaneCrane</IncludeThing>
+			<IncludeThing>MarkedOfKaneDropZone</IncludeThing>
+			<IncludeThing>MarkedOfKaneHandOfNOD</IncludeThing>
+			<IncludeThing>MarkedOfKaneHangar</IncludeThing>
+			<IncludeThing>MarkedOfKaneOperationsCenter</IncludeThing>
+			<IncludeThing>MarkedOfKaneRefinery</IncludeThing>
+			<IncludeThing>MarkedOfKaneSecretShrine</IncludeThing>
+			<IncludeThing>MarkedOfKaneTechAssemblyPlant</IncludeThing>
+			<IncludeThing>MarkedOfKaneTempleOfNOD</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumLiquidationFacility</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_PowerSignatureScan"
+		Flags="IS_PLAYER_POWER WATER_OK SHARED_SYNC"
+		TargetType="NONE"
+		InitiateSound="AudioEvent:NOD_PowerSignatureScan"
+		ReloadTime="45s"
+		Money="0" />
+		
+	<!-- blink cooldown reduced from 30s to 15s -->	
+		
+	<SpecialPowerTemplate
+		id="SpecialPower_UseBlinkPack"
+		TargetType="LOCATION"
+		InitiateSound="AudioEvent:ALI_ShockTrooper_Blink"
+		WaypointModeTerminal="false"
+		RadiusCursorRadius="16"
+		ForbiddenObjectRange="16"
+		Flags="PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		ReloadTime="15s">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE CRUSHABLE_OBSTACLE VEHICLE" />
+		<GameDependency>
+			<NeededUpgrade>Upgrade_AlienShockTrooperBlinkPack</NeededUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+	<!-- Traveler-59 blink cooldown normalized to the other Scrin factions -->
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_UseTraveler59BlinkPack"
+		TargetType="LOCATION"
+		InitiateSound="AudioEvent:ALI_ShockTrooper_Blink"
+		WaypointModeTerminal="false"
+		RadiusCursorRadius="16"
+		ForbiddenObjectRange="16"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="BlinkPack"
+		Flags="PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		ReloadTime="15s">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE CRUSHABLE_OBSTACLE VEHICLE" />
+	</SpecialPowerTemplate>
+	
+	<!-- supersonic airstrike cost increased to 2500$ -->
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_SupersonicAirAttack"
+		Flags="IS_PLAYER_POWER WATER_OK IGNORE_MAP_EXTENTS SHARED_SYNC"
+		ReloadTime="300s"
+		RadiusCursorRadius="200"
+		TargetType="LOCATION"
+		InitiateAtLocationSound="Multisound:GDI_SupersonicAirStrike_FlyByMS"
+		Money="-2500"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"  >
+	</SpecialPowerTemplate>
+	
+	<!-- tib agitation -->
+	<!--
+	<SpecialPowerTemplate
+		id="TiberiumAgitationGetInRange"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceTiberiumAgitation"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="DOES_CONTAIN_TIBERIUM"
+		DisallowedTargetModelStates="INVISIBLE_STEALTH USER_16"
+		ReloadTime="45s"
+		PreventConditions="AIRBORNE_TARGET IGNORE_AI_COMMAND">
+		<ObjectFilter
+			Rule="ANY"
+			Exclude="UNATTACKABLE"
+			Include="FS_MONEY_STORAGE TIBERIUM_BASED"
+			Relationship="ENEMIES NEUTRAL ALLIES">
+			<IncludeThing>NODRefinery</IncludeThing>
+			<IncludeThing>BlackHandRefinery</IncludeThing>
+			<IncludeThing>MarkedOfKaneRefinery</IncludeThing>
+			<IncludeThing>GDIRefinery</IncludeThing>
+			<IncludeThing>SteelTalonsRefinery</IncludeThing>
+			<IncludeThing>ZOCOMRefinery</IncludeThing>
+			<IncludeThing>AlienTiberiumTower</IncludeThing>
+			<IncludeThing>Traveler59TiberiumTower</IncludeThing>
+			<IncludeThing>Reaper17TiberiumTower</IncludeThing>
+			<IncludeThing>GDITiberiumSilo</IncludeThing>
+			<IncludeThing>SteelTalonsTiberiumSilo</IncludeThing>
+			<IncludeThing>ZOCOMTiberiumSilo</IncludeThing>
+			<IncludeThing>NodTiberiumSilo</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumSilo</IncludeThing>
+			<IncludeThing>BlackHandTiberiumSilo</IncludeThing>
+			<IncludeThing>TiberiumSpike</IncludeThing>
+			<IncludeThing>TiberiumSilo</IncludeThing>
+			<IncludeThing>NODHarvester</IncludeThing>
+			<IncludeThing>BlackHandHarvester</IncludeThing>
+			<IncludeThing>MarkedOfKaneHarvester</IncludeThing>
+			<IncludeThing>GDIHarvester</IncludeThing>
+			<IncludeThing>SteelTalonsHeavyHarvester</IncludeThing>
+			<IncludeThing>ZOCOMHarvester</IncludeThing>
+			<IncludeThing>AlienHarvester</IncludeThing>
+			<IncludeThing>Traveler59Harvester</IncludeThing>
+			<IncludeThing>Reaper17Harvester</IncludeThing>
+			<IncludeThing>AlienSporePod</IncludeThing>
+			<IncludeThing>Traveler59SporePod</IncludeThing>
+			<IncludeThing>Reaper17GrowthStimulator</IncludeThing>
+			<IncludeThing>AlienDevourerTank</IncludeThing>
+			<IncludeThing>Reaper17DevourerTank</IncludeThing>
+			<IncludeThing>Reaper17AnnihilatorTripod</IncludeThing>
+			<IncludeThing>AlienCorrupter</IncludeThing>
+			<IncludeThing>Reaper17Corrupter</IncludeThing>
+			<IncludeThing>Traveler59Corrupter</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumTrooperSquad</IncludeThing>
+			<IncludeThing>MarkedOfKaneTiberiumTrooper</IncludeThing>
+			<IncludeThing>NodPowerPlant</IncludeThing>
+			<IncludeThing>BlackHandPowerPlant</IncludeThing>
+			<IncludeThing>MarkedOfKanePowerPlant</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	-->
+	<!-- check for emp state when teleporting -->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObject"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		Flags="LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999999"
+		ForbiddenObjectRange="25"
+		WaypointModeTerminal="false"
+		DisallowedTargetObjectStatus="POWERED_DOWN_EMP">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE" />
+	</SpecialPowerTemplate>
+	-->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObject"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		Flags="LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999999"
+		ForbiddenObjectRange="25"
+		WaypointModeTerminal="false"
+		DisallowedTargetObjectStatus="INSIDE_GARRISON AIRBORNE_TARGET OUT_OF_PHASE POWERED_DOWN_EMP">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE" />
+	</SpecialPowerTemplate>
+	-->
+	<!-- this works -->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObject"
+		TargetType="LOCATION"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL"
+		ReloadTime="20s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="50"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus="INSIDE_GARRISON AIRBORNE_TARGET OUT_OF_PHASE POWERED_DOWN_EMP TARGET_NEEDS_OBJECT_STATUS"
+		MaxCastRange="9999999"
+		MinCastRange="0"
+		ForbiddenObjectRange="50"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="False"
+		StrikeForceRejectMatchAll="False">
+			<ObjectFilter
+				Rule="ANY"
+				Relationship="ALLIES"
+				Alignment="NONE"
+				Include="VEHICLES INFANTRY"
+				Exclude="AIRCRAFT SUMMONED"
+				StatusBitFlags=""
+				RejectStatusBitFlags=""
+				AcceptModelCondition=""
+				RejectModelCondition="">
+				<ExcludeThing>AlienEradicatorHexapod</ExcludeThing>
+				<ExcludeThing>Traveler59EradicatorHexapod</ExcludeThing>
+				<ExcludeThing>Reaper17EradicatorHexapod</ExcludeThing>
+			</ObjectFilter>
+	</SpecialPowerTemplate>
+	-->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObjectSelectHex"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999997"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE IGNORE_SELF_IN_NEEDED_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="TeleportObject"
+		WaypointModeTerminal="false"
+		DisallowedTargetObjectStatus="INSIDE_GARRISON AIRBORNE_TARGET OUT_OF_PHASE POWERED_DOWN_EMP">
+		<ObjectFilter
+				Rule="ANY"
+				Relationship="ALLIES"
+				Alignment="NONE"
+				Include=""
+				Exclude=""
+				StatusBitFlags=""
+				RejectStatusBitFlags=""
+				AcceptModelCondition=""
+				RejectModelCondition="">
+				<IncludeThing>AlienEradicatorHexapod</IncludeThing>
+				<IncludeThing>Traveler59EradicatorHexapod</IncludeThing>
+				<IncludeThing>Reaper17EradicatorHexapod</IncludeThing>
+			</ObjectFilter>
+	</SpecialPowerTemplate>
+	-->
+	
+	<!-- emp exploit fix -->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObjectSelect"
+		ReloadTime="0s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999997"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE IGNORE_SELF_IN_NEEDED_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0xCA84DAC5"
+		WaypointModeTerminal="false"
+		DisallowedTargetModelStates="LOCOMOTOR_NORMAL_UPGRADED"		
+		DisallowedTargetObjectStatus="INSIDE_GARRISON OUT_OF_PHASE POWERED_DOWN_EMP">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ANY"
+			Exclude="AIRCRAFT"
+			Include="INFANTRY VEHICLE">
+			<IncludeThing>AlienMCV</IncludeThing>
+			<IncludeThing>AlienMCVUnpacking</IncludeThing>
+			<IncludeThing>Traveler59MCV</IncludeThing>
+			<IncludeThing>Traveler59MCVUnpacking</IncludeThing>			
+			<IncludeThing>Reaper17MCV</IncludeThing>
+			<IncludeThing>Reaper17MCVUnpacking</IncludeThing>		
+			<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObject"
+		TargetType="LOCATION"
+		Flags="NO_FORBIDDEN_OBJECTS LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL"
+		ReloadTime="20s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="50"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus=""
+		MaxCastRange="9999999"
+		MinCastRange="0"
+		ForbiddenObjectRange="25"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="False"
+		StrikeForceRejectMatchAll="False">
+		<GameDependency
+			RequiredModelConditionsAny=""
+			ForbiddenModelConditions=""
+			RequiredObjectStatusAny="">
+			<ObjectFilter
+				Rule="ANY"
+				Relationship="SAME_PLAYER"
+				Alignment="NONE"
+				Include=""
+				Exclude=""
+				StatusBitFlags=""
+				RejectStatusBitFlags=""
+				AcceptModelCondition=""
+				RejectModelCondition="AFFECTED_BY_EMP">
+				<IncludeThing>AlienEradicatorHexapod</IncludeThing>
+				<IncludeThing>Traveler59EradicatorHexapod</IncludeThing>
+				<IncludeThing>Reaper17EradicatorHexapod</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Relationship=""
+			Alignment="NONE"
+			Include="STRUCTURE"
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPowerProdigyTeleportObject"
+		TargetType="LOCATION"
+		Flags="NO_FORBIDDEN_OBJECTS LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL"
+		ReloadTime="20s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="50"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus=""
+		MaxCastRange="9999999"
+		MinCastRange="0"
+		ForbiddenObjectRange="25"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="False"
+		StrikeForceRejectMatchAll="False">
+		<GameDependency
+			RequiredModelConditionsAny=""
+			ForbiddenModelConditions=""
+			RequiredObjectStatusAny="">
+			<ObjectFilter
+				Rule="ANY"
+				Relationship="SAME_PLAYER"
+				Alignment="NONE"
+				Include=""
+				Exclude=""
+				StatusBitFlags=""
+				RejectStatusBitFlags=""
+				AcceptModelCondition=""
+				RejectModelCondition="AFFECTED_BY_EMP">
+				<IncludeThing>AlienEradicatorHexapod</IncludeThing>
+				<IncludeThing>Traveler59EradicatorHexapod</IncludeThing>
+				<IncludeThing>Reaper17EradicatorHexapod</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Relationship=""
+			Alignment="NONE"
+			Include="STRUCTURE"
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+	</SpecialPowerTemplate>
+	-->
+	
+	<!-- TELE FIX -->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObject"
+		TargetType="LOCATION"
+		Flags="NO_FORBIDDEN_OBJECTS LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL"
+		ReloadTime="20s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="50"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus=""
+		MaxCastRange="9999999"
+		MinCastRange="0"
+		ForbiddenObjectRange="25"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="False"
+		StrikeForceRejectMatchAll="False">
+			<ObjectFilter
+			id="07C84FCA"
+			Rule="NONE"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Relationship=""
+			Alignment="NONE"
+			Include="STRUCTURE"
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="USER_1" />
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerProdigyTeleportObject"
+		TargetType="LOCATION"
+		Flags="NO_FORBIDDEN_OBJECTS LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL "
+		ReloadTime="20s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="50"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus=""
+		MaxCastRange="9999999"
+		MinCastRange="0"
+		ForbiddenObjectRange="25"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="False"
+		StrikeForceRejectMatchAll="False">
+		<ObjectFilter
+			id="07C84FCA"
+			Rule="NONE"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="USER_1" />
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Relationship=""
+			Alignment="NONE"
+			Include="STRUCTURE"
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+	</SpecialPowerTemplate>
+	-->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObject"
+		TargetType="LOCATION"
+		Flags="NO_FORBIDDEN_OBJECTS LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_MODEL_STATES"
+		ReloadTime="20s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="50"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus=""
+		MaxCastRange="9999999"
+		MinCastRange="0"
+		ForbiddenObjectRange="25"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="False"
+		StrikeForceRejectMatchAll="False">
+		<ObjectFilter
+			Rule="NONE"
+			Relationship="ALLIES"
+			Alignment="NONE"
+			Include="VEHICLE INFANTRY"
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="AFFECTED_BY_EMP" />
+	</SpecialPowerTemplate>
+	-->
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObjectSelect"
+		ReloadTime="0s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999997"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE IGNORE_SELF_IN_NEEDED_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="TeleportObject"
+		WaypointModeTerminal="false"
+		DisallowedTargetModelStates="LOCOMOTOR_NORMAL_UPGRADED EMOTION_DISSIDENT"		
+		DisallowedTargetObjectStatus="INSIDE_GARRISON AIRBORNE_TARGET OUT_OF_PHASE POWERED_DOWN_EMP IN_STASIS CARRYING_FLAG">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ANY"
+			Exclude="AIRCRAFT"
+			Include="INFANTRY VEHICLE">
+			<IncludeThing>AlienMCV</IncludeThing>
+			<IncludeThing>AlienMCVUnpacking</IncludeThing>
+			<IncludeThing>Traveler59MCV</IncludeThing>
+			<IncludeThing>Traveler59MCVUnpacking</IncludeThing>			
+			<IncludeThing>Reaper17MCV</IncludeThing>
+			<IncludeThing>Reaper17MCVUnpacking</IncludeThing>		
+			<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	
+<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObject"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		DisallowedTargetObjectStatus="INSIDE_GARRISON AIRBORNE_TARGET OUT_OF_PHASE POWERED_DOWN_EMP IN_STASIS"
+		Flags="LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999999"
+		ForbiddenObjectRange="25"
+		WaypointModeTerminal="false">
+		<ForbiddenObjectFilter
+			Rule="NONE"
+			Include="STRUCTURE" />
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerProdigyTeleportObject"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		DisallowedTargetObjectStatus="INSIDE_GARRISON AIRBORNE_TARGET OUT_OF_PHASE POWERED_DOWN_EMP IN_STASIS"
+		Flags="LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999999"
+		ForbiddenObjectRange="25"
+		WaypointModeTerminal="false">
+		<ForbiddenObjectFilter
+			Rule="NONE"
+			Include="STRUCTURE" />
+	</SpecialPowerTemplate>
+-->
+	
+<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerMastermindTeleportObject"
+		TargetType="LOCATION"
+		Flags="NO_FORBIDDEN_OBJECTS LIMIT_DISTANCE PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_MODEL_STATES TARGET_NEEDS_OBJECT_STATUS"
+		ReloadTime="20s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="50"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus=""
+		DisallowedTargetObjectStatus="INSIDE_GARRISON AIRBORNE_TARGET OUT_OF_PHASE POWERED_DOWN_EMP RIDER1"
+		MaxCastRange="9999999"
+		MinCastRange="0"
+		ForbiddenObjectRange="25"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="False"
+		StrikeForceRejectMatchAll="False">
+		<ObjectFilter
+			Rule="NONE"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+	</SpecialPowerTemplate>
+	-->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialPowerProdigyTeleportObjectSelect"
+		ReloadTime="0s"
+		TargetType="LOCATION"
+		RadiusCursorRadius="50"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MaxCastRange="9999997"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE IGNORE_SELF_IN_NEEDED_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="0xCA84DAC5"
+		WaypointModeTerminal="false"
+		DisallowedTargetModelStates="LOCOMOTOR_NORMAL_UPGRADED"		
+		DisallowedTargetObjectStatus="INSIDE_GARRISON OUT_OF_PHASE POWERED_DOWN_EMP">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ANY"
+			Exclude="AIRCRAFT"
+			Include="INFANTRY VEHICLE">
+			<IncludeThing>AlienMCV</IncludeThing>
+			<IncludeThing>AlienMCVUnpacking</IncludeThing>
+			<IncludeThing>Traveler59MCV</IncludeThing>
+			<IncludeThing>Traveler59MCVUnpacking</IncludeThing>			
+			<IncludeThing>Reaper17MCV</IncludeThing>
+			<IncludeThing>Reaper17MCVUnpacking</IncludeThing>		
+			<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	-->
+	<!-- Temporal Wormhole cost increased from 1200$ to 1500$ -->
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_TemporalWormhole"
+		DisplayName="SPECIALPOWER:TemporalWormhole"
+		Flags="IS_PLAYER_POWER WATER_OK SHARED_SYNC"
+		ReloadTime="360s"
+		TargetType="LOCATION"
+		InitiateAtLocationSound="AudioEvent:ALI_TemporalWormhole_Start"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RadiusCursorRadius="225"
+		Money="-1500">
+	</SpecialPowerTemplate>
+	
+	<!-- 2s delay awakened -->
+	<!--
+	<SpecialPowerTemplate
+		id="EMPBlast"
+		RadiusCursorRadius="30"
+		ReloadTime="30s"
+		Flags="TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates="USER_1"
+		DisallowedTargetObjectStatus=""
+		TargetType="LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceAttackEMP">
+	</SpecialPowerTemplate>
+	-->
+	<!--
+	<SpecialPowerTemplate
+		id="EMPBlastGetInRange"
+		TargetType="LOCATION"
+		Flags="TARGET_NEEDS_OBJECT_STATUS"
+		ReloadTime="30s"
+		InitiateSound=""
+		InitiateAtLocationSound=""
+		ViewObjectDuration="0s"
+		ViewObjectRange="0"
+		RadiusCursorRadius="50"
+		PreventConditions=""
+		RequiredConditions=""
+		DisallowedTargetModelStates=""
+		RequiredTargetObjectStatus="TOPPLED"
+		DisallowedTargetObjectStatus=""
+		MaxCastRange="1000000"
+		MinCastRange="0"
+		ForbiddenObjectRange="0"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="D6AB46C3"
+		RestrictionType="UNRESTRICTED"
+		Money="0"
+		TimerImage=""
+		ReachableTargetsCircleDisplayRadius="0"
+		MetaGameOperation="INVALID"
+		ActiveMetaGamePhases=""
+		StrikeForceRejectStatus=""
+		WaypointModeTerminal="True"
+		StrikeForceRejectMatchAll="False">
+		<ObjectFilter
+			Rule="UNPARSED"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+		<ForbiddenObjectFilter
+			Rule="UNPARSED"
+			Relationship=""
+			Alignment="NONE"
+			Include=""
+			Exclude=""
+			StatusBitFlags=""
+			RejectStatusBitFlags=""
+			AcceptModelCondition=""
+			RejectModelCondition="" />
+	</SpecialPowerTemplate>
+	-->
+	
+	<!-- commando fence fix -->
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_JumpJetPlaceSatchelCharge"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateJumpJetPlaceSatchelCharge"
+		MinCastRange="100"
+		ReloadTime="10s"
+		DisallowedTargetObjectStatus="RIDER1"
+		Flags="LIMIT_DISTANCE NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS">
+		<ObjectFilter
+			Rule="ANY"
+			Relationship="ENEMIES NEUTRAL"
+			Include="STRUCTURE"
+			Exclude="BRIDGE_SEGMENT" />
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_PlaceSatchelCharge"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiatePlaceSatchelCharge"
+		DisallowedTargetObjectStatus="RIDER1"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		WaypointModeTerminal="false">
+		<ObjectFilter
+			Rule="ANY"
+			Relationship="ALLIES ENEMIES NEUTRAL"
+			Include="STRUCTURE VALID_TARGET_FOR_C4" />
+	</SpecialPowerTemplate>
+	
+	<!-- juggernaut ability no longer works with cloned sniper team -->
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_SpotTargetBombard"
+		Flags="LIMIT_DISTANCE NEEDS_OBJECT_FILTER FIND_REACHABLE_TARGETS WATER_OK TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="CAN_SPOT_FOR_BOMBARD"
+		DisallowedTargetObjectStatus="IN_STASIS CLONED"
+		DisallowedTargetModelStates="TRANSPORT_MOVING MOVING"
+		ReloadTime="20s"
+		RadiusCursorRadius="50"
+		TargetType="LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateSpotTargetBombard"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MinCastRange="300"
+		MaxCastRange="50000"
+		ReachableTargetsCircleDisplayRadius="500">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ALL" />
+		<GameDependency>
+			<ObjectFilter
+				Relationship="ALLIES">
+				<IncludeThing>GDISniperSquad</IncludeThing>
+				<IncludeThing>ZOCOMSniperSquad</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<!-- maybe this fixes this -->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialPower_CloakingField"
+		Flags="IS_PLAYER_POWER WATER_OK SHARED_SYNC NO_FORBIDDEN_OBJECTS TARGET_NEEDS_OBJECT_STATUS"
+		ReloadTime="120s"
+		TargetType="LOCATION"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RadiusCursorRadius="100"
+		DisallowedTargetObjectStatus="ENCLOSED"
+		Money="-3000"
+		ForbiddenObjectRange="100">
+		<ForbiddenObjectFilter
+			Rule="ANY">
+			<IncludeThing>AlienCrystalShield</IncludeThing>
+		</ForbiddenObjectFilter>
+	</SpecialPowerTemplate>
+	-->
+	<!-- stratofighter not in fog change uncomment in future if needed. -->
+	<!--
+	<SpecialPowerTemplate
+		id="SpecialAbilityStratoFighter"
+		ReloadTime="20s"
+		TargetType="LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateFirehawkStratoFighter"
+		WaypointModeTerminal="false"
+		Flags="">
+		<GameDependency
+			RequiredObjectStatusAny="AIRBORNE_TARGET" />
+	</SpecialPowerTemplate>
+	-->
+</AssetDeclaration>

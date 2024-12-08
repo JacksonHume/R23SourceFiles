@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>
+		<Include source="props/nodvertigodisruptionpod.xml" type="all" />
+		<Include source="Units/NodMilitantRocketSquad.xml" type="all" />
+		<Include source="Units/NODVenom.xml" type="all" />
+		<Include source="Structures/NODDisruptionTower.xml" type="all" />
+		<Include source="props/NODVertigoDisruptionStickyPod.xml" type="all"/>
+		<!--
+
+
+			<Include source="Units/NodCyborgSquad.xml" type="all"/>
+			<Include source="Units/NodRedeemer.xml" type="all"/>
+
+			<Include source="Units/nodbeamcannon.xml" type="all"/>
+			<Include source="Units/NODHarvester.xml" type="all"/>
+			<Include source="Units/NodBunkerTruck.xml" type="all"/>
+			<Include source="Units/NodAvatar.xml" type="all"/>
+			<Include source="Structures/NODPropagandaTower.xml" type="all"/>
+
+			<Include source="props/NODShadowSquadBeacon.xml" type="all"/>
+			<Include source="Units/nodmobileartillery.xml" type="all"/>
+		
+			<Include source="Structures/NodPowerPlant.xml" type="all"/>
+	
+
+		<Include source="Units/NODScorpionBuggy.xml" type="all"/>
+		<Include source="Units/nodstealthtank.xml" type="all"/>
+		<Include source="Structures/NODTempleOfNod.xml" type="all"/> 
+		<Include source="props/nodbeamtarget.xml" type="all"/>
+		<Include source="Units/NODCyborg.xml" type="all"/>
+		<Include source="Units/NODSaboteur.xml" type="all"/>
+		<Include source="Structures/NODTiberiumSilo.xml" type="all"/>
+		<Include source="Units/nodvertigo.xml" type="all"/>	
+		<Include source="Units/nodmcv.xml" type="all"/>
+		<Include source="Units/Shadows.xml" type="all"/>
+		<Include source="Structures/NODHangar.xml" type="all"/>		
+		<Include source="Units/NODEmissary.xml" type="all"/>
+		<Include source="Structures/NODMiniMCVOutpost.xml" type="all"/>
+		<Include source="Units/NODShadowSquad.xml" type="all"/>
+		<Include source="Units/NODShadowSquad_Veteran.xml" type="all"/>
+		<Include source="Units/NODMilitantSquad.xml" type="all"/>
+		<Include source="Units/nodbeamcannon.xml" type="all"/>
+		<Include source="Units/NODFanaticSquad.xml" type="all"/>
+		<Include source="Units/NODFanatic.xml" type="all"/>
+		<Include source="Structures/NODCrane.xml" type="all"/> 		
+		<Include source="Units/NODAvatarHusk.xml" type="all"/>
+		<Include source="Units/nodattackbike.xml" type="all"/>
+
+		<Include source="Structures/NODShredderTurret.xml" type="all"/>
+
+		<Include source="props/NODVertigoBombProjectile.xml" type="all"/>
+		<Include source="Structures/nodhandofnod.xml" type="all"/>
+		<Include source="Structures/NODRef.xml" type="all"/> 
+		<Include source="Units/NODCommando.xml" type="all"/>	
+		<Include source="Units/NODConfessor.xml" type="all"/> 
+		<Include source="Units/nodmcv.xml" type="all"/>
+		<Include source="Structures/MG_NOD_WarmechFacility.xml" type="all"/>
+		<Include source="Structures/NODOperationsCenter.xml" type="all"/>
+		<Include source="Structures/NodLaserCannonHub.xml" type="all"/>
+		<Include source="Structures/NodRocketBunkerHub.xml" type="all"/>
+		<Include source="Structures/nodrocketbunkerspawn.xml" type="all"/>
+		<Include source="Structures/NodTibChemPlant.xml" type="all"/> 
+		<Include source="Structures/NodConyards.xml" type="all"/>
+		<Include source="Structures/NODDropZone.xml" type="all"/>
+		<Include source="Structures/NODTechCenter.xml" type="all"/> 
+		<Include source="Structures/NODSecretShrine.xml" type="all"/>
+		<Include source="Structures/NodShredderTurretHub.xml" type="all"/> 
+		<Include source="Structures/NodConyards.xml" type="all"/>
+-->
+	</Includes>
+
+</AssetDeclaration>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>	
+		<Include
+			source="DATA:global.xml"
+			type="reference"/>
+		<Include
+			source="DATA:static.xml"
+			type="reference"/>
+		<Include type="all" source="DATA:StaticMap.xml" />
+		
+	</Includes>
+</AssetDeclaration>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NBHANDD2_SN2" Hierarchy="NBHANDD2_SK2">
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBHANDD2_SN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD2_SN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD2_SN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD2_SN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD2_SN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD2_SN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBBARRACKBIBB" BoneIndex="1">
+			<RenderObject>
+				<Mesh>NBHANDD2_SN.GBBARRACKBIBB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BLACKDISCIPLES_GLOWS" BoneIndex="10">
+			<RenderObject>
+				<Mesh>NBSHRINE_D3SN.BLACKDISCIPLES_GLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BLACKDISCIPLESUPGRD" BoneIndex="9">
+			<RenderObject>
+				<Mesh>NBSHRINE_D3SN.BLACKDISCIPLESUPGRD</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GLOWS" BoneIndex="11">
+			<RenderObject>
+				<Mesh>NBSHRINE_D2SN.GLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="CONFUPGRD" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBSHRINE_D2SN.CONFUPGRD</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

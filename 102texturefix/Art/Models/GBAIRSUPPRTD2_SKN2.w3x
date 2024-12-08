@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBAIRSUPPRTD2_SKN2" Hierarchy="GBAIRSUPPRTD2_SKL">
+		<SubObject SubObjectID="D2_AIRPADS04CUT2B" BoneIndex="36">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.D2_AIRPADS04CUT2B</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="AIRPADS04" BoneIndex="35">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.AIRPADS04</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBJECT02" BoneIndex="34">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.OBJECT02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="PIPES6" BoneIndex="33">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.PIPES6</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="PIPES5" BoneIndex="32">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.PIPES5</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="PIPES1" BoneIndex="31">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.PIPES1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK8" BoneIndex="30">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK8</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK7" BoneIndex="29">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK7</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK2" BoneIndex="28">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK2</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="D2_TANK5" BoneIndex="27">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.D2_TANK5</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="D2_TOWERCUT1" BoneIndex="26">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.D2_TOWERCUT1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TOWER" BoneIndex="25">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TOWER</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LIGHT" BoneIndex="24">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.LIGHT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="D2_AIRPADS01CUT1" BoneIndex="23">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.D2_AIRPADS01CUT1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="AIRPADS01A" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.AIRPADS01A</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK4" BoneIndex="22">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK4</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK3CUT" BoneIndex="21">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK3CUT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK3" BoneIndex="20">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK3</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK1CUT" BoneIndex="19">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK1CUT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="D2_TANK2" BoneIndex="18">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.D2_TANK2</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK1" BoneIndex="17">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="D2_TANK2CUT" BoneIndex="16">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.D2_TANK2CUT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK4CUT" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK4CUT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="AIRPADS03" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.AIRPADS03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="AIRPADS02" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.AIRPADS02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_LIGHTS03" BoneIndex="11">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.FX_LIGHTS03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_LIGHTS02" BoneIndex="10">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.FX_LIGHTS02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_LIGHTS01" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.FX_LIGHTS01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_LIGHTS04" BoneIndex="8">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.FX_LIGHTS04</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRTD2_SKN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRTD2_SKN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRTD2_SKN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LANDINGLIGHTS03" BoneIndex="7">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.LANDINGLIGHTS03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LANDINGLIGHTS02" BoneIndex="6">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.LANDINGLIGHTS02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LANDINGLIGHTS01" BoneIndex="5">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.LANDINGLIGHTS01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRTD2_SKN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBAIRSUPPRTD2_SKN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LANDINGLIGHTS04" BoneIndex="4">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.LANDINGLIGHTS04</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FLASHINGLIGHTS" BoneIndex="3">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.FLASHINGLIGHTS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TANK6" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TANK6</Mesh>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="DISHSTAND" BoneIndex="37">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.DISHSTAND</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TOWERDISH" BoneIndex="39">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTD2_SKN.TOWERDISH</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+	</W3DContainer>
+</AssetDeclaration>

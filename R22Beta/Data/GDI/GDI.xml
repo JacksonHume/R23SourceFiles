@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>
+		<Include source="Units/GDIMARV.xml" type="all"/>
+		<!--
+		<Include source="Units/GDIZoneInf.xml" type="all"/>	
+		<Include source="Units/GDIGrenadeSoldier.xml" type="all"/>
+		<Include source="Units/GDIGrenadeSoldierEMPGrenadeProjectile.xml" type="all"/>
+		<Include source="Units/GDIOrca.xml" type="all"/>
+		<Include source="OrcaSensorStickyPods.xml" type="all"/>	
+		<Include source="Structures/GDIAirTower.xml" type="all"/>	
+		<Include source="Units/GDIAPC.xml" type="all"/>
+		<Include source="Units/GDIHammerhead.xml" type="all"/>
+		<Include source="Units/GDIAPCVeteran.xml" type="all"/>	
+		<Include source="Units/GDIGrenadeSoldierSquad.xml" type="all"/>
+		<Include source="Units/GDIJuggernaughtHusk.xml" type="all"/>	
+		<Include source="Units/GDIEngineer.xml" type="all"/>	
+		<Include source="Structures/GDIPowerPlant.xml" type="all"/>
+		<Include source="Structures/GDIRef.xml" type="all"/>
+		<Include source="Structures/GDIIonCannonControl.xml" type="all"/>
+		<Include source="Structures/GDIMiniMCVOutpost.xml" type="all"/>	
+		<Include source="Structures/GDIBattlebase.xml" type="all"/>
+		<Include source="Structures/MG_GDI_ReclamatorHub.xml" type="all"/>
+		<Include source="Structures/GDICrane.xml" type="all"/>
+		<Include source="Structures/gdimedicalbay.xml" type="all"/>		
+		<Include source="Structures/gdicommandpost.xml" type="all"/>
+		<Include source="Structures/gdiarmory.xml" type="all"/>	
+		<Include source="Structures/GDISpaceCommandUplink.xml" type="all"/>		
+		<Include source="Structures/GDIBarracks.xml" type="all"/>
+		<Include source="Structures/GDIWarfactory.xml" type="all"/>	
+		<Include source="Structures/GDIConstructionYard.xml" type="all"/>	
+		<Include source="Units/GDIMammoth.xml" type="all"/>		
+		<Include source="Props/GDIMine.xml" type="all"/>	
+		<Include source="Units/GDIHarvester.xml" type="all"/>	
+		<Include source="Units/GDIJuggernaught.xml" type="all"/>	
+		<Include source="Units/GDISurveyor.xml" type="all"/>	
+		<Include source="Units/GDIV35Ox.xml" type="all"/>			
+		<Include source="Units/GDIRig.xml" type="all"/>			
+		<Include source="Units/GDIMCV.xml" type="all"/>
+		<Include source="Units/GDICommando.xml" type="all"/>
+		<Include source="Units/GDIDigInBuilding.xml" type="all"/>	
+		<Include source="IonCannonEffect.xml" type="all"/>
+		<Include source="Units/GDIHarvester.xml" type="all"/>
+		<Include source="Units/GDIRifleSoldierVeteran.xml" type="all"/>
+		<Include source="Units/GDIMissileSoldierVeteran.xml" type="all"/>
+		<Include source="Units/GDIMissileSoldierVeteranSquad.xml" type="all"/>
+		<Include source="Units/GDIRifleSoldierVeteranSquad.xml" type="all"/>
+		<Include source="Units/GDIRifleSoldier.xml" type="all"/>		
+		<Include source="Props/gdidroppod.xml" type="all"/>
+		<Include source="Structures/GDIGolumCannon.xml" type="all"/>	
+		<Include source="Structures/GDITiberiumSilo.xml" type="all"/> 
+-->
+	</Includes>
+
+
+	<!-- old emp fix 
+	 
+			<Include source="Props/EMPWeaponObject.xml" type="all"/>
+		<Include source="Props/EMPWeaponObjectSW.xml" type="all"/>-->
+
+</AssetDeclaration>

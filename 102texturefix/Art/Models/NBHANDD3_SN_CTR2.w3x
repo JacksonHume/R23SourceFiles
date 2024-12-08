@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NBHANDD3_SN2" Hierarchy="NBHANDD3_SK2">
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD3_SN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD3_SN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD3_SN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD3_SN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHANDD3_SN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN1" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBHANDD3_SN.NEWSKIN1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBHANDD3_SN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBBARRACKBIBB" BoneIndex="1">
+			<RenderObject>
+				<Mesh>NBHANDD3_SN.GBBARRACKBIBB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BLACKDISCIPLES_GLOWS" BoneIndex="19">
+			<RenderObject>
+				<Mesh>NBSHRINE_D3SN.BLACKDISCIPLES_GLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BLACKDISCIPLESUPGRD" BoneIndex="18">
+			<RenderObject>
+				<Mesh>NBSHRINE_D3SN.BLACKDISCIPLESUPGRD</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GLOWS" BoneIndex="21">
+			<RenderObject>
+				<Mesh>NBSHRINE_D3SN.GLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="CONFUPGRD" BoneIndex="20">
+			<RenderObject>
+				<Mesh>NBSHRINE_D3SN.CONFUPGRD</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

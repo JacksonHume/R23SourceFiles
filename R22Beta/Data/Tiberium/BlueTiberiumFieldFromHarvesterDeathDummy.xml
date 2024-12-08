@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<GameObject
+		id="BlueTiberiumFieldFromHarvesterDeathDummy"
+		Side="Neutral"
+		EditorSorting="MISC_NATURAL"
+		KindOf="STRUCTURE IMMOBILE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS TIBERIUM_FIELD CAN_SEE_THROUGH_STRUCTURE"
+		EditorName="BlueTiberiumFieldFromHarvesterDeath">
+		<DisplayName>Tiberium_FieldDummy</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+		<SlowDeath
+				id="ModuleTag_Death"
+				DeathObjectStatusBits="DONT_CLEAR_FOR_BUILD"
+				SinkDelay="3s"
+				SinkRate="1.0"
+				DestructionDelay="7s">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+			</SlowDeath>
+		<!--
+			<FireWeaponUpdate
+				id="ModuleTag_KillWeapon">
+				<FireWeaponNugget
+					WeaponName="KillThisObject"
+					FireDelay="0s"
+					FireInterval="0s"
+				/>
+			</FireWeaponUpdate>
+			-->
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="1s"
+				MaxLifetime="1s" />
+			<CreateObjectDie
+				id="ModuleTag_SpawnTib"
+				CreationList="HarvesterDeathBlueTiberiumOCL">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</CreateObjectDie>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_02"
+				MaxHealth="100.0" />
+		</Body>
+		<VisionInfo
+			VisionRange="0" />
+	</GameObject>
+</AssetDeclaration>

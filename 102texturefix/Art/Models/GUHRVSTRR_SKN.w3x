@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GUHRVSTRR_SKN1" Hierarchy="GUHRVSTR_SKL">
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUHRVSTRR_SKN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSSTOP" BoneIndex="16">
+			<RenderObject>
+				<Mesh>GUHRVSTRR_SKN.TREADSSTOP</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TURRET" BoneIndex="10">
+			<RenderObject>
+				<Mesh>GUHRVSTRR_SKN.TURRET</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIB_STOP" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GUHRVSTR_SKN.TIB_STOP</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIB_STOPBLUE" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GUHRVSTR_SKN1.TIB_STOPBLUE</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

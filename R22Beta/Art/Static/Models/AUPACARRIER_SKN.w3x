@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="AUPACARRIER_SKN2" Hierarchy="AUPACARRIER_SKL2">
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TRAVENG01" BoneIndex="1">
+			<RenderObject>
+				<Mesh>AUPACARRIER_SKN.TRAVENG01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TRAVENG02" BoneIndex="1">
+			<RenderObject>
+				<Mesh>AUPACARRIER_SKN.TRAVENG02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="PAC" BoneIndex="1">
+			<RenderObject>
+				<Mesh>AUPACARRIER_SKN.PAC</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

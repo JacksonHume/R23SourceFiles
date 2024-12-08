@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBBARRACKS_D3SN2" Hierarchy="GBBARRACKS_D3SK2">
+		<SubObject SubObjectID="NEWSKIN1" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBBARRACKS_D3SN.NEWSKIN1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN2" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBBARRACKS_D3SN.NEWSKIN2</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBBARRACKBIBB" BoneIndex="2">
+			<RenderObject>
+				<Mesh>GBBARRACKS_D3SN.GBBARRACKBIBB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="LOADREF2" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBBARRACKS_SKN.LOADREF2</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+		<SubObject SubObjectID="UG_COMPOSITEARMOR" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBBARRACKS_D3SN.UG_COMPOSITEARMOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_COMPOSITEARMOR02" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBBARRACKS_D3SN.UG_COMPOSITEARMOR02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_ARMOR" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBMEDBAYD2_SKN.UG_ARMOR</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

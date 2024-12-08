@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GURFLMANUPG_SKN" Hierarchy="GURFLMAN_SKL">
+		<SubObject SubObjectID="SHOVEL" BoneIndex="24">
+			<RenderObject>
+				<Mesh>GURFLMANU_SKN.SHOVEL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RIFLEMANA" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GURFLMANU_SKN.RIFLEMANA</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BOUNDINGBOX" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GURFLMANU_SKN.BOUNDINGBOX</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RIFLEMANUPGRADE" BoneIndex="20">
+			<RenderObject>
+				<Mesh>GURFLMAN_UGTS_UGRF_SKN.RIFLEMANUPGRADE</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="B_WEAPONA_FX" BoneIndex="21">
+			<RenderObject>
+				<Mesh>GURFLMANU_SKN.B_WEAPONA_FX</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--
+	<UnitAbilityButtonTemplate
+		id="ButtonMastermindTeleport"
+		LogicCommand="Command_AlienMastermindTeleportObjects">
+		<Data>
+			<MultiplePowersTargetedSpecialPower
+				StateData="ButtonStateAbilityMastermindTeleport"
+				RadiusCursor="TargetingDecalMastermindTeleportUnits">
+				<AdditionalSpecialPowerTemplate>SpecialPowerMastermindTeleportObjectSelect</AdditionalSpecialPowerTemplate>
+				<AdditionalSpecialPowerTemplate>SpecialPowerProdigyTeleportObject</AdditionalSpecialPowerTemplate>
+				<AdditionalRadiusCursor>TargetingDecalMastermindTeleportUnits</AdditionalRadiusCursor>
+				<AdditionalRadiusCursor>TargetingDecalMastermindTeleportArea</AdditionalRadiusCursor>
+			</MultiplePowersTargetedSpecialPower>
+		</Data>
+	</UnitAbilityButtonTemplate> -->
+
+		<UnitAbilityButtonTemplate
+		id="ButtonTraveler59ProdigyTeleport"
+		LogicCommand="Command_Traveler59ProdigySelectObjectsForTeleport">
+		<Data>
+			<MultiplePowersTargetedSpecialPower
+				StateData="ButtonStateAbilityMastermindTeleport"
+				RadiusCursor="TargetingDecalMastermindTeleportUnits">
+				<AdditionalSpecialPowerTemplate>SpecialPowerMastermindTeleportObjectSelect</AdditionalSpecialPowerTemplate>
+				<AdditionalSpecialPowerTemplate>SpecialPowerMastermindTeleportObject</AdditionalSpecialPowerTemplate>
+				<AdditionalRadiusCursor>TargetingDecalMastermindTeleportUnits</AdditionalRadiusCursor>
+				<AdditionalRadiusCursor>TargetingDecalMastermindTeleportArea</AdditionalRadiusCursor>
+			</MultiplePowersTargetedSpecialPower>
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	<UnitAbilityButtonTemplate
+		id="ButtonUpgradeMoKTiberiumInfusion"
+		LogicCommand="Command_PurchaseUpgradeMoKTiberiumInfusion">
+		<Data>
+			<PlayerUpgrade
+				StateData="ButtonStateUpgradeTiberiumInfusion" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	<UnitAbilityButtonTemplate
+		id="ButtonUpgradeSTArmoryRailgunTech"
+		LogicCommand="Command_PurchaseUpgradeSTArmoryRailgunTech">
+		<Data>
+			<PlayerUpgrade
+				StateData="ButtonStateUpgradeRailGunST" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+
+</AssetDeclaration>

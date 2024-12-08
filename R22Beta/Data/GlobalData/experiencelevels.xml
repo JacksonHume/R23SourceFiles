@@ -1,0 +1,2172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- Neutral Tiberium Silo no longer will reward experience -->
+
+	<ExperienceLevelTemplate
+		id="TiberiumSiloExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>TiberiumSilo</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="100"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- Human faction Silos now reward only 100$ of experience when destroyed -->
+
+	<ExperienceLevelTemplate
+		id="BlackHandTiberiumSilo_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>BlackHandTiberiumSilo</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="MarkedOfKaneTiberiumSilo_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>MarkedOfKaneTiberiumSilo</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="NODTiberiumSilo_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>NODTiberiumSilo</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="GDITiberiumSiloExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>GDITiberiumSilo</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="60"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="ZOCOMTiberiumSiloExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>ZOCOMTiberiumSilo</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="60"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="SteelTalonsTiberiumSiloExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>SteelTalonsTiberiumSilo</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="60"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- viceroid xp -->
+
+	<ExperienceLevelTemplate
+		id="ViceroidExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<LevelUpFxList
+			FxList="FX_None"
+			BoneName="NoBone" />
+		<Target>Viceroid</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- outpost cost change -->
+
+	<!-- scrins -->
+
+	<ExperienceLevelTemplate
+		id="Traveler59ExplorerExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>Traveler59Explorer</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="Reaper17ExplorerExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>Reaper17Explorer</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="AlienExplorerExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienExplorer</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- nods -->
+
+	<ExperienceLevelTemplate
+		id="MarkedOfKaneEmissaryExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<LevelUpFxList
+			FxList="FX_None"
+			BoneName="NoBone" />
+		<Target>MarkedOfKaneEmissary</Target>
+		<Decal
+			Texture="decal_N_level1"
+			Texture2="decal_Nod_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="BlackHandEmissaryExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<LevelUpFxList
+			FxList="FX_None"
+			BoneName="NoBone" />
+		<Target>BlackHandEmissary</Target>
+		<Decal
+			Texture="decal_N_level1"
+			Texture2="decal_Nod_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="NODEmissaryExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<LevelUpFxList
+			FxList="FX_None"
+			BoneName="NoBone" />
+		<Target>NODEmissary</Target>
+		<Decal
+			Texture="decal_N_level1"
+			Texture2="decal_Nod_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- gdis -->
+
+	<ExperienceLevelTemplate
+		id="ZOCOMSurveyorExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>ZOCOMSurveyor</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="60"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="SteelTalonsSurveyorExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>SteelTalonsSurveyor</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="60"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="GDISurveyorExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>GDISurveyor</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="60"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- fanatic cost reduction -->
+
+	<ExperienceLevelTemplate
+		id="MarkedOfKaneFanaticSquadExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="120"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>MarkedOfKaneFanaticSquad</Target>
+		<Target>MarkedOfKaneFanatic</Target>
+		<Decal
+			Texture="decal_N_level1"
+			Texture2="decal_Nod_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="BlackHandFanaticSquadExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="120"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>BlackHandFanaticSquad</Target>
+		<Target>BlackHandFanatic</Target>
+		<Decal
+			Texture="decal_N_level1"
+			Texture2="decal_Nod_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="NODFanaticSquadExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="120"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>NODFanaticSquad</Target>
+		<Target>NODFanatic</Target>
+		<Decal
+			Texture="decal_N_level1"
+			Texture2="decal_Nod_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- -->
+
+	<ExperienceLevelTemplate
+		id="AlienTibHive_1"
+		RequiredExperience="1"
+		ExperienceAward="800"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienTibHive</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="100"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+
+	</ExperienceLevelTemplate>
+
+	<!-- Nuetral Units -->
+
+	<ExperienceLevelTemplate
+		id="SubwayHubExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>SubwayHub</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="220"
+			MaxRadius="250"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="SubwayNodeExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>SubwayNode</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="100"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="MutantMarauderSquadExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>MutantMarauderSquad</Target>
+		<Target>MutantMarauder</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="MutantMarauderSquadExperienceLevel_2"
+		Prerequisite="MutantMarauderSquadExperienceLevel_1"
+		RequiredExperience="1800"
+		ExperienceAward="130"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_01" />
+		<Target>MutantMarauderSquad</Target>
+		<Target>MutantMarauder</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="MutantMarauderSquadExperienceLevel_3"
+		Prerequisite="MutantMarauderSquadExperienceLevel_2"
+		RequiredExperience="3600"
+		ExperienceAward="160"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_02" />
+		<Target>MutantMarauderSquad</Target>
+		<Target>MutantMarauder</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="MutantMarauderSquadExperienceLevel_4"
+		Prerequisite="MutantMarauderSquadExperienceLevel_3"
+		RequiredExperience="5400"
+		ExperienceAward="200"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_03" />
+		<Target>MutantMarauderSquad</Target>
+		<Target>MutantMarauder</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- zocom orca cost reduced to 1300 fixed the xp from 1.02 -->
+
+	<ExperienceLevelTemplate
+		id="ZOCOMOrcaExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1300"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>ZOCOMOrca</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMOrcaExperienceLevel_2"
+		Prerequisite="ZOCOMOrcaExperienceLevel_1"
+		RequiredExperience="3900"
+		ExperienceAward="1690"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_01" />
+		<Target>ZOCOMOrca</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMOrcaExperienceLevel_3"
+		Prerequisite="ZOCOMOrcaExperienceLevel_2"
+		RequiredExperience="7800"
+		ExperienceAward="2080"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_02" />
+		<Target>ZOCOMOrca</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMOrcaExperienceLevel_4"
+		Prerequisite="ZOCOMOrcaExperienceLevel_3"
+		RequiredExperience="11700"
+		ExperienceAward="2600"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_03" />
+		<Target>ZOCOMOrca</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="ZOCOMHarvesterExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1000"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>ZOCOMHarvester</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMHarvesterExperienceLevel_2"
+		Prerequisite="ZOCOMHarvesterExperienceLevel_1"
+		RequiredExperience="3000"
+		ExperienceAward="1300"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_01" />
+		<Target>ZOCOMHarvester</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMHarvesterExperienceLevel_3"
+		Prerequisite="ZOCOMHarvesterExperienceLevel_2"
+		RequiredExperience="6000"
+		ExperienceAward="1600"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_02" />
+		<Target>ZOCOMHarvester</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMHarvesterExperienceLevel_4"
+		Prerequisite="ZOCOMHarvesterExperienceLevel_3"
+		RequiredExperience="9000"
+		ExperienceAward="1900"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_03" />
+		<Target>ZOCOMHarvester</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- refinery experience reward reduced from 2000$ to 1400$ -->
+
+	<ExperienceLevelTemplate
+		id="NODRefinery_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>NODRefinery</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="175"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="BlackHandRefinery_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>BlackHandRefinery</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="175"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="MarkedOfKaneRefinery_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>MarkedOfKaneRefinery</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="175"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="GDIRefineryExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>GDIRefinery</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="150"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="SteelTalonsRefineryExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>SteelTalonsRefinery</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="150"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="ZOCOMRefineryExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>ZOCOMRefinery</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="150"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="AlienTiberiumTower_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienTiberiumTower</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="150"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="Reaper17TiberiumTower_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>Reaper17TiberiumTower</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="150"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="Traveler59TiberiumTower_1"
+		RequiredExperience="1"
+		ExperienceAward="1400"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>Traveler59TiberiumTower</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="150"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+
+	</ExperienceLevelTemplate>
+
+	<!-- pac fighter xp adjustment -->
+
+	<ExperienceLevelTemplate
+		id="AlienInvaderFighterExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="125"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienInvaderFighter</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="AlienInvaderFighterExperienceLevel_2"
+		Prerequisite="AlienInvaderFighterExperienceLevel_1"
+		RequiredExperience="9000"
+		ExperienceAward="162"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_01" />
+		<Target>AlienInvaderFighter</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienInvaderFighterExperienceLevel_3"
+		Prerequisite="AlienInvaderFighterExperienceLevel_2"
+		RequiredExperience="18000"
+		ExperienceAward="200"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_02" />
+		<Target>AlienInvaderFighter</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienInvaderFighterExperienceLevel_4"
+		Prerequisite="AlienInvaderFighterExperienceLevel_3"
+		RequiredExperience="27000"
+		ExperienceAward="250"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_03" />
+		<Target>AlienInvaderFighter</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- pac body xp adjustment -->
+
+	<ExperienceLevelTemplate
+		id="AlienPlanetaryAssaultCarrierExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="3000"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienPlanetaryAssaultCarrier</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienPlanetaryAssaultCarrierExperienceLevel_2"
+		Prerequisite="AlienPlanetaryAssaultCarrierExperienceLevel_1"
+		RequiredExperience="9000"
+		ExperienceAward="2600"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_01" />
+		<Target>AlienPlanetaryAssaultCarrier</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienPlanetaryAssaultCarrierExperienceLevel_3"
+		Prerequisite="AlienPlanetaryAssaultCarrierExperienceLevel_2"
+		RequiredExperience="18000"
+		ExperienceAward="3200"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_02" />
+		<Target>AlienPlanetaryAssaultCarrier</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienPlanetaryAssaultCarrierExperienceLevel_4"
+		Prerequisite="AlienPlanetaryAssaultCarrierExperienceLevel_3"
+		RequiredExperience="27000"
+		ExperienceAward="4000"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_03" />
+		<Target>AlienPlanetaryAssaultCarrier</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- traveler pac -->
+
+	<ExperienceLevelTemplate
+		id="Traveler59PlanetaryAssaultCarrierExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="3000"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>Traveler59PlanetaryAssaultCarrier</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="Traveler59PlanetaryAssaultCarrierExperienceLevel_2"
+		Prerequisite="Traveler59PlanetaryAssaultCarrierExperienceLevel_1"
+		RequiredExperience="9000"
+		ExperienceAward="2600"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_01" />
+		<Target>Traveler59PlanetaryAssaultCarrier</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="Traveler59PlanetaryAssaultCarrierExperienceLevel_3"
+		Prerequisite="Traveler59PlanetaryAssaultCarrierExperienceLevel_2"
+		RequiredExperience="18000"
+		ExperienceAward="3200"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_02" />
+		<Target>Traveler59PlanetaryAssaultCarrier</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="Traveler59PlanetaryAssaultCarrierExperienceLevel_4"
+		Prerequisite="Traveler59PlanetaryAssaultCarrierExperienceLevel_3"
+		RequiredExperience="27000"
+		ExperienceAward="4000"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_03" />
+		<Target>Traveler59PlanetaryAssaultCarrier</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- v35 ox fix -->
+	<ExperienceLevelTemplate
+		id="SteelTalonsV35Ox_SummonedExperienceLevel_1"
+		Rank="1"
+		RequiredExperience="1"
+		ExperienceAward="0"
+		ExperienceAwardOwnGuysDie="0"
+		LevelUpOCL=""
+		ModelConditionState=""
+		LevelUpTintPreColorTime="0s"
+		LevelUpTintPostColorTime="0s"
+		LevelUpTintSustainColorTime="0s"
+		LevelUpTintFrequency="0"
+		LevelUpTintAmplitude="0"
+		InformUpdateModule="False"
+		SinglePlayerOnly="False"
+		MultiPlayerOnly="False"
+		ShowLevelUpTint="False">
+		<LevelUpTintColor
+			r="1"
+			g="1"
+			b="1"
+			a="0" />
+		<Target>SteelTalonsV35Ox_Summoned</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="79.99999%"
+			OpacityMax="100%"
+			OpacityThrobTime="1000"
+			RotationsPerMinute="0"
+			MaxRadius="200"
+			MinRadius="75"
+			MaxSelectedUnits="40"
+			SpiralAcceleration="0"
+			OnlyVisibleToOwningPlayer="False">
+			<Color
+				B="0"
+				G="0"
+				R="0"
+				A="0" />
+		</Decal>
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="SteelTalonsV35Ox_SummonedForVehicleExperienceLevel_1"
+		Rank="1"
+		RequiredExperience="1"
+		ExperienceAward="0"
+		ExperienceAwardOwnGuysDie="0"
+		LevelUpOCL=""
+		ModelConditionState=""
+		LevelUpTintPreColorTime="0s"
+		LevelUpTintPostColorTime="0s"
+		LevelUpTintSustainColorTime="0s"
+		LevelUpTintFrequency="0"
+		LevelUpTintAmplitude="0"
+		InformUpdateModule="False"
+		SinglePlayerOnly="False"
+		MultiPlayerOnly="False"
+		ShowLevelUpTint="False">
+		<LevelUpTintColor
+			r="1"
+			g="1"
+			b="1"
+			a="0" />
+		<Target>SteelTalonsV35Ox_SummonedForVehicle</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="79.99999%"
+			OpacityMax="100%"
+			OpacityThrobTime="1000"
+			RotationsPerMinute="0"
+			MaxRadius="200"
+			MinRadius="75"
+			MaxSelectedUnits="40"
+			SpiralAcceleration="0"
+			OnlyVisibleToOwningPlayer="False">
+			<Color
+				B="0"
+				G="0"
+				R="0"
+				A="0" />
+		</Decal>
+	</ExperienceLevelTemplate>
+
+	<!-- zocom -->
+
+	<ExperienceLevelTemplate
+		id="ZOCOMV35Ox_SummonedForVehicleExperienceLevel_1"
+		Rank="1"
+		RequiredExperience="1"
+		ExperienceAward="0"
+		ExperienceAwardOwnGuysDie="0"
+		LevelUpOCL=""
+		ModelConditionState=""
+		LevelUpTintPreColorTime="0s"
+		LevelUpTintPostColorTime="0s"
+		LevelUpTintSustainColorTime="0s"
+		LevelUpTintFrequency="0"
+		LevelUpTintAmplitude="0"
+		InformUpdateModule="False"
+		SinglePlayerOnly="False"
+		MultiPlayerOnly="False"
+		ShowLevelUpTint="False">
+		<LevelUpTintColor
+			r="1"
+			g="1"
+			b="1"
+			a="0" />
+		<Target>ZOCOMV35Ox_SummonedForVehicle</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="79.99999%"
+			OpacityMax="100%"
+			OpacityThrobTime="1000"
+			RotationsPerMinute="0"
+			MaxRadius="200"
+			MinRadius="75"
+			MaxSelectedUnits="40"
+			SpiralAcceleration="0"
+			OnlyVisibleToOwningPlayer="False">
+			<Color
+				B="0"
+				G="0"
+				R="0"
+				A="0" />
+		</Decal>
+	</ExperienceLevelTemplate>
+
+	<ExperienceLevelTemplate
+		id="ZOCOMV35Ox_SummonedExperienceLevel_1"
+		Rank="1"
+		RequiredExperience="1"
+		ExperienceAward="0"
+		ExperienceAwardOwnGuysDie="0"
+		LevelUpOCL=""
+		ModelConditionState=""
+		LevelUpTintPreColorTime="0s"
+		LevelUpTintPostColorTime="0s"
+		LevelUpTintSustainColorTime="0s"
+		LevelUpTintFrequency="0"
+		LevelUpTintAmplitude="0"
+		InformUpdateModule="False"
+		SinglePlayerOnly="False"
+		MultiPlayerOnly="False"
+		ShowLevelUpTint="False">
+		<LevelUpTintColor
+			r="1"
+			g="1"
+			b="1"
+			a="0" />
+		<Target>ZOCOMV35Ox_Summoned</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="79.99999%"
+			OpacityMax="100%"
+			OpacityThrobTime="1000"
+			RotationsPerMinute="0"
+			MaxRadius="200"
+			MinRadius="75"
+			MaxSelectedUnits="40"
+			SpiralAcceleration="0"
+			OnlyVisibleToOwningPlayer="False">
+			<Color
+				B="0"
+				G="0"
+				R="0"
+				A="0" />
+		</Decal>
+	</ExperienceLevelTemplate>
+
+	<!-- golden rifle -->
+
+	<ExperienceLevelTemplate
+		id="GDIRifleSoldierSquadExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="50"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>GDIRifleSoldierVeteran</Target>
+		<Target>GDIRifleSoldierSquad_Veteran</Target>
+		<Target>GDIRifleSoldierSquad</Target>
+		<Target>GDIRifleSoldier</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="GDIRifleSoldierSquadExperienceLevel_2"
+		Prerequisite="GDIRifleSoldierSquadExperienceLevel_1"
+		RequiredExperience="900"
+		ExperienceAward="66"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_01" />
+		<Target>GDIRifleSoldierVeteran</Target>
+		<Target>GDIRifleSoldierSquad_Veteran</Target>
+		<Target>GDIRifleSoldierSquad</Target>
+		<Target>GDIRifleSoldier</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="GDIRifleSoldierSquadExperienceLevel_3"
+		Prerequisite="GDIRifleSoldierSquadExperienceLevel_2"
+		RequiredExperience="1800"
+		ExperienceAward="84"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_02" />
+		<Target>GDIRifleSoldierVeteran</Target>
+		<Target>GDIRifleSoldierSquad_Veteran</Target>
+		<Target>GDIRifleSoldierSquad</Target>
+		<Target>GDIRifleSoldier</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="GDIRifleSoldierSquadExperienceLevel_4"
+		Prerequisite="GDIRifleSoldierSquadExperienceLevel_3"
+		RequiredExperience="2700"
+		ExperienceAward="100"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_03" />
+		<Target>GDIRifleSoldierVeteran</Target>
+		<Target>GDIRifleSoldierSquad_Veteran</Target>
+		<Target>GDIRifleSoldierSquad</Target>
+		<Target>GDIRifleSoldier</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+
+	<ExperienceLevelTemplate
+		id="GDIMissileSoldierSquadExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="200"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>GDIMissileSoldierVeteran</Target>
+		<Target>GDIMissileSoldierSquad_Veteran</Target>
+		<Target>GDIMissileSoldierSquad</Target>
+		<Target>GDIMissileSoldier</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="GDIMissileSoldierSquadExperienceLevel_2"
+		Prerequisite="GDIMissileSoldierSquadExperienceLevel_1"
+		RequiredExperience="1200"
+		ExperienceAward="260"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_01" />
+		<Target>GDIMissileSoldierVeteran</Target>
+		<Target>GDIMissileSoldierSquad_Veteran</Target>
+		<Target>GDIMissileSoldierSquad</Target>
+		<Target>GDIMissileSoldier</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="GDIMissileSoldierSquadExperienceLevel_3"
+		Prerequisite="GDIMissileSoldierSquadExperienceLevel_2"
+		RequiredExperience="2400"
+		ExperienceAward="320"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_02" />
+		<Target>GDIMissileSoldierVeteran</Target>
+		<Target>GDIMissileSoldierSquad_Veteran</Target>
+		<Target>GDIMissileSoldierSquad</Target>
+		<Target>GDIMissileSoldier</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="GDIMissileSoldierSquadExperienceLevel_4"
+		Prerequisite="GDIMissileSoldierSquadExperienceLevel_3"
+		RequiredExperience="3600"
+		ExperienceAward="400"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_03" />
+		<Target>GDIMissileSoldierVeteran</Target>
+		<Target>GDIMissileSoldierSquad_Veteran</Target>
+		<Target>GDIMissileSoldierSquad</Target>
+		<Target>GDIMissileSoldier</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+
+	<ExperienceLevelTemplate
+		id="ZOCOMRifleSoldierSquadExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="50"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>ZOCOMRifleSoldierVeteran</Target>
+		<Target>ZOCOMRifleSoldierSquad_Veteran</Target>
+		<Target>ZOCOMRifleSoldierSquad</Target>
+		<Target>ZOCOMRifleSoldier</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMRifleSoldierSquadExperienceLevel_2"
+		Prerequisite="ZOCOMRifleSoldierSquadExperienceLevel_1"
+		RequiredExperience="900"
+		ExperienceAward="66"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_01" />
+		<Target>ZOCOMRifleSoldierVeteran</Target>
+		<Target>ZOCOMRifleSoldierSquad_Veteran</Target>
+		<Target>ZOCOMRifleSoldierSquad</Target>
+		<Target>ZOCOMRifleSoldier</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMRifleSoldierSquadExperienceLevel_3"
+		Prerequisite="ZOCOMRifleSoldierSquadExperienceLevel_2"
+		RequiredExperience="1800"
+		ExperienceAward="84"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_02" />
+		<Target>ZOCOMRifleSoldierVeteran</Target>
+		<Target>ZOCOMRifleSoldierSquad_Veteran</Target>
+		<Target>ZOCOMRifleSoldierSquad</Target>
+		<Target>ZOCOMRifleSoldier</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMRifleSoldierSquadExperienceLevel_4"
+		Prerequisite="ZOCOMRifleSoldierSquadExperienceLevel_3"
+		RequiredExperience="2700"
+		ExperienceAward="100"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_03" />
+		<Target>ZOCOMRifleSoldierVeteran</Target>
+		<Target>ZOCOMRifleSoldierSquad_Veteran</Target>
+		<Target>ZOCOMRifleSoldierSquad</Target>
+		<Target>ZOCOMRifleSoldier</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+
+	<ExperienceLevelTemplate
+		id="ZOCOMMissileSoldierSquadExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="200"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>ZOCOMMissileSoldierVeteran</Target>
+		<Target>ZOCOMMissileSoldierSquad_Veteran</Target>
+		<Target>ZOCOMMissileSoldierSquad</Target>
+		<Target>ZOCOMMissileSoldier</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMMissileSoldierSquadExperienceLevel_2"
+		Prerequisite="ZOCOMMissileSoldierSquadExperienceLevel_1"
+		RequiredExperience="1200"
+		ExperienceAward="260"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_01" />
+		<Target>ZOCOMMissileSoldierVeteran</Target>
+		<Target>ZOCOMMissileSoldierSquad_Veteran</Target>
+		<Target>ZOCOMMissileSoldierSquad</Target>
+		<Target>ZOCOMMissileSoldier</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMMissileSoldierSquadExperienceLevel_3"
+		Prerequisite="ZOCOMMissileSoldierSquadExperienceLevel_2"
+		RequiredExperience="2400"
+		ExperienceAward="320"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_02" />
+		<Target>ZOCOMMissileSoldierVeteran</Target>
+		<Target>ZOCOMMissileSoldierSquad_Veteran</Target>
+		<Target>ZOCOMMissileSoldierSquad</Target>
+		<Target>ZOCOMMissileSoldier</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="ZOCOMMissileSoldierSquadExperienceLevel_4"
+		Prerequisite="ZOCOMMissileSoldierSquadExperienceLevel_3"
+		RequiredExperience="3600"
+		ExperienceAward="400"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_03" />
+		<Target>ZOCOMMissileSoldierVeteran</Target>
+		<Target>ZOCOMMissileSoldierSquad_Veteran</Target>
+		<Target>ZOCOMMissileSoldierSquad</Target>
+		<Target>ZOCOMMissileSoldier</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- mecha -->
+
+
+	<ExperienceLevelTemplate
+		id="AlienCustomizableVehicleExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1800"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienMillipedeHead</Target>
+		<Target>AlienCustomizableVehicle</Target>
+		<Target>Traveler59CustomizableVehicle</Target>
+		<Target>Reaper17CustomizableVehicle</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienCustomizableVehicleExperienceLevel_2"
+		Prerequisite="AlienCustomizableVehicleExperienceLevel_1"
+		RequiredExperience="5400"
+		ExperienceAward="2340"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_01" />
+		<Target>AlienMillipedeHead</Target>
+		<Target>AlienCustomizableVehicle</Target>
+		<Target>Traveler59CustomizableVehicle</Target>
+		<Target>Reaper17CustomizableVehicle</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienCustomizableVehicleExperienceLevel_3"
+		Prerequisite="AlienCustomizableVehicleExperienceLevel_2"
+		RequiredExperience="10800"
+		ExperienceAward="2880"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_02" />
+		<Target>AlienMillipedeHead</Target>
+		<Target>AlienCustomizableVehicle</Target>
+		<Target>Traveler59CustomizableVehicle</Target>
+		<Target>Reaper17CustomizableVehicle</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienCustomizableVehicleExperienceLevel_4"
+		Prerequisite="AlienCustomizableVehicleExperienceLevel_3"
+		RequiredExperience="16200"
+		ExperienceAward="3600"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_03" />
+		<Target>AlienMillipedeHead</Target>
+		<Target>AlienCustomizableVehicle</Target>
+		<Target>Traveler59CustomizableVehicle</Target>
+		<Target>Reaper17CustomizableVehicle</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- body -->
+
+	<ExperienceLevelTemplate
+		id="AlienMechapedeBodySegmentsExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienMillipedeBody</Target>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienMechapedeBodySegmentsExperienceLevel_2"
+		Prerequisite="AlienMechapedeBodySegmentsExperienceLevel_1"
+		RequiredExperience="5400"
+		ExperienceAward="130"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_01" />
+		<Target>AlienMillipedeBody</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienMechapedeBodySegmentsExperienceLevel_3"
+		Prerequisite="AlienMechapedeBodySegmentsExperienceLevel_2"
+		RequiredExperience="10800"
+		ExperienceAward="160"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_02" />
+		<Target>AlienMillipedeBody</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienMechapedeBodySegmentsExperienceLevel_4"
+		Prerequisite="AlienMechapedeBodySegmentsExperienceLevel_3"
+		RequiredExperience="16200"
+		ExperienceAward="200"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_AlienLevelUp_03" />
+		<Target>AlienMillipedeBody</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_A_level1"
+			Texture2="decal_Alien_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+
+</AssetDeclaration>

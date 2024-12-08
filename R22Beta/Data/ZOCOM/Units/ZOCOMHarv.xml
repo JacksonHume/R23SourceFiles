@@ -1,0 +1,1608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="ZOCOMHarvester"
+		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS HARVESTER PRELOAD SCORE ATTACK_NEEDS_LINE_OF_SIGHT IGNORES_SELECT_ALL CAN_REVERSE_MOVE VEHICLE CAN_BE_FAVORITE_UNIT PATH_THROUGH_EACH_OTHER PATH_THROUGH_INFANTRY"
+		Description="Desc:ZOCOMHarvester"
+		TypeDescription="Type:ZOCOMHarvester"
+		RadarPriority="UNIT"
+		BuildCompletion="INVALID"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="0d"
+		BuildFadeInOnCreateTimeSeconds="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="ZOCOM"
+		EditorName="ZOCOMHarvester"
+		EditorSorting="UNIT"
+		BountyValue="0"
+		BuildTime="16"
+		BuildFadeInOnCreateTime="0"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet="GDIHarvesterCommandSet"
+		SelectPortrait="Portrait_ZOCOMHarvester"
+		ButtonImage="Portrait_ZOCOMHarvester"
+		VoicePriority="28"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CrowdResponse=""
+		CampnessValue="0"
+		CampnessValueRadius="600"
+		Scale="1"
+		HealthBoxScale="1.5"
+		HealthBoxHeightOffset="10"
+		OcclusionDelay="0"
+		LiveCameraPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		ThreatRadius="-1"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="100"
+		CommandPoints="0"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="0"
+		MaxDistanceForEngaged="0"
+		EngagedStateTimeout="0"
+		ThreatLevel="10"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		DisplayMeleeDamage="-1"
+		DisplayRangedDamage="-1"
+		HeroSortOrder="2147483647"
+		FiringArc="360"
+		CamouflageDetectionMultiplier="1"
+		SelectionPriority="2147483647"
+		ProductionQueueType="VEHICLE"
+		BuildPlacementTypeFlag="INVALID"
+		BuildOnRequiredObjectKindOf=""
+		UnitCategory="VEHICLE"
+		WeaponCategory="MISSILE"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon=""
+		ReinvisibilityDelay="7s"
+		CaptureTime="0s"
+		BuildCost="1600"
+		RefundValue="0"
+		ThreatValue="0"
+		MaxSimultaneousOfType="0"
+		TransportSlotCount="1"
+		IsTrainable="True"
+		IsForbidden="False"
+		IsPrerequisite="False"
+		IsGrabbable="False"
+		IsHarvestable="False"
+		StructureRubbleHeight="0"
+		ForceLuaRegistration="False"
+		ShowHealthInSelectionDecal="False"
+		KeepSelectableWhenDead="False"
+		IsAutoBuilt="False"
+		CanPathThroughGates="True"
+		ShouldClearShotsOnIdle="False"
+		BuildInProximityToSamePlayerStucture="True">
+		<DisplayName>Name:ZOCOMHarvester</DisplayName>
+		<GameDependency
+			RequiredModelConditionsAny=""
+			ForbiddenModelConditions=""
+			RequiredObjectStatusAny="">
+			<RequiredObject>ZOCOMRefinery</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="GDIHarvesterArmor"
+			DamageFX="VehicleDamageFX"
+			Conditions="" />
+		<LocomotorSet
+			Speed="75"
+			Condition="NORMAL"
+			Locomotor="GDIHarvesterLocomotor" />
+		<Draws>
+			<TankDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				InitialRecoilSpeed="0.1"
+				MaxRecoilDistance="0.1"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="3.0"				
+				ExtraPublicBone="FXTracksL FXTracksR FXClawR FXClawL"
+				TrackMarks="EXTnkTrack"
+				TrackMarksLeftBone="FXTracksL"
+				TrackMarksRightBone="FXTracksR"				
+				TreadAnimationRate="0.15"
+				TreadDriveSpeedFraction="0.25"
+				TreadPivotSpeedFraction="0.9">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="true"
+					Skeleton="GUHrvstr_SKL">
+					<Model
+						Name="W3DContainer:GUZOCOMHARV_SKN1" />
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFlash_" />
+					<WeaponRecoilBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFlash_" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFlash_" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFlash_" />			
+					<Turret
+						TurretNameKey="TURRET"
+						TurretID="1" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					RetainSubObjects="true"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="W3DContainer:GUZOCOMHARV_SKN1" />
+					<ParticleSysBone
+						BoneName="FXTracksB"
+						FXParticleSystemTemplate="NODDamagedSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					RetainSubObjects="true"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="W3DContainer:GUZOCOMHARV_SKN1" />	
+					<Texture
+						Original="GUZocomHarv"
+						New="GUZocomHarvD" />
+					<Texture
+						Original="HC_GUZocomHarv"
+						New="HC_GUZocomHarvD" />											
+					<ParticleSysBone
+						BoneName="FXTracksB"
+						FXParticleSystemTemplate="NODDamagedSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="W3DContainer:GUZocomHarvR_SKN1" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>	
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="W3DMesh:GUZOCOMHARV_FP" />
+				</ModelConditionState>	
+				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Animation
+						AnimNickName="IDL"
+						AnimationName="GUHrvstr_IDLA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_PREPARATION">
+					<Animation
+						AnimNickName="PREP"
+						AnimationName="GUHrvstr_PREP"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_ACTION">
+					<Animation
+						AnimNickName="HARVEST"
+						AnimationName="GUHrvstr_HARV"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT">
+					<Animation
+						AnimNickName="MOV"
+						AnimationName="GUHrvstr_IDLA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT">
+					<Animation
+						AnimNickName="MOV"
+						AnimationName="GUHrvstr_IDLA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Animation
+						AnimNickName="MOV"
+						AnimationName="GUHrvstr_IDLA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+			</TankDraw>
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_FX"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Script>
+						CurDrawableShowSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableHideSubObject("Tib_StopBlue")
+						CurDrawableShowSubObject("Tib_Stop")
+					</Script>
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_PREPARATION USER_26">
+					<Script>
+						CurDrawableShowSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableShowSubObject("Tib_StopBlue")
+						CurDrawableHideSubObject("Tib_Stop")
+					</Script>
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_PREPARATION">
+					<Script>
+						CurDrawableShowSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableHideSubObject("Tib_StopBlue")
+						CurDrawableShowSubObject("Tib_Stop")
+					</Script>
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_ACTION USER_26">
+					<Script>
+						CurDrawableShowSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableShowSubObject("TibBlue")
+						CurDrawableHideSubObject("Tib_StopBlue")
+						CurDrawableHideSubObject("Tib_Stop")
+					</Script>	
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="HarvesterDustBlue"
+						FollowBone="true" />
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_ACTION">
+					<Script>
+						CurDrawableShowSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableShowSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableHideSubObject("Tib_StopBlue")
+						CurDrawableHideSubObject("Tib_Stop")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="HarvesterDust"
+						FollowBone="true" />
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT USER_26">
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableShowSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableShowSubObject("Tib_StopBlue")
+						CurDrawableHideSubObject("Tib_Stop")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="HarvesterDustBlue"
+						FollowBone="true" />
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT">
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableShowSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableHideSubObject("Tib_StopBlue")
+						CurDrawableShowSubObject("Tib_Stop")
+					</Script>
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT USER_26">
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableShowSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableShowSubObject("Tib_StopBlue")
+						CurDrawableHideSubObject("Tib_Stop")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="HarvesterDustBlue"
+						FollowBone="true" />
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT">
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableShowSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableHideSubObject("Tib_StopBlue")
+						CurDrawableShowSubObject("Tib_Stop")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="HarvesterDust"
+						FollowBone="true" />
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING USER_26">
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableShowSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableShowSubObject("Tib_StopBlue")
+						CurDrawableHideSubObject("Tib_Stop")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="HarvesterDustBlue"
+						FollowBone="true" />
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableShowSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableHideSubObject("Tib_StopBlue")
+						CurDrawableShowSubObject("Tib_Stop")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="HarvesterDust"
+						FollowBone="true" />
+				</AnimationState>
+							
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_26">
+					<Script>
+						CurDrawableShowSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableShowSubObject("Tib_StopBlue")
+						CurDrawableHideSubObject("Tib_Stop")
+					</Script>
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Script>
+						CurDrawableShowSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableHideSubObject("Tib_StopBlue")
+						CurDrawableShowSubObject("Tib_Stop")
+					</Script>
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_26">
+					<Script>
+						CurDrawableShowSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+						CurDrawableHideSubObject("Tib")
+						CurDrawableHideSubObject("TibBlue")
+						CurDrawableShowSubObject("Tib_StopBlue")
+						CurDrawableHideSubObject("Tib_Stop")
+					</Script>
+				</AnimationState>
+			</ScriptedModelDraw>
+			
+			<!-- harvester rocks -->
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_FXLeft"
+				OkToChangeModelColor="true"
+				AttachToBoneInAnotherModule="FXClawL">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:FXINVISBONE" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_ACTION USER_26">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="HarvesterRocksBlue"
+						FollowBone="true" />
+				</AnimationState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_ACTION">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="HarvesterRocks"
+						FollowBone="true" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_FXRight"
+				OkToChangeModelColor="true"
+				AttachToBoneInAnotherModule="FXClawR">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:FXINVISBONE" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_ACTION USER_26">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="HarvesterRocksBlue"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="HARVEST_ACTION">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="HarvesterRocks"
+						FollowBone="true" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			
+			<!-- end harvester rocks -->
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_TIB1"
+				OkToChangeModelColor="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_16">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB1" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />		
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_16">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB1" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />	
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_16">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_20">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB1" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_20">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB1" />	
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_20">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_16">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB1" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />	
+				</ModelConditionState>	
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_20">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB1" />
+				</ModelConditionState>	
+				
+			</ScriptedModelDraw>
+			
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_TIB2"
+				OkToChangeModelColor="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_17">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB2" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />	
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_17">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB2" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />		
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_17">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_21">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB2" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_21">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB2" />	
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_21">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_17">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB2" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />			
+				</ModelConditionState>	
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_21">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB2" />		
+				</ModelConditionState>
+				
+			</ScriptedModelDraw>
+			
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_TIB3"
+				OkToChangeModelColor="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_18">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB3" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />	
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_18">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB3" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />		
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_18">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_22">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_22">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB3" />	
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_22">
+					<Model
+						Name="" />
+				</ModelConditionState>
+			
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_18">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB3" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />		
+				</ModelConditionState>	
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_22">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB3" />		
+				</ModelConditionState>
+				
+			</ScriptedModelDraw>
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_TIB4"
+				OkToChangeModelColor="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_19">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB4" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />	
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_19">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB4" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />		
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_19">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_23">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB4" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_23">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB4" />	
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_23">
+					<Model
+						Name="" />
+				</ModelConditionState>
+	
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_19">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB4" />
+					<Texture
+						Original="GBRefinery"
+						New="GBRefineryBlue" />			
+				</ModelConditionState>	
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_23">
+					<Model
+						Name="W3DContainer:GUHrvstr_TIB4" />		
+				</ModelConditionState>					
+			</ScriptedModelDraw>
+	<!--
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDraw"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.2"
+				MaxTracersPerFrame="0.3"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDI">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDrawVeterancy"
+				MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30"
+				MaxSpeed="30"
+				SweepSpeed="1.0"
+				SpreadAngle="2.0"
+				MinTracersPerFrame="0.5"
+				MaxTracersPerFrame="0.5"
+				FrameLifeTime="35"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIHeroic">
+				<HeadColor
+					r="1.0"
+					g="0.0"
+					b="0.0"
+					a="1.0" />
+				<TailColor
+					r="0.0"
+					g="0.0"
+					b="0.0"
+					a="0.0" />
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>	
+-->			
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate
+				id="788FFB50" />
+			<SquishCollide
+				id="1B48BDA6"
+				CrushAnimTime="1s"
+				CrushKillDelay="0.5s"
+				UseDirectionCheck="True" />
+			<FireWeaponWhenDead
+				id="E84F2471"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				DelayTime="0s"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				FocusFireKindOfFlag=""
+				InitiallyActive="True"
+				ActiveDuringConstruction="False"
+				ContinueToBezierDestination="False">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999998d"
+					MaxKillerAngle="-0.9999998d"
+					DeathTypes="CATALYST"
+					DeathTypesForbidden="" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="C663B515"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				HealingAmount="100"
+				HealingDelay="0.5s"
+				StartHealingDelay="1s"
+				Radius="0"
+				KindOf=""
+				HealFXList=""
+				SpawnFXList=""
+				RespawnMinimumDelay="0s"
+				InitiallyActive="False"
+				AffectsWholePlayer="False"
+				AffectsContained="False"
+				HealOnlyIfNotUnderAttack="False"
+				HealOnlyIfNotInCombat="False"
+				HealOnlyOthers="False"
+				NonStackable="False"
+				RespawnNearbyHordeMembers="False">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="CE6A16D5"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="F03B3999"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="4A4E0C88"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			
+				<ModelConditionUpgrade
+				id="ModuleTag_UpgradeBlueOne"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_16"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_UpgradeBlueOne</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_UpgradeBlueTwo"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_17"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_UpgradeBlueTwo</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_UpgradeBlueThree"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_18"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_UpgradeBlueThree</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_UpgradeBlueFour"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_19"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_UpgradeBlueFour</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_UpgradeGreenOne"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_20"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_UpgradeGreenOne</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_UpgradeGreenTwo"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_21"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_UpgradeGreenTwo</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_UpgradeGreenThree"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_22"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_UpgradeGreenThree</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_UpgradeGreenFour"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_23"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_UpgradeGreenFour</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_UpgradeBlueTib"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_26"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_UpgradeBlueTib</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<!-- end of upgrades for tib -->
+			
+			<StancesBehavior
+				id="41CCDAEF"
+				StanceTemplate="Generic" />
+			<LevelUpUpgrade
+				id="3D5ED271"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="418DD456"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="2"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="E1726612"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="3"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<StealthUpgrade
+				id="4273058C"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="01009D1F"
+				DefectionFrameCount="300" />
+			<ReturnToDockSpecialPower
+				id="9BFFB854"
+				SpecialPowerTemplate="SpecialPower_ReturnToDock"
+				AntiCategory=""
+				AntiFX=""
+				AttributeModifier=""
+				AttributeModifierRange="0"
+				AttributeModifierFX=""
+				WeatherDuration="0"
+				InitiateFX=""
+				TriggerFX=""
+				SetModelCondition="TOPPLED"
+				SetModelConditionTime="0s"
+				GiveLevels="0"
+				ChangeWeather="NORMAL"
+				OnTriggerRechargeSpecialPower=""
+				BurnDecayModifier="0"
+				MaxDistanceFromCommandCenter="0"
+				UpdateModuleStartsAttack="False"
+				StartsPaused="False"
+				ReEnableAntiCategory="False"
+				AttributeModifierAffectsSelf="False"
+				AttributeModifierWeatherBased="False"
+				TargetEnemy="False"
+				TargetAllSides="False"
+				DisableDuringAnimDuration="False"
+				IdleWhenStartingPower="False"
+				AffectGood="False"
+				AffectEvil="False"
+				AffectAllies="True"
+				AvailableAtStart="True"
+				AdjustVictim="False"
+				UseDistanceFromCommandCenter="False"
+				ChildModuleHandlesFX="False">
+				<AttributeModifierAffects
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterMP
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterStrategic
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+			</ReturnToDockSpecialPower>
+			<!--
+			<CreateObjectDie
+				id="1C11B059"
+				CreationList="HarvesterDeathTiberiumOCL">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999998d"
+					MaxKillerAngle="-0.9999998d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</CreateObjectDie>
+			-->
+			<WeaponSetUpdate
+				id="E3D95180">
+				<WeaponSlotTurret
+					ID="1"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="ZOCOMHarvesterMissileLauncher"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="2000"
+						TurretPitchRate="200"
+						MinimumPitch="0d"
+						PitchHeight="50%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="5s"
+						MinIdleScanAngle="0"
+						MaxIdleScanAngle="90"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			<Physics
+				id="CD7D8A59"
+				MaxXRotationVelocity="360"
+				MaxYRotationVelocity="360"
+				MaxZRotationVelocity="360"
+				GravityMultiplier="1"
+				ShockStunnedTimeLow="5"
+				ShockStunnedTimeHigh="10"
+				ShockStandingTime="5"
+				FirstHeight="1.3"
+				SecondHeight="1.3"
+				FirstPercentIndent="33%"
+				SecondPercentIndent="66%"
+				BounceCount="2"
+				BounceDistance="5"
+				BounceFirstHeight="1.3"
+				BounceSecondHeight="1.3"
+				BounceFirstPercentIndent="33%"
+				BounceSecondPercentIndent="66%"
+				GroundHitFX=""
+				GroundBounceFX=""
+				FirstPercentHeight="33%"
+				SecondPercentHeight="66%"
+				CurveFlattenMinDist="0"
+				TumbleRandomly="False"
+				AllowBouncing="False"
+				KillWhenRestingOnGround="False"
+				OrientToFlightPath="False"
+				IgnoreTerrainHeight="False" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkRate="1"
+				ProbabilityModifier="10"
+				ModifierBonusPerOverkillPercent="0%"
+				SinkDelay="3s"
+				SinkDelayVariance="0s"
+				DestructionDelay="7s"
+				DestructionDelayVariance="0s"
+				DecayBeginTime="0s"
+				FlingForce="0"
+				FlingForceVariance="0"
+				FlingPitch="0d"
+				FlingPitchVariance="0d"
+				DeathFlags=""
+				FadeTime="0s"
+				FadeDelay="0s"
+				DeathTypes=""
+				DeathObjectStatusBits="DONT_CLEAR_FOR_BUILD"
+				ShadowWhenDead="False"
+				Fade="False">
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_GDIHarvesterDebris</OCL>
+				</OCL>
+				<Sound
+					Type="INITIAL"
+					List="GDI_Generic_VoiceDieMS" />
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999998d"
+					MaxKillerAngle="-0.9999998d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+			</SlowDeath>
+			<FXListBehavior
+				id="57E81491">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999998d"
+					MaxKillerAngle="-0.9999998d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIVehicleExplodeNoScorch"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+			</FXListBehavior>
+			<InvisibilityUpdate
+				id="F80B6FD9"
+				Options=""
+				UpdatePeriod="0.5s"
+				BroadcastRange="0"
+				OpacityMin="40%"
+				OpacityMax="100%">
+				<InvisibilityNugget
+					ForbiddenConditions="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_A USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenConditionExceptions=""
+					ForbiddenWeaponSets=""
+					ForbiddenStatus="DOCKING HARVESTING"
+					CamouflageLevel="0"
+					InvisibilityType="STEALTH"
+					Options=""
+					EnteringStealthFX="FX_NODStealthTransitionOn"
+					LeavingStealthFX="FX_NODStealthTransitionOff"
+					HintDetectableStates="IS_ATTACKING"
+					NoStealthForAttackWindow="0s" />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StatusBitsUpgrade
+				id="1F159A60"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				StatusToSet="WEAPON_UPGRADED_01"
+				StatusToClear=""
+				ApplyToContained="False">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+		</Behaviors>
+		<AI>
+			<SupplyTruckAIUpdate
+				id="92D32A8E"
+				AutoAcquireEnemiesWhenIdle="YES"
+				StopChaseDistance="500"
+				HoldGroundCloseRangeDistance="0"
+				MinCowerTime="0s"
+				MaxCowerTime="0s"
+				RampageTime="0s"
+				AILuaEventsList="GDIHarvesterFunctions_R21g"
+				BurningDeathTime="0s"
+				TimeToEjectPassengersOnRampage="0"
+				ComboLocomotorSet="NORMAL"
+				ComboLocoAttackDistance="80"
+				IdleTargetTime="0s"
+				MaxCombineChildren="1"
+				SpawnOffsetRadius="0"
+				StandGround="False"
+				CanAttackWhileContained="False"
+				RampageRequiresAflame="False"
+				FadeOnPortals="False"
+				MaxBoxes="200"
+				SupplyCenterActionDelay="0.1s"
+				SupplyWarehouseActionDelay="0s"
+				SupplyWarehouseScanDistance="5000"
+				DepletedAnnounceDistance="600"
+				HarvestActivationRange="35"
+				HarvestPreparationTime="0.5s"
+				HarvestActionTime="2.2s"
+				HarvestTrees="False"
+				HarvestTiberium="True"
+				HarvestsFromRearEnd="False"
+				CanPathThroughUnitsWhileDocking="True"
+				CanPathThroughUnitsWhileHarvesting="False">
+				<UnitAITargetChooserData
+					IdleScanDelay="0.8s"
+					ReacquireDelay="5s"
+					StartupDelay="0s"
+					SympathyRange="25"
+					CheckVisionRange="False"
+					CanPickDynamicTargets="False"
+					RotateToTargetWhenAiming="False"
+					CanAutoAcquireNonAutoAcquirable="False"
+					TargetingCompareList="DefaultTargetingCompareList" />
+			</SupplyTruckAIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="C026F3D9"
+				MaxHealth="5000"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				InitialHealth="-1"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+		</Body>
+		<Geometry
+			IsSmall="True">
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="VEHICLE"
+				MajorRadius="16"
+				MinorRadius="9"
+				Height="15"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="AudioEvent:GDI_RocketHarvester_VoiceAttack"
+				AudioType="voiceAttack" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_RocketHarvester_VoiceCreate"
+				AudioType="voiceCreated" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_RocketHarvester_VoiceHarvest"
+				AudioType="voiceSupply" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_RocketHarvester_VoiceMove"
+				AudioType="voiceMove" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_RocketHarvester_VoiceMoveAttack"
+				AudioType="voiceAttackAfterMoving" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_RocketHarvester_VoiceMoveRefinery"
+				AudioType="voiceDock" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_RocketHarvester_VoiceRetreat"
+				AudioType="voiceRetreatToCastle" />
+			<AudioEntry
+				Sound="Multisound:GDI_RocketHarvester_VoiceSelectMS"
+				AudioType="voiceSelect" />
+			<AudioEntry
+				Sound="Multisound:GDI_RocketHarvester_VoiceSelectBattleMS"
+				AudioType="voiceSelectBattle" />
+			<NamedEntry 
+				Sound="AudioEvent:GDI_RocketHarvester_VoiceMoveRefinery" 
+				Name="ReturnToDock" />
+			<NamedEntry 
+				Sound="AudioEvent:GDI_RocketHarvester_VoiceRetreat" 
+				Name="ReturnToDockWhileUnderAttack" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:HarvesterMoveStart"
+				AudioType="soundMoveStart" />
+			<AudioEntry
+				Sound="Multisound:HarvesterAmbientLoopMS"
+				AudioType="soundAmbient" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="HarvesterLost"
+			EvaEventDamagedOwner="HarvesterUnderAttack"
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventAmbushed="UnitAmbushed"
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled"
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME"
+			Texture=""
+			AdditionalTexture=""
+			SizeX="0"
+			SizeY="0"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="0s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="0s"
+			OpacityEnd="0"
+			MaxHeight="20"
+			SunAngle="0"
+			OverrideLODVisibility="False"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400"
+			VisionSide="100%"
+			VisionRear="100%"
+			VisionBonusTestRadius="100"
+			VisionBonusTestSegments="8"
+			VisionBonusPercentPerFoot="0%"
+			MaxVisionBonusPercent="50%"
+			MinVisionBonusPercent="-50%" />
+		<CrusherInfo
+			CrushKnockback="0"
+			CrushZFactor="1"
+			MinCrushVelocityPercent="1%"
+			CrushDecelerationPercent="0%"
+			CrushWeapon=""
+			CrushRevengeWeapon=""
+			CrusherLevel="1"
+			CrushableLevel="2"
+			MountedCrusherLevel="255"
+			MountedCrushableLevel="255"
+			CrushEqualLevelProps="False"
+			UseCrushAttack="True"
+			CrushOnlyWhileCharging="False"
+			CrushAllies="False" />
+	</GameObject>
+</AssetDeclaration>

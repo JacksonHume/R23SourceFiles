@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+	<Includes>
+
+    <!-- Debris -->
+		<!-- <Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_01.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_02.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_03.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_04.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_05.xml" /> -->
+		
+		<!-- <Include type="all" source="DATA:Neutral/Debris/GDIFireHawkDebris_01.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIFireHawkDebris_02.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIFireHawkDebris_03.xml" /> -->
+		<Include type="all" source="DATA:Neutral/Structures/TiberiumSilo.xml" />
+		<Include type="all" source="DATA:Neutral/Structures/ElectromagneticPulseControlCenter.xml" />
+		<Include type="all" source="DATA:Neutral/Structures/EMPField_Air.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIFireHawkDebris_01.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIFireHawkDebris_02.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIFireHawkDebris_03.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIFireHawkDebris_04.xml" />
+		
+		<Include type="all" source="DATA:Neutral/Debris/gdiorcadebris_01.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/gdiorcadebris_02.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/gdiorcadebris_03.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/gdiorcadebris_04.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/gdiorcadebris_05.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/gdiorcadebris_06.xml" />		
+		<Include type="all" source="DATA:Neutral/Units/mutantmarauder.xml" />
+		<Include type="all" source="DATA:Neutral/Units/MutantMarauderSquad.xml" />
+		<Include type="all" source="DATA:Neutral/Structures/DefensiveTower.xml" />
+		<Include type="all" source="DATA:Neutral/Structures/CDMTower.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/nodflametankdebris_01.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/nodflametankdebris_02.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/nodflametankdebris_04.xml" />
+		
+		<Include type="all" source="DATA:Neutral/Debris/GDIHammerheadDebris_01.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIHammerheadDebris_02.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIHammerheadDebris_03.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIHammerheadDebris_04.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIHammerheadDebris_05.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIHammerheadDebris_06.xml" /> 
+
+	</Includes>
+
+</AssetDeclaration>

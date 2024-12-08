@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GUZNRAIDER_SKN2" Hierarchy="GUZNTRPR_SKL2">
+		<SubObject SubObjectID="BOUNDBOX" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GUZNRAIDER_SKN.BOUNDBOX</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGINJECTOR" BoneIndex="18">
+			<RenderObject>
+				<Mesh>GUZNRAIDER_SKN.UGINJECTOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGJUMP2" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GUZNTRPR_SKN.UGJUMP2</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGSCANNER" BoneIndex="3">
+			<RenderObject>
+				<Mesh>GUZNRAIDER_SKN.UGSCANNER</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GUZNRAIDER" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUZNRAIDER_SKN.GUZNRAIDER</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

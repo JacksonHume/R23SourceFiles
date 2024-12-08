@@ -1,0 +1,17 @@
+function OnAttackingEnd(self)
+    if not self.name then 
+        self.name = random(9999999) 
+        ExecuteAction("SET_UNIT_REFERENCE", self.name, self)
+    end
+    ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", self.name, ObjectStatusTable["IS_ATTACKING"], 0)
+end
+ 
+This ensures to only set one name to the object/unit at all times
+Or if you use it in multiplayer:
+function OnAttackingEnd(self)
+    if not self.name then 
+        self.name = floor(9999999*GetRandomNumber())
+        ExecuteAction("SET_UNIT_REFERENCE", self.name, self)
+    end
+    ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", self.name, ObjectStatusTable["IS_ATTACKING"], 0)
+end

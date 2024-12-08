@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!--
+	<UpgradeTemplate id="Upgrade_EngineerArmor"
+		Type="OBJECT"
+	/>
+	
+	
+	<UpgradeTemplate id="Upgrade_ClearCollision"
+		Type="OBJECT"
+	/>
+		<UpgradeTemplate id="Upgrade_Attacking2"
+		Type="OBJECT"
+	/>
+
+	<UpgradeTemplate id="Upgrade_Attacking1"
+		Type="OBJECT"
+	/>
+-->
+
+
+	<UpgradeTemplate id="Upgrade_UpgradeGreenTib"
+		Type="OBJECT"
+	/>
+	
+	<UpgradeTemplate id="Upgrade_UpgradeBlueTib"
+		Type="OBJECT"
+	/>
+
+	<UpgradeTemplate id="Upgrade_UpgradeBlueOne"
+		Type="OBJECT"
+	/>
+	<UpgradeTemplate id="Upgrade_UpgradeBlueTwo"
+		Type="OBJECT"
+	/>
+	<UpgradeTemplate id="Upgrade_UpgradeBlueThree"
+		Type="OBJECT"
+	/>
+	<UpgradeTemplate id="Upgrade_UpgradeBlueFour"
+		Type="OBJECT"
+	/>
+	
+	<UpgradeTemplate id="Upgrade_UpgradeGreenOne"
+		Type="OBJECT"
+	/>
+	<UpgradeTemplate id="Upgrade_UpgradeGreenTwo"
+		Type="OBJECT"
+	/>
+	<UpgradeTemplate id="Upgrade_UpgradeGreenThree"
+		Type="OBJECT"
+	/>
+	<UpgradeTemplate id="Upgrade_UpgradeGreenFour"
+		Type="OBJECT"
+	/>
+	
+	<!-- R21 nod confessors and infusion 500$ -->
+<!--
+	<UpgradeTemplate id="Upgrade_NODConfessorUpgrade"
+		inheritFrom="BasePurchasableUpgrade" 
+		DisplayName="UpgradeName:NODConfessor"
+		AcquireHint="UpgradePrereq:NODConfessor"
+		TypeDescription="UpgradeType:NODConfessor"
+		Description="UpgradeDesc:NODConfessor" 
+		Type="PLAYER"
+		BuildCost="1000"
+		BuildTime="30s"
+		ResearchSound="AudioEvent:NOD_Confessor_Upgrade"
+		IconImage="Button_UpgradeConfessor"
+	/>
+
+	<UpgradeTemplate id="Upgrade_TiberiumInfusion"
+		inheritFrom="BasePurchasableUpgrade" 
+		DisplayName="UpgradeName:NODTiberiumInfusion"
+		AcquireHint="UpgradePrereq:NODTiberiumInfusion"
+		TypeDescription="UpgradeType:NODTiberiumInfusion"
+		Description="UpgradeDesc:NODTiberiumInfusion"
+		Type="PLAYER"
+		BuildCost="1000"
+		BuildTime="30s"
+		ResearchSound="AudioEvent:NOD_TiberiumUpgrade"
+		IconImage="Button_UpgradeTiberiumInfusion"
+	/>
+	-->
+	<!-- R21 mok tiberium infusion 500$ -->
+	
+	<UpgradeTemplate id="Upgrade_MoKTiberiumInfusion"
+		inheritFrom="BasePurchasableUpgrade" 
+		DisplayName="UpgradeName:NODTiberiumInfusion"
+		AcquireHint="UpgradePrereq:NODTiberiumInfusion"
+		TypeDescription="UpgradeType:NODTiberiumInfusion"
+		Description="UpgradeDesc:NODTiberiumInfusion"
+		Type="PLAYER"
+		BuildCost="500"
+		BuildTime="30s"
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		ResearchSound="AudioEvent:NOD_TiberiumUpgrade"
+		IconImage="Button_UpgradeTiberiumInfusion"
+	/>
+
+	<UpgradeTemplate id="Upgrade_BlackHandSecretShrinePurifyingFlame"
+		inheritFrom="BasePurchasableUpgrade" 
+		DisplayName="UpgradeName:BlackHandPurifyingFlame"
+		AcquireHint="UpgradePrereq:BlackHandPurifyingFlame"
+		TypeDescription="UpgradeType:BlackHandPurifyingFlame"
+		Description="UpgradeDesc:BlackHandPurifyingFlame"
+		Type="PLAYER"
+		BuildTime="90.0s"
+		BuildCost="2500"
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		ResearchSound="Multisound:NOD_PurifyingFlame_UpgradeMS"
+		IconImage="Button_Upgrade_PurifyingFlame">
+	</UpgradeTemplate>
+
+	<!-- beam venom fix -->
+	<!--
+	<UpgradeTemplate
+		id="Upgrade_Reflector"
+		Type="OBJECT"
+		BuildTime="0s"
+		BuildCost="0"
+		ResearchSound=""
+		UnitSpecificSound=""
+		UpgradeFX=""
+		UseObjectTemplateForCostDiscount=""
+		GroupOrder="0"
+		SkirmishAIHeuristic="INVALID"
+		Options="DO_NOT_TRANSFER"
+		WaypointQueueable="False" />
+-->
+	<!-- quad turret cost and build time increased because 1000$ was deemed too cheap for the extra damage (Removed in R20) -->
+
+	<UpgradeTemplate id="Upgrade_NODQuadTurrets"
+		DisplayName="UpgradeName:NODQuadTurrets"
+		AcquireHint="UpgradePrereq:NODQuadTurrets"
+		TypeDescription="UpgradeType:NODQuadTurrets"
+		Description="UpgradeDesc:NODQuadTurrets"
+		Type="PLAYER"
+		BuildTime="30.0s"
+		BuildCost="1000"
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		ResearchSound="AudioEvent:NOD_QuadTurrets_Upgrade"
+		IconImage="Button_Upgrade_QuadTurrets">
+	</UpgradeTemplate>	
+
+	<!-- plasma disc launcher reduced to 1000$ 30s to make this unit more viable -->
+	<UpgradeTemplate id="Upgrade_AlienShockTrooperPlasmaDiskLauncher" 
+		DisplayName="UpgradeName:ALIENPlasmaDiscLauncher"
+		AcquireHint="UpgradePrereq:ALIENPlasmaDiscLauncher"
+		TypeDescription="UpgradeType:ALIENPlasmaDiscLauncher"
+		Description="UpgradeDesc:ALIENPlasmaDiscLauncher"
+		Type="PLAYER"
+		BuildTime="30.0s"
+		BuildCost="1000"
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		ResearchSound="AudioEvent:ALI_PlasmaDiscLaunchers_Upgrade"
+		IconImage="Button_UpgradePlasmaDiscLauncher">
+	</UpgradeTemplate>
+
+	<!-- scpb upgrade duration decreased to 1:15 to make venoms and enlightened more useful earlier, and because shredders have been nerfed -->
+	
+	<UpgradeTemplate id="Upgrade_MarkedOfKaneTechCenterSuperChargedParticleBeam"
+		DisplayName="UpgradeName:MarkedOfKaneTechCenterSuperChargedParticleBeam"
+		AcquireHint="UpgradePrereq:MarkedOfKaneSuperChargedParticleBeam"
+		TypeDescription="UpgradeType:MarkedOfKaneSuperChargedParticleBeam"
+		Description="UpgradeDesc:MarkedOfKaneSuperChargedParticleBeam"
+		Type="PLAYER"
+		BuildTime="60.0s"
+		BuildCost="2500"
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		ResearchSound="AudioEvent:NOD_Enlightened_SuperChargedParticleBeamUpgrade"
+		IconImage="Button_Upgrade_SuperCharBeam">
+	</UpgradeTemplate>
+	
+	<!-- stratofighter cost/build time increased to 2000/60s respectively as a precaution for the fence nerf -->
+	<UpgradeTemplate id="Upgrade_FirehawkStratofighterBooster"
+		inheritFrom="BasePurchasableUpgrade" 
+		DisplayName="UpgradeName:FirehawkStratofighterBooster"
+		AcquireHint="UpgradePrereq:FirehawkStratofighterBooster"
+		TypeDescription="UpgradeType:FirehawkStratofighterBooster"
+		Description="UpgradeDesc:FirehawkStratofighterBooster"
+		Type="PLAYER"
+		BuildCost="1500"
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		BuildTime="45s"
+		ResearchSound="AudioEvent:GDI_Firehawk_StratoFighterUpgrade"
+		IconImage="Button_AbilityStratofighter"
+	/>
+	<!-- Hardpoints cost reduced from 2500$ to 2000$ -->
+	
+	<UpgradeTemplate id="Upgrade_GDIHardpoints"
+		inheritFrom="BasePurchasableUpgrade"
+		DisplayName="UpgradeName:GDIHardpoints"
+		AcquireHint="UpgradePrereq:GDIHardpoints"
+		TypeDescription="UpgradeType:GDIHardpoints"
+		Description="UpgradeDesc:GDIHardpoints"
+		Type="PLAYER"
+		BuildTime="60.0s"
+		BuildCost="2000"
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		ResearchSound="AudioEvent:GDI_Airfield_hardPointsUpgrade"
+		IconImage="Button_Upgrade_Hardpoints">
+	</UpgradeTemplate>	
+	
+	<!-- steel talons railguns -->
+	
+	<UpgradeTemplate id="Upgrade_STArmoryRailgunTech"
+		inheritFrom="BasePurchasableUpgrade" 
+		DisplayName="UpgradeName:GDIRailGuns"
+		AcquireHint="UpgradePrereq:GDIRailGuns"
+		TypeDescription="UpgradeType:GDIRailGuns"
+		Description="UpgradeDesc:GDIRailGuns"
+		Type="PLAYER"
+		BuildTime="90.0s"
+		BuildCost="3000"
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		ResearchSound="AudioEvent:GDI_RailCannon_Upgrade"
+		IconImage="Button_UpgradeRailGun"
+	/>
+
+</AssetDeclaration>

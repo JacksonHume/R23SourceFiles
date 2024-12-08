@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<HotKeySlot Group="4" Index= "0" id="ReverseMove" Name="ReverseMove" VersionAdded="0"/>
+</AssetDeclaration>

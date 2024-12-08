@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Weather
+		id="Weather">
+		<Rain
+			RainTexture="FXRainDrop" 
+			NumRaindropsPerBox="512"
+			RainBoxWidth="1500"
+			RainBoxLength="1500"
+			RainBoxHeight="450"
+			MinWidth="3"
+			MaxWidth="4"
+			MinHeight="25"
+			MaxHeight="100"
+			MinSpeed="200"
+			MaxSpeed="350"
+			MinAlpha="0.2"
+			MaxAlpha="0.5"
+			WindStrength="1"
+			IsRaining="False" />
+		<Cloud>
+			<CloudTextureSize
+				x="660"
+				y="660" />
+			<CloudOffsetPerSecond
+				x="-0.03"
+				y="-0.02" />
+		</Cloud>
+	</Weather>
+</AssetDeclaration>

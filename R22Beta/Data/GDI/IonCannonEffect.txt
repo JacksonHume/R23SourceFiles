@@ -1,0 +1,594 @@
+Generated in: 00:00:00.0255494
+
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="IonCannonEffect"
+		KindOf="UNATTACKABLE INERT_SHROUD_REVEALER NOT_AUTOACQUIRABLE"
+		RadarPriority="INVALID"
+		BuildCompletion="INVALID"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="0d"
+		BuildFadeInOnCreateTimeSeconds="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="GDI"
+		EditorName="IonCannonEffect"
+		EditorSorting="UNIT"
+		BountyValue="0"
+		BuildTime="0"
+		BuildFadeInOnCreateTime="0"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet=""
+		SelectPortrait=""
+		ButtonImage=""
+		VoicePriority="0"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CrowdResponse=""
+		CampnessValue="0"
+		CampnessValueRadius="600"
+		Scale="1"
+		HealthBoxScale="1.5"
+		HealthBoxHeightOffset="10"
+		OcclusionDelay="0"
+		LiveCameraPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		ThreatRadius="-1"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="0"
+		CommandPoints="0"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="0"
+		MaxDistanceForEngaged="0"
+		EngagedStateTimeout="0"
+		ThreatLevel="1"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		DisplayMeleeDamage="-1"
+		DisplayRangedDamage="-1"
+		HeroSortOrder="2147483647"
+		FiringArc="360"
+		CamouflageDetectionMultiplier="1"
+		SelectionPriority="2147483647"
+		ProductionQueueType="INVALID"
+		BuildPlacementTypeFlag="INVALID"
+		BuildOnRequiredObjectKindOf=""
+		UnitCategory="NONE"
+		WeaponCategory="NONE"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon=""
+		ReinvisibilityDelay="4s"
+		CaptureTime="0s"
+		BuildCost="0"
+		RefundValue="0"
+		ThreatValue="0"
+		MaxSimultaneousOfType="0"
+		TransportSlotCount="0"
+		IsTrainable="False"
+		IsForbidden="False"
+		IsPrerequisite="False"
+		IsGrabbable="False"
+		IsHarvestable="False"
+		StructureRubbleHeight="0"
+		ForceLuaRegistration="False"
+		ShowHealthInSelectionDecal="False"
+		KeepSelectableWhenDead="False"
+		IsAutoBuilt="False"
+		CanPathThroughGates="True"
+		ShouldClearShotsOnIdle="False"
+		BuildInProximityToSamePlayerStucture="True">
+		<DisplayName>IonCannonEffect</DisplayName>
+		<ArmorSet
+			Armor="NoArmor"
+			DamageFX=""
+			Conditions="" />
+		<Draws>
+			<ScriptedModelDraw
+				id="90B2BBF6"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="False"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="FXIONCANNON"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonPreExplosionDebrisA"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonPreExplosionDistortion"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonPreExplosionDustA"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonFire"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonFireGlow"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonExplosionFlash"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonExplosionDistort"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonExplosionSphere"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonExplosionDebris"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="FXIonCannonExplosionShockwave"
+						PersistID="0"
+						FollowBone="False"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery01"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery02"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery03"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery04"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery05"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery06"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery07"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery08"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamFire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery01"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamGlow"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery02"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamGlow"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery03"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamGlow"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery04"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamGlow"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery05"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamGlow"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery06"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamGlow"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery07"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamGlow"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery08"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamGlow"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery01"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery02"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery03"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery04"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery05"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery06"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery07"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="BeamAuxillery08"
+						FXParticleSystemTemplate="FXIonCannonAuxBeamDistortion"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					ConditionsYes="IDLE"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="FXIONCANNON"
+						AnimationMode="ONCE"
+						AnimNickName="IDL"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="3"
+						AnimationSpeedFactorMax="3"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="EB808422"
+				MinLifetime="2.5s"
+				MaxLifetime="2.5s"
+				DeathType="NONE"
+				WaitForWakeUp="False"
+				ScoreKill="False"
+				IgnoreProjectileState="False" />
+			<FXListBehavior
+				id="57E81491">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<Event
+					Index="onCreate"
+					FX="FX_GDI_IonCannon_Shockwave"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="783BB4BC"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				DelayTime="0s"
+				DeathWeapon="IonCannonFinalWeapon"
+				FocusFireKindOfFlag=""
+				InitiallyActive="True"
+				ActiveDuringConstruction="False"
+				ContinueToBezierDestination="False">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</FireWeaponWhenDead>
+			<DestroyObjectsUpdate
+				id="A3DEFEEF"
+				Radius="500">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship=""
+					Alignment="NONE"
+					Include="CIVILIAN_UNIT"
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+			</DestroyObjectsUpdate>
+			<DestroyDie
+				id="7E2F300C">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</DestroyDie>
+			<FireWeaponUpdate
+				id="D33B1C00"
+				ActiveWhenDisabled=""
+				HeroModeTrigger="False"
+				ChargingModeTrigger="False"
+				AliveOnly="False">
+				<FireWeaponNugget
+					WeaponName="IonCannonWeapon_Stage1"
+					FireDelay="0.825s"
+					FireInterval="0s"
+					OneShot="True" />
+				<FireWeaponNugget
+					WeaponName="IonCannonWeapon_Stage2"
+					FireDelay="1s"
+					FireInterval="0s"
+					OneShot="True" />
+				<FireWeaponNugget
+					WeaponName="IonCannonWeapon_Stage3"
+					FireDelay="1.22s"
+					FireInterval="0s"
+					OneShot="True" />
+				<FireWeaponNugget
+					WeaponName="IonCannonWeapon_Stage4"
+					FireDelay="1.42s"
+					FireInterval="0s"
+					OneShot="True" />
+				<FireWeaponNugget
+					WeaponName="IonCannonWeapon_Stage5"
+					FireDelay="1.61s"
+					FireInterval="0s"
+					OneShot="True" />
+				<FireWeaponNugget
+					WeaponName="IonCannonWeapon_Stage6"
+					FireDelay="1.81s"
+					FireInterval="0s"
+					OneShot="True" />
+			</FireWeaponUpdate>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="C026F3D9"
+				MaxHealth="9999999"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				InitialHealth="-1"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+		</Body>
+		<Geometry
+			IsSmall="True">
+			<Shape
+				Type="CYLINDER"
+				ContactPointGeneration="NONE"
+				MajorRadius="50"
+				MinorRadius="1"
+				Height="300"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True" />
+		</Geometry>
+		<ShadowInfo
+			Type="NONE"
+			Texture=""
+			AdditionalTexture=""
+			SizeX="0"
+			SizeY="0"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="0s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="0s"
+			OpacityEnd="0"
+			MaxHeight="20"
+			SunAngle="0"
+			OverrideLODVisibility="False"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
+		<CrusherInfo
+			CrushKnockback="0"
+			CrushZFactor="1"
+			MinCrushVelocityPercent="1%"
+			CrushDecelerationPercent="0%"
+			CrushWeapon=""
+			CrushRevengeWeapon=""
+			CrusherLevel="0"
+			CrushableLevel="0"
+			MountedCrusherLevel="255"
+			MountedCrushableLevel="255"
+			CrushEqualLevelProps="False"
+			UseCrushAttack="True"
+			CrushOnlyWhileCharging="False"
+			CrushAllies="False" />
+	</GameObject>
+</AssetDeclaration>

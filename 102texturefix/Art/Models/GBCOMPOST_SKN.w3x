@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBCOMPOST2" Hierarchy="GBCOMPOST2">
+		<SubObject SubObjectID="OBBOX10" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX10</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX09" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX09</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX08" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX08</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_STEALTHDETECTOR03" BoneIndex="13">
+			<RenderObject>
+				<Mesh>GBCOMPOST.UG_STEALTHDETECTOR03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_APAMMO01" BoneIndex="12">
+			<RenderObject>
+				<Mesh>GBCOMPOST.UG_APAMMO01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_SCAN01" BoneIndex="11">
+			<RenderObject>
+				<Mesh>GBCOMPOST.UG_SCAN01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_APAMMO02" BoneIndex="10">
+			<RenderObject>
+				<Mesh>GBCOMPOST.UG_APAMMO02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_APAMMO" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GBCOMPOST.UG_APAMMO</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_SCAN02" BoneIndex="8">
+			<RenderObject>
+				<Mesh>GBCOMPOST.UG_SCAN02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_SCAN" BoneIndex="4">
+			<RenderObject>
+				<Mesh>GBCOMPOST.UG_SCAN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FLASHINGLIGHTS" BoneIndex="3">
+			<RenderObject>
+				<Mesh>GBCOMPOST.FLASHINGLIGHTS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBCOMPOST.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BIB" BoneIndex="2">
+			<RenderObject>
+				<Mesh>GBCOMPOST.BIB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBCOMPOST" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBCOMPOST.GBCOMPOST</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject BoneIndex="15" SubObjectID="UG_STEALTHDETECTOR">
+		  <RenderObject>
+			<Mesh>GBCOMPOST2.UG_STEALTHDETECTOR</Mesh>
+		  </RenderObject>
+		</SubObject>
+		<SubObject BoneIndex="16" SubObjectID="UG_STEALTHDETECTOR02">
+		  <RenderObject>
+			<Mesh>GBCOMPOST2.UG_STEALTHDETECTOR02</Mesh>
+		  </RenderObject>
+		</SubObject>
+		<SubObject BoneIndex="14" SubObjectID="UG_STEALTHDETECTOR01">
+		  <RenderObject>
+			<Mesh>GBCOMPOST2.UG_STEALTHDETECTOR01</Mesh>
+		  </RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

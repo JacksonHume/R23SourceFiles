@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>
+		<Include source="Units/STMARV.xml" type="all"/>	
+		<!--
+		<Include source="Units/STMammoth.xml" type="all"/>	
+		<Include source="Units/STMRT.xml" type="all"/>
+		<Include source="Units/STBehemoth.xml" type="all"/>	
+		<Include source="Units/STHarv.xml" type="all"/>	
+		<Include source="Units/STHammerhead.xml" type="all"/>	
+		<Include source="Units/SteelTalonsGrenadeSoldierSquad.xml" type="all"/>	
+		<Include source="Units/SteelTalonsGrenadeSoldier.xml" type="all"/>
+		<Include source="Units/STEngineer.xml" type="all"/> 
+		<Include source="Units/steeltalonswolverine.xml" type="all"/>
+		<Include source="Units/steeltalonswolverine_veteran.xml" type="all"/>	
+		<Include source="Structures/STAirTower.xml" type="all"/>
+		<Include source="Units/STSurveyor.xml" type="all"/>		
+		<Include source="Structures/STMiniMCVOutpost.xml" type="all"/> 	
+		<Include source="Structures/STCrane.xml" type="all"/> 	
+		<Include source="Units/STV35Ox_SummonedForVehicle.xml" type="all"/>
+		<Include source="Units/STV35Ox_Summoned.xml" type="all"/>	
+		<Include source="Units/SteelTalonsBehemothHusk.xml" type="all"/>					
+		<Include source="Structures/STRef.xml" type="all"/>
+		<Include source="Structures/STIonCannonControl.xml" type="all"/>
+		<Include source="Structures/STPowerPlant.xml" type="all"/>
+		<Include source="Units/STTitan.xml" type="all"/> 
+		<Include source="Structures/STBattlebase.xml" type="all"/>
+		<Include source="Units/STRig.xml" type="all"/>		
+		<Include source="Units/SteelTalonsMCV.xml" type="all"/>	
+		<Include source="Structures/STEpicWF.xml" type="all"/> 
+		<Include source="Units/STRifleSoldier.xml" type="all"/>
+		<Include source="Units/STOrca.xml" type="all"/>	
+		<Include source="Structures/STGolumCannon.xml" type="all"/>
+		<Include source="Structures/steeltalonscommandpost.xml" type="all"/> 
+		<Include source="Structures/steeltalonstechcenter.xml" type="all"/> 
+		<Include source="Structures/STSpaceCommandUplink.xml" type="all"/> 
+		<Include source="Structures/STBarracks.xml" type="all"/>
+		<Include source="Structures/STWarfactory.xml" type="all"/>
+		<Include source="Structures/STConstructionYard.xml" type="all"/>	
+		<Include source="Structures/SteelTalonsTiberiumSilo.xml" type="all"/> 
+-->
+	</Includes>
+</AssetDeclaration>

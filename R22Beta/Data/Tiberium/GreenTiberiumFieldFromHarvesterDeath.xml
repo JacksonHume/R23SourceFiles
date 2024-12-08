@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<GameObject
+		id="GreenTiberiumFieldFromHarvesterDeath"
+		Side="Neutral"
+		EditorSorting="MISC_NATURAL"
+		KindOf="IMMOBILE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS TIBERIUM_FIELD"
+		EditorName="TiberiumFieldFromHarvesterDeath">
+		<DisplayName>Tiberium_Field</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="6D14780C"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s"
+				DeathType="NONE"
+				WaitForWakeUp="False"
+				ScoreKill="False"
+				IgnoreProjectileState="False" />
+			<TiberiumField
+				Radius="25"
+				FieldResolution="40"
+				MaxFieldMoney="99999999"
+				StartingFieldMoney="99999999"
+				ThingToSpawn="TiberiumCrystal"
+				SpawnOffset="15.0"
+				ClusterScaleFactor="1.0"
+				ClusterPowerFactor="1.0"
+				CrystalGrowthRate="30"
+				KillWhenEmptyAndFinishedSpawning="True" 
+				AllowStartingFieldCrystalsToGrow="True">
+				<!-- The DamageFilter is simply an on/off switch for the crystal weapons.
+				     If something matching the filter is found within the field, the weapons are turned on. -->
+			<!--
+				<DamageFilter
+					Rule="ANY"
+					Include="INFANTRY HARVESTER SUPPLY_GATHERING_CENTER" >
+				    <IncludeThing>GDIMARV</IncludeThing>
+				    <IncludeThing>ZOCOMMARV</IncludeThing>
+				    <IncludeThing>SteelTalonsMARV</IncludeThing>
+					<ExcludeThing>AlienBuzzers</ExcludeThing>
+					<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+					<ExcludeThing>AlienAssimilator</ExcludeThing>
+					<ExcludeThing>AlienMastermind</ExcludeThing>
+					<ExcludeThing>AlienBlinkMastermind</ExcludeThing>
+					<ExcludeThing>AlienRazorDrones</ExcludeThing>
+					<ExcludeThing>AlienRazorDroneSquad</ExcludeThing>
+					<ExcludeThing>AlienShockTrooper</ExcludeThing>
+					<ExcludeThing>AlienShockTrooperSquad</ExcludeThing>
+					<ExcludeThing>AlienShockTrooperSquad_Veteran</ExcludeThing>
+					<ExcludeThing>AlienStalker</ExcludeThing>
+					<ExcludeThing>AlienStalkerSquad</ExcludeThing>
+					<ExcludeThing>Reaper17ShockTrooper</ExcludeThing>
+					<ExcludeThing>Reaper17ShockTrooperSquad</ExcludeThing>		
+					<ExcludeThing>Reaper17Stalker</ExcludeThing>
+					<ExcludeThing>Reaper17StalkerSquad</ExcludeThing>
+					<ExcludeThing>Traveler59RazorDrone</ExcludeThing>		
+					<ExcludeThing>Traveler59RazorDroneSquad</ExcludeThing>
+					<ExcludeThing>Traveler59ShockTrooper</ExcludeThing>
+					<ExcludeThing>Traveler59ShockTrooperSquad</ExcludeThing>		
+					<ExcludeThing>Traveler59Stalker</ExcludeThing>
+					<ExcludeThing>Traveler59StalkerSquad</ExcludeThing>		
+					<ExcludeThing>Traveler59Assimilator</ExcludeThing>
+					<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing> 		
+					<ExcludeThing>Traveler59Cultist</ExcludeThing> 
+					<ExcludeThing>Traveler59CultistSquad</ExcludeThing>   		
+					<ExcludeThing>MutantMarauder</ExcludeThing>
+					<ExcludeThing>MutantMarauderSquad</ExcludeThing>
+					<ExcludeThing>Viceroid</ExcludeThing>
+					<ExcludeThing>GDIZoneTrooper</ExcludeThing>
+					<ExcludeThing>GDIZoneTrooperSquad</ExcludeThing>
+					<ExcludeThing>SteelTalonsZoneTrooper</ExcludeThing>
+					<ExcludeThing>SteelTalonsZoneTrooperSquad</ExcludeThing>
+					<ExcludeThing>ZOCOMZoneRaider</ExcludeThing>
+					<ExcludeThing>ZOCOMZoneRaiderSquad</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneTibTrooper</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneTiberiumTrooperSquad</ExcludeThing>
+					<ExcludeThing>MOKCyborgInfantry</ExcludeThing>
+					<ExcludeThing>MOKCyborgInfantrySquad</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneImprovedCyborgInfantry</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneImprovedCyborgInfantrySquad</ExcludeThing>
+					<ExcludeThing>NODCyborgInfantrySquad</ExcludeThing>
+					<ExcludeThing>NODCyborgInfantry</ExcludeThing>
+				</DamageFilter>
+			-->
+				<!-- The HealFilter works similar to the damage filter. It turns on or off
+						 the PassiveAreaEffectBehavior of the cystals if a matching object is found in the field. -->
+				<HealFilter Rule="NONE"
+							Include="HEALED_BY_TIBERIUM"/>
+			</TiberiumField>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_02"
+				MaxHealth="100.0" />
+		</Body>
+		<VisionInfo
+			VisionRange="0" />
+	</GameObject>
+</AssetDeclaration>

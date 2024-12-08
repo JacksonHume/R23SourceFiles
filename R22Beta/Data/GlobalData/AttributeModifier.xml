@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- part of old fix
+
+	<AttributeModifier
+		id="AttributeModifier_ResistEMP"
+		Category="NONE"
+		Duration="1s">
+		<Modifier Type="RESIST_EMP" Value="100%" />
+	</AttributeModifier>
+-->
+
+	<!-- EMP fix -->
+
+	<AttributeModifier
+		id="AttributeModifier_PreventCrush10"
+		Category="NONE"
+		Duration="10s">
+		<Modifier Type="CRUSHER_LEVEL" Value="-500%" />
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_CarryFlag10"
+		Category="NONE"
+		ObjectStatusToSet="CARRYING_FLAG"
+		Duration="10s">
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_PreventCrush7_5"
+		Category="NONE"
+		Duration="7.5s">
+		<Modifier Type="CRUSHER_LEVEL" Value="-500%" />
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_CarryFlag7_5"
+		Category="NONE"
+		ObjectStatusToSet="CARRYING_FLAG"
+		Duration="7.5s">
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_PreventCrush5"
+		Category="NONE"
+		Duration="5s">
+		<Modifier Type="CRUSHER_LEVEL" Value="-500%" />
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_CarryFlag5"
+		Category="NONE"
+		ObjectStatusToSet="CARRYING_FLAG"
+		Duration="5s">
+	</AttributeModifier>
+
+	<!-- reckoner fix -->
+
+	<AttributeModifier
+		id="AttributeModifier_BunkerTruckDeployed"
+		Category="NONE"
+		ObjectStatusToSet="CAN_ATTACK IMMOBILE"
+		ModelConditionsSet="UNPACKING">
+		<Modifier Type="SPEED" Value="0%" />
+		<Modifier Type="ARMOR" Value="25%" />
+		<Modifier Type="RESIST_EMP" Value="100%" />
+		<Modifier Type="CRUSHER_LEVEL" Value="-500%" />
+	</AttributeModifier>
+
+	<!-- rga aggressive stance fix -->
+
+
+	<!-- MAMMOTH RGA FIX <Modifier Type="RATE_OF_FIRE" Value="100%"/> -->
+
+
+	<AttributeModifier
+		id="AttributeModifier_RailgunAccelerator"
+		Category="NONE"
+		Duration="15s"
+		ModelConditionsSet="USING_WEAPON_C"
+		ObjectStatusToSet="WEAPON_UPGRADED_02" />
+
+	<!-- PATHING FIX -->
+
+	<AttributeModifier
+		id="AttributeModifier_RemoveCollisions"
+		Category="NONE"
+		Duration="0.75s"
+		ObjectStatusToSet="NO_COLLISIONS">
+	</AttributeModifier>
+
+	<!-- BEAM FIX -->
+	<!--
+	<AttributeModifier
+        id="AttributeModifier_TempDelay"
+        Category="NONE"
+		Duration="1.0s"
+		ObjectStatusToSet="RIDER4">	
+    </AttributeModifier>
+-->
+	<AttributeModifier
+        id="AttributeModifier_ReflectLimit0"
+        Category="NONE"
+		Duration="1.5s"
+        ModelConditionsSet="USER_69" />
+		
+	<AttributeModifier
+        id="AttributeModifier_SetCondition"
+        Category="NONE"
+		Duration="1.0s"
+        ObjectStatusToSet="RIDER1" />
+	
+	<AttributeModifier
+        id="AttributeModifier_ReflectLimit1"
+        Category="NONE"
+		Duration="0.5s"
+        ModelConditionsSet="USER_68" />
+
+	<AttributeModifier
+        id="AttributeModifier_BeamTarget"
+        Category="NONE"
+        ModelConditionsSet="USER_67">
+    </AttributeModifier>
+
+	<!-- END OF BEAM FIX -->
+
+	<AttributeModifier
+		id="AttributeModifier_SuppressionFix"
+		Category="NONE"
+		ObjectStatusToSet=""
+		ModelConditionsSet=""
+		Duration="5.0s">
+		<Modifier Type="SUPPRESSABILITY" Value="9999" />
+	</AttributeModifier>
+
+	<!--
+	<AttributeModifier
+        id="AttributeModifier_AlienCrystalShield_Propagated"
+        Category="NONE"
+        ObjectStatusToSet="NO_ATTACK UNATTACKABLE CANNOT_BE_SOLD IN_STASIS"
+		ModelConditionsSet="INVULNERABLE"
+		Duration="2s">
+		<Modifier Type="INVULNERABLE" Value="100%"/>
+		<Modifier Type="DAMAGE_MULT" Value="0%"/>
+		<Modifier Type="SPEED" Value="0%"/>
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+		<Modifier Type="CRUSHER_LEVEL" Value="-400%"/>
+    </AttributeModifier>
+-->
+
+	<!--
+	<AttributeModifier
+		id="AttributeModifier_AlienCrystalShield_Propagated"
+		Category="NONE"
+		Duration="1.5s"
+		MetaDuration="0"
+		StartFX=""
+		EndFX=""
+		ModelConditionsSet=""
+		ModelConditionsClear=""
+		ObjectStatusToSet="NO_ATTACK OUT_OF_PHASE"
+		StackingLimit="1"
+		ReplaceInCategoryIfLongest="False"
+		IgnoreIfAnticategoryActive="False">
+		<Modifier
+			Type="DAMAGE_MULT"
+			Value="0%" />
+	</AttributeModifier>
+	-->
+	<AttributeModifier
+		id="AttributeModifier_SetUnusedUser"
+		Category="NONE"
+		ModelConditionsSet="USER_70"
+		Duration="1.25s" />
+
+	<!--
+	<AttributeModifier
+		id="AttributeModifier_MantisReload"
+		Category="NONE"
+		ObjectStatusToSet="NO_ATTACK"
+		Duration="5s" />
+	-->
+	<AttributeModifier
+		id="AttributeModifier_AlienCrystalShield2"
+		Category="NONE"
+		ObjectStatusToSet="NO_ATTACK UNATTACKABLE CANNOT_BE_SOLD IN_STASIS"
+		ModelConditionsSet="INVULNERABLE"
+		Duration="1.25s">
+		<Modifier Type="INVULNERABLE" Value="100%" />
+		<Modifier Type="DAMAGE_MULT" Value="0%" />
+		<Modifier Type="SPEED" Value="0%" />
+		<Modifier Type="RESIST_EMP" Value="100%" />
+		<Modifier Type="CRUSHER_LEVEL" Value="-400%" />
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_AlienCrystalShield"
+		Category="NONE"
+		ObjectStatusToSet="NO_ATTACK UNATTACKABLE CANNOT_BE_SOLD IN_STASIS"
+		ModelConditionsSet="INVULNERABLE"
+		Duration="22.5s">
+		<Modifier Type="INVULNERABLE" Value="100%" />
+		<Modifier Type="DAMAGE_MULT" Value="0%" />
+		<Modifier Type="SPEED" Value="0%" />
+		<Modifier Type="RESIST_EMP" Value="100%" />
+		<Modifier Type="CRUSHER_LEVEL" Value="-400%" />
+	</AttributeModifier>
+
+	<!-- harv modifiers -->
+
+	<AttributeModifier
+		id="AttributeModifier_GreenTiberium"
+		Category="NONE"
+		ModelConditionsSet="USER_24"
+		Duration="4s">
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_BlueTiberium"
+		Category="NONE"
+		ModelConditionsSet="USER_25"
+		Duration="4s">
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_GreenTiberiumGDI"
+		Category="NONE"
+		ModelConditionsSet="USER_24"
+		Duration="3s">
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_BlueTiberiumGDI"
+		Category="NONE"
+		ModelConditionsSet="USER_25"
+		Duration="3s">
+	</AttributeModifier>
+
+	<!-- -->
+
+	<AttributeModifier
+		id="AttributeModifier_CyberneticLegsTibTrooper"
+		Category="NONE">
+		<Modifier Type="SPEED" Value="165%" />
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_IonCannon"
+		Category="NONE"
+		Duration="1.5s"
+		ObjectStatusToSet="">
+		<Modifier Type="SPEED" Value="40%" /> <!-- 33 is approved -->
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="Modifier_MARVWeaponFiring"
+		Category="NONE"
+		Duration="0.7s"
+		ModelConditionsSet="USER_1">
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_Leadership"
+		Category="NONE"
+		StackingLimit="1"
+		Duration="1.5s"
+		StartFX="FX_Scrin_EradicatorBuff"
+		EndFX="">
+		<Modifier Type="ARMOR" Value="75%" />
+		<Modifier Type="SUPPRESSABILITY" Value="150" />
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_AdvancedArticulators_Disint"
+		Category="NONE">
+		<Modifier Type="SPEED" Value="175%" /> <!-- speed nerfed from 185 to 175 in exchange for
+		original gun armor this makes it 30% faster than scrin disint with advanced articulators. -->
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="Modifier_NODDozerBlades"
+		ModelConditionsSet="UPGRADED_ARMOR"
+		Category="NONE">
+		<Modifier Type="ARMOR" Value="80%" />
+		<Modifier Type="CRUSHER_LEVEL" Value="100%" />
+	</AttributeModifier>
+
+	<!-- dozer blades increase damage resistance from 15% to 20% only for the scorpion -->
+	<AttributeModifier
+		id="Modifier_NODDozerBladesReckoner"
+		ModelConditionsSet="UPGRADED_ARMOR"
+		Category="NONE">
+		<Modifier Type="ARMOR" Value="70%" />
+		<Modifier Type="CRUSHER_LEVEL" Value="100%" />
+	</AttributeModifier>
+
+	<!-- infantry now resist 60% of damage while in cover -->
+
+	<AttributeModifier
+		id="Modifier_Cover"
+		Category="NONE"
+		ModelConditionsSet="COVER"
+	>
+		<Modifier Type="ARMOR" Value="60%" />
+		<Modifier Type="SUPPRESSABILITY" Value="9999" />
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_JumpJetInTransit"
+		Category="NONE"
+		ObjectStatusToSet="UNATTACKABLE">
+		<!-- <Modifier Type="INVULNERABLE" Value="100%"/> -->
+		<Modifier Type="CRUSHABLE_LEVEL" Value="200%" />
+	</AttributeModifier>
+
+	<!-- advanced articulator infantry bonus reduced by 10% -->
+
+	<AttributeModifier
+		id="AttributeModifier_AdvancedArticulators"
+		Category="NONE">
+		<Modifier Type="SPEED" Value="175%" />
+	</AttributeModifier>
+
+	<!-- fixed the occasional crash issue -->
+
+	<AttributeModifier
+		id="AttributeModifier_AlienPhaseField"
+		Duration="35s"
+		StartFX="FX_ALI_PhaseGenerator_Begin"
+		EndFX="FX_ALI_PhaseGenerator_End"
+		ModelConditionsSet="RIDER3"
+		ObjectStatusToSet="NO_ATTACK OUT_OF_PHASE">
+		<Modifier Type="DAMAGE_MULT" Value="0%" />
+		<Modifier Type="ARMOR" Value="1%" />
+		<Modifier Type="AUTO_HEAL" Value="0%" />
+	</AttributeModifier>
+
+	<!-- MARV and hex fix -->
+
+	<AttributeModifier
+		id="AttributeModifier_CrushedByMARV"
+		Category="NONE"
+		Duration="0.75s"
+		ModelConditionsSet="USER_15">
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_Recyclotron"
+		Category="NONE"
+		Duration="0.75s"
+		ObjectStatusToSet="SUICIDE_BOMBER_HAS_TARGET"> <!-- set hexa to 0.25 refresh rate -->
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_IdleHex"
+		Category="NONE"
+		ModelConditionsSet="USER_2">
+		<Modifier Type="SPEED" Value="0%" />
+		<Modifier Type="CRUSHER_LEVEL" Value="-400%" />
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_GarrisonFix"
+		Category="NONE"
+		Duration="1.0s">
+		<Modifier Type="CRUSHABLE_LEVEL" Value="400%" />
+	</AttributeModifier>
+
+	<!-- reverting handicap changes apart from -95% -->
+	<!--
+	<AttributeModifier
+		id="HandicapPercent5"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="95%"/>
+		<Modifier Type="HEALTH_MULT" Value="95%"/>
+		<Modifier Type="RECHARGE_TIME" Value="105%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent10"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="90%"/>
+		<Modifier Type="HEALTH_MULT" Value="90%"/>
+		<Modifier Type="RECHARGE_TIME" Value="110%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent15"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="85%"/>
+		<Modifier Type="HEALTH_MULT" Value="85%"/>
+		<Modifier Type="RECHARGE_TIME" Value="115%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent20"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="80%"/>
+		<Modifier Type="HEALTH_MULT" Value="80%"/>
+		<Modifier Type="RECHARGE_TIME" Value="120%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+	id="HandicapPercent25"
+	Category="LEVEL"
+	Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="75%"/>
+		<Modifier Type="HEALTH_MULT" Value="75%"/>
+		<Modifier Type="RECHARGE_TIME" Value="125%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent30"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="70%"/>
+		<Modifier Type="HEALTH_MULT" Value="70%"/>
+		<Modifier Type="RECHARGE_TIME" Value="130%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent35"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="65%"/>
+		<Modifier Type="HEALTH_MULT" Value="65%"/>
+		<Modifier Type="RECHARGE_TIME" Value="135%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent40"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="60%"/>
+		<Modifier Type="HEALTH_MULT" Value="60%"/>
+		<Modifier Type="RECHARGE_TIME" Value="140%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent45"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="55%"/>
+		<Modifier Type="HEALTH_MULT" Value="55%"/>
+		<Modifier Type="RECHARGE_TIME" Value="145%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent50"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="50%"/>
+		<Modifier Type="HEALTH_MULT" Value="50%"/>
+		<Modifier Type="RECHARGE_TIME" Value="150%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent55"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="45%"/>
+		<Modifier Type="HEALTH_MULT" Value="45%"/>
+		<Modifier Type="RECHARGE_TIME" Value="155%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent60"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="40%"/>
+		<Modifier Type="HEALTH_MULT" Value="40%"/>
+		<Modifier Type="RECHARGE_TIME" Value="160%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent65"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="35%"/>
+		<Modifier Type="HEALTH_MULT" Value="35%"/>
+		<Modifier Type="RECHARGE_TIME" Value="165%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent70"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="30%"/>
+		<Modifier Type="HEALTH_MULT" Value="30%"/>
+		<Modifier Type="RECHARGE_TIME" Value="170%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent75"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="25%"/>
+		<Modifier Type="HEALTH_MULT" Value="25%"/>
+		<Modifier Type="RECHARGE_TIME" Value="175%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent80"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="20%"/>
+		<Modifier Type="HEALTH_MULT" Value="20%"/>
+		<Modifier Type="RECHARGE_TIME" Value="180%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent85"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="15%"/>
+		<Modifier Type="HEALTH_MULT" Value="15%"/>
+		<Modifier Type="RECHARGE_TIME" Value="185%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent90"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="10%"/>
+		<Modifier Type="HEALTH_MULT" Value="10%"/>
+		<Modifier Type="RECHARGE_TIME" Value="190%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="HandicapPercent95"
+		Category="LEVEL"
+		Duration="0s"
+		MetaDuration="0"
+		StartFX=""
+		EndFX=""
+		ObjectStatusToSet=""
+		StackingLimit="1"
+		ReplaceInCategoryIfLongest="False"
+		IgnoreIfAnticategoryActive="False">
+		<Modifier
+			Type="RECHARGE_TIME"
+			Value="20%" />
+		<Modifier
+			Type="PRODUCTION"
+			Value="4000%" />
+	</AttributeModifier>
+	-->
+	<!--
+	<AttributeModifier
+		id="HandicapPercent100"
+		Category="LEVEL"
+		Duration="0s">
+		<Modifier Type="DAMAGE_MULT" Value="1%"/>
+		<Modifier Type="HEALTH_MULT" Value="1%"/>
+		<Modifier Type="RECHARGE_TIME" Value="200%"/>
+	</AttributeModifier>
+	-->
+</AssetDeclaration>

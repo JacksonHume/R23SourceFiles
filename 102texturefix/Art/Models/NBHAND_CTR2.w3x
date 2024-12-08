@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NBHAND2" Hierarchy="NBHand2">
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHAND.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHAND.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHAND.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHAND.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBHAND.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBBARRACKBIBB" BoneIndex="1">
+			<RenderObject>
+				<Mesh>NBHAND.GBBARRACKBIBB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NBHAND" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBHAND.NBHAND</Mesh>
+			</RenderObject>
+		</SubObject>
+
+		<SubObject SubObjectID="BLACKDISCIPLES_GLOWS" BoneIndex="5">
+			<RenderObject>
+				<Mesh>NBSHRINE.BLACKDISCIPLES_GLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="BLACKDISCIPLESUPGRD" BoneIndex="4">
+			<RenderObject>
+				<Mesh>NBSHRINE.BLACKDISCIPLESUPGRD</Mesh>
+			</RenderObject>
+		</SubObject>
+
+		<SubObject SubObjectID="GLOWS" BoneIndex="6">
+			<RenderObject>
+				<Mesh>NBSHRINE.GLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="CONFUPGRD" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBSHRINE.CONFUPGRD</Mesh>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="CONFUPGRD" BoneIndex="6">
+			<RenderObject>
+				<Mesh>NBSHRINE.CONFUPGRD</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+	</W3DContainer>
+</AssetDeclaration>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NBDHUB_UGTCM_D2_SKN2" Hierarchy="NBDHUB_QM_UGTCM_D2_SKL">
+		<SubObject SubObjectID="TCMHUB_UPGRADE" BoneIndex="23">
+			<RenderObject>
+				<Mesh>NBDHUB_QM_UGTCM_D2_SKN.TCMHUB_UPGRADE</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FLASHINGLIGHTS" BoneIndex="22">
+			<RenderObject>
+				<Mesh>NBDHUB_QM_UGTCM_D2_SKN.FLASHINGLIGHTS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBDHUB_D2SN.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBDHUB_D2SN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBDHUB_D2SN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBDHUB_D2SN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBDHUB_D2SN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NBDHUB_D2SN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN_NBDHUB" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBDHUB_QM_UGTCM_D2_SKN.NEWSKIN_NBDHUB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBDHUB_QM_UGTCM_D2_SKN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject> -->
+	</W3DContainer>
+</AssetDeclaration>

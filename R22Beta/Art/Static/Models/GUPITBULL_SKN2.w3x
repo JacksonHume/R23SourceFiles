@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GUPITBULL_SKN2" Hierarchy="GUPITBULL_SKL2">
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUPITBULL_SKN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MORTORTUBE" BoneIndex="12">
+			<RenderObject>
+				<Mesh>GUPITBULL_SKN.MORTORTUBE</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="B_SPOTLIGHT" BoneIndex="7">
+			<RenderObject>
+				<Mesh>GUPITBULL_SKN.B_SPOTLIGHT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GUPITBULL_SKN.OBBOX</CollisionBox>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

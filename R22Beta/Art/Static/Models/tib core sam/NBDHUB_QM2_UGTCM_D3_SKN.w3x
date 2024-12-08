@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NBDHUB_QM2_UGTCM_D3_SKN" Hierarchy="NBDHUB_QM2_UGTCM_D3_SKL">
+		<SubObject SubObjectID="NEWSKIN_NBDHUB_TCM" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBDHUB_QM_UGTCM_D3_SKN.NEWSKIN_NBDHUB_TCM</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN_HUB" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBDHUB_QM_UGTCM_D3_SKN.NEWSKIN_HUB</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

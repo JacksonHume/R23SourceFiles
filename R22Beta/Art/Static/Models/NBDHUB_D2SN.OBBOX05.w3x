@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DCollisionBox id="NBDHUB_D2SN.OBBOX05" JoypadPickingOnly="true">
+		<Center X="15.563650" Y="0.026661" Z="3.482631"/>
+		<Extent X="4.203741" Y="3.528351" Z="3.482631"/>
+	</W3DCollisionBox>
+</AssetDeclaration>

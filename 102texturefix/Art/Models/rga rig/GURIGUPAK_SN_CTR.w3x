@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GURIGUPAK_SN" Hierarchy="GURIGUPAK_SK">
+		<SubObject SubObjectID="OBBOX08" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GURIGUPAK_SN.OBBOX08</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GURIGUPAK_SN.OBBOX07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GURIGUPAK_SN.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GURIGUPAK_SN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GURIGUPAK_SN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GURIGUPAK_SN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GURIGUPAK_SN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GURIGUPAK_SN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREDS" BoneIndex="24">
+			<RenderObject>
+				<Mesh>GURIGUPAK_SN.TREDS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GURIGUPAK_SN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GUNR" BoneIndex="7">
+			<RenderObject>
+				<Mesh>GURIGUPAK_SN.GUNR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GUNL" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GURIGUPAK_SN.GUNL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGRAILMAIN" BoneIndex="43">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UGRAILMAIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_RAILBARREL1" BoneIndex="43">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UG_RAILBARREL1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGRAILMAINR" BoneIndex="44">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UGRAILMAIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_RAILBARREL1R" BoneIndex="44">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UG_RAILBARREL1</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

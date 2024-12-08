@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<UnitAbilityButtonTemplate
+		id="ButtonBurrowMines"
+		LogicCommand="Command_APCMinefield">
+		<Data>
+			<TargetedSpecialPower
+				StateData="ButtonStatePlayerPowerBurrowMines"
+				RadiusCursor="TargetingDecal04" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+
+	
+	<TargetedSpecialPowerButton
+		Id="Command_APCMinefield"
+		RadiusCursor="Portrait_APCMineDecal">
+		<State
+			Image="Button_PlayerPowerBurrowMines"
+			Title="NAME:AbilityAPCMinefield"
+			Description="DESC:AbilityAPCMinefield" />
+	</TargetedSpecialPowerButton>
+	<!-- unique evacuate icon 
+	<UnitAbilityButtonTemplate
+		id="ButtonEvacuateAll"
+		LogicCommand="Command_Evacuate">
+		<Data>
+			<Evacuate
+				StateData="ButtonStateAbilityEvacuateAll" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	
+	
+	<EvacuateButton
+		Id="Command_Evacuate">
+		<State
+			Image="Button_Upgrade_EchoCannon"
+			Title="NAME:AbilityEvacuateAll"
+			Description="DESC:AbilityEvacuateAll" />
+	</EvacuateButton>
+	-->
+	<ButtonSingleStateData
+		id="ButtonStateAbilityEvacuateAll">
+		<State
+			Image="Button_Upgrade_EchoCannon"
+			Title="NAME:AbilityEvacuateAll"
+			Description="DESC:AbilityEvacuateAll" />
+	</ButtonSingleStateData>
+	
+	
+	<!-- -->
+	
+	<!--
+	<PlayerPowerButtonTemplate
+		id="ButtonBurrowMines"
+		SpecialPower="SpecialPower_BurrowMines">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStatePlayerPowerBurrowMines"
+				RadiusCursor="TargetingDecalBurrowMines" />
+		</Data>
+	</PlayerPowerButtonTemplate>
+	-->
+	<!--
+	<ButtonSingleStateData
+		id="ButtonStatePlayerPowerBurrowMines" >
+		<State
+			Image="Button_PlayerPowerBurrowMines"
+			Title="NAME:PlayerPowerBurrowMines"
+			TypeDescription="TYPE:PlayerPowerBurrowMines"
+			Description="DESC:PlayerPowerBurrowMines" />
+	</ButtonSingleStateData>
+	-->
+	<!--
+	<PlayerPowerButtonTemplate
+		id="ButtonBurrowMines"
+		SpecialPower="SpecialPower_BurrowMines">
+		<Data>
+			<TargetedPower
+				RadiusCursor="TargetingDecalBurrowMines"
+				StateData="ButtonStatePlayerPowerBurrowMines"/>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	-->
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:Portrait_TargetingDecal04.xml" />
+	</Includes>	
+	
+</AssetDeclaration>

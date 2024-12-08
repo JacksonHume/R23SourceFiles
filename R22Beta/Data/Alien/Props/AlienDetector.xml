@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<GameObject
+		id="AlienDetector"
+		SelectPortrait="Portrait_NeutralSensorPod"
+		ButtonImage="Portrait_NeutralSensorPod"
+		Side="ALIEN"
+		EditorSorting="UNIT"
+		TransportSlotCount="0"
+		CommandSet="EmptyCommandSet"
+		IsTrainable="false"
+		KindOf="PRELOAD NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE IGNORE_FOR_VICTORY"
+		EditorName="AlienDetector">
+		<DisplayName>Name:AlienDetector</DisplayName>
+		<ArmorSet
+			Armor="NoArmor"
+			DamageFX="NormalDamageFX" />
+		<LocomotorSet
+			Locomotor="HumanLocomotor"
+			Condition="NORMAL"
+			Speed="0.0" />
+		<Draws>
+	
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:FXINVISBONE2" />
+				</ModelConditionState>
+			</ScriptedModelDraw>	
+			
+			<SpotlightDraw
+				id="ModuleTag_Spotlight"
+				AttachToBoneInAnotherModule="B_SPOTLIGHT"
+				RefreshTime="2.0s"
+				SweepTime="1.0s">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DMesh:FXASPOTLIGHT" />
+				</ModelConditionState>
+			</SpotlightDraw>
+		</Draws>
+		<Behaviors>
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="400" />
+			<Physics
+				id="ModuleTag_Physics" />
+			<AttachUpdate
+				id="ModuleTag_Attach"
+				Range="1.0"
+				Teleport="true"
+				ParentStatus=""
+				ForbiddenParentStatus=""
+				UseGeometry="false"
+				Flags="SAME_PLAYER_ONLY ONE_ATTACH_PER_PARENT"
+				DetachWhenParentHealed="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship=""
+					AcceptModelCondition=""
+					RejectModelCondition="">
+					<IncludeThing>AlienSeekerTank</IncludeThing>
+					<IncludeThing>Traveler59SeekerTank</IncludeThing>
+					<IncludeThing>Reaper17SeekerTank</IncludeThing>
+				</ObjectFilter>
+			</AttachUpdate>
+			<DestroyDie
+				id="ModuleTag_DestroyDie">
+				<DieMuxData
+					DeathTypes="ALL" 
+				/>
+			</DestroyDie>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AILuaEventsList=""
+				AutoAcquireEnemiesWhenIdle="YES" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="20" />
+		</Body>
+		<!--
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="0.0"
+				Height="0.0"></Shape>
+		</Geometry>
+		-->
+		<VisionInfo
+			VisionRange="0" />
+		<CrusherInfo
+			CrushableLevel="0" />
+	</GameObject>
+</AssetDeclaration>

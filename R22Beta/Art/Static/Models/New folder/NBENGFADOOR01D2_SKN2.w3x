@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NBENGFADOOR01D2_SKN2" Hierarchy="NBENGFADOOR_SKL">
+		<SubObject SubObjectID="FXTOPGLOW" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.FXTOPGLOW</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GANTRYLIGHTS03" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.GANTRYLIGHTS03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GANTRYLIGHTCAP02" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.GANTRYLIGHTCAP02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GANTRYLIGHTS05" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.GANTRYLIGHTS05</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GANTRYLIGHTCAP03" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.GANTRYLIGHTCAP03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GANTRYLIGHTS1" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.GANTRYLIGHTS1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GANTRYLIGHTCAP01" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.GANTRYLIGHTCAP01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FLOOR" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.FLOOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GANTRIES" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.GANTRIES</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX23" BoneIndex="17">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX23</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX22" BoneIndex="17">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX22</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX21" BoneIndex="17">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX21</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LIGHTS5_A" BoneIndex="12">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.LIGHTS5_A</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="9">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX08" BoneIndex="9">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX08</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX13" BoneIndex="9">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX13</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX17" BoneIndex="9">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX17</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX20" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX20</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX19" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX19</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX18" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX18</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX16" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX16</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX15" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX15</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX14" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX14</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX12" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX12</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX11" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX11</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX10" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX10</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX09" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX09</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="1">
+			<RenderObject>
+				<CollisionBox>NBENGFADOOR_SKN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="LIGHTS5_B" BoneIndex="1">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.LIGHTS5_B</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="DOORS" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBENGFADOOR_SKN.DOORS2</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

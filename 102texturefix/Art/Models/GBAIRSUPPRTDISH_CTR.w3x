@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBAIRSUPPRTDISH" Hierarchy="GBAIRSUPPRTDISH_SKL">
+		<SubObject SubObjectID="DISHSTAND" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTDISH.DISHSTAND</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TOWERDISH" BoneIndex="3">
+			<RenderObject>
+				<Mesh>GBAIRSUPPRTDISH.TOWERDISH</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

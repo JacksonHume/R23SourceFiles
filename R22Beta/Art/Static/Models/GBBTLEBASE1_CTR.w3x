@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBBTLEBASE1" Hierarchy="GBBTLEBASE1">
+		<SubObject SubObjectID="RADARGLOWS" BoneIndex="14">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.RADARGLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="RADAR" BoneIndex="14">
+			<RenderObject>
+				<Mesh>gbbtlebase.radar</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX08" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>gbbtlebase.obbox08</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>gbbtlebase.obbox07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>gbbtlebase.obbox06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>gbbtlebase.obbox05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>gbbtlebase.obbox04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>gbbtlebase.obbox03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>gbbtlebase.obbox02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>gbbtlebase.obbox01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GUNBASE_R" BoneIndex="12">
+			<RenderObject>
+				<Mesh>gbbtlebase.gunbase_r</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GUN_R" BoneIndex="10">
+			<RenderObject>
+				<Mesh>gbbtlebase.gun_r</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GUNBASE_L" BoneIndex="7">
+			<RenderObject>
+				<Mesh>gbbtlebase.gunbase_l</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GUN_L" BoneIndex="5">
+			<RenderObject>
+				<Mesh>gbbtlebase.gun_l</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="CENTERLIGHTS" BoneIndex="0">
+			<RenderObject>
+				<Mesh>gbbtlebase.centerlights</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ROCKETS" BoneIndex="1">
+			<RenderObject>
+				<Mesh>gbbtlebase.rockets</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREDS" BoneIndex="0">
+			<RenderObject>
+				<Mesh>gbbtlebase.treds</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FAB" BoneIndex="0">
+			<RenderObject>
+				<Mesh>gbbtlebase.fab</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGRAILMAIN" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UGRAILMAIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_RAILBARREL1" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UG_RAILBARREL1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGRAILMAINR" BoneIndex="16">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UGRAILMAIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_RAILBARREL1R" BoneIndex="16">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UG_RAILBARREL1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGRAILACCELERATORMAIN" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UGRAILACCELERATORMAIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_RAILACCELERATORBARREL1" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UG_RAILACCELERATORBARREL1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGRAILACCELERATORMAINR" BoneIndex="16">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UGRAILACCELERATORMAIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_RAILACCELERATORBARREL1R" BoneIndex="16">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.UG_RAILACCELERATORBARREL1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="POWERPLANTGLOWS" BoneIndex="17">
+			<RenderObject>
+				<Mesh>GBBTLEBASE.POWERPLANTGLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

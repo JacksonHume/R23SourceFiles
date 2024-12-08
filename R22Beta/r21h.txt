@@ -1,0 +1,29 @@
+- Bugs and flickering with shields stealthed units has been fixed. 
+- Beam Cannon damage increased from 125 to 135 (vanilla was 150).
+- MoK Super Charged Particle Beam upgrade time reduced to from 1:15 to 1:00. (vanilla upgrade duration is also 1:00)
+- The Enlightened green Charged Particle Beam damage increased by 10%.
+- Fixed a mod related issue where the EMP center could not be repaired with the repair tool.
+- Scorpion Tanks armor reduced overall to +20% with Dozer Blades. (this is +15% in 1.02).
+- Epic Units will no longer die when teleported with a Mastermind in certain areas on certain maps.
+- Nod Tiberium Infusion upgrade cost reduced from 1000$ to 500$, upgrade duration remains the same at 30s.
+- The Wolverine now shows the damaged texture when destroyed. 
+- PAC's now show detectors with Ion Storm enabled, spotlights now work again on the avatar/pacs/seekers.
+- Mechapede shard range range increased from 315 to 325. (vanilla had 325 range).
+- Vertigo Bomb weapon speed increased by 5% (200 to 210). (To ensure moving tripods cant dodge it).
+- Avatar stealth detection spotlight now displays in the correct place.	
+- BH Specter shadow no longer flickers.
+- Infestation hive xp bug has been fixed.
+
+
+-- PROBLEM WITH THIS.the mantis will now be able to shoot 1.5s soon after being built from a warfactory. DONE.
+
+-- SNIPER HARDPOINT INDEPENDENT TARGETING ?
+-- RAVAGER TIBERIUM AGITATION DAMAGE BASED ON STORAGE CAPACITY?
+
+
+
+/stealth tanks now receive 50% less damage from planetary assault carriers. (REMOVED THIS IN FAVOR OF REFLECTOR DAMAGE BEING 150 AGAIN).
+>> UNDONE. stormriders now deal 5% more damage vs scorpion tanks. DONE
+>>> UNDONE storm columns no longer deal splash damage vs firehawks. DONE
+adjusted modifier on the gdi harv to 2.7s. DONE
+UNDONE mecha shard range increased from 315 to 325. DONE

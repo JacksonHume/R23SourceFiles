@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBBARRACKS_ASKN2" Hierarchy="GBBARRACKS_ASKL2">
+		<SubObject SubObjectID="OBBOX10" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX10</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX09" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX09</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX08" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX08</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>GBBARRACKS_ASKN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="LOADREF2" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBBARRACKS_SKN.LOADREF2</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+		<SubObject SubObjectID="UG_COMPOSITEARMOR" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GBMEDBAY.UG_COMPOSITEARMOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_COMPOSITEARMOR02" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GBMEDBAY.UG_COMPOSITEARMOR02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_ARMOR" BoneIndex="17">
+			<RenderObject>
+				<Mesh>GBMEDBAY.UG_ARMOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBJECT05" BoneIndex="8">
+			<RenderObject>
+				<Mesh>GBBARRACKS_ASKN.OBJECT05</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBBARRACKBIBT" BoneIndex="7">
+			<RenderObject>
+				<Mesh>GBBARRACKS_ASKN.GBBARRACKBIBT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBJECT04" BoneIndex="6">
+			<RenderObject>
+				<Mesh>GBBARRACKS_ASKN.OBJECT04</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBBARRACKBIBB" BoneIndex="5">
+			<RenderObject>
+				<Mesh>GBBARRACKS_ASKN.GBBARRACKBIBB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBJECT03" BoneIndex="4">
+			<RenderObject>
+				<Mesh>GBBARRACKS_ASKN.OBJECT03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBJECT02" BoneIndex="3">
+			<RenderObject>
+				<Mesh>GBBARRACKS_ASKN.OBJECT02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBJECT01" BoneIndex="2">
+			<RenderObject>
+				<Mesh>GBBARRACKS_ASKN.OBJECT01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBBARRACK" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GBBARRACKS_ASKN.GBBARRACK</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

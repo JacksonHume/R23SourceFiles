@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GUHRVSTR_TIB4" Hierarchy="GUHRVSTR_TIB">
+	<!--
+		<SubObject SubObjectID="TIB_254" BoneIndex="4">
+			<RenderObject>
+				<Mesh>GUHRVSTR_TIB4.TIB_254</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIB_504" BoneIndex="3">
+			<RenderObject>
+				<Mesh>GUHRVSTR_TIB4.TIB_504</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIB_754" BoneIndex="2">
+			<RenderObject>
+				<Mesh>GUHRVSTR_TIB4.TIB_754</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+		<SubObject SubObjectID="TIB_100" BoneIndex="1">
+			<RenderObject>
+				<Mesh>GUHRVSTR_TIB1.TIB_100</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

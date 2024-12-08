@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<MultiplayerSettings
+		id="MultiplayerSettings">
+		<InitialCreditsVeryLow>500</InitialCreditsVeryLow>
+		<InitialCreditsLow>1000</InitialCreditsLow>
+		<InitialCreditsMedium>1500</InitialCreditsMedium>
+		<InitialCreditsHigh>2000</InitialCreditsHigh>
+		<InitialCreditsVeryHigh>2500</InitialCreditsVeryHigh>
+		<StartCountdownTimer>5</StartCountdownTimer>
+		<MaxBeaconsPerPlayer>3</MaxBeaconsPerPlayer>
+		<GameStatsModeData
+			GameStatsMode="ONLINE_RANKED_1V1_GAME">		
+			<AvailableMapName>tournament towerless 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Desert Meadow 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Desert Rush 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Desolate Overpass 1.02+__22e</AvailableMapName>
+			<AvailableMapName>disputed arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Dried Strait 1.02+__22e</AvailableMapName>
+			<AvailableMapName>extraction plateau 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Hampstead Gardens 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Nova Riparius 1.02+__22e</AvailableMapName>
+			<AvailableMapName>pipeline problems 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Ruthless Sertao RW 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Siberian Ground 1.02+__22e</AvailableMapName>
+			<AvailableMapName>sick city 1.02+__22e</AvailableMapName>
+			<AvailableMapName>slippery slope 1.02+__22e</AvailableMapName>
+			<AvailableMapName>small town usa 1.02+__22e</AvailableMapName>
+			<AvailableMapName>The Rift 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Threshold-19 Battle 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tiberium rift 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Tiers of Sorrow 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tiki turmoil 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament apocalypse 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament crater 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament decision nopoker 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament dustbowl nopoker 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament galaxy 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament highlands 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament la 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament odyssey 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Tournament Odyssey Redzone 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament ranch 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament rift 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament tower 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament towerless 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Tournament Wasteland 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Toxicity 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Voice of Heaven 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Abandoned Subway 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Arabian Oasis 1.02+__22e</AvailableMapName>
+			<AvailableMapName>atacama road 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Australian Bloodbath 1.02+__22e</AvailableMapName>
+			<AvailableMapName>battlebase beaverton 1.02+__22e</AvailableMapName>
+			<AvailableMapName>decrepit arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Desert Field 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Tournament Oasis 1.02+__22e</AvailableMapName>
+			<AvailableMapName>smashed dustbowl redzone 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament savanna 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Gold Rush 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Estrella 1.02+__22e</AvailableMapName>
+			<AvailableMapName>rolling thunder 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Field of Memories 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Border Zone 1.02+__22e</AvailableMapName>
+		</GameStatsModeData>
+		<GameStatsModeData
+			GameStatsMode="ONLINE_CLAN_1V1_GAME">
+			<AvailableMapName>tournament towerless 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Desert Meadow 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Desert Rush 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Desolate Overpass 1.02+__22e</AvailableMapName>
+			<AvailableMapName>disputed arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Dried Strait 1.02+__22e</AvailableMapName>
+			<AvailableMapName>extraction plateau 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Hampstead Gardens 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Nova Riparius 1.02+__22e</AvailableMapName>
+			<AvailableMapName>pipeline problems 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Ruthless Sertao RW 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Siberian Ground 1.02+__22e</AvailableMapName>
+			<AvailableMapName>sick city 1.02+__22e</AvailableMapName>
+			<AvailableMapName>slippery slope 1.02+__22e</AvailableMapName>
+			<AvailableMapName>small town usa 1.02+__22e</AvailableMapName>
+			<AvailableMapName>The Rift 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Threshold-19 Battle 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tiberium rift 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Tiers of Sorrow 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tiki turmoil 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament apocalypse 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament crater 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament decision nopoker 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament dustbowl nopoker 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament galaxy 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament highlands 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament la 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament odyssey 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Tournament Odyssey Redzone 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament ranch 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament rift 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament tower 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament towerless 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Tournament Wasteland 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Toxicity 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Voice of Heaven 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Abandoned Subway 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Arabian Oasis 1.02+__22e</AvailableMapName>
+			<AvailableMapName>atacama road 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Australian Bloodbath 1.02+__22e</AvailableMapName>
+			<AvailableMapName>battlebase beaverton 1.02+__22e</AvailableMapName>
+			<AvailableMapName>decrepit arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Desert Field 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Tournament Oasis 1.02+__22e</AvailableMapName>
+			<AvailableMapName>smashed dustbowl redzone 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament savanna 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Gold Rush 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Estrella 1.02+__22e</AvailableMapName>
+			<AvailableMapName>rolling thunder 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Field of Memories 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Border Zone 1.02+__22e</AvailableMapName>
+		</GameStatsModeData>
+		<GameStatsModeData
+			GameStatsMode="ONLINE_RANKED_2V2_GAME">			
+			<AvailableMapName>heaven and hell 1.02+__22e</AvailableMapName>
+			<AvailableMapName>ice arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>island paradise four 1.02+__22e</AvailableMapName>
+			<AvailableMapName>mountain valley 1.02+__22e</AvailableMapName>
+			<AvailableMapName>murderers row 1.02+__22e</AvailableMapName>
+			<AvailableMapName>oasis onslaught 1.02+__22e</AvailableMapName>
+			<AvailableMapName>pandora 1.02+__22e</AvailableMapName>
+			<AvailableMapName>pipeline fusion 1.02+__22e</AvailableMapName>
+			<AvailableMapName>prophecies 1.02+__22e</AvailableMapName>
+			<AvailableMapName>suburban arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>the bfme 1.02+__22e</AvailableMapName>
+			<AvailableMapName>the harvest 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tiberian forest 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tiberium processing 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament shaft 1.02+__22e</AvailableMapName>
+			<AvailableMapName>unfriendly skies 1.02+__22e</AvailableMapName>
+			<AvailableMapName>unsound investment 1.02+__22e</AvailableMapName>
+			<AvailableMapName>volcano valleys 1.02+__22e</AvailableMapName>
+			<AvailableMapName>wasteland circles 1.02+__22e</AvailableMapName>
+			<AvailableMapName>wrecktropolis 1.02+__22e</AvailableMapName>
+			<AvailableMapName>arid remains 1.02+__22e</AvailableMapName>
+			<AvailableMapName>arizona sunshine 1.02+__22e</AvailableMapName>
+			<AvailableMapName>backwater brawl 1.02+__22e</AvailableMapName>
+			<AvailableMapName>chaotic coastline 1.02+__22e</AvailableMapName>
+			<AvailableMapName>crater of carnage 1.02+__22e</AvailableMapName>
+			<AvailableMapName>crater of carnage nopoker 1.02+__22e</AvailableMapName>
+			<AvailableMapName>crosstown conflict 1.02+__22e</AvailableMapName>
+			<AvailableMapName>desert rampage 1.02+__22e</AvailableMapName>
+			<AvailableMapName>redzone rampage 1.02+__22e</AvailableMapName>	
+			<AvailableMapName>desolation 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Disdain 1.02+__22e</AvailableMapName>
+			<AvailableMapName>dockside devastation 1.02+__22e</AvailableMapName>
+			<AvailableMapName>downtown dustbowl 1.02+__22e</AvailableMapName>
+			<AvailableMapName>end of the line 1.02+__22e</AvailableMapName>
+			<AvailableMapName>grasslands landgrab 1.02+__22e</AvailableMapName>
+		</GameStatsModeData>
+		<GameStatsModeData
+			GameStatsMode="ONLINE_CLAN_2V2_GAME">			
+			<AvailableMapName>heaven and hell 1.02+__22e</AvailableMapName>
+			<AvailableMapName>ice arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>island paradise four 1.02+__22e</AvailableMapName>
+			<AvailableMapName>mountain valley 1.02+__22e</AvailableMapName>
+			<AvailableMapName>murderers row 1.02+__22e</AvailableMapName>
+			<AvailableMapName>oasis onslaught 1.02+__22e</AvailableMapName>
+			<AvailableMapName>pandora 1.02+__22e</AvailableMapName>
+			<AvailableMapName>pipeline fusion 1.02+__22e</AvailableMapName>
+			<AvailableMapName>prophecies 1.02+__22e</AvailableMapName>
+			<AvailableMapName>suburban arena 1.02+__22e</AvailableMapName>
+			<AvailableMapName>the bfme 1.02+__22e</AvailableMapName>
+			<AvailableMapName>the harvest 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tiberian forest 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tiberium processing 1.02+__22e</AvailableMapName>
+			<AvailableMapName>tournament shaft 1.02+__22e</AvailableMapName>
+			<AvailableMapName>unfriendly skies 1.02+__22e</AvailableMapName>
+			<AvailableMapName>unsound investment 1.02+__22e</AvailableMapName>
+			<AvailableMapName>volcano valleys 1.02+__22e</AvailableMapName>
+			<AvailableMapName>wasteland circles 1.02+__22e</AvailableMapName>
+			<AvailableMapName>wrecktropolis 1.02+__22e</AvailableMapName>
+			<AvailableMapName>arid remains 1.02+__22e</AvailableMapName>
+			<AvailableMapName>arizona sunshine 1.02+__22e</AvailableMapName>
+			<AvailableMapName>backwater brawl 1.02+__22e</AvailableMapName>
+			<AvailableMapName>chaotic coastline 1.02+__22e</AvailableMapName>
+			<AvailableMapName>crater of carnage 1.02+__22e</AvailableMapName>
+			<AvailableMapName>crater of carnage nopoker 1.02+__22e</AvailableMapName>
+			<AvailableMapName>crosstown conflict 1.02+__22e</AvailableMapName>
+			<AvailableMapName>desert rampage 1.02+__22e</AvailableMapName>
+			<AvailableMapName>redzone rampage 1.02+__22e</AvailableMapName>	
+			<AvailableMapName>desolation 1.02+__22e</AvailableMapName>
+			<AvailableMapName>Disdain 1.02+__22e</AvailableMapName>
+			<AvailableMapName>dockside devastation 1.02+__22e</AvailableMapName>
+			<AvailableMapName>downtown dustbowl 1.02+__22e</AvailableMapName>
+			<AvailableMapName>end of the line 1.02+__22e</AvailableMapName>
+			<AvailableMapName>grasslands landgrab 1.02+__22e</AvailableMapName>
+		</GameStatsModeData>
+		<UseShroud>False</UseShroud>
+		<ShowRandomPlayerTemplate>True</ShowRandomPlayerTemplate>
+		<ShowRandomStartPos>True</ShowRandomStartPos>
+		<ShowRandomColor>True</ShowRandomColor>
+	</MultiplayerSettings>
+</AssetDeclaration>

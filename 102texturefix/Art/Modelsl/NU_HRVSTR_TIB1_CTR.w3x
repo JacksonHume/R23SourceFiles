@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <W3DContainer Hierarchy="NU_HRVSTR_TIB" id="NU_HRVSTR_TIB1">
+    <SubObject BoneIndex="4" SubObjectID="TIB_25">
+      <RenderObject>
+        <Mesh>NU_HRVSTR_TIB1.TIB_25</Mesh>
+      </RenderObject>
+    </SubObject>
+  </W3DContainer>
+</AssetDeclaration>

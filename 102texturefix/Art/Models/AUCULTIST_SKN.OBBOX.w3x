@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DCollisionBox id="AUCULTIST_SKN.OBBOX" JoypadPickingOnly="false">
+		<Center X="0.288998" Y="0.000000" Z="8.604570"/>
+		<Extent X="5.252717" Y="5.731895" Z="8.604570"/>
+	</W3DCollisionBox>
+</AssetDeclaration>

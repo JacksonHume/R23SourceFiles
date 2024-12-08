@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+  <!--
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="COmmand_CaptureBuilding2"
+		Options="NEED_TARGET_ENEMY_OBJECT">
+		<SpecialPower>SpecialPower_EngineerCapture</SpecialPower>
+	</LogicCommand>
+	-->
+  <!--
+	 <LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_Uncombine2">
+    <SpecialPower>SpecialPowerUncombineWithUnit2</SpecialPower>
+  </LogicCommand>
+  
+   <LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_Uncombine3">
+    <SpecialPower>SpecialPowerUncombineWithUnit3</SpecialPower>
+  </LogicCommand>
+  
+   <LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_DevourerTankConversionBeam">
+    <SpecialPower>SpecialPower_ConversionBeam</SpecialPower>
+  </LogicCommand>
+
+-->
+  <LogicCommand
+    Type="SPECIAL_POWER"
+    Options="NEED_TARGET_ENEMY_OBJECT"
+    id="Command_FireTiberiumAgitation">
+    <SpecialPower>SpecialPower_UseTiberiumAgitation</SpecialPower>
+  </LogicCommand>
+
+
+  <!-- dispatch power-->
+   <!--
+  <LogicCommand
+    Options="NEED_TARGET_POS"
+    Type="SPECIAL_POWER"
+    id="Command_TeleportObjectsDispatch">
+    <SpecialPower>SpecialPower_TeleportObjectsDispatch</SpecialPower>
+  </LogicCommand>
+  <LogicCommand
+    Options="NEED_TARGET_POS"
+    Type="SPECIAL_POWER"
+    id="Command_TempRemoveEMP">
+    <SpecialPower>SpecialPower_TempRemoveEMP</SpecialPower>
+  </LogicCommand>
+-->
+
+  <!--
+   <LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_UpgradedConversionBeam">
+    <SpecialPower>SpecialPower_ConversionBeamUpgraded</SpecialPower>
+  </LogicCommand>
+  <LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_AlienMastermindSelectObjectsForTeleportHex">
+	<SpecialPower>SpecialPowerMastermindTeleportObjectSelectHex</SpecialPower>
+  </LogicCommand>
+  <LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_AlienMastermindTeleportObjectsHex">
+	<SpecialPower>SpecialPowerMastermindTeleportObjectHex</SpecialPower>
+  </LogicCommand>
+  -->
+  <!--
+  <LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_Traveler59ProdigySelectObjectsForTeleport">
+    <SpecialPower>SpecialPowerMastermindTeleportObjectSelect</SpecialPower>
+  </LogicCommand>
+  <LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_Traveler59ProdigyTeleportObjects">
+    <SpecialPower>SpecialPowerMastermindTeleportObject</SpecialPower>
+  </LogicCommand>
+  -->
+  <!--
+   <LogicCommand
+		Options="NEED_TARGET_ALLY_OBJECT"
+		Type="SPECIAL_POWER"
+		id="Command_AvatarCommandeerParalyzeBeamCannon">
+	<SpecialPower>SpecialPower_AvatarCommandeerParalyzeBeamCannonEMP</SpecialPower>
+  </LogicCommand>
+  -->
+  <LogicCommand
+    Options="NEED_TARGET_POS"
+    Type="SPECIAL_POWER"
+    id="Command_Traveler59ProdigySelectObjectsForTeleport">
+    <SpecialPower>SpecialPowerMastermindTeleportObjectSelect</SpecialPower>
+  </LogicCommand>
+  <LogicCommand
+    Options="NEED_TARGET_POS"
+    Type="SPECIAL_POWER"
+    id="Command_Traveler59ProdigyTeleportObjects">
+    <SpecialPower>SpecialPowerMastermindTeleportObject</SpecialPower>
+  </LogicCommand>
+
+  <LogicCommand
+    Type="PLAYER_UPGRADE"
+    id="Command_PurchaseUpgradeSTArmoryRailgunTech">
+    <Upgrade>Upgrade_STArmoryRailgunTech</Upgrade>
+  </LogicCommand>
+
+  <!-- cheaper mok upgrade -->
+
+  <LogicCommand
+    Type="PLAYER_UPGRADE"
+    id="Command_PurchaseUpgradeMoKTiberiumInfusion">
+    <Upgrade>Upgrade_MoKTiberiumInfusion</Upgrade>
+  </LogicCommand>
+
+</AssetDeclaration>

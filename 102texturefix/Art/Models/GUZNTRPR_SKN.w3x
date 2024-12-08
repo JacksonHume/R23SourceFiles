@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GUZNTRPR_SKN2" Hierarchy="GUZNTRPR_SKL2">
+		<SubObject SubObjectID="BOUNDBOX" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GUZNTRPR_SKN.BOUNDBOX</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASH" BoneIndex="26">
+			<RenderObject>
+				<Mesh>GUZNTRPR_SKN.MUZZLEFLASH</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGINJECTOR" BoneIndex="18">
+			<RenderObject>
+				<Mesh>GUZNTRPR_SKN.UGINJECTOR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="UGJUMP" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GUZNTRPR_SKN.UGJUMP</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+		<SubObject SubObjectID="UGJUMP2" BoneIndex="15">
+			<RenderObject>
+				<Mesh>GUZNTRPR_SKN.UGJUMP2</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGSCANNER" BoneIndex="3">
+			<RenderObject>
+				<Mesh>GUZNTRPR_SKN.UGSCANNER</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GUZNTRPR" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GUZNTRPR_SKN.GUZNTRPR</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

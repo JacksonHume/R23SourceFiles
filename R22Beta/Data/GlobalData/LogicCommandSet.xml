@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!--
+	<LogicCommandSet
+	 id="SteelTalonsCombatEngineerCommandSet">
+		<Cmd>Command_SteelTalonsCallForTransportInfantry</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+-->
+	<!--
+	<LogicCommandSet
+		id="AlienSeekerTankCommandSet">
+		<Cmd>Command_Uncombine</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+		<Cmd>Command_Uncombine2</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="AlienPlanetaryAssaultCarrierCommandSet">
+		<Cmd>Command_AlienAssaultCarrierDeployIonStormStart</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+		<Cmd>Command_Uncombine3</Cmd>
+	</LogicCommandSet>
+-->
+
+	<!-- mastermind command added.-->
+	 <!--
+	<LogicCommandSet
+		id="AlienMastermindCommandSet">
+		<Cmd>Command_AlienMastermindSelectObjectsForTeleport</Cmd>
+		<Cmd>Command_AlienMastermindTeleportObjects</Cmd>
+		<Cmd>Command_AlienMastermindManipulatorDevice</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+-->
+	<!-- <Cmd>Command_AlienMastermindTeleportObjects</Cmd>
+		<Cmd>Command_TempRemoveEMP</Cmd>-->
+
+	<LogicCommandSet
+		id="MarkedOfKaneSecretShrineCommandSet">
+		<Cmd>Command_PurchaseUpgradeCyberneticLegs</Cmd>
+		<Cmd>Command_PurchaseUpgradeMoKTiberiumInfusion</Cmd>
+		<Cmd>Command_RedShadowStrikeTeam</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="NODOperationsCenterCommandSet">
+		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_CloakingField</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="MarkedOfKaneOperationsCenterCommandSet">
+		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_MarkedOfKaneCloakingField</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="BlackHandOperationsCenterCommandSet">
+		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
+	</LogicCommandSet>
+
+	<!-- hex fix -->
+	<!--
+	<LogicCommandSet
+		id="AlienMastermindCommandSet">
+		<Cmd>Command_AlienMastermindSelectObjectsForTeleport</Cmd>
+		<Cmd>Command_Traveler59ProdigyTeleportObjects</Cmd>
+		<Cmd>Command_AlienMastermindManipulatorDevice</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+	-->
+
+	<LogicCommandSet
+		id="Traveler59BlinkMastermindCommandSet">
+		<Cmd>Command_AlienMastermindSelectObjectsForTeleport</Cmd>
+		<Cmd>Command_AlienMastermindTeleportObjects</Cmd>
+		<Cmd>Command_UseTraveler59ProdigyBlinkPack</Cmd>
+		<Cmd>Command_AlienProdigyManipulatorDevice</Cmd>
+		<Cmd>Command_AlienBlinkMastermindAOEMindControl</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+
+	<!-- remove those pitbull abilities and test for slot position -->
+
+	<LogicCommandSet
+		id="GDIPitbullCommandSet">
+		<Cmd>Command_GDICallForTransportVehicle</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="SteelTalonsPitbullCommandSet">
+		<Cmd>Command_SteelTalonsCallForTransportVehicle</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="ZOCOMPitbullCommandSet">
+		<Cmd>Command_ZOCOMCallForTransportVehicle</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="SteelTalonsTechCenterCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeSTArmoryRailgunTech</Cmd>
+		<!--	<Cmd>Command_PurchaseUpgradeStratofighterBooster</Cmd> -->
+		<Cmd>Command_PurchaseUpgradeAdaptiveArmor</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_SpecialPowerSonicRepulsionField</Cmd>
+	</LogicCommandSet>
+
+</AssetDeclaration>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NUSTLTHTNKSTLTHTIBCORE" Hierarchy="NUSTLTHTNK_SKL">
+		<SubObject SubObjectID="TREADSMOVE" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUSTLTHTNKSTLTHTIBCORE.TREADSMOVE</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSSTOP" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUSTLTHTNKSTLTHTIBCORE.TREADSSTOP</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSTURNLEFT" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUSTLTHTNKSTLTHTIBCORE.TREADSTURNLEFT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREADSTURNRIGHT" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUSTLTHTNKSTLTHTIBCORE.TREADSTURNRIGHT</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0"> 
+			<RenderObject>
+				<Mesh>NUSTLTHTNKSTLTHTIBCORE.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIBCOREMISSILEL" BoneIndex="11">
+			<RenderObject>
+				<Mesh>NUSTLTHTNKSTLTHTIBCORE.TIBCOREMISSILEL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TIBCOREMISSILER" BoneIndex="10">
+			<RenderObject>
+				<Mesh>NUSTLTHTNKSTLTHTIBCORE.TIBCOREMISSILER</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

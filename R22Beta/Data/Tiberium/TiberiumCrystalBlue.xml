@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="TiberiumCrystalBlue"
+		Side="Neutral"
+		EditorSorting="MISC_NATURAL"
+		KindOf="IMMOBILE SELECTABLE HARVESTABLE IGNORE_FOR_VICTORY TIBERIUM NOT_AUTOACQUIRABLE NO_COLLIDE SHADOW_ULTRA_HIGH_ONLY DO_NOT_CLASSIFY"
+		IsHarvestable="true"
+		RadarPriority="STRUCTURE"
+		EditorName="TiberiumCrystalBlue"
+		SelectPortrait="Portrait_BlueTiberium"
+		ButtonImage="Portrait_BlueTiberium"
+		BuildTime="1"
+		Description="Desc:BlueTiberiumCrystal">
+		<DisplayName>Name:BlueTiberiumCrystal</DisplayName>
+		<ArmorSet
+			Armor="TiberiumCrystalArmor"
+			DamageFX="VehicleDamageFX"
+			Conditions="" />
+		<Draws>
+			<ScriptedModelDraw
+				id="132FF3D4"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="False"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="False">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name=""
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_12"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name=""
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="none"
+						FXParticleSystemTemplate="GDIMARVHarvestDust"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="none"
+						FXParticleSystemTemplate="GDIMARVHarvestShards"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="none"
+						FXParticleSystemTemplate="GDIMARVHarvestSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+			<ScriptedModelDraw
+				id="50DF2C46"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="False"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="False">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name=""
+						ExtraMesh="False" />
+				</ModelConditionState>
+		
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE1 USER_4"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibInfestationBugs"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+			
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE2 USER_4"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibInfestationBugs"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE3 USER_4"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibInfestationBugs"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE4 USER_4"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibInfestationBugs"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+		
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE5 USER_4"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibInfestationBugs"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+		
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE1"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE2"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE3"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE4"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE5"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:TIBCELLBLUE01"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TibCellAuraBlue"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_GROWING"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="TibCellBlue01"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				
+				<!-- TRY LUA SCRIPT -TIBERIUM_GROWING -->
+				<!--
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_2">
+					<Animation
+						AnimationName="TibCellBlue01"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				-->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE1">
+					<Animation
+						AnimationName="TibCellBlue01"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE2">
+					<Animation
+						AnimationName="TibCellBlue01"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE3">
+					<Animation
+						AnimationName="TibCellBlue01"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE4">
+					<Animation
+						AnimationName="TibCellBlue01"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TIBERIUM_CRYSTAL_TYPE5">
+					<Animation
+						AnimationName="TibCellBlue01"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<RandomModelCondition
+				id="E6B33535"
+				Conditions="TIBERIUM_CRYSTAL_TYPE1 TIBERIUM_CRYSTAL_TYPE2 TIBERIUM_CRYSTAL_TYPE3 TIBERIUM_CRYSTAL_TYPE4 TIBERIUM_CRYSTAL_TYPE5" />
+			<AttributeModifierPoolUpdate
+				id="513BC476" />
+			<DestroyDie
+				id="A07A6012">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</DestroyDie>
+			<PassiveAreaEffectBehavior
+				id="9C160D86"
+				EffectRadius="50"
+				MaxBeneficiaries="0"
+				HealingPercentPerSecond="4%"
+				HealingPointsPerSecond="0"
+				SurveyDelayFrames="15"
+				UpgradeRequired=""
+				AntiCategoryMask=""
+				AntiFX=""
+				HealFX=""
+				NonStackable="False"
+				AffectAttached="False"
+				AffectWoundedOnly="False"
+				AffectUnderAttack="False">
+				<AllowFilter
+					Rule="NONE"
+					Relationship=""
+					Alignment="NONE"
+					Include="HEALED_BY_TIBERIUM"
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+			</PassiveAreaEffectBehavior>
+			<TiberiumCrystal
+				id="BC71C8AC"
+				NumBoxes="50"
+				ValuePerBox="14"
+				GrowthStages="3"
+				TimeBetweenGrowthStages="60s"
+				GrowthTimePerStage="1.7s">
+				<RadarColor
+					B="255"
+					G="153"
+					R="133" />
+			</TiberiumCrystal>
+			
+			<FireWeaponUpdate
+				id="955F8DC3"
+				ActiveWhenDisabled=""
+				HeroModeTrigger="False"
+				ChargingModeTrigger="False"
+				AliveOnly="False">	
+				<FireWeaponNugget
+					WeaponName="BlueTiberiumWeapon"
+					FireDelay="0s"
+					FireInterval="0.1s"
+					OneShot="False" />
+				<FireWeaponNugget
+					WeaponName="MARVTiberiumFXWeapon"
+					FireDelay="0s"
+					FireInterval="0.4s"
+					OneShot="False" />
+				<FireWeaponNugget
+					WeaponName="BlueTiberiumCrystalWeapon"
+					FireDelay="2.5s"
+					FireInterval="0s"
+					OneShot="False" />
+				<FireWeaponNugget
+					WeaponName="TiberiumInfestationCrystalWeapon"
+					FireDelay="1s"
+					FireInterval="0s"
+					OneShot="False" />
+			</FireWeaponUpdate>
+		
+			<FXListBehavior
+				id="C74C39D8">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="EXTRA_8" />
+				<Event
+					Index="onDeath"
+					FX="FX_TibCellDeathBlue"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+			</FXListBehavior>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="A5C3EB8A"
+				MaxHealth="5000"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				InitialHealth="-1"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="22.0"
+				Height="18.0">
+				<Offset
+					x="0.0"
+					y="0"
+					z="0" />
+			</Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:TiberiumCrystal_Select" AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:TiberiumCrystal_AmbientDelayedLoop" AudioType="soundAmbient" />		
+		</AudioArraySound>
+		<ShadowInfo
+			Type="TIBERIUM_ROOT"
+			Texture="TiberiumCrystal02Energy"
+			AdditionalTexture="TiberiumCracksBlue01"
+			SizeX="100"
+			SizeY="100"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="0s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="0s"
+			OpacityEnd="0"
+			MaxHeight="20"
+			SunAngle="0"
+			OverrideLODVisibility="True"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0"
+			VisionSide="100%"
+			VisionRear="100%"
+			VisionBonusTestRadius="100"
+			VisionBonusTestSegments="8"
+			VisionBonusPercentPerFoot="0%"
+			MaxVisionBonusPercent="50%"
+			MinVisionBonusPercent="-50%" />
+	</GameObject>
+</AssetDeclaration>

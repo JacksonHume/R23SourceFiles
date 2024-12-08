@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="NOD_DockCargoLoadingCrane"
+		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS STRUCTURE PRELOAD AUTO_RALLYPOINT NOT_AUTOACQUIRABLE KEEP_CLASSIFIED_WHEN_DEAD RESIST_EMP CIVILIAN_BUILDING COVER IGNORED_IN_GUI"
+		Browser="REGION NOD_Structures STRUCTURE"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="INVALID"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="0d"
+		BuildFadeInOnCreateTimeSeconds="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="Civilian"
+		EditorName="NOD_DockCargoLoadingCrane"
+		EditorSorting="STRUCTURE"
+		BountyValue="0"
+		BuildTime="0"
+		BuildFadeInOnCreateTime="0"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet="EmptyCommandSet"
+		SelectPortrait="Portrait_NodDockLoadingCrane"
+		ButtonImage="Portrait_NodDockLoadingCrane"
+		VoicePriority="0"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CrowdResponse=""
+		CampnessValue="0"
+		CampnessValueRadius="600"
+		Scale="1"
+		HealthBoxScale="1.5"
+		HealthBoxHeightOffset="10"
+		OcclusionDelay="0"
+		LiveCameraPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		ThreatRadius="-1"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="0"
+		CommandPoints="0"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="0"
+		MaxDistanceForEngaged="0"
+		EngagedStateTimeout="0"
+		ThreatLevel="1"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		DisplayMeleeDamage="-1"
+		DisplayRangedDamage="-1"
+		HeroSortOrder="2147483647"
+		FiringArc="360"
+		CamouflageDetectionMultiplier="1"
+		SelectionPriority="2147483647"
+		ProductionQueueType="INVALID"
+		BuildPlacementTypeFlag="INVALID"
+		BuildOnRequiredObjectKindOf=""
+		UnitCategory="NONE"
+		WeaponCategory="NONE"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon=""
+		ReinvisibilityDelay="4s"
+		CaptureTime="0s"
+		BuildCost="0"
+		RefundValue="0"
+		ThreatValue="0"
+		MaxSimultaneousOfType="0"
+		TransportSlotCount="0"
+		IsTrainable="True"
+		IsForbidden="False"
+		IsPrerequisite="False"
+		IsGrabbable="False"
+		IsHarvestable="False"
+		StructureRubbleHeight="0"
+		ForceLuaRegistration="False"
+		ShowHealthInSelectionDecal="False"
+		KeepSelectableWhenDead="False"
+		IsAutoBuilt="False"
+		CanPathThroughGates="True"
+		ShouldClearShotsOnIdle="False"
+		BuildInProximityToSamePlayerStucture="True">
+		<DisplayName>Name:NODDockLoadingCrane</DisplayName>
+		<ArmorSet
+			Armor="StructureArmor"
+			DamageFX="GenericStructureDamageFX"
+			Conditions="" />
+		<Draws>
+			<ScriptedModelDraw
+				id="50DF2C46"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="False"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NSDOCKLOADER"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NSDOCKLOADER_D3"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NSDOCKLOADER_D2"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NSDOCKLOADER"
+						ExtraMesh="False" />
+					<Texture
+						Original="NSDLoad"
+						New="NSDLoadD" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="NSDOCKLOADER_D3"
+						AnimationMode="MANUAL"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="NSDOCKLOADER_D2"
+						AnimationMode="MANUAL"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="NSDOCKLOADER_D2"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="0"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+					<FXEvent
+						Frame="28"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_D007"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="30"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_D002"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="31"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_D008"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="35"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_D004"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="35"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_D005"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="42"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_D006"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="50"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_D003"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="53"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_D001"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_D001"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_D002"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_D003"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_D004"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_D005"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_D006"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_D007"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_D008"
+						FireWhenSkipped="True" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="NSDOCKLOADER_D3"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="0"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+					<FXEvent
+						Frame="12"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_DB004"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="16"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_DA003"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="17"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_DA006"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="28"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_DA013"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="28"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_DA006"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="29"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_DA005"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="33"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_DA002"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="43"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_DA014"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="60"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneWater"
+						Bone="Bone_DA012"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_DA006"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_DA004"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_DA002"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_DA012"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_DA008"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_DA011"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_DA001"
+						FireWhenSkipped="True" />
+					<FXEvent
+						Frame="1"
+						FrameStep="0"
+						FrameStop="0"
+						Effect="FX_NodCraneDust"
+						Bone="Bone_DA009"
+						FireWhenSkipped="True" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate
+				id="513BC476" />
+			<FXListBehavior
+				id="C74C39D8">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_BuildDamaged_Large"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_BuildDamaged_Large"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_BuildRubble_Large"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+				<Event
+					Index="onDeath"
+					FX="FX_BaseCivilianStructureNoGarrisonDestructible_Die"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="True" />
+			</FXListBehavior>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="B313F576"
+				MaxHealth="6000"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				InitialHealth="6000"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+		</Body>
+		<Geometry
+			IsSmall="False">
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="62.9093"
+				MinorRadius="10.5525"
+				Height="101.467"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="9.15266"
+					y="-66.0738"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="62.9093"
+				MinorRadius="10.5525"
+				Height="101.467"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="9.15266"
+					y="64.7584"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="14.2053"
+				MinorRadius="15.4229"
+				Height="9.7408"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="130.101"
+					y="-66.8855"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="14.2053"
+				MinorRadius="15.4229"
+				Height="9.7408"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="130.101"
+					y="63.9484"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="48.2981"
+				MinorRadius="59.2565"
+				Height="127.128"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-20.0697"
+					y="0.488354"
+					z="-0.993668" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="-63.0183"
+					y="-52.5724"
+					z="81.1506" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="20.4818"
+					y="-52.5724"
+					z="123.988" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="20.4818"
+					y="55.1327"
+					z="81.1506" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-63.0183"
+					y="55.1327"
+					z="123.988" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-63.0183"
+					y="-52.5724"
+					z="123.988" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="20.4818"
+					y="-52.5724"
+					z="81.1506" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="20.4818"
+					y="55.1327"
+					z="123.988" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-63.0183"
+					y="55.1327"
+					z="81.1506" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				EvaEvent="BuildingStolen"
+				AudioType="voiceDefectingAway" />
+			<AudioEntry
+				EvaEvent="EnemyBuildingCaptured"
+				AudioType="voiceDefectingTowards" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="Multisound:HumanFaction_MediumBuilding_LightDamageMS"
+				AudioType="soundOnDamaged" />
+			<AudioEntry
+				Sound="Multisound:HumanFaction_MediumBuilding_HeavyDamageMS"
+				AudioType="soundOnReallyDamaged" />
+			<AudioEntry
+				Sound="Multisound:HumanFaction_MediumBuilding_LightDamageMS"
+				AudioType="soundOnDamaged" />
+			<AudioEntry
+				Sound="Multisound:HumanFaction_MediumBuilding_HeavyDamageMS"
+				AudioType="soundOnReallyDamaged" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDamagedOwner="StructureUnderAttack"
+			EvaEventSecondDamageFarFromFirstScanRange="200"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
+			EvaEventRepairingOwner="StructureRepairing" />
+		<ShadowInfo
+			Type="VOLUME"
+			Texture=""
+			AdditionalTexture=""
+			SizeX="0"
+			SizeY="0"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="0s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="0s"
+			OpacityEnd="0"
+			MaxHeight="20"
+			SunAngle="0"
+			OverrideLODVisibility="False"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
+		<VisionInfo
+			VisionRange="600"
+			ShroudClearingRange="600"
+			VisionSide="100%"
+			VisionRear="100%"
+			VisionBonusTestRadius="100"
+			VisionBonusTestSegments="8"
+			VisionBonusPercentPerFoot="0%"
+			MaxVisionBonusPercent="50%"
+			MinVisionBonusPercent="-50%" />
+	</GameObject>
+</AssetDeclaration>

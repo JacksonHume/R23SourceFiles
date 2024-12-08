@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBREFINERY2" Hierarchy="GBRefinery2">
+		<SubObject SubObjectID="OBBOX09" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBREFINERY.OBBOX09</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX08" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBREFINERY.OBBOX08</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBREFINERY.OBBOX07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBREFINERY.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBREFINERY.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBREFINERY.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBREFINERY.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBREFINERY.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBREFINERY.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FXGLOWS" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBREFINERY.FXGLOWS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBREFINERYBB" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBREFINERY.GBREFINERYBB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBREFINERYBIB" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBREFINERY.GBREFINERYBIB</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="EFFECT1" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBREFINERY.EFFECT1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="GBREFINERY" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBREFINERY.GBREFINERY</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

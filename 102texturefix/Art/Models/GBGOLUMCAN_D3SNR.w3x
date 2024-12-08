@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBGOLUMCAN_D3SNR" Hierarchy="GBGOLUMCAN_D3SK">
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBGOLUMCAN_D3SN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBGOLUMCAN_D3SN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>GBGOLUMCAN_D3SN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBGOLUMCAN_D3SN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UGRAILMAIN2" BoneIndex="9">
+			<RenderObject>
+				<Mesh>GBGOLUMCAN_D3SN.UGRAILMAIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UG_RAILBARREL12" BoneIndex="5">
+			<RenderObject>
+				<Mesh>GBGOLUMCAN_D3SN.UG_RAILBARREL1</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

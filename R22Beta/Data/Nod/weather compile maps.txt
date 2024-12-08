@@ -1,0 +1,28 @@
+"winter meltdown 1.02+__19b", 
+
+
+"tiberian pantanal 1.02+__19b", "tournament shaft 1.02+__19b", "tiberian pantanais 1.02+__19b", "tiberian forest 1.02+__19b", "ice arena 1.02+__19b" 
+ 
+ 
+"downtown dustbowl 1.02+__19b", "crosstown conflict 1.02+__19b", "redzone onslaught 1.02+__19b", "frozen dunes 1.02+__19b", "arctic six 1.02+__19b", "wrecktropolis 1.02+__19b"
+
+1v1 maps with no rain
+
+
+
+"tournament towerless 1.02+__19b", "tournament stadium 1.02+__19b" 
+
+
+"tournament reef 1.02+__19b", "tournament la 1.02+__19b" 
+
+
+"tiberium zone 1.02+__19b", "slippery slope 1.02+__19b", "winter meltdown 1.02+__19b"
+
+2V2
+"downtown dustbowl 1.02+__19b", "crosstown conflict 1.02+__19b" , "wrecktropolis 1.02+__19b"
+
+"tournament shaft 1.02+__19b", "tiberian pantanais 1.02+__19b", "tiberian forest 1.02+__19b", "ice arena 1.02+__19b" 
+
+
+3V3
+ "frozen dunes 1.02+__19b", "arctic six 1.02+__19b", "redzone onslaught 1.02+__19b"

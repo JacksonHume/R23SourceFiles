@@ -1,0 +1,2422 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+
+	<!-- Ion Cannon -->
+
+	<WeaponTemplate
+		id="IonCannonWeapon_Stage0"
+		Name="IonCannonWeapon_Stage0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AttackRange="50000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="250.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS"
+				AttributeModifierName="AttributeModifier_IonCannon">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude="AIRCRAFT" />
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- ION CANNON BEAM STAGE BUFF 50% -->
+
+	<WeaponTemplate
+		id="IonCannonWeapon_Stage1"
+		Name="IonCannonWeapon_Stage1"
+		AttackRange="10000"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="0d"
+		AimDirection="0d"
+		ScatterRadius="0"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="99999"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireFX=""
+		FireVeteranFX=""
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="0"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus=""
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_GROUND"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<Nuggets>
+			<DamageNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				Damage="2500"
+				DamageTaperOff="25"
+				Radius="175"
+				MinRadius="150"
+				DamageArc="360d"
+				DamageMaxHeight="-1"
+				DamageMaxHeightAboveTerrain="-1"
+				FlankingBonus="0"
+				FlankedScalar="1"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="DETONATED"
+				DamageFXType="UNDEFINED"
+				DamageSubType="NORMAL"
+				DrainLifeMultiplier="1"
+				DamageSpeed="0"
+				VictimShroudRevealer=""
+				DamageArcInverted="False"
+				AcceptDamageAdd="True"
+				OnlyKillOwnerWhenTriggered="False"
+				DrainLife="False"
+				CylinderAOE="True" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="IonCannonWeapon_Stage2"
+		Name="IonCannonWeapon_Stage2"
+		AttackRange="10000"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="0d"
+		AimDirection="0d"
+		ScatterRadius="0"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="99999"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireFX=""
+		FireVeteranFX=""
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="0"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus=""
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_GROUND"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<Nuggets>
+			<DamageNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				Damage="2500"
+				DamageTaperOff="25"
+				Radius="150"
+				MinRadius="125"
+				DamageArc="360d"
+				DamageMaxHeight="-1"
+				DamageMaxHeightAboveTerrain="-1"
+				FlankingBonus="0"
+				FlankedScalar="1"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="DETONATED"
+				DamageFXType="UNDEFINED"
+				DamageSubType="NORMAL"
+				DrainLifeMultiplier="1"
+				DamageSpeed="0"
+				VictimShroudRevealer=""
+				DamageArcInverted="False"
+				AcceptDamageAdd="True"
+				OnlyKillOwnerWhenTriggered="False"
+				DrainLife="False"
+				CylinderAOE="True" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="IonCannonWeapon_Stage3"
+		Name="IonCannonWeapon_Stage3"
+		AttackRange="10000"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="0d"
+		AimDirection="0d"
+		ScatterRadius="0"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="99999"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireFX=""
+		FireVeteranFX=""
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="0"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus=""
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_GROUND"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<Nuggets>
+			<DamageNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				Damage="2500"
+				DamageTaperOff="25"
+				Radius="100"
+				MinRadius="75"
+				DamageArc="360d"
+				DamageMaxHeight="-1"
+				DamageMaxHeightAboveTerrain="-1"
+				FlankingBonus="0"
+				FlankedScalar="1"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="DETONATED"
+				DamageFXType="UNDEFINED"
+				DamageSubType="NORMAL"
+				DrainLifeMultiplier="1"
+				DamageSpeed="0"
+				VictimShroudRevealer=""
+				DamageArcInverted="False"
+				AcceptDamageAdd="True"
+				OnlyKillOwnerWhenTriggered="False"
+				DrainLife="False"
+				CylinderAOE="True" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="IonCannonWeapon_Stage4"
+		Name="IonCannonWeapon_Stage4"
+		AttackRange="10000"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="0d"
+		AimDirection="0d"
+		ScatterRadius="0"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="99999"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireFX=""
+		FireVeteranFX=""
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="0"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus=""
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_GROUND"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<Nuggets>
+			<DamageNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				Damage="2500"
+				DamageTaperOff="25"
+				Radius="75"
+				MinRadius="50"
+				DamageArc="360d"
+				DamageMaxHeight="-1"
+				DamageMaxHeightAboveTerrain="-1"
+				FlankingBonus="0"
+				FlankedScalar="1"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="DETONATED"
+				DamageFXType="UNDEFINED"
+				DamageSubType="NORMAL"
+				DrainLifeMultiplier="1"
+				DamageSpeed="0"
+				VictimShroudRevealer=""
+				DamageArcInverted="False"
+				AcceptDamageAdd="True"
+				OnlyKillOwnerWhenTriggered="False"
+				DrainLife="False"
+				CylinderAOE="True" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="IonCannonWeapon_Stage5"
+		Name="IonCannonWeapon_Stage5"
+		AttackRange="10000"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="0d"
+		AimDirection="0d"
+		ScatterRadius="0"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="99999"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireFX=""
+		FireVeteranFX=""
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="0"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus=""
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_GROUND"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<Nuggets>
+			<DamageNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				Damage="2500"
+				DamageTaperOff="25"
+				Radius="75"
+				MinRadius="0"
+				DamageArc="360d"
+				DamageMaxHeight="-1"
+				DamageMaxHeightAboveTerrain="-1"
+				FlankingBonus="0"
+				FlankedScalar="1"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="DETONATED"
+				DamageFXType="UNDEFINED"
+				DamageSubType="NORMAL"
+				DrainLifeMultiplier="1"
+				DamageSpeed="0"
+				VictimShroudRevealer=""
+				DamageArcInverted="False"
+				AcceptDamageAdd="True"
+				OnlyKillOwnerWhenTriggered="False"
+				DrainLife="False"
+				CylinderAOE="True" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="IonCannonWeapon_Stage6"
+		Name="IonCannonWeapon_Stage6"
+		AttackRange="10000"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="0d"
+		AimDirection="0d"
+		ScatterRadius="0"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="99999"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireFX=""
+		FireVeteranFX=""
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="0"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus=""
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_GROUND"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<Nuggets>
+			<DamageNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				Damage="2500"
+				DamageTaperOff="25"
+				Radius="75"
+				MinRadius="0"
+				DamageArc="360d"
+				DamageMaxHeight="-1"
+				DamageMaxHeightAboveTerrain="-1"
+				FlankingBonus="0"
+				FlankedScalar="1"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="DETONATED"
+				DamageFXType="UNDEFINED"
+				DamageSubType="NORMAL"
+				DrainLifeMultiplier="1"
+				DamageSpeed="0"
+				VictimShroudRevealer=""
+				DamageArcInverted="False"
+				AcceptDamageAdd="True"
+				OnlyKillOwnerWhenTriggered="False"
+				DrainLife="False"
+				CylinderAOE="True" />
+		</Nuggets>
+	</WeaponTemplate>
+
+
+	<!-- -->
+
+	<WeaponTemplate
+		id="GDIMARVCannon"
+		Name="GDIMARVCannon"
+		AttackRange="350.0"
+		MinTargetPitch="-15d"
+		MaxTargetPitch="15d"
+		FireSound="Multisound:GDI_Marv_CannonFireMS"
+		WeaponSpeed="1000"
+		WeaponRecoil="0d"
+		FireFX="FX_GDIMARVSonicCannonFire"
+		FireVeteranFX="FX_GDIMARVSonicCannonFire"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		CanFireWhileMoving="true"
+		RotatingTurret="true"
+		ClipSize="3"
+		ReAcquireDetailType="PER_CLIP"
+		ShotsPerBarrel="1"
+		DisableScatterForTargetsOnWall="true"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		AntiMask="ANTI_GROUND"
+	>
+		<FiringDuration
+			MinSeconds="1.75s"
+			MaxSeconds="1.75s" />
+		<ClipReloadTime
+			MinSeconds="2.2s"
+			MaxSeconds="2.5s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="MARVSonicShell"
+				WarheadTemplate="MARVSonicShellWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="MARVSonicShell_Veteran" />
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="50.0"
+				Suppression="75"
+				DurationSeconds="5s" />
+			<AttributeModifierNugget
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierOwnerName="Modifier_MARVWeaponFiring" />
+		</Nuggets>
+
+
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlienEradicatorBlinkWeapon2"
+		Name="AlienEradicatorBlinkWeapon2"
+		RadiusDamageAffects=""
+		FireFX="FX_AlienEradicatorTP2">
+		<Nuggets>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- hammerhead and reckoner anti air cursor fix -->
+
+	<WeaponTemplate
+		id="NODBunkerTruckFakeWeapon1"
+		Name="NODBunkerTruckFakeWeapon1"
+		AttackRange="250.0"
+		WeaponSpeed="999999.0"
+		RequiredFiringObjectStatus="RIDER1"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		ClipSize="1"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="9999s"
+			MaxSeconds="9999s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODBunkerTruckFakeWeapon"
+		Name="NODBunkerTruckFakeWeapon"
+		AttackRange="250.0"
+		WeaponSpeed="999999.0"
+		RequiredFiringObjectStatus=""
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		ClipSize="1"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="9999s"
+			MaxSeconds="9999s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODAvatarFakeWeapon"
+		Name="NODAvatarFakeWeapon"
+		AttackRange="375.0"
+		WeaponSpeed="999999.0"
+		RequiredFiringObjectStatus=""
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		ClipSize="1"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="9999s"
+			MaxSeconds="9999s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- vertigo 50% damage increase plus a 100% damage increase due to 180 degree deflection angle
+	clockwise/counterclockwise from 360d (20 to 60) -->
+
+	<WeaponTemplate
+		id="NODVertigoMachineGun"
+		Name="NODVertigoMachineGun"
+		AttackRange="200.0"
+		WeaponSpeed="999999.0"
+		FireSoundPerClip="AudioEvent:NOD_RifleMilitant_GunFire_v2"
+		FireFX="FX_NODRifleManFire"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="0"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		CanFireWhileMoving="true"
+		ShotsPerBarrel="3"
+		StopFiringOnCanBeInvisible="true"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="60.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="NOD_MACHINEGUN"
+				DeathType="NORMAL">
+				<DamageScalarDetails
+					Scalar="50%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>AlienInvaderFighter</IncludeThing>
+						<IncludeThing>AlienPlanetaryAssaultCarrier</IncludeThing>
+						<IncludeThing>Traveler59PlanetaryAssaultCarrier</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails
+					Scalar="75%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>AlienDevastatorWarship</IncludeThing>
+						<IncludeThing>Traveler59DevastatorWarship</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- 300 rocket damage to 400 rocket damage for mammoth tank -->
+
+	<WeaponTemplate
+		id="GDIMammothTankMissileFragmentWarhead"
+		Name="GDIMammothTankMissileFragmentWarhead"
+		ProjectileCollidesWith="ENEMIES STRUCTURES"
+		RadiusDamageAffects="ALLIES ENEMIES NOT_SIMILAR"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+				Damage="400.0"
+				Radius="15.0"
+				DamageTaperOff="0"
+				DamageType="ROCKET"
+				DamageFXType="GDI_MISSILE"
+				DeathType="EXPLODED">
+				<DamageScalarDetails Scalar="75%">
+					<Filter
+						Rule="NONE"
+						Include="AIRCRAFT" />
+				</DamageScalarDetails>
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="20.0"
+				Suppression="50"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- BH redeemer purifying flame 15% increase -->
+	<!--
+	<WeaponTemplate
+		id="BHRedeemerFlamer"
+		Name="BHRedeemerFlamerLeft"
+		AttackRange="200.0"
+		CanFireWhileMoving="true"
+		WeaponSpeed="999999.0"
+		FiringLoopSound="AudioEvent:NOD_FlameTank_FlameWeaponLoop"
+		FiringLoopSoundContinuesDuringReload="true"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_01"
+		ClipSize="10"
+		RequiredFiringObjectStatus=""
+		ForbiddenFiringObjectStatus=""
+		AcceptableAimDelta="20d"
+		ReAcquireDetailType="PER_CLIP"
+		>
+		<FiringDuration
+				MinSeconds="0.1s"
+				MaxSeconds="0.1s" />
+		<ClipReloadTime
+				MinSeconds="9999s"
+				MaxSeconds="9999s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED" />
+		</Nuggets>
+	</WeaponTemplate>
+	-->
+
+	<WeaponTemplate
+		id="BHRedeemerFlamer"
+		Name="BHRedeemerFlamer"
+		AttackRange="200.0"
+		CanFireWhileMoving="true"
+		WeaponSpeed="999999.0"
+		FiringLoopSound="AudioEvent:NOD_FlameTank_FlameWeaponLoop"
+		ForbiddenFiringObjectStatus=""
+		FiringLoopSoundContinuesDuringReload="true"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_01"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ClipSize="10"
+		AcceptableAimDelta="20d"
+		ReAcquireDetailType="PER_CLIP"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="10"
+				Damage="1500000"
+				DamageType="GRENADE"
+				DeathType="BURNED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="195.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED" />
+			<SuppressionNugget
+				Radius="40.0"
+				Suppression="200"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="BHWarmechFlamer"
+		Name="BHWarmechFlamer"
+		AttackRange="200.0"
+		CanFireWhileMoving="true"
+		WeaponSpeed="999999.0"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		FiringLoopSound="AudioEvent:NOD_FlameTank_FlameWeaponLoop"
+		FiringLoopSoundContinuesDuringReload="true"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ClipSize="10"
+		AcceptableAimDelta="20d"
+		ReAcquireDetailType="PER_CLIP"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="10"
+				Damage="1500000"
+				DamageType="GRENADE"
+				DeathType="BURNED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="144.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED" />
+			<SuppressionNugget
+				Radius="40.0"
+				Suppression="200"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- beam cannon fix  	-->
+	<WeaponTemplate
+		id="NODBeamCannonLaser"
+		Name="NODBeamCannonLaser"
+		AttackRange="600.0"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+	>
+		<PreAttackDelay
+			MinSeconds="0.1s"
+			MaxSeconds="1.5s" />
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<SpecialPowerNugget SpecialPowerTemplate="NODBeamCannonLaserSpecialPower" />
+		</Nuggets>
+	</WeaponTemplate>
+	<!--
+	<WeaponTemplate
+		id="KillBeamTarget"
+		Name="KillBeamTarget"
+		ForbiddenFiringObjectStatus="USING_SPECIAL_ABILITY"
+		RadiusDamageAffects="ALLIES SELF" >
+		<PreAttackDelay
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<FiringDuration
+			MinSeconds="0s"
+			MaxSeconds="0s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="10000000000.0"
+				Radius="600.0">
+				<SpecialObjectFilter
+					Rule="ANY">
+					<IncludeThing>NODBeamTarget</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+-->
+	<!-- 65% scaler vs infantry for disintegrators -->
+
+	<WeaponTemplate
+		id="AlienRazorDroneWeapon"
+		Name="AlienRazorDroneWeapon"
+		AttackRange="170.0"
+		ChaseWeapon="true"
+		FireSoundPerClip="AudioEvent:ALI_RazorDrone_Weapon1Fire"
+		FireFX="FX_AlienBuzzerFire"
+		FireVeteranFX="FX_AlienBuzzerFireHeroic"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ReAcquireDetailType="PRE_FIRE"
+		ClipSize="1"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true">
+		<FiringDuration
+			MinSeconds="0.75s"
+			MaxSeconds="0.75s" />
+		<ClipReloadTime
+			MinSeconds="0.2s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.5s"
+				LaserId="0" />
+			<DamageNugget
+				Damage="90.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="ROCKET"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar="200%">
+					<Filter
+						Rule="NONE"
+						Include="CIVILIAN_BUILDING" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar="65%">
+					<Filter Rule="NONE">
+						<IncludeThing>AlienShockTrooper</IncludeThing>
+						<IncludeThing>AlienStalker</IncludeThing>
+						<IncludeThing>AlienAssimilator</IncludeThing>
+						<IncludeThing>AlienRazorDrones</IncludeThing>
+						<IncludeThing>Reaper17ShockTrooper</IncludeThing>
+						<IncludeThing>Reaper17Stalker</IncludeThing>
+						<IncludeThing>Traveler59Assimilator</IncludeThing>
+						<IncludeThing>Traveler59Cultist</IncludeThing>
+						<IncludeThing>Traveler59RazorDrone</IncludeThing>
+						<IncludeThing>Traveler59Stalker</IncludeThing>
+						<IncludeThing>Traveler59ShockTrooper</IncludeThing>
+						<IncludeThing>Traveler59BlinkMastermind</IncludeThing>
+						<IncludeThing>BlackHandBlackDisciple</IncludeThing>
+						<IncludeThing>BlackHandCommando</IncludeThing>
+						<IncludeThing>BlackHandConfessor</IncludeThing>
+						<IncludeThing>BlackHandMilitant</IncludeThing>
+						<IncludeThing>BlackHandMilitantB</IncludeThing>
+						<IncludeThing>BlackHandFanatic</IncludeThing>
+						<IncludeThing>MarkedOfKaneCommando</IncludeThing>
+						<IncludeThing>MarkedOfKaneFanatic</IncludeThing>
+						<IncludeThing>MarkedOfKaneMilitantRocket</IncludeThing>
+						<IncludeThing>MarkedOfKaneShadow</IncludeThing>
+						<IncludeThing>MarkedOfKaneTiberiumTrooper</IncludeThing>
+						<IncludeThing>MOKCyborgInfantry</IncludeThing>
+						<IncludeThing>MarkedOfKaneImprovedCyborgInfantry</IncludeThing>
+						<IncludeThing>NODBlackHand</IncludeThing>
+						<IncludeThing>NODCarryallInfantry</IncludeThing>
+						<IncludeThing>NODCommando</IncludeThing>
+						<IncludeThing>NODConfessor</IncludeThing>
+						<IncludeThing>NODFanatic</IncludeThing>
+						<IncludeThing>NODMilitant</IncludeThing>
+						<IncludeThing>NODMilitantB</IncludeThing>
+						<IncludeThing>NODShadow</IncludeThing>
+						<IncludeThing>GDICommando</IncludeThing>
+						<IncludeThing>GDIEngineer</IncludeThing>
+						<IncludeThing>GDIGrenadeSoldier</IncludeThing>
+						<IncludeThing>GDIMissileSoldier</IncludeThing>
+						<IncludeThing>GDIMissileSoldierVeteran</IncludeThing>
+						<IncludeThing>GDIRifleSoldier</IncludeThing>
+						<IncludeThing>GDIRifleSoldierVeteran</IncludeThing>
+						<IncludeThing>GDISniper</IncludeThing>
+						<IncludeThing>GDIZoneTrooper</IncludeThing>
+						<IncludeThing>ZOCOMCommando</IncludeThing>
+						<IncludeThing>ZOCOMEngineer</IncludeThing>
+						<IncludeThing>ZOCOMGrenadeSoldier</IncludeThing>
+						<IncludeThing>ZOCOMMissileSoldier</IncludeThing>
+						<IncludeThing>ZOCOMMissileSoldierVeteran</IncludeThing>
+						<IncludeThing>ZOCOMRifleSoldier</IncludeThing>
+						<IncludeThing>ZOCOMRifleSoldierVeteran</IncludeThing>
+						<IncludeThing>ZOCOMSniper</IncludeThing>
+						<IncludeThing>ZOCOMZoneRaider</IncludeThing>
+						<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+						<IncludeThing>SteelTalonsGrenadeSoldier</IncludeThing>
+						<IncludeThing>SteelTalonsMissileSoldier</IncludeThing>
+						<IncludeThing>SteelTalonsRifleSoldier</IncludeThing>
+						<IncludeThing>MutantMarauder</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar="50%">
+					<Filter Rule="NONE">
+						<IncludeThing>AlienBuzzers</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- Mortars no longer deal friendly damage -->
+
+	<WeaponTemplate
+		id="GDIPitbullMortar2"
+		Name="GDIPitbullMortar2"
+		AttackRange="250"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="180d"
+		AimDirection="0d"
+		ScatterRadius="50"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="250"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireFX="FX_GDI_PitbullMortarFireAudio"
+		FireVeteranFX=""
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="0"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus="RIDER4"
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_GROUND"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<FiringDuration
+			MinSeconds="4s"
+			MaxSeconds="4s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="GDIPitBullArtilleryProjectile"
+				WarheadTemplate="GDIPitbullMortarWarhead" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GDIPitbullMortarWarhead"
+		Name="GDIPitbullMortarWarhead"
+		ProjectileCollidesWith="ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="NEUTRALS ENEMIES NEUTRALS"
+		HitStoredTarget="true"
+	>
+		<Nuggets>
+			<DamageNugget
+				Damage="300.0"
+				DamageTaperOff="100"
+				Radius="50.0"
+				DamageType="GRENADE"
+				DeathType="EXPLODED">
+				<DamageScalarDetails
+					Scalar="1%">
+					<Filter
+						Relationship="ALLIES">
+						<IncludeThing>GDIPitbull</IncludeThing>
+						<IncludeThing>GDIPitbull_Veteran</IncludeThing>
+						<IncludeThing>ZOCOMPitbull</IncludeThing>
+						<IncludeThing>ZOCOMPitbull_Veteran</IncludeThing>
+						<IncludeThing>SteelTalonsPitbull</IncludeThing>
+						<IncludeThing>SteelTalonsPitbull_Veteran</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="50.0"
+				Suppression="100"
+				DurationSeconds="5s" />
+
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GDIPitbullMortar"
+		Name="GDIPitbullMortar"
+		AttackRange="300"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="180d"
+		AimDirection="0d"
+		ScatterRadius="50"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="250"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireFX="FX_GDI_PitbullMortarFireAudio"
+		FireVeteranFX=""
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="0"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_02"
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_GROUND"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<FiringDuration
+			MinSeconds="4s"
+			MaxSeconds="4s" />
+		<Nuggets>
+			<ProjectileNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				ProjectileTemplate="GDIPitBullArtilleryProjectile"
+				WarheadTemplate="GDIPitbullMortarWarhead"
+				WeaponLaunchBoneSlotOverride="NO_WEAPON" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- removed attribute modifier on sam hub -->
+
+	<WeaponTemplate
+		id="NODRocketBunkerHubWeapon"
+		Name="NODRocketBunkerHubWeapon"
+		AttackRange="450.0"
+		WeaponSpeed="250"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="180d"
+		FireSound="AudioEvent:NOD_RocketBunkerHub_RocketLaunch"
+		FireFX="FX_NODMilitantMissileFire"
+		ClipSize="3"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		ReAcquireDetailType="PER_CLIP"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="2s"
+			MaxSeconds="2s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="NODRocketBunkerSpawnWeaponWarhead"
+				ProjectileTemplate="NODRocketBunkerSpawnWeaponProjectile" />
+			<SuppressionNugget
+				Radius="50.0"
+				Suppression="50"
+				DurationSeconds="2s" />
+			<!--
+			<AttributeModifierNugget
+					  PartitionFilterTestType="SPHERE"
+					  AttributeModifierOwnerName="Modifier_RocketBunkerWeaponFiring" /> -->
+		</Nuggets>
+		<ScatterRadiusVsType
+			Radius="30.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODRocketBunkerSpawnTibCoreWeaponHub"
+		Name="NODRocketBunkerSpawnTibCoreWeapon"
+		AttackRange="450.0"
+		WeaponSpeed="250"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="180d"
+		FireSound="AudioEvent:NOD_RocketBunkerHub_RocketLaunch"
+		FireFX="FX_NOD_RocketBunker_TibCoreMissileFire"
+		ClipSize="3"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		ReAcquireDetailType="PER_CLIP"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="2s"
+			MaxSeconds="2s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="NODRocketBunkerSpawnTibCoreWeaponWarhead"
+				ProjectileTemplate="NODRocketBunkerSpawnTibCoreProjectile" />
+			<SuppressionNugget
+				Radius="50.0"
+				Suppression="50"
+				DurationSeconds="2s" />
+			<!--
+			<AttributeModifierNugget
+					  PartitionFilterTestType="SPHERE"
+					  AttributeModifierOwnerName="Modifier_RocketBunkerWeaponFiring" /> -->
+		</Nuggets>
+		<ScatterRadiusVsType
+			Radius="30.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODRocketBunkerSpawnTibCoreWeapon"
+		Name="NODRocketBunkerSpawnTibCoreWeapon"
+		AttackRange="450.0"
+		WeaponSpeed="250"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="180d"
+		FireSound="AudioEvent:NOD_RocketBunkerHub_RocketLaunch"
+		FireFX="FX_NOD_RocketBunker_TibCoreMissileFire"
+		ClipSize="3"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		ReAcquireDetailType="PER_CLIP"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="2s"
+			MaxSeconds="2s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="NODRocketBunkerSpawnTibCoreWeaponWarhead"
+				ProjectileTemplate="NODRocketBunkerSpawnTibCoreProjectile" />
+			<SuppressionNugget
+				Radius="50.0"
+				Suppression="50"
+				DurationSeconds="2s" />
+
+			<AttributeModifierNugget
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierOwnerName="Modifier_RocketBunkerWeaponFiring" />
+		</Nuggets>
+		<ScatterRadiusVsType
+			Radius="30.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<!-- purifying flame, flame tank damage reduced by 50% from 300 to 216, now acquires per clip
+	instead of per shot reload time increased from 0.1 to 0.5 -->
+
+	<WeaponTemplate
+		id="NODBlackHandFlameTankUpgradedFlamer"
+		Name="NODBlackHandFlameTankUpgradedFlamer"
+		AttackRange="150.0"
+		WeaponSpeed="150.0"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ClipSize="10"
+		FiringLoopSound="AudioEvent:NOD_FlameTank_FlameWeaponLoop"
+		FiringLoopSoundContinuesDuringReload="true"
+		AcceptableAimDelta="20d"
+		ReAcquireDetailType="PER_CLIP"
+		CanFireWhileMoving="true"
+	>
+		<!-- FireSound="NOD_BlackHand_FlameWeaponStart" -->
+		<!-- <PreAttackDelay
+			  MinSeconds="0s"
+			  MaxSeconds="1s" /> -->
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="10"
+				WindowBlastFX="FX_PurifyingFlameClearGarrison"
+				Damage="1500000"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DeathType="BURNED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="216.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED">
+				<DamageScalarDetails Scalar="150%">
+					<Filter
+						Rule="NONE"
+						Include="STRUCTURE" />
+				</DamageScalarDetails>
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="40.0"
+				Suppression="200"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- damage reduced vs vehicles except epic units by 25% for juggernauts/behemoths -->
+
+	<WeaponTemplate
+		id="JuggernaughtArtilleryWarhead"
+		Name="JuggernaughtArtilleryWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<DamageNugget
+				Damage="1000.0"
+				Radius="25.0"
+				DamageTaperOff="0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_LASER"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar="75%">
+					<Filter
+						Rule="ANY"
+						Include="VEHICLE">
+						<ExcludeThing>BlackHandMetaUnit</ExcludeThing>
+						<ExcludeThing>MarkedOfKaneMetaUnit</ExcludeThing>
+						<ExcludeThing>NODMetaUnit</ExcludeThing>
+						<ExcludeThing>GDIMARV</ExcludeThing>
+						<ExcludeThing>SteelTalonsMARV</ExcludeThing>
+						<ExcludeThing>ZOCOMMARV</ExcludeThing>
+						<ExcludeThing>AlienEradicatorHexapod</ExcludeThing>
+						<ExcludeThing>Reaper17EradicatorHexapod</ExcludeThing>
+						<ExcludeThing>Traveler59EradicatorHexapod</ExcludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+
+	<!-- rga damage to actually be proportional 100% to 66% -->
+
+	<WeaponTemplate
+		id="RailgunAcceleratorDamage"
+		Name="RailgunAcceleratorDamage"
+		AttackRange="50000"
+		MinimumAttackRange="0"
+		RangeBonusMinHeight="0"
+		RangeBonus="0"
+		RangeBonusPerFoot="0"
+		RequestAssistRange="0"
+		AcceptableAimDelta="0d"
+		AimDirection="0d"
+		ScatterRadius="0"
+		ScatterLength="0"
+		ScatterTargetScalar="0"
+		WeaponSpeed="99999"
+		MinWeaponSpeed="99999"
+		MaxWeaponSpeed="99999"
+		IdleAfterFiringDelaySeconds="-1s"
+		HoldAfterFiringDelaySeconds="0s"
+		WeaponRecoil="0d"
+		MinTargetPitch="-180d"
+		MaxTargetPitch="180d"
+		FireFX=""
+		FireVeteranFX=""
+		FireFlankFX=""
+		PreAttackFX=""
+		ClipSize="1"
+		ContinuousFireOne="99999"
+		ContinuousFireTwo="99999"
+		ContinuousFireCoastSeconds="0s"
+		AutoReloadWhenIdleSeconds="0s"
+		ShotsPerBarrel="0"
+		RequiredFiringObjectStatus=""
+		ForbiddenFiringObjectStatus=""
+		ContinueAttackRange="0"
+		SuspendFXDelaySeconds="0s"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
+		HealthProportionalResolution="0"
+		MaxAttackPassengers="0"
+		RestrictedHeightRange="0"
+		Flags="NONE"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_SHOT"
+		AutoReloadsClip="AUTO"
+		SingleAmmoReloadedNotFullSound=""
+		ClipReloadedSound=""
+		RadiusDamageAffects="ALLIES NEUTRALS"
+		ProjectileCollidesWith="STRUCTURES"
+		AntiMask="ANTI_GROUND"
+		ProjectileStreamName=""
+		ScatterIndependently="False"
+		DisableScatterForTargetsOnWall="False"
+		ScaleWeaponSpeed="False"
+		CanBeDodged="False"
+		HoldDuringReload="False"
+		CanFireWhileMoving="False"
+		CanFireWhileCharging="False"
+		FiringLoopSoundContinuesDuringReload="True"
+		FiringLoopSoundPlaysOnlyForAttackPosition="False"
+		DamageDealtAtSelfPosition="False"
+		CheckStatusFlagsInRangeChecks="True"
+		ProjectileSelf="False"
+		MeleeWeapon="False"
+		ChaseWeapon="False"
+		LeechRangeWeapon="False"
+		HitStoredTarget="False"
+		CapableOfFollowingWaypoints="False"
+		ShowsAmmoPips="False"
+		AllowAttackGarrisonedBldgs="False"
+		PlayFXWhenStealthed="False"
+		IgnoreLinearFirstTarget="False"
+		ForceDisplayPercentReady="False"
+		IsAimingWeapon="False"
+		NoVictimNeeded="False"
+		RotatingTurret="False"
+		PassengerProportionalAttack="False"
+		FinishAttackOnceStarted="True"
+		CannotTargetCastleVictims="False"
+		RequireFollowThru="False"
+		ShareTimers="False"
+		ShouldPlayUnderAttackEvaEvent="True"
+		InstantLoadClipOnActivate="False"
+		LockWhenUsing="False"
+		BombardType="False"
+		UseInnateAttributes="False"
+		StopFiringOnCanBeInvisible="False"
+		ContactWeapon="False">
+		<Nuggets>
+			<DOTNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				ForbiddenTargetModelCondition=""
+				RequiredObjectStatus=""
+				Damage="75"
+				DamageTaperOff="-1"
+				Radius="200"
+				MinRadius="0"
+				DamageArc="360d"
+				DamageMaxHeight="-1"
+				DamageMaxHeightAboveTerrain="-1"
+				FlankingBonus="0"
+				FlankedScalar="1"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="EXPLODED"
+				DamageFXType="GDI_RAILGUN"
+				DamageSubType="NORMAL"
+				DrainLifeMultiplier="1"
+				DamageSpeed="0"
+				VictimShroudRevealer=""
+				DamageArcInverted="False"
+				AcceptDamageAdd="True"
+				OnlyKillOwnerWhenTriggered="False"
+				DrainLife="False"
+				CylinderAOE="False"
+				DamageInterval="1"
+				DamageDuration="15"
+				DamageDecay="0"
+				AppliedStatus=""
+				UseMetaGameTurns="False">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags="RIDER2"
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<DamageScalarDetails
+					Scalar="66%">
+					<Filter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>GDIPredator</IncludeThing>
+						<IncludeThing>SteelTalonsTitan</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails
+					Scalar="200%">
+					<Filter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>GDIMammoth</IncludeThing>
+						<IncludeThing>SteelTalonsMammoth</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails
+					Scalar="250%">
+					<Filter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>GDIZoneTrooper</IncludeThing>
+						<IncludeThing>SteelTalonsZoneTrooper</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails
+					Scalar="500%">
+					<Filter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include=""
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="">
+						<IncludeThing>GDIMARV</IncludeThing>
+						<IncludeThing>SteelTalonsMARV</IncludeThing>
+						<IncludeThing>ZOCOMMARV</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DOTNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- shatterer no cancel damage -->
+	<!--
+	<WeaponTemplate
+		id="SteelTalonsImprovedShattererOverloadBeam"
+		Name="SteelTalonsImprovedShattererOverloadBeam"
+		AttackRange="375.0"
+		MinimumAttackRange="0"
+		WeaponSpeed="280.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="0d"
+		CanFireWhileMoving="True"
+		FireFX="FX_OverloadShattererSonicFire"
+		ClipSize="1">
+		<PreAttackDelay
+			MinSeconds="2.0s"
+			MaxSeconds="2.0s" />
+		<FiringDuration
+			MinSeconds="2.0s"
+			MaxSeconds="2.0s" />
+		<ClipReloadTime
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<Nuggets>
+			<ActivateLinearDamageNugget Lifetime="2s" />
+			<ProjectileNugget
+				WarheadTemplate="SteelTalonsOverloadBeamWarhead"
+				ProjectileTemplate="SteelTalonsOverloadBeamProjectile">
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	-->
+	<!-- zone raider aa buff it's now 1.5 missiles -->
+
+	<WeaponTemplate
+		id="ZoneRaiderRocketPodWarhead"
+		Name="ZoneRaiderRocketPodWarhead"
+		ProjectileCollidesWith="ENEMIES"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+				Damage="140.0"
+				Radius="10.0"
+				DamageTaperOff="0"
+				DamageType="ROCKET"
+				DamageFXType="GDI_MISSILE"
+				DeathType="EXPLODED">
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- damage buff for rig anti air -->
+
+	<WeaponTemplate
+		id="GDIBattleBaseMissileWarhead"
+		Name="GDIBattleBaseMissileWarhead"
+		ProjectileCollidesWith="ENEMIES"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+				Damage="375.0"
+				Radius="5.0"
+				DamageTaperOff="0"
+				DamageType="ROCKET"
+				DamageFXType="GDI_MISSILE"
+				DeathType="EXPLODED" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- marv angle 60d -->
+
+	<WeaponTemplate
+		id="MetaCrushTiberium"
+		Name="MetaCrushTiberium"
+		CanFireWhileMoving="true"
+		CanFireWhileCharging="true"
+		RadiusDamageAffects="NEUTRALS"
+		FireFX=""
+	>
+		<Nuggets>
+			<CrushTiberiumNugget
+				Radius="25"
+				PartitionFilterTestType="SPHERE"
+				ProductionModifer="33%"
+				DamageArc="90d">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Include="TIBERIUM HARVESTABLE"
+				/>
+			</CrushTiberiumNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- redeemer tripoint laser 20d acceptable aim delta -->
+
+	<WeaponTemplate
+		id="NODWarmechTriPointLaser1"
+		Name="NODWarmechTriPointLaser1"
+		AttackRange="375.0"
+		CanFireWhileMoving="false"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="30d"
+		PreAttackType="PER_SHOT"
+		ForbiddenFiringObjectStatus=""
+		ReAcquireDetailType="PRE_FIRE"
+		FireFX="FX_NODRedeemerTriPointLaserFire"
+		FireVeteranFX="FX_NODRedeemerTriPointLaserFireHeroic"
+		FireSound="AudioEvent:NOD_Redeemer_LaserFire"
+		ClipSize="1"
+		AutoReloadsClip="AUTO">
+		<PreAttackDelay
+			MinSeconds="0.75s"
+			MaxSeconds="0.75s" />
+		<FiringDuration
+			MinSeconds="2.25s"
+			MaxSeconds="2.25s" />
+		<ClipReloadTime
+			MinSeconds="0.7s"
+			MaxSeconds="0.7s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.9s"
+				LaserId="1"
+				HitGroundFX="FX_NODSpitfireHit" />
+
+			<DamageNugget
+				Damage="800.0"
+				Radius="8.0"
+				DamageTaperOff="0"
+				DelayTimeSeconds="0.1s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar="90%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="NODWarmechTriPointLaser2"
+		Name="NODWarmechTriPointLaser2"
+		AttackRange="375.0"
+		CanFireWhileMoving="false"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="30d"
+		PreAttackType="PER_SHOT"
+		ForbiddenFiringObjectStatus=""
+		ReAcquireDetailType="PRE_FIRE"
+		FireFX="FX_NODRedeemerTriPointLaserFire"
+		FireVeteranFX="FX_NODRedeemerTriPointLaserFireHeroic"
+		FireSound="AudioEvent:NOD_Redeemer_LaserFire"
+		ClipSize="1"
+		AutoReloadsClip="AUTO">
+		<PreAttackDelay
+			MinSeconds="0.75s"
+			MaxSeconds="0.75s" />
+		<FiringDuration
+			MinSeconds="2.25s"
+			MaxSeconds="2.25s" />
+		<ClipReloadTime
+			MinSeconds="0.7s"
+			MaxSeconds="0.7s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.9s"
+				LaserId="2"
+				HitGroundFX="FX_NODSpitfireHit" />
+
+			<DamageNugget
+				Damage="800.0"
+				Radius="8.0"
+				DamageTaperOff="0"
+				DelayTimeSeconds="0.1s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar="90%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODWarmechTriPointLaser3"
+		Name="NODWarmechTriPointLaser3"
+		AttackRange="375.0"
+		CanFireWhileMoving="false"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="30d"
+		PreAttackType="PER_SHOT"
+		ForbiddenFiringObjectStatus=""
+		ReAcquireDetailType="PRE_FIRE"
+		FireFX="FX_NODRedeemerTriPointLaserFire"
+		FireVeteranFX="FX_NODRedeemerTriPointLaserFireHeroic"
+		FireSound="AudioEvent:NOD_Redeemer_LaserFire"
+		ClipSize="1"
+		AutoReloadsClip="AUTO">
+		<PreAttackDelay
+			MinSeconds="0.75s"
+			MaxSeconds="0.75s" />
+		<FiringDuration
+			MinSeconds="2.25s"
+			MaxSeconds="2.25s" />
+		<ClipReloadTime
+			MinSeconds="0.7s"
+			MaxSeconds="0.7s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.9s"
+				LaserId="3"
+				HitGroundFX="FX_NODSpitfireHit" />
+
+			<DamageNugget
+				Damage="800.0"
+				Radius="8.0"
+				DamageTaperOff="0"
+				DelayTimeSeconds="0.1s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar="90%">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- FIX FOR MAG MINES -->
+
+	<WeaponTemplate
+		id="MagneticMineWeapon"
+		Name="MagneticMineWeapon"
+		RadiusDamageAffects="ENEMIES NEUTRALS SELF"
+	>
+		<Nuggets>
+			<DOTNugget
+				Damage="16"
+				Radius="10.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="MINE"
+				DamageFXType="NOD_MINE"
+				DeathType="EXPLODED"
+				ForbiddenTargetModelCondition="AFFECTED_BY_EMP UPGRADED_ARMOR"
+				DamageInterval="1"
+				DamageDuration="10000">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE" />
+			</DOTNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- grenadier buff vs structures -->
+	<!--
+	<WeaponTemplate
+		id="GDIGrenadeSoldierGrenadeWarhead"
+		Name="GDIGrenadeSoldierGrenadeWarhead"
+		ProjectileCollidesWith="ENEMIES"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		HitStoredTarget="true"
+ 		>
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="100"
+				WindowBlastFX="FX_ClearGarrison"
+				Damage="1500000"
+				DamageType="GRENADE"
+				DeathType="EXPLODED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="60.0"
+				Radius="40.0"
+				DamageType="GRENADE"
+				DamageFXType="GDI_GRENADE"
+				DeathType="EXPLODED" />
+		</Nuggets>
+		<HitStoredObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE" />
+	</WeaponTemplate>
+	-->
+	<!-- voice of kane suppression weapon -->
+	<!--
+	<WeaponTemplate
+	id="VoiceOfKaneSuppression"
+	Name="VoiceOfKaneSuppression"
+	RadiusDamageAffects="ENEMIES">
+
+		<FiringDuration
+			MinSeconds="0s"
+			MaxSeconds="0s"
+		/>
+		<Nuggets>
+			<SuppressionNugget
+					  Radius="400.0"
+					  Suppression="500" 
+					  DurationSeconds="1.5s">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ENEMIES"
+					Include="INFANTRY" />  
+			</SuppressionNugget>		  
+		</Nuggets>
+	</WeaponTemplate>
+	-->
+
+	<WeaponTemplate
+		id="NodMobileArtilleryBombardCannon"
+		Name="NodMobileArtilleryBombardCannon"
+		AttackRange="50000.0"
+		WeaponSpeed="300"
+		MinWeaponSpeed="300"
+		MaxWeaponSpeed="350"
+		MinimumAttackRange="125.0"
+		AcceptableAimDelta="20d"
+		MaxTargetPitch="60d"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="false"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		FireFX="FX_NODMobileArtilleryBombardCannon"
+		FireVeteranFX="FX_NODMobileArtilleryBombardCannonHeroic"
+		RequiredFiringObjectStatus="DEPLOYED"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+	>
+		<ClipReloadTime MinSeconds="5s"
+			MaxSeconds="5s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="NODMobileArtilleryWarhead"
+				ProjectileTemplate="NodMobileArtilleryShell">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="NodMobileArtilleryShell_Veteran" />
+			</ProjectileNugget>
+		</Nuggets>
+		<ScatterRadiusVsType
+			Radius="50.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+		<ScatterRadiusVsType
+			Radius="50.0">
+			<Filter
+				Rule="NONE"
+				Include="VEHICLE" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+
+	<!-- suppression resistance -->
+	<!--
+	<WeaponTemplate
+		id="SuppressionResistanceWeapon"
+		Name="SuppressionResistanceWeapon"
+		RadiusDamageAffects="SELF ALLIES"
+		AttackRange="100.0"
+		ClipSize="1"
+		>
+		<FiringDuration
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<AttributeModifierNugget
+				AttributeModifierName="AttributeModifier_SuppressionResistance" />
+		</Nuggets>
+	</WeaponTemplate>
+	-->
+
+	<!-- prevent the green shard weapon from firing when blue shards is upgraded -->
+
+	<WeaponTemplate
+		id="AlienEradicatorShardWeapon"
+		Name="AlienEradicatorShardWeapon"
+		AttackRange="290.0"
+		WeaponSpeed="500.0"
+		FireSound="AudioEvent:ALI_Stalker_ShardWeaponFire"
+		FireFX="FX_AlienTibShardFire"
+		FireVeteranFX="FX_AlienTibShardFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="45d"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		PreAttackType="PER_CLIP"
+		ReAcquireDetailType="PER_CLIP"
+		ClipSize="3">
+		<PreAttackDelay
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s" />
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="1.5s"
+			MaxSeconds="1.8s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlienTibShardProjectile"
+				WarheadTemplate="AlienEradicatorShardWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlienTibShardProjectile_Veteran" />
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlienEradicatorShardWarhead"
+		Name="AlienEradicatorShardWarhead"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS"
+		AntiMask="ANTI_GROUND">
+		<Nuggets>
+			<DamageNugget
+				Damage="175.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD">
+				<DamageScalarDetails Scalar="225%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar="75%">
+					<Filter
+						Rule="NONE"
+						Include="STRUCTURE" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar="20%">
+					<Filter
+						Rule="NONE"
+						Include="AIRCRAFT" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- -->
+
+	<!-- hexapod blue shard weapon -->
+
+	<WeaponTemplate
+		id="AlienEradicatorShardWeaponBlue"
+		Name="AlienEradicatorShardWeaponBlue"
+		AttackRange="290.0"
+		WeaponSpeed="500.0"
+		FireSound="AudioEvent:ALI_Stalker_ShardWeaponFire"
+		FireFX="FX_AlienTibShardFireBlue"
+		FireVeteranFX="FX_AlienTibShardFireHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="45d"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_01"
+		PreAttackType="PER_CLIP"
+		ReAcquireDetailType="PER_CLIP"
+		ClipSize="3">
+		<PreAttackDelay
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s" />
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="1.5s"
+			MaxSeconds="1.8s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlienBlueShardProjectile"
+				WarheadTemplate="AlienEradicatorShardBlueWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlienBlueShardProjectile_Veteran" />
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlienEradicatorShardBlueWarhead"
+		Name="AlienEradicatorShardBlueWarhead"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS"
+		AntiMask="ANTI_GROUND">
+		<Nuggets>
+			<DamageNugget
+				Damage="250.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARDBLUE">
+				<DamageScalarDetails Scalar="225%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar="75%">
+					<Filter
+						Rule="NONE"
+						Include="STRUCTURE" />
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar="20%">
+					<Filter
+						Rule="NONE"
+						Include="AIRCRAFT" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- end of hex -->
+
+</AssetDeclaration>

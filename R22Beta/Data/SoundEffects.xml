@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!--
+	<AudioEvent id="GDI_IonCannon_BeamSequence" 
+		Volume = "70"
+		VolumeShift = "-20"
+		Limit = "3"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "700"
+		MaxRange = "1400"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "1300" High = "1300" />
+		<Sound>GBIonCa_weapBeama</Sound>
+	</AudioEvent>
+
+	<AudioEvent id="GDI_IonCannon_Crescendo" 
+		Volume = "80"
+		VolumeShift = "-10"
+		Limit = "3"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "800"
+		MaxRange = "1600"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "3500" High = "3500" />
+		<Sound>GBIonCa_weapCresa</Sound> 
+	</AudioEvent>
+	
+	<AudioEvent id="GDI_IonCannon_Laser1" 
+		Volume = "80"
+		VolumeShift = "-10"
+		Limit = "3"
+		Priority = "HIGH"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "500"
+		MaxRange = "1000"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "50" High = "50" />
+		<Sound>GBIonCa_weapLasea</Sound>
+	</AudioEvent>
+	
+	<AudioEvent id="GDI_IonCannon_Laser2" 
+		Volume = "80"
+		VolumeShift = "-20"
+		Limit = "3"
+		Priority = "HIGH"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "500"
+		MaxRange = "1000"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "200" High = "200" />
+		<Sound>GBIonCa_weapLaseb</Sound>
+	</AudioEvent>
+	
+	<AudioEvent id="GDI_IonCannon_Laser3" 
+		Volume = "80"
+		VolumeShift = "-20"
+		Limit = "3"
+		Priority = "HIGH"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "500"
+		MaxRange = "1000"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "400" High = "400" />
+		<Sound>GBIonCa_weapLasec</Sound>
+	</AudioEvent>
+	
+	<AudioEvent id="GDI_IonCannon_Laser4" 
+		Volume = "80"
+		VolumeShift = "-20"
+		Limit = "3"
+		Priority = "HIGH"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "500"
+		MaxRange = "1000"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "600" High = "600" />
+		<Sound>GBIonCa_weapLased</Sound>
+	</AudioEvent>
+	
+	<AudioEvent id="GDI_IonCannon_Laser5" 
+		Volume = "80"
+		VolumeShift = "-20"
+		Limit = "3"
+		Priority = "HIGH"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "500"
+		MaxRange = "1000"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "725" High = "725" />
+		<Sound>GBIonCa_weapLasee</Sound>
+	</AudioEvent>
+		
+	<AudioEvent id="GDI_IonCannon_Laser6" 
+		Volume = "80"
+		VolumeShift = "-20"
+		Limit = "3"
+		Priority = "HIGH"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "500"
+		MaxRange = "1000"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "850" High = "850" />
+		<Sound>GBIonCa_weapLasef</Sound>
+	</AudioEvent>
+	
+	<AudioEvent id="GDI_IonCannon_Laser7" 
+		Volume = "85"
+		VolumeShift = "-20"
+		Limit = "3"
+		Priority = "HIGH"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "500"
+		MaxRange = "1000"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "1000" High = "1000" />
+		<Sound>GBIonCa_weapLaseg</Sound>
+	</AudioEvent>
+	
+	<AudioEvent id="GDI_IonCannon_Laser8"
+		Volume = "85"
+		VolumeShift = "-20"
+		Limit = "3"
+		Priority = "HIGH"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "500"
+		MaxRange = "1000"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "1150" High = "1150" />
+		<Sound>GBIonCa_weapLaseh</Sound>
+	</AudioEvent>
+	
+	<AudioEvent id="GDI_IonCannon_ShockwaveSequence" 
+		Volume = "130"
+		VolumeShift = "-20"
+		Limit = "3"
+		Priority = "HIGHEST"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "1000"
+		MaxRange = "2500"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "4200" High = "4200" />
+		<Sound>GBIonCa_weapShoca</Sound>
+	</AudioEvent>
+	
+	<AudioEvent id="GDI_IonCannon_SphereSequence" 
+		Volume = "80"
+		VolumeShift = "-20"
+		Limit = "3"
+		Priority = "HIGH"
+		Type = "WORLD SHROUDED EVERYONE"
+		MinRange = "800"
+		MaxRange = "1500"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20"
+		SubmixSlider = "SOUNDFX" >
+		<PitchShift Low = "-10" High = "10" />
+		<Delay Low = "2400" High = "2400" />
+		<Sound>GBIonCa_weapSphea</Sound>
+	</AudioEvent>
+	
+	<Multisound id="GDI_IonCannon_WeaponFireMS" >
+		<Subsound>AudioEvent:GDI_IonCannon_Laser1</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_Laser2</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_Laser3</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_Laser4</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_Laser5</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_Laser6</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_Laser7</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_Laser8</Subsound> 
+		<Subsound>AudioEvent:GDI_IonCannon_BeamSequence</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_SphereSequence</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_Crescendo</Subsound>
+		<Subsound>AudioEvent:GDI_IonCannon_ShockwaveSequence</Subsound>
+	</Multisound>
+	-->
+	
+	<AudioEvent id="GDI_CombatEngineer_VoiceCaptureBuilding"
+		Volume = "110"
+		MinVolume = "105"
+		Priority = "HIGH"
+		Type = "WORLD PLAYER VOICE"
+		Limit="3"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		SubmixSlider = "VOICE"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100" 
+		ZoomedInOffscreenOcclusionPercent = "20">
+		<PitchShift Low="-1" High="1"/>
+		<!-- EP1 -->
+		<Sound>GUComEn_voiCapBuia</Sound> <Sound>GUComEn_voiCapBuib</Sound> <Sound>GUComEn_voiCapBuic</Sound> <Sound>GUComEn_voiCapBuid</Sound> <Sound>GUComEn_voiCapBuie</Sound> <Sound>GUComEn_voiCapBuif</Sound> 
+	</AudioEvent>
+</AssetDeclaration>

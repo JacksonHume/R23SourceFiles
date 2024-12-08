@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="GBBTLEBASE_D3SN" Hierarchy="GBBTLEBASE_D3SK">
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBBTLEBASE_D3SN.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN1" BoneIndex="0">
+			<RenderObject>
+				<Mesh>GBBTLEBASE_D3SN.NEWSKIN1</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TREDS" BoneIndex="13">
+			<RenderObject>
+				<Mesh>GBBTLEBASE_D3SN.TREDS</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

@@ -1,0 +1,2149 @@
+Generated in: 00:00:00.3760345
+
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="SteelTalonsV35Ox_Summoned"
+		KindOf="SELECTABLE CAN_CAST_REFLECTIONS AIRCRAFT TRANSPORT NO_COLLIDE IGNORES_SELECT_ALL SUMMONED VEHICLE"
+		ReviveText=""
+		RecruitText=""
+		Description="Desc:GDIOx"
+		TypeDescription="Type:GDIOx"
+		Hotkey=""
+		RadarPriority="UNIT"
+		BuildCompletion="INVALID"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="0d"
+		BuildFadeInOnCreateTimeSeconds="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="SteelTalons"
+		EditorName="SteelTalonsV35Ox_Summoned"
+		EditorSorting="UNIT"
+		BountyValue="0"
+		BuildTime="1"
+		BuildFadeInOnCreateTime="0"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet="GDIV35OxCommandSet"
+		SelectPortrait="Portrait_GDIOx"
+		ButtonImage="Portrait_GDIOx"
+		VoicePriority="52"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CrowdResponse=""
+		CampnessValue="0"
+		CampnessValueRadius="600"
+		Scale="1"
+		HealthBoxScale="1.5"
+		HealthBoxHeightOffset="10"
+		OcclusionDelay="0"
+		LiveCameraPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		ThreatRadius="-1"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="100"
+		CommandPoints="0"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="0"
+		MaxDistanceForEngaged="0"
+		EngagedStateTimeout="0"
+		ThreatLevel="1"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		DisplayMeleeDamage="-1"
+		DisplayRangedDamage="-1"
+		HeroSortOrder="2147483647"
+		ExperienceScalarTable=""
+		FiringArc="360"
+		CamouflageDetectionMultiplier="1"
+		SelectionPriority="2147483647"
+		ProductionQueueType="AIRCRAFT"
+		BuildPlacementTypeFlag="INVALID"
+		BuildOnRequiredObjectKindOf=""
+		UnitCategory="NONE"
+		WeaponCategory="NONE"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon=""
+		ReinvisibilityDelay="7s"
+		CaptureTime="0s"
+		BuildCost="10"
+		RefundValue="0"
+		ThreatValue="0"
+		MaxSimultaneousOfType="0"
+		TransportSlotCount="0"
+		IsTrainable="True"
+		IsForbidden="False"
+		IsPrerequisite="False"
+		IsGrabbable="False"
+		IsHarvestable="False"
+		StructureRubbleHeight="0"
+		ForceLuaRegistration="False"
+		ShowHealthInSelectionDecal="False"
+		KeepSelectableWhenDead="False"
+		IsAutoBuilt="False"
+		CanPathThroughGates="True"
+		ShouldClearShotsOnIdle="False"
+		BuildInProximityToSamePlayerStucture="True">
+		<DisplayName>Name:GDIOx</DisplayName>
+		<ArmorSet
+			Armor="GDIOxArmor"
+			DamageFX="VehicleDamageFX"
+			Conditions="" />
+		<LocomotorSet
+			Speed="160"
+			Condition="NORMAL"
+			Locomotor="GDIDropshipLocomotor" />
+		<LocomotorSet
+			Speed="160"
+			Condition="TAXIING"
+			Locomotor="BasicHelicopterTaxiLocomotor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="90B2BBF6"
+				Name=""
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				ExtraPublicBone="BONEGARRISON"
+				AttachToBoneInAnotherModule=""
+				DependencySharedModelFlags=""
+				TrackMarksLeftBone=""
+				TrackMarksRightBone=""
+				RampMesh1=""
+				RampMesh2=""
+				WallBoundsMesh=""
+				RaisedWallMesh=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="True"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					Name=""
+					ConditionsYes=""
+					Skeleton=""
+					ModelAnimationPrefix=""
+					PortraitImage=""
+					ButtonImage=""
+					OverrideTooltip=""
+					id=""
+					RetainSubObjects="False">
+					<Model
+						Name="GUDROPSHIP_SKN"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="FX_Lfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					Name=""
+					ConditionsYes="DAMAGED"
+					Skeleton=""
+					ModelAnimationPrefix=""
+					PortraitImage=""
+					ButtonImage=""
+					OverrideTooltip=""
+					id=""
+					RetainSubObjects="False">
+					<Model
+						Name="GUDROPSHIP_SKN"
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="FX_Lfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="oxdamagesmoke"
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					Name=""
+					ConditionsYes="REALLYDAMAGED"
+					Skeleton=""
+					ModelAnimationPrefix=""
+					PortraitImage=""
+					ButtonImage=""
+					OverrideTooltip=""
+					id=""
+					RetainSubObjects="False">
+					<Model
+						Name="GUDROPSHIP_SKN"
+						ExtraMesh="False" />
+					<Texture
+						Original="GuDropShip"
+						New="GuDropShipD" />
+					<ParticleSysBone
+						BoneName="FX_Lfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="oxdamagefire"
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="oxdamagesmoke"
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					Name=""
+					ConditionsYes="DYING"
+					Skeleton=""
+					ModelAnimationPrefix=""
+					PortraitImage=""
+					ButtonImage=""
+					OverrideTooltip=""
+					id=""
+					RetainSubObjects="False">
+					<Model
+						Name="GUDROPSHIPR_SKN"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					Name=""
+					ConditionsYes="FORMATION_PREVIEW"
+					Skeleton=""
+					ModelAnimationPrefix=""
+					PortraitImage=""
+					ButtonImage=""
+					OverrideTooltip=""
+					id=""
+					RetainSubObjects="False">
+					<Model
+						Name="GUDROPSHIP_FP"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					AnimNickName=""
+					ConditionsYes=""
+					Name=""
+					StateName=""
+					Flags="RANDOMSTART"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_IDLA"
+						AnimationMode="LOOP"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="MOVING TURN_LEFT_HIGH_SPEED"
+					Name=""
+					StateName=""
+					Flags=""
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_HSTL"
+						AnimationMode="ONCE"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED"
+					Name=""
+					StateName=""
+					Flags=""
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_HSTR"
+						AnimationMode="ONCE"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="MOVING TURN_LEFT"
+					Name=""
+					StateName=""
+					Flags=""
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_TRNL"
+						AnimationMode="ONCE"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="MOVING TURN_RIGHT"
+					Name=""
+					StateName=""
+					Flags=""
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_TRNR"
+						AnimationMode="ONCE"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="ACCELERATE"
+					Name=""
+					StateName=""
+					Flags=""
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_ACCL"
+						AnimationMode="ONCE"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="DECELERATE"
+					Name=""
+					StateName=""
+					Flags=""
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_DECL"
+						AnimationMode="ONCE"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="MOVING"
+					Name=""
+					StateName=""
+					Flags=""
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_FLYA"
+						AnimationMode="LOOP"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="DOOR_1_OPENING"
+					Name=""
+					StateName=""
+					Flags=""
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_OPNA"
+						AnimationMode="ONCE"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="DOOR_1_CLOSING"
+					Name=""
+					StateName=""
+					Flags=""
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="GUDROPSHIP_CLSA"
+						AnimationMode="ONCE"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			<ScriptedModelDraw
+				id="17E1CA94"
+				Name=""
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				ExtraPublicBone="FX_Lfan FX_Rfan"
+				AttachToBoneInAnotherModule=""
+				DependencySharedModelFlags=""
+				TrackMarksLeftBone=""
+				TrackMarksRightBone=""
+				RampMesh1=""
+				RampMesh2=""
+				WallBoundsMesh=""
+				RaisedWallMesh=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="True"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					Name=""
+					ConditionsYes=""
+					Skeleton=""
+					ModelAnimationPrefix=""
+					PortraitImage=""
+					ButtonImage=""
+					OverrideTooltip=""
+					id=""
+					RetainSubObjects="False">
+					<Model
+						Name=""
+						ExtraMesh="False" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate=""
+						FXTrigger=""
+						Persist=""
+						PersistID="0"
+						id=""
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate
+				id="788FFB50" />
+			<SquishCollide
+				id="1B48BDA6"
+				CrushAnimTime="1s"
+				CrushKillDelay="0.5s"
+				UseDirectionCheck="True" />
+			<FireWeaponWhenDead
+				id="E84F2471"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				DelayTime="0s"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				FocusFireKindOfFlag=""
+				InitiallyActive="True"
+				ActiveDuringConstruction="False"
+				ContinueToBezierDestination="False">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="CATALYST"
+					DeathTypesForbidden="" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="C663B515"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				HealingAmount="100"
+				HealingDelay="0.5s"
+				StartHealingDelay="1s"
+				Radius="0"
+				KindOf=""
+				HealFXList=""
+				SpawnFXList=""
+				RespawnMinimumDelay="0s"
+				InitiallyActive="False"
+				AffectsWholePlayer="False"
+				AffectsContained="False"
+				HealOnlyIfNotUnderAttack="False"
+				HealOnlyIfNotInCombat="False"
+				HealOnlyOthers="False"
+				NonStackable="False"
+				RespawnNearbyHordeMembers="False">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="CE6A16D5"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="F03B3999"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="4A4E0C88"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="41CCDAEF"
+				StanceTemplate="Generic" />
+			<LevelUpUpgrade
+				id="3D5ED271"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="418DD456"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="2"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="E1726612"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				LevelsToGain="3"
+				LevelCap="4"
+				DoFlash="True">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<InvisibilityUpdate
+				id="F80B6FD9"
+				Options=""
+				UpdatePeriod="0.5s"
+				BroadcastRange="0"
+				OpacityMin="40%"
+				OpacityMax="100%">
+				<InvisibilityNugget
+					ForbiddenConditions="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_A USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenConditionExceptions=""
+					ForbiddenWeaponSets=""
+					ForbiddenStatus="IS_FIRING_WEAPON USING_ABILITY IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"
+					CamouflageLevel="0"
+					InvisibilityType="STEALTH"
+					Options=""
+					EnteringStealthFX=""
+					LeavingStealthFX=""
+					HintDetectableStates="IS_ATTACKING"
+					NoStealthForAttackWindow="0s" />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="4273058C"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="01009D1F"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="E3D95180">
+				<WeaponSlotHardpoint
+					ID="1"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AirborneTransportRangefinder"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<ModelConditionUpgrade
+				id="1E7962BB"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="True"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_1"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="BE39A3A5"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="True"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_1"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="AE1C99EB"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="True"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AddConditionFlags="USER_1"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<Physics
+				id="2B7165F3"
+				MaxXRotationVelocity="360"
+				MaxYRotationVelocity="360"
+				MaxZRotationVelocity="360"
+				GravityMultiplier="1"
+				ShockStunnedTimeLow="5"
+				ShockStunnedTimeHigh="10"
+				ShockStandingTime="5"
+				FirstHeight="1.3"
+				SecondHeight="1.3"
+				FirstPercentIndent="33%"
+				SecondPercentIndent="66%"
+				BounceCount="2"
+				BounceDistance="5"
+				BounceFirstHeight="1.3"
+				BounceSecondHeight="1.3"
+				BounceFirstPercentIndent="33%"
+				BounceSecondPercentIndent="66%"
+				GroundHitFX=""
+				GroundBounceFX=""
+				FirstPercentHeight="33%"
+				SecondPercentHeight="66%"
+				CurveFlattenMinDist="0"
+				TumbleRandomly="False"
+				AllowBouncing="False"
+				KillWhenRestingOnGround="False"
+				OrientToFlightPath="False"
+				IgnoreTerrainHeight="False" />
+			<ProductionUpdate
+				id="E17127F2"
+				MaxQueueEntries="1"
+				NumDoorAnimations="0"
+				DoorOpeningTime="0s"
+				DoorOpeningTimeMetaUnit="0s"
+				DoorWaitOpenTime="0s"
+				DoorCloseTime="0s"
+				ConstructionCompleteDuration="0"
+				DisabledTypesToProcess=""
+				UnitInvulnerableTime="0"
+				SpecialPrepModelconditionTime="0"
+				BonusForType=""
+				SpeedBonusAudioLoop=""
+				Type="INVALID"
+				ProductionTimeDelayScalar="0s"
+				GiveNoXP="False"
+				VeteranUnitsFromVeteranFactory="False"
+				SetBonusModelConditionOnSpeedBonus="False"
+				SecondaryQueue="False"
+				IgnorePreReqs="False" />
+			<MoveToPositionAndEvacuateSpecialPower
+				id="DCF3501A"
+				SpecialPowerTemplate="SpecialPowerMoveToPositionAndEvacuate"
+				AntiCategory=""
+				AntiFX=""
+				AttributeModifier=""
+				AttributeModifierRange="0"
+				AttributeModifierFX=""
+				WeatherDuration="0"
+				InitiateFX=""
+				TriggerFX=""
+				SetModelCondition="TOPPLED"
+				SetModelConditionTime="0s"
+				GiveLevels="0"
+				ChangeWeather="NORMAL"
+				OnTriggerRechargeSpecialPower=""
+				BurnDecayModifier="0"
+				MaxDistanceFromCommandCenter="0"
+				UpdateModuleStartsAttack="False"
+				StartsPaused="False"
+				ReEnableAntiCategory="False"
+				AttributeModifierAffectsSelf="False"
+				AttributeModifierWeatherBased="False"
+				TargetEnemy="False"
+				TargetAllSides="False"
+				DisableDuringAnimDuration="False"
+				IdleWhenStartingPower="False"
+				AffectGood="False"
+				AffectEvil="False"
+				AffectAllies="True"
+				AvailableAtStart="True"
+				AdjustVictim="False"
+				UseDistanceFromCommandCenter="False"
+				ChildModuleHandlesFX="False">
+				<AttributeModifierAffects
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterMP
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterStrategic
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+			</MoveToPositionAndEvacuateSpecialPower>
+			<SlowDeath
+				id="1673247C"
+				SinkRate="0.5"
+				ProbabilityModifier="10"
+				ModifierBonusPerOverkillPercent="0%"
+				SinkDelay="0s"
+				SinkDelayVariance="0s"
+				DestructionDelay="0s"
+				DestructionDelayVariance="0s"
+				DecayBeginTime="0s"
+				FlingForce="0"
+				FlingForceVariance="0"
+				FlingPitch="0d"
+				FlingPitchVariance="0d"
+				DeathFlags=""
+				FadeTime="0s"
+				FadeDelay="0s"
+				DeathTypes=""
+				DeathObjectStatusBits=""
+				ShadowWhenDead="False"
+				Fade="False">
+				<FX
+					Type="INITIAL">
+					<FX>FX_GDI_Ox_VoiceDie</FX>
+				</FX>
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_GDIDropShipDebris</OCL>
+				</OCL>
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+			</SlowDeath>
+			<FXListBehavior
+				id="57E81491">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIAirVehicleExplode"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+			</FXListBehavior>
+			<HordeTransportContain
+				id="EF5A376E"
+				ContainMax="1"
+				EnterSound="VehicleEnter"
+				ExitSound="VehicleExit"
+				DamagePercentToUnits="0%"
+				PassengersTestCollisionHeight="-1000"
+				NumberOfExitPaths="1"
+				DoorOpenTime="1"
+				ObjectStatusOfContained="UNSELECTABLE ENCLOSED"
+				ModifierRequiredTime="100"
+				KillIfEmptyTime="0s"
+				ModelConditionsWhenNotEmpty="CARRYING"
+				PassengersInTurret="False"
+				AllowOwnPlayerInsideOverride="True"
+				AllowAlliesInside="False"
+				AllowEnemiesInside="False"
+				AllowNeutralInside="False"
+				ShowPips="True"
+				CollidePickup="True"
+				EjectPassengersOnDeath="True"
+				KillPassengersOnDeath="True"
+				HasObjectStatusOfContainedEntry="True"
+				Enabled="True"
+				Slots="1"
+				ExitBone=""
+				ExitPitchRate="0"
+				HealthRegenPercentPerSec="0"
+				ExitDelay="0"
+				TypeOneForWeaponSet=""
+				TypeTwoForWeaponSet=""
+				TypeOneForWeaponState=""
+				TypeTwoForWeaponState=""
+				TypeThreeForWeaponState=""
+				GrabWeapon=""
+				ConditionForEntry="TOPPLED"
+				ThrowOutPassengersDelay="0"
+				ThrowOutPassengersLandingWarhead=""
+				EnterFadeTime="0"
+				ExitFadeTime="0"
+				ReleaseSnappyness="0.7"
+				ScatterNearbyOnExit="True"
+				OrientLikeContainerOnExit="False"
+				DestroyRidersWhoAreNotFreeToExit="False"
+				ForceOrientationContainer="True"
+				CanGrabStructure="False"
+				FireGrabWeaponOnVictim="True"
+				ShouldThrowOutPassengers="False"
+				FadePassengerOnEnter="False"
+				FadePassengerOnExit="False"
+				FadeReverse="False"
+				ExtendedExitContainerChecks="True"
+				FlyOffMapOnEmpty="True">
+				<PassengerFilter
+					Rule="ANY"
+					Relationship=""
+					Alignment="NONE"
+					Include="INFANTRY"
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<PassengerData
+					BonePrefix="BONEGARRISON"
+					Flags="">
+					<Filter
+						Rule="NONE"
+						Relationship=""
+						Alignment="NONE"
+						Include="INFANTRY"
+						Exclude=""
+						StatusBitFlags=""
+						RejectStatusBitFlags=""
+						AcceptModelCondition=""
+						RejectModelCondition="" />
+				</PassengerData>
+			</HordeTransportContain>
+			<StatusBitsUpgrade
+				id="85B2DF85"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				StatusToSet=""
+				StatusToClear="UNSELECTABLE"
+				ApplyToContained="False">
+				<TriggeredBy>Upgrade_Transporting</TriggeredBy>
+			</StatusBitsUpgrade>
+		</Behaviors>
+		<AI>
+			<TransportHelicopterAIUpdate
+				id="C25548AC"
+				AttackPriority=""
+				AutoAcquireEnemiesWhenIdle=""
+				StopChaseDistance="500"
+				HoldGroundCloseRangeDistance="0"
+				AILuaEventsList="GDIV35Ox_SummonedFunctions_103"
+				MinCowerTime="0s"
+				MaxCowerTime="0s"
+				RampageTime="0s"
+				BurningDeathTime="0s"
+				TimeToEjectPassengersOnRampage="0"
+				ComboLocomotorSet="NORMAL"
+				ComboLocoAttackDistance="80"
+				IdleTargetTime="0s"
+				MaxCombineChildren="1"
+				SpawnOffsetRadius="0"
+				StandGround="False"
+				CanAttackWhileContained="False"
+				RampageRequiresAflame="False"
+				FadeOnPortals="False"
+				MaxBoxes="0"
+				SupplyCenterActionDelay="0s"
+				SupplyWarehouseActionDelay="0s"
+				SupplyWarehouseScanDistance="0"
+				DepletedAnnounceDistance="2000"
+				HarvestActivationRange="0"
+				HarvestPreparationTime="0s"
+				HarvestActionTime="0s"
+				HarvestTrees="False"
+				HarvestTiberium="False"
+				HarvestsFromRearEnd="False"
+				CanPathThroughUnitsWhileDocking="True"
+				CanPathThroughUnitsWhileHarvesting="True"
+				FlyOffMap="REVERSE_DIRECTION"
+				DelayAFterLoadingOrUnloading="2s"
+				FlyOffMapOnUnload="True" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="8018425E"
+				MaxHealth="2500"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				InitialHealth="-1"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabObject=""
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior
+				id="59D403AD"
+				MaxUpdateRangeCap="0">
+				<Sound
+					Sound="V35DropShipCloseDoors"
+					Animation="GUDROPSHIP_CLSA"
+					Frame="1" />
+				<Sound
+					Sound="V35DropShipOpenDoors"
+					Animation="GUDROPSHIP_OPNA"
+					Frame="1" />
+			</AnimationSoundClientBehavior>
+			<ModelConditionAudioLoopClientBehavior
+				id="13120B33">
+				<ModelConditionSound
+					Sound="V35DropShipLand"
+					RequiredFlags="LANDING"
+					ExcludedFlags="" />
+				<ModelConditionSound
+					Sound="V35DropShipTakeOff"
+					RequiredFlags="TAKING_OFF"
+					ExcludedFlags="" />
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="False">
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				Name=""
+				MajorRadius="37"
+				MinorRadius="3"
+				Other=""
+				Height="25"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True" />
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				Name=""
+				MajorRadius="8"
+				MinorRadius="30"
+				Other=""
+				Height="25"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+				<Offset
+					x="-7"
+					y="0"
+					z="0" />
+			</Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="GDI_Ox_VoiceCreate"
+				AudioType="voiceCreated" />
+			<AudioEntry
+				Sound="GDI_Ox_VoiceMove"
+				AudioType="voiceMove" />
+			<AudioEntry
+				Sound="GDI_Ox_VoiceRetreat"
+				AudioType="voiceRetreatToCastle" />
+			<AudioEntry
+				Sound="GDI_Ox_VoiceSelectMS"
+				AudioType="voiceSelect" />
+			<NamedEntry
+				Sound="GDI_Ox_VoiceDropoff"
+				Name="D451C3CA" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="V35DropShipMoveLoop"
+				AudioType="soundMoveLoop" />
+			<AudioEntry
+				Sound="V35DropShipIdleLoop"
+				AudioType="soundAmbient" />
+			<AudioEntry
+				Sound="V35DropShipMoveStart"
+				AudioType="soundMoveStart" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventDamagedOwner="UnitUnderAttack"
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="155"
+			EvaEventAmbushed="UnitAmbushed"
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled"
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME"
+			Texture=""
+			AdditionalTexture=""
+			SizeX="0"
+			SizeY="0"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="0s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="0s"
+			OpacityEnd="0"
+			MaxHeight="20"
+			SunAngle="0"
+			OverrideLODVisibility="False"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
+		<VisionInfo
+			VisionRange="180"
+			ShroudClearingRange="600"
+			VisionSide="100%"
+			VisionRear="100%"
+			VisionBonusTestRadius="100"
+			VisionBonusTestSegments="8"
+			VisionBonusPercentPerFoot="0%"
+			MaxVisionBonusPercent="50%"
+			MinVisionBonusPercent="-50%" />
+		<CrusherInfo
+			CrushKnockback="0"
+			CrushZFactor="1"
+			MinCrushVelocityPercent="1%"
+			CrushDecelerationPercent="0%"
+			CrushWeapon=""
+			CrushRevengeWeapon=""
+			CrusherLevel="0"
+			CrushableLevel="2"
+			MountedCrusherLevel="255"
+			MountedCrushableLevel="255"
+			CrushEqualLevelProps="True"
+			UseCrushAttack="True"
+			CrushOnlyWhileCharging="False"
+			CrushAllies="False" />
+	</GameObject>
+</AssetDeclaration>
+
+Asset Dump:
+GameObject:SteelTalonsV35Ox_Summoned
+STV35Ox_Summoned.xml
+942FFF2D:F52E7ABF:50612DE9:0D4E6952
+
+AssetReferences: 54
+
+
+Binary: 11892 Offset: 17526740
+000000: 00000000 82408000 01000000 00000020
+000010: 00000000 00000000 00001000 00008000
+000020: 00000000 00000000 00000000 00000000
+000030: 00000000 5C020000 00000000 60020000
+000040: 0A000000 64020000 0A000000 70020000
+000050: 00000000 7C020000 03000000 00000000
+000060: 00000000 00000000 00000000 00000000
+000070: 00000000 00000000 00000000 00000000
+000080: 0B000000 80020000 19000000 8C020000
+000090: 02000000 00000000 0000803F 00000000
+0000A0: 00000000 00000000 70675BE0 0E000000
+0000B0: A8020000 0E000000 B8020000 34000000
+0000C0: 000080BF 00000000 00000000 00001644
+0000D0: 0000803F 0000C03F 00002041 00000000
+0000E0: 00000000 01000000 01000000 00000000
+0000F0: 000080BF 00000000 0000803F 0000C842
+000100: 00000000 00000000 00000000 00000000
+000110: 00000000 0000803F 00000000 000080BF
+000120: 00000000 FFFFFFFF FFFFFFFF FFFFFF7F
+000130: 00000000 C8020000 0000B443 0000803F
+000140: FFFFFF7F 04000000 00000000 00000000
+000150: 00000000 00000000 00000000 00000000
+000160: 00000000 00000000 00000000 00000000
+000170: FFFFFFFF FFFFFFFF 00000040 00000000
+000180: 0000E040 00000000 00000000 00000000
+000190: CC020000 00000000 01000000 E0020000
+0001A0: 00000000 00000000 02000000 EC020000
+0001B0: 00000000 00000000 00000000 00000000
+0001C0: 00000000 00000000 00000000 00000000
+0001D0: 00000000 00000000 04030000 D0140000
+0001E0: 20280000 D4280000 00000000 44290000
+0001F0: 00000000 102B0000 00000000 00000000
+000200: 00000000 00000000 00000000 00000000
+000210: 00000000 A42B0000 0C2C0000 2C2C0000
+000220: 00000000 00000000 F42D0000 00000000
+000230: 302E0000 542E0000 00000000 00000000
+000240: 00000000 0A000000 00000000 00010000
+000250: 00000000 00000001 00010000 00000000
+000260: 00000000 44657363 3A474449 4F780000
+000270: 54797065 3A474449 4F780000 00000000
+000280: 53746565 6C54616C 6F6E7300 53746565
+000290: 6C54616C 6F6E7356 33354F78 5F53756D
+0002A0: 6D6F6E65 64000000 506F7274 72616974
+0002B0: 5F474449 4F780000 506F7274 72616974
+0002C0: 5F474449 4F780000 00000000 0A000000
+0002D0: D4020000 4E616D65 3A474449 4F780000
+0002E0: 00000000 01000000 00000000 00002043
+0002F0: 00000000 02000000 00002043 05000000
+000300: 03000000 02000000 0C030000 14030000
+000310: 70120000 4B2ACF4E F6BBB290 00000000
+000320: 40040000 CDCCCC3E 00004040 CDCCCC3E
+000330: F3FD543C 00000000 00000000 00000000
+000340: 01000000 44040000 00000000 5C040000
+000350: 00000000 00000000 00000000 00000000
+000360: 00000000 00000000 00000000 00000000
+000370: 00000000 00000000 00000000 00000000
+000380: 00000000 00000000 00000000 00000000
+000390: 00000000 00000000 00000000 00000000
+0003A0: 00000000 00000000 60040000 00000000
+0003B0: 64040000 00000000 68040000 00000000
+0003C0: 6C040000 00000000 70040000 00000000
+0003D0: 74040000 00000000 00000000 00000000
+0003E0: 00000000 00000000 0000803F FFFFFFFF
+0003F0: 00000000 05000000 78040000 0A000000
+000400: 400A0000 00000000 00000000 00000000
+000410: 00000000 00000000 00000000 00000000
+000420: 00000000 00000000 01010000 00000001
+000430: 00000000 00000000 00000000 01000001
+000440: 00000000 0C000000 4C040000 424F4E45
+000450: 47415252 49534F4E 00000000 00000000
+000460: 00000000 00000000 00000000 00000000
+000470: 00000000 00000000 01000000 00000000
+000480: 34070000 00000000 38070000 00000000
+000490: 3C070000 00000000 40070000 00000000
+0004A0: 00000000 00000000 44070000 00000000
+0004B0: 48070000 01000000 4C070000 00000000
+0004C0: 00000000 00000000 00000000 00000000
+0004D0: 00000000 00000000 00000000 00000000
+0004E0: 00000000 02000000 54070000 00000000
+0004F0: 00000000 00000000 00000000 00000000
+000500: 00000000 00000000 00000000 D4070000
+000510: 07000000 D8070000 00000000 E0070000
+000520: 00000000 E4070000 00000000 00000000
+000530: 00000000 E8070000 00000000 EC070000
+000540: 01000000 F0070000 00000000 00000000
+000550: 00000000 00000000 00000000 00000000
+000560: 00000000 00000000 00000000 00000000
+000570: 03000000 F8070000 00000000 00000000
+000580: 00000000 00000000 00000000 00000000
+000590: 00000000 00000000 B8080000 0D000000
+0005A0: BC080000 00000000 CC080000 00000000
+0005B0: D0080000 00000000 00000000 00000000
+0005C0: D4080000 00000000 D8080000 01000000
+0005D0: DC080000 01000000 E4080000 00000000
+0005E0: 00000000 00000000 00000000 00000000
+0005F0: 00000000 00000000 00000000 04000000
+000600: EC080000 00000000 00000000 00000000
+000610: 00000000 00000000 00000000 00000000
+000620: 00000000 EC090000 05000000 F0090000
+000630: 00000000 F8090000 00000000 FC090000
+000640: 00000000 00000000 00000000 000A0000
+000650: 00000000 040A0000 01000000 080A0000
+000660: 00000000 00000000 00000000 00000000
+000670: 00000000 00000000 00000000 00000000
+000680: 00000000 00000000 00000000 00000000
+000690: 00000000 00000000 00000000 00000000
+0006A0: 00000000 00000000 00000000 00000000
+0006B0: 100A0000 11000000 140A0000 00000000
+0006C0: 280A0000 00000000 2C0A0000 00000000
+0006D0: 00000000 00000000 300A0000 00000000
+0006E0: 340A0000 01000000 380A0000 00000000
+0006F0: 00000000 00000000 00000000 00000000
+000700: 00000000 00000000 00000000 00000000
+000710: 00000000 00000000 00000000 00000000
+000720: 00000000 00000000 00000000 00000000
+000730: 00000000 00000000 00000000 00000000
+000740: 00000000 00000000 00000000 04000000
+000750: 00000000 07000000 AC070000 05000000
+000760: 00000000 B4070000 00000000 B8070000
+000770: 00000000 00000000 BC070000 01000000
+000780: 07000000 C0070000 06000000 00000000
+000790: C8070000 00000000 CC070000 00000000
+0007A0: 00000000 D0070000 01000000 46585F4C
+0007B0: 66616E00 00000000 00000000 00000000
+0007C0: 46585F52 66616E00 00000000 00000000
+0007D0: 00000000 00000000 44414D41 47454400
+0007E0: 00000000 00000000 00000000 00000000
+0007F0: 07000000 00000000 07000000 7C080000
+000800: 08000000 00000000 84080000 00000000
+000810: 88080000 00000000 00000000 8C080000
+000820: 01000000 07000000 90080000 09000000
+000830: 00000000 98080000 00000000 9C080000
+000840: 00000000 00000000 A0080000 01000000
+000850: 07000000 A4080000 0A000000 00000000
+000860: AC080000 00000000 B0080000 00000000
+000870: 00000000 B4080000 01000000 46585F4C
+000880: 66616E00 00000000 00000000 00000000
+000890: 46585F52 66616E00 00000000 00000000
+0008A0: 00000000 46585F52 66616E00 00000000
+0008B0: 00000000 00000000 00000000 5245414C
+0008C0: 4C594441 4D414745 44000000 00000000
+0008D0: 00000000 00000000 00000000 0B000000
+0008E0: 00000000 0C000000 0D000000 07000000
+0008F0: 9C090000 0E000000 00000000 A4090000
+000900: 00000000 A8090000 00000000 00000000
+000910: AC090000 01000000 07000000 B0090000
+000920: 0F000000 00000000 B8090000 00000000
+000930: BC090000 00000000 00000000 C0090000
+000940: 01000000 07000000 C4090000 10000000
+000950: 00000000 CC090000 00000000 D0090000
+000960: 00000000 00000000 D4090000 01000000
+000970: 07000000 D8090000 11000000 00000000
+000980: E0090000 00000000 E4090000 00000000
+000990: 00000000 E8090000 01000000 46585F4C
+0009A0: 66616E00 00000000 00000000 00000000
+0009B0: 46585F52 66616E00 00000000 00000000
+0009C0: 00000000 46585F52 66616E00 00000000
+0009D0: 00000000 00000000 46585F52 66616E00
+0009E0: 00000000 00000000 00000000 00000000
+0009F0: 4459494E 47000000 00000000 00000000
+000A00: 00000000 00000000 12000000 00000000
+000A10: 00000000 464F524D 4154494F 4E5F5052
+000A20: 45564945 57000000 00000000 00000000
+000A30: 00000000 00000000 13000000 00000000
+000A40: 01000000 00000000 D80D0000 00000000
+000A50: DC0D0000 00000000 E00D0000 00000000
+000A60: E40D0000 0B000000 E80D0000 00000000
+000A70: 00000000 01000000 F40D0000 00000000
+000A80: 00000000 00000000 00000000 00000000
+000A90: 00000000 00000000 00000000 00000000
+000AA0: 00000000 480E0000 1B000000 4C0E0000
+000AB0: 00000000 680E0000 00000000 6C0E0000
+000AC0: 00000000 700E0000 00000000 00000000
+000AD0: 01000000 740E0000 00000000 00000000
+000AE0: 00000000 00000000 00000000 00000000
+000AF0: 00000000 00000000 00000000 00000000
+000B00: C80E0000 1C000000 CC0E0000 00000000
+000B10: EC0E0000 00000000 F00E0000 00000000
+000B20: F40E0000 00000000 00000000 01000000
+000B30: F80E0000 00000000 00000000 00000000
+000B40: 00000000 00000000 00000000 00000000
+000B50: 00000000 00000000 00000000 4C0F0000
+000B60: 10000000 500F0000 00000000 640F0000
+000B70: 00000000 680F0000 00000000 6C0F0000
+000B80: 00000000 00000000 01000000 700F0000
+000B90: 00000000 00000000 00000000 00000000
+000BA0: 00000000 00000000 00000000 00000000
+000BB0: 00000000 00000000 C40F0000 11000000
+000BC0: C80F0000 00000000 DC0F0000 00000000
+000BD0: E00F0000 00000000 E40F0000 00000000
+000BE0: 00000000 01000000 E80F0000 00000000
+000BF0: 00000000 00000000 00000000 00000000
+000C00: 00000000 00000000 00000000 00000000
+000C10: 00000000 3C100000 0A000000 40100000
+000C20: 00000000 4C100000 00000000 50100000
+000C30: 00000000 54100000 00000000 00000000
+000C40: 01000000 58100000 00000000 00000000
+000C50: 00000000 00000000 00000000 00000000
+000C60: 00000000 00000000 00000000 00000000
+000C70: AC100000 0A000000 B0100000 00000000
+000C80: BC100000 00000000 C0100000 00000000
+000C90: C4100000 00000000 00000000 01000000
+000CA0: C8100000 00000000 00000000 00000000
+000CB0: 00000000 00000000 00000000 00000000
+000CC0: 00000000 00000000 00000000 1C110000
+000CD0: 06000000 20110000 00000000 28110000
+000CE0: 00000000 2C110000 00000000 30110000
+000CF0: 00000000 00000000 01000000 34110000
+000D00: 00000000 00000000 00000000 00000000
+000D10: 00000000 00000000 00000000 00000000
+000D20: 00000000 00000000 88110000 0E000000
+000D30: 8C110000 00000000 9C110000 00000000
+000D40: A0110000 00000000 A4110000 00000000
+000D50: 00000000 01000000 A8110000 00000000
+000D60: 00000000 00000000 00000000 00000000
+000D70: 00000000 00000000 00000000 00000000
+000D80: 00000000 FC110000 0E000000 00120000
+000D90: 00000000 10120000 00000000 14120000
+000DA0: 00000000 18120000 00000000 00000000
+000DB0: 01000000 1C120000 00000000 00000000
+000DC0: 00000000 00000000 00000000 00000000
+000DD0: 00000000 00000000 00000000 00000000
+000DE0: 00000000 00000000 52414E44 4F4D5354
+000DF0: 41525400 00000000 380E0000 14000000
+000E00: 04000000 3C0E0000 00000000 440E0000
+000E10: 00000000 0000A040 0000803F 0000803F
+000E20: 00000000 01000000 01000000 000080BF
+000E30: 000080BF 00000000 00000000 4C4F4F50
+000E40: 00000000 00000000 00000000 4D4F5649
+000E50: 4E472054 55524E5F 4C454654 5F484947
+000E60: 485F5350 45454400 00000000 00000000
+000E70: 00000000 00000000 B80E0000 15000000
+000E80: 04000000 BC0E0000 00000000 C40E0000
+000E90: 00000000 00007041 0000803F 0000803F
+000EA0: 00000000 01000000 01000000 000080BF
+000EB0: 000080BF 00000000 00000000 4F4E4345
+000EC0: 00000000 00000000 00000000 4D4F5649
+000ED0: 4E472054 55524E5F 52494748 545F4849
+000EE0: 47485F53 50454544 00000000 00000000
+000EF0: 00000000 00000000 00000000 3C0F0000
+000F00: 16000000 04000000 400F0000 00000000
+000F10: 480F0000 00000000 00007041 0000803F
+000F20: 0000803F 00000000 01000000 01000000
+000F30: 000080BF 000080BF 00000000 00000000
+000F40: 4F4E4345 00000000 00000000 00000000
+000F50: 4D4F5649 4E472054 55524E5F 4C454654
+000F60: 00000000 00000000 00000000 00000000
+000F70: 00000000 B40F0000 17000000 04000000
+000F80: B80F0000 00000000 C00F0000 00000000
+000F90: 00007041 0000803F 0000803F 00000000
+000FA0: 01000000 01000000 000080BF 000080BF
+000FB0: 00000000 00000000 4F4E4345 00000000
+000FC0: 00000000 00000000 4D4F5649 4E472054
+000FD0: 55524E5F 52494748 54000000 00000000
+000FE0: 00000000 00000000 00000000 2C100000
+000FF0: 18000000 04000000 30100000 00000000
+001000: 38100000 00000000 00007041 0000803F
+001010: 0000803F 00000000 01000000 01000000
+001020: 000080BF 000080BF 00000000 00000000
+001030: 4F4E4345 00000000 00000000 00000000
+001040: 41434345 4C455241 54450000 00000000
+001050: 00000000 00000000 00000000 9C100000
+001060: 19000000 04000000 A0100000 00000000
+001070: A8100000 00000000 00007041 0000803F
+001080: 0000803F 00000000 01000000 01000000
+001090: 000080BF 000080BF 00000000 00000000
+0010A0: 4F4E4345 00000000 00000000 00000000
+0010B0: 44454345 4C455241 54450000 00000000
+0010C0: 00000000 00000000 00000000 0C110000
+0010D0: 1A000000 04000000 10110000 00000000
+0010E0: 18110000 00000000 00007041 0000803F
+0010F0: 0000803F 00000000 01000000 01000000
+001100: 000080BF 000080BF 00000000 00000000
+001110: 4F4E4345 00000000 00000000 00000000
+001120: 4D4F5649 4E470000 00000000 00000000
+001130: 00000000 00000000 78110000 1B000000
+001140: 04000000 7C110000 00000000 84110000
+001150: 00000000 00007041 0000803F 0000803F
+001160: 00000000 01000000 01000000 000080BF
+001170: 000080BF 00000000 00000000 4C4F4F50
+001180: 00000000 00000000 00000000 444F4F52
+001190: 5F315F4F 50454E49 4E470000 00000000
+0011A0: 00000000 00000000 00000000 EC110000
+0011B0: 1C000000 04000000 F0110000 00000000
+0011C0: F8110000 00000000 0000A040 0000803F
+0011D0: 0000803F 00000000 01000000 01000000
+0011E0: 000080BF 000080BF 00000000 00000000
+0011F0: 4F4E4345 00000000 00000000 00000000
+001200: 444F4F52 5F315F43 4C4F5349 4E470000
+001210: 00000000 00000000 00000000 00000000
+001220: 60120000 1D000000 04000000 64120000
+001230: 00000000 6C120000 00000000 0000A040
+001240: 0000803F 0000803F 00000000 01000000
+001250: 01000000 000080BF 000080BF 00000000
+001260: 00000000 4F4E4345 00000000 00000000
+001270: 4B2ACF4E 94CAE117 00000000 9C130000
+001280: CDCCCC3E 00004040 CDCCCC3E F3FD543C
+001290: 00000000 00000000 00000000 02000000
+0012A0: A0130000 00000000 C0130000 00000000
+0012B0: 00000000 00000000 00000000 00000000
+0012C0: 00000000 00000000 00000000 00000000
+0012D0: 00000000 00000000 00000000 00000000
+0012E0: 00000000 00000000 00000000 00000000
+0012F0: 00000000 00000000 00000000 00000000
+001300: 00000000 C4130000 00000000 C8130000
+001310: 00000000 CC130000 00000000 D0130000
+001320: 00000000 D4130000 00000000 D8130000
+001330: 00000000 00000000 00000000 00000000
+001340: 00000000 0000803F FFFFFFFF 00000000
+001350: 01000000 DC130000 00000000 00000000
+001360: 00000000 00000000 00000000 00000000
+001370: 00000000 00000000 00000000 00000000
+001380: 00000000 01010000 00000001 00000000
+001390: 00000000 00000000 01000001 00000000
+0013A0: 07000000 B0130000 07000000 B8130000
+0013B0: 46585F4C 66616E00 46585F52 66616E00
+0013C0: 00000000 00000000 00000000 00000000
+0013D0: 00000000 00000000 00000000 01000000
+0013E0: 00000000 68140000 00000000 6C140000
+0013F0: 00000000 70140000 00000000 74140000
+001400: 00000000 00000000 00000000 78140000
+001410: 00000000 7C140000 01000000 80140000
+001420: 00000000 00000000 00000000 00000000
+001430: 00000000 00000000 00000000 00000000
+001440: 00000000 00000000 01000000 88140000
+001450: 00000000 00000000 00000000 00000000
+001460: 00000000 00000000 00000000 00000000
+001470: 00000000 00000000 00000000 00000000
+001480: 00000000 00000000 0D000000 B4140000
+001490: 00000000 00000000 C4140000 00000000
+0014A0: C8140000 00000000 00000000 CC140000
+0014B0: 01000000 524F4F54 5452414E 53464F52
+0014C0: 4D000000 00000000 00000000 00000000
+0014D0: 19000000 D8140000 3C150000 44150000
+0014E0: 58150000 04160000 74160000 A0160000
+0014F0: CC160000 F8160000 04170000 38170000
+001500: 6C170000 A0170000 DC180000 04190000
+001510: 10190000 74190000 4C1A0000 241B0000
+001520: FC1B0000 641C0000 BC1C0000 E0200000
+001530: 74220000 E8220000 C4270000 55F022E6
+001540: 50FB8F78 ED41EBB5 A6BD481B 0000803F
+001550: 0000003F 01000000 9CB4CE90 71244FE8
+001560: 00000000 00000000 00000000 00000000
+001570: 00000000 00000000 01000000 00000000
+001580: 1E000000 00000000 00000000 00000000
+001590: 00000000 00000000 00000000 00000000
+0015A0: 00000000 00000000 00000000 00000000
+0015B0: 00000000 00000000 00000000 00000000
+0015C0: 00000000 00000000 00000000 00000000
+0015D0: 00000000 00000000 00000000 00000000
+0015E0: 00000000 000080BF 34FA8E3C 34FA8EBC
+0015F0: 00000001 00000000 00000000 00000000
+001600: 01000000 2D59F6FB 15B563C6 00000000
+001610: 01000000 70160000 00000000 00000000
+001620: 00000000 01000000 64000000 0000003F
+001630: 0000803F 00000000 00000000 00000000
+001640: 00000000 00000000 00000000 00000000
+001650: 00000000 00000000 00000000 00000000
+001660: 00000000 00000000 00000000 00000000
+001670: 81D5DC1F 454CA274 D5166ACE 00000000
+001680: 01000000 9C160000 00000000 00000000
+001690: 00000000 01000000 1F000000 65DA8D53
+0016A0: 454CA274 99393BF0 00000000 01000000
+0016B0: C8160000 00000000 00000000 00000000
+0016C0: 01000000 20000000 75272D8D 454CA274
+0016D0: 880C4E4A 00000000 01000000 F4160000
+0016E0: 00000000 00000000 00000000 01000000
+0016F0: 21000000 6EEBC052 3DE4A1C0 EFDACC41
+001700: 22000000 A1257D97 71D25E3D 00000000
+001710: 01000000 34170000 00000000 00000000
+001720: 00000000 01000000 01000000 04000000
+001730: 01000000 690E241B A1257D97 56D48D41
+001740: 00000000 01000000 68170000 00000000
+001750: 00000000 00000000 01000000 02000000
+001760: 04000000 01000000 2CF0982B A1257D97
+001770: 126672E1 00000000 01000000 9C170000
+001780: 00000000 00000000 00000000 01000000
+001790: 03000000 04000000 01000000 4C89EB03
+0017A0: 18406335 D96F0BF8 00000000 0000003F
+0017B0: 00000000 CCCCCC3E 0000803F 00000000
+0017C0: 00000000 00000000 00E77902 00000000
+0017D0: 00000038 00000000 00000000 00000000
+0017E0: 00000000 00000000 00000000 00000000
+0017F0: 00000000 00000000 00000000 00000000
+001800: 00000000 00000000 00000000 00000000
+001810: 00000000 00000000 00000000 00000000
+001820: 00000000 00000000 00000000 00000000
+001830: 00000000 00000000 00000000 00000000
+001840: 00000000 00000000 00000000 00000000
+001850: 00000000 00000000 00000000 00000000
+001860: 00000000 00000000 00000000 00000000
+001870: 00000000 00000000 00000000 00200003
+001880: 00000000 40000000 00000000 00000000
+001890: 00000000 00000000 00000000 00000000
+0018A0: 00000000 00000000 00004000 00000000
+0018B0: 00000000 00000000 00000000 00000000
+0018C0: 00000000 00000000 00000000 00000000
+0018D0: 01000000 D8180000 0349ABD8 C0B8A693
+0018E0: 8C057342 00000000 01000000 00190000
+0018F0: 00000000 00000000 00000000 01000000
+001900: 0349ABD8 0C91764D 1F9D0001 2C010000
+001910: A9221743 8051D9E3 01000000 30190000
+001920: 00000000 00000000 00000000 00000000
+001930: 00000000 01000000 00000000 00000000
+001940: 01000000 4C190000 00000000 00000000
+001950: 23000000 00000000 00000000 00000000
+001960: 00000000 00000000 00000000 00000000
+001970: 00000000 7F5CDD4D BB62791E 00000000
+001980: 01000000 481A0000 00000000 00000000
+001990: 00000100 01000000 00000000 00000000
+0019A0: 00000000 00000000 00000000 00000001
+0019B0: 00000000 00000000 00000000 00000000
+0019C0: 00000000 00000000 00000000 00000000
+0019D0: 00000000 00000000 00000000 00000000
+0019E0: 00000000 00000000 00000000 00000000
+0019F0: 00000000 00000000 00000000 00000000
+001A00: 00000000 00000000 00000000 00000000
+001A10: 00000000 00000000 00000000 00000000
+001A20: 00000000 00000000 00000000 00000000
+001A30: 00000000 00000000 00000000 00000000
+001A40: 00000000 00000000 4CFF94E6 7F5CDD4D
+001A50: A5A339BE 00000000 01000000 201B0000
+001A60: 00000000 00000000 00000100 01000000
+001A70: 00000000 00000000 00000000 00000000
+001A80: 00000000 00000001 00000000 00000000
+001A90: 00000000 00000000 00000000 00000000
+001AA0: 00000000 00000000 00000000 00000000
+001AB0: 00000000 00000000 00000000 00000000
+001AC0: 00000000 00000000 00000000 00000000
+001AD0: 00000000 00000000 00000000 00000000
+001AE0: 00000000 00000000 00000000 00000000
+001AF0: 00000000 00000000 00000000 00000000
+001B00: 00000000 00000000 00000000 00000000
+001B10: 00000000 00000000 00000000 00000000
+001B20: 50DBD8B5 7F5CDD4D EB991CAE 00000000
+001B30: 01000000 F81B0000 00000000 00000000
+001B40: 00000100 01000000 00000000 00000000
+001B50: 00000000 00000000 00000000 00000001
+001B60: 00000000 00000000 00000000 00000000
+001B70: 00000000 00000000 00000000 00000000
+001B80: 00000000 00000000 00000000 00000000
+001B90: 00000000 00000000 00000000 00000000
+001BA0: 00000000 00000000 00000000 00000000
+001BB0: 00000000 00000000 00000000 00000000
+001BC0: 00000000 00000000 00000000 00000000
+001BD0: 00000000 00000000 00000000 00000000
+001BE0: 00000000 00000000 00000000 00000000
+001BF0: 00000000 00000000 D134F4A5 CBEDBF79
+001C00: F365712B 0000B443 0000B443 0000B443
+001C10: 0000803F 05000000 0A000000 05000000
+001C20: 6666A63F 6666A63F C2F5A83E C2F5283F
+001C30: 02000000 0000A040 6666A63F 6666A63F
+001C40: C2F5A83E C2F5283F 00000000 00000000
+001C50: C2F5A83E C2F5283F 00000000 00000000
+001C60: 00000000 3954C76E F22771E1 01000000
+001C70: 00000000 00000000 00000000 00000000
+001C80: 00000000 00000000 00000000 00000000
+001C90: 00000000 00000000 00000000 FFFFFFFF
+001CA0: 00000000 00000000 00000000 00000000
+001CB0: 00000000 00000000 00000000 4A2A7EAC
+001CC0: 1A50F3DC 24000000 00000000 00000000
+001CD0: 00000000 00000000 00000000 00000000
+001CE0: 00000000 00000000 00000000 00000000
+001CF0: 00000000 00000000 00000000 00000000
+001D00: 00000000 00000000 00000000 00000000
+001D10: 00000000 00000000 00000000 00000000
+001D20: 00000000 00000000 00000000 00000000
+001D30: 00000000 00000000 00000000 00000000
+001D40: 00000000 00000000 00000000 00000000
+001D50: 00000000 00000000 00000000 00000000
+001D60: 00000000 00000000 00000000 00000000
+001D70: 00000000 00000000 00000000 00000000
+001D80: 00000000 00000000 00000000 00000000
+001D90: 00000000 00000000 00000000 00000000
+001DA0: 00000000 00000000 00000000 00000000
+001DB0: 00000000 00000000 00000000 00000000
+001DC0: 00000000 00000000 00000000 00000000
+001DD0: 00000000 00000000 00000000 00000000
+001DE0: 00000000 00000000 00000000 00000000
+001DF0: 00000000 00000000 00000000 00000000
+001E00: 00000000 00000000 00000000 00000000
+001E10: 00000000 00000000 00000000 00000000
+001E20: 00000000 00000000 00000000 00000000
+001E30: 00000000 00000000 00000000 00000000
+001E40: 00000000 00000000 00000000 00000000
+001E50: 00000000 00000000 00000000 00000000
+001E60: 00000000 00000000 00000000 00000000
+001E70: 00000000 00000000 00000000 00000000
+001E80: 00000000 00000000 00000000 00000000
+001E90: 00000000 00000000 00000000 00000000
+001EA0: 00000000 00000000 00000000 00000000
+001EB0: 00000000 00000000 00000000 00000000
+001EC0: 00000000 00000000 00000000 00000000
+001ED0: 00000000 00000000 00000000 00000000
+001EE0: 00000000 00000000 00000000 00000000
+001EF0: 00000000 00000000 00000000 00000000
+001F00: 00000000 00000000 00000000 00000000
+001F10: 00000000 00000000 00000000 00000000
+001F20: 00000000 00000000 00000000 00000000
+001F30: 00000000 00000000 00000000 00000000
+001F40: 00000000 00000000 00000000 00000000
+001F50: 00000000 00000000 00000000 00000000
+001F60: 00000000 00000000 00000000 00000000
+001F70: 00000000 00000000 00000000 00000000
+001F80: 00000000 00000000 00000000 00000000
+001F90: 00000000 00000000 00000000 00000000
+001FA0: 00000000 00000000 00000000 00000000
+001FB0: 00000000 00000000 00000000 00000000
+001FC0: 00000000 00000000 00000000 00000000
+001FD0: 00000000 00000000 00000000 00000000
+001FE0: 00000000 00000000 00000000 00000000
+001FF0: 00000000 00000000 00000000 00000000
+002000: 00000000 00000000 00000000 00000000
+002010: 00000000 00000000 00000000 00000000
+002020: 00000000 00000000 00000000 00000000
+002030: 00000000 00000000 00000000 00000000
+002040: 00000000 00000000 00000000 00000000
+002050: 00000000 00000000 00000000 00000000
+002060: 00000000 00000000 00000000 00000000
+002070: 00000000 00000000 00000000 00000000
+002080: 00000000 00000000 00000000 00000000
+002090: 00000000 00000000 00000000 00000000
+0020A0: 00000000 00000000 00000000 00000000
+0020B0: 00000000 00000000 00000000 00000000
+0020C0: 00000000 00000000 00000000 00000000
+0020D0: 00000000 00000000 00000001 01000000
+0020E0: 94977698 7C247316 CDCCCC3D 0A000000
+0020F0: 00000000 00000000 00000000 00000000
+002100: 00000000 00000000 00000000 00000000
+002110: 00000000 00000000 00000000 00000000
+002120: 00000000 00000000 00000000 00000000
+002130: 00000000 00000000 00000000 00000000
+002140: 00000000 00000000 00000000 00000000
+002150: 00000000 00000000 00000000 00000000
+002160: 00000000 00000000 00000000 00000000
+002170: 00000000 00000000 00000000 00000000
+002180: 00000000 00000000 00000000 00000000
+002190: 00000000 00000000 00000000 00000000
+0021A0: 00000000 00000000 00000000 00000000
+0021B0: 00000000 00000000 00000000 00000000
+0021C0: 00000000 00000000 00000000 00000000
+0021D0: 00000000 00000000 00000000 00000000
+0021E0: 01000000 08220000 01000000 18220000
+0021F0: 00000000 00000000 00000000 00000000
+002200: 28220000 00000000 00000000 01000000
+002210: 14220000 25000000 00000000 01000000
+002220: 24220000 26000000 00000000 00000000
+002230: 00000000 00000000 00000000 00000000
+002240: 00000000 00000000 00000000 00000000
+002250: 00000000 00000000 00000000 00000000
+002260: 000080BF 34FA8E3C 34FA8EBC FFFFFFFF
+002270: 40000000 E41971B0 9114E857 00000000
+002280: 00000000 00000000 00000000 00000000
+002290: 00000000 00000000 00000000 00000000
+0022A0: 00000000 00000000 00000000 00000000
+0022B0: 00000000 000080BF 34FA8E3C 34FA8EBC
+0022C0: FFFFFFFF 00000000 01000000 D0220000
+0022D0: 00000000 27000000 00000000 00000000
+0022E0: 04000000 01000000 3F9A8E40 6E375AEF
+0022F0: 01000000 28000000 29000000 00000000
+002300: 00007AC4 01000000 01000000 08000000
+002310: 00000020 00000000 00000000 00000000
+002320: 00000000 64000000 00000000 00000000
+002330: 00000000 00002000 00000000 00000000
+002340: 00000000 00000000 00000000 00000000
+002350: 00000000 00000000 00000000 00000000
+002360: 00000000 00000000 00000000 00000000
+002370: 00000000 00000000 00000000 00000000
+002380: D0240000 00000000 10260000 01000000
+002390: 5C260000 00000000 00000000 00000000
+0023A0: 00000000 00000000 00000000 00000000
+0023B0: 00010000 00010101 01010100 01000000
+0023C0: 00000000 C0270000 00000000 00000000
+0023D0: 00000000 00000000 00000000 00000000
+0023E0: 00000000 00000000 00000000 00000000
+0023F0: 00000000 00000000 00000000 00000000
+002400: 00000000 00000000 00000000 00000000
+002410: 00000000 00000000 00000000 00000000
+002420: 00000000 00000000 00000000 00000000
+002430: 00000000 00000000 00000000 00000000
+002440: 00000000 00000000 00000000 00000000
+002450: 00000000 00000000 00000000 00000000
+002460: 00000000 00000000 00000000 00000000
+002470: 00000000 00000000 00000000 00000000
+002480: 00000000 00000000 00000000 00000000
+002490: 00000000 00000000 00000000 00000000
+0024A0: 3333333F 00000000 00000000 00000000
+0024B0: 00000000 00000000 00000000 00000000
+0024C0: 01000001 00010000 00000100 01000000
+0024D0: 00000000 02000000 00000000 00000000
+0024E0: 00040000 00000000 00000000 00000000
+0024F0: 00000000 00000000 00000000 00000000
+002500: 00000000 00000000 00000000 00000000
+002510: 00000000 00000000 00000000 00000000
+002520: 00000000 00000000 00000000 00000000
+002530: 00000000 00000000 00000000 00000000
+002540: 00000000 00000000 00000000 00000000
+002550: 00000000 00000000 00000000 00000000
+002560: 00000000 00000000 00000000 00000000
+002570: 00000000 00000000 00000000 00000000
+002580: 00000000 00000000 00000000 00000000
+002590: 00000000 00000000 00000000 00000000
+0025A0: 00000000 00000000 00000000 00000000
+0025B0: 00000000 00000000 00000000 00000000
+0025C0: 00000000 00000000 00000000 00000000
+0025D0: 00000000 00000000 00000000 00000000
+0025E0: 00000000 00000000 00000000 00000000
+0025F0: 00000000 00000000 00000000 00000000
+002600: 00000000 00000000 00000000 00000000
+002610: 00000000 00000000 00000000 00000000
+002620: 00000000 00000000 00000000 00000000
+002630: 00000000 00000000 00000000 00000000
+002640: 00000000 00000000 000080BF 34FA8E3C
+002650: 34FA8EBC FFFFFFFF 00000000 0C000000
+002660: AC270000 00000000 BC270000 00000000
+002670: 03000000 00000000 00000000 00040000
+002680: 00000000 00000000 00000000 00000000
+002690: 00000000 00000000 00000000 00000000
+0026A0: 00000000 00000000 00000000 00000000
+0026B0: 00000000 00000000 00000000 00000000
+0026C0: 00000000 00000000 00000000 00000000
+0026D0: 00000000 00000000 00000000 00000000
+0026E0: 00000000 00000000 00000000 00000000
+0026F0: 00000000 00000000 00000000 00000000
+002700: 00000000 00000000 00000000 00000000
+002710: 00000000 00000000 00000000 00000000
+002720: 00000000 00000000 00000000 00000000
+002730: 00000000 00000000 00000000 00000000
+002740: 00000000 00000000 00000000 00000000
+002750: 00000000 00000000 00000000 00000000
+002760: 00000000 00000000 00000000 00000000
+002770: 00000000 00000000 00000000 00000000
+002780: 00000000 00000000 00000000 00000000
+002790: 00000000 00000000 00000000 00000000
+0027A0: 00000000 00000000 00000000 424F4E45
+0027B0: 47415252 49534F4E 00000000 00000000
+0027C0: 00000000 58946C78 85DFB285 00000000
+0027D0: 01000000 1C280000 00000000 00000000
+0027E0: 00000000 01000000 00000000 00000000
+0027F0: 00000000 00000000 00000000 00000000
+002800: 08000000 00000000 00000000 00000000
+002810: 00000000 00000000 00000000 B10D2F21
+002820: 0D6C93A9 AC4855C2 00000000 B0280000
+002830: 00000000 0000FA43 00000000 1E000000
+002840: B4280000 00000000 00000000 00000000
+002850: 00000000 00000000 00000000 0000A042
+002860: 00000000 00000000 00000000 01000000
+002870: 00000000 00000000 00000000 00000000
+002880: 00000000 00000000 00000000 0000FA44
+002890: 00000000 00000000 00000000 00000001
+0028A0: 01000000 01000000 00000040 01000000
+0028B0: 00000000 47444956 33354F78 5F53756D
+0028C0: 6D6F6E65 6446756E 6374696F 6E735F31
+0028D0: 30330000 9B3D0E5A 5E421880 00401C45
+0028E0: 00000000 00000000 000080BF 00000000
+0028F0: 00000000 00000000 00000000 00000000
+002900: 40290000 00000000 00004843 00000000
+002910: 00000000 00000000 00004843 00000000
+002920: 00000000 00000000 00000000 00000000
+002930: 00000000 00000000 00000000 01000000
+002940: 00000000 02000000 4C290000 54290000
+002950: A0290000 1D79EF27 AD03D459 00000000
+002960: 02000000 68290000 2A000000 00000000
+002970: 00000000 E116D174 01000000 98290000
+002980: 2B000000 00000000 00000000 47976CD3
+002990: 01000000 9C290000 01000000 01000000
+0029A0: F4DB3E5A 330B1213 02000000 B0290000
+0029B0: 082B0000 00000000 00000000 00000000
+0029C0: 00000000 00000000 00000000 00000000
+0029D0: 00000000 00000000 00000000 00000000
+0029E0: 00000000 00000000 00000000 00000000
+0029F0: 00000000 00000000 00000000 00000000
+002A00: 00000000 00080000 00000000 00000000
+002A10: 00000000 00000000 00000000 00000000
+002A20: 00000000 00000000 00000000 00000000
+002A30: 00000000 00000000 00000000 00000000
+002A40: 00000000 00000000 00000000 00000000
+002A50: 00000000 00000000 00000000 0C2B0000
+002A60: 00000000 00000000 00000000 00000000
+002A70: 00000000 00000000 00000000 00000000
+002A80: 00000000 00000000 00000000 00000000
+002A90: 00000000 00000000 00000000 00000000
+002AA0: 00000000 00000000 00000000 00000000
+002AB0: 00040000 00000000 00000000 00000000
+002AC0: 00000000 00000000 00000000 00000000
+002AD0: 00000000 00000000 00000000 00000000
+002AE0: 00000000 00000000 00000000 00000000
+002AF0: 00000000 00000000 00000000 00000000
+002B00: 00000000 00000000 2C000000 2D000000
+002B10: 00000000 02000000 282B0000 00000000
+002B20: 00000000 00000000 01000000 00000000
+002B30: 00000000 882B0000 00001442 00004040
+002B40: 00000000 8C2B0000 0000C841 00000000
+002B50: 00000000 01010000 01000000 00000000
+002B60: 00000000 902B0000 00000041 0000F041
+002B70: 00000000 942B0000 0000C841 00000000
+002B80: 982B0000 01010000 00000000 00000000
+002B90: 00000000 00000000 0000E0C0 00000000
+002BA0: 00000000 04000000 BC2B0000 00000000
+002BB0: 00000000 01000000 FC2B0000 EC2B0000
+002BC0: 00000000 0C000000 F02B0000 00000000
+002BD0: 04000000 F42B0000 00000000 08000000
+002BE0: F82B0000 00000000 00000000 2E000000
+002BF0: 2F000000 30000000 31000000 082C0000
+002C00: 00000000 CAC351D4 32000000 03000000
+002C10: 142C0000 33000000 02000000 34000000
+002C20: 04000000 35000000 00000000 A02C0000
+002C30: 00000000 00000000 00000000 B42C0000
+002C40: CC2C0000 F42C0000 00000000 00001644
+002C50: 9B000000 142D0000 00000000 2C2D0000
+002C60: 00000000 00000000 00000000 4C2D0000
+002C70: 00000000 00000000 702D0000 902D0000
+002C80: 00000000 00000000 00000000 B02D0000
+002C90: C42D0000 DC2D0000 00000000 00000000
+002CA0: 08000000 A82C0000 556E6974 4C6F7374
+002CB0: 00000000 0F000000 BC2C0000 556E6974
+002CC0: 556E6465 72417474 61636B00 1F000000
+002CD0: D42C0000 556E6974 556E6465 72417474
+002CE0: 61636B46 726F6D53 68726F75 64656455
+002CF0: 6E697400 16000000 FC2C0000 47656E65
+002D00: 72696355 6E697442 65696E67 4275726E
+002D10: 65640000 0C000000 1C2D0000 556E6974
+002D20: 416D6275 73686564 00000000 17000000
+002D30: 342D0000 47656E65 72696345 6E656D79
+002D40: 556E6974 53696768 74656400 1A000000
+002D50: 542D0000 456E656D 79537465 616C7468
+002D60: 556E6974 44697363 6F766572 65640000
+002D70: 16000000 782D0000 4E657743 6F6E7374
+002D80: 72756374 696F6E4F 7074696F 6E730000
+002D90: 17000000 982D0000 556E6974 436F6E73
+002DA0: 74727563 74696F6E 53746172 74656400
+002DB0: 0B000000 B82D0000 4275696C 644F6E48
+002DC0: 6F6C6400 0E000000 CC2D0000 4275696C
+002DD0: 6443616E 63656C6C 65640000 0C000000
+002DE0: E42D0000 556E6974 50726F6D 6F746564
+002DF0: 00000000 02000000 00000000 00000000
+002E00: 00000000 00000000 00000000 00000000
+002E10: 00000000 00000000 0000803F 00000000
+002E20: 00000000 0000A041 00000000 00000100
+002E30: 00003443 00001644 0000803F 0000803F
+002E40: 0000C842 08000000 00000000 0000003F
+002E50: 000000BF 00000000 0000803F 0AD7233C
+002E60: 00000000 00000000 00000000 0002FFFF
+002E70: 01010000
