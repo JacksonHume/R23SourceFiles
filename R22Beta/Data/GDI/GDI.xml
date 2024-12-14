@@ -3,6 +3,7 @@
 
 	<Includes>
 		<Include source="Units/GDIMARV.xml" type="all"/>
+		<Include source="Units/GDIJuggernaughtHusk.xml" type="all"/>	
 		<!--
 		<Include source="Units/GDIZoneInf.xml" type="all"/>	
 		<Include source="Units/GDIGrenadeSoldier.xml" type="all"/>
@@ -14,7 +15,6 @@
 		<Include source="Units/GDIHammerhead.xml" type="all"/>
 		<Include source="Units/GDIAPCVeteran.xml" type="all"/>	
 		<Include source="Units/GDIGrenadeSoldierSquad.xml" type="all"/>
-		<Include source="Units/GDIJuggernaughtHusk.xml" type="all"/>	
 		<Include source="Units/GDIEngineer.xml" type="all"/>	
 		<Include source="Structures/GDIPowerPlant.xml" type="all"/>
 		<Include source="Structures/GDIRef.xml" type="all"/>

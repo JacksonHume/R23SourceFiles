@@ -553,7 +553,7 @@
 				<FireWeaponNugget
 					WeaponName="GreenTiberiumWeapon"
 					FireDelay="0s"
-					FireInterval="0.1s"
+					FireInterval="0.25s"
 					OneShot="False" />
 				<FireWeaponNugget
 					WeaponName="MARVTiberiumFXWeapon"

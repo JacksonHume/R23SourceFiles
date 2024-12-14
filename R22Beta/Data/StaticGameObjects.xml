@@ -14,22 +14,34 @@
 		<!--
 		<Include type="all" source="GlobalData/LocomotorOG.xml" />
 		-->
-		<Include type="all" source="GlobalData/WeaponR21.xml" />
+
+		<Include type="all" source="NOD/NOD.xml" />
+		<Include type="all" source="GlobalData/AttributeModifier.xml" />
+		<Include type="all" source="GlobalData/WeaponR20.xml" />
+		<Include type="all" source="Tiberium/TiberiumCrystalBlue.xml" />
+		<Include type="all" source="Tiberium/TiberiumCrystal.xml" />
+		<Include type="all" source="Tiberium/OverlordsWrathTiberiumCrystal.xml" />
+		<Include type="all" source="Tiberium/AlienGiantTiberiumRockTiberiumField.xml" />
+		<Include type="all" source="Tiberium/BlueTiberiumFieldFromHarvesterDeath.xml" />
+		<Include type="all" source="Tiberium/GreenTiberiumFieldFromHarvesterDeath.xml" />
+		<Include type="all" source="Tiberium/TiberiumField.xml" />
+		<Include type="all" source="Tiberium/TiberiumFieldSeeded.xml" />
+		<Include type="all" source="Tiberium/AlienTiberiumFieldSeeded.xml" />
+		<Include type="all" source="Tiberium/TiberiumFieldBlue.xml" />
 		<Include type="all" source="GDI/GDI.xml" />
+
+
+		<!--
+			<Include type="all" source="Neutral/NeutralStatic.xml" />
+				<Include type="all" source="CGF/AlienBuzzers.xml" />
+
+		<Include type="all" source="GlobalData/WeaponR21.xml" />
 		<Include type="all" source="SteelTalons/SteelTalons.xml" />
 		<Include type="all" source="ZOCOM/ZOCOM.xml" />
 		<Include type="all" source="Alien/Alien.xml" />
 		<Include type="all" source="Traveler59/Traveler59.xml" />
 		<Include type="all" source="Reaper17/Reaper17.xml" />
 		<Include type="all" source="MarkedOfKane/MarkedOfKane.xml" />
-		<Include type="all" source="NOD/NOD.xml" />
-
-		<!--
-			<Include type="all" source="Neutral/NeutralStatic.xml" />
-				<Include type="all" source="CGF/AlienBuzzers.xml" />
-
-
-		<Include type="all" source="GlobalData/AttributeModifier.xml" />
 		<Include type="all" source="GlobalData/SpecialPowerTemplates.xml" />
 		<Include type="all" source="GlobalData/ObjectCreationLists.xml" />
 		<Include type="all" source="Command.xml" />
@@ -44,17 +56,7 @@
 		<Include type="all" source="CGF/AlienGunwalker.xml" />
 		<Include type="all" source="CGF/T59Gunwalker.xml" />
 		<Include type="all" source="GlobalData/Locomotor.xml" />
-		<Include type="all" source="Tiberium/TiberiumCrystalBlue.xml" />
-		<Include type="all" source="Tiberium/TiberiumCrystal.xml" />
-		<Include type="all" source="Tiberium/OverlordsWrathTiberiumCrystal.xml" />
-		<Include type="all" source="Tiberium/AlienGiantTiberiumRockTiberiumField.xml" />
-		<Include type="all" source="Tiberium/BlueTiberiumFieldFromHarvesterDeath.xml" />
-		<Include type="all" source="Tiberium/GreenTiberiumFieldFromHarvesterDeath.xml" />
-		<Include type="all" source="Tiberium/TiberiumField.xml" />
-		<Include type="all" source="Tiberium/TiberiumFieldSeeded.xml" />
-		<Include type="all" source="Tiberium/AlienTiberiumFieldSeeded.xml" />
-		<Include type="all" source="Tiberium/TiberiumFieldBlue.xml" />
-		<Include type="all" source="GlobalData/WeaponR20.xml" />
+
 
 		<Include type="all" source="GlobalData/upgrade.xml" />
 		<Include type="all" source="CGF/GDIPred.xml" />

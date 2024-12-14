@@ -56,7 +56,7 @@
 				CrystalGrowthRate="18" >
 				<!-- The DamageFilter is simply an on/off switch for the crystal weapons.
 				     If something matching the filter is found within the field, the weapons are turned on. -->
-					 <!--
+					
 				<DamageFilter
 					Rule="ANY"
 					Include="INFANTRY HARVESTER SUPPLY_GATHERING_CENTER" >
@@ -107,7 +107,7 @@
 					<ExcludeThing>NODCyborgInfantrySquad</ExcludeThing>
 					<ExcludeThing>NODCyborgInfantry</ExcludeThing>
 				</DamageFilter>
-				-->
+			
 				<!-- The HealFilter works similar to the damage filter. It turns on or off
 						 the PassiveAreaEffectBehavior of the cystals if a matching object is found in the field. -->
 				<HealFilter Rule="NONE"

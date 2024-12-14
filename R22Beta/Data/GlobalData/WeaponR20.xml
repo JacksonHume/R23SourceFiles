@@ -1086,7 +1086,7 @@
 		</Nuggets>
 	</WeaponTemplate>
 
-	<!-- beam cannon fix  	-->
+	<!-- beam cannon fix -->
 	<WeaponTemplate
 		id="NODBeamCannonLaser"
 		Name="NODBeamCannonLaser"
@@ -1110,7 +1110,7 @@
 		id="KillBeamTarget"
 		Name="KillBeamTarget"
 		ForbiddenFiringObjectStatus="USING_SPECIAL_ABILITY"
-		RadiusDamageAffects="ALLIES SELF" >
+		RadiusDamageAffects="ALLIES" >
 		<PreAttackDelay
 			MinSeconds="0.1s"
 			MaxSeconds="0.1s" />
@@ -1119,18 +1119,19 @@
 			MaxSeconds="0s"
 		/>
 		<Nuggets>
-			<DamageNugget
-				Damage="10000000000.0"
-				Radius="600.0">
+			<ParalyzeNugget
+				Radius="300.0"
+				DurationSeconds="3s"
+				ParalyzeType="USER_PARALYZE">
 				<SpecialObjectFilter
-					Rule="ANY">
+					Rule="NONE">
 					<IncludeThing>NODBeamTarget</IncludeThing>
 				</SpecialObjectFilter>
-			</DamageNugget>
+			</ParalyzeNugget>
 		</Nuggets>
 	</WeaponTemplate>
-	
 -->
+
 	<!-- 65% scaler vs infantry for disintegrators -->
 
 	<WeaponTemplate
