@@ -507,6 +507,15 @@
 					AcceptModelCondition=""
 					RejectModelCondition="" />
 			</HordeDispatchSpecialPower>
+
+			<AISpecialPowerUpdate
+				id="ModuleTag_ImprovedCyborgEmpPulse"
+				CommandButtonName="Command_NODImprovedEMPBlastGetInRange"
+				SpecialPowerRadius="275"
+				UnitKindOf="VEHICLE FS_POWER"
+				EnemyUnitExclude="INFANTRY AIRCRAFT HUSK CIVILIAN_BUILDING"
+				SpecialPowerAIType="SPECIAL_POWER_RANGED_AOE_ATTACK" />
+
 			<StealthDetectorUpdate 
 			id="ModuleTag_StealthDetect" 
 		  DetectionRange="100" 

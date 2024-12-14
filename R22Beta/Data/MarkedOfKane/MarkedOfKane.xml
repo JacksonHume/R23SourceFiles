@@ -4,6 +4,8 @@
 	<Includes>
 		<Include source="Units/MoKVenom.xml" type="all" />
 		<Include source="Structures/MarkedOfKaneDisruptionTower.xml" type="all" />
+		<Include source="Units/MOKAwakenedSquad.xml" type="all"/>
+		<Include source="Units/MOKEnlightenedSquad.xml" type="all"/>
 		<!--
 		<Include source="Units/MoKRedeemer.xml" type="all"/>
 
@@ -15,7 +17,7 @@
 		<Include source="Units/markedofkanemobileartillery.xml" type="all"/>  
 
 		<Include source="Structures/MoKPowerPlant.xml" type="all" /> 
-		<Include source="Units/MOKAwakenedSquad.xml" type="all"/>	
+	
 		<Include source="Units/MoKHarvester.xml" type="all"/>
 		<Include source="Units/MOKAwakened.xml" type="all"/> 
 		<Include source="Units/markedofkanesaboteur.xml" type="all"/> 
@@ -42,7 +44,6 @@
 		<Include source="Structures/MarkedOfKaneShredderTurret.xml" type="all"/>
  
 		<Include source="Structures/MG_MoK_WarmechFacility.xml" type="all"/>
-		<Include source="Units/MOKEnlightenedSquad.xml" type="all"/>
 		<Include source="Units/markedofkanesaboteur.xml" type="all"/> 
 		<Include source="Units/MOKTibTrooper.xml" type="all"/>  
 		<Include source="Units/markedofkanestealthtank.xml" type="all"/>		

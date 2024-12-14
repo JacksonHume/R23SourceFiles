@@ -9,8 +9,9 @@
 		<Include source="props/NODVertigoDisruptionStickyPod.xml" type="all" />
 		<Include source="Units/nodbeamcannon.xml" type="all" />
 		<Include source="props/nodbeamtarget.xml" type="all" />
+		<Include source="Units/NodCyborgSquad.xml" type="all"/>
 		<!--
-			<Include source="Units/NodCyborgSquad.xml" type="all"/>
+
 			<Include source="Units/NodRedeemer.xml" type="all"/>
 			<Include source="Units/NODHarvester.xml" type="all"/>
 			<Include source="Units/NodBunkerTruck.xml" type="all"/>

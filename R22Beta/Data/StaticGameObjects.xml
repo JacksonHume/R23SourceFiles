@@ -29,6 +29,7 @@
 		<Include type="all" source="Tiberium/AlienTiberiumFieldSeeded.xml" />
 		<Include type="all" source="Tiberium/TiberiumFieldBlue.xml" />
 		<Include type="all" source="GDI/GDI.xml" />
+		<Include type="all" source="MarkedOfKane/MarkedOfKane.xml" />
 
 
 		<!--
@@ -41,7 +42,6 @@
 		<Include type="all" source="Alien/Alien.xml" />
 		<Include type="all" source="Traveler59/Traveler59.xml" />
 		<Include type="all" source="Reaper17/Reaper17.xml" />
-		<Include type="all" source="MarkedOfKane/MarkedOfKane.xml" />
 		<Include type="all" source="GlobalData/SpecialPowerTemplates.xml" />
 		<Include type="all" source="GlobalData/ObjectCreationLists.xml" />
 		<Include type="all" source="Command.xml" />
