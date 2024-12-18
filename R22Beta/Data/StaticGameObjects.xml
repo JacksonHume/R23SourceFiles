@@ -30,13 +30,12 @@
 		<Include type="all" source="Tiberium/TiberiumFieldBlue.xml" />
 		<Include type="all" source="GDI/GDI.xml" />
 		<Include type="all" source="MarkedOfKane/MarkedOfKane.xml" />
+		<Include type="all" source="GlobalData/WeaponR21.xml" />
 
 
 		<!--
 			<Include type="all" source="Neutral/NeutralStatic.xml" />
 				<Include type="all" source="CGF/AlienBuzzers.xml" />
-
-		<Include type="all" source="GlobalData/WeaponR21.xml" />
 		<Include type="all" source="SteelTalons/SteelTalons.xml" />
 		<Include type="all" source="ZOCOM/ZOCOM.xml" />
 		<Include type="all" source="Alien/Alien.xml" />

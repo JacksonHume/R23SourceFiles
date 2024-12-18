@@ -4610,6 +4610,52 @@
 					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
+
+			<AttributeModifierNugget
+				Radius="125.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
+				AttributeModifierName="AttributeModifier_CarryFlag10">
+				<SpecialObjectFilter
+					Rule="NONE">
+					<!-- vanilla scrin vehicles -->
+					<IncludeThing>AlienAnnihilatorTripod</IncludeThing>
+					<IncludeThing>AlienCorrupter</IncludeThing>
+					<IncludeThing>AlienDevourerTank</IncludeThing>
+					<IncludeThing>AlienEradicatorHexapod</IncludeThing>
+					<IncludeThing>AlienExplorer</IncludeThing>
+					<IncludeThing>AlienGunWalker</IncludeThing>
+					<IncludeThing>AlienHarvester</IncludeThing>
+					<IncludeThing>AlienMCV</IncludeThing>
+					<IncludeThing>AlienMCVUnpacking</IncludeThing>
+					<IncludeThing>AlienMillipedeBody</IncludeThing>
+					<IncludeThing>AlienMillipedeHead</IncludeThing>
+					<IncludeThing>AlienSeekerTank</IncludeThing>
+					<!-- reaper 17 vehicles -->
+					<IncludeThing>Reaper17AnnihilatorTripod</IncludeThing>
+					<IncludeThing>Reaper17Corrupter</IncludeThing>
+					<IncludeThing>Reaper17DevourerTank</IncludeThing>
+					<IncludeThing>Reaper17EradicatorHexapod</IncludeThing>
+					<IncludeThing>Reaper17Explorer</IncludeThing>
+					<IncludeThing>Reaper17Harvester</IncludeThing>
+					<IncludeThing>Reaper17MCV</IncludeThing>
+					<IncludeThing>Reaper17MCVUnpacking</IncludeThing>
+					<IncludeThing>Reaper17SeekerTank</IncludeThing>
+					<IncludeThing>Reaper17ShardWalker</IncludeThing>
+					<!-- traveler59 vehicles -->
+					<IncludeThing>Traveler59AnnihilatorTripod</IncludeThing>
+					<IncludeThing>Traveler59Corrupter</IncludeThing>
+					<IncludeThing>Traveler59DevourerTank</IncludeThing>
+					<IncludeThing>Traveler59EradicatorHexapod</IncludeThing>
+					<IncludeThing>Traveler59Explorer</IncludeThing>
+					<IncludeThing>Traveler59GunWalker</IncludeThing>
+					<IncludeThing>Traveler59Harvester</IncludeThing>
+					<IncludeThing>Traveler59MCV</IncludeThing>
+					<IncludeThing>Traveler59MCVUnpacking</IncludeThing>
+					<IncludeThing>Traveler59SeekerTank</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+
 		</Nuggets>
 	</WeaponTemplate>
 
