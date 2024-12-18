@@ -91,6 +91,9 @@
 				<SpecialObjectFilter
 					Rule="ALL"
 					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
@@ -169,6 +172,9 @@
 				<SpecialObjectFilter
 					Rule="ALL"
 					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
@@ -254,6 +260,9 @@
 				<SpecialObjectFilter
 					Rule="ALL"
 					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
@@ -339,6 +348,9 @@
 					<ExcludeThing>AlienMCV</ExcludeThing>
 					<ExcludeThing>Reaper17MCV</ExcludeThing>
 					<ExcludeThing>Traveler59MCV</ExcludeThing>
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
@@ -426,6 +438,9 @@
 				<SpecialObjectFilter
 					Rule="ALL"
 					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
@@ -511,6 +526,9 @@
 				<SpecialObjectFilter
 					Rule="ALL"
 					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
