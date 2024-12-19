@@ -72,30 +72,6 @@
 		Name="GDIGrenadeSoldierEMPGrenadeWarhead"
 		AttackRange="260.0">
 		<Nuggets>
-			<ParalyzeNugget
-				Radius="60.0"
-				DurationSeconds="10s"
-				ParalyzeType="EMP"
-				ParalyzeFX="FX_NODBuggyEmpHit">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT">
-				</SpecialObjectFilter>
-			</ParalyzeNugget>
-
-			<AttributeModifierNugget
-				Radius="60.0"
-				PartitionFilterTestType="CIRCLE"
-				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
-				AttributeModifierName="AttributeModifier_PreventCrush10">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD STRUCTURE">
-					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
-				</SpecialObjectFilter>
-			</AttributeModifierNugget>
 
 			<!-- set CARRYING_FLAG state on scrin faction VEHICLES-->
 
@@ -143,6 +119,32 @@
 					<IncludeThing>Traveler59SeekerTank</IncludeThing>
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
+
+			<ParalyzeNugget
+				Radius="60.0"
+				DurationSeconds="10s"
+				ParalyzeType="EMP"
+				ParalyzeFX="FX_NODBuggyEmpHit">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT">
+				</SpecialObjectFilter>
+			</ParalyzeNugget>
+
+			<AttributeModifierNugget
+				Radius="60.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
+				AttributeModifierName="AttributeModifier_PreventCrush10">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+
 		</Nuggets>
 	</WeaponTemplate>
 
@@ -155,28 +157,6 @@
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND ANTI_STRUCTURE">
 		<Nuggets>
-			<ParalyzeNugget
-				Radius="10.0"
-				DurationSeconds="10s"
-				ParalyzeType="EMP"
-				ParalyzeFX="FX_AlienEMPHit">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD" />
-			</ParalyzeNugget>
-			<AttributeModifierNugget
-				Radius="10.0"
-				PartitionFilterTestType="CIRCLE"
-				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
-				AttributeModifierName="AttributeModifier_PreventCrush10">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD STRUCTURE">
-					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
-				</SpecialObjectFilter>
-			</AttributeModifierNugget>
 
 			<AttributeModifierNugget
 				Radius="10.0"
@@ -223,6 +203,30 @@
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
+			<ParalyzeNugget
+				Radius="10.0"
+				DurationSeconds="10s"
+				ParalyzeType="EMP"
+				ParalyzeFX="FX_AlienEMPHit">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD" />
+			</ParalyzeNugget>
+
+			<AttributeModifierNugget
+				Radius="10.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
+				AttributeModifierName="AttributeModifier_PreventCrush10">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+			
 		</Nuggets>
 	</WeaponTemplate>
 
@@ -241,30 +245,6 @@
 				DamageType="GRENADE"
 				DamageFXType="GDI_SHOCKWAVE"
 				DeathType="NORMAL" />
-			<ParalyzeNugget
-				Radius="50.0"
-				DurationSeconds="10s"
-				ParalyzeType="EMP"
-				ParalyzeFX="FX_EMPEE"
-				ForbiddenTargetModelCondition="LANDING TAKING_OFF">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING" />
-			</ParalyzeNugget>
-			<AttributeModifierNugget
-				Radius="50.0"
-				PartitionFilterTestType="CIRCLE"
-				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
-				AttributeModifierName="AttributeModifier_PreventCrush10"
-				ForbiddenTargetModelCondition="LANDING TAKING_OFF">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING STRUCTURE">
-					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
-				</SpecialObjectFilter>
-			</AttributeModifierNugget>
 
 			<AttributeModifierNugget
 				Radius="50.0"
@@ -312,6 +292,32 @@
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
+			<ParalyzeNugget
+				Radius="50.0"
+				DurationSeconds="10s"
+				ParalyzeType="EMP"
+				ParalyzeFX="FX_EMPEE"
+				ForbiddenTargetModelCondition="LANDING TAKING_OFF">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING" />
+			</ParalyzeNugget>
+
+			<AttributeModifierNugget
+				Radius="50.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
+				AttributeModifierName="AttributeModifier_PreventCrush10"
+				ForbiddenTargetModelCondition="LANDING TAKING_OFF">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+
 			<WeaponOCLNugget
 				WeaponOCL="OCL_GDIShockwaveArtilleryFX" />
 		</Nuggets>
@@ -324,35 +330,6 @@
 		Name="NODBuggyEmpBurst"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS SELF">
 		<Nuggets>
-			<ParalyzeNugget
-				Radius="100.0"
-				DurationSeconds="10s"
-				ParalyzeType="EMP"
-				ParalyzeFX="FX_NODBuggyEmpHit">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT">
-					<ExcludeThing>AlienMCV</ExcludeThing>
-					<ExcludeThing>Reaper17MCV</ExcludeThing>
-					<ExcludeThing>Traveler59MCV</ExcludeThing>
-				</SpecialObjectFilter>
-			</ParalyzeNugget>
-			<AttributeModifierNugget
-				Radius="100.0"
-				PartitionFilterTestType="CIRCLE"
-				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
-				AttributeModifierName="AttributeModifier_PreventCrush10">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT STRUCTURE">
-					<ExcludeThing>AlienMCV</ExcludeThing>
-					<ExcludeThing>Reaper17MCV</ExcludeThing>
-					<ExcludeThing>Traveler59MCV</ExcludeThing>
-					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
-				</SpecialObjectFilter>
-			</AttributeModifierNugget>
 
 			<AttributeModifierNugget
 				Radius="100.0"
@@ -399,6 +376,37 @@
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
+			<ParalyzeNugget
+				Radius="100.0"
+				DurationSeconds="10s"
+				ParalyzeType="EMP"
+				ParalyzeFX="FX_NODBuggyEmpHit">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT">
+					<ExcludeThing>AlienMCV</ExcludeThing>
+					<ExcludeThing>Reaper17MCV</ExcludeThing>
+					<ExcludeThing>Traveler59MCV</ExcludeThing>
+				</SpecialObjectFilter>
+			</ParalyzeNugget>
+
+			<AttributeModifierNugget
+				Radius="100.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
+				AttributeModifierName="AttributeModifier_PreventCrush10">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT STRUCTURE">
+					<ExcludeThing>AlienMCV</ExcludeThing>
+					<ExcludeThing>Reaper17MCV</ExcludeThing>
+					<ExcludeThing>Traveler59MCV</ExcludeThing>
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+
 		</Nuggets>
 	</WeaponTemplate>
 
@@ -416,33 +424,6 @@
 		AutoReloadsClip="AUTO"
 		CanFireWhileMoving="false">
 		<Nuggets>
-			<ParalyzeNugget
-				Radius="75.0"
-				DurationSeconds="7.5s"
-				ParalyzeType="EMP"
-				ParalyzeFX="FX_NODBuggyEmpHit">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT">
-					<ExcludeThing>AlienMCV</ExcludeThing>
-					<ExcludeThing>Reaper17MCV</ExcludeThing>
-					<ExcludeThing>Traveler59MCV</ExcludeThing>
-				</SpecialObjectFilter>
-			</ParalyzeNugget>
-
-			<AttributeModifierNugget
-				Radius="75.0"
-				PartitionFilterTestType="CIRCLE"
-				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
-				AttributeModifierName="AttributeModifier_PreventCrush7_5">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT STRUCTURE">
-					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
-				</SpecialObjectFilter>
-			</AttributeModifierNugget>
 
 			<AttributeModifierNugget
 				Radius="75.0"
@@ -489,6 +470,34 @@
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
+			<ParalyzeNugget
+				Radius="75.0"
+				DurationSeconds="7.5s"
+				ParalyzeType="EMP"
+				ParalyzeFX="FX_NODBuggyEmpHit">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT">
+					<ExcludeThing>AlienMCV</ExcludeThing>
+					<ExcludeThing>Reaper17MCV</ExcludeThing>
+					<ExcludeThing>Traveler59MCV</ExcludeThing>
+				</SpecialObjectFilter>
+			</ParalyzeNugget>
+
+			<AttributeModifierNugget
+				Radius="75.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
+				AttributeModifierName="AttributeModifier_PreventCrush7_5">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+
 		</Nuggets>
 	</WeaponTemplate>
 
@@ -506,31 +515,6 @@
 		AutoReloadsClip="AUTO"
 		CanFireWhileMoving="false">
 		<Nuggets>
-			<ParalyzeNugget
-				Radius="50.0"
-				DurationSeconds="5s"
-				ParalyzeType="EMP"
-				ParalyzeFX="FX_NODBuggyEmpHit">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT">
-					<ExcludeThing>AlienMCV</ExcludeThing>
-				</SpecialObjectFilter>
-			</ParalyzeNugget>
-
-			<AttributeModifierNugget
-				Radius="50.0"
-				PartitionFilterTestType="CIRCLE"
-				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
-				AttributeModifierName="AttributeModifier_PreventCrush5">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT STRUCTURE">
-					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
-				</SpecialObjectFilter>
-			</AttributeModifierNugget>
 
 			<AttributeModifierNugget
 				Radius="50.0"
@@ -576,6 +560,33 @@
 					<IncludeThing>Traveler59SeekerTank</IncludeThing>
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
+
+			<ParalyzeNugget
+				Radius="50.0"
+				DurationSeconds="5s"
+				ParalyzeType="EMP"
+				ParalyzeFX="FX_NODBuggyEmpHit">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT">
+					<ExcludeThing>AlienMCV</ExcludeThing>
+				</SpecialObjectFilter>
+			</ParalyzeNugget>
+
+			<AttributeModifierNugget
+				Radius="50.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
+				AttributeModifierName="AttributeModifier_PreventCrush5">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY TIBERIUM TIBERIUM_FIELD CIVILIAN_BUILDING AIRCRAFT STRUCTURE">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>	
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+
 		</Nuggets>
 	</WeaponTemplate>
 
@@ -4605,29 +4616,6 @@
 
 			<WeaponOCLNugget
 				WeaponOCL="OCLEMPControlCenter" />
-			<ParalyzeNugget
-				Radius="125.0"
-				DurationSeconds="10s"
-				ParalyzeType="EMP"
-				ParalyzeFX="">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD" />
-			</ParalyzeNugget>
-
-			<AttributeModifierNugget
-				Radius="125.0"
-				PartitionFilterTestType="CIRCLE"
-				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
-				AttributeModifierName="AttributeModifier_PreventCrush10">
-				<SpecialObjectFilter
-					Rule="ALL"
-					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD">
-					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
-					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>
-				</SpecialObjectFilter>
-			</AttributeModifierNugget>
 
 			<AttributeModifierNugget
 				Radius="125.0"
@@ -4671,6 +4659,30 @@
 					<IncludeThing>Traveler59MCV</IncludeThing>
 					<IncludeThing>Traveler59MCVUnpacking</IncludeThing>
 					<IncludeThing>Traveler59SeekerTank</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+
+			<ParalyzeNugget
+				Radius="125.0"
+				DurationSeconds="10s"
+				ParalyzeType="EMP"
+				ParalyzeFX="">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD" />
+			</ParalyzeNugget>
+
+			<AttributeModifierNugget
+				Radius="125.0"
+				PartitionFilterTestType="CIRCLE"
+				ForbiddenTargetObjectStatus="IN_STASIS SHIELDBODY_ENABLED"
+				AttributeModifierName="AttributeModifier_PreventCrush10">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="UNATTACKABLE INFANTRY CIVILIAN_BUILDING TIBERIUM TIBERIUM_FIELD">
+					<ExcludeThing>AlienCustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Reaper17CustomizableVehicle</ExcludeThing>
+					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 
