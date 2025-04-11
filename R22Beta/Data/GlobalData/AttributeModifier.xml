@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	
+	<!-- R23 eradicator hexapod multiple prodigy cooldown buff, stacking limit of 3 with initial modifier offsetting the initial cooldown, thats lower.  -->
+
+	<AttributeModifier
+		id="AttributeModifierUpgrade_CooldownSpeed"
+		Category="NONE"
+		StackingLimit="3">
+		<Modifier Type="RECHARGE_TIME" Value="62.5%" />
+	</AttributeModifier>
 
 	<!-- part of old fix
 

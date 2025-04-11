@@ -4,7 +4,6 @@
 	<Includes>
 		<Include source="Units/GDIMARV.xml" type="all"/>
 		<Include source="Units/GDIJuggernaughtHusk.xml" type="all"/>	
-		<!--
 		<Include source="Units/GDIZoneInf.xml" type="all"/>	
 		<Include source="Units/GDIGrenadeSoldier.xml" type="all"/>
 		<Include source="Units/GDIGrenadeSoldierEMPGrenadeProjectile.xml" type="all"/>
@@ -50,7 +49,7 @@
 		<Include source="Props/gdidroppod.xml" type="all"/>
 		<Include source="Structures/GDIGolumCannon.xml" type="all"/>	
 		<Include source="Structures/GDITiberiumSilo.xml" type="all"/> 
--->
+
 	</Includes>
 
 

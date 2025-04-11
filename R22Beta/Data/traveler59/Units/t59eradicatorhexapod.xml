@@ -3893,6 +3893,27 @@
 				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
 				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
 			</AttributeModifierUpgrade>
+
+			<!-- R23 eradicator hexapod multiple prodigy cooldown buff -->
+
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgrade_CooldownSpeed1"
+				AttributeModifier="AttributeModifierUpgrade_CooldownSpeed">
+				<TriggeredBy>Upgrade_EradicatorTeleportFront</TriggeredBy>
+			</AttributeModifierUpgrade>
+
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgrade_CooldownSpeed2"
+				AttributeModifier="AttributeModifierUpgrade_CooldownSpeed">			
+				<TriggeredBy>Upgrade_EradicatorTeleportMiddle</TriggeredBy>
+			</AttributeModifierUpgrade>
+
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgrade_CooldownSpeed3"
+				AttributeModifier="AttributeModifierUpgrade_CooldownSpeed">
+				<TriggeredBy>Upgrade_EradicatorTeleportRear</TriggeredBy>
+			</AttributeModifierUpgrade>
+
 			<StancesBehavior
 				id="54CA416E"
 				StanceTemplate="Generic" />

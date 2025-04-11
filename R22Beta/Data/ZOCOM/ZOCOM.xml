@@ -3,7 +3,7 @@
 
 	<Includes>
 		<Include source="Units/ZOCOMMARV.xml" type="all"/>	
-		<!--
+	
 		<Include source="Units/ZOCOMAPC.xml" type="all"/>
 		<Include source="Units/ZOCOMHammerhead.xml" type="all"/>
 		<Include source="Units/ZOCOMGrenadeSoldierSquad.xml" type="all"/>
@@ -41,7 +41,7 @@
 		<Include source="Structures/ZOCOMWarfactory.xml" type="all"/>
 		<Include source="Structures/ZOCOMConstructionYard.xml" type="all"/>
 		<Include source="Structures/ZOCOMTiberiumSilo.xml" type="all"/>
--->
+
 	</Includes>
 
 </AssetDeclaration>

@@ -945,7 +945,7 @@
 						TurretTurnRate="360"
 						TurretPitchRate="20"
 						MinimumPitch="-20d"
-						PitchHeight="98.99999%"
+						PitchHeight="99%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
 						MaxIdleScanTime="5s"
@@ -956,19 +956,7 @@
 						NaturalTurretAngle="0d"
 						AllowsPitch="True"
 						RecenterWhenOutOfTurnRange="True">
-						<TurretAITargetChooserData
-							IdleScanDelay="0.8s"
-							ReacquireDelay="5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="False"
-							CanAcquireDynamicIfAssignedOutOfRange="True"
-							CanPickTargetsOutOfTurretAngle="False" />
+						<TurretAITargetChooserData />
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
@@ -1339,43 +1327,16 @@
 		</Behaviors>
 		<AI>
 			<DeployStyleAIUpdate
-				id="12FA48BA"
+				id="ModuleTag_AI"
 				AutoAcquireEnemiesWhenIdle="YES"
-				StopChaseDistance="500"
-				HoldGroundCloseRangeDistance="0"
 				AILuaEventsList="NodMobileArtilleryFunctions"
-				MinCowerTime="0s"
-				MaxCowerTime="0s"
-				RampageTime="0s"
-				BurningDeathTime="0s"
-				TimeToEjectPassengersOnRampage="0"
-				ComboLocomotorSet="NORMAL"
-				ComboLocoAttackDistance="80"
-				IdleTargetTime="0s"
-				MaxCombineChildren="1"
-				SpawnOffsetRadius="0"
-				StandGround="False"
-				CanAttackWhileContained="False"
-				RampageRequiresAflame="False"
-				FadeOnPortals="False"
 				UnpackTime="3.5s"
 				PackTime="3.5s"
-				DeployedAttributeModifierName=""
-				ResetTurretBeforePacking="False"
-				TurretsFunctionOnlyWhenDeployed="False"
-				TurretsMustCenterBeforePacking="False"
-				MustDeployToAttack="True"
-				CannotUndeploy="False">
+				MustDeployToAttack="true">
 				<UnitAITargetChooserData
-					IdleScanDelay="0.8s"
-					ReacquireDelay="5s"
-					StartupDelay="0s"
-					SympathyRange="100"
-					CheckVisionRange="False"
-					CanPickDynamicTargets="False"
-					RotateToTargetWhenAiming="False"
-					CanAutoAcquireNonAutoAcquirable="False"
-					TargetingCompareList="DefaultTargetingCompareList" />
+					CheckVisionRange="false"
+					CanPickDynamicTargets="false"
+					RotateToTargetWhenAiming="false" />
 			</DeployStyleAIUpdate>
 		</AI>
 		<Body>

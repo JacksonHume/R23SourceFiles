@@ -2,17 +2,14 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<Includes>
-		<Include source="Structures/T59Reactor.xml" type="all"/>
-		<!--
 		<Include source="Units/t59eradicatorhexapod.xml" type="all"/>
-	
+		<!--
+		<Include source="Structures/T59Reactor.xml" type="all"/>	
 		<Include source="Structures/T59StasisChamber.xml" type="all"/>
 		<Include source="Structures/T59SignalTransmitter.xml" type="all"/>
 		<Include source="Structures/T59RiftGenerator.xml" type="all"/>
-
 		<Include source="Structures/T59Gateway.xml" type="all"/>
-		<Include source="Structures/T59PowerProjector.xml" type="all"/>
-		
+		<Include source="Structures/T59PowerProjector.xml" type="all"/>		
 		<Include source="Units/Traveler59Mothership.xml" type="all"/>
 		<Include source="Units/T59TripodHusk.xml" type="all"/>
 		<Include source="Units/T59Harv.xml" type="all"/>
@@ -23,8 +20,7 @@
 		<Include source="Structures/T59Foundry.xml" type="all"/>
 		<Include source="Structures/T59MiniMCVOutpost.xml" type="all"/>
 		<Include source="Structures/T59WarpBeacon.xml" type="all"/> 		
-		<Include source="Units/T59Explorer.xml" type="all"/>
-	
+		<Include source="Units/T59Explorer.xml" type="all"/>	
 		<Include source="Units/Traveler59Assimilator.xml" type="all"/>
 		<Include source="Structures/T59StormColumn.xml" type="all"/> 
 		<Include source="Units/T59MCV.xml" type="all"/>	
@@ -37,7 +33,7 @@
 		<Include source="Structures/T59WarpChasm.xml" type="all"/> 
 		<Include source="Structures/T59Ref.xml" type="all"/> 
 		<Include source="Structures/Traveler59DronePlatform.xml" type="all"/>
-	-->
+		-->
 	</Includes>
 
 </AssetDeclaration>

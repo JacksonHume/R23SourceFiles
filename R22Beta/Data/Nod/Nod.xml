@@ -10,7 +10,7 @@
 		<Include source="Units/nodbeamcannon.xml" type="all" />
 		<Include source="props/nodbeamtarget.xml" type="all" />
 		<Include source="Units/NodCyborgSquad.xml" type="all"/>
-		<!--
+	
 
 			<Include source="Units/NodRedeemer.xml" type="all"/>
 			<Include source="Units/NODHarvester.xml" type="all"/>
@@ -65,7 +65,7 @@
 		<Include source="Structures/NODSecretShrine.xml" type="all"/>
 		<Include source="Structures/NodShredderTurretHub.xml" type="all"/> 
 		<Include source="Structures/NodConyards.xml" type="all"/>
--->
+
 	</Includes>
 
 </AssetDeclaration>

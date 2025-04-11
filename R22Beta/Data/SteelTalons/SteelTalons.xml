@@ -3,7 +3,7 @@
 
 	<Includes>
 		<Include source="Units/STMARV.xml" type="all"/>	
-		<!--
+	
 		<Include source="Units/STMammoth.xml" type="all"/>	
 		<Include source="Units/STMRT.xml" type="all"/>
 		<Include source="Units/STBehemoth.xml" type="all"/>	
@@ -39,6 +39,6 @@
 		<Include source="Structures/STWarfactory.xml" type="all"/>
 		<Include source="Structures/STConstructionYard.xml" type="all"/>	
 		<Include source="Structures/SteelTalonsTiberiumSilo.xml" type="all"/> 
--->
+
 	</Includes>
 </AssetDeclaration>
