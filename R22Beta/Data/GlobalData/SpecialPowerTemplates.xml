@@ -14,7 +14,7 @@
 		RadiusCursorRadius="16"
 		ForbiddenObjectRange="16"
 		Flags="PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
-		ReloadTime="48s">
+		ReloadTime="52s">
 		<ForbiddenObjectFilter
 			Rule="ANY"
 			Include="STRUCTURE CRUSHABLE_OBSTACLE" />
