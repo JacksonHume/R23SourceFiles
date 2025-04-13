@@ -1221,45 +1221,6 @@
 		</Nuggets>
 	</WeaponTemplate>
 
-	<WeaponTemplate
-		id="NODWarmechMachinegun"
-		Name="NODWarmechMachinegun"
-		AttackRange="300.0"
-		WeaponSpeed="999999.0"
-		FireSound="AudioEvent:NOD_Redeemer_GunTurretFire"
-		FireFX="FX_NODRedeemerUpgradeMachineGunFire"
-		ForbiddenFiringObjectStatus=""
-		FireVeteranFX="FX_GDIRifleManFireHeroic2"
-		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		ClipSize="18"
-		AntiMask="ANTI_GROUND"
-		AcceptableAimDelta="10d"
-		CanFireWhileMoving="true"
-	>
-		<FiringDuration
-			MinSeconds="0.1s"
-			MaxSeconds="0.1s" />
-		<ClipReloadTime
-			MinSeconds="0.6s"
-			MaxSeconds="0.7s" />
-		<Nuggets>
-			<DamageNugget
-				Damage="50.0"
-				Radius="0.0"
-				DelayTimeSeconds="0.0s"
-				DamageType="GUN"
-				DamageFXType="NOD_MACHINEGUN"
-				DeathType="NORMAL" />
-			<SuppressionNugget
-				Radius="10.0"
-				Suppression="25"
-				DurationSeconds="5s" />
-		</Nuggets>
-	</WeaponTemplate>
-
-	<!-- -->
-
-
 	<!-- emp grenades -->
 	<!--
 <WeaponTemplate

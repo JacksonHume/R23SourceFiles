@@ -1,1 +1,0 @@
-fix gdi refs showing bar_01 in damaged states (animationscript)

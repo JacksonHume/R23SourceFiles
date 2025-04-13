@@ -1,0 +1,28 @@
+# Ignore everything first
+*
+
+# Now, un-ignore the R22Beta directory AND everything inside it
+!R22Beta/
+!R22Beta/**
+
+# Also un-ignore the .gitignore file itself!
+!.gitignore
+# Un-ignore .gitattributes if you use it
+!.gitattributes
+
+# --- ADD SPECIFIC IGNORES INSIDE R22Beta BELOW THIS LINE ---
+R22Beta/Data/maps/**
+R22Beta/Data/StaticMap.xml
+R22Beta/Data/StaticGameObjects.xml
+R22Beta/Data/Alien/Alien.xml
+R22Beta/Data/BlackHand/BlackHand.xml
+R22Beta/Data/GDI/GDI.xml
+R22Beta/Data/MarkedOfKane/MarkedOfKane.xml
+R22Beta/Data/Nod/Nod.xml
+R22Beta/Data/Reaper17/Reaper17.xml
+R22Beta/Data/SteelTalons/SteelTalons.xml
+R22Beta/Data/traveler59/traveler59.xml
+R22Beta/Data/ZOCOM/ZOCOM.xml
+R22Beta/Data/mapsr16/**
+
+

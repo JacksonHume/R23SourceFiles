@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NUREDEEMER_SKN2" Hierarchy="NUREDEEMER_SKL2">
+		<SubObject SubObjectID="OBBOX13" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX13</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX12" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX12</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX11" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX11</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX10" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX10</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX09" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX09</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX08" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX08</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX07" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX07</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX06" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX06</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>NUREDEEMER_SKN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="REDEEMER_BOTTOM" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.REDEEMER_BOTTOM</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="REDEEMER_TOP" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.REDEEMER_TOP</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="REDEEMER_PELVIS" BoneIndex="86">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.REDEEMER_PELVIS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_FLASHINGLIGHTR" BoneIndex="85">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.FX_FLASHINGLIGHTR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_FLASHINGLIGHTL" BoneIndex="84">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.FX_FLASHINGLIGHTL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASH_02" BoneIndex="83">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.MUZZLEFLASH_02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="HVYMGBARRELR" BoneIndex="81">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.HVYMGBARRELR</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+		<SubObject SubObjectID="HVYMGR" BoneIndex="100">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN2.HVYMGR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FTL" BoneIndex="77">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.FTL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_FTPILOTFLAMEL" BoneIndex="79">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.FX_FTPILOTFLAMEL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="B_FTL" BoneIndex="76">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.B_FTL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FTR" BoneIndex="73">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.FTR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_FTPILOTFLAMER" BoneIndex="75">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.FX_FTPILOTFLAMER</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="B_FTR" BoneIndex="72">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.B_FTR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MUZZLEFLASH_01" BoneIndex="71">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.MUZZLEFLASH_01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<!--
+		<SubObject SubObjectID="HVYMGBARRELL" BoneIndex="69">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.HVYMGBARRELL</Mesh>
+			</RenderObject>
+		</SubObject>
+		-->
+		<SubObject SubObjectID="HVYMGL" BoneIndex="99">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN2.HVYMGL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ROCKETPODL" BoneIndex="66">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.ROCKETPODL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MODULEBEACONL" BoneIndex="65">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.MODULEBEACONL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MODULELIGHTL" BoneIndex="64">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.MODULELIGHTL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MODULEL" BoneIndex="63">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.MODULEL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MODULEBEACONTR" BoneIndex="61">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.MODULEBEACONTR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MODULELIGHTR" BoneIndex="60">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.MODULELIGHTR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="MODULER" BoneIndex="59">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.MODULER</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="ROCKETPODR" BoneIndex="56">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.ROCKETPODR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_GLOWLIGHTS" BoneIndex="55">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.FX_GLOWLIGHTS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_RAGEGLOW" BoneIndex="54">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.FX_RAGEGLOW</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="SHOULDERPADL" BoneIndex="53">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.SHOULDERPADL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="SHOULDERPADR" BoneIndex="30">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.SHOULDERPADR</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_LAZERGLOW" BoneIndex="26">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.FX_LAZERGLOW</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="KNEEPAD4" BoneIndex="17">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.KNEEPAD4</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="KNEEPAD3" BoneIndex="13">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.KNEEPAD3</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="KNEEPAD2" BoneIndex="9">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.KNEEPAD2</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="KNEEPAD1" BoneIndex="5">
+			<RenderObject>
+				<Mesh>NUREDEEMER_SKN.KNEEPAD1</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

@@ -4,7 +4,7 @@
 		id="BlackHandMetaUnit"
 		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS PRELOAD SCORE ATTACK_NEEDS_LINE_OF_SIGHT GARRISONABLE_UNTIL_DESTROYED VEHICLE CAN_SHOOT_OVER_WALLS UNIQUE_UNIT CAN_BE_FAVORITE_UNIT METAUNIT USE_STRICT_PATHING"
 		Description="Desc:BlackHandMetaUnit"
-		WorldMapArmoryUpgradesAllowed="Upgrade_BlackHandSecretShrinePurifyingFlame"
+		WorldMapArmoryUpgradesAllowed="Upgrade_BlackHandSecretShrinePurifyingFlame Upgrade_NodTechCenterChargedParticleBeam"
 		TypeDescription="Type:NODMetaUnit"
 		RadarPriority="UNIT"
 		BuildCompletion="INVALID"
@@ -117,7 +117,7 @@
 				MinLODRequired="LOW"
 				ProjectileBoneFeedbackEnabledSlots=""
 				TrackMarks=""
-				ExtraPublicBone="MUZZLEFLASH_01 MUZZLEFLASH_02 B_FTturretR FX_FTFireR FX_FTFireL B_FTturretL FX_HvyMGFlashR B_HvyMGturretR B_HvyMGturretR FX_HvyMGFlashL B_HvyMGturretL SecondaryWepBone04 SubSystemBone01 SubSystemBone02 SubSystemBone03"
+				ExtraPublicBone="B_FTturretR FX_FTFireR FX_FTFireL B_FTturretL FX_HvyMGFlashR B_HvyMGturretR B_HvyMGturretR FX_HvyMGFlashL B_HvyMGturretL SecondaryWepBone04 SubSystemBone01 SubSystemBone02 SubSystemBone03"
 				DependencySharedModelFlags=""
 				HighDetailLODThreshold="0"
 				LowDetailLODThreshold="0"
@@ -157,8 +157,121 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN"
+						Name="W3DContainer:NUREDEEMER_SKN2"
 						ExtraMesh="False" />
+					<!-- MACHINE GUN -->
+					<WeaponFireFXBone
+						WeaponSlotID="15"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashR" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="15"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFlash_02" />
+					<WeaponLaunchBone
+						WeaponSlotID="15"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashR" />
+					<WeaponFireFXBone
+						WeaponSlotID="14"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashL" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="14"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFlash_01" />
+					<WeaponLaunchBone
+						WeaponSlotID="14"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashL" />
+					<!-- PARTICLE BEAM MACHINE GUN -->
+					<WeaponFireFXBone
+						WeaponSlotID="17"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashR" />
+					<WeaponLaunchBone
+						WeaponSlotID="17"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashR" />
+					<WeaponFireFXBone
+						WeaponSlotID="16"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashL" />
+					<WeaponLaunchBone
+						WeaponSlotID="16"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_HvyMGFlashL" />
+					<!-- FLAME THROWERS AND TIB TROOPER -->
+					<WeaponFireFXBone
+						WeaponSlotID="8"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponFireFXBone
+						WeaponSlotID="9"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+					<WeaponFireFXBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponFireFXBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+					<!-- PURIFYING FLAME -->
+					<WeaponFireFXBone
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponFireFXBone
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+					<!-- -->
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+					<!-- PURIFYING FLAME -->
+					<WeaponLaunchBone
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponLaunchBone
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+					<!-- -->
+					<WeaponLaunchBone
+						WeaponSlotID="8"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireR" />
+					<WeaponLaunchBone
+						WeaponSlotID="9"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_FTFireL" />
+					<!-- ROCKET LAUNCHER -->
+					<WeaponFireFXBone
+						WeaponSlotID="6"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_RocketPodR" />
+					<WeaponFireFXBone
+						WeaponSlotID="7"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_RocketPodL" />
+					<WeaponLaunchBone
+						WeaponSlotID="6"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_RocketPodR" />
+					<WeaponLaunchBone
+						WeaponSlotID="7"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_RocketPodL" />
+					<!-- MAIN LASERS -->
 					<WeaponFireFXBone
 						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -171,106 +284,24 @@
 						WeaponSlotID="13"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_LazerBlast3" />
-					<WeaponFireFXBone
-						WeaponSlotID="2"
+					<WeaponLaunchBone
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponFireFXBone
-						WeaponSlotID="3"
+						BoneName="FX_LazerBlast" />
+					<WeaponLaunchBone
+						WeaponSlotID="12"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
-						<!-- new -->
-					<WeaponFireFXBone
-						WeaponSlotID="5"
+						BoneName="FX_LazerBlast2" />
+					<WeaponLaunchBone
+						WeaponSlotID="13"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponFireFXBone
-						WeaponSlotID="4"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
-						<!-- new -->
-					<WeaponFireFXBone
-						WeaponSlotID="15"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_HvyMGFlashR" />
-					<WeaponFireFXBone
-						WeaponSlotID="14"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_HvyMGFlashL" />
-					<WeaponFireFXBone
-						WeaponSlotID="6"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_RocketPodR" />
-					<WeaponFireFXBone
-						WeaponSlotID="7"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_RocketPodL" />
-					<WeaponFireFXBone
-						WeaponSlotID="8"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponFireFXBone
-						WeaponSlotID="9"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
+						BoneName="FX_LazerBlast3" />
+					<!-- RAGE -->
 					<WeaponFireFXBone
 						WeaponSlotID="10"
 						WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FX_RageGlow" />
-					<WeaponLaunchBone
-						WeaponSlotID="1"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_LazerBlast" />
-					<WeaponLaunchBone
-						WeaponSlotID="12"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_LazerBlast2" />
-					<WeaponLaunchBone
-						WeaponSlotID="13"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_LazerBlast3" />
-					<WeaponLaunchBone
-						WeaponSlotID="2"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponLaunchBone
-						WeaponSlotID="3"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
-						<!-- new -->
-					<WeaponLaunchBone
-						WeaponSlotID="5"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponLaunchBone
-						WeaponSlotID="4"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />					
-						<!-- new -->
-					<WeaponLaunchBone
-						WeaponSlotID="15"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_HvyMGFlashR" />
-					<WeaponLaunchBone
-						WeaponSlotID="14"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_HvyMGFlashL" />
-					<WeaponLaunchBone
-						WeaponSlotID="6"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_RocketPodR" />
-					<WeaponLaunchBone
-						WeaponSlotID="7"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_RocketPodL" />
-					<WeaponLaunchBone
-						WeaponSlotID="8"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponLaunchBone
-						WeaponSlotID="9"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
+					<!-- TURRETS -->
 					<Turret
 						TurretNameKey="B_FTturretR"
 						TurretArtAngle="0d"
@@ -283,7 +314,6 @@
 						TurretPitch=""
 						TurretArtPitch="0d"
 						TurretID="3" />
-						<!-- new -->
 					<Turret
 						TurretNameKey="B_FTturretR2"
 						TurretArtAngle="0d"
@@ -295,67 +325,77 @@
 						TurretArtAngle="0d"
 						TurretPitch=""
 						TurretArtPitch="0d"
-						TurretID="4" />	
-						
-						<!-- new -->
+						TurretID="4" />
 					<Turret
 						TurretNameKey="B_HvyMGturretR"
 						TurretArtAngle="0d"
-						TurretPitch="B_HvyMGturretR"
+						TurretPitch="B_HVYMGPITCHR"
 						TurretArtPitch="0d"
 						TurretID="15" />
 					<Turret
 						TurretNameKey="B_HvyMGturretL"
 						TurretArtAngle="0d"
-						TurretPitch="B_HvyMGturretL"
+						TurretPitch="B_HVYMGPITCHL"
 						TurretArtPitch="0d"
 						TurretID="14" />
+					<!-- PARTICLE BEAM MACHINE GUN -->
+					<Turret
+						TurretNameKey="B_HvyMGturretR"
+						TurretArtAngle="0d"
+						TurretPitch="B_HVYMGPITCHR"
+						TurretArtPitch="0d"
+						TurretID="16" />
+					<Turret
+						TurretNameKey="B_HvyMGturretL"
+						TurretArtAngle="0d"
+						TurretPitch="B_HVYMGPITCHL"
+						TurretArtPitch="0d"
+						TurretID="17" />
+					<!-- -->
 					<Turret
 						TurretNameKey="B_RocketPodturretR"
 						TurretArtAngle="0d"
-						TurretPitch="B_RocketPodturretR"
+						TurretPitch=""
 						TurretArtPitch="0d"
 						TurretID="6" />
 					<Turret
 						TurretNameKey="B_RocketPodturretL"
 						TurretArtAngle="0d"
-						TurretPitch="B_RocketPodturretL"
+						TurretPitch=""
 						TurretArtPitch="0d"
 						TurretID="7" />
 					<Turret
 						TurretNameKey="B_FTturretR"
 						TurretArtAngle="0d"
-						TurretPitch="B_FTturretR"
+						TurretPitch=""
 						TurretArtPitch="0d"
 						TurretID="8" />
 					<Turret
 						TurretNameKey="B_FTturretL"
 						TurretArtAngle="0d"
-						TurretPitch="B_FTturretL"
+						TurretPitch=""
 						TurretArtPitch="0d"
 						TurretID="9" />
 				</ModelConditionState>
-					<!-- RAGE ANIMATION -->
-				<AnimationState 
+				<!-- RAGE ANIMATION -->
+				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="SPECIAL_WEAPON_ONE">
 					<Animation
 						AnimationName="NURedeemer_SPCA"
-						AnimationMode="ONCE" />	
+						AnimationMode="ONCE" />
 					<Script>
-						CurDrawableShowSubObject("FX_RAGEGLOW")						
-					</Script>		
-				</AnimationState>	
+						CurDrawableShowSubObject("FX_RAGEGLOW")
+					</Script>
+				</AnimationState>
 
-				
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FORMATION_PREVIEW">
 					<Model
 						Name="W3DContainer:NURedeemer_FP" />
-				</ModelConditionState>	
+				</ModelConditionState>
 
-				
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FORMATION_PREVIEW">
@@ -367,22 +407,18 @@
 						CurDrawableHideSubObject("FTR")
 						CurDrawableHideSubObject("FX_FTpilotflameR")
 						CurDrawableHideSubObject("B_FTL")
-						CurDrawableHideSubObject("FTL")	
-						CurDrawableHideSubObject("FX_FTpilotflameL")	
-						CurDrawableHideSubObject("HvyMGL")
-						CurDrawableHideSubObject("HvyMGBarrelL")
-						CurDrawableHideSubObject("MuzzleFlash_01")	
-						CurDrawableHideSubObject("HvyMGR")
-						CurDrawableHideSubObject("HvyMGBarrelR")
-						CurDrawableHideSubObject("MuzzleFlash_02")	
+						CurDrawableHideSubObject("FTL")
+						CurDrawableHideSubObject("FX_FTpilotflameL")
+						CurDrawableHideSubObject("HVYMGR")
+						CurDrawableHideSubObject("HVYMGL")
 						CurDrawableHideSubObject("RocketPodL")
-						CurDrawableHideSubObject("RocketPodR")	
+						CurDrawableHideSubObject("RocketPodR")
 						CurDrawableHideSubObject("ModuleR")
 						CurDrawableHideSubObject("ModuleBeacontR")
-						CurDrawableHideSubObject("ModuleLightR")	
-						CurDrawableHideSubObject("ModuleL")	
+						CurDrawableHideSubObject("ModuleLightR")
+						CurDrawableHideSubObject("ModuleL")
 						CurDrawableHideSubObject("ModuleBeaconL")
-						CurDrawableHideSubObject("ModuleLightL")					
+						CurDrawableHideSubObject("ModuleLightL")
 					</Script>
 				</AnimationState>
 				<ModelConditionState
@@ -392,7 +428,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN"
+						Name="W3DContainer:NUREDEEMER_SKN2"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer"
@@ -438,7 +474,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN"
+						Name="W3DContainer:NUREDEEMER_SKN2"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer"
@@ -478,7 +514,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN"
+						Name="W3DContainer:NUREDEEMER_SKN2"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer"
@@ -594,7 +630,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN"
+						Name="W3DContainer:NUREDEEMER_SKN2"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer"
@@ -625,7 +661,7 @@
 						PersistID="0"
 						FollowBone="True"
 						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						OnlyIfOnLand="False" /> 
 					<ParticleSysBone
 						BoneName="B_ShoulderL"
 						FXParticleSystemTemplate="RedeemerDamagedElectric"
@@ -908,51 +944,26 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
-				
+
 				<!-- PURIFYING FLAME -->
-				
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_6">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN"
+						Name="W3DContainer:NUREDEEMER_SKN2"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer3"
 						New="NURedeemer3_UG" />
 					<Texture
 						Original="NURedeemer3_SPM"
-						New="NURedeemer3_SPM_UG" />	
+						New="NURedeemer3_SPM_UG" />
 					<Texture
 						Original="NURedeemer3_NRM"
 						New="NURedeemer3_NRM_UG" />
-				</ModelConditionState>		
-<!--
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_7">
-					<Model
-						Name="W3DContainer:FXINVISBONE2"
-						ExtraMesh="False" />
-					<ParticleSysBone
-						BoneName="FX_FTpilotflameL"
-						FXParticleSystemTemplate="NODFlameTankPilotDistortion"
-						FollowBone="true" />
 				</ModelConditionState>
-				
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_8">
-					<Model
-						Name="W3DContainer:FXINVISBONE2"
-						ExtraMesh="False" />
-					<ParticleSysBone
-						BoneName="FX_FTpilotflameR"
-						FXParticleSystemTemplate="NODFlameTankPilotDistortion"
-						FollowBone="true" />
-				</ModelConditionState>
-	-->
-				
+
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					Flags="RESTART_ANIM_WHEN_COMPLETE"
@@ -979,7 +990,7 @@
 						end
 					</Script>
 				</AnimationState>
-			<!-- build animation handled in warmech facility xml-->
+				<!-- build animation handled in warmech facility xml-->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="COMING_OUT_OF_FACTORY"
@@ -989,22 +1000,22 @@
 						AnimationBlendTime="15"
 						AnimationMode="ONCE" />
 				</AnimationState>
-			
+
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING">
 					<Animation
 						AnimationName="NURedeemer_DIEA"
-						AnimationMode="ONCE" 
-						AnimationBlendTime="15"/>
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
 					<Animation
 						AnimationName="NURedeemer_DIEB"
-						AnimationMode="ONCE" 
-						AnimationBlendTime="15"/>
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
 					<Animation
 						AnimationName="NURedeemer_DIEC"
-						AnimationMode="ONCE" 
-						AnimationBlendTime="15"/>
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -1224,11 +1235,11 @@
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="MOVING"
 					Flags="">
-          				<Animation
+					<Animation
 						AnimationName="NURedeemer_WLKA"
 						AnimationMode="LOOP"
-            					AnimationBlendTime="15"
-            					Distance="80"/>
+						AnimationBlendTime="15"
+						Distance="80" />
 					<FXEvent
 						Frame="33"
 						FireWhenSkipped="true"
@@ -1274,42 +1285,24 @@
 						if Prev == "STATE_built" then
 						CurDrawableSetTransitionAnimState("TRANS_built")
 						end
-					</Script>						
+					</Script>
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="WEAPONSLOTID_01">
 					<Animation
-						AnimationName="NURedeemer_ATKA"
+						AnimationName="NURedeemer_ATKA2"
 						AnimationMode="ONCE"
 						AnimationBlendTime="15" />
-				</AnimationState>				
-		<!--		<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USING_WEAPON_A WEAPONSLOTID_01">
-					<Animation
-						AnimationName="NURedeemer_ATKA"
-						AnimationMode="LOOP"
-						AnimationBlendTime="0" />
-				</AnimationState>				
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="ATTACKING USER_10">
+					ConditionsYes="ATTACKING"
+					StateName="STATE_SelectedPose">
 					<Animation
-						AnimationName="NURedeemer_ATKA"
-						AnimationMode="LOOP"
-						AnimationBlendTime="0" />
+						AnimationName="NURedeemer_ATKA2"
+						AnimationMode="MANUAL" />
 				</AnimationState>
-		-->
-				    <AnimationState
-				         ParseCondStateType="PARSE_NORMAL"
-				         ConditionsYes="ATTACKING"
-				         StateName="STATE_SelectedPose">
-				         <Animation
-				                AnimationName="NURedeemer_ATKA"
-				                AnimationMode="MANUAL" />
-                		</AnimationState>
 
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -1319,17 +1312,17 @@
 						AnimationName="NURedeemer_AIDA"
 						AnimationMode="LOOP"
 						AnimationBlendTime="15"
-						AnimationPriority="40"/>
+						AnimationPriority="40" />
 					<Animation
 						AnimationName="NURedeemer_AIDB"
 						AnimationMode="LOOP"
-						AnimationBlendTime="15" 
-						AnimationPriority="40"/>
+						AnimationBlendTime="15"
+						AnimationPriority="40" />
 					<Animation
 						AnimationName="NURedeemer_AIDC"
 						AnimationMode="LOOP"
-						AnimationBlendTime="15" 
-						AnimationPriority="20"/>						
+						AnimationBlendTime="15"
+						AnimationPriority="20" />
 					<Script>
 						Prev = CurDrawablePrevAnimationState()
 						if Prev == "STATE_bored" then
@@ -1361,7 +1354,7 @@
 						AnimationBlendTime="15"
 						AnimationMode="ONCE"></Animation>
 				</AnimationState>
-		
+
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
 				id="1EABA9C6"
@@ -1415,7 +1408,6 @@
 						Name="W3DContainer:FXINVISBONE"
 						ExtraMesh="False" />
 				</ModelConditionState>
-				
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					EnteringStateFX=""
@@ -1423,7 +1415,6 @@
 					ShareAnimation="False"
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False" />
-				
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FIRING_A WEAPONSLOTID_03"
@@ -1475,7 +1466,6 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</AnimationState>
-				
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
 				id="74C70B88"
@@ -1529,7 +1519,6 @@
 						Name="W3DContainer:FXINVISBONE"
 						ExtraMesh="False" />
 				</ModelConditionState>
-				
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					EnteringStateFX=""
@@ -1588,12 +1577,8 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</AnimationState>
-				
 			</ScriptedModelDraw>
-			
-			
 			<!-- purifying flame -->
-
 			<ScriptedModelDraw
 				id="ModuleTag_DrawFXLeftPurifyingflame"
 				AttachToBoneInAnotherModule="FX_FTFireL">
@@ -1602,7 +1587,6 @@
 					<Model
 						Name="W3DContainer:FXInvisBone" />
 				</ModelConditionState>
-		
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
 				<AnimationState
@@ -1633,39 +1617,6 @@
 						FXParticleSystemTemplate="FlameTankPurifyingGround"
 						FollowBone="true" />
 				</AnimationState>
-				<!--
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_04 USER_6 TURN_LEFT_HIGH_SPEED" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_04 USER_6 TURN_RIGHT_HIGH_SPEED" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_04 USER_6 TURN_LEFT" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_04 USER_6 TURN_RIGHT" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_04 USER_6 MOVING" />		
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_04 USER_6">
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="NODFlameTankPilotDistortion"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="NODFlameTankPilotFire"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="NODFlameTankPilotGlow"
-						FollowBone="true" />
-				</AnimationState>
-				-->
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
 				id="ModuleTag_DrawFXRightPurifyingflame"
@@ -1675,7 +1626,6 @@
 					<Model
 						Name="W3DContainer:FXInvisBone" />
 				</ModelConditionState>
-				
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
 				<AnimationState
@@ -1706,43 +1656,8 @@
 						FXParticleSystemTemplate="FlameTankPurifyingGround"
 						FollowBone="true" />
 				</AnimationState>
-				<!--
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_05 USER_6 TURN_LEFT_HIGH_SPEED" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_05 USER_6 TURN_RIGHT_HIGH_SPEED" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_05 USER_6 TURN_LEFT" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_05 USER_6 TURN_RIGHT" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_05 USER_6 MOVING" />		
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_05 USER_6">
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="NODFlameTankPilotDistortion"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="NODFlameTankPilotFire"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="NODFlameTankPilotGlow"
-						FollowBone="true" />
-				</AnimationState>
-				-->
-			</ScriptedModelDraw>			
-
+			</ScriptedModelDraw>
 			<!-- end of purifying flame -->
-			
 			<ScriptedModelDraw
 				id="ModuleTag_DrawFXLeftDistortion"
 				AttachToBoneInAnotherModule="B_FTTURRETL">
@@ -1751,7 +1666,6 @@
 					<Model
 						Name="W3DContainer:FXInvisBone" />
 				</ModelConditionState>
-
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_7">
@@ -1762,10 +1676,7 @@
 						FXParticleSystemTemplate="NUBlkHndPilotDistortion2"
 						FollowBone="true" />
 				</ModelConditionState>
-		
 			</ScriptedModelDraw>
-			
-			
 			<ScriptedModelDraw
 				id="ModuleTag_DrawFXRightDistortion"
 				AttachToBoneInAnotherModule="B_FTTURRETR">
@@ -1774,7 +1685,6 @@
 					<Model
 						Name="W3DContainer:FXInvisBone" />
 				</ModelConditionState>
-
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_8">
@@ -1785,10 +1695,7 @@
 						FXParticleSystemTemplate="NUBlkHndPilotDistortion2"
 						FollowBone="true" />
 				</ModelConditionState>
-		
 			</ScriptedModelDraw>
-			
-			
 			<TracerModelDraw
 				id="24C17558"
 				MinLength="50"
@@ -2442,12 +2349,6 @@
 						Template="BHWarmechFlamer"
 						Upgrade="Upgrade_RedeemerFlameThrowerRight"
 						IsPlayerUpgradePermanent="False" />
-					<!--	
-					<Weapon
-						Ordering="SECONDARY_WEAPON"
-						ObjectStatus="WEAPON_UPGRADED_01"
-						Upgrade="Upgrade_RedeemerFlameThrowerRight"
-						Template="BHRedeemerFlamer"/> -->
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
@@ -2469,15 +2370,9 @@
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="BHWarmechFlamer"	
-						Upgrade="Upgrade_RedeemerFlameThrowerLeft"						
+						Template="BHWarmechFlamer"
+						Upgrade="Upgrade_RedeemerFlameThrowerLeft"
 						IsPlayerUpgradePermanent="False" />
-					<!--
-					<Weapon
-						Ordering="SECONDARY_WEAPON"
-						ObjectStatus="WEAPON_UPGRADED_01"
-						Upgrade="Upgrade_RedeemerFlameThrowerLeft"	
-						Template="BHRedeemerFlamer"/> -->
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
@@ -2492,9 +2387,9 @@
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				
+
 				<!-- purifying flame turrets -->
-				
+
 				<WeaponSlotTurret
 					ID="5"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -2502,8 +2397,8 @@
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Upgrade="Upgrade_RedeemerFlameThrowerRight"	
-						Template="BHRedeemerFlamer"/>
+						Upgrade="Upgrade_RedeemerFlameThrowerRight"
+						Template="BHRedeemerFlamer" />
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
@@ -2518,7 +2413,7 @@
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				
+
 				<WeaponSlotTurret
 					ID="4"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -2526,8 +2421,8 @@
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Upgrade="Upgrade_RedeemerFlameThrowerLeft"	
-						Template="BHRedeemerFlamer"/>
+						Upgrade="Upgrade_RedeemerFlameThrowerLeft"
+						Template="BHRedeemerFlamer" />
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
@@ -2542,10 +2437,7 @@
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				
-				<!-- -->
-				
-				
+
 				<WeaponSlotTurret
 					ID="15"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -2560,13 +2452,13 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-90d"
+						MinimumPitch="-45d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
 						MaxIdleScanTime="3s"
 						MinIdleScanAngle="10"
-						MaxIdleScanAngle="180"
+						MaxIdleScanAngle="35"
 						MaxDeflectionClockwise="180d"
 						MaxDeflectionAntiClockwise="180d"
 						NaturalTurretAngle="0d"
@@ -2601,13 +2493,13 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-90d"
+						MinimumPitch="-45d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
 						MaxIdleScanTime="3s"
 						MinIdleScanAngle="10"
-						MaxIdleScanAngle="180"
+						MaxIdleScanAngle="35"
 						MaxDeflectionClockwise="180d"
 						MaxDeflectionAntiClockwise="180d"
 						NaturalTurretAngle="0d"
@@ -2628,6 +2520,92 @@
 							CanPickTargetsOutOfTurretAngle="False" />
 					</TurretSettings>
 				</WeaponSlotTurret>
+
+				<!-- R23 BH particle beams added -->
+				<WeaponSlotTurret
+					ID="17"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechParticleBeam"
+						Upgrade="Upgrade_RedeemerHvyMachineGunRight"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						MinimumPitch="-45d"
+						PitchHeight="90%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="3s"
+						MinIdleScanAngle="10"
+						MaxIdleScanAngle="35"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret
+					ID="16"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechParticleBeam"
+						Upgrade="Upgrade_RedeemerHvyMachineGunLeft"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						MinimumPitch="-45d"
+						PitchHeight="90%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="3s"
+						MinIdleScanAngle="10"
+						MaxIdleScanAngle="35"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+
+				<!--  -->
 				<WeaponSlotTurret
 					ID="6"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -2839,20 +2817,20 @@
 					<IncludeThing>NODMilitantSquad</IncludeThing>
 					<IncludeThing>NODBlackHandSquad</IncludeThing>
 					<IncludeThing>NODMilitantRocketSquad</IncludeThing>
-					<IncludeThing>NODConfessor</IncludeThing>					
+					<IncludeThing>NODConfessor</IncludeThing>
 					<IncludeThing>NODSaboteur</IncludeThing>
 					<IncludeThing>BlackHandConfessor</IncludeThing>
 					<IncludeThing>BlackHandBlackHand</IncludeThing>
-					<IncludeThing>BlackHandBlackDisciple</IncludeThing>							
+					<IncludeThing>BlackHandBlackDisciple</IncludeThing>
 					<IncludeThing>BlackHandMilitantRocket</IncludeThing>
 					<IncludeThing>BlackHandConfessorSquad</IncludeThing>
 					<IncludeThing>BlackHandBlackHandSquad</IncludeThing>
 					<IncludeThing>BlackHandMilitantRocketSquad</IncludeThing>
 					<IncludeThing>BlackHandSaboteur</IncludeThing>
 					<IncludeThing>MOKCyborgInfantry</IncludeThing>
-					<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>					
+					<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>
 					<IncludeThing>MarkedOfKaneTibTrooper</IncludeThing>
-					<IncludeThing>MarkedOfKaneTibTrooperSquad</IncludeThing>					
+					<IncludeThing>MarkedOfKaneTibTrooperSquad</IncludeThing>
 					<IncludeThing>MarkedOfKaneMilitantRocket</IncludeThing>
 					<IncludeThing>MarkedOfKaneMilitantRocketSquad</IncludeThing>
 					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
@@ -2881,6 +2859,7 @@
 				<MemberTemplateStatusInfo
 					ThingTemplate="GDISniperSquad"
 					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<!-- mills-->
 				<UpgradeContainerOnContain
 					ID="Mills">
 					<UnitFilter
@@ -2896,13 +2875,14 @@
 						<IncludeThing>NODMilitant</IncludeThing>
 						<IncludeThing>NODMilitantSquad</IncludeThing>
 						<IncludeThing>BlackHandConfessor</IncludeThing>
-						<IncludeThing>BlackHandConfessorSquad</IncludeThing>						
+						<IncludeThing>BlackHandConfessorSquad</IncludeThing>
 						<IncludeThing>MOKCyborgInfantry</IncludeThing>
 						<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>
 					</UnitFilter>
 					<UpgradeList>Upgrade_RedeemerHvyMachineGunRight</UpgradeList>
 					<UpgradeList>Upgrade_RedeemerHvyMachineGunLeft</UpgradeList>
 				</UpgradeContainerOnContain>
+
 				<UpgradeContainerOnContain
 					ID="Flames">
 					<UnitFilter
@@ -2958,7 +2938,7 @@
 						<IncludeThing>MarkedOfKaneMilitantRocket</IncludeThing>
 						<IncludeThing>MarkedOfKaneMilitantRocketSquad</IncludeThing>
 						<IncludeThing>BlackHandMilitantRocket</IncludeThing>
-						<IncludeThing>BlackHandMilitantRocketSquad</IncludeThing>						
+						<IncludeThing>BlackHandMilitantRocketSquad</IncludeThing>
 					</UnitFilter>
 					<UpgradeList>Upgrade_RedeemerRocketPodRight</UpgradeList>
 					<UpgradeList>Upgrade_RedeemerRocketPodLeft</UpgradeList>
@@ -3001,20 +2981,20 @@
 					<IncludeThing>NODMilitantSquad</IncludeThing>
 					<IncludeThing>NODBlackHandSquad</IncludeThing>
 					<IncludeThing>NODMilitantRocketSquad</IncludeThing>
-					<IncludeThing>NODConfessor</IncludeThing>					
+					<IncludeThing>NODConfessor</IncludeThing>
 					<IncludeThing>NODSaboteur</IncludeThing>
 					<IncludeThing>BlackHandConfessor</IncludeThing>
 					<IncludeThing>BlackHandBlackHand</IncludeThing>
-					<IncludeThing>BlackHandBlackDisciple</IncludeThing>							
+					<IncludeThing>BlackHandBlackDisciple</IncludeThing>
 					<IncludeThing>BlackHandMilitantRocket</IncludeThing>
 					<IncludeThing>BlackHandConfessorSquad</IncludeThing>
 					<IncludeThing>BlackHandBlackHandSquad</IncludeThing>
 					<IncludeThing>BlackHandMilitantRocketSquad</IncludeThing>
 					<IncludeThing>BlackHandSaboteur</IncludeThing>
 					<IncludeThing>MOKCyborgInfantry</IncludeThing>
-					<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>					
+					<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>
 					<IncludeThing>MarkedOfKaneTibTrooper</IncludeThing>
-					<IncludeThing>MarkedOfKaneTibTrooperSquad</IncludeThing>					
+					<IncludeThing>MarkedOfKaneTibTrooperSquad</IncludeThing>
 					<IncludeThing>MarkedOfKaneMilitantRocket</IncludeThing>
 					<IncludeThing>MarkedOfKaneMilitantRocketSquad</IncludeThing>
 					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
@@ -3027,7 +3007,7 @@
 				Permanent="False"
 				WaypointMode="False"
 				WaypointModeTerminal="True"
-				ShowSubObjects="HvyMGR HvyMGBarrelR"
+				ShowSubObjects="HVYMGR"
 				FadeTimeInSeconds="0.5"
 				WaitBeforeFadeInSeconds="0"
 				RecolorHouse="False"
@@ -3055,7 +3035,7 @@
 				Permanent="False"
 				WaypointMode="False"
 				WaypointModeTerminal="True"
-				ShowSubObjects="HvyMGL HvyMGBarrelL"
+				ShowSubObjects="HVYMGL"
 				FadeTimeInSeconds="0.5"
 				WaitBeforeFadeInSeconds="0"
 				RecolorHouse="False"
@@ -3076,43 +3056,6 @@
 				ApplyToContained="False">
 				<TriggeredBy>Upgrade_RedeemerHvyMachineGunLeft</TriggeredBy>
 			</StatusBitsUpgrade>
-			<!--
-			<SubObjectsUpgrade
-				id="D93F3E92"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				ShowSubObjects="B_FTL FTL FX_FTpilotflameL"
-				FadeTimeInSeconds="0.5"
-				WaitBeforeFadeInSeconds="0"
-				RecolorHouse="False"
-				SkipFadeOnCreate="False"
-				HideSubObjectsOnRemove="False"
-				UnHideSubObjectsOnRemove="False">
-				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
-				<TriggeredBy>Upgrade_RedeemerTibTrooperLeft</TriggeredBy>
-			</SubObjectsUpgrade>
-			<SubObjectsUpgrade
-				id="903DA5CA"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				ShowSubObjects="B_FTR FTR FX_FTpilotflameR"
-				FadeTimeInSeconds="0.5"
-				WaitBeforeFadeInSeconds="0"
-				RecolorHouse="False"
-				SkipFadeOnCreate="False"
-				HideSubObjectsOnRemove="False"
-				UnHideSubObjectsOnRemove="False">
-				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
-				<TriggeredBy>Upgrade_RedeemerTibTrooperRight</TriggeredBy>
-			</SubObjectsUpgrade>
-			-->
-			
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowFlamerLeft"
 				ShowSubObjects="B_FTL FTL FX_FTpilotflameL">
@@ -3122,7 +3065,7 @@
 				id="ModuleTag_ShowFlamerRight"
 				ShowSubObjects="B_FTR FTR FX_FTpilotflameR">
 				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
-			</SubObjectsUpgrade>		
+			</SubObjectsUpgrade>
 
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowTibTrooperLeft"
@@ -3133,9 +3076,8 @@
 				id="ModuleTag_ShowTibTrooperRight"
 				ShowSubObjects="B_FTR FTR">
 				<TriggeredBy>Upgrade_RedeemerTibTrooperRight</TriggeredBy>
-			</SubObjectsUpgrade>      
-			
-			
+			</SubObjectsUpgrade>
+
 			<SubObjectsUpgrade
 				id="27928C09"
 				RequiresAllTriggers="False"
@@ -3200,33 +3142,20 @@
 				UnHideSubObjectsOnRemove="False">
 				<TriggeredBy>Upgrade_RedeemerRegenModuleLeft</TriggeredBy>
 			</SubObjectsUpgrade>
-			
-			<!-- redeemer purifying flame -->
-<!--
-			<StatusBitsUpgrade
-				id="ModuleTag_ShowRedeemerFlameThrowerRightUpgrade"
-				StatusToSet="WEAPON_UPGRADED_01">
-				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
-			</StatusBitsUpgrade>
-			
-			<StatusBitsUpgrade
-				id="ModuleTag_ShowRedeemerFlameThrowerLeftUpgrade"
-				StatusToSet="WEAPON_UPGRADED_02">
-				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
-			</StatusBitsUpgrade>
--->
 
+			<!-- redeemer purifying flame -->
 			<StatusBitsUpgrade
 				id="ModuleTag_UpgradeBlueWeapon"
 				StatusToSet="WEAPON_UPGRADED_01">
 				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
-			</StatusBitsUpgrade> 
-			<!--
-			<ModelConditionUpgrade
-				id="ModuleTag_BlackHandNormalFlameUpgrade"
-				AddConditionFlags="USER_7">	
-				<TriggeredBy>Upgrade_BlackHandFaction</TriggeredBy>
-			</ModelConditionUpgrade> -->
+			</StatusBitsUpgrade>
+			<!-- R23 Black Hand & MoK particle beams -->
+			<StatusBitsUpgrade
+				id="ModuleTag_UpgradeParticleWeapon"
+				StatusToSet="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_NodTechCenterChargedParticleBeam</TriggeredBy>
+			</StatusBitsUpgrade>
+
 			<ModelConditionUpgrade
 				id="ModuleTag_PurifyingFlameUpgrade"
 				AddConditionFlags="USER_6">
@@ -3238,15 +3167,13 @@
 				AddConditionFlags="USER_7">
 				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
 			</ModelConditionUpgrade>
-			
+
 			<ModelConditionUpgrade
 				id="ModuleTag_RedeemerFlameThrowerRightUpgrade"
 				AddConditionFlags="USER_8">
 				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
 			</ModelConditionUpgrade>
-		
-			<!-- -->
-			
+
 			<StreamState
 				id="3B917EAF"
 				StreamId="0" />
@@ -3719,8 +3646,13 @@
 				KillAfterMS="0">
 				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
 			</AudioLoopUpgrade>
-			<AudioLoopUpgrade id="NOD_PurifyingFlame_Upgrade" SoundToPlay="Multisound:NOD_PurifyingFlame_UpgradeMS">
+			<!-- New upgrades on the redeemer -->
+			<AudioLoopUpgrade id="NOD_PurifyingFlame_Upgrade"
+				SoundToPlay="Multisound:NOD_PurifyingFlame_UpgradeMS">
 				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade id="ChargedParticleBeamUpgrade" SoundToPlay="AudioEvent:NOD_Awakened_ChargedParticleBeamGunAvailable">
+				<TriggeredBy>Upgrade_NodTechCenterChargedParticleBeam</TriggeredBy>
 			</AudioLoopUpgrade>
 		</Behaviors>
 		<AI>
@@ -4137,8 +4069,8 @@
 			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
 			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
-			EvaEventSecondDamageFarFromFirstScanRange="600"    
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
 			EvaEventAmbushed="UnitAmbushed"
 			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
 			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"

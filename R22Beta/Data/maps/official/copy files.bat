@@ -1,2 +1,0 @@
-@echo off
-for /D %%a in ("C:\Wrathed Mod SDK\Mods\R19beta\Data\maps\official\r19 map pack 3 maps\*.*") do xcopy /y /d "C:\Wrathed Mod SDK\Mods\R19beta\Data\maps\official\extraction plateau 1.02+__18\map.xml" "%%a\"

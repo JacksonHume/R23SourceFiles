@@ -17,6 +17,29 @@
 		Type="OBJECT"
 	/>
 -->
+	<!-- Redeemer militant garrisons -->
+
+	<UpgradeTemplate id="Upgrade_RedeemerHvyMachineGunLeftBH"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="3.0s">
+	</UpgradeTemplate>	
+	<UpgradeTemplate id="Upgrade_RedeemerHvyMachineGunRightBH"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="3.0s">
+	</UpgradeTemplate>	
+
+	<UpgradeTemplate id="Upgrade_RedeemerHvyMachineGunLeftMoK"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="3.0s">
+	</UpgradeTemplate>	
+	<UpgradeTemplate id="Upgrade_RedeemerHvyMachineGunRightMoK"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="3.0s">
+	</UpgradeTemplate>	
 
 
 	<UpgradeTemplate id="Upgrade_UpgradeGreenTib"

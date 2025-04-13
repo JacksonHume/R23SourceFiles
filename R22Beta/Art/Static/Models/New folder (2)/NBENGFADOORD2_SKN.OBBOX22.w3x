@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<W3DCollisionBox id="NBENGFADOORD2_SKN.OBBOX22" JoypadPickingOnly="false">
-		<Center X="-22.903715" Y="-40.932961" Z="18.377230"/>
-		<Extent X="8.198383" Y="5.364372" Z="39.129585"/>
-	</W3DCollisionBox>
-</AssetDeclaration>
