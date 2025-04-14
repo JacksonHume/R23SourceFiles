@@ -96,19 +96,12 @@
 				<Mesh>NUREDEEMER_SKN.MUZZLEFLASH_02</Mesh>
 			</RenderObject>
 		</SubObject>
-		<!--
-		<SubObject SubObjectID="HVYMGBARRELR" BoneIndex="81">
-			<RenderObject>
-				<Mesh>NUREDEEMER_SKN.HVYMGBARRELR</Mesh>
-			</RenderObject>
-		</SubObject>
-		-->
-		<SubObject SubObjectID="HVYMGR" BoneIndex="100">
+		<SubObject SubObjectID="HVYMGR" BoneIndex="81">
 			<RenderObject>
 				<Mesh>NUREDEEMER_SKN2.HVYMGR</Mesh>
 			</RenderObject>
 		</SubObject>
-		<SubObject SubObjectID="FTL" BoneIndex="77">
+		<SubObject SubObjectID="FTL" BoneIndex="100">
 			<RenderObject>
 				<Mesh>NUREDEEMER_SKN.FTL</Mesh>
 			</RenderObject>
@@ -123,7 +116,7 @@
 				<Mesh>NUREDEEMER_SKN.B_FTL</Mesh>
 			</RenderObject>
 		</SubObject>
-		<SubObject SubObjectID="FTR" BoneIndex="73">
+		<SubObject SubObjectID="FTR" BoneIndex="99">
 			<RenderObject>
 				<Mesh>NUREDEEMER_SKN.FTR</Mesh>
 			</RenderObject>
@@ -143,14 +136,7 @@
 				<Mesh>NUREDEEMER_SKN.MUZZLEFLASH_01</Mesh>
 			</RenderObject>
 		</SubObject>
-		<!--
-		<SubObject SubObjectID="HVYMGBARRELL" BoneIndex="69">
-			<RenderObject>
-				<Mesh>NUREDEEMER_SKN.HVYMGBARRELL</Mesh>
-			</RenderObject>
-		</SubObject>
-		-->
-		<SubObject SubObjectID="HVYMGL" BoneIndex="99">
+		<SubObject SubObjectID="HVYMGL" BoneIndex="69">
 			<RenderObject>
 				<Mesh>NUREDEEMER_SKN2.HVYMGL</Mesh>
 			</RenderObject>

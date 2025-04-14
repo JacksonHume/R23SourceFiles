@@ -1,6 +1,97 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<WeaponTemplate
+		id="BHRedeemerFlamer"
+		Name="BHRedeemerFlamer"
+		AttackRange="200.0"
+		CanFireWhileMoving="true"
+		WeaponSpeed="999999.0"
+		FiringLoopSound="AudioEvent:NOD_FlameTank_FlameWeaponLoop"
+		ForbiddenFiringObjectStatus=""
+		FiringLoopSoundContinuesDuringReload="true"
+		RequiredFiringObjectStatus="WEAPON_UPGRADED_01"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ClipSize="10"
+		RotatingTurret="true"
+		AcceptableAimDelta="20d"
+		ReAcquireDetailType="PER_CLIP"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="10"
+				Damage="1500000"
+				DamageType="GRENADE"
+				DeathType="BURNED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="195.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED" />
+			<SuppressionNugget
+				Radius="40.0"
+				Suppression="200"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="BHWarmechFlamer"
+		Name="BHWarmechFlamer"
+		AttackRange="200.0"
+		CanFireWhileMoving="true"
+		WeaponSpeed="999999.0"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		FiringLoopSound="AudioEvent:NOD_FlameTank_FlameWeaponLoop"
+		FiringLoopSoundContinuesDuringReload="true"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ClipSize="10"
+		RotatingTurret="true"
+		AcceptableAimDelta="20d"
+		ReAcquireDetailType="PER_CLIP"
+	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="10"
+				Damage="1500000"
+				DamageType="GRENADE"
+				DeathType="BURNED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="144.0"
+				Radius="40.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="GRENADE"
+				DamageFXType="NOD_FLAMETHROWER"
+				DeathType="BURNED" />
+			<SuppressionNugget
+				Radius="40.0"
+				Suppression="200"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
 	<!-- Redeemer R23 BH particle beams -->
 
 	<WeaponTemplate
@@ -122,15 +213,12 @@
 	</WeaponTemplate>
 
 	<WeaponTemplate
-		id="NODWarmechMachinegunFake"
+		id="NODWarmechFakeWeapon"
 		Name="NODWarmechMachinegunFake"
 		AttackRange="300.0"
 		WeaponSpeed="999999.0"
-		FireSound=""
-		FireFX=""
-		FireVeteranFX=""
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		ClipSize="18"
+		ClipSize="1"
 		RotatingTurret="true"
 		AntiMask="ANTI_GROUND"
 		AcceptableAimDelta="10d"

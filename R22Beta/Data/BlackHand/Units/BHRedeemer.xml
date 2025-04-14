@@ -184,23 +184,6 @@
 						WeaponSlotID="14"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_HvyMGFlashL" />
-					<!-- PARTICLE BEAM MACHINE GUN 
-					<WeaponFireFXBone
-						WeaponSlotID="17"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_HvyMGFlashR" />
-					<WeaponLaunchBone
-						WeaponSlotID="17"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_HvyMGFlashR" />
-					<WeaponFireFXBone
-						WeaponSlotID="16"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_HvyMGFlashL" />
-					<WeaponLaunchBone
-						WeaponSlotID="16"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_HvyMGFlashL" /> -->
 					<!-- FLAME THROWERS AND TIB TROOPER -->
 					<WeaponFireFXBone
 						WeaponSlotID="8"
@@ -218,16 +201,6 @@
 						WeaponSlotID="3"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_FTFireL" />
-					<!-- PURIFYING FLAME -->
-					<WeaponFireFXBone
-						WeaponSlotID="5"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponFireFXBone
-						WeaponSlotID="4"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
-					<!-- -->
 					<WeaponLaunchBone
 						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -236,16 +209,6 @@
 						WeaponSlotID="3"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_FTFireL" />
-					<!-- PURIFYING FLAME -->
-					<WeaponLaunchBone
-						WeaponSlotID="5"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponLaunchBone
-						WeaponSlotID="4"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
-					<!-- -->
 					<WeaponLaunchBone
 						WeaponSlotID="8"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -305,43 +268,15 @@
 					<Turret
 						TurretNameKey="B_FTturretR"
 						TurretArtAngle="0d"
-						TurretPitch=""
+						TurretPitch="B_FTPITCHR"
 						TurretArtPitch="0d"
 						TurretID="2" />
 					<Turret
 						TurretNameKey="B_FTturretL"
 						TurretArtAngle="0d"
-						TurretPitch=""
+						TurretPitch="B_FTPITCHL"
 						TurretArtPitch="0d"
 						TurretID="3" />
-					<!-- PURIFYING FLAME
-					<Turret
-						TurretNameKey="B_FTturretR2"
-						TurretArtAngle="0d"
-						TurretPitch="B_FTturretR2"
-						TurretArtPitch="0d"
-						TurretID="5" />
-					<Turret
-						TurretNameKey="B_FTturretL2"
-						TurretArtAngle="0d"
-						TurretPitch="B_FTturretR2"
-						TurretArtPitch="0d"
-						TurretID="4" /> -->
-
-					<!-- PARTICLE BEAM MACHINE GUN
-					<Turret
-						TurretNameKey="B_HvyMGturretR"
-						TurretArtAngle="0d"
-						TurretPitch="B_HVYMGPITCHR"
-						TurretArtPitch="0d"
-						TurretID="16" />
-					<Turret
-						TurretNameKey="B_HvyMGturretL"
-						TurretArtAngle="0d"
-						TurretPitch="B_HVYMGPITCHL"
-						TurretArtPitch="0d"
-						TurretID="17" />  -->
-					<!-- -->
 					<Turret
 						TurretNameKey="B_HvyMGturretR"
 						TurretArtAngle="0d"
@@ -366,18 +301,19 @@
 						TurretPitch=""
 						TurretArtPitch="0d"
 						TurretID="7" />
+						<!-- TIB TROOPER GARRISON DOESNT WORK ATM WITH BH FLAME GARRISON
 					<Turret
 						TurretNameKey="B_FTturretR"
 						TurretArtAngle="0d"
-						TurretPitch=""
+						TurretPitch="B_FTPITCHR"
 						TurretArtPitch="0d"
-						TurretID="8" />
+						TurretID="8" /> 
 					<Turret
 						TurretNameKey="B_FTturretL"
 						TurretArtAngle="0d"
-						TurretPitch=""
+						TurretPitch="B_FTPITCHL"
 						TurretArtPitch="0d"
-						TurretID="9" />
+						TurretID="9" />  -->
 				</ModelConditionState>
 				<!-- RAGE ANIMATION -->
 				<AnimationState
@@ -948,7 +884,6 @@
 				</ModelConditionState>
 
 				<!-- PURIFYING FLAME -->
-
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_6">
@@ -1418,6 +1353,36 @@
 					ShareAnimation="False"
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False" />
+				<!-- purifying flame -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A WEAPONSLOTID_03 USER_6">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingStart"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingDistort"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingGround"
+						FollowBone="true" />
+				</AnimationState>
+
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FIRING_A WEAPONSLOTID_03"
@@ -1530,6 +1495,36 @@
 					ShareAnimation="False"
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False" />
+				<!-- purifying flame -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A WEAPONSLOTID_02 USER_6">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingStart"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingDistort"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingGround"
+						FollowBone="true" />
+				</AnimationState>
+
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FIRING_A WEAPONSLOTID_02"
@@ -1582,85 +1577,7 @@
 						OnlyIfOnLand="False" />
 				</AnimationState>
 			</ScriptedModelDraw>
-			<!-- purifying flame -->
-			<ScriptedModelDraw
-				id="ModuleTag_DrawFXLeftPurifyingflame"
-				AttachToBoneInAnotherModule="FX_FTFireL">
-				<ModelConditionState
-					ParseCondStateType="PARSE_DEFAULT">
-					<Model
-						Name="W3DContainer:FXInvisBone" />
-				</ModelConditionState>
-				<AnimationState
-					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FIRING_A WEAPONSLOTID_04 USER_6">
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingAdd"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingAdd02"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingFire"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingStart"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingDistort"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingGround"
-						FollowBone="true" />
-				</AnimationState>
-			</ScriptedModelDraw>
-			<ScriptedModelDraw
-				id="ModuleTag_DrawFXRightPurifyingflame"
-				AttachToBoneInAnotherModule="FX_FTFireR">
-				<ModelConditionState
-					ParseCondStateType="PARSE_DEFAULT">
-					<Model
-						Name="W3DContainer:FXInvisBone" />
-				</ModelConditionState>
-				<AnimationState
-					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FIRING_A WEAPONSLOTID_05 USER_6">
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingAdd"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingAdd02"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingFire"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingStart"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingDistort"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="INVISBONE01"
-						FXParticleSystemTemplate="FlameTankPurifyingGround"
-						FollowBone="true" />
-				</AnimationState>
-			</ScriptedModelDraw>
+
 			<!-- end of purifying flame -->
 			<ScriptedModelDraw
 				id="ModuleTag_DrawFXLeftDistortion"
@@ -1681,6 +1598,7 @@
 						FollowBone="true" />
 				</ModelConditionState>
 			</ScriptedModelDraw>
+
 			<ScriptedModelDraw
 				id="ModuleTag_DrawFXRightDistortion"
 				AttachToBoneInAnotherModule="B_FTTURRETR">
@@ -2343,6 +2261,7 @@
 						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
 				</WeaponSlotHardpoint>
+
 				<WeaponSlotTurret
 					ID="2"
 					AllowInterleavedFiring="false"
@@ -2350,23 +2269,32 @@
 					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="BHWarmechFlamer"
-						Upgrade="Upgrade_RedeemerFlameThrowerRight"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						ObjectStatus="RIDER4"
+						Template="BHWarmechFlamer" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						ObjectStatus="RIDER4 WEAPON_UPGRADED_01"
+						Template="BHRedeemerFlamer" />
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
 						AllowsPitch="true"
-						MinimumPitch="-90d"
+						MinimumPitch="-25d"
 						PitchHeight="90%"
 						MinIdleScanTime="1.0s"
 						MaxIdleScanTime="3.0s"
-						MinIdleScanAngle="0.0"
+						MinIdleScanAngle="10.0"
 						MaxIdleScanAngle="35.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
+
 				<WeaponSlotTurret
 					ID="3"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -2374,75 +2302,32 @@
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="BHWarmechFlamer"
-						Upgrade="Upgrade_RedeemerFlameThrowerLeft"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="200"
-						AllowsPitch="true"
-						MinimumPitch="-90d"
-						PitchHeight="90%"
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="3.0s"
-						MinIdleScanAngle="0.0"
-						MaxIdleScanAngle="35.0">
-						<TurretAITargetChooserData
-							CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-
-				<!-- purifying flame turrets -->
-
-				<WeaponSlotTurret
-					ID="5"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Upgrade="Upgrade_RedeemerFlameThrowerRight"
+						ObjectStatus="RIDER3"
+						Template="BHWarmechFlamer" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						ObjectStatus="RIDER3 WEAPON_UPGRADED_01"
 						Template="BHRedeemerFlamer" />
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
 						AllowsPitch="true"
-						MinimumPitch="-90d"
+						MinimumPitch="-25d"
 						PitchHeight="90%"
 						MinIdleScanTime="1.0s"
 						MaxIdleScanTime="3.0s"
-						MinIdleScanAngle="0.0"
+						MinIdleScanAngle="10.0"
 						MaxIdleScanAngle="35.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
 
-				<WeaponSlotTurret
-					ID="4"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Upgrade="Upgrade_RedeemerFlameThrowerLeft"
-						Template="BHRedeemerFlamer" />
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="200"
-						AllowsPitch="true"
-						MinimumPitch="-90d"
-						PitchHeight="90%"
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="3.0s"
-						MinIdleScanAngle="0.0"
-						MaxIdleScanAngle="35.0">
-						<TurretAITargetChooserData
-							CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-
-				<!-- instead of upgrade i can make status bits for each of the upgrades then use the object status to filter the normal attack and upgraded. -->
 				<!-- RIGHT TURRET-->
 				<WeaponSlotTurret
 					ID="15"
@@ -2451,7 +2336,7 @@
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="NODWarmechMachinegunFake"
+						Template="NODWarmechFakeWeapon"
 						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
@@ -2468,7 +2353,7 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-45d"
+						MinimumPitch="-25d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
@@ -2503,7 +2388,7 @@
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="NODWarmechMachinegunFake"
+						Template="NODWarmechFakeWeapon"
 						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
@@ -2520,7 +2405,7 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-45d"
+						MinimumPitch="-25d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
@@ -2561,13 +2446,13 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-90d"
+						MinimumPitch="-25d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
 						MaxIdleScanTime="3s"
 						MinIdleScanAngle="10"
-						MaxIdleScanAngle="180"
+						MaxIdleScanAngle="35"
 						MaxDeflectionClockwise="180d"
 						MaxDeflectionAntiClockwise="180d"
 						NaturalTurretAngle="0d"
@@ -2602,13 +2487,13 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-90d"
+						MinimumPitch="-25d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
 						MaxIdleScanTime="3s"
 						MinIdleScanAngle="10"
-						MaxIdleScanAngle="180"
+						MaxIdleScanAngle="35"
 						MaxDeflectionClockwise="180d"
 						MaxDeflectionAntiClockwise="180d"
 						NaturalTurretAngle="0d"
@@ -2643,13 +2528,13 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-90d"
+						MinimumPitch="-25d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
 						MaxIdleScanTime="3s"
 						MinIdleScanAngle="10"
-						MaxIdleScanAngle="180"
+						MaxIdleScanAngle="35"
 						MaxDeflectionClockwise="180d"
 						MaxDeflectionAntiClockwise="180d"
 						NaturalTurretAngle="0d"
@@ -2684,13 +2569,13 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-90d"
+						MinimumPitch="-25d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
 						MaxIdleScanTime="3s"
 						MinIdleScanAngle="10"
-						MaxIdleScanAngle="180"
+						MaxIdleScanAngle="35"
 						MaxDeflectionClockwise="180d"
 						MaxDeflectionAntiClockwise="180d"
 						NaturalTurretAngle="0d"
@@ -2961,7 +2846,7 @@
 				id="ModuleTag_ShowHvyMachineGunRightUpgrade"
 				StatusToSet="RIDER1">
 				<TriggeredBy>Upgrade_RedeemerHvyMachineGunRight</TriggeredBy>
-			</StatusBitsUpgrade>		
+			</StatusBitsUpgrade>
 			<SubObjectsUpgrade
 				id="D7D36B9F"
 				RequiresAllTriggers="False"
@@ -2988,11 +2873,23 @@
 				ShowSubObjects="B_FTL FTL FX_FTpilotflameL">
 				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
 			</SubObjectsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowFlameThrowerLeftUpgrade"
+				StatusToSet="RIDER3">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerLeft</TriggeredBy>
+			</StatusBitsUpgrade>
+
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowFlamerRight"
 				ShowSubObjects="B_FTR FTR FX_FTpilotflameR">
 				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
 			</SubObjectsUpgrade>
+
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowFlameThrowerRightUpgrade"
+				StatusToSet="RIDER4">
+				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
+			</StatusBitsUpgrade>
 
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowTibTrooperLeft"
