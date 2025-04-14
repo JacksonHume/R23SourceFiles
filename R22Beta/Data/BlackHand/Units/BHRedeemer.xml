@@ -117,7 +117,7 @@
 				MinLODRequired="LOW"
 				ProjectileBoneFeedbackEnabledSlots=""
 				TrackMarks=""
-				ExtraPublicBone="B_FTturretR FX_FTFireR FX_FTFireL B_FTturretL FX_HvyMGFlashR B_HvyMGturretR B_HvyMGturretR FX_HvyMGFlashL B_HvyMGturretL SecondaryWepBone04 SubSystemBone01 SubSystemBone02 SubSystemBone03"
+				ExtraPublicBone="B_FTPITCHL B_FTPITCHR B_FTturretR FX_FTFireR FX_FTFireL B_FTturretL FX_HvyMGFlashR B_HvyMGturretR B_HvyMGturretR FX_HvyMGFlashL B_HvyMGturretL SecondaryWepBone04 SubSystemBone01 SubSystemBone02 SubSystemBone03"
 				DependencySharedModelFlags=""
 				HighDetailLODThreshold="0"
 				LowDetailLODThreshold="0"
@@ -186,14 +186,6 @@
 						BoneName="FX_HvyMGFlashL" />
 					<!-- FLAME THROWERS AND TIB TROOPER -->
 					<WeaponFireFXBone
-						WeaponSlotID="8"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponFireFXBone
-						WeaponSlotID="9"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
-					<WeaponFireFXBone
 						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_FTFireR" />
@@ -207,14 +199,6 @@
 						BoneName="FX_FTFireR" />
 					<WeaponLaunchBone
 						WeaponSlotID="3"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
-					<WeaponLaunchBone
-						WeaponSlotID="8"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
-					<WeaponLaunchBone
-						WeaponSlotID="9"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_FTFireL" />
 					<!-- ROCKET LAUNCHER -->
@@ -301,19 +285,6 @@
 						TurretPitch=""
 						TurretArtPitch="0d"
 						TurretID="7" />
-						<!-- TIB TROOPER GARRISON DOESNT WORK ATM WITH BH FLAME GARRISON
-					<Turret
-						TurretNameKey="B_FTturretR"
-						TurretArtAngle="0d"
-						TurretPitch="B_FTPITCHR"
-						TurretArtPitch="0d"
-						TurretID="8" /> 
-					<Turret
-						TurretNameKey="B_FTturretL"
-						TurretArtAngle="0d"
-						TurretPitch="B_FTPITCHL"
-						TurretArtPitch="0d"
-						TurretID="9" />  -->
 				</ModelConditionState>
 				<!-- RAGE ANIMATION -->
 				<AnimationState
@@ -1356,7 +1327,7 @@
 				<!-- purifying flame -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FIRING_A WEAPONSLOTID_03 USER_6">
+					ConditionsYes="FIRING_A WEAPONSLOTID_03 USER_7 USER_6">
 					<ParticleSysBone
 						BoneName="INVISBONE01"
 						FXParticleSystemTemplate="FlameTankPurifyingAdd"
@@ -1385,7 +1356,7 @@
 
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FIRING_A WEAPONSLOTID_03"
+					ConditionsYes="FIRING_A WEAPONSLOTID_03 USER_7"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
 					ShareAnimation="False"
@@ -1498,7 +1469,7 @@
 				<!-- purifying flame -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FIRING_A WEAPONSLOTID_02 USER_6">
+					ConditionsYes="FIRING_A WEAPONSLOTID_02 USER_8 USER_6">
 					<ParticleSysBone
 						BoneName="INVISBONE01"
 						FXParticleSystemTemplate="FlameTankPurifyingAdd"
@@ -1527,7 +1498,7 @@
 
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FIRING_A WEAPONSLOTID_02"
+					ConditionsYes="FIRING_A WEAPONSLOTID_02 USER_8"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
 					ShareAnimation="False"
@@ -1999,6 +1970,7 @@
 					ForbiddenStatus=""
 					RequiredStatus="WEAPON_UPGRADED_03" />
 			</LaserDraw>
+			<!-- left turret -->
 			<StreamDraw
 				id="A2C70402"
 				Velocity="200"
@@ -2007,7 +1979,7 @@
 				NumTubeSides="8"
 				TubeRadius="1.5"
 				HitFx="FX_BulletHitGDI"
-				WeaponSlotID="8"
+				WeaponSlotID="3"
 				StreamStateID="0"
 				UseDistortionShader="False">
 				<FXShader
@@ -2032,6 +2004,7 @@
 					<ParticleSys>TiberiumLiquidStreamGas1</ParticleSys>
 				</ParticleSystems>
 			</StreamDraw>
+			<!-- right turret-->
 			<StreamDraw
 				id="2D73A8AE"
 				Velocity="200"
@@ -2040,7 +2013,7 @@
 				NumTubeSides="8"
 				TubeRadius="1.5"
 				HitFx="FX_BulletHitGDI"
-				WeaponSlotID="9"
+				WeaponSlotID="2"
 				StreamStateID="1"
 				UseDistortionShader="False">
 				<FXShader
@@ -2267,15 +2240,18 @@
 					AllowInterleavedFiring="false"
 					InterleavedStyle="INTERLEAVE_RANDOM"
 					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<!-- tib trooper hardpoint-->
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="NODWarmechFakeWeapon"
-						ObjectStatus=""
+						Template="NODWarmechTibWeaponRight"
+						Upgrade="Upgrade_RedeemerTibTrooperRight"
 						IsPlayerUpgradePermanent="False" />
+					<!-- black hand hardpoint -->
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						ObjectStatus="RIDER4"
 						Template="BHWarmechFlamer" />
+					<!-- black hand purifying flame hardpoint -->
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						ObjectStatus="RIDER4 WEAPON_UPGRADED_01"
@@ -2284,12 +2260,12 @@
 						TurretTurnRate="200"
 						TurretPitchRate="200"
 						AllowsPitch="true"
-						MinimumPitch="-25d"
+						MinimumPitch="-15d"
 						PitchHeight="90%"
 						MinIdleScanTime="1.0s"
 						MaxIdleScanTime="3.0s"
 						MinIdleScanAngle="10.0"
-						MaxIdleScanAngle="35.0">
+						MaxIdleScanAngle="25.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
@@ -2300,15 +2276,18 @@
 					InterleavedStyle="INTERLEAVE_RANDOM"
 					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
 					AllowInterleavedFiring="False">
+					<!-- tib trooper hardpoint-->
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="NODWarmechFakeWeapon"
-						ObjectStatus=""
+						Template="NODWarmechTibWeaponLeft"
+						Upgrade="Upgrade_RedeemerTibTrooperLeft"
 						IsPlayerUpgradePermanent="False" />
+					<!-- black hand hardpoint -->
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						ObjectStatus="RIDER3"
 						Template="BHWarmechFlamer" />
+					<!-- black hand purifying flame hardpoint -->
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						ObjectStatus="RIDER3 WEAPON_UPGRADED_01"
@@ -2317,12 +2296,12 @@
 						TurretTurnRate="200"
 						TurretPitchRate="200"
 						AllowsPitch="true"
-						MinimumPitch="-25d"
+						MinimumPitch="-15d"
 						PitchHeight="90%"
 						MinIdleScanTime="1.0s"
 						MaxIdleScanTime="3.0s"
 						MinIdleScanAngle="10.0"
-						MaxIdleScanAngle="35.0">
+						MaxIdleScanAngle="25.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
@@ -2342,13 +2321,13 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechMachinegun"
-						ObjectStatus="RIDER1"
+						ObjectStatus="RIDER_IS_PILOT"
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechParticleBeam"
 						Upgrade=""
-						ObjectStatus="RIDER1 WEAPON_UPGRADED_02"
+						ObjectStatus="RIDER_IS_PILOT WEAPON_UPGRADED_02"
 						IsPlayerUpgradePermanent="False" />
 					<TurretSettings
 						TurretTurnRate="200"
@@ -2514,6 +2493,7 @@
 							CanPickTargetsOutOfTurretAngle="False" />
 					</TurretSettings>
 				</WeaponSlotTurret>
+				<!--
 				<WeaponSlotTurret
 					ID="8"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -2528,7 +2508,7 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-25d"
+						MinimumPitch="-15d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
@@ -2569,7 +2549,7 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-25d"
+						MinimumPitch="-15d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
@@ -2596,6 +2576,7 @@
 							CanPickTargetsOutOfTurretAngle="False" />
 					</TurretSettings>
 				</WeaponSlotTurret>
+				-->
 			</WeaponSetUpdate>
 			<SlaughterHordeContain
 				id="9DC593B0"
@@ -2844,7 +2825,7 @@
 			</SubObjectsUpgrade>
 			<StatusBitsUpgrade
 				id="ModuleTag_ShowHvyMachineGunRightUpgrade"
-				StatusToSet="RIDER1">
+				StatusToSet="RIDER_IS_PILOT">
 				<TriggeredBy>Upgrade_RedeemerHvyMachineGunRight</TriggeredBy>
 			</StatusBitsUpgrade>
 			<SubObjectsUpgrade
@@ -2891,17 +2872,31 @@
 				<TriggeredBy>Upgrade_RedeemerFlameThrowerRight</TriggeredBy>
 			</StatusBitsUpgrade>
 
+			<!-- tib trooper -->
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowTibTrooperLeft"
 				ShowSubObjects="B_FTL FTL">
 				<TriggeredBy>Upgrade_RedeemerTibTrooperLeft</TriggeredBy>
 			</SubObjectsUpgrade>
+			<!--
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowTibTrooperLeftUpgrade"
+				StatusToSet="RIDERLESS">
+				<TriggeredBy>Upgrade_RedeemerTibTrooperLeft</TriggeredBy>
+			</StatusBitsUpgrade>
+			-->
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowTibTrooperRight"
 				ShowSubObjects="B_FTR FTR">
 				<TriggeredBy>Upgrade_RedeemerTibTrooperRight</TriggeredBy>
 			</SubObjectsUpgrade>
-
+			<!--
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowTibTrooperRightUpgrade"
+				StatusToSet="RIDER1">
+				<TriggeredBy>Upgrade_RedeemerTibTrooperRight</TriggeredBy>
+			</StatusBitsUpgrade>
+			-->
 			<SubObjectsUpgrade
 				id="27928C09"
 				RequiresAllTriggers="False"
