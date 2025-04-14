@@ -184,7 +184,7 @@
 						WeaponSlotID="14"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_HvyMGFlashL" />
-					<!-- PARTICLE BEAM MACHINE GUN -->
+					<!-- PARTICLE BEAM MACHINE GUN 
 					<WeaponFireFXBone
 						WeaponSlotID="17"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -200,7 +200,7 @@
 					<WeaponLaunchBone
 						WeaponSlotID="16"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_HvyMGFlashL" />
+						BoneName="FX_HvyMGFlashL" /> -->
 					<!-- FLAME THROWERS AND TIB TROOPER -->
 					<WeaponFireFXBone
 						WeaponSlotID="8"
@@ -314,18 +314,34 @@
 						TurretPitch=""
 						TurretArtPitch="0d"
 						TurretID="3" />
+					<!-- PURIFYING FLAME
 					<Turret
 						TurretNameKey="B_FTturretR2"
 						TurretArtAngle="0d"
-						TurretPitch=""
+						TurretPitch="B_FTturretR2"
 						TurretArtPitch="0d"
 						TurretID="5" />
 					<Turret
 						TurretNameKey="B_FTturretL2"
 						TurretArtAngle="0d"
-						TurretPitch=""
+						TurretPitch="B_FTturretR2"
 						TurretArtPitch="0d"
-						TurretID="4" />
+						TurretID="4" /> -->
+
+					<!-- PARTICLE BEAM MACHINE GUN
+					<Turret
+						TurretNameKey="B_HvyMGturretR"
+						TurretArtAngle="0d"
+						TurretPitch="B_HVYMGPITCHR"
+						TurretArtPitch="0d"
+						TurretID="16" />
+					<Turret
+						TurretNameKey="B_HvyMGturretL"
+						TurretArtAngle="0d"
+						TurretPitch="B_HVYMGPITCHL"
+						TurretArtPitch="0d"
+						TurretID="17" />  -->
+					<!-- -->
 					<Turret
 						TurretNameKey="B_HvyMGturretR"
 						TurretArtAngle="0d"
@@ -338,20 +354,6 @@
 						TurretPitch="B_HVYMGPITCHL"
 						TurretArtPitch="0d"
 						TurretID="14" />
-					<!-- PARTICLE BEAM MACHINE GUN -->
-					<Turret
-						TurretNameKey="B_HvyMGturretR"
-						TurretArtAngle="0d"
-						TurretPitch="B_HVYMGPITCHR"
-						TurretArtPitch="0d"
-						TurretID="16" />
-					<Turret
-						TurretNameKey="B_HvyMGturretL"
-						TurretArtAngle="0d"
-						TurretPitch="B_HVYMGPITCHL"
-						TurretArtPitch="0d"
-						TurretID="17" />
-					<!-- -->
 					<Turret
 						TurretNameKey="B_RocketPodturretR"
 						TurretArtAngle="0d"
@@ -661,7 +663,7 @@
 						PersistID="0"
 						FollowBone="True"
 						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" /> 
+						OnlyIfOnLand="False" />
 					<ParticleSysBone
 						BoneName="B_ShoulderL"
 						FXParticleSystemTemplate="RedeemerDamagedElectric"
@@ -1356,6 +1358,7 @@
 				</AnimationState>
 
 			</ScriptedModelDraw>
+			<!-- LEFT FLAMETHROWER-->
 			<ScriptedModelDraw
 				id="1EABA9C6"
 				RecoilDamping="0.4"
@@ -1467,6 +1470,7 @@
 						OnlyIfOnLand="False" />
 				</AnimationState>
 			</ScriptedModelDraw>
+			<!-- RIGHT FLAMETHROWER-->
 			<ScriptedModelDraw
 				id="74C70B88"
 				RecoilDamping="0.4"
@@ -1726,7 +1730,7 @@
 					b="0"
 					a="0" />
 				<ObjectStatusValidation
-					ForbiddenStatus=""
+					ForbiddenStatus="WEAPON_UPGRADED_02"
 					RequiredStatus="" />
 			</TracerModelDraw>
 			<TracerModelDraw
@@ -1759,7 +1763,7 @@
 					b="0"
 					a="0" />
 				<ObjectStatusValidation
-					ForbiddenStatus=""
+					ForbiddenStatus="WEAPON_UPGRADED_02"
 					RequiredStatus="" />
 			</TracerModelDraw>
 			<LaserDraw
@@ -2438,6 +2442,8 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 
+				<!-- instead of upgrade i can make status bits for each of the upgrades then use the object status to filter the normal attack and upgraded. -->
+				<!-- RIGHT TURRET-->
 				<WeaponSlotTurret
 					ID="15"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -2445,9 +2451,19 @@
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="NODWarmechMachinegun"
-						Upgrade="Upgrade_RedeemerHvyMachineGunRight"
+						Template="NODWarmechMachinegunFake"
 						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechMachinegun"
+						ObjectStatus="RIDER1"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechParticleBeam"
+						Upgrade=""
+						ObjectStatus="RIDER1 WEAPON_UPGRADED_02"
 						IsPlayerUpgradePermanent="False" />
 					<TurretSettings
 						TurretTurnRate="200"
@@ -2479,6 +2495,7 @@
 							CanPickTargetsOutOfTurretAngle="False" />
 					</TurretSettings>
 				</WeaponSlotTurret>
+				<!-- LEFT TURRET-->
 				<WeaponSlotTurret
 					ID="14"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -2486,52 +2503,19 @@
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechMachinegunFake"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechMachinegun"
-						Upgrade="Upgrade_RedeemerHvyMachineGunLeft"
-						ObjectStatus=""
+						ObjectStatus="RIDER2"
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="200"
-						MinimumPitch="-45d"
-						PitchHeight="90%"
-						ControlledWeaponSlots=""
-						MinIdleScanTime="1s"
-						MaxIdleScanTime="3s"
-						MinIdleScanAngle="10"
-						MaxIdleScanAngle="35"
-						MaxDeflectionClockwise="180d"
-						MaxDeflectionAntiClockwise="180d"
-						NaturalTurretAngle="0d"
-						AllowsPitch="True"
-						RecenterWhenOutOfTurnRange="True">
-						<TurretAITargetChooserData
-							IdleScanDelay="0.8s"
-							ReacquireDelay="5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="False"
-							CanAcquireDynamicIfAssignedOutOfRange="True"
-							CanPickTargetsOutOfTurretAngle="False" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-
-				<!-- R23 BH particle beams added -->
-				<WeaponSlotTurret
-					ID="17"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechParticleBeam"
-						Upgrade="Upgrade_RedeemerHvyMachineGunRight"
-						ObjectStatus=""
+						Upgrade=""
+						ObjectStatus="RIDER2 WEAPON_UPGRADED_02"
 						IsPlayerUpgradePermanent="False" />
 					<TurretSettings
 						TurretTurnRate="200"
@@ -2563,49 +2547,6 @@
 							CanPickTargetsOutOfTurretAngle="False" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				<WeaponSlotTurret
-					ID="16"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="NODWarmechParticleBeam"
-						Upgrade="Upgrade_RedeemerHvyMachineGunLeft"
-						ObjectStatus=""
-						IsPlayerUpgradePermanent="False" />
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="200"
-						MinimumPitch="-45d"
-						PitchHeight="90%"
-						ControlledWeaponSlots=""
-						MinIdleScanTime="1s"
-						MaxIdleScanTime="3s"
-						MinIdleScanAngle="10"
-						MaxIdleScanAngle="35"
-						MaxDeflectionClockwise="180d"
-						MaxDeflectionAntiClockwise="180d"
-						NaturalTurretAngle="0d"
-						AllowsPitch="True"
-						RecenterWhenOutOfTurnRange="True">
-						<TurretAITargetChooserData
-							IdleScanDelay="0.8s"
-							ReacquireDelay="5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="False"
-							CanAcquireDynamicIfAssignedOutOfRange="True"
-							CanPickTargetsOutOfTurretAngle="False" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-
-				<!--  -->
 				<WeaponSlotTurret
 					ID="6"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -3017,17 +2958,10 @@
 				<TriggeredBy>Upgrade_RedeemerHvyMachineGunRight</TriggeredBy>
 			</SubObjectsUpgrade>
 			<StatusBitsUpgrade
-				id="E3D721CD"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet=""
-				StatusToClear=""
-				ApplyToContained="False">
+				id="ModuleTag_ShowHvyMachineGunRightUpgrade"
+				StatusToSet="RIDER1">
 				<TriggeredBy>Upgrade_RedeemerHvyMachineGunRight</TriggeredBy>
-			</StatusBitsUpgrade>
+			</StatusBitsUpgrade>		
 			<SubObjectsUpgrade
 				id="D7D36B9F"
 				RequiresAllTriggers="False"
@@ -3045,15 +2979,8 @@
 				<TriggeredBy>Upgrade_RedeemerHvyMachineGunLeft</TriggeredBy>
 			</SubObjectsUpgrade>
 			<StatusBitsUpgrade
-				id="48DC6084"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet=""
-				StatusToClear=""
-				ApplyToContained="False">
+				id="ModuleTag_ShowHvyMachineGunLeftUpgrade"
+				StatusToSet="RIDER2">
 				<TriggeredBy>Upgrade_RedeemerHvyMachineGunLeft</TriggeredBy>
 			</StatusBitsUpgrade>
 			<SubObjectsUpgrade
@@ -3651,7 +3578,8 @@
 				SoundToPlay="Multisound:NOD_PurifyingFlame_UpgradeMS">
 				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
 			</AudioLoopUpgrade>
-			<AudioLoopUpgrade id="ChargedParticleBeamUpgrade" SoundToPlay="AudioEvent:NOD_Awakened_ChargedParticleBeamGunAvailable">
+			<AudioLoopUpgrade id="ChargedParticleBeamUpgrade"
+				SoundToPlay="AudioEvent:NOD_Awakened_ChargedParticleBeamGunAvailable">
 				<TriggeredBy>Upgrade_NodTechCenterChargedParticleBeam</TriggeredBy>
 			</AudioLoopUpgrade>
 		</Behaviors>
