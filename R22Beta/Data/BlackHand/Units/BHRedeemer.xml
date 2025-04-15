@@ -1619,7 +1619,7 @@
 					b="0"
 					a="0" />
 				<ObjectStatusValidation
-					ForbiddenStatus="WEAPON_UPGRADED_02"
+					ForbiddenStatus="WEAPON_UPGRADED_02 RIDER_IS_PILOT"
 					RequiredStatus="" />
 			</TracerModelDraw>
 			<TracerModelDraw
@@ -1652,7 +1652,7 @@
 					b="0"
 					a="0" />
 				<ObjectStatusValidation
-					ForbiddenStatus="WEAPON_UPGRADED_02"
+					ForbiddenStatus="WEAPON_UPGRADED_02 RIDER_IS_PILOT"
 					RequiredStatus="" />
 			</TracerModelDraw>
 			<LaserDraw
@@ -2321,13 +2321,24 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechMachinegun"
-						ObjectStatus="RIDER_IS_PILOT"
+						ObjectStatus="RIDER1"
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechParticleBeam"
-						Upgrade=""
-						ObjectStatus="RIDER_IS_PILOT WEAPON_UPGRADED_02"
+						ObjectStatus="RIDER1 WEAPON_UPGRADED_02"
+						IsPlayerUpgradePermanent="False" />
+					<!-- mok super charged particle beams-->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechSuperParticleBeam"
+						ObjectStatus="RIDER1 RIDER_IS_PILOT"
+						IsPlayerUpgradePermanent="False" />
+					<!-- particle beams and super charged particle beams -->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechSuperParticleBeam"
+						ObjectStatus="RIDER1 WEAPON_UPGRADED_02 RIDER_IS_PILOT"
 						IsPlayerUpgradePermanent="False" />
 					<TurretSettings
 						TurretTurnRate="200"
@@ -2380,6 +2391,18 @@
 						Template="NODWarmechParticleBeam"
 						Upgrade=""
 						ObjectStatus="RIDER2 WEAPON_UPGRADED_02"
+						IsPlayerUpgradePermanent="False" />
+					<!-- mok super charged particle beams-->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechSuperParticleBeam"
+						ObjectStatus="RIDER2 RIDER_IS_PILOT"
+						IsPlayerUpgradePermanent="False" />
+					<!-- particle beams and super charged particle beams -->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechSuperParticleBeam"
+						ObjectStatus="RIDER2 WEAPON_UPGRADED_02 RIDER_IS_PILOT"
 						IsPlayerUpgradePermanent="False" />
 					<TurretSettings
 						TurretTurnRate="200"
@@ -2493,90 +2516,6 @@
 							CanPickTargetsOutOfTurretAngle="False" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				<!--
-				<WeaponSlotTurret
-					ID="8"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="NODWarmechTibWeaponRight"
-						Upgrade="Upgrade_RedeemerTibTrooperRight"
-						ObjectStatus=""
-						IsPlayerUpgradePermanent="False" />
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="200"
-						MinimumPitch="-15d"
-						PitchHeight="90%"
-						ControlledWeaponSlots=""
-						MinIdleScanTime="1s"
-						MaxIdleScanTime="3s"
-						MinIdleScanAngle="10"
-						MaxIdleScanAngle="35"
-						MaxDeflectionClockwise="180d"
-						MaxDeflectionAntiClockwise="180d"
-						NaturalTurretAngle="0d"
-						AllowsPitch="True"
-						RecenterWhenOutOfTurnRange="True">
-						<TurretAITargetChooserData
-							IdleScanDelay="0.8s"
-							ReacquireDelay="5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="False"
-							CanAcquireDynamicIfAssignedOutOfRange="True"
-							CanPickTargetsOutOfTurretAngle="False" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret
-					ID="9"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="NODWarmechTibWeaponLeft"
-						Upgrade="Upgrade_RedeemerTibTrooperLeft"
-						ObjectStatus=""
-						IsPlayerUpgradePermanent="False" />
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="200"
-						MinimumPitch="-15d"
-						PitchHeight="90%"
-						ControlledWeaponSlots=""
-						MinIdleScanTime="1s"
-						MaxIdleScanTime="3s"
-						MinIdleScanAngle="10"
-						MaxIdleScanAngle="35"
-						MaxDeflectionClockwise="180d"
-						MaxDeflectionAntiClockwise="180d"
-						NaturalTurretAngle="0d"
-						AllowsPitch="True"
-						RecenterWhenOutOfTurnRange="True">
-						<TurretAITargetChooserData
-							IdleScanDelay="0.8s"
-							ReacquireDelay="5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="False"
-							CanAcquireDynamicIfAssignedOutOfRange="True"
-							CanPickTargetsOutOfTurretAngle="False" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				-->
 			</WeaponSetUpdate>
 			<SlaughterHordeContain
 				id="9DC593B0"
@@ -2825,7 +2764,7 @@
 			</SubObjectsUpgrade>
 			<StatusBitsUpgrade
 				id="ModuleTag_ShowHvyMachineGunRightUpgrade"
-				StatusToSet="RIDER_IS_PILOT">
+				StatusToSet="RIDER1">
 				<TriggeredBy>Upgrade_RedeemerHvyMachineGunRight</TriggeredBy>
 			</StatusBitsUpgrade>
 			<SubObjectsUpgrade
@@ -2878,25 +2817,13 @@
 				ShowSubObjects="B_FTL FTL">
 				<TriggeredBy>Upgrade_RedeemerTibTrooperLeft</TriggeredBy>
 			</SubObjectsUpgrade>
-			<!--
-			<StatusBitsUpgrade
-				id="ModuleTag_ShowTibTrooperLeftUpgrade"
-				StatusToSet="RIDERLESS">
-				<TriggeredBy>Upgrade_RedeemerTibTrooperLeft</TriggeredBy>
-			</StatusBitsUpgrade>
-			-->
+
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowTibTrooperRight"
 				ShowSubObjects="B_FTR FTR">
 				<TriggeredBy>Upgrade_RedeemerTibTrooperRight</TriggeredBy>
 			</SubObjectsUpgrade>
-			<!--
-			<StatusBitsUpgrade
-				id="ModuleTag_ShowTibTrooperRightUpgrade"
-				StatusToSet="RIDER1">
-				<TriggeredBy>Upgrade_RedeemerTibTrooperRight</TriggeredBy>
-			</StatusBitsUpgrade>
-			-->
+
 			<SubObjectsUpgrade
 				id="27928C09"
 				RequiresAllTriggers="False"
@@ -2968,11 +2895,18 @@
 				StatusToSet="WEAPON_UPGRADED_01">
 				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
 			</StatusBitsUpgrade>
-			<!-- R23 Black Hand & MoK particle beams -->
+			<!-- R23 Black Hand particle beams -->
 			<StatusBitsUpgrade
 				id="ModuleTag_UpgradeParticleWeapon"
 				StatusToSet="WEAPON_UPGRADED_02">
 				<TriggeredBy>Upgrade_NodTechCenterChargedParticleBeam</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<!-- R23 Marked of Kane particle beams -->
+			<StatusBitsUpgrade
+				id="ModuleTag_UpgradeParticleWeaponMoK"
+				StatusToSet="RIDER_IS_PILOT">
+				<TriggeredBy>Upgrade_MarkedOfKaneTechCenterSuperChargedParticleBeam</TriggeredBy>
 			</StatusBitsUpgrade>
 
 			<ModelConditionUpgrade
