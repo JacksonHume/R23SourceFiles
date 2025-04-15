@@ -45,6 +45,28 @@
 		</ScatterRadiusVsType>
 	</WeaponTemplate>
 
+	<WeaponTemplate
+		id="NODWarmechRocketWarhead"
+		Name="NODWarmechRocketWarhead"
+		ProjectileCollidesWith="ENEMIES"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+				Damage="405.0"
+				Radius="10.0"
+				DamageTaperOff="0"
+				DamageType="ROCKET"
+				DamageFXType="NOD_MISSILE"
+				DeathType="EXPLODED">
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="75"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
 	<!-- tiberium trooper redeemer more range -->
 
 	<WeaponTemplate id="NODWarmechTibWeaponRight"

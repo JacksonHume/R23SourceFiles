@@ -5288,33 +5288,6 @@
 	<!-- shock trooper unupgraded weapon buff -->
 
 	<WeaponTemplate
-		id="NODWarmechRocketWarhead"
-		Name="NODWarmechRocketWarhead"
-		ProjectileCollidesWith="ENEMIES"
-		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
-		<Nuggets>
-			<DamageNugget
-				Damage="300.0"
-				Radius="10.0"
-				DamageTaperOff="0"
-				DamageType="ROCKET"
-				DamageFXType="NOD_MISSILE"
-				DeathType="EXPLODED">
-				<DamageScalarDetails Scalar="135%">
-					<Filter
-						Rule="NONE"
-						Include="AIRCRAFT" />
-				</DamageScalarDetails>
-			</DamageNugget>
-			<SuppressionNugget
-				Radius="10.0"
-				Suppression="75"
-				DurationSeconds="5s" />
-		</Nuggets>
-	</WeaponTemplate>
-
-	<WeaponTemplate
 		id="DeployGreenTiberium"
 		Name="DeployGreenTiberium"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
