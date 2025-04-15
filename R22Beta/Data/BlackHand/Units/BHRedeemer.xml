@@ -4,7 +4,7 @@
 		id="BlackHandMetaUnit"
 		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS PRELOAD SCORE ATTACK_NEEDS_LINE_OF_SIGHT GARRISONABLE_UNTIL_DESTROYED VEHICLE CAN_SHOOT_OVER_WALLS UNIQUE_UNIT CAN_BE_FAVORITE_UNIT METAUNIT USE_STRICT_PATHING"
 		Description="Desc:BlackHandMetaUnit"
-		WorldMapArmoryUpgradesAllowed="Upgrade_BlackHandSecretShrinePurifyingFlame Upgrade_NodTechCenterChargedParticleBeam"
+		WorldMapArmoryUpgradesAllowed="Upgrade_BlackHandSecretShrinePurifyingFlame Upgrade_NodTechCenterChargedParticleBeam Upgrade_MarkedOfKaneTechCenterSuperChargedParticleBeam"
 		TypeDescription="Type:NODMetaUnit"
 		RadarPriority="UNIT"
 		BuildCompletion="INVALID"
@@ -276,13 +276,13 @@
 					<Turret
 						TurretNameKey="B_RocketPodturretR"
 						TurretArtAngle="0d"
-						TurretPitch=""
+						TurretPitch="B_ROCKETPODTURRETRPITCH"
 						TurretArtPitch="0d"
 						TurretID="6" />
 					<Turret
 						TurretNameKey="B_RocketPodturretL"
 						TurretArtAngle="0d"
-						TurretPitch=""
+						TurretPitch="B_ROCKETPODTURRETLPITCH"
 						TurretArtPitch="0d"
 						TurretID="7" />
 				</ModelConditionState>
@@ -2343,7 +2343,7 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-25d"
+						MinimumPitch="-15d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
@@ -2407,7 +2407,7 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-25d"
+						MinimumPitch="-15d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
@@ -2448,7 +2448,7 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-25d"
+						MinimumPitch="-15d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
@@ -2489,7 +2489,7 @@
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="200"
-						MinimumPitch="-25d"
+						MinimumPitch="-15d"
 						PitchHeight="90%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
@@ -3407,6 +3407,11 @@
 			<AudioLoopUpgrade id="ChargedParticleBeamUpgrade"
 				SoundToPlay="AudioEvent:NOD_Awakened_ChargedParticleBeamGunAvailable">
 				<TriggeredBy>Upgrade_NodTechCenterChargedParticleBeam</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AudioLoopUpgrade 
+				id="SuperChargedParticleBeamUpgrade" 
+				SoundToPlay="AudioEvent:NOD_Enlightened_SuperChargedParticleBeamUpgrade">
+				<TriggeredBy>Upgrade_MarkedOfKaneTechCenterSuperChargedParticleBeam</TriggeredBy>
 			</AudioLoopUpgrade>
 		</Behaviors>
 		<AI>

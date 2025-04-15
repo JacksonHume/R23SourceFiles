@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
-		<!-- tiberium trooper redeemer more range -->
+	<WeaponTemplate
+		id="NODWarmechRocket"
+		Name="NODWarmechRocket"
+		AttackRange="300.0"
+		WeaponSpeed="200"
+		MinWeaponSpeed="300"
+		MaxWeaponSpeed="310"
+		AcceptableAimDelta="60d"
+		ForbiddenFiringObjectStatus=""
+		PreAttackType="PER_SHOT"
+		FireFX="FX_NODRedeemerUpgradeRocketLauncherFire"
+		FireVeteranFX="FX_NODRedeemerUpgradeRocketLauncherFire"
+		ClipSize="3"
+		RotatingTurret="true"
+		AutoReloadsClip="AUTO"
+		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		CanFireWhileMoving="true"
+	>
+		<PreAttackDelay
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="4s"
+			MaxSeconds="4s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="NODWarmechRocketWarhead"
+				ProjectileTemplate="NODStealthTankRocketProjectile">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="NODStealthTankRocketProjectile_Veteran" />
+			</ProjectileNugget>
+		</Nuggets>
+		<ScatterRadiusVsType
+			Radius="30.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
 
-		<WeaponTemplate id="NODWarmechTibWeaponRight"
+	<!-- tiberium trooper redeemer more range -->
+
+	<WeaponTemplate id="NODWarmechTibWeaponRight"
 		Name="NODWarmechTibWeaponRight"
 		AttackRange="300.0"
 		WeaponSpeed="999999.0"
@@ -349,10 +393,15 @@
 				LaserId="4"
 				HitGroundFX="FX_ChargedParticleBeamHit" />
 			<DamageNugget
-				Damage="92"
+				Damage="80.0"
 				Radius="0.0"
 				DamageType="GUN" DamageFXType="NOD_PARTICLEBM"
 				DeathType="LASERED">
+				<DamageScalarDetails Scalar="125%">
+					<Filter
+						Rule="NONE"
+						Include="VEHICLE" />
+				</DamageScalarDetails>
 			</DamageNugget>
 			<SuppressionNugget
 				Radius="10.0"
@@ -425,7 +474,7 @@
 				DamageType="GUN"
 				DeathType="NORMAL" />
 		</Nuggets>
-	</WeaponTemplate> 
+	</WeaponTemplate>
 
 	<!-- Nod Mobile Stealth Artillery -->
 

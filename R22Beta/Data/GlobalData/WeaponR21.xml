@@ -5288,48 +5288,6 @@
 	<!-- shock trooper unupgraded weapon buff -->
 
 	<WeaponTemplate
-		id="NODWarmechRocket"
-		Name="NODWarmechRocket"
-		AttackRange="300.0"
-		WeaponSpeed="200"
-		MinWeaponSpeed="300"
-		MaxWeaponSpeed="310"
-		AcceptableAimDelta="60d"
-		ForbiddenFiringObjectStatus=""
-		PreAttackType="PER_SHOT"
-		FireFX="FX_NODRedeemerUpgradeRocketLauncherFire"
-		FireVeteranFX="FX_NODRedeemerUpgradeRocketLauncherFire"
-		ClipSize="3"
-		AutoReloadsClip="AUTO"
-		AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
-		CanFireWhileMoving="true"
-	>
-		<PreAttackDelay
-			MinSeconds="0.1s"
-			MaxSeconds="0.1s" />
-		<FiringDuration
-			MinSeconds="0.2s"
-			MaxSeconds="0.2s" />
-		<ClipReloadTime
-			MinSeconds="4s"
-			MaxSeconds="4s" />
-		<Nuggets>
-			<ProjectileNugget
-				WarheadTemplate="NODWarmechRocketWarhead"
-				ProjectileTemplate="NODStealthTankRocketProjectile">
-				<VeterancyProjectiles
-					VeterancyLevel="HEROIC"
-					ProjectileTemplate="NODStealthTankRocketProjectile_Veteran" />
-			</ProjectileNugget>
-		</Nuggets>
-		<ScatterRadiusVsType
-			Radius="30.0">
-			<Filter
-				Rule="NONE"
-				Include="INFANTRY" />
-		</ScatterRadiusVsType>
-	</WeaponTemplate>
-	<WeaponTemplate
 		id="NODWarmechRocketWarhead"
 		Name="NODWarmechRocketWarhead"
 		ProjectileCollidesWith="ENEMIES"

@@ -141,7 +141,7 @@
 				<Mesh>NUREDEEMER_SKN2.HVYMGL</Mesh>
 			</RenderObject>
 		</SubObject>
-		<SubObject SubObjectID="ROCKETPODL" BoneIndex="66">
+		<SubObject SubObjectID="ROCKETPODL" BoneIndex="101">
 			<RenderObject>
 				<Mesh>NUREDEEMER_SKN.ROCKETPODL</Mesh>
 			</RenderObject>
@@ -176,7 +176,7 @@
 				<Mesh>NUREDEEMER_SKN.MODULER</Mesh>
 			</RenderObject>
 		</SubObject>
-		<SubObject SubObjectID="ROCKETPODR" BoneIndex="56">
+		<SubObject SubObjectID="ROCKETPODR" BoneIndex="102">
 			<RenderObject>
 				<Mesh>NUREDEEMER_SKN.ROCKETPODR</Mesh>
 			</RenderObject>
