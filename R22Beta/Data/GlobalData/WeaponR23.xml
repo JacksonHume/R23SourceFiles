@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- AP AMMO -->
+	<WeaponTemplate
+		id="MARVRifleWeaponAPAmmo"
+		Name="MARVRifleWeaponAPAmmo"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_GDIHammerheadChaingunAP"
+		FireVeteranFX="FX_GDIHammerheadChaingunAPHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ReAcquireDetailType="PER_SHOT"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		ClipSize="999999"
+		RotatingTurret="true">
+		<!--	<FiringDuration
+			MinSeconds="1s"
+			MaxSeconds="1s" />  -->
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s" />
+		<Nuggets>
+			<!-- damage reduced from 20 to 10 -->
+			<DamageNugget
+				Damage="14.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="GDI_MACHINEGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="1.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="MARVRifleWeapon"
+		Name="MARVRifleWeapon"
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_GDIHammerheadChaingunAP"
+		FireVeteranFX="FX_GDIHammerheadChaingunAPHeroic"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ReAcquireDetailType="PER_SHOT"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		ClipSize="999999"
+		RotatingTurret="true">
+		<!--	<FiringDuration
+			MinSeconds="1s"
+			MaxSeconds="1s" />  -->
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s" />
+		<Nuggets>
+			<!-- damage reduced from 20 to 10 -->
+			<DamageNugget
+				Damage="10.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DamageFXType="GDI_MACHINEGUN"
+				DeathType="NORMAL" />
+			<SuppressionNugget
+				Radius="1.0"
+				Suppression="25"
+				DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
 
 	<WeaponTemplate
 		id="NODWarmechRocket"

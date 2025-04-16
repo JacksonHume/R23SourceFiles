@@ -21,6 +21,7 @@
 		VoicePriority="246"
 		EditorName="GDIMARV"
 		Description="Desc:GDIMARV"
+		WorldMapArmoryUpgradesAllowed="Upgrade_GDIAPAmmo"
 		TypeDescription="Type:GDIMARV"
 		MaxSimultaneousOfType="1"
 		ShockwaveResistance="100"
@@ -43,24 +44,24 @@
 		<SkirmishAIInformation
 			UnitBuilderStandardCombatUnit="true" />
 		<Draws>
-			<TankDraw 
-				id="ModuleTag_Draw" 
-				OkToChangeModelColor="true" 
-				InitialRecoilSpeed="16.0" 
-				MaxRecoilDistance="10.0" 
-				RecoilDamping="2.0" 
-				RecoilSettleSpeed="3.0" 
-				TreadAnimationRate="2.0" 
-				TreadDriveSpeedFraction="0.25" 
-				TreadPivotSpeedFraction="0.9" 
-				TrackMarks="EXMARVTracks" 
-				TrackMarksLeftBone="FXTracksLR" 
-				TrackMarksRightBone="FXTracksRR" 
-				ExtraPublicBone="FXTracksLR FXTracksRR FXTracksLF FXTracksRF MuzzleFx01 MuzzleFlash_01"> 
-				<ModelConditionState 	
-					ParseCondStateType="PARSE_DEFAULT" 	
-					RetainSubObjects="true"> 	
-					<Model 		
+			<TankDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				InitialRecoilSpeed="16.0"
+				MaxRecoilDistance="10.0"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="3.0"
+				TreadAnimationRate="2.0"
+				TreadDriveSpeedFraction="0.25"
+				TreadPivotSpeedFraction="0.9"
+				TrackMarks="EXMARVTracks"
+				TrackMarksLeftBone="FXTracksLR"
+				TrackMarksRightBone="FXTracksRR"
+				ExtraPublicBone="FXTracksLR FXTracksRR FXTracksLF FXTracksRF MuzzleFx01 MuzzleFlash_01 MUZZLEFLASHLF_01 MUZZLEFLASHLF_02 FXWEAPONRM_LF_01 FXWEAPONRM_LF_02 MUZZLEFLASHRF_01 MUZZLEFLASHRF_02 FXWEAPONRM_RF_01 FXWEAPONRM_RF_02 MUZZLEFLASHLR_01 MUZZLEFLASHLR_02 FXWEAPONLR_RF_01 FXWEAPONLR_RF_02 MUZZLEFLASHRR_01 MUZZLEFLASHRR_02 FXWEAPONRR_RF_01 FXWEAPONRR_RF_02">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="true">
+					<Model
 						Name="W3DContainer:GUMARV_SKN2" /> 	<!--
 					<WeaponFireFXBone 		
 						WeaponSlotID="1" 		
@@ -74,391 +75,507 @@
 						WeaponSlotID="1" 		
 						WeaponSlotType="PRIMARY_WEAPON" 		
 						BoneName="MuzzleFlash_" /> 		-->
-					<WeaponLaunchBone 		
-						WeaponSlotID="1" 		
-						WeaponSlotType="PRIMARY_WEAPON" 		
-						BoneName="MuzzleFx01" /> 
-					<Turret 		
-						TurretNameKey="B_Turret01" 		
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFx01" />
+					<Turret
+						TurretNameKey="B_Turret01"
 						TurretID="1" />
-			<!-- ZONETROOPERS -->
-				 	<WeaponFireFXBone		WeaponSlotID="2"		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_LF" />
-				 	<WeaponLaunchBone 		WeaponSlotID="2" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_LF" /> 
-				 	<Turret	 		TurretNameKey="B_ZT_Turret_TreadLF" 		TurretID="2" />
-				 	<WeaponFireFXBone		WeaponSlotID="3" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_RF" /> 	
-				 	<WeaponLaunchBone 		WeaponSlotID="3" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_RF" /> 
-				 	<Turret	 		TurretNameKey="B_ZT_Turret_TreadRF" 		TurretID="3" />	 		 	
-				 	<WeaponFireFXBone 	 	WeaponSlotID="4" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_LR" /> 
-				 	<WeaponLaunchBone		WeaponSlotID="4" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_LR" /> 	
-				 	<Turret			TurretNameKey="B_ZT_Turret_TreadLR" 		TurretID="4" />
-				 	<WeaponFireFXBone		WeaponSlotID="5" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_RR" /> 	
-				 	<WeaponLaunchBone		WeaponSlotID="5" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_RR" /> 	
-				 	<Turret			TurretNameKey="B_ZT_Turret_TreadRR" 		TurretID="5" />				
-			<!-- RIFLES --> 
-					<WeaponFireFXBone 		WeaponSlotID="6" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_LF_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="6" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_LF_" /> 	
-					<WeaponRecoilBone 		WeaponSlotID="6"		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_LF_" />						 	
-					<Turret 		TurretNameKey="B_RM_Turret_TreadLF" 		TurretID="6" />							 		 	
-					<WeaponFireFXBone 		WeaponSlotID="7" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_RF_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="7" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_RF_" /> 	
-					<WeaponRecoilBone 		WeaponSlotID="7" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_RF_" />						 	
-					<Turret 		TurretNameKey="B_RM_Turret_TreadRF" 		TurretID="7" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="8" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_LR_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="8" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_LR_" /> 	
-					<WeaponRecoilBone 		WeaponSlotID="8" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_LR_" />						 	
-					<Turret 		TurretNameKey="B_RM_Turret_TreadLR" 		TurretID="8" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="9" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_RR_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="9" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_RR_" /> 	
-					<WeaponRecoilBone 		WeaponSlotID="9" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponRM_RR_" />						 	
-					<Turret 		TurretNameKey="B_RM_Turret_TreadRR" 		TurretID="9" />
-<!-- MISSILES --> 	
-					<WeaponFireFXBone 		WeaponSlotID="10" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponMS_LF_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="10" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponMS_LF_" /> 
-					<Turret 		TurretNameKey="B_MS_Turret_TreadLF" 		TurretID="10" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="11" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponMS_RF_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="11" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponMS_RF_" /> 	
-					<Turret 		TurretNameKey="B_MS_Turret_TreadRF" 		TurretID="11" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="12" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponMS_LR_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="12" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponMS_LR_" /> 	
-					<Turret 		TurretNameKey="B_MS_Turret_TreadLR" 		TurretID="12" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="13" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponMS_RR_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="13" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponMS_RR_" /> 	
-					<Turret 		TurretNameKey="B_MS_Turret_TreadRR" 		TurretID="13" />				
-<!-- ENGINEERS -->
-				 	<WeaponFireFXBone 		WeaponSlotID="14" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponEN_LF" /> 	
-				 	<WeaponLaunchBone 		WeaponSlotID="14" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponEN_LF" /> 	
-				 	<Turret 		TurretNameKey="B_EN_Turret_TreadLF" 		TurretID="14" />	 		 	
-				 	<WeaponFireFXBone 		WeaponSlotID="15" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponEN_RF" /> 	
-				 	<WeaponLaunchBone 		WeaponSlotID="15" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponEN_RF" /> 	
-				 	<Turret 		TurretNameKey="B_EN_Turret_TreadRF" 		TurretID="15" />	 		 	
-				 	<WeaponFireFXBone 		WeaponSlotID="16" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponEN_LR" /> 	
-				 	<WeaponLaunchBone 		WeaponSlotID="16" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponEN_LR" /> 	
-				 	<Turret 		TurretNameKey="B_EN_Turret_TreadLR" 		TurretID="16" />	 		 	
-				 	<WeaponFireFXBone 		WeaponSlotID="17" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponEN_RR" /> 	
-				 	<WeaponLaunchBone 		WeaponSlotID="17" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponEN_RR" /> 	
-				 	<Turret 		TurretNameKey="B_EN_Turret_TreadRR" 		TurretID="17" />
-<!-- GRENADES -->	
-				 	<WeaponFireFXBone 		WeaponSlotID="18" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_LF_" /> 	
-				 	<WeaponLaunchBone 		WeaponSlotID="18" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_LF_" /> 	
-				 	<Turret 		TurretNameKey="B_GN_Turret_TreadLF" 		TurretID="18" />	 		 	
-				 	<WeaponFireFXBone 		WeaponSlotID="19" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_RF_" /> 
-				 	<WeaponLaunchBone 		WeaponSlotID="19" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_RF_" /> 	
-				 	<Turret 		TurretNameKey="B_GN_Turret_TreadRF" 		TurretID="19" />	 		 	
-				 	<WeaponFireFXBone 		WeaponSlotID="20" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_LR_" /> 	
-				 	<WeaponLaunchBone 		WeaponSlotID="20" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_LR_" /> 	
-				 	<Turret 		TurretNameKey="B_GN_Turret_TreadLR" 		TurretID="20" />	 		 	
-				 	<WeaponFireFXBone 		WeaponSlotID="21" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_RR_" /> 
-				 	<WeaponLaunchBone 		WeaponSlotID="21" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_RR_" /> 	
-				 	<Turret 		TurretNameKey="B_GN_Turret_TreadRR" 		TurretID="21" />
-<!-- SNIPERS -->
-					<WeaponFireFXBone 		WeaponSlotID="22" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponST_LF" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="22" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponST_LF" /> 	
-					<Turret 		TurretNameKey="B_ST_Turret_TreadLF" 		TurretID="22" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="23" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponST_RF" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="23" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponST_RF" /> 	
-					<Turret 		TurretNameKey="B_ST_Turret_TreadRF" 		TurretID="23" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="24" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponST_LR" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="24" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponST_LR" /> 	
-					<Turret 		TurretNameKey="B_ST_Turret_TreadLR" 		TurretID="24" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="25" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponST_RR" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="25" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponST_RR" /> 	
-					<Turret 		TurretNameKey="B_ST_Turret_TreadRR" 		TurretID="25" />
-<!-- ZONE RAIDERS --> 	
-					<WeaponFireFXBone 		WeaponSlotID="26" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_LF_" /> 
-					<WeaponLaunchBone 		WeaponSlotID="26" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_LF_" /> 	
-					<Turret 		TurretNameKey="B_GN_Turret_TreadLF" 		TurretID="26" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="27" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_RF_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="27" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_RF_" /> 	
-					<Turret 		TurretNameKey="B_GN_Turret_TreadRF" 		TurretID="27" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="28" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_LR_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="28" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_LR_" /> 
-					<Turret 		TurretNameKey="B_GN_Turret_TreadLR" 		TurretID="28" />	 		 	
-					<WeaponFireFXBone 		WeaponSlotID="29" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_RR_" /> 	
-					<WeaponLaunchBone 		WeaponSlotID="29" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponGN_RR_" /> 	
-					<Turret 		TurretNameKey="B_GN_Turret_TreadRR" 		TurretID="29" />
-<!-- ZONETROOPERS ACCELERATED -->
-				 	<WeaponFireFXBone		WeaponSlotID="30"		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_LF" />
-				 	<WeaponLaunchBone 		WeaponSlotID="30" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_LF" /> 
-				 	<Turret	 		TurretNameKey="B_ZT_Turret_TreadLF" 		TurretID="30" />
-				 	<WeaponFireFXBone		WeaponSlotID="31" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_RF" /> 	
-				 	<WeaponLaunchBone 		WeaponSlotID="31" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_RF" /> 
-				 	<Turret	 		TurretNameKey="B_ZT_Turret_TreadRF" 		TurretID="31" />	 		 	
-				 	<WeaponFireFXBone 	 	WeaponSlotID="32" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_LR" /> 
-				 	<WeaponLaunchBone		WeaponSlotID="32" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_LR" /> 	
-				 	<Turret			TurretNameKey="B_ZT_Turret_TreadLR" 		TurretID="32" />
-				 	<WeaponFireFXBone		WeaponSlotID="33" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_RR" /> 	
-				 	<WeaponLaunchBone		WeaponSlotID="33" 		WeaponSlotType="PRIMARY_WEAPON" 		BoneName="FXWeaponZT_RR" /> 	
-				 	<Turret			TurretNameKey="B_ZT_Turret_TreadRR" 		TurretID="33" />		
+					<!-- ZONETROOPERS -->
+					<WeaponFireFXBone WeaponSlotID="2" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_LF" />
+					<WeaponLaunchBone WeaponSlotID="2" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_LF" />
+					<Turret TurretNameKey="B_ZT_Turret_TreadLF" TurretID="2" />
+					<WeaponFireFXBone WeaponSlotID="3" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RF" />
+					<WeaponLaunchBone WeaponSlotID="3" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RF" />
+					<Turret TurretNameKey="B_ZT_Turret_TreadRF" TurretID="3" />
+					<WeaponFireFXBone WeaponSlotID="4" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_LR" />
+					<WeaponLaunchBone WeaponSlotID="4" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_LR" />
+					<Turret TurretNameKey="B_ZT_Turret_TreadLR" TurretID="4" />
+					<WeaponFireFXBone WeaponSlotID="5" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RR" />
+					<WeaponLaunchBone WeaponSlotID="5" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RR" />
+					<Turret TurretNameKey="B_ZT_Turret_TreadRR" TurretID="5" />
+					<!-- RIFLES -->
+					<!-- LEFT TURRET-->
+					<WeaponFireFXBone WeaponSlotID="6" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWEAPONRMLF_01" />
+					<WeaponMuzzleFlash WeaponSlotID="6" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWEAPONRMLF_01" />
+					<WeaponLaunchBone WeaponSlotID="6" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWEAPONRMLF_01" />
+					<Turret TurretNameKey="B_RM_Turret_TreadLF" TurretID="6" />
+					<!-- RIGHT TURRET -->
+					<WeaponFireFXBone WeaponSlotID="34" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWEAPONRMLF_02" />
+					<WeaponMuzzleFlash WeaponSlotID="34" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWEAPONRMLF_02" />
+					<WeaponLaunchBone WeaponSlotID="34" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWEAPONRMLF_02" />
+					<Turret TurretNameKey="" TurretID="34" />
+					<!-- LEFT TURRET-->
+					<WeaponFireFXBone WeaponSlotID="7" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RF_01" />
+					<WeaponMuzzleFlash WeaponSlotID="7" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RF_01" />
+					<WeaponLaunchBone WeaponSlotID="7" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RF_01" />
+					<Turret TurretNameKey="B_RM_Turret_TreadRF" TurretID="7" />
+					<!-- RIGHT TURRET -->
+					<WeaponFireFXBone WeaponSlotID="35" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RF_02" />
+					<WeaponMuzzleFlash WeaponSlotID="35" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RF_02" />
+					<WeaponLaunchBone WeaponSlotID="35" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RF_02" />
+					<Turret TurretNameKey="" TurretID="35" />
+					<!-- LEFT TURRET-->
+					<WeaponFireFXBone WeaponSlotID="8" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_LR_01" />
+					<WeaponMuzzleFlash WeaponSlotID="8" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_LR_01" />
+					<WeaponLaunchBone WeaponSlotID="8" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_LR_01" />
+					<Turret TurretNameKey="B_RM_Turret_TreadLR" TurretID="8" />
+					<!-- RIGHT TURRET -->
+					<WeaponFireFXBone WeaponSlotID="36" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_LR_02" />
+					<WeaponMuzzleFlash WeaponSlotID="36" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_LR_02" />
+					<WeaponLaunchBone WeaponSlotID="36" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_LR_02" />
+					<Turret TurretNameKey="" TurretID="36" />
+					<!-- LEFT TURRET-->
+					<WeaponFireFXBone WeaponSlotID="9" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RR_01" />
+					<WeaponMuzzleFlash WeaponSlotID="9" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RR_01" />
+					<WeaponLaunchBone WeaponSlotID="9" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RR_01" />
+					<Turret TurretNameKey="B_RM_Turret_TreadRR" TurretID="9" />
+					<!-- RIGHT TURRET -->
+					<WeaponFireFXBone WeaponSlotID="37" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RR_02" />
+					<WeaponMuzzleFlash WeaponSlotID="37" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RR_02" />
+					<WeaponLaunchBone WeaponSlotID="37" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponRM_RR_02" />
+					<Turret TurretNameKey="" TurretID="37" />
+					<!-- MISSILES -->
+					<WeaponFireFXBone WeaponSlotID="10" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponMS_LF_" />
+					<WeaponLaunchBone WeaponSlotID="10" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponMS_LF_" />
+					<Turret TurretNameKey="B_MS_Turret_TreadLF" TurretID="10" />
+					<WeaponFireFXBone WeaponSlotID="11" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponMS_RF_" />
+					<WeaponLaunchBone WeaponSlotID="11" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponMS_RF_" />
+					<Turret TurretNameKey="B_MS_Turret_TreadRF" TurretID="11" />
+					<WeaponFireFXBone WeaponSlotID="12" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponMS_LR_" />
+					<WeaponLaunchBone WeaponSlotID="12" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponMS_LR_" />
+					<Turret TurretNameKey="B_MS_Turret_TreadLR" TurretID="12" />
+					<WeaponFireFXBone WeaponSlotID="13" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponMS_RR_" />
+					<WeaponLaunchBone WeaponSlotID="13" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponMS_RR_" />
+					<Turret TurretNameKey="B_MS_Turret_TreadRR" TurretID="13" />
+					<!-- ENGINEERS -->
+					<WeaponFireFXBone WeaponSlotID="14" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponEN_LF" />
+					<WeaponLaunchBone WeaponSlotID="14" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponEN_LF" />
+					<Turret TurretNameKey="B_EN_Turret_TreadLF" TurretID="14" />
+					<WeaponFireFXBone WeaponSlotID="15" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponEN_RF" />
+					<WeaponLaunchBone WeaponSlotID="15" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponEN_RF" />
+					<Turret TurretNameKey="B_EN_Turret_TreadRF" TurretID="15" />
+					<WeaponFireFXBone WeaponSlotID="16" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponEN_LR" />
+					<WeaponLaunchBone WeaponSlotID="16" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponEN_LR" />
+					<Turret TurretNameKey="B_EN_Turret_TreadLR" TurretID="16" />
+					<WeaponFireFXBone WeaponSlotID="17" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponEN_RR" />
+					<WeaponLaunchBone WeaponSlotID="17" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponEN_RR" />
+					<Turret TurretNameKey="B_EN_Turret_TreadRR" TurretID="17" />
+					<!-- GRENADES -->
+					<WeaponFireFXBone WeaponSlotID="18" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_LF_" />
+					<WeaponLaunchBone WeaponSlotID="18" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_LF_" />
+					<Turret TurretNameKey="B_GN_Turret_TreadLF" TurretID="18" />
+					<WeaponFireFXBone WeaponSlotID="19" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_RF_" />
+					<WeaponLaunchBone WeaponSlotID="19" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_RF_" />
+					<Turret TurretNameKey="B_GN_Turret_TreadRF" TurretID="19" />
+					<WeaponFireFXBone WeaponSlotID="20" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_LR_" />
+					<WeaponLaunchBone WeaponSlotID="20" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_LR_" />
+					<Turret TurretNameKey="B_GN_Turret_TreadLR" TurretID="20" />
+					<WeaponFireFXBone WeaponSlotID="21" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_RR_" />
+					<WeaponLaunchBone WeaponSlotID="21" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_RR_" />
+					<Turret TurretNameKey="B_GN_Turret_TreadRR" TurretID="21" />
+					<!-- SNIPERS -->
+					<WeaponFireFXBone WeaponSlotID="22" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponST_LF" />
+					<WeaponLaunchBone WeaponSlotID="22" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponST_LF" />
+					<Turret TurretNameKey="B_ST_Turret_TreadLF" TurretID="22" />
+					<WeaponFireFXBone WeaponSlotID="23" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponST_RF" />
+					<WeaponLaunchBone WeaponSlotID="23" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponST_RF" />
+					<Turret TurretNameKey="B_ST_Turret_TreadRF" TurretID="23" />
+					<WeaponFireFXBone WeaponSlotID="24" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponST_LR" />
+					<WeaponLaunchBone WeaponSlotID="24" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponST_LR" />
+					<Turret TurretNameKey="B_ST_Turret_TreadLR" TurretID="24" />
+					<WeaponFireFXBone WeaponSlotID="25" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponST_RR" />
+					<WeaponLaunchBone WeaponSlotID="25" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponST_RR" />
+					<Turret TurretNameKey="B_ST_Turret_TreadRR" TurretID="25" />
+					<!-- ZONE RAIDERS -->
+					<WeaponFireFXBone WeaponSlotID="26" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_LF_" />
+					<WeaponLaunchBone WeaponSlotID="26" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_LF_" />
+					<Turret TurretNameKey="B_GN_Turret_TreadLF" TurretID="26" />
+					<WeaponFireFXBone WeaponSlotID="27" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_RF_" />
+					<WeaponLaunchBone WeaponSlotID="27" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_RF_" />
+					<Turret TurretNameKey="B_GN_Turret_TreadRF" TurretID="27" />
+					<WeaponFireFXBone WeaponSlotID="28" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_LR_" />
+					<WeaponLaunchBone WeaponSlotID="28" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_LR_" />
+					<Turret TurretNameKey="B_GN_Turret_TreadLR" TurretID="28" />
+					<WeaponFireFXBone WeaponSlotID="29" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_RR_" />
+					<WeaponLaunchBone WeaponSlotID="29" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponGN_RR_" />
+					<Turret TurretNameKey="B_GN_Turret_TreadRR" TurretID="29" />
+					<!-- ZONETROOPERS ACCELERATED -->
+					<WeaponFireFXBone WeaponSlotID="30" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_LF" />
+					<WeaponLaunchBone WeaponSlotID="30" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_LF" />
+					<Turret TurretNameKey="B_ZT_Turret_TreadLF" TurretID="30" />
+					<WeaponFireFXBone WeaponSlotID="31" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RF" />
+					<WeaponLaunchBone WeaponSlotID="31" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RF" />
+					<Turret TurretNameKey="B_ZT_Turret_TreadRF" TurretID="31" />
+					<WeaponFireFXBone WeaponSlotID="32" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_LR" />
+					<WeaponLaunchBone WeaponSlotID="32" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_LR" />
+					<Turret TurretNameKey="B_ZT_Turret_TreadLR" TurretID="32" />
+					<WeaponFireFXBone WeaponSlotID="33" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RR" />
+					<WeaponLaunchBone WeaponSlotID="33" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RR" />
+					<Turret TurretNameKey="B_ZT_Turret_TreadRR" TurretID="33" />
 				</ModelConditionState>
-					<ModelConditionState 
-						ParseCondStateType="PARSE_NORMAL" 
-						RetainSubObjects="true" 
-						ConditionsYes="REALLYDAMAGED USER_5">
-						<Model 
-							Name="W3DContainer:GUMARV_SKN2" />
-						<Texture 
-							Original="GUMARV1" 
-							New="GUMARV1D" />
-						<Texture 
-							Original="GUMARV2" 
-							New="GUMARV2D" />
-						<Texture 
-							Original="GUMarvUpg" 
-							New="GUMarvUpg_D" />
-						<ParticleSysBone BoneName="FXTracksRF" FXParticleSystemTemplate="GDIMARVDamagedSmoke2" FollowBone="true" />
-						<ParticleSysBone BoneName="FXTracksLR" FXParticleSystemTemplate="GDIMARVDamagedFire" FollowBone="true" />
-						<ParticleSysBone BoneName="FXTracksLR" FXParticleSystemTemplate="GDIMARVDamagedFireDist" FollowBone="true" />
-						<ParticleSysBone BoneName="FXTracksLR" FXParticleSystemTemplate="GDIMARVDamagedSmoke" FollowBone="true" />
-						<ParticleSysBone BoneName="B_Spine02" FXParticleSystemTemplate="GDIMARVDamagedFlash" FollowBone="true" />
-						<ParticleSysBone BoneName="B_Spine02" FXParticleSystemTemplate="GDIMARVDamagedSparks" FollowBone="true" />
-				</ModelConditionState>	
-			 				
-				<ModelConditionState 
-					ParseCondStateType="PARSE_NORMAL" 
-					RetainSubObjects="true" 
-					ConditionsYes="REALLYDAMAGED">
-					<Model 
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					RetainSubObjects="true"
+					ConditionsYes="REALLYDAMAGED USER_5">
+					<Model
 						Name="W3DContainer:GUMARV_SKN2" />
-					<Texture 
-							Original="GUMARV1" 
-							New="GUMARV1D" />
-						<Texture 
-							Original="GUMARV2" 
-							New="GUMARV2D" />
-						<Texture 
-							Original="GUMarvUpg" 
-							New="GUMarvUpg_D" />
-						<ParticleSysBone BoneName="FXTracksRF" FXParticleSystemTemplate="GDIMARVDamagedSmoke2" FollowBone="true" />
-						<ParticleSysBone BoneName="FXTracksLR" FXParticleSystemTemplate="GDIMARVDamagedFire" FollowBone="true" />
-						<ParticleSysBone BoneName="FXTracksLR" FXParticleSystemTemplate="GDIMARVDamagedFireDist" FollowBone="true" />
-						<ParticleSysBone BoneName="FXTracksLR" FXParticleSystemTemplate="GDIMARVDamagedSmoke" FollowBone="true" />
-						<ParticleSysBone BoneName="B_Spine02" FXParticleSystemTemplate="GDIMARVDamagedFlash" FollowBone="true" />
-						<ParticleSysBone BoneName="B_Spine02" FXParticleSystemTemplate="GDIMARVDamagedSparks" FollowBone="true" />
-				</ModelConditionState>	
-				<ModelConditionState 
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="DYING">
-					<Model 
-						Name="W3DContainer:GUMARV_R" />
-				</ModelConditionState>	
-							
-				<ModelConditionState 
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="FORMATION_PREVIEW">
-					<Model 
-						Name="W3DContainer:GUMARV_FP" />
-				</ModelConditionState>	
-			 
-				<AnimationState 
-					ParseCondStateType="PARSE_DEFAULT">
-					<Animation 
-						AnimationName="GUMARV_MOV2" 
-						AnimationMode="LOOP" 
-						AnimationBlendTime="15" />
-					<Script> 
-						CurDrawableShowSubObject("MARV_TREADSSTOP") 
-						CurDrawableHideSubObject("MARV_TREADSBACK") 
-						CurDrawableHideSubObject("MARV_TREADSLEFT") 
-						CurDrawableHideSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE")	
-					</Script>
-				</AnimationState> 
+					<Texture
+						Original="GUMARV1"
+						New="GUMARV1D" />
+					<Texture
+						Original="GUMARV2"
+						New="GUMARV2D" />
+					<Texture
+						Original="GUMarvUpg"
+						New="GUMarvUpg_D" />
+					<ParticleSysBone BoneName="FXTracksRF"
+						FXParticleSystemTemplate="GDIMARVDamagedSmoke2" FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksLR"
+						FXParticleSystemTemplate="GDIMARVDamagedFire" FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksLR"
+						FXParticleSystemTemplate="GDIMARVDamagedFireDist" FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksLR"
+						FXParticleSystemTemplate="GDIMARVDamagedSmoke" FollowBone="true" />
+					<ParticleSysBone BoneName="B_Spine02"
+						FXParticleSystemTemplate="GDIMARVDamagedFlash" FollowBone="true" />
+					<ParticleSysBone BoneName="B_Spine02"
+						FXParticleSystemTemplate="GDIMARVDamagedSparks" FollowBone="true" />
+				</ModelConditionState>
 
-				<AnimationState ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="COMING_OUT_OF_FACTORY" 
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					RetainSubObjects="true"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="W3DContainer:GUMARV_SKN2" />
+					<Texture
+						Original="GUMARV1"
+						New="GUMARV1D" />
+					<Texture
+						Original="GUMARV2"
+						New="GUMARV2D" />
+					<Texture
+						Original="GUMarvUpg"
+						New="GUMarvUpg_D" />
+					<ParticleSysBone BoneName="FXTracksRF"
+						FXParticleSystemTemplate="GDIMARVDamagedSmoke2" FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksLR"
+						FXParticleSystemTemplate="GDIMARVDamagedFire" FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksLR"
+						FXParticleSystemTemplate="GDIMARVDamagedFireDist" FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksLR"
+						FXParticleSystemTemplate="GDIMARVDamagedSmoke" FollowBone="true" />
+					<ParticleSysBone BoneName="B_Spine02"
+						FXParticleSystemTemplate="GDIMARVDamagedFlash" FollowBone="true" />
+					<ParticleSysBone BoneName="B_Spine02"
+						FXParticleSystemTemplate="GDIMARVDamagedSparks" FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="W3DContainer:GUMARV_R" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="W3DContainer:GUMARV_FP" />
+				</ModelConditionState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Animation
+						AnimationName="GUMARV_MOV2"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableHideSubObject("MARV_TREADSLEFT")
+						CurDrawableHideSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
+					</Script>
+				</AnimationState>
+
+				<AnimationState ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COMING_OUT_OF_FACTORY"
 					StateName="STATE_built"
 					Flags="START_FRAME_FIRST">
-					<Animation 
-						AnimationName="GUMARV_BLDA2" 
-						AnimationBlendTime="0" 
+					<Animation
+						AnimationName="GUMARV_BLDA2"
+						AnimationBlendTime="0"
 						AnimationMode="ONCE_BACKWARDS" />
-					<Script>		
-						CurDrawableHideSubObject("MARV_TREADSSTOP")		
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableHideSubObject("MARV_TREADSLEFT")	
-						CurDrawableHideSubObject("MARV_TREADSRIGHT")	
-						CurDrawableShowSubObject("MARV_TREADSMOVE")	
+					<Script>
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableHideSubObject("MARV_TREADSLEFT")
+						CurDrawableHideSubObject("MARV_TREADSRIGHT")
+						CurDrawableShowSubObject("MARV_TREADSMOVE")
 					</Script>
 				</AnimationState>
 
 				<!--	Flags="MAINTAIN_FRAME_ACROSS_STATES" -->
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="VEHICLE_CRUSH_CENTER" 
-					>
-					<Animation 
-						AnimationName="GUMARV_CRSH12" 
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="VEHICLE_CRUSH_CENTER"
+				>
+					<Animation
+						AnimationName="GUMARV_CRSH12"
 						AnimationMode="ONCE" />
 					<Script>
 						Prev = CurDrawablePrevAnimationState()
-						if Prev	== "STATE_built" then
+						if Prev == "STATE_built" then
 						CurDrawableSetTransitionAnimState("TRANS_built")
 						end
 					</Script>
 				</AnimationState>
 				<!-- REVERSE -->
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="MOVING TURN_LEFT_HIGH_SPEED BACKING_UP">
-					<Animation 
-						AnimationName="GUMARV_TRNR2" 
-						AnimationMode="LOOP" 
-						AnimationBlendTime="15" />
-					<Script>	
-						CurDrawableHideSubObject("MARV_TREADSSTOP")	
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableHideSubObject("MARV_TREADSLEFT")	
-						CurDrawableShowSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE") 
-					</Script>
-				</AnimationState>
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED BACKING_UP">
-					<Animation 
-						AnimationName="GUMARV_TRNL2" 
-						AnimationMode="LOOP" 
-						AnimationBlendTime="15" />
-					<Script>		
-						CurDrawableHideSubObject("MARV_TREADSSTOP") 
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableShowSubObject("MARV_TREADSLEFT")	
-						CurDrawableHideSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE")	
-					</Script>
-				</AnimationState> 
-
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="MOVING TURN_LEFT BACKING_UP">
-					<Animation 
-						AnimationName="GUMARV_MOV2" 
-						AnimationMode="LOOP" 
-						AnimationBlendTime="15" />
-					<Script>	
-						CurDrawableHideSubObject("MARV_TREADSSTOP")	
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableHideSubObject("MARV_TREADSLEFT")	
-						CurDrawableShowSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE") 
-					</Script>
-				</AnimationState>
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="MOVING TURN_RIGHT BACKING_UP">
-					<Animation 
-						AnimationName="GUMARV_MOV2" 
-						AnimationMode="LOOP" 
-						AnimationBlendTime="15" />
-					<Script>		
-						CurDrawableHideSubObject("MARV_TREADSSTOP") 
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableShowSubObject("MARV_TREADSLEFT")	
-						CurDrawableHideSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE")	
-					</Script>
-				</AnimationState> 				
-
-					<!--	Flags="MAINTAIN_FRAME_ACROSS_STATES" -->
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="MOVING BACKING_UP">
-					<Animation 
-						AnimationName="GUMARV_MOV2" 
-						AnimationMode="LOOP" 
+					<Animation
+						AnimationName="GUMARV_TRNR2"
+						AnimationMode="LOOP"
 						AnimationBlendTime="15" />
 					<Script>
-						CurDrawableHideSubObject("MARV_TREADSSTOP")	
-						CurDrawableShowSubObject("MARV_TREADSBACK")	
-						CurDrawableHideSubObject("MARV_TREADSLEFT")	
-						CurDrawableHideSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE") 
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableHideSubObject("MARV_TREADSLEFT")
+						CurDrawableShowSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
 					</Script>
-				</AnimationState> 
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED BACKING_UP">
+					<Animation
+						AnimationName="GUMARV_TRNL2"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableShowSubObject("MARV_TREADSLEFT")
+						CurDrawableHideSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
+					</Script>
+				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT BACKING_UP">
+					<Animation
+						AnimationName="GUMARV_MOV2"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableHideSubObject("MARV_TREADSLEFT")
+						CurDrawableShowSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT BACKING_UP">
+					<Animation
+						AnimationName="GUMARV_MOV2"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableShowSubObject("MARV_TREADSLEFT")
+						CurDrawableHideSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
+					</Script>
+				</AnimationState>
+
+				<!--	Flags="MAINTAIN_FRAME_ACROSS_STATES" -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING BACKING_UP">
+					<Animation
+						AnimationName="GUMARV_MOV2"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableShowSubObject("MARV_TREADSBACK")
+						CurDrawableHideSubObject("MARV_TREADSLEFT")
+						CurDrawableHideSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
+					</Script>
+				</AnimationState>
 				<!-- FORWARD -->
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="MOVING TURN_LEFT_HIGH_SPEED">
-					<Animation 
-						AnimationName="GUMARV_TRNL2" 
-						AnimationMode="LOOP" 
+					<Animation
+						AnimationName="GUMARV_TRNL2"
+						AnimationMode="LOOP"
 						AnimationBlendTime="15" />
-					<Script>	
-						CurDrawableHideSubObject("MARV_TREADSSTOP")	
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableShowSubObject("MARV_TREADSLEFT")	
-						CurDrawableHideSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE") 
+					<Script>
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableShowSubObject("MARV_TREADSLEFT")
+						CurDrawableHideSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
 					</Script>
 				</AnimationState>
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED">
-					<Animation 
-						AnimationName="GUMARV_TRNR2" 
-						AnimationMode="LOOP" 
+					<Animation
+						AnimationName="GUMARV_TRNR2"
+						AnimationMode="LOOP"
 						AnimationBlendTime="15" />
-					<Script>		
-						CurDrawableHideSubObject("MARV_TREADSSTOP") 
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableHideSubObject("MARV_TREADSLEFT")	
-						CurDrawableShowSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE")	
-					</Script>
-				</AnimationState> 
-
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="MOVING TURN_LEFT">
-					<Animation 
-						AnimationName="GUMARV_MOV2" 
-						AnimationMode="LOOP" 
-						AnimationBlendTime="15" />
-					<Script>	
-						CurDrawableHideSubObject("MARV_TREADSSTOP")	
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableShowSubObject("MARV_TREADSLEFT")	
-						CurDrawableHideSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE") 
+					<Script>
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableHideSubObject("MARV_TREADSLEFT")
+						CurDrawableShowSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
 					</Script>
 				</AnimationState>
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="MOVING TURN_RIGHT">
-					<Animation 
-						AnimationName="GUMARV_MOV2" 
-						AnimationMode="LOOP" 
-						AnimationBlendTime="15" />
-					<Script>		
-						CurDrawableHideSubObject("MARV_TREADSSTOP") 
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableHideSubObject("MARV_TREADSLEFT")	
-						CurDrawableShowSubObject("MARV_TREADSRIGHT")	
-						CurDrawableHideSubObject("MARV_TREADSMOVE")	
-					</Script>
-				</AnimationState> 				
 
-					<!--	Flags="MAINTAIN_FRAME_ACROSS_STATES" -->
-				<AnimationState 
-					ParseCondStateType="PARSE_NORMAL" 
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT">
+					<Animation
+						AnimationName="GUMARV_MOV2"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableShowSubObject("MARV_TREADSLEFT")
+						CurDrawableHideSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT">
+					<Animation
+						AnimationName="GUMARV_MOV2"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableHideSubObject("MARV_TREADSLEFT")
+						CurDrawableShowSubObject("MARV_TREADSRIGHT")
+						CurDrawableHideSubObject("MARV_TREADSMOVE")
+					</Script>
+				</AnimationState>
+
+				<!--	Flags="MAINTAIN_FRAME_ACROSS_STATES" -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="MOVING">
-					<Animation 
-						AnimationName="GUMARV_MOV2" 
-						AnimationMode="LOOP" 
+					<Animation
+						AnimationName="GUMARV_MOV2"
+						AnimationMode="LOOP"
 						AnimationBlendTime="15" />
 					<Script>
 						Prev = CurDrawablePrevAnimationState()
 						if Prev == "STATE_built" then
 						CurDrawableSetTransitionAnimState("TRANS_built")
 						end
-						
-						CurDrawableHideSubObject("MARV_TREADSSTOP")	
-						CurDrawableHideSubObject("MARV_TREADSBACK")	
-						CurDrawableHideSubObject("MARV_TREADSLEFT")	
-						CurDrawableHideSubObject("MARV_TREADSRIGHT")	
-						CurDrawableShowSubObject("MARV_TREADSMOVE") 
+
+						CurDrawableHideSubObject("MARV_TREADSSTOP")
+						CurDrawableHideSubObject("MARV_TREADSBACK")
+						CurDrawableHideSubObject("MARV_TREADSLEFT")
+						CurDrawableHideSubObject("MARV_TREADSRIGHT")
+						CurDrawableShowSubObject("MARV_TREADSMOVE")
 					</Script>
-				</AnimationState> 
+				</AnimationState>
 
 				<!-- TRANSITIONS -->
 				<AnimationState
@@ -468,78 +585,78 @@
 						AnimationName="GUMARV_BLDA2"
 						AnimationBlendTime="0"
 						AnimationMode="ONCE"></Animation>
-				</AnimationState>	
-			
-			<LeftTread>TreadsLF</LeftTread>
-			<LeftTread>TreadsLR</LeftTread> 
-			<RightTread>TreadsRF</RightTread> 
-			<RightTread>TreadsRR</RightTread>
-	
+				</AnimationState>
+
+				<LeftTread>TreadsLF</LeftTread>
+				<LeftTread>TreadsLR</LeftTread>
+				<RightTread>TreadsRF</RightTread>
+				<RightTread>TreadsRR</RightTread>
+
 				<ArticulationBone
 					ArticulationBoneName="B_TreadRF"
-					ArticulationHelperBoneName="FXTracksRF"	/> 
+					ArticulationHelperBoneName="FXTracksRF" />
 				<ArticulationBone
-					ArticulationBoneName="B_TreadRR"	
-					ArticulationHelperBoneName="FXTracksRR"	/>
+					ArticulationBoneName="B_TreadRR"
+					ArticulationHelperBoneName="FXTracksRR" />
 				<ArticulationBone
 					ArticulationBoneName="B_TreadLF"
-					ArticulationHelperBoneName="FXTracksLF"	/>
+					ArticulationHelperBoneName="FXTracksLF" />
 				<ArticulationBone
 					ArticulationBoneName="B_TreadLR"
-					ArticulationHelperBoneName="FXTracksLR"	/>
+					ArticulationHelperBoneName="FXTracksLR" />
 			</TankDraw>
-			<ScriptedModelDraw 
-				id="ModuleTag_Revolver" 
-				OkToChangeModelColor="true" 
-				InitialRecoilSpeed="14.0" 
-				MaxRecoilDistance="7.5" 
-				RecoilDamping="2.0" 
-				RecoilSettleSpeed="2.0" 
+			<ScriptedModelDraw
+				id="ModuleTag_Revolver"
+				OkToChangeModelColor="true"
+				InitialRecoilSpeed="14.0"
+				MaxRecoilDistance="7.5"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="2.0"
 				ExtraPublicBone="MuzzleFx01 MuzzleFlash_01"
-				AttachToBoneInAnotherModule="B_Barrel_Turn"> 
-				<ModelConditionState 	
-					ParseCondStateType="PARSE_DEFAULT"> 	
-					<Model 		
-						Name="W3DContainer:GUMARVCANNON_SKN" /> 	
-					<WeaponFireFXBone 		
-						WeaponSlotID="1" 		
-						WeaponSlotType="PRIMARY_WEAPON" 		
-						BoneName="MuzzleFx01" /> 	
-					<WeaponRecoilBone 		
-						WeaponSlotID="1" 		
-						WeaponSlotType="PRIMARY_WEAPON" 		
-						BoneName="B_Barrel01" /> 	
-					<WeaponMuzzleFlash 		
-						WeaponSlotID="1" 		
-						WeaponSlotType="PRIMARY_WEAPON" 		
-						BoneName="MuzzleFlash_01" /> 	
+				AttachToBoneInAnotherModule="B_Barrel_Turn">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="W3DContainer:GUMARVCANNON_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFx01" />
+					<WeaponRecoilBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_Barrel01" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFlash_01" />
 					<!--
 					<WeaponLaunchBone 		
 						WeaponSlotID="1" 		
 						WeaponSlotType="PRIMARY_WEAPON" 		
 						BoneName="MuzzleFx01" /> 
 					-->
-				</ModelConditionState>	
-				<ModelConditionState 
-					ParseCondStateType="PARSE_NORMAL" 
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED">
-					<Model 
+					<Model
 						Name="W3DContainer:GUMARVCANNON_SKN" />
-					<Texture 
-						Original="GUMARV2" 
+					<Texture
+						Original="GUMARV2"
 						New="GUMARV2D" />
-				</ModelConditionState>	
-				<ModelConditionState 
-					ParseCondStateType="PARSE_NORMAL" 
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING">
 				</ModelConditionState>
-                <ModelConditionState
-                    ParseCondStateType="PARSE_NORMAL"
-                    ConditionsYes="FORMATION_PREVIEW" />
-				<AnimationState 
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW" />
+				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					StateName="STATE_Idle">
-					<Animation 
+					<Animation
 						AnimationName="GUMARVCANNON_IDLE"
 						AnimationMode="ONCE"
 						AnimationBlendTime="0" />
@@ -549,40 +666,40 @@
 						CurDrawableSetTransitionAnimState("TRANS_built")
 						end
 					</Script>
-				</AnimationState> 
+				</AnimationState>
 				<AnimationState
-					ParseCondStateType="PARSE_NORMAL" 
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_1 USER_2"
 					StateName="STATE_FiredHeroic">
-					<Animation 
+					<Animation
 						AnimationName="GUMARVCANNON_ATKA"
 						AnimationMode="ONCE"
 						AnimationBlendTime="0"
-                        AnimationSpeedFactorMin="2.0"
-                        AnimationSpeedFactorMax="2.0" />
+						AnimationSpeedFactorMin="2.0"
+						AnimationSpeedFactorMax="2.0" />
 				</AnimationState>
 				<AnimationState
-					ParseCondStateType="PARSE_NORMAL" 
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_1"
 					StateName="STATE_Fired">
-					<Animation 
+					<Animation
 						AnimationName="GUMARVCANNON_ATKA"
 						AnimationMode="ONCE"
 						AnimationBlendTime="0" />
 				</AnimationState>
 
 				<AnimationState
-					ParseCondStateType="PARSE_NORMAL" 
-					ConditionsYes="COMING_OUT_OF_FACTORY" 
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COMING_OUT_OF_FACTORY"
 					StateName="STATE_built"
 					Flags="START_FRAME_FIRST">
-					<Animation 
-						AnimationName="GUMARVCANNON_BLDA" 
-						AnimationBlendTime="0" 
+					<Animation
+						AnimationName="GUMARVCANNON_BLDA"
+						AnimationBlendTime="0"
 						AnimationMode="ONCE_BACKWARDS" />
 				</AnimationState>
 
-					<!--
+				<!--
 				<AnimationState 
 					ParseCondStateType="PARSE_DEFAULT"
 					StateName="STATE_Idle">
@@ -645,86 +762,115 @@
 						AnimationName="GUMARVCANNON_BLDA"
 						AnimationBlendTime="0"
 						AnimationMode="ONCE"></Animation>
-				</AnimationState>	
-			
+				</AnimationState>
+
 			</ScriptedModelDraw>
-			<ScriptedModelDraw id="ModuleTag_FX" ExtraPublicBone="FXTracksLR FXTracksRR	FXTracksLF FXTracksRF MUZZLEFX01">
+			<ScriptedModelDraw id="ModuleTag_FX"
+				ExtraPublicBone="FXTracksLR FXTracksRR	FXTracksLF FXTracksRF MUZZLEFX01">
 				<ModelConditionState ParseCondStateType="PARSE_DEFAULT">
 					<Model Name="W3DContainer:GUMARV_FX" />
 				</ModelConditionState>
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="MOVING">
-					<ParticleSysBone BoneName="FXTracksLF" FXParticleSystemTemplate="TreadDust" FollowBone="true" />
-					<ParticleSysBone BoneName="FXTracksRF" FXParticleSystemTemplate="TreadDust" FollowBone="true" />
-					<ParticleSysBone BoneName="FXTracksRF" FXParticleSystemTemplate="TreadDirt" FollowBone="true" />
-					<ParticleSysBone BoneName="FXTracksLF" FXParticleSystemTemplate="TreadDirt" FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksLF" FXParticleSystemTemplate="TreadDust"
+						FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksRF" FXParticleSystemTemplate="TreadDust"
+						FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksRF" FXParticleSystemTemplate="TreadDirt"
+						FollowBone="true" />
+					<ParticleSysBone BoneName="FXTracksLF" FXParticleSystemTemplate="TreadDirt"
+						FollowBone="true" />
 				</AnimationState>
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="DYING">
-					<ParticleSysBone BoneName="FXHULKFIRE" FXParticleSystemTemplate="GDIMammothHulkFire" FollowBone="true" />
-					<ParticleSysBone BoneName="FXHULKFIRE" FXParticleSystemTemplate="GDIMammothHulkFireGlow" FollowBone="true" />
-					<ParticleSysBone BoneName="FXHULKFIRE" FXParticleSystemTemplate="GDIMammothHulkFireDistortion" FollowBone="true" />
-					<ParticleSysBone BoneName="FXHULKFIRE" FXParticleSystemTemplate="GDIMammothHulkSmoke" FollowBone="true" />
+					<ParticleSysBone BoneName="FXHULKFIRE"
+						FXParticleSystemTemplate="GDIMammothHulkFire" FollowBone="true" />
+					<ParticleSysBone BoneName="FXHULKFIRE"
+						FXParticleSystemTemplate="GDIMammothHulkFireGlow" FollowBone="true" />
+					<ParticleSysBone BoneName="FXHULKFIRE"
+						FXParticleSystemTemplate="GDIMammothHulkFireDistortion" FollowBone="true" />
+					<ParticleSysBone BoneName="FXHULKFIRE"
+						FXParticleSystemTemplate="GDIMammothHulkSmoke" FollowBone="true" />
 				</AnimationState>
 			</ScriptedModelDraw>
-			<ScriptedModelDraw id="ModuleTag_CrushTiberiumFX" AttachToBoneInAnotherModule="FXGLOW_BOTTOM01">
+			<ScriptedModelDraw id="ModuleTag_CrushTiberiumFX"
+				AttachToBoneInAnotherModule="FXGLOW_BOTTOM01">
 				<ModelConditionState ParseCondStateType="PARSE_DEFAULT">
 					<Model Name="W3DContainer:FXInvisBone" />
 				</ModelConditionState>
 				<AnimationState ParseCondStateType="PARSE_DEFAULT" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="AFFECTED_BY_EMP" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="USER_15">
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVHarvestDust" FollowBone="true" />
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVHarvestShards" FollowBone="true" />
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVHarvestSmoke" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVHarvestDust" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVHarvestShards" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVHarvestSmoke" FollowBone="true" />
 				</AnimationState>
 			</ScriptedModelDraw>
-			<ScriptedModelDraw id="ModuleTag_EngineerHealFX_LF" AttachToBoneInAnotherModule="FXWEAPONEN_LF">
+			<ScriptedModelDraw id="ModuleTag_EngineerHealFX_LF"
+				AttachToBoneInAnotherModule="FXWEAPONEN_LF">
 				<ModelConditionState ParseCondStateType="PARSE_DEFAULT">
 					<Model Name="W3DContainer:FXInvisBone" />
 				</ModelConditionState>
 				<AnimationState ParseCondStateType="PARSE_DEFAULT" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="AFFECTED_BY_EMP" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="USER_11">
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVEngineerGlow" FollowBone="true" />
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVEngineerRing" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVEngineerGlow" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVEngineerRing" FollowBone="true" />
 				</AnimationState>
 			</ScriptedModelDraw>
-			<ScriptedModelDraw id="ModuleTag_EngineerHealFX_RF" AttachToBoneInAnotherModule="FXWEAPONEN_RF">
+			<ScriptedModelDraw id="ModuleTag_EngineerHealFX_RF"
+				AttachToBoneInAnotherModule="FXWEAPONEN_RF">
 				<ModelConditionState ParseCondStateType="PARSE_DEFAULT">
 					<Model Name="W3DContainer:FXInvisBone" />
 				</ModelConditionState>
 				<AnimationState ParseCondStateType="PARSE_DEFAULT" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="AFFECTED_BY_EMP" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="USER_12">
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVEngineerGlow" FollowBone="true" />
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVEngineerRing" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVEngineerGlow" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVEngineerRing" FollowBone="true" />
 				</AnimationState>
 			</ScriptedModelDraw>
-			<ScriptedModelDraw id="ModuleTag_EngineerHealFX_LR" AttachToBoneInAnotherModule="FXWEAPONEN_LR">
+			<ScriptedModelDraw id="ModuleTag_EngineerHealFX_LR"
+				AttachToBoneInAnotherModule="FXWEAPONEN_LR">
 				<ModelConditionState ParseCondStateType="PARSE_DEFAULT">
 					<Model Name="W3DContainer:FXInvisBone" />
 				</ModelConditionState>
 				<AnimationState ParseCondStateType="PARSE_DEFAULT" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="AFFECTED_BY_EMP" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="USER_13">
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVEngineerGlow" FollowBone="true" />
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVEngineerRing" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVEngineerGlow" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVEngineerRing" FollowBone="true" />
 				</AnimationState>
 			</ScriptedModelDraw>
-			<ScriptedModelDraw id="ModuleTag_EngineerHealFX_RR" AttachToBoneInAnotherModule="FXWEAPONEN_RR">
+			<ScriptedModelDraw id="ModuleTag_EngineerHealFX_RR"
+				AttachToBoneInAnotherModule="FXWEAPONEN_RR">
 				<ModelConditionState ParseCondStateType="PARSE_DEFAULT">
 					<Model Name="W3DContainer:FXInvisBone" />
 				</ModelConditionState>
 				<AnimationState ParseCondStateType="PARSE_DEFAULT" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="AFFECTED_BY_EMP" />
 				<AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="USER_14">
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVEngineerGlow" FollowBone="true" />
-					<ParticleSysBone BoneName="InvisBone01" FXParticleSystemTemplate="GDIMARVEngineerRing" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVEngineerGlow" FollowBone="true" />
+					<ParticleSysBone BoneName="InvisBone01"
+						FXParticleSystemTemplate="GDIMARVEngineerRing" FollowBone="true" />
 				</AnimationState>
 			</ScriptedModelDraw>
-			<LaserDraw id="ModuleTag_LaserDistort01" UseDistortionShader="true" Texture1_UTile="1" Texture1_VTile=".5"
-				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1" Texture1_FrameRate="30"
-				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0" Texture2_VScrollRate="1"
-				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="2" LaserStateID="0">
+			<LaserDraw id="ModuleTag_LaserDistort01" UseDistortionShader="true" Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="2"
+				LaserStateID="0">
 				<FXShader ShaderName="Laser.fx" TechniqueIndex="0">
 					<Constants>
 						<Texture Name="Texture1">
@@ -736,10 +882,14 @@
 					</Constants>
 				</FXShader>
 			</LaserDraw>
-			<LaserDraw id="ModuleTag_LaserDistort02" UseDistortionShader="true" Texture1_UTile="1" Texture1_VTile=".5"
-				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1" Texture1_FrameRate="30"
-				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0" Texture2_VScrollRate="1"
-				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="3" LaserStateID="1">
+			<LaserDraw id="ModuleTag_LaserDistort02" UseDistortionShader="true" Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="3"
+				LaserStateID="1">
 				<FXShader ShaderName="Laser.fx" TechniqueIndex="0">
 					<Constants>
 						<Texture Name="Texture1">
@@ -751,10 +901,14 @@
 					</Constants>
 				</FXShader>
 			</LaserDraw>
-			<LaserDraw id="ModuleTag_LaserDistort03" UseDistortionShader="true" Texture1_UTile="1" Texture1_VTile=".5"
-				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1" Texture1_FrameRate="30"
-				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0" Texture2_VScrollRate="1"
-				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="4" LaserStateID="2">
+			<LaserDraw id="ModuleTag_LaserDistort03" UseDistortionShader="true" Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="4"
+				LaserStateID="2">
 				<FXShader ShaderName="Laser.fx" TechniqueIndex="0">
 					<Constants>
 						<Texture Name="Texture1">
@@ -766,10 +920,14 @@
 					</Constants>
 				</FXShader>
 			</LaserDraw>
-			<LaserDraw id="ModuleTag_LaserDistort04" UseDistortionShader="true" Texture1_UTile="1" Texture1_VTile=".5"
-				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1" Texture1_FrameRate="30"
-				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0" Texture2_VScrollRate="1"
-				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="5" LaserStateID="3">
+			<LaserDraw id="ModuleTag_LaserDistort04" UseDistortionShader="true" Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="5"
+				LaserStateID="3">
 				<FXShader ShaderName="Laser.fx" TechniqueIndex="0">
 					<Constants>
 						<Texture Name="Texture1">
@@ -781,68 +939,480 @@
 					</Constants>
 				</FXShader>
 			</LaserDraw>
-			<TracerModelDraw id="ModuleTag_SniperTracerModelDraw1" MinLength="100.0" MaxLength="100.0" Width="5.0"
-				MinSpeed="35" MaxSpeed="35" SweepSpeed="0.0" SpreadAngle="0.0" MinTracersPerFrame="0.01" MaxTracersPerFrame="0.01"
-				FrameLifeTime="35" Texture="FXTracerGDISniper" UseAdditiveBlending="true" TracerHitFx="FX_GDISniperBulletHit"
+			<TracerModelDraw id="ModuleTag_SniperTracerModelDraw1" MinLength="100.0"
+				MaxLength="100.0" Width="5.0"
+				MinSpeed="35" MaxSpeed="35" SweepSpeed="0.0" SpreadAngle="0.0"
+				MinTracersPerFrame="0.01" MaxTracersPerFrame="0.01"
+				FrameLifeTime="35" Texture="FXTracerGDISniper" UseAdditiveBlending="true"
+				TracerHitFx="FX_GDISniperBulletHit"
 				WeaponSlotID="22">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 			</TracerModelDraw>
-			<TracerModelDraw id="ModuleTag_SniperTracerModelDraw2" MinLength="100.0" MaxLength="100.0" Width="5.0"
-				MinSpeed="35" MaxSpeed="35" SweepSpeed="0.0" SpreadAngle="0.0" MinTracersPerFrame="0.01" MaxTracersPerFrame="0.01"
-				FrameLifeTime="35" Texture="FXTracerGDISniper" UseAdditiveBlending="true" TracerHitFx="FX_GDISniperBulletHit"
+			<TracerModelDraw id="ModuleTag_SniperTracerModelDraw2" MinLength="100.0"
+				MaxLength="100.0" Width="5.0"
+				MinSpeed="35" MaxSpeed="35" SweepSpeed="0.0" SpreadAngle="0.0"
+				MinTracersPerFrame="0.01" MaxTracersPerFrame="0.01"
+				FrameLifeTime="35" Texture="FXTracerGDISniper" UseAdditiveBlending="true"
+				TracerHitFx="FX_GDISniperBulletHit"
 				WeaponSlotID="23">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 			</TracerModelDraw>
-			<TracerModelDraw id="ModuleTag_SniperTracerModelDraw3" MinLength="100.0" MaxLength="100.0" Width="5.0"
-				MinSpeed="35" MaxSpeed="35" SweepSpeed="0.0" SpreadAngle="0.0" MinTracersPerFrame="0.01" MaxTracersPerFrame="0.01"
-				FrameLifeTime="35" Texture="FXTracerGDISniper" UseAdditiveBlending="true" TracerHitFx="FX_GDISniperBulletHit"
+			<TracerModelDraw id="ModuleTag_SniperTracerModelDraw3" MinLength="100.0"
+				MaxLength="100.0" Width="5.0"
+				MinSpeed="35" MaxSpeed="35" SweepSpeed="0.0" SpreadAngle="0.0"
+				MinTracersPerFrame="0.01" MaxTracersPerFrame="0.01"
+				FrameLifeTime="35" Texture="FXTracerGDISniper" UseAdditiveBlending="true"
+				TracerHitFx="FX_GDISniperBulletHit"
 				WeaponSlotID="24">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 			</TracerModelDraw>
-			<TracerModelDraw id="ModuleTag_SniperTracerModelDraw4" MinLength="100.0" MaxLength="100.0" Width="5.0"
-				MinSpeed="35" MaxSpeed="35" SweepSpeed="0.0" SpreadAngle="0.0" MinTracersPerFrame="0.01" MaxTracersPerFrame="0.01"
-				FrameLifeTime="35" Texture="FXTracerGDISniper" UseAdditiveBlending="true" TracerHitFx="FX_GDISniperBulletHit"
+			<TracerModelDraw id="ModuleTag_SniperTracerModelDraw4" MinLength="100.0"
+				MaxLength="100.0" Width="5.0"
+				MinSpeed="35" MaxSpeed="35" SweepSpeed="0.0" SpreadAngle="0.0"
+				MinTracersPerFrame="0.01" MaxTracersPerFrame="0.01"
+				FrameLifeTime="35" Texture="FXTracerGDISniper" UseAdditiveBlending="true"
+				TracerHitFx="FX_GDISniperBulletHit"
 				WeaponSlotID="25">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 			</TracerModelDraw>
-			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1" MinLength="50.0" MaxLength="50.0" Width="3.0"
-				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0" MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI" UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire" WeaponSlotID="6">
+
+			<!-- normal tracers-->
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1" MinLength="50.0" MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="6">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
-			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw2" MinLength="50.0" MaxLength="50.0" Width="3.0"
-				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0" MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI" UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire" WeaponSlotID="7">
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1plus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="34">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
-			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw3" MinLength="50.0" MaxLength="50.0" Width="3.0"
-				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0" MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI" UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire" WeaponSlotID="8">
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw2" MinLength="50.0" MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="7">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
-			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw4" MinLength="50.0" MaxLength="50.0" Width="3.0"
-				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0" MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI" UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire" WeaponSlotID="9">
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw2plus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="35">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
-			</TracerModelDraw>		
+				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw3" MinLength="50.0" MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="8">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw3plus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="36">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw4" MinLength="50.0" MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="9">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw4plus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="37">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+
+			<!-- heroic tracers -->
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawVeterancy1" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="6">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1Veterancyplus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="34">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw2Veterancy" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="7">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw2Veterancyplus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="35">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw3Veterancy" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="8">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw3Veterancyplus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="36">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw4Veterancy" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="9">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw4Veterancyplus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
+				WeaponSlotID="37">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
+					ForbiddenStatus="WEAPON_UPGRADED_01" />
+			</TracerModelDraw>
+
+			<!-- ap ammo -->
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP1" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="6">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_03" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP1plus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="34">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_03" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP2" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="7">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_03" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP2plus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="35">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_03" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP3" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="8">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_03" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP3plus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="36">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_03" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP4" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="9">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_03" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP4plus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				UseAdditiveBlending="true"
+				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="37">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_03" />
+			</TracerModelDraw>
+
+			<!-- ap ammo heroic-->
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP1Veterancy" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="6">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP1Veterancyplus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="34">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP2Veterancy" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="7">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP2Veterancyplus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="35">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP3Veterancy" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="8">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP3Veterancyplus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="36">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP4Veterancy" MinLength="50.0"
+				MaxLength="50.0"
+				Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="9">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02" />
+			</TracerModelDraw>
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP4Veterancyplus" MinLength="50.0"
+				MaxLength="50.0" Width="3.0"
+				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				UseAdditiveBlending="true"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				WeaponSlotID="37">
+				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
+				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
+				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
+					ForbiddenStatus="WEAPON_UPGRADED_02" />
+			</TracerModelDraw>
 		</Draws>
 		<Behaviors>
-			<AttributeModifierPoolUpdate 
-				id="DefaultAttributeModifierPoolUpdate"/>
+			<AttributeModifierPoolUpdate
+				id="DefaultAttributeModifierPoolUpdate" />
 			<SquishCollide
-				id ="DefaultSquishCollide"/>
+				id="DefaultSquishCollide" />
 			<FireWeaponWhenDead
 				id="ModuleTag_CatalystDeathWeapon"
 				InitiallyActive="true"
@@ -850,7 +1420,8 @@
 				ContinueToBezierDestination="false">
 				<DieMuxData DeathTypes="CATALYST" />
 			</FireWeaponWhenDead>
-			<!--Heroic level units auto healing-->
+			<!--Heroic
+			level units auto healing-->
 			<AutoHealBehavior
 				id="Upgrade_HeroicHeal"
 				InitiallyActive="false"
@@ -879,7 +1450,7 @@
 			<StancesBehavior
 				id="ModuleTag_Stance"
 				StanceTemplate="Generic"
-				/>
+			/>
 			<LevelUpUpgrade
 				id="ModuleTag_LevelUpUpgrade_Veteran"
 				LevelCap="4"
@@ -912,301 +1483,922 @@
 			<TemporarilyDefectUpdate
 				id="ModuleTag_TemporarilyDefect"
 				DefectionFrameCount="300" />
-			<WeaponSetUpdate 
-				id="ModuleTag_WeaponSetUpdate"> 
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
 				<WeaponSlotTurret
-					ID="1"> 	
-					<Weapon 		
-						Ordering="PRIMARY_WEAPON" 		
-						Template="GDIMARVCannon" /> 	
-					<TurretSettings 		
-						TurretTurnRate="50" 		
-						TurretPitchRate="20" 		
-						AllowsPitch="true" 		
-						MinimumPitch="-15d" 		
-						MinIdleScanTime="1.0s" 		
-						MaxIdleScanTime="5.0s" 		
-						MinIdleScanAngle="0.0" 		
-						MaxIdleScanAngle="60.0"> 		
-						<TurretAITargetChooserData 			
-							CanAcquireDynamicIfAssignedOutOfRange="true" /> 	
-						</TurretSettings> 
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIMARVCannon" />
+					<TurretSettings
+						TurretTurnRate="50"
+						TurretPitchRate="20"
+						AllowsPitch="true"
+						MinimumPitch="-15d"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="60.0">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
 				</WeaponSlotTurret>
-<!-- ZONE TROOPER WEAPONS -->	 
-		<WeaponSlotTurret 	ID="2"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneTrooperWeapon01" 		Upgrade="Upgrade_MARVZoneTrooperSquadFrontLeft" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"	> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true"  			CanPickTargetsOutOfTurretAngle="true"/> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="3"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneTrooperWeapon02" 		Upgrade="Upgrade_MARVZoneTrooperSquadFrontRight" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true"  			CanPickTargetsOutOfTurretAngle="true"/> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="4"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneTrooperWeapon03" 		Upgrade="Upgrade_MARVZoneTrooperSquadRearLeft" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true"  			CanPickTargetsOutOfTurretAngle="true"/> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="5"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneTrooperWeapon04" 		Upgrade="Upgrade_MARVZoneTrooperSquadRearRight" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true"  			CanPickTargetsOutOfTurretAngle="true"/> 	</TurretSettings> </WeaponSlotTurret>				
-<!-- RIFLEGUY WEAPONS --> 
-		<WeaponSlotTurret 	ID="6"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVRifleWeapon" 			Upgrade="Upgrade_MARVRifleSquadFrontLeft" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="7"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVRifleWeapon" 			Upgrade="Upgrade_MARVRifleSquadFrontRight" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="8"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVRifleWeapon" 			Upgrade="Upgrade_MARVRifleSquadRearLeft" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret>
-		<WeaponSlotTurret 	ID="9"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVRifleWeapon" 			Upgrade="Upgrade_MARVRifleSquadRearRight" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret>
-<!-- MISSILEGUY WEAPONS --> 
-		<WeaponSlotTurret 	ID="10"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVRocketWeapon" 		Upgrade="Upgrade_MARVMissileSquadFrontLeft" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="11"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVRocketWeapon" 		Upgrade="Upgrade_MARVMissileSquadFrontRight" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret>
-		<WeaponSlotTurret 	ID="12"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVRocketWeapon" 		Upgrade="Upgrade_MARVMissileSquadRearLeft" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret>
-		<WeaponSlotTurret 	ID="13"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVRocketWeapon" 		Upgrade="Upgrade_MARVMissileSquadRearRight" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret>				
-<!-- GRENADIER WEAPONS --> 
-		<WeaponSlotTurret 	ID="18"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVGrenadeSoldierWeapon" 	Upgrade="Upgrade_MARVGrenadeSoldierSquadFrontLeft" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="19"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVGrenadeSoldierWeapon" 	Upgrade="Upgrade_MARVGrenadeSoldierSquadFrontRight" /> <TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="20"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVGrenadeSoldierWeapon" 	Upgrade="Upgrade_MARVGrenadeSoldierSquadRearLeft" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="21"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVGrenadeSoldierWeapon" 	Upgrade="Upgrade_MARVGrenadeSoldierSquadRearRight" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret>				
-<!-- SNIPERTEAM WEAPONS --> 
-		<WeaponSlotTurret 	ID="22"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVSniperWeapon" 		Upgrade="Upgrade_MARVSniperSquadFrontLeft" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="23"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVSniperWeapon" 		Upgrade="Upgrade_MARVSniperSquadFrontRight" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="24"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVSniperWeapon" 		Upgrade="Upgrade_MARVSniperSquadRearLeft" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="25"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVSniperWeapon" 		Upgrade="Upgrade_MARVSniperSquadRearRight" /> 		<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret>
-<!-- ZONE RAIDER WEAPONS -->
-		<WeaponSlotTurret 	ID="26"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneRaiderWeapon" 		Upgrade="Upgrade_MARVZoneRaiderSquadFrontLeft" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="27"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneRaiderWeapon" 		Upgrade="Upgrade_MARVZoneRaiderSquadFrontRight" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="28"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneRaiderWeapon" 		Upgrade="Upgrade_MARVZoneRaiderSquadRearLeft" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="29"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneRaiderWeapon" 		Upgrade="Upgrade_MARVZoneRaiderSquadRearRight" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true" /> 	</TurretSettings> </WeaponSlotTurret>
-		<!-- ZONE TROOPER ACCELERATED WEAPONS -->	 
-		<WeaponSlotTurret 	ID="30"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneTrooperWeapon01_Accelerated" 		Upgrade="Upgrade_MARVZoneTrooperSquadFrontLeft" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"	> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true"  			CanPickTargetsOutOfTurretAngle="true"/> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="31"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneTrooperWeapon02_Accelerated" 		Upgrade="Upgrade_MARVZoneTrooperSquadFrontRight" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true"  			CanPickTargetsOutOfTurretAngle="true"/> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="32"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneTrooperWeapon03_Accelerated" 		Upgrade="Upgrade_MARVZoneTrooperSquadRearLeft" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true"  			CanPickTargetsOutOfTurretAngle="true"/> 	</TurretSettings> </WeaponSlotTurret> 
-		<WeaponSlotTurret 	ID="33"> 	<Weapon 		Ordering="PRIMARY_WEAPON" 		Template="MARVZoneTrooperWeapon04_Accelerated" 		Upgrade="Upgrade_MARVZoneTrooperSquadRearRight" /> 	<TurretSettings 		TurretTurnRate="180" 		MinIdleScanTime="1.0s" 		MaxIdleScanTime="5.0s" 		MinIdleScanAngle="0.0" 		MaxIdleScanAngle="100.0" 		RecenterWhenOutOfTurnRange="false"> 		<TurretAITargetChooserData 			CanAcquireDynamicIfAssignedOutOfRange="true"  			CanPickTargetsOutOfTurretAngle="true"/> 	</TurretSettings> </WeaponSlotTurret>				
+				<!-- ZONE TROOPER WEAPONS -->
+				<WeaponSlotTurret ID="2">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon01"
+						Upgrade="Upgrade_MARVZoneTrooperSquadFrontLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
+							CanPickTargetsOutOfTurretAngle="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="3">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon02"
+						Upgrade="Upgrade_MARVZoneTrooperSquadFrontRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
+							CanPickTargetsOutOfTurretAngle="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="4">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon03"
+						Upgrade="Upgrade_MARVZoneTrooperSquadRearLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
+							CanPickTargetsOutOfTurretAngle="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="5">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon04"
+						Upgrade="Upgrade_MARVZoneTrooperSquadRearRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
+							CanPickTargetsOutOfTurretAngle="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<!-- RIFLEGUY WEAPONS -->
+				<WeaponSlotTurret ID="6">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeapon"
+						ObjectStatus="RIDER1"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeaponAPAmmo"
+						ObjectStatus="RIDER1 WEAPON_UPGRADED_01"
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="34">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeapon"
+						ObjectStatus="RIDER1"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeaponAPAmmo"
+						ObjectStatus="RIDER1 WEAPON_UPGRADED_01"
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="7">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeapon"
+						ObjectStatus="RIDER3"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeaponAPAmmo"
+						ObjectStatus="RIDER3 WEAPON_UPGRADED_01"
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="35">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeapon"
+						ObjectStatus="RIDER3"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeaponAPAmmo"
+						ObjectStatus="RIDER3 WEAPON_UPGRADED_01"
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="8">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeapon"
+						ObjectStatus="RIDER4"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeaponAPAmmo"
+						ObjectStatus="RIDER4 WEAPON_UPGRADED_01"
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="36">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeapon"
+						ObjectStatus="RIDER4"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeaponAPAmmo"
+						ObjectStatus="RIDER4 WEAPON_UPGRADED_01"
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="9">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeapon"
+						ObjectStatus="RIDER_IS_PILOT"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeaponAPAmmo"
+						ObjectStatus="RIDER_IS_PILOT WEAPON_UPGRADED_01"
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="37">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODWarmechFakeWeapon"
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeapon"
+						ObjectStatus="RIDER_IS_PILOT"
+						IsPlayerUpgradePermanent="False" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MARVRifleWeaponAPAmmo"
+						ObjectStatus="RIDER_IS_PILOT WEAPON_UPGRADED_01"
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings 
+						TurretTurnRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" 
+						MinIdleScanAngle="0.0" 
+						MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<!-- MISSILEGUY WEAPONS -->
+				<WeaponSlotTurret ID="10">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVRocketWeapon"
+						Upgrade="Upgrade_MARVMissileSquadFrontLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="11">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVRocketWeapon"
+						Upgrade="Upgrade_MARVMissileSquadFrontRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="12">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVRocketWeapon"
+						Upgrade="Upgrade_MARVMissileSquadRearLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="13">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVRocketWeapon"
+						Upgrade="Upgrade_MARVMissileSquadRearRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<!-- GRENADIER WEAPONS -->
+				<WeaponSlotTurret ID="18">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVGrenadeSoldierWeapon"
+						Upgrade="Upgrade_MARVGrenadeSoldierSquadFrontLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="19">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVGrenadeSoldierWeapon"
+						Upgrade="Upgrade_MARVGrenadeSoldierSquadFrontRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="20">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVGrenadeSoldierWeapon"
+						Upgrade="Upgrade_MARVGrenadeSoldierSquadRearLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="21">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVGrenadeSoldierWeapon"
+						Upgrade="Upgrade_MARVGrenadeSoldierSquadRearRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<!-- SNIPERTEAM WEAPONS -->
+				<WeaponSlotTurret ID="22">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVSniperWeapon"
+						Upgrade="Upgrade_MARVSniperSquadFrontLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="23">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVSniperWeapon"
+						Upgrade="Upgrade_MARVSniperSquadFrontRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="24">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVSniperWeapon"
+						Upgrade="Upgrade_MARVSniperSquadRearLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="25">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVSniperWeapon"
+						Upgrade="Upgrade_MARVSniperSquadRearRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<!-- ZONE RAIDER WEAPONS -->
+				<WeaponSlotTurret ID="26">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
+						Upgrade="Upgrade_MARVZoneRaiderSquadFrontLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="27">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
+						Upgrade="Upgrade_MARVZoneRaiderSquadFrontRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="28">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
+						Upgrade="Upgrade_MARVZoneRaiderSquadRearLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="29">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
+						Upgrade="Upgrade_MARVZoneRaiderSquadRearRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<!-- ZONE TROOPER ACCELERATED WEAPONS -->
+				<WeaponSlotTurret ID="30">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon01_Accelerated"
+						Upgrade="Upgrade_MARVZoneTrooperSquadFrontLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
+							CanPickTargetsOutOfTurretAngle="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="31">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon02_Accelerated"
+						Upgrade="Upgrade_MARVZoneTrooperSquadFrontRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
+							CanPickTargetsOutOfTurretAngle="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="32">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon03_Accelerated"
+						Upgrade="Upgrade_MARVZoneTrooperSquadRearLeft" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
+							CanPickTargetsOutOfTurretAngle="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret ID="33">
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon04_Accelerated"
+						Upgrade="Upgrade_MARVZoneTrooperSquadRearRight" />
+					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
+						RecenterWhenOutOfTurnRange="false">
+						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
+							CanPickTargetsOutOfTurretAngle="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
 			</WeaponSetUpdate>
 
-		<SlaughterHordeContain
-			id="ModuleTag_Contain"
-			ObjectStatusOfContained=""
-			ContainMax="4"
-			CashBackPercent="100" 
-			MobileGarrison="true"
-			ImmuneToClearBuildingAttacks="true" 
-			AllowEnemiesInside="false"
-			AllowAlliesInside="true"
-			AllowNeutralInside="false"
-			AllowOwnPlayerInsideOverride="true"
-			ShowPips="true"
-			EnterSound="AudioEvent:VehicleEnter"
-			ExitSound="AudioEvent:VehicleExit"
-			KillPassengersOnDeath="true">
-			<CanAlwaysEnterObjectFilter
-				Rule="ANY"
-				Relationship="SAME_PLAYER"
-				RejectModelCondition="EMOTION_DISSIDENT">
-				<IncludeThing>GDIRifleSoldier</IncludeThing>		
-				<IncludeThing>GDIRifleSoldierSquad</IncludeThing>	
-				<IncludeThing>GDIRifleSoldierSquad_Veteran</IncludeThing>
-				<IncludeThing>GDIRifleSoldierVeteran</IncludeThing>				
-				<IncludeThing>GDIMissileSoldier</IncludeThing>		
-				<IncludeThing>GDIMissileSoldierSquad</IncludeThing>
-				<IncludeThing>GDIMissileSoldierSquad_Veteran</IncludeThing>
-				<IncludeThing>GDIMissileSoldierVeteran</IncludeThing>		
-				<IncludeThing>GDIGrenadeSoldier</IncludeThing>		
-				<IncludeThing>GDIGrenadeSoldierSquad</IncludeThing>
-				<IncludeThing>GDIZoneTrooper</IncludeThing>		
-				<IncludeThing>GDIZoneTrooperSquad</IncludeThing>
-				<IncludeThing>GDIZoneTrooperSquad_Veteran</IncludeThing>
-				<IncludeThing>GDISniper</IncludeThing>		
-				<IncludeThing>GDISniperSquad</IncludeThing>
-				<IncludeThing>GDISniperSquad_Veteran</IncludeThing>
-				<IncludeThing>GDISpotter</IncludeThing>		
-				<IncludeThing>GDIEngineer</IncludeThing>
-
-				<IncludeThing>SteelTalonsRifleSoldier</IncludeThing>		
-				<IncludeThing>SteelTalonsRifleSoldierSquad</IncludeThing>	
-				<IncludeThing>SteelTalonsMissileSoldier</IncludeThing>		
-				<IncludeThing>SteelTalonsMissileSoldierSquad</IncludeThing>
-				<IncludeThing>SteelTalonsGrenadeSoldier</IncludeThing>		
-				<IncludeThing>SteelTalonsGrenadeSoldierSquad</IncludeThing>
-				<IncludeThing>SteelTalonsZoneTrooper</IncludeThing>		
-				<IncludeThing>SteelTalonsZoneTrooperSquad</IncludeThing>	
-				<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
-
-				<IncludeThing>ZOCOMRifleSoldier</IncludeThing>
-				<IncludeThing>ZOCOMRifleSoldierVeteran</IncludeThing>					
-				<IncludeThing>ZOCOMRifleSoldierSquad</IncludeThing>	
-				<IncludeThing>ZOCOMRifleSoldierSquad_Veteran</IncludeThing>	
-				<IncludeThing>ZOCOMMissileSoldier</IncludeThing>
-				<IncludeThing>ZOCOMMissileSoldierVeteran</IncludeThing>					
-				<IncludeThing>ZOCOMMissileSoldierSquad</IncludeThing>
-				<IncludeThing>ZOCOMMissileSoldierSquad_Veteran</IncludeThing>
-				<IncludeThing>ZOCOMGrenadeSoldier</IncludeThing>		
-				<IncludeThing>ZOCOMGrenadeSoldierSquad</IncludeThing>
-				<IncludeThing>ZOCOMZoneRaider</IncludeThing>		
-				<IncludeThing>ZOCOMZoneRaiderSquad</IncludeThing>
-				<IncludeThing>ZOCOMZoneRaiderSquad_Veteran</IncludeThing>
-				<IncludeThing>ZOCOMSniper</IncludeThing>		
-				<IncludeThing>ZOCOMSniperSquad</IncludeThing>
-				<IncludeThing>ZOCOMSniperSquad_Veteran</IncludeThing>
-				<IncludeThing>ZOCOMSpotter</IncludeThing>		
-				<IncludeThing>ZOCOMEngineer</IncludeThing>		
-			</CanAlwaysEnterObjectFilter>
-			<PassengerFilter
-				Rule="ANY"
-				Relationship="SAME_PLAYER"
-				RejectModelCondition="EMOTION_DISSIDENT">
-				<IncludeThing>GDIRifleSoldier</IncludeThing>		
-				<IncludeThing>GDIRifleSoldierSquad</IncludeThing>	
-				<IncludeThing>GDIRifleSoldierSquad_Veteran</IncludeThing>
-				<IncludeThing>GDIRifleSoldierVeteran</IncludeThing>					
-				<IncludeThing>GDIMissileSoldier</IncludeThing>
-				<IncludeThing>GDIMissileSoldierVeteran</IncludeThing>					
-				<IncludeThing>GDIMissileSoldierSquad</IncludeThing>
-				<IncludeThing>GDIMissileSoldierSquad_Veteran</IncludeThing>
-				<IncludeThing>GDIGrenadeSoldier</IncludeThing>		
-				<IncludeThing>GDIGrenadeSoldierSquad</IncludeThing>
-				<IncludeThing>GDIZoneTrooper</IncludeThing>		
-				<IncludeThing>GDIZoneTrooperSquad</IncludeThing>
-				<IncludeThing>GDIZoneTrooperSquad_Veteran</IncludeThing>
-				<IncludeThing>GDISniper</IncludeThing>		
-				<IncludeThing>GDISniperSquad</IncludeThing>
-				<IncludeThing>GDISniperSquad_Veteran</IncludeThing>
-				<IncludeThing>GDISpotter</IncludeThing>		
-				<IncludeThing>GDIEngineer</IncludeThing>
-
-				<IncludeThing>SteelTalonsRifleSoldier</IncludeThing>		
-				<IncludeThing>SteelTalonsRifleSoldierSquad</IncludeThing>	
-				<IncludeThing>SteelTalonsMissileSoldier</IncludeThing>		
-				<IncludeThing>SteelTalonsMissileSoldierSquad</IncludeThing>
-				<IncludeThing>SteelTalonsGrenadeSoldier</IncludeThing>		
-				<IncludeThing>SteelTalonsGrenadeSoldierSquad</IncludeThing>
-				<IncludeThing>SteelTalonsZoneTrooper</IncludeThing>		
-				<IncludeThing>SteelTalonsZoneTrooperSquad</IncludeThing>	
-				<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
-
-				<IncludeThing>ZOCOMRifleSoldier</IncludeThing>		
-				<IncludeThing>ZOCOMRifleSoldierVeteran</IncludeThing>	
-				<IncludeThing>ZOCOMRifleSoldierSquad</IncludeThing>	
-				<IncludeThing>ZOCOMRifleSoldierSquad_Veteran</IncludeThing>	
-				<IncludeThing>ZOCOMMissileSoldier</IncludeThing>
-				<IncludeThing>ZOCOMMissileSoldierVeteran</IncludeThing>				
-				<IncludeThing>ZOCOMMissileSoldierSquad</IncludeThing>
-				<IncludeThing>ZOCOMMissileSoldierSquad_Veteran</IncludeThing>
-				<IncludeThing>ZOCOMGrenadeSoldier</IncludeThing>		
-				<IncludeThing>ZOCOMGrenadeSoldierSquad</IncludeThing>
-				<IncludeThing>ZOCOMZoneRaider</IncludeThing>		
-				<IncludeThing>ZOCOMZoneRaiderSquad</IncludeThing>
-				<IncludeThing>ZOCOMZoneRaiderSquad_Veteran</IncludeThing>
-				<IncludeThing>ZOCOMSniper</IncludeThing>		
-				<IncludeThing>ZOCOMSniperSquad</IncludeThing>
-				<IncludeThing>ZOCOMSniperSquad_Veteran</IncludeThing>
-				<IncludeThing>ZOCOMSpotter</IncludeThing>		
-				<IncludeThing>ZOCOMEngineer</IncludeThing>		
-			</PassengerFilter>
-			<DieMuxData
-				DeathTypes="ALL" />
-			<PassengerData
-				BonePrefix="SUBBONE_">
-				<Filter
-					Rule="NONE"
-					Include="INFANTRY" 
-					Relationship="SAME_PLAYER"/>
-			</PassengerData>
-			<MemberTemplateStatusInfo
-				ThingTemplate="GDISniperSquad"
-				ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
-			<MemberTemplateStatusInfo
-				ThingTemplate="GDISniperSquad_Veteran"
-				ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
-			<MemberTemplateStatusInfo
-				ThingTemplate="ZOCOMSniperSquad"
-				ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
-			<MemberTemplateStatusInfo
-				ThingTemplate="ZOCOMSniperSquad_Veteran"
-				ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
-			<UpgradeContainerOnContain
-				ID="RifleSoldiers">
-				<UnitFilter>
+			<SlaughterHordeContain
+				id="ModuleTag_Contain"
+				ObjectStatusOfContained=""
+				ContainMax="4"
+				CashBackPercent="100"
+				MobileGarrison="true"
+				ImmuneToClearBuildingAttacks="true"
+				AllowEnemiesInside="false"
+				AllowAlliesInside="true"
+				AllowNeutralInside="false"
+				AllowOwnPlayerInsideOverride="true"
+				ShowPips="true"
+				EnterSound="AudioEvent:VehicleEnter"
+				ExitSound="AudioEvent:VehicleExit"
+				KillPassengersOnDeath="true">
+				<CanAlwaysEnterObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					RejectModelCondition="EMOTION_DISSIDENT">
+					<IncludeThing>GDIRifleSoldier</IncludeThing>
 					<IncludeThing>GDIRifleSoldierSquad</IncludeThing>
 					<IncludeThing>GDIRifleSoldierSquad_Veteran</IncludeThing>
-					<IncludeThing>SteelTalonsRifleSoldierSquad</IncludeThing>  
-					<IncludeThing>ZOCOMRifleSoldierSquad</IncludeThing>			
-					<IncludeThing>ZOCOMRifleSoldierSquad_Veteran</IncludeThing>	
-					<IncludeThing>GDIRifleSoldierVeteran</IncludeThing>	
-					<IncludeThing>ZOCOMRifleSoldierVeteran</IncludeThing>						
-				</UnitFilter>
-				<UpgradeList>Upgrade_MARVRifleSquadFrontLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVRifleSquadFrontRight</UpgradeList>
-				<UpgradeList>Upgrade_MARVRifleSquadRearLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVRifleSquadRearRight</UpgradeList>         	
-			</UpgradeContainerOnContain>
-			<UpgradeContainerOnContain
-				ID="MissileSoldiers">
-				<UnitFilter>
+					<IncludeThing>GDIRifleSoldierVeteran</IncludeThing>
+					<IncludeThing>GDIMissileSoldier</IncludeThing>
 					<IncludeThing>GDIMissileSoldierSquad</IncludeThing>
-					<IncludeThing>GDIMissileSoldierVeteran</IncludeThing>
 					<IncludeThing>GDIMissileSoldierSquad_Veteran</IncludeThing>
-					<IncludeThing>SteelTalonsMissileSoldierSquad</IncludeThing>
-					<IncludeThing>ZOCOMMissileSoldierSquad</IncludeThing>	
-					<IncludeThing>ZOCOMMissileSoldierVeteran</IncludeThing>							
-					<IncludeThing>ZOCOMMissileSoldierSquad_Veteran</IncludeThing>		
-				</UnitFilter>
-				<UpgradeList>Upgrade_MARVMissileSquadFrontLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVMissileSquadFrontRight</UpgradeList>
-				<UpgradeList>Upgrade_MARVMissileSquadRearLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVMissileSquadRearRight</UpgradeList>         	
-			</UpgradeContainerOnContain>        
-			<UpgradeContainerOnContain
-				ID="Engineer">
-				<UnitFilter>
-					<IncludeThing>GDIEngineer</IncludeThing>
-					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
-					<IncludeThing>ZOCOMEngineer</IncludeThing>        	    	
-				</UnitFilter>
-				<UpgradeList>Upgrade_MARVEngineerFrontLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVEngineerFrontRight</UpgradeList>
-				<UpgradeList>Upgrade_MARVEngineerRearLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVEngineerRearRight</UpgradeList>         	
-			</UpgradeContainerOnContain> 
-			<UpgradeContainerOnContain
-				ID="Grenades">
-				<UnitFilter>
+					<IncludeThing>GDIMissileSoldierVeteran</IncludeThing>
 					<IncludeThing>GDIGrenadeSoldier</IncludeThing>
 					<IncludeThing>GDIGrenadeSoldierSquad</IncludeThing>
-					<IncludeThing>SteelTalonsGrenadeSoldier</IncludeThing>		
-					<IncludeThing>SteelTalonsGrenadeSoldierSquad</IncludeThing>               	
-					<IncludeThing>ZOCOMGrenadeSoldier</IncludeThing>		
-					<IncludeThing>ZOCOMGrenadeSoldierSquad</IncludeThing>                	
-				</UnitFilter>
-				<UpgradeList>Upgrade_MARVGrenadeSoldierSquadFrontLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVGrenadeSoldierSquadFrontRight</UpgradeList>
-				<UpgradeList>Upgrade_MARVGrenadeSoldierSquadRearLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVGrenadeSoldierSquadRearRight</UpgradeList>         	
-			</UpgradeContainerOnContain>         
-			<UpgradeContainerOnContain
-				ID="Snipers">
-				<UnitFilter>
-					<IncludeThing>GDISniperSquad</IncludeThing>	
-					<IncludeThing>GDISniperSquad_Veteran</IncludeThing>	
-					<IncludeThing>ZOCOMSniperSquad</IncludeThing>
-					<IncludeThing>ZOCOMSniperSquad_Veteran</IncludeThing>
-				</UnitFilter>
-				<UpgradeList>Upgrade_MARVSniperSquadFrontLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVSniperSquadFrontRight</UpgradeList>
-				<UpgradeList>Upgrade_MARVSniperSquadRearLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVSniperSquadRearRight</UpgradeList>         	
-			</UpgradeContainerOnContain>              
-			<UpgradeContainerOnContain
-				ID="ZoneTroopers">
-				<UnitFilter>
+					<IncludeThing>GDIZoneTrooper</IncludeThing>
 					<IncludeThing>GDIZoneTrooperSquad</IncludeThing>
 					<IncludeThing>GDIZoneTrooperSquad_Veteran</IncludeThing>
-					<IncludeThing>SteelTalonsZoneTrooperSquad</IncludeThing>         	
-				</UnitFilter>
-				<UpgradeList>Upgrade_MARVZoneTrooperSquadFrontLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVZoneTrooperSquadFrontRight</UpgradeList>
-				<UpgradeList>Upgrade_MARVZoneTrooperSquadRearLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVZoneTrooperSquadRearRight</UpgradeList>         	
-			</UpgradeContainerOnContain>    
-			<UpgradeContainerOnContain
-				ID="ZoneRaiders">
-				<UnitFilter>
+					<IncludeThing>GDISniper</IncludeThing>
+					<IncludeThing>GDISniperSquad</IncludeThing>
+					<IncludeThing>GDISniperSquad_Veteran</IncludeThing>
+					<IncludeThing>GDISpotter</IncludeThing>
+					<IncludeThing>GDIEngineer</IncludeThing>
+
+					<IncludeThing>SteelTalonsRifleSoldier</IncludeThing>
+					<IncludeThing>SteelTalonsRifleSoldierSquad</IncludeThing>
+					<IncludeThing>SteelTalonsMissileSoldier</IncludeThing>
+					<IncludeThing>SteelTalonsMissileSoldierSquad</IncludeThing>
+					<IncludeThing>SteelTalonsGrenadeSoldier</IncludeThing>
+					<IncludeThing>SteelTalonsGrenadeSoldierSquad</IncludeThing>
+					<IncludeThing>SteelTalonsZoneTrooper</IncludeThing>
+					<IncludeThing>SteelTalonsZoneTrooperSquad</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+
+					<IncludeThing>ZOCOMRifleSoldier</IncludeThing>
+					<IncludeThing>ZOCOMRifleSoldierVeteran</IncludeThing>
+					<IncludeThing>ZOCOMRifleSoldierSquad</IncludeThing>
+					<IncludeThing>ZOCOMRifleSoldierSquad_Veteran</IncludeThing>
+					<IncludeThing>ZOCOMMissileSoldier</IncludeThing>
+					<IncludeThing>ZOCOMMissileSoldierVeteran</IncludeThing>
+					<IncludeThing>ZOCOMMissileSoldierSquad</IncludeThing>
+					<IncludeThing>ZOCOMMissileSoldierSquad_Veteran</IncludeThing>
+					<IncludeThing>ZOCOMGrenadeSoldier</IncludeThing>
+					<IncludeThing>ZOCOMGrenadeSoldierSquad</IncludeThing>
+					<IncludeThing>ZOCOMZoneRaider</IncludeThing>
 					<IncludeThing>ZOCOMZoneRaiderSquad</IncludeThing>
 					<IncludeThing>ZOCOMZoneRaiderSquad_Veteran</IncludeThing>
-				</UnitFilter>
-				<UpgradeList>Upgrade_MARVZoneRaiderSquadFrontLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVZoneRaiderSquadFrontRight</UpgradeList>
-				<UpgradeList>Upgrade_MARVZoneRaiderSquadRearLeft</UpgradeList>
-				<UpgradeList>Upgrade_MARVZoneRaiderSquadRearRight</UpgradeList>         	
-			</UpgradeContainerOnContain>        
-		</SlaughterHordeContain>
+					<IncludeThing>ZOCOMSniper</IncludeThing>
+					<IncludeThing>ZOCOMSniperSquad</IncludeThing>
+					<IncludeThing>ZOCOMSniperSquad_Veteran</IncludeThing>
+					<IncludeThing>ZOCOMSpotter</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</CanAlwaysEnterObjectFilter>
+				<PassengerFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					RejectModelCondition="EMOTION_DISSIDENT">
+					<IncludeThing>GDIRifleSoldier</IncludeThing>
+					<IncludeThing>GDIRifleSoldierSquad</IncludeThing>
+					<IncludeThing>GDIRifleSoldierSquad_Veteran</IncludeThing>
+					<IncludeThing>GDIRifleSoldierVeteran</IncludeThing>
+					<IncludeThing>GDIMissileSoldier</IncludeThing>
+					<IncludeThing>GDIMissileSoldierVeteran</IncludeThing>
+					<IncludeThing>GDIMissileSoldierSquad</IncludeThing>
+					<IncludeThing>GDIMissileSoldierSquad_Veteran</IncludeThing>
+					<IncludeThing>GDIGrenadeSoldier</IncludeThing>
+					<IncludeThing>GDIGrenadeSoldierSquad</IncludeThing>
+					<IncludeThing>GDIZoneTrooper</IncludeThing>
+					<IncludeThing>GDIZoneTrooperSquad</IncludeThing>
+					<IncludeThing>GDIZoneTrooperSquad_Veteran</IncludeThing>
+					<IncludeThing>GDISniper</IncludeThing>
+					<IncludeThing>GDISniperSquad</IncludeThing>
+					<IncludeThing>GDISniperSquad_Veteran</IncludeThing>
+					<IncludeThing>GDISpotter</IncludeThing>
+					<IncludeThing>GDIEngineer</IncludeThing>
 
-		<!-- object status for RGA targets -->
+					<IncludeThing>SteelTalonsRifleSoldier</IncludeThing>
+					<IncludeThing>SteelTalonsRifleSoldierSquad</IncludeThing>
+					<IncludeThing>SteelTalonsMissileSoldier</IncludeThing>
+					<IncludeThing>SteelTalonsMissileSoldierSquad</IncludeThing>
+					<IncludeThing>SteelTalonsGrenadeSoldier</IncludeThing>
+					<IncludeThing>SteelTalonsGrenadeSoldierSquad</IncludeThing>
+					<IncludeThing>SteelTalonsZoneTrooper</IncludeThing>
+					<IncludeThing>SteelTalonsZoneTrooperSquad</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+
+					<IncludeThing>ZOCOMRifleSoldier</IncludeThing>
+					<IncludeThing>ZOCOMRifleSoldierVeteran</IncludeThing>
+					<IncludeThing>ZOCOMRifleSoldierSquad</IncludeThing>
+					<IncludeThing>ZOCOMRifleSoldierSquad_Veteran</IncludeThing>
+					<IncludeThing>ZOCOMMissileSoldier</IncludeThing>
+					<IncludeThing>ZOCOMMissileSoldierVeteran</IncludeThing>
+					<IncludeThing>ZOCOMMissileSoldierSquad</IncludeThing>
+					<IncludeThing>ZOCOMMissileSoldierSquad_Veteran</IncludeThing>
+					<IncludeThing>ZOCOMGrenadeSoldier</IncludeThing>
+					<IncludeThing>ZOCOMGrenadeSoldierSquad</IncludeThing>
+					<IncludeThing>ZOCOMZoneRaider</IncludeThing>
+					<IncludeThing>ZOCOMZoneRaiderSquad</IncludeThing>
+					<IncludeThing>ZOCOMZoneRaiderSquad_Veteran</IncludeThing>
+					<IncludeThing>ZOCOMSniper</IncludeThing>
+					<IncludeThing>ZOCOMSniperSquad</IncludeThing>
+					<IncludeThing>ZOCOMSniperSquad_Veteran</IncludeThing>
+					<IncludeThing>ZOCOMSpotter</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</PassengerFilter>
+				<DieMuxData
+					DeathTypes="ALL" />
+				<PassengerData
+					BonePrefix="SUBBONE_">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY"
+						Relationship="SAME_PLAYER" />
+				</PassengerData>
+				<MemberTemplateStatusInfo
+					ThingTemplate="GDISniperSquad"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<MemberTemplateStatusInfo
+					ThingTemplate="GDISniperSquad_Veteran"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<MemberTemplateStatusInfo
+					ThingTemplate="ZOCOMSniperSquad"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<MemberTemplateStatusInfo
+					ThingTemplate="ZOCOMSniperSquad_Veteran"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<UpgradeContainerOnContain
+					ID="RifleSoldiers">
+					<UnitFilter>
+						<IncludeThing>GDIRifleSoldierSquad</IncludeThing>
+						<IncludeThing>GDIRifleSoldierSquad_Veteran</IncludeThing>
+						<IncludeThing>SteelTalonsRifleSoldierSquad</IncludeThing>
+						<IncludeThing>ZOCOMRifleSoldierSquad</IncludeThing>
+						<IncludeThing>ZOCOMRifleSoldierSquad_Veteran</IncludeThing>
+						<IncludeThing>GDIRifleSoldierVeteran</IncludeThing>
+						<IncludeThing>ZOCOMRifleSoldierVeteran</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_MARVRifleSquadFrontLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVRifleSquadFrontRight</UpgradeList>
+					<UpgradeList>Upgrade_MARVRifleSquadRearLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVRifleSquadRearRight</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="MissileSoldiers">
+					<UnitFilter>
+						<IncludeThing>GDIMissileSoldierSquad</IncludeThing>
+						<IncludeThing>GDIMissileSoldierVeteran</IncludeThing>
+						<IncludeThing>GDIMissileSoldierSquad_Veteran</IncludeThing>
+						<IncludeThing>SteelTalonsMissileSoldierSquad</IncludeThing>
+						<IncludeThing>ZOCOMMissileSoldierSquad</IncludeThing>
+						<IncludeThing>ZOCOMMissileSoldierVeteran</IncludeThing>
+						<IncludeThing>ZOCOMMissileSoldierSquad_Veteran</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_MARVMissileSquadFrontLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVMissileSquadFrontRight</UpgradeList>
+					<UpgradeList>Upgrade_MARVMissileSquadRearLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVMissileSquadRearRight</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="Engineer">
+					<UnitFilter>
+						<IncludeThing>GDIEngineer</IncludeThing>
+						<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+						<IncludeThing>ZOCOMEngineer</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_MARVEngineerFrontLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVEngineerFrontRight</UpgradeList>
+					<UpgradeList>Upgrade_MARVEngineerRearLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVEngineerRearRight</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="Grenades">
+					<UnitFilter>
+						<IncludeThing>GDIGrenadeSoldier</IncludeThing>
+						<IncludeThing>GDIGrenadeSoldierSquad</IncludeThing>
+						<IncludeThing>SteelTalonsGrenadeSoldier</IncludeThing>
+						<IncludeThing>SteelTalonsGrenadeSoldierSquad</IncludeThing>
+						<IncludeThing>ZOCOMGrenadeSoldier</IncludeThing>
+						<IncludeThing>ZOCOMGrenadeSoldierSquad</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_MARVGrenadeSoldierSquadFrontLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVGrenadeSoldierSquadFrontRight</UpgradeList>
+					<UpgradeList>Upgrade_MARVGrenadeSoldierSquadRearLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVGrenadeSoldierSquadRearRight</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="Snipers">
+					<UnitFilter>
+						<IncludeThing>GDISniperSquad</IncludeThing>
+						<IncludeThing>GDISniperSquad_Veteran</IncludeThing>
+						<IncludeThing>ZOCOMSniperSquad</IncludeThing>
+						<IncludeThing>ZOCOMSniperSquad_Veteran</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_MARVSniperSquadFrontLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVSniperSquadFrontRight</UpgradeList>
+					<UpgradeList>Upgrade_MARVSniperSquadRearLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVSniperSquadRearRight</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="ZoneTroopers">
+					<UnitFilter>
+						<IncludeThing>GDIZoneTrooperSquad</IncludeThing>
+						<IncludeThing>GDIZoneTrooperSquad_Veteran</IncludeThing>
+						<IncludeThing>SteelTalonsZoneTrooperSquad</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_MARVZoneTrooperSquadFrontLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVZoneTrooperSquadFrontRight</UpgradeList>
+					<UpgradeList>Upgrade_MARVZoneTrooperSquadRearLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVZoneTrooperSquadRearRight</UpgradeList>
+				</UpgradeContainerOnContain>
+				<UpgradeContainerOnContain
+					ID="ZoneRaiders">
+					<UnitFilter>
+						<IncludeThing>ZOCOMZoneRaiderSquad</IncludeThing>
+						<IncludeThing>ZOCOMZoneRaiderSquad_Veteran</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_MARVZoneRaiderSquadFrontLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVZoneRaiderSquadFrontRight</UpgradeList>
+					<UpgradeList>Upgrade_MARVZoneRaiderSquadRearLeft</UpgradeList>
+					<UpgradeList>Upgrade_MARVZoneRaiderSquadRearRight</UpgradeList>
+				</UpgradeContainerOnContain>
+			</SlaughterHordeContain>
+
+			<!-- RIDER1: front left
+				 RIDER3: front right
+				 RIDER4: rear left
+				 RIDER_IS_PILOT: rear right -->
+
+			<!-- Infantry Garrison UGs -->
+			<!-- RIFLES -->
+
+			<SubObjectsUpgrade id="ModuleTag_ShowRifleSquadUGLeftFront"
+				ShowSubObjects="RM_Turret_TreadLF RM_Base_TreadLF">
+				<TriggeredBy>Upgrade_MARVRifleSquadFrontLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowRifleSquadUGLeftFrontUpgrade"
+				StatusToSet="RIDER1">
+				<TriggeredBy>Upgrade_MARVRifleSquadFrontLeft</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<SubObjectsUpgrade id="ModuleTag_ShowRifleSquadUGRightFront"
+				ShowSubObjects="RM_Base_TreadRF RM_Turret_TreadRF">
+				<TriggeredBy>Upgrade_MARVRifleSquadFrontRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowRifleSquadUGRightFrontUpgrade"
+				StatusToSet="RIDER3">
+				<TriggeredBy>Upgrade_MARVRifleSquadFrontRight</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<SubObjectsUpgrade id="ModuleTag_ShowRifleSquadUGLeftRear"
+				ShowSubObjects="RM_Base_TreadLR RM_Turret_TreadLR">
+				<TriggeredBy>Upgrade_MARVRifleSquadRearLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowRifleSquadUGLeftRearUpgrade"
+				StatusToSet="RIDER4">
+				<TriggeredBy>Upgrade_MARVRifleSquadRearLeft</TriggeredBy>
+			</StatusBitsUpgrade>
+
+
+			<SubObjectsUpgrade id="ModuleTag_ShowRifleSquadUGRightRear"
+				ShowSubObjects="RM_Base_TreadRR RM_Turret_TreadRR">
+				<TriggeredBy>Upgrade_MARVRifleSquadRearRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_ShowRifleSquadUGRightRearUpgrade"
+				StatusToSet="RIDER_IS_PILOT">
+				<TriggeredBy>Upgrade_MARVRifleSquadRearRight</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<!-- MISSILES -->
+			<SubObjectsUpgrade id="ModuleTag_ShowMissileSquadUGLeftFront"
+				ShowSubObjects="MS_Base_TreadLF MS_Turret_TreadLF">
+				<TriggeredBy>Upgrade_MARVMissileSquadFrontLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowMissileSquadUGRightFront"
+				ShowSubObjects="MS_Base_TreadRF MS_Turret_TreadRF">
+				<TriggeredBy>Upgrade_MARVMissileSquadFrontRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowMissileSquadUGLeftRear"
+				ShowSubObjects="MS_Base_TreadLR MS_Turret_TreadLR">
+				<TriggeredBy>Upgrade_MARVMissileSquadRearLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowMissileSquadUGRightRear"
+				ShowSubObjects="MS_Base_TreadRR MS_Turret_TreadRR">
+				<TriggeredBy>Upgrade_MARVMissileSquadRearRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<!-- ENGINEER -->
+			<SubObjectsUpgrade id="ModuleTag_ShowEngineerUGLeftFront"
+				ShowSubObjects="EN_Base_TreadLF EN_Turret_TreadLF">
+				<TriggeredBy>Upgrade_MARVEngineerFrontLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowEngineerUGRightFront"
+				ShowSubObjects="EN_Base_TreadRF EN_Turret_TreadRF">
+				<TriggeredBy>Upgrade_MARVEngineerFrontRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowEngineerUGLeftRear"
+				ShowSubObjects="EN_Base_TreadLR EN_Turret_TreadLR">
+				<TriggeredBy>Upgrade_MARVEngineerRearLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowEngineerUGRightRear"
+				ShowSubObjects="EN_Base_TreadRR EN_Turret_TreadRR">
+				<TriggeredBy>Upgrade_MARVEngineerRearRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<!-- GRENADES -->
+			<SubObjectsUpgrade id="ModuleTag_ShowGrenadeSoldierSquadUGLeftFront"
+				ShowSubObjects="GN_Base_TreadLF GN_Turret_TreadLF">
+				<TriggeredBy>Upgrade_MARVGrenadeSoldierSquadFrontLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowGrenadeSoldierSquadUGRightFront"
+				ShowSubObjects="GN_Base_TreadRF GN_Turret_TreadRF">
+				<TriggeredBy>Upgrade_MARVGrenadeSoldierSquadFrontRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowGrenadeSoldierSquadUGLeftRear"
+				ShowSubObjects="GN_Base_TreadLR GN_Turret_TreadLR">
+				<TriggeredBy>Upgrade_MARVGrenadeSoldierSquadRearLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowGrenadeSoldierSquadUGRightRear"
+				ShowSubObjects="GN_Base_TreadRR GN_Turret_TreadRR">
+				<TriggeredBy>Upgrade_MARVGrenadeSoldierSquadRearRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<!-- SNIPER -->
+			<SubObjectsUpgrade id="ModuleTag_ShowSniperSquadUGLeftFront"
+				ShowSubObjects="ST_Base_TreadLF ST_Turret_TreadLF ST_LASERLF">
+				<TriggeredBy>Upgrade_MARVSniperSquadFrontLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowSniperSquadUGRightFront"
+				ShowSubObjects="ST_Base_TreadRF ST_Turret_TreadRF ST_LASERRF">
+				<TriggeredBy>Upgrade_MARVSniperSquadFrontRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowSniperSquadUGLeftRear"
+				ShowSubObjects="ST_Base_TreadLR ST_Turret_TreadLR ST_LASERLR">
+				<TriggeredBy>Upgrade_MARVSniperSquadRearLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowSniperSquadUGRightRear"
+				ShowSubObjects="ST_Base_TreadRR ST_Turret_TreadRR ST_LASERRR">
+				<TriggeredBy>Upgrade_MARVSniperSquadRearRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<!-- ZONETROOPERS -->
+			<SubObjectsUpgrade id="ModuleTag_ShowZoneTrooperSquadUGLeftFront"
+				ShowSubObjects="ZT_Base_TreadLF ZT_Turret_TreadLF">
+				<TriggeredBy>Upgrade_MARVZoneTrooperSquadFrontLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowZoneTrooperSquadUGRightFront"
+				ShowSubObjects="ZT_Base_TreadRF ZT_Turret_TreadRF">
+				<TriggeredBy>Upgrade_MARVZoneTrooperSquadFrontRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowZoneTrooperSquadUGLeftRear"
+				ShowSubObjects="ZT_Base_TreadLR ZT_Turret_TreadLR">
+				<TriggeredBy>Upgrade_MARVZoneTrooperSquadRearLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade id="ModuleTag_ShowZoneTrooperSquadUGRightRear"
+				ShowSubObjects="ZT_Base_TreadRR ZT_TURRETRR">
+				<TriggeredBy>Upgrade_MARVZoneTrooperSquadRearRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<!-- ZONE RAIDERS -->
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowZoneRaiderSquadUGLeftFront"
+				ShowSubObjects="GN_Base_TreadLF GN_Turret_TreadLF">
+				<TriggeredBy>Upgrade_MARVZoneRaiderSquadFrontLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowZoneRaiderSquadUGRightFront"
+				ShowSubObjects="GN_Base_TreadRF GN_Turret_TreadRF">
+				<TriggeredBy>Upgrade_MARVZoneRaiderSquadFrontRight</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowZoneRaiderSquadUGLeftRear"
+				ShowSubObjects="GN_Base_TreadLR GN_Turret_TreadLR">
+				<TriggeredBy>Upgrade_MARVZoneRaiderSquadRearLeft</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowZoneRaiderSquadUGRightRear"
+				ShowSubObjects="GN_Base_TreadRR GN_Turret_TreadRR">
+				<TriggeredBy>Upgrade_MARVZoneRaiderSquadRearRight</TriggeredBy>
+			</SubObjectsUpgrade>
+
+			<!-- END Infantry Garrison UGS -->
+
+			<LaserState id="ModuleTag_LaserState01" LaserId="0" />
+			<LaserState id="ModuleTag_LaserState02" LaserId="1" />
+			<LaserState id="ModuleTag_LaserState03" LaserId="2" />
+			<LaserState id="ModuleTag_LaserState04" LaserId="3" />
+			<Physics id="ModuleTag_Physics" />
+			<SlowDeath id="ModuleTag_Death" SinkDelay="5s" SinkRate="1.5" DestructionDelay="15s">
+				<OCL Type="INITIAL">
+					<OCL>OCL_GDIMARVDebris</OCL>
+				</OCL>
+				<DieMuxData DeathTypes="ALL" DeathTypesForbidden="TOPPLED" />
+				<Sound Type="INITIAL" List="GDI_Generic_VoiceDieMS" />
+			</SlowDeath>
+			<FXListBehavior id="ModuleTag_FXList">
+				<DieMuxData DeathTypes="ALL" />
+				<Event Index="onDeath" FX="FX_GDIMARVExplode" />
+			</FXListBehavior>
+			<ProductionUpdate id="ModuleTag_Production" MaxQueueEntries="1" />
+			<AutoHealBehavior id="Upgrade_HeroicHeal_01" InitiallyActive="false"
+				HealOnlyIfNotInCombat="true" HealOnlyIfNotUnderAttack="true" StartHealingDelay="5s"
+				HealingAmount="10" HealingDelay="3s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AutoHealBehavior id="Upgrade_EngineerHeal_01" InitiallyActive="false"
+				HealOnlyIfNotInCombat="false" HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="0s" HealingAmount="60" HealingDelay="2s" HealFXList="">
+				<TriggeredBy>Upgrade_MARVEngineerFrontLeft</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade id="Upgrade_EngineerHeal01_TriggerFX"
+				AttributeModifier="AttributeModifier_MARVEngineerUpgradeLF">
+				<TriggeredBy>Upgrade_MARVEngineerFrontLeft</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AutoHealBehavior id="Upgrade_EngineerHeal_02" InitiallyActive="false"
+				HealOnlyIfNotInCombat="false" HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="0s" HealingAmount="60" HealingDelay="2s" HealFXList="">
+				<TriggeredBy>Upgrade_MARVEngineerFrontRight</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade id="Upgrade_EngineerHeal02_TriggerFX"
+				AttributeModifier="AttributeModifier_MARVEngineerUpgradeRF">
+				<TriggeredBy>Upgrade_MARVEngineerFrontRight</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AutoHealBehavior id="Upgrade_EngineerHeal_03" InitiallyActive="false"
+				HealOnlyIfNotInCombat="false" HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="0s" HealingAmount="60" HealingDelay="2s" HealFXList="">
+				<TriggeredBy>Upgrade_MARVEngineerRearLeft</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade id="Upgrade_EngineerHeal03_TriggerFX"
+				AttributeModifier="AttributeModifier_MARVEngineerUpgradeLR">
+				<TriggeredBy>Upgrade_MARVEngineerRearLeft</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AutoHealBehavior id="Upgrade_EngineerHeal_04" InitiallyActive="false"
+				HealOnlyIfNotInCombat="false" HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="0s" HealingAmount="60" HealingDelay="2s" HealFXList="">
+				<TriggeredBy>Upgrade_MARVEngineerRearRight</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade id="Upgrade_EngineerHeal04_TriggerFX"
+				AttributeModifier="AttributeModifier_MARVEngineerUpgradeRR">
+				<TriggeredBy>Upgrade_MARVEngineerRearRight</TriggeredBy>
+			</AttributeModifierUpgrade>
+
+			<!-- object status for RGA targets -->
 			<StatusBitsUpgrade
 				id="ModuleTag_ObjectStatusForRGA_1"
 				StatusToSet="RIDER2">
@@ -1226,131 +2418,56 @@
 				id="ModuleTag_ObjectStatusForRGA_4"
 				StatusToSet="RIDER2">
 				<TriggeredBy>Upgrade_MARVZoneTrooperSquadRearRight</TriggeredBy>
-			</StatusBitsUpgrade>			
-			
-<!-- Infantry Garrison UGs -->		
-<!-- RIFLES -->
-			<SubObjectsUpgrade id="ModuleTag_ShowRifleSquadUGLeftFront" ShowSubObjects="RM_Turret_TreadLF RM_Base_TreadLF"> <TriggeredBy>Upgrade_MARVRifleSquadFrontLeft</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowRifleSquadUGRightFront" ShowSubObjects="RM_Base_TreadRF RM_Turret_TreadRF"> <TriggeredBy>Upgrade_MARVRifleSquadFrontRight</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowRifleSquadUGLeftRear" ShowSubObjects="RM_Base_TreadLR RM_Turret_TreadLR"> <TriggeredBy>Upgrade_MARVRifleSquadRearLeft</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowRifleSquadUGRightRear" ShowSubObjects="RM_Base_TreadRR RM_Turret_TreadRR"> <TriggeredBy>Upgrade_MARVRifleSquadRearRight</TriggeredBy>
-			</SubObjectsUpgrade>				
-<!-- MISSILES -->			
-			<SubObjectsUpgrade id="ModuleTag_ShowMissileSquadUGLeftFront" ShowSubObjects="MS_Base_TreadLF MS_Turret_TreadLF"> <TriggeredBy>Upgrade_MARVMissileSquadFrontLeft</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowMissileSquadUGRightFront" ShowSubObjects="MS_Base_TreadRF MS_Turret_TreadRF"> <TriggeredBy>Upgrade_MARVMissileSquadFrontRight</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowMissileSquadUGLeftRear" ShowSubObjects="MS_Base_TreadLR MS_Turret_TreadLR"> <TriggeredBy>Upgrade_MARVMissileSquadRearLeft</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowMissileSquadUGRightRear" ShowSubObjects="MS_Base_TreadRR MS_Turret_TreadRR"> <TriggeredBy>Upgrade_MARVMissileSquadRearRight</TriggeredBy>
-			</SubObjectsUpgrade>			
-<!-- ENGINEER -->
-			<SubObjectsUpgrade id="ModuleTag_ShowEngineerUGLeftFront" ShowSubObjects="EN_Base_TreadLF EN_Turret_TreadLF"> <TriggeredBy>Upgrade_MARVEngineerFrontLeft</TriggeredBy>
-			</SubObjectsUpgrade>
-			<SubObjectsUpgrade id="ModuleTag_ShowEngineerUGRightFront" ShowSubObjects="EN_Base_TreadRF EN_Turret_TreadRF"> <TriggeredBy>Upgrade_MARVEngineerFrontRight</TriggeredBy>
-			</SubObjectsUpgrade>
-			<SubObjectsUpgrade id="ModuleTag_ShowEngineerUGLeftRear" ShowSubObjects="EN_Base_TreadLR EN_Turret_TreadLR"> <TriggeredBy>Upgrade_MARVEngineerRearLeft</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowEngineerUGRightRear" ShowSubObjects="EN_Base_TreadRR EN_Turret_TreadRR"> <TriggeredBy>Upgrade_MARVEngineerRearRight</TriggeredBy>
-			</SubObjectsUpgrade>
-<!-- GRENADES -->
-			<SubObjectsUpgrade id="ModuleTag_ShowGrenadeSoldierSquadUGLeftFront" ShowSubObjects="GN_Base_TreadLF GN_Turret_TreadLF"> <TriggeredBy>Upgrade_MARVGrenadeSoldierSquadFrontLeft</TriggeredBy>
-			</SubObjectsUpgrade>
-			<SubObjectsUpgrade id="ModuleTag_ShowGrenadeSoldierSquadUGRightFront" ShowSubObjects="GN_Base_TreadRF GN_Turret_TreadRF"> <TriggeredBy>Upgrade_MARVGrenadeSoldierSquadFrontRight</TriggeredBy>
-			</SubObjectsUpgrade>
-			<SubObjectsUpgrade id="ModuleTag_ShowGrenadeSoldierSquadUGLeftRear" ShowSubObjects="GN_Base_TreadLR GN_Turret_TreadLR"> <TriggeredBy>Upgrade_MARVGrenadeSoldierSquadRearLeft</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowGrenadeSoldierSquadUGRightRear" ShowSubObjects="GN_Base_TreadRR GN_Turret_TreadRR"> <TriggeredBy>Upgrade_MARVGrenadeSoldierSquadRearRight</TriggeredBy>
-			</SubObjectsUpgrade>			
-<!-- SNIPER -->
-			<SubObjectsUpgrade id="ModuleTag_ShowSniperSquadUGLeftFront" ShowSubObjects="ST_Base_TreadLF ST_Turret_TreadLF ST_LASERLF"> <TriggeredBy>Upgrade_MARVSniperSquadFrontLeft</TriggeredBy>
-			</SubObjectsUpgrade>
-			<SubObjectsUpgrade id="ModuleTag_ShowSniperSquadUGRightFront" ShowSubObjects="ST_Base_TreadRF ST_Turret_TreadRF ST_LASERRF"> <TriggeredBy>Upgrade_MARVSniperSquadFrontRight</TriggeredBy>
-			</SubObjectsUpgrade>
-			<SubObjectsUpgrade id="ModuleTag_ShowSniperSquadUGLeftRear" ShowSubObjects="ST_Base_TreadLR ST_Turret_TreadLR ST_LASERLR"> <TriggeredBy>Upgrade_MARVSniperSquadRearLeft</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowSniperSquadUGRightRear" ShowSubObjects="ST_Base_TreadRR ST_Turret_TreadRR ST_LASERRR"> <TriggeredBy>Upgrade_MARVSniperSquadRearRight</TriggeredBy>
-			</SubObjectsUpgrade>
-<!-- ZONETROOPERS -->
-			<SubObjectsUpgrade id="ModuleTag_ShowZoneTrooperSquadUGLeftFront" ShowSubObjects="ZT_Base_TreadLF ZT_Turret_TreadLF"> <TriggeredBy>Upgrade_MARVZoneTrooperSquadFrontLeft</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowZoneTrooperSquadUGRightFront" ShowSubObjects="ZT_Base_TreadRF ZT_Turret_TreadRF"> <TriggeredBy>Upgrade_MARVZoneTrooperSquadFrontRight</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade id="ModuleTag_ShowZoneTrooperSquadUGLeftRear" ShowSubObjects="ZT_Base_TreadLR ZT_Turret_TreadLR"> <TriggeredBy>Upgrade_MARVZoneTrooperSquadRearLeft</TriggeredBy>
-			</SubObjectsUpgrade>						
-			<SubObjectsUpgrade id="ModuleTag_ShowZoneTrooperSquadUGRightRear" ShowSubObjects="ZT_Base_TreadRR ZT_TURRETRR"> <TriggeredBy>Upgrade_MARVZoneTrooperSquadRearRight</TriggeredBy>
-			</SubObjectsUpgrade>			
-<!-- ZONE RAIDERS -->
-			<SubObjectsUpgrade
-				id="ModuleTag_ShowZoneRaiderSquadUGLeftFront"
-				ShowSubObjects="GN_Base_TreadLF GN_Turret_TreadLF">
-				<TriggeredBy>Upgrade_MARVZoneRaiderSquadFrontLeft</TriggeredBy>
-			</SubObjectsUpgrade>
-			<SubObjectsUpgrade
-				id="ModuleTag_ShowZoneRaiderSquadUGRightFront"
-				ShowSubObjects="GN_Base_TreadRF GN_Turret_TreadRF">
-				<TriggeredBy>Upgrade_MARVZoneRaiderSquadFrontRight</TriggeredBy>
-			</SubObjectsUpgrade>
-			<SubObjectsUpgrade
-				id="ModuleTag_ShowZoneRaiderSquadUGLeftRear"
-				ShowSubObjects="GN_Base_TreadLR GN_Turret_TreadLR">
-				<TriggeredBy>Upgrade_MARVZoneRaiderSquadRearLeft</TriggeredBy>
-			</SubObjectsUpgrade>			
-			<SubObjectsUpgrade
-				id="ModuleTag_ShowZoneRaiderSquadUGRightRear"
-				ShowSubObjects="GN_Base_TreadRR GN_Turret_TreadRR">
-				<TriggeredBy>Upgrade_MARVZoneRaiderSquadRearRight</TriggeredBy>
-			</SubObjectsUpgrade>
-			
-<!-- END Infantry Garrison UGS -->
-
-			<LaserState id="ModuleTag_LaserState01" LaserId="0" />
-			<LaserState id="ModuleTag_LaserState02" LaserId="1" />
-			<LaserState id="ModuleTag_LaserState03" LaserId="2" />
-			<LaserState id="ModuleTag_LaserState04" LaserId="3" />
-			<Physics id="ModuleTag_Physics" />
-			<SlowDeath id="ModuleTag_Death" SinkDelay="5s" SinkRate="1.5" DestructionDelay="15s"> <OCL 	Type="INITIAL"> 	<OCL>OCL_GDIMARVDebris</OCL> </OCL> <DieMuxData 	DeathTypes="ALL" 	DeathTypesForbidden="TOPPLED" /> <Sound 	Type="INITIAL" 	List="GDI_Generic_VoiceDieMS" />
-			</SlowDeath>
-			<FXListBehavior id="ModuleTag_FXList"> <DieMuxData 	DeathTypes="ALL" /> <Event 	Index="onDeath" 	FX="FX_GDIMARVExplode" />
-			</FXListBehavior>
-			<ProductionUpdate id="ModuleTag_Production" MaxQueueEntries="1" />
-			<AutoHealBehavior id="Upgrade_HeroicHeal_01" InitiallyActive="false" HealOnlyIfNotInCombat="true" HealOnlyIfNotUnderAttack="true" StartHealingDelay="5s" HealingAmount="10" HealingDelay="3s"> <TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
-			</AutoHealBehavior>
-			<AutoHealBehavior id="Upgrade_EngineerHeal_01" InitiallyActive="false" HealOnlyIfNotInCombat="false" HealOnlyIfNotUnderAttack="false" StartHealingDelay="0s" HealingAmount="60" HealingDelay="2s" HealFXList=""> <TriggeredBy>Upgrade_MARVEngineerFrontLeft</TriggeredBy>
-			</AutoHealBehavior>
-			<AttributeModifierUpgrade id="Upgrade_EngineerHeal01_TriggerFX" AttributeModifier="AttributeModifier_MARVEngineerUpgradeLF"> <TriggeredBy>Upgrade_MARVEngineerFrontLeft</TriggeredBy>
-			</AttributeModifierUpgrade>			
-			<AutoHealBehavior id="Upgrade_EngineerHeal_02" InitiallyActive="false" HealOnlyIfNotInCombat="false" HealOnlyIfNotUnderAttack="false" StartHealingDelay="0s" HealingAmount="60" HealingDelay="2s" HealFXList=""> <TriggeredBy>Upgrade_MARVEngineerFrontRight</TriggeredBy>
-			</AutoHealBehavior>
-			<AttributeModifierUpgrade id="Upgrade_EngineerHeal02_TriggerFX" AttributeModifier="AttributeModifier_MARVEngineerUpgradeRF"> <TriggeredBy>Upgrade_MARVEngineerFrontRight</TriggeredBy>
-			</AttributeModifierUpgrade>			
-			<AutoHealBehavior id="Upgrade_EngineerHeal_03" InitiallyActive="false" HealOnlyIfNotInCombat="false" HealOnlyIfNotUnderAttack="false" StartHealingDelay="0s" HealingAmount="60" HealingDelay="2s" HealFXList=""> <TriggeredBy>Upgrade_MARVEngineerRearLeft</TriggeredBy>
-			</AutoHealBehavior>
-			<AttributeModifierUpgrade id="Upgrade_EngineerHeal03_TriggerFX" AttributeModifier="AttributeModifier_MARVEngineerUpgradeLR"> <TriggeredBy>Upgrade_MARVEngineerRearLeft</TriggeredBy>
-			</AttributeModifierUpgrade>			
-			<AutoHealBehavior id="Upgrade_EngineerHeal_04" InitiallyActive="false" HealOnlyIfNotInCombat="false" HealOnlyIfNotUnderAttack="false" StartHealingDelay="0s" HealingAmount="60" HealingDelay="2s" HealFXList=""> <TriggeredBy>Upgrade_MARVEngineerRearRight</TriggeredBy>
-			</AutoHealBehavior>
-			<AttributeModifierUpgrade id="Upgrade_EngineerHeal04_TriggerFX" AttributeModifier="AttributeModifier_MARVEngineerUpgradeRR"> <TriggeredBy>Upgrade_MARVEngineerRearRight</TriggeredBy>
-			</AttributeModifierUpgrade>
-			
-			<StatusBitsUpgrade id="ModuleTag_VeterancyUpgrade" StatusToSet="WEAPON_UPGRADED_03"> <TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
 			</StatusBitsUpgrade>
-    <FireWeaponUpdate
-        id="ModuleTag_FireWeaponUpdate">
-        <FireWeaponNugget 	WeaponName="MetaCrushTiberium" 	FireDelay="0s" 	FireInterval="0.25s" />				
-      </FireWeaponUpdate>	
+			<!-- AP Ammo Status-->
+			<StatusBitsUpgrade
+				id="ModuleTag_UpgradeWeapon"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_GDIAPAmmo</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<StatusBitsUpgrade
+				id="ModuleTag_GDINoVeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<StatusBitsUpgrade
+				id="ModuleTag_SteelTalonsNoVeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<StatusBitsUpgrade
+				id="ModuleTag_ZOCOMNoVeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<StatusBitsUpgrade id="ModuleTag_VeterancyUpgrade" StatusToSet="WEAPON_UPGRADED_03"
+				StatusToClear="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate">
+				<FireWeaponNugget WeaponName="MetaCrushTiberium" FireDelay="0s" FireInterval="0.25s" />
+			</FireWeaponUpdate>
 
 			<ModelConditionUpgrade
 				id="ModuleTag_ForHeroicBarrel"
 				AddConditionFlags="USER_2">
 				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
 			</ModelConditionUpgrade>
-    </Behaviors>
+
+			<AudioLoopUpgrade id="GDI_CommandPost_APammoUpgrade" SoundToPlay="AudioEvent:GDI_CommandPost_APammoUpgrade">
+				<TriggeredBy>Upgrade_GDIAPAmmo</TriggeredBy>
+			</AudioLoopUpgrade>
+		</Behaviors>
 		<AI>
-			<AIUpdate id="ModuleTag_AI" AutoAcquireEnemiesWhenIdle="YES" AILuaEventsList="GDIMARVFunctions"> <UnitAITargetChooserData 	CanPickDynamicTargets="false" 	SympathyRange="100.0"  	RotateToTargetWhenAiming="false" />
+			<AIUpdate id="ModuleTag_AI" AutoAcquireEnemiesWhenIdle="YES"
+				AILuaEventsList="GDIMARVFunctions">
+				<UnitAITargetChooserData CanPickDynamicTargets="false" SympathyRange="100.0"
+					RotateToTargetWhenAiming="false" />
 			</AIUpdate>
 		</AI>
 		<Body>
@@ -1361,12 +2478,13 @@
 				<ModelConditionSound Sound="AudioEvent:GDI_Marv_IdleLoop" ExcludedFlags="MOVING" />
 			</ModelConditionAudioLoopClientBehavior>
 			<ModelConditionAudioLoopClientBehavior id="ModuleTag_RailgunAccelerator">
-				<ModelConditionSound Sound="AudioEvent:GDI_RailgunAccelerator_EnergyStripeLoop" RequiredFlags="USING_WEAPON_C" />
+				<ModelConditionSound Sound="AudioEvent:GDI_RailgunAccelerator_EnergyStripeLoop"
+					RequiredFlags="USING_WEAPON_C" />
 			</ModelConditionAudioLoopClientBehavior>
 		</ClientBehaviors>
 		<Geometry
 			IsSmall="false">
-<!-- 			<Shape 
+			<!-- 			<Shape 
 				Type="BOX" 
 				MajorRadius="55.0" 
 				MinorRadius="45.0" 
@@ -1377,82 +2495,82 @@
 					y="0.0" 	
 					z="0.0" />
 			</Shape>				-->
-			<Shape 
-			     Type= "BOX"
-			     MajorRadius = "29.6026"
-			     MinorRadius = "17.0185"
-			     Height = "17.9773"
-			     ContactPointGeneration="VEHICLE">
-			    <Offset
-			        x = "-18.3624"
-			        y = "0.0492744"
-			        z = "29.9796" />
+			<Shape
+				Type="BOX"
+				MajorRadius="29.6026"
+				MinorRadius="17.0185"
+				Height="17.9773"
+				ContactPointGeneration="VEHICLE">
+				<Offset
+					x="-18.3624"
+					y="0.0492744"
+					z="29.9796" />
 			</Shape>
-			<Shape 
-			     Type= "BOX"
-			     MajorRadius = "21.2712"
-			     MinorRadius = "8.8983"
-			     Height = "17.2881"
-			     ContactPointGeneration="VEHICLE">
-			    <Offset
-			        x = "26.1552"
-			        y = "-29.3933"
-			        z = "0.0" />
+			<Shape
+				Type="BOX"
+				MajorRadius="21.2712"
+				MinorRadius="8.8983"
+				Height="17.2881"
+				ContactPointGeneration="VEHICLE">
+				<Offset
+					x="26.1552"
+					y="-29.3933"
+					z="0.0" />
 			</Shape>
-			<Shape 
-			     Type= "BOX"
-			     MajorRadius = "21.7525"
-			     MinorRadius = "8.56917"
-			     Height = "17.378"
-			     ContactPointGeneration="VEHICLE">
-			    <Offset
-			        x = "25.4914"
-			        y = "29.1596"
-			        z = "9.53674e-007" />
+			<Shape
+				Type="BOX"
+				MajorRadius="21.7525"
+				MinorRadius="8.56917"
+				Height="17.378"
+				ContactPointGeneration="VEHICLE">
+				<Offset
+					x="25.4914"
+					y="29.1596"
+					z="9.53674e-007" />
 			</Shape>
-			<Shape 
-			     Type= "BOX"
-			     MajorRadius = "21.0169"
-			     MinorRadius = "20.2542"
-			     Height = "20.678"
-			     ContactPointGeneration="VEHICLE">
-			    <Offset
-			        x = "23.934"
-			        y = "0.00376129"
-			        z = "-9.53674e-007" />
+			<Shape
+				Type="BOX"
+				MajorRadius="21.0169"
+				MinorRadius="20.2542"
+				Height="20.678"
+				ContactPointGeneration="VEHICLE">
+				<Offset
+					x="23.934"
+					y="0.00376129"
+					z="-9.53674e-007" />
 			</Shape>
-			<Shape 
-			     Type= "BOX"
-			     MajorRadius = "30.3217"
-			     MinorRadius = "19.8949"
-			     Height = "29.9622"
-			     ContactPointGeneration="VEHICLE">
-			    <Offset
-			        x = "-28.5169"
-			        y = "-0.0588036"
-			        z = "9.53674e-007" />
+			<Shape
+				Type="BOX"
+				MajorRadius="30.3217"
+				MinorRadius="19.8949"
+				Height="29.9622"
+				ContactPointGeneration="VEHICLE">
+				<Offset
+					x="-28.5169"
+					y="-0.0588036"
+					z="9.53674e-007" />
 			</Shape>
-			<Shape 
-			     Type= "BOX"
-			     MajorRadius = "26.8461"
-			     MinorRadius = "11.865"
-			     Height = "24.6888"
-			     ContactPointGeneration="VEHICLE">
-			    <Offset
-			        x = "-26.0001"
-			        y = "-32.2981"
-			        z = "0.0" />
+			<Shape
+				Type="BOX"
+				MajorRadius="26.8461"
+				MinorRadius="11.865"
+				Height="24.6888"
+				ContactPointGeneration="VEHICLE">
+				<Offset
+					x="-26.0001"
+					y="-32.2981"
+					z="0.0" />
 			</Shape>
-			<Shape 
-			     Type= "BOX"
-			     MajorRadius = "26.2468"
-			     MinorRadius = "11.3856"
-			     Height = "24.9285"
-			     ContactPointGeneration="VEHICLE">
-			    <Offset
-			        x = "-25.8802"
-			        y = "31.7012"
-			        z = "0.0" />
+			<Shape
+				Type="BOX"
+				MajorRadius="26.2468"
+				MinorRadius="11.3856"
+				Height="24.9285"
+				ContactPointGeneration="VEHICLE">
+				<Offset
+					x="-25.8802"
+					y="31.7012"
+					z="0.0" />
 			</Shape>
 		</Geometry>
 		<AudioArrayVoice>
@@ -1460,7 +2578,8 @@
 			<AudioEntry Sound="Multisound:GDI_MARV_VoiceCreateMS" AudioType="voiceCreated" />
 			<AudioEntry Sound="AudioEvent:GDI_MARV_VoiceHarvest" AudioType="voiceSupply" />
 			<AudioEntry Sound="AudioEvent:GDI_MARV_VoiceMove" AudioType="voiceMove" />
-			<AudioEntry Sound="AudioEvent:GDI_MARV_VoiceMoveAttack" AudioType="voiceAttackAfterMoving" />
+			<AudioEntry Sound="AudioEvent:GDI_MARV_VoiceMoveAttack"
+				AudioType="voiceAttackAfterMoving" />
 			<AudioEntry Sound="AudioEvent:GDI_MARV_VoiceMove" AudioType="voiceGuard" />
 			<AudioEntry Sound="AudioEvent:GDI_MARV_VoiceRetreat" AudioType="voiceRetreatToCastle" />
 			<AudioEntry Sound="Multisound:GDI_MARV_VoiceSelectMS" AudioType="voiceSelect" />
@@ -1469,22 +2588,22 @@
 			<AudioEntry Sound="Multisound:GDI_Marv_MoveLoopMS" AudioType="soundMoveLoop" />
 			<AudioEntry Sound="Multisound:GDI_Marv_MoveStartMS" AudioType="soundMoveStart" />
 		</AudioArraySound>
-    <EvaEvents
-      EvaEventDieOwner="UnitLost"
-			EvaEventProductionStarted="UnitConstructionStarted" 
-			EvaEventDamagedOwner="UnitUnderAttack" 	
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
-			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
-			EvaEventAmbushed="UnitAmbushed" 
-			EvaEventSecondDamageFarFromFirstScanRange="600"    
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
-			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
+			EvaEventAmbushed="UnitAmbushed"
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
 			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
 			EvaEventAvailableForProduction="NewConstructionOptions"
 			EvaEventBuildOnHold="BuildOnHold"
-			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventBuildCancelled="BuildCancelled"
 			EvaEventPromotedOwner="UnitPromoted" />
-			<!-- EvaEventSecondDamageFarFromFirstOwner="UnitUnderAttackAgain"  -->
+		<!-- EvaEventSecondDamageFarFromFirstOwner="UnitUnderAttackAgain"  -->
 		<ShadowInfo
 			Type="VOLUME" />
 		<VisionInfo

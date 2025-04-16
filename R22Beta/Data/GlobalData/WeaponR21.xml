@@ -1186,41 +1186,6 @@
 		</ScatterRadiusVsType>
 	</WeaponTemplate>
 
-
-	<WeaponTemplate
-		id="MARVRifleWeapon"
-		Name="MARVRifleWeapon"
-		AttackRange="300.0"
-		WeaponSpeed="999999.0"
-		FireFX="FX_GDIHammerheadChaingunAP"
-		FireVeteranFX="FX_GDIHammerheadChaingunAPHeroic"
-		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		ReAcquireDetailType="PER_SHOT"
-		AntiMask="ANTI_GROUND"
-		CanFireWhileMoving="true"
-		ClipSize="999999"
-		RotatingTurret="true">
-		<!--	<FiringDuration
-			MinSeconds="1s"
-			MaxSeconds="1s" />  -->
-		<ClipReloadTime
-			MinSeconds="0s"
-			MaxSeconds="0s" />
-		<Nuggets>
-			<DamageNugget
-				Damage="20.0"
-				Radius="0.0"
-				DelayTimeSeconds="0.0s"
-				DamageType="GUN"
-				DamageFXType="NOD_MACHINEGUN"
-				DeathType="NORMAL" />
-			<SuppressionNugget
-				Radius="1.0"
-				Suppression="25"
-				DurationSeconds="5s" />
-		</Nuggets>
-	</WeaponTemplate>
-
 	<!-- emp grenades -->
 	<!--
 <WeaponTemplate
