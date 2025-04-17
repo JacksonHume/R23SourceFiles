@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
-	<!-- AP AMMO -->
+	<!-- AP Ammo grants a 35% increase. -->
 	<WeaponTemplate
 		id="MARVRifleWeaponAPAmmo"
 		Name="MARVRifleWeaponAPAmmo"
@@ -12,18 +12,16 @@
 		ReAcquireDetailType="PER_SHOT"
 		AntiMask="ANTI_GROUND"
 		CanFireWhileMoving="true"
-		ClipSize="999999"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
 		RotatingTurret="true">
-		<!--	<FiringDuration
-			MinSeconds="1s"
-			MaxSeconds="1s" />  -->
 		<ClipReloadTime
-			MinSeconds="0s"
-			MaxSeconds="0s" />
+			MinSeconds="0.01s"
+			MaxSeconds="0.01s" />
 		<Nuggets>
 			<!-- damage reduced from 20 to 10 -->
 			<DamageNugget
-				Damage="14.0"
+				Damage="27.0"
 				Radius="0.0"
 				DelayTimeSeconds="0.0s"
 				DamageType="GUN"
@@ -47,18 +45,16 @@
 		ReAcquireDetailType="PER_SHOT"
 		AntiMask="ANTI_GROUND"
 		CanFireWhileMoving="true"
-		ClipSize="999999"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
 		RotatingTurret="true">
-		<!--	<FiringDuration
-			MinSeconds="1s"
-			MaxSeconds="1s" />  -->
 		<ClipReloadTime
-			MinSeconds="0s"
-			MaxSeconds="0s" />
+			MinSeconds="0.01s"
+			MaxSeconds="0.01s" />
 		<Nuggets>
 			<!-- damage reduced from 20 to 10 -->
 			<DamageNugget
-				Damage="10.0"
+				Damage="20.0"
 				Radius="0.0"
 				DelayTimeSeconds="0.0s"
 				DamageType="GUN"

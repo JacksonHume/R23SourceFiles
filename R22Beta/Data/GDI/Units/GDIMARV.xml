@@ -104,70 +104,68 @@
 						BoneName="FXWeaponZT_RR" />
 					<Turret TurretNameKey="B_ZT_Turret_TreadRR" TurretID="5" />
 					<!-- RIFLES -->
-					<!-- LEFT TURRET-->
+
+					<!-- LF TURRET-->
 					<WeaponFireFXBone WeaponSlotID="6" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWEAPONRMLF_01" />
 					<WeaponMuzzleFlash WeaponSlotID="6" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWEAPONRMLF_01" />
 					<WeaponLaunchBone WeaponSlotID="6" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWEAPONRMLF_01" />
+					<WeaponFireFXBone WeaponSlotID="6" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWEAPONRMLF_02" />
+					<WeaponMuzzleFlash WeaponSlotID="6" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWEAPONRMLF_02" /> 
+					<WeaponLaunchBone WeaponSlotID="6" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWEAPONRMLF_02" />
 					<Turret TurretNameKey="B_RM_Turret_TreadLF" TurretID="6" />
-					<!-- RIGHT TURRET -->
-					<WeaponFireFXBone WeaponSlotID="34" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWEAPONRMLF_02" />
-					<WeaponMuzzleFlash WeaponSlotID="34" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWEAPONRMLF_02" />
-					<WeaponLaunchBone WeaponSlotID="34" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWEAPONRMLF_02" />
-					<Turret TurretNameKey="" TurretID="34" />
-					<!-- LEFT TURRET-->
+
+					<!-- RF TURRET-->
 					<WeaponFireFXBone WeaponSlotID="7" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponRM_RF_01" />
 					<WeaponMuzzleFlash WeaponSlotID="7" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponRM_RF_01" />
 					<WeaponLaunchBone WeaponSlotID="7" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponRM_RF_01" />
+					<WeaponFireFXBone WeaponSlotID="7" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponRM_RF_02" />
+					<WeaponMuzzleFlash WeaponSlotID="7" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponRM_RF_02" /> 
+					<WeaponLaunchBone WeaponSlotID="7" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponRM_RF_02" />
 					<Turret TurretNameKey="B_RM_Turret_TreadRF" TurretID="7" />
-					<!-- RIGHT TURRET -->
-					<WeaponFireFXBone WeaponSlotID="35" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponRM_RF_02" />
-					<WeaponMuzzleFlash WeaponSlotID="35" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponRM_RF_02" />
-					<WeaponLaunchBone WeaponSlotID="35" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponRM_RF_02" />
-					<Turret TurretNameKey="" TurretID="35" />
-					<!-- LEFT TURRET-->
+
+
+					<!-- LR TURRET-->
 					<WeaponFireFXBone WeaponSlotID="8" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponRM_LR_01" />
 					<WeaponMuzzleFlash WeaponSlotID="8" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponRM_LR_01" />
 					<WeaponLaunchBone WeaponSlotID="8" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponRM_LR_01" />
+					<WeaponFireFXBone WeaponSlotID="8" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponRM_LR_02" />
+					<WeaponMuzzleFlash WeaponSlotID="8" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponRM_LR_02" /> 
+					<WeaponLaunchBone WeaponSlotID="8" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponRM_LR_02" />
 					<Turret TurretNameKey="B_RM_Turret_TreadLR" TurretID="8" />
-					<!-- RIGHT TURRET -->
-					<WeaponFireFXBone WeaponSlotID="36" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponRM_LR_02" />
-					<WeaponMuzzleFlash WeaponSlotID="36" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponRM_LR_02" />
-					<WeaponLaunchBone WeaponSlotID="36" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponRM_LR_02" />
-					<Turret TurretNameKey="" TurretID="36" />
-					<!-- LEFT TURRET-->
+
+					<!-- RR TURRET-->
 					<WeaponFireFXBone WeaponSlotID="9" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponRM_RR_01" />
 					<WeaponMuzzleFlash WeaponSlotID="9" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponRM_RR_01" />
 					<WeaponLaunchBone WeaponSlotID="9" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponRM_RR_01" />
+					<WeaponFireFXBone WeaponSlotID="9" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponRM_RR_02" />
+					<WeaponMuzzleFlash WeaponSlotID="9" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponRM_RR_02" /> 
+					<WeaponLaunchBone WeaponSlotID="9" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponRM_RR_02" />
 					<Turret TurretNameKey="B_RM_Turret_TreadRR" TurretID="9" />
-					<!-- RIGHT TURRET -->
-					<WeaponFireFXBone WeaponSlotID="37" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponRM_RR_02" />
-					<WeaponMuzzleFlash WeaponSlotID="37" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponRM_RR_02" />
-					<WeaponLaunchBone WeaponSlotID="37" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponRM_RR_02" />
-					<Turret TurretNameKey="" TurretID="37" />
+
 					<!-- MISSILES -->
 					<WeaponFireFXBone WeaponSlotID="10" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponMS_LF_" />
@@ -981,10 +979,11 @@
 			</TracerModelDraw>
 
 			<!-- normal tracers-->
+			
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1" MinLength="50.0" MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
@@ -993,22 +992,23 @@
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
-			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1plus" MinLength="50.0"
-				MaxLength="50.0" Width="3.0"
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1plus" MinLength="50.0" MaxLength="50.0"
+				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDI"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
-				WeaponSlotID="34">
+				WeaponSlotID="6">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw2" MinLength="50.0" MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
@@ -1020,19 +1020,20 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw2plus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDI"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
-				WeaponSlotID="35">
+				WeaponSlotID="7">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw3" MinLength="50.0" MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
@@ -1044,19 +1045,20 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw3plus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDI"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
-				WeaponSlotID="36">
+				WeaponSlotID="8">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw4" MinLength="50.0" MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
@@ -1068,11 +1070,11 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw4plus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDI"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDI"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDI" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
-				WeaponSlotID="37">
+				WeaponSlotID="9">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
@@ -1083,7 +1085,7 @@
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
@@ -1096,21 +1098,22 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1Veterancyplus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerHeroic"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
-				WeaponSlotID="34">
+				WeaponSlotID="6">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
 					ForbiddenStatus="WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw2Veterancy" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
@@ -1123,21 +1126,22 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw2Veterancyplus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerHeroic"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
-				WeaponSlotID="35">
+				WeaponSlotID="7">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
 					ForbiddenStatus="WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw3Veterancy" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
@@ -1150,21 +1154,22 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw3Veterancyplus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerHeroic"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
-				WeaponSlotID="36">
+				WeaponSlotID="8">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
 					ForbiddenStatus="WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw4Veterancy" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
@@ -1177,11 +1182,11 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw4Veterancyplus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerHeroic"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerHeroic"
 				UseAdditiveBlending="true"
 				TracerHitFx="FX_BulletHitGDIHeroic" TracerEmitFx="FX_GDI_MARV_GunTurretFire"
-				WeaponSlotID="37">
+				WeaponSlotID="9">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_03"
@@ -1193,10 +1198,10 @@
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
 				UseAdditiveBlending="true"
-				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				TracerHitFx="FX_BulletHitGDIAP" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="6">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1206,24 +1211,25 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP1plus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmo"
 				UseAdditiveBlending="true"
-				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
-				WeaponSlotID="34">
+				TracerHitFx="FX_BulletHitGDIAP" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				WeaponSlotID="6">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
 					ForbiddenStatus="WEAPON_UPGRADED_03" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP2" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
 				UseAdditiveBlending="true"
-				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				TracerHitFx="FX_BulletHitGDIAP" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="7">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1233,24 +1239,25 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP2plus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmo"
 				UseAdditiveBlending="true"
-				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
-				WeaponSlotID="35">
+				TracerHitFx="FX_BulletHitGDIAP" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				WeaponSlotID="7">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
 					ForbiddenStatus="WEAPON_UPGRADED_03" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP3" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
 				UseAdditiveBlending="true"
-				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				TracerHitFx="FX_BulletHitGDIAP" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="8">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1260,24 +1267,25 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP3plus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmo"
 				UseAdditiveBlending="true"
-				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
-				WeaponSlotID="36">
+				TracerHitFx="FX_BulletHitGDIAP" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				WeaponSlotID="8">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
 					ForbiddenStatus="WEAPON_UPGRADED_03" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP4" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
 				UseAdditiveBlending="true"
-				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				TracerHitFx="FX_BulletHitGDIAP" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="9">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1287,11 +1295,11 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP4plus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".1" MaxTracersPerFrame=".2"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmo"
+				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmo"
 				UseAdditiveBlending="true"
-				TracerHitFx="FXTracerGDIAPAmmo" TracerEmitFx="FX_GDI_HammerheadGunFire"
-				WeaponSlotID="37">
+				TracerHitFx="FX_BulletHitGDIAP" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				WeaponSlotID="9">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
@@ -1303,10 +1311,10 @@
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="6">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1316,24 +1324,25 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP1Veterancyplus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
-				WeaponSlotID="34">
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				WeaponSlotID="6">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
 					ForbiddenStatus="WEAPON_UPGRADED_02" />
 			</TracerModelDraw>
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP2Veterancy" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="7">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1343,24 +1352,25 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP2Veterancyplus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
-				WeaponSlotID="35">
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				WeaponSlotID="7">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
 					ForbiddenStatus="WEAPON_UPGRADED_02" />
 			</TracerModelDraw>
+			
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP3Veterancy" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="8">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1370,24 +1380,25 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP3Veterancyplus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
-				WeaponSlotID="36">
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				WeaponSlotID="8">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
 					ForbiddenStatus="WEAPON_UPGRADED_02" />
 			</TracerModelDraw>
+			
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP4Veterancy" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="9">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1397,11 +1408,11 @@
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP4Veterancyplus" MinLength="50.0"
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
-				MinTracersPerFrame=".2" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFire"
-				WeaponSlotID="37">
+				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				WeaponSlotID="9">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
@@ -1545,7 +1556,9 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 				<!-- RIFLEGUY WEAPONS -->
-				<WeaponSlotTurret ID="6">
+				<WeaponSlotTurret ID="6"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_RANDOM">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechFakeWeapon"
@@ -1561,29 +1574,18 @@
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER1 WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings 
-						TurretTurnRate="180" 
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" 
-						MinIdleScanAngle="0.0" 
-						MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="34">
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="NODWarmechFakeWeapon"
 						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="MARVRifleWeapon"
 						ObjectStatus="RIDER1"
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER1 WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
@@ -1597,7 +1599,10 @@
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="7">
+
+				<WeaponSlotTurret ID="7"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_RANDOM">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechFakeWeapon"
@@ -1613,29 +1618,18 @@
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER3 WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings 
-						TurretTurnRate="180" 
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" 
-						MinIdleScanAngle="0.0" 
-						MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="35">
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="NODWarmechFakeWeapon"
 						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="MARVRifleWeapon"
 						ObjectStatus="RIDER3"
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER3 WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
@@ -1649,7 +1643,10 @@
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="8">
+
+				<WeaponSlotTurret ID="8"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_RANDOM">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechFakeWeapon"
@@ -1665,29 +1662,18 @@
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER4 WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings 
-						TurretTurnRate="180" 
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" 
-						MinIdleScanAngle="0.0" 
-						MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="36">
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="NODWarmechFakeWeapon"
 						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="MARVRifleWeapon"
 						ObjectStatus="RIDER4"
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER4 WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
@@ -1701,7 +1687,10 @@
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="9">
+
+				<WeaponSlotTurret ID="9"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_RANDOM">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="NODWarmechFakeWeapon"
@@ -1717,29 +1706,18 @@
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER_IS_PILOT WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings 
-						TurretTurnRate="180" 
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" 
-						MinIdleScanAngle="0.0" 
-						MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="37">
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="NODWarmechFakeWeapon"
 						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="MARVRifleWeapon"
 						ObjectStatus="RIDER_IS_PILOT"
 						IsPlayerUpgradePermanent="False" />
 					<Weapon
-						Ordering="PRIMARY_WEAPON"
+						Ordering="SECONDARY_WEAPON"
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER_IS_PILOT WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
@@ -1753,6 +1731,7 @@
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
+				
 				<!-- MISSILEGUY WEAPONS -->
 				<WeaponSlotTurret ID="10">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVRocketWeapon"
