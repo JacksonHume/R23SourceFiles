@@ -62,7 +62,7 @@
 					ParseCondStateType="PARSE_DEFAULT"
 					RetainSubObjects="true">
 					<Model
-						Name="W3DContainer:GUMARV_SKN2" /> 	<!--
+						Name="W3DContainer:GUMARV_SKN3" /> 	<!--
 					<WeaponFireFXBone 		
 						WeaponSlotID="1" 		
 						WeaponSlotType="PRIMARY_WEAPON" 		
@@ -107,17 +107,17 @@
 
 					<!-- LF TURRET-->
 					<WeaponFireFXBone WeaponSlotID="6" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWEAPONRMLF_01" />
+						BoneName="FXWEAPONRM_LF_01" />
 					<WeaponMuzzleFlash WeaponSlotID="6" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWEAPONRMLF_01" />
+						BoneName="FXWEAPONRM_LF_01" />
 					<WeaponLaunchBone WeaponSlotID="6" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWEAPONRMLF_01" />
+						BoneName="FXWEAPONRM_LF_01" />
 					<WeaponFireFXBone WeaponSlotID="6" WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="FXWEAPONRMLF_02" />
+						BoneName="FXWEAPONRM_LF_02" />
 					<WeaponMuzzleFlash WeaponSlotID="6" WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="FXWEAPONRMLF_02" /> 
+						BoneName="FXWEAPONRM_LF_02" /> 
 					<WeaponLaunchBone WeaponSlotID="6" WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="FXWEAPONRMLF_02" />
+						BoneName="FXWEAPONRM_LF_02" />
 					<Turret TurretNameKey="B_RM_Turret_TreadLF" TurretID="6" />
 
 					<!-- RF TURRET-->
@@ -298,7 +298,7 @@
 					RetainSubObjects="true"
 					ConditionsYes="REALLYDAMAGED USER_5">
 					<Model
-						Name="W3DContainer:GUMARV_SKN2" />
+						Name="W3DContainer:GUMARV_SKN3" />
 					<Texture
 						Original="GUMARV1"
 						New="GUMARV1D" />
@@ -327,7 +327,7 @@
 					RetainSubObjects="true"
 					ConditionsYes="REALLYDAMAGED">
 					<Model
-						Name="W3DContainer:GUMARV_SKN2" />
+						Name="W3DContainer:GUMARV_SKN3" />
 					<Texture
 						Original="GUMARV1"
 						New="GUMARV1D" />

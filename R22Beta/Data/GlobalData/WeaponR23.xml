@@ -12,16 +12,15 @@
 		ReAcquireDetailType="PER_SHOT"
 		AntiMask="ANTI_GROUND"
 		CanFireWhileMoving="true"
-		ClipSize="1"
+		ClipSize="2"
 		AutoReloadsClip="AUTO"
 		RotatingTurret="true">
 		<ClipReloadTime
-			MinSeconds="0.01s"
-			MaxSeconds="0.01s" />
+			MinSeconds="0.08s"
+			MaxSeconds="0.08s" />
 		<Nuggets>
-			<!-- damage reduced from 20 to 10 -->
 			<DamageNugget
-				Damage="27.0"
+				Damage="47.0"
 				Radius="0.0"
 				DelayTimeSeconds="0.0s"
 				DamageType="GUN"
@@ -45,16 +44,15 @@
 		ReAcquireDetailType="PER_SHOT"
 		AntiMask="ANTI_GROUND"
 		CanFireWhileMoving="true"
-		ClipSize="1"
+		ClipSize="2"
 		AutoReloadsClip="AUTO"
 		RotatingTurret="true">
 		<ClipReloadTime
-			MinSeconds="0.01s"
-			MaxSeconds="0.01s" />
+			MinSeconds="0.08s"
+			MaxSeconds="0.08s" />
 		<Nuggets>
-			<!-- damage reduced from 20 to 10 -->
 			<DamageNugget
-				Damage="20.0"
+				Damage="35.0"
 				Radius="0.0"
 				DelayTimeSeconds="0.0s"
 				DamageType="GUN"
