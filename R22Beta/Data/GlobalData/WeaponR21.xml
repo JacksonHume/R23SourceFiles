@@ -1835,17 +1835,17 @@
 		DisableScatterForTargetsOnWall="true"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
-		RequiredFiringObjectStatus="WEAPON_UPGRADED_02">
+		RequiredFiringObjectStatus="RIDERLESS">
 		<FiringDuration
-			MinSeconds="0.11s"
-			MaxSeconds="0.11s" />
+			MinSeconds="1.11s"
+			MaxSeconds="1.26s" />
 		<ClipReloadTime
 			MinSeconds="1.0s"
 			MaxSeconds="1.15s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
-				LaserId="0"
+				LaserId="4"
 				HitGroundFX="FX_RailGunHit" />
 			<DamageNugget
 				Damage="840.0"
@@ -1877,17 +1877,17 @@
 		DisableScatterForTargetsOnWall="true"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
-		RequiredFiringObjectStatus="WEAPON_UPGRADED_02">
+		RequiredFiringObjectStatus="RIDERLESS">
 		<FiringDuration
-			MinSeconds="0.11s"
-			MaxSeconds="0.11s" />
+			MinSeconds="1.11s"
+			MaxSeconds="1.26s" />
 		<ClipReloadTime
 			MinSeconds="1.0s"
 			MaxSeconds="1.15s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
-				LaserId="1"
+				LaserId="5"
 				HitGroundFX="FX_RailGunHit" />
 			<DamageNugget
 				Damage="840.0"
@@ -1919,17 +1919,17 @@
 		DisableScatterForTargetsOnWall="true"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
-		RequiredFiringObjectStatus="WEAPON_UPGRADED_02">
+		RequiredFiringObjectStatus="RIDERLESS">
 		<FiringDuration
-			MinSeconds="0.11s"
-			MaxSeconds="0.11s" />
+			MinSeconds="1.11s"
+			MaxSeconds="1.26s" />
 		<ClipReloadTime
 			MinSeconds="1.0s"
 			MaxSeconds="1.15s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
-				LaserId="2"
+				LaserId="6"
 				HitGroundFX="FX_RailGunHit" />
 			<DamageNugget
 				Damage="840.0"
@@ -1961,17 +1961,17 @@
 		DisableScatterForTargetsOnWall="true"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
-		RequiredFiringObjectStatus="WEAPON_UPGRADED_02">
+		RequiredFiringObjectStatus="RIDERLESS">
 		<FiringDuration
-			MinSeconds="0.11s"
-			MaxSeconds="0.11s" />
+			MinSeconds="1.11s"
+			MaxSeconds="1.26s" />
 		<ClipReloadTime
 			MinSeconds="1.0s"
 			MaxSeconds="1.15s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
-				LaserId="3"
+				LaserId="7"
 				HitGroundFX="FX_RailGunHit" />
 			<DamageNugget
 				Damage="840.0"

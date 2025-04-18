@@ -87,20 +87,36 @@
 						BoneName="FXWeaponZT_LF" />
 					<WeaponLaunchBone WeaponSlotID="2" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponZT_LF" />
+					<WeaponFireFXBone WeaponSlotID="2" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponZT_LF" />
+					<WeaponLaunchBone WeaponSlotID="2" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponZT_LF" />
 					<Turret TurretNameKey="B_ZT_Turret_TreadLF" TurretID="2" />
 					<WeaponFireFXBone WeaponSlotID="3" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponZT_RF" />
 					<WeaponLaunchBone WeaponSlotID="3" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RF" />
+					<WeaponFireFXBone WeaponSlotID="3" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponZT_RF" />
+					<WeaponLaunchBone WeaponSlotID="3" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWeaponZT_RF" />
 					<Turret TurretNameKey="B_ZT_Turret_TreadRF" TurretID="3" />
 					<WeaponFireFXBone WeaponSlotID="4" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponZT_LR" />
 					<WeaponLaunchBone WeaponSlotID="4" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponZT_LR" />
+					<WeaponFireFXBone WeaponSlotID="4" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponZT_LR" />
+					<WeaponLaunchBone WeaponSlotID="4" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponZT_LR" />
 					<Turret TurretNameKey="B_ZT_Turret_TreadLR" TurretID="4" />
 					<WeaponFireFXBone WeaponSlotID="5" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponZT_RR" />
 					<WeaponLaunchBone WeaponSlotID="5" WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponZT_RR" />
+					<WeaponFireFXBone WeaponSlotID="5" WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponZT_RR" />
+					<WeaponLaunchBone WeaponSlotID="5" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWeaponZT_RR" />
 					<Turret TurretNameKey="B_ZT_Turret_TreadRR" TurretID="5" />
 					<!-- RIFLES -->
@@ -115,7 +131,7 @@
 					<WeaponFireFXBone WeaponSlotID="6" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWEAPONRM_LF_02" />
 					<WeaponMuzzleFlash WeaponSlotID="6" WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="FXWEAPONRM_LF_02" /> 
+						BoneName="FXWEAPONRM_LF_02" />
 					<WeaponLaunchBone WeaponSlotID="6" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWEAPONRM_LF_02" />
 					<Turret TurretNameKey="B_RM_Turret_TreadLF" TurretID="6" />
@@ -130,7 +146,7 @@
 					<WeaponFireFXBone WeaponSlotID="7" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWeaponRM_RF_02" />
 					<WeaponMuzzleFlash WeaponSlotID="7" WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="FXWeaponRM_RF_02" /> 
+						BoneName="FXWeaponRM_RF_02" />
 					<WeaponLaunchBone WeaponSlotID="7" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWeaponRM_RF_02" />
 					<Turret TurretNameKey="B_RM_Turret_TreadRF" TurretID="7" />
@@ -146,7 +162,7 @@
 					<WeaponFireFXBone WeaponSlotID="8" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWeaponRM_LR_02" />
 					<WeaponMuzzleFlash WeaponSlotID="8" WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="FXWeaponRM_LR_02" /> 
+						BoneName="FXWeaponRM_LR_02" />
 					<WeaponLaunchBone WeaponSlotID="8" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWeaponRM_LR_02" />
 					<Turret TurretNameKey="B_RM_Turret_TreadLR" TurretID="8" />
@@ -161,7 +177,7 @@
 					<WeaponFireFXBone WeaponSlotID="9" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWeaponRM_RR_02" />
 					<WeaponMuzzleFlash WeaponSlotID="9" WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="FXWeaponRM_RR_02" /> 
+						BoneName="FXWeaponRM_RR_02" />
 					<WeaponLaunchBone WeaponSlotID="9" WeaponSlotType="SECONDARY_WEAPON"
 						BoneName="FXWeaponRM_RR_02" />
 					<Turret TurretNameKey="B_RM_Turret_TreadRR" TurretID="9" />
@@ -208,7 +224,7 @@
 					<WeaponLaunchBone WeaponSlotID="17" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponEN_RR" />
 					<Turret TurretNameKey="B_EN_Turret_TreadRR" TurretID="17" />
-					<!-- GRENADES -->
+					<!-- GRENADES AND ZONE RAIDERS -->
 					<WeaponFireFXBone WeaponSlotID="18" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponGN_LF_" />
 					<WeaponLaunchBone WeaponSlotID="18" WeaponSlotType="PRIMARY_WEAPON"
@@ -250,48 +266,6 @@
 					<WeaponLaunchBone WeaponSlotID="25" WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWeaponST_RR" />
 					<Turret TurretNameKey="B_ST_Turret_TreadRR" TurretID="25" />
-					<!-- ZONE RAIDERS -->
-					<WeaponFireFXBone WeaponSlotID="26" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponGN_LF_" />
-					<WeaponLaunchBone WeaponSlotID="26" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponGN_LF_" />
-					<Turret TurretNameKey="B_GN_Turret_TreadLF" TurretID="26" />
-					<WeaponFireFXBone WeaponSlotID="27" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponGN_RF_" />
-					<WeaponLaunchBone WeaponSlotID="27" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponGN_RF_" />
-					<Turret TurretNameKey="B_GN_Turret_TreadRF" TurretID="27" />
-					<WeaponFireFXBone WeaponSlotID="28" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponGN_LR_" />
-					<WeaponLaunchBone WeaponSlotID="28" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponGN_LR_" />
-					<Turret TurretNameKey="B_GN_Turret_TreadLR" TurretID="28" />
-					<WeaponFireFXBone WeaponSlotID="29" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponGN_RR_" />
-					<WeaponLaunchBone WeaponSlotID="29" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponGN_RR_" />
-					<Turret TurretNameKey="B_GN_Turret_TreadRR" TurretID="29" />
-					<!-- ZONETROOPERS ACCELERATED -->
-					<WeaponFireFXBone WeaponSlotID="30" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponZT_LF" />
-					<WeaponLaunchBone WeaponSlotID="30" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponZT_LF" />
-					<Turret TurretNameKey="B_ZT_Turret_TreadLF" TurretID="30" />
-					<WeaponFireFXBone WeaponSlotID="31" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponZT_RF" />
-					<WeaponLaunchBone WeaponSlotID="31" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponZT_RF" />
-					<Turret TurretNameKey="B_ZT_Turret_TreadRF" TurretID="31" />
-					<WeaponFireFXBone WeaponSlotID="32" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponZT_LR" />
-					<WeaponLaunchBone WeaponSlotID="32" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponZT_LR" />
-					<Turret TurretNameKey="B_ZT_Turret_TreadLR" TurretID="32" />
-					<WeaponFireFXBone WeaponSlotID="33" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponZT_RR" />
-					<WeaponLaunchBone WeaponSlotID="33" WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWeaponZT_RR" />
-					<Turret TurretNameKey="B_ZT_Turret_TreadRR" TurretID="33" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -937,6 +911,84 @@
 					</Constants>
 				</FXShader>
 			</LaserDraw>
+	
+			<LaserDraw id="ModuleTag_LaserDistort05" UseDistortionShader="true" Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="2"
+				LaserStateID="4">
+				<FXShader ShaderName="Laser.fx" TechniqueIndex="0">
+					<Constants>
+						<Texture Name="Texture1">
+							<Value>FXRailGunCoreDistortion</Value>
+						</Texture>
+						<Texture Name="Texture2">
+							<Value>FXRailGunCoreMask</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw id="ModuleTag_LaserDistort06" UseDistortionShader="true" Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="3"
+				LaserStateID="5">
+				<FXShader ShaderName="Laser.fx" TechniqueIndex="0">
+					<Constants>
+						<Texture Name="Texture1">
+							<Value>FXRailGunCoreDistortion</Value>
+						</Texture>
+						<Texture Name="Texture2">
+							<Value>FXRailGunCoreMask</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw id="ModuleTag_LaserDistort07" UseDistortionShader="true" Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="4"
+				LaserStateID="6">
+				<FXShader ShaderName="Laser.fx" TechniqueIndex="0">
+					<Constants>
+						<Texture Name="Texture1">
+							<Value>FXRailGunCoreDistortion</Value>
+						</Texture>
+						<Texture Name="Texture2">
+							<Value>FXRailGunCoreMask</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw id="ModuleTag_LaserDistort08" UseDistortionShader="true" Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0" Texture1_VScrollRate=".2" Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1" Texture2_VTile=".01" Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1" Texture2_FrameRate="1" LaserWidth="50" WeaponSlotID="5"
+				LaserStateID="7">
+				<FXShader ShaderName="Laser.fx" TechniqueIndex="0">
+					<Constants>
+						<Texture Name="Texture1">
+							<Value>FXRailGunCoreDistortion</Value>
+						</Texture>
+						<Texture Name="Texture2">
+							<Value>FXRailGunCoreMask</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+	
 			<TracerModelDraw id="ModuleTag_SniperTracerModelDraw1" MinLength="100.0"
 				MaxLength="100.0" Width="5.0"
 				MinSpeed="35" MaxSpeed="35" SweepSpeed="0.0" SpreadAngle="0.0"
@@ -979,7 +1031,7 @@
 			</TracerModelDraw>
 
 			<!-- normal tracers-->
-			
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1" MinLength="50.0" MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
@@ -992,7 +1044,8 @@
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation ForbiddenStatus="WEAPON_UPGRADED_03 WEAPON_UPGRADED_01" />
 			</TracerModelDraw>
-			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1plus" MinLength="50.0" MaxLength="50.0"
+			<TracerModelDraw id="ModuleTag_RifleTracerModelDraw1plus" MinLength="50.0"
+				MaxLength="50.0"
 				Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
 				MinTracersPerFrame=".2" MaxTracersPerFrame=".2"
@@ -1314,7 +1367,8 @@
 				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				TracerHitFx="FX_BulletHitGDIAPHeroic"
+				TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="6">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1325,9 +1379,11 @@
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
 				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				TracerHitFx="FX_BulletHitGDIAPHeroic"
+				TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="6">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1342,7 +1398,8 @@
 				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				TracerHitFx="FX_BulletHitGDIAPHeroic"
+				TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="7">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1353,16 +1410,18 @@
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
 				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				TracerHitFx="FX_BulletHitGDIAPHeroic"
+				TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="7">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
 					ForbiddenStatus="WEAPON_UPGRADED_02" />
 			</TracerModelDraw>
-			
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP3Veterancy" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
@@ -1370,7 +1429,8 @@
 				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				TracerHitFx="FX_BulletHitGDIAPHeroic"
+				TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="8">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1381,16 +1441,18 @@
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
 				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				TracerHitFx="FX_BulletHitGDIAPHeroic"
+				TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="8">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
 				<ObjectStatusValidation RequiredStatus="WEAPON_UPGRADED_01"
 					ForbiddenStatus="WEAPON_UPGRADED_02" />
 			</TracerModelDraw>
-			
+
 			<TracerModelDraw id="ModuleTag_RifleTracerModelDrawAP4Veterancy" MinLength="50.0"
 				MaxLength="50.0"
 				Width="3.0"
@@ -1398,7 +1460,8 @@
 				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
 				FrameLifeTime="35" WeaponSlotType="PRIMARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				TracerHitFx="FX_BulletHitGDIAPHeroic"
+				TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="9">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1409,9 +1472,11 @@
 				MaxLength="50.0" Width="3.0"
 				MinSpeed="30" MaxSpeed="30" SweepSpeed="1.0" SpreadAngle="2.0"
 				MinTracersPerFrame=".3" MaxTracersPerFrame=".3"
-				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON" Texture="FXTracerGDIAPAmmoHeroic"
+				FrameLifeTime="35" WeaponSlotType="SECONDARY_WEAPON"
+				Texture="FXTracerGDIAPAmmoHeroic"
 				UseAdditiveBlending="true"
-				TracerHitFx="FX_BulletHitGDIAPHeroic" TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
+				TracerHitFx="FX_BulletHitGDIAPHeroic"
+				TracerEmitFx="FX_GDI_HammerheadGunFireUpgraded"
 				WeaponSlotID="9">
 				<HeadColor r="1.0" g="1.0" b="1.0" a="1.0" />
 				<TailColor r="0.0" g="0.0" b="0.0" a="0.0" />
@@ -1515,8 +1580,13 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 				<!-- ZONE TROOPER WEAPONS -->
-				<WeaponSlotTurret ID="2">
+				<WeaponSlotTurret ID="2"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon01"
+						Upgrade="Upgrade_MARVZoneTrooperSquadFrontLeft" />
+					<Weapon Ordering="SECONDARY_WEAPON"
+						Template="MARVZoneTrooperWeapon01_Accelerated"
 						Upgrade="Upgrade_MARVZoneTrooperSquadFrontLeft" />
 					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
 						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
@@ -1525,8 +1595,13 @@
 							CanPickTargetsOutOfTurretAngle="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="3">
+				<WeaponSlotTurret ID="3"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon02"
+						Upgrade="Upgrade_MARVZoneTrooperSquadFrontRight" />
+					<Weapon Ordering="SECONDARY_WEAPON"
+						Template="MARVZoneTrooperWeapon02_Accelerated"
 						Upgrade="Upgrade_MARVZoneTrooperSquadFrontRight" />
 					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
 						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
@@ -1535,8 +1610,13 @@
 							CanPickTargetsOutOfTurretAngle="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="4">
+				<WeaponSlotTurret ID="4"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon03"
+						Upgrade="Upgrade_MARVZoneTrooperSquadRearLeft" />
+					<Weapon Ordering="SECONDARY_WEAPON"
+						Template="MARVZoneTrooperWeapon03_Accelerated"
 						Upgrade="Upgrade_MARVZoneTrooperSquadRearLeft" />
 					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
 						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
@@ -1545,8 +1625,13 @@
 							CanPickTargetsOutOfTurretAngle="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="5">
+				<WeaponSlotTurret ID="5"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon04"
+						Upgrade="Upgrade_MARVZoneTrooperSquadRearRight" />
+					<Weapon Ordering="SECONDARY_WEAPON"
+						Template="MARVZoneTrooperWeapon04_Accelerated"
 						Upgrade="Upgrade_MARVZoneTrooperSquadRearRight" />
 					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
 						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
@@ -1589,11 +1674,11 @@
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER1 WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings 
-						TurretTurnRate="180" 
+					<TurretSettings
+						TurretTurnRate="180"
 						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" 
-						MinIdleScanAngle="0.0" 
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
 						MaxIdleScanAngle="100.0"
 						RecenterWhenOutOfTurnRange="false">
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
@@ -1633,11 +1718,11 @@
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER3 WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings 
-						TurretTurnRate="180" 
+					<TurretSettings
+						TurretTurnRate="180"
 						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" 
-						MinIdleScanAngle="0.0" 
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
 						MaxIdleScanAngle="100.0"
 						RecenterWhenOutOfTurnRange="false">
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
@@ -1677,11 +1762,11 @@
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER4 WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings 
-						TurretTurnRate="180" 
+					<TurretSettings
+						TurretTurnRate="180"
 						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" 
-						MinIdleScanAngle="0.0" 
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
 						MaxIdleScanAngle="100.0"
 						RecenterWhenOutOfTurnRange="false">
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
@@ -1721,17 +1806,17 @@
 						Template="MARVRifleWeaponAPAmmo"
 						ObjectStatus="RIDER_IS_PILOT WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
-					<TurretSettings 
-						TurretTurnRate="180" 
+					<TurretSettings
+						TurretTurnRate="180"
 						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" 
-						MinIdleScanAngle="0.0" 
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
 						MaxIdleScanAngle="100.0"
 						RecenterWhenOutOfTurnRange="false">
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				
+
 				<!-- MISSILEGUY WEAPONS -->
 				<WeaponSlotTurret ID="10">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVRocketWeapon"
@@ -1769,10 +1854,12 @@
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				<!-- GRENADIER WEAPONS -->
+				<!-- GRENADIER & ZONE RAIDER WEAPONS -->
 				<WeaponSlotTurret ID="18">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVGrenadeSoldierWeapon"
 						Upgrade="Upgrade_MARVGrenadeSoldierSquadFrontLeft" />
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
+						Upgrade="Upgrade_MARVZoneRaiderSquadFrontLeft" />
 					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
 						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
 						RecenterWhenOutOfTurnRange="false">
@@ -1782,6 +1869,8 @@
 				<WeaponSlotTurret ID="19">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVGrenadeSoldierWeapon"
 						Upgrade="Upgrade_MARVGrenadeSoldierSquadFrontRight" />
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
+						Upgrade="Upgrade_MARVZoneRaiderSquadFrontRight" />
 					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
 						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
 						RecenterWhenOutOfTurnRange="false">
@@ -1791,6 +1880,8 @@
 				<WeaponSlotTurret ID="20">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVGrenadeSoldierWeapon"
 						Upgrade="Upgrade_MARVGrenadeSoldierSquadRearLeft" />
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
+						Upgrade="Upgrade_MARVZoneRaiderSquadRearLeft" />
 					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
 						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
 						RecenterWhenOutOfTurnRange="false">
@@ -1800,6 +1891,8 @@
 				<WeaponSlotTurret ID="21">
 					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVGrenadeSoldierWeapon"
 						Upgrade="Upgrade_MARVGrenadeSoldierSquadRearRight" />
+					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
+						Upgrade="Upgrade_MARVZoneRaiderSquadRearRight" />
 					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
 						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
 						RecenterWhenOutOfTurnRange="false">
@@ -1841,84 +1934,6 @@
 						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
 						RecenterWhenOutOfTurnRange="false">
 						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<!-- ZONE RAIDER WEAPONS -->
-				<WeaponSlotTurret ID="26">
-					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
-						Upgrade="Upgrade_MARVZoneRaiderSquadFrontLeft" />
-					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="27">
-					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
-						Upgrade="Upgrade_MARVZoneRaiderSquadFrontRight" />
-					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="28">
-					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
-						Upgrade="Upgrade_MARVZoneRaiderSquadRearLeft" />
-					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="29">
-					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneRaiderWeapon"
-						Upgrade="Upgrade_MARVZoneRaiderSquadRearRight" />
-					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<!-- ZONE TROOPER ACCELERATED WEAPONS -->
-				<WeaponSlotTurret ID="30">
-					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon01_Accelerated"
-						Upgrade="Upgrade_MARVZoneTrooperSquadFrontLeft" />
-					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
-							CanPickTargetsOutOfTurretAngle="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="31">
-					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon02_Accelerated"
-						Upgrade="Upgrade_MARVZoneTrooperSquadFrontRight" />
-					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
-							CanPickTargetsOutOfTurretAngle="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="32">
-					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon03_Accelerated"
-						Upgrade="Upgrade_MARVZoneTrooperSquadRearLeft" />
-					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
-							CanPickTargetsOutOfTurretAngle="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret ID="33">
-					<Weapon Ordering="PRIMARY_WEAPON" Template="MARVZoneTrooperWeapon04_Accelerated"
-						Upgrade="Upgrade_MARVZoneTrooperSquadRearRight" />
-					<TurretSettings TurretTurnRate="180" MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s" MinIdleScanAngle="0.0" MaxIdleScanAngle="100.0"
-						RecenterWhenOutOfTurnRange="false">
-						<TurretAITargetChooserData CanAcquireDynamicIfAssignedOutOfRange="true"
-							CanPickTargetsOutOfTurretAngle="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
@@ -2322,6 +2337,10 @@
 			<LaserState id="ModuleTag_LaserState02" LaserId="1" />
 			<LaserState id="ModuleTag_LaserState03" LaserId="2" />
 			<LaserState id="ModuleTag_LaserState04" LaserId="3" />
+			<LaserState id="ModuleTag_LaserState05" LaserId="4" />
+			<LaserState id="ModuleTag_LaserState06" LaserId="5" />
+			<LaserState id="ModuleTag_LaserState07" LaserId="6" />
+			<LaserState id="ModuleTag_LaserState08" LaserId="7" /> 
 			<Physics id="ModuleTag_Physics" />
 			<SlowDeath id="ModuleTag_Death" SinkDelay="5s" SinkRate="1.5" DestructionDelay="15s">
 				<OCL Type="INITIAL">
@@ -2438,7 +2457,8 @@
 				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
 			</ModelConditionUpgrade>
 
-			<AudioLoopUpgrade id="GDI_CommandPost_APammoUpgrade" SoundToPlay="AudioEvent:GDI_CommandPost_APammoUpgrade">
+			<AudioLoopUpgrade id="GDI_CommandPost_APammoUpgrade"
+				SoundToPlay="AudioEvent:GDI_CommandPost_APammoUpgrade">
 				<TriggeredBy>Upgrade_GDIAPAmmo</TriggeredBy>
 			</AudioLoopUpgrade>
 		</Behaviors>
