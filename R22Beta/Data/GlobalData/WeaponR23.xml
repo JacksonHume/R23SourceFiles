@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- reload reduced by 10% , range increased to match sniper team -->
+
+	<WeaponTemplate
+		id="MARVSniperWeapon"
+		Name="MARVSniperWeapon"
+		AttackRange="470.0"
+		WeaponSpeed="999999.0"
+		PreAttackType="PER_SHOT"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="2"
+		RotatingTurret="true"
+		CanFireWhileMoving="true"
+		FireSound="AudioEvent:GDI_Sniper_RifleFire"
+		FireFX="FX_GDISniperFire"
+		FireVeteranFX="FX_GDISniperFireHeroic">
+		<PreAttackDelay
+		  MinSeconds=".2s"
+		  MaxSeconds=".2s" />
+		<FiringDuration
+				MinSeconds="0.20s"
+				MaxSeconds="0.22s" />
+		<ClipReloadTime
+				MinSeconds="1.89s"
+				MaxSeconds="1.89s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="500.0"
+				Radius="0.0"
+				DelayTimeSeconds="0s"
+				DamageType="SNIPER"
+				DamageFXType="GDI_RIFLE"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="ALL"
+					Exclude="STRUCTURE FS_BASE_DEFENSE VEHICLE" />
+			</DamageNugget>
+			<SuppressionNugget
+				Radius="15.0"
+				Suppression="250"
+				DurationSeconds="10s">
+				<SpecialObjectFilter 
+					Rule="ALL"
+					Exclude="STRUCTURE FS_BASE_DEFENSE VEHICLE" />
+			</SuppressionNugget>
+		</Nuggets>
+	</WeaponTemplate>	
+
+	<!-- MARV grenade damage increased vs structures by 25% -->
+
+	<WeaponTemplate
+		id="MARVGrenadeSoldierWeaponWarhead"
+		Name="MARVGrenadeSoldierWeaponWarhead"
+		ProjectileCollidesWith="ENEMIES"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		HitStoredTarget="true"
+ 		>
+		<Nuggets>
+			<DamageContainedNugget
+				MaxUnitsToDamage="100"
+				WindowBlastFX="FX_ClearGarrison"
+				Damage="1500000"
+				DamageType="GRENADE"
+				DeathType="EXPLODED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			<DamageNugget
+				Damage="180.0"
+				Radius="20.0"
+				DamageType="GRENADE"
+				DamageFXType="GDI_GRENADE"
+				DeathType="EXPLODED">
+				<DamageScalarDetails Scalar="125%">
+					<Filter
+						Rule="NONE"
+						Include="STRUCTURE" />
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+		<HitStoredObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE" />
+	</WeaponTemplate>
+
 	<!-- AP Ammo grants a 35% increase. -->
 	<WeaponTemplate
 		id="MARVRifleWeaponAPAmmo"
