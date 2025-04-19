@@ -1160,6 +1160,62 @@
 				FrontAngle="0d"
 				Active="True"
 				UsedForHealthBox="True" />
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="20"
+					y="0"
+					z="30" />
+			</Shape>			
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="-20"
+					y="0"
+					z="30" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="0"
+					y="20"
+					z="30" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="0"
+					y="-20"
+					z="30" />
+			</Shape>
 			<ContactPoint>
 				<Pos
 					x="0"

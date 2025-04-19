@@ -1501,6 +1501,62 @@
 				FrontAngle="0d"
 				Active="True"
 				UsedForHealthBox="True" />
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="0"
+					y="10"
+					z="15" />
+			</Shape>			
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="0"
+					y="-10"
+					z="15" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="-20"
+					y="0"
+					z="15" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="20"
+					y="0"
+					z="15" />
+			</Shape>
 		</Geometry>
 		<AudioArrayVoice>
 			<AudioEntry

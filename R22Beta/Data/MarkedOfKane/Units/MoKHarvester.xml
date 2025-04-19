@@ -1177,6 +1177,62 @@
 					y="0"
 					z="0" />
 			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="25.84"
+					y="0"
+					z="19" />
+			</Shape>			
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="-25.84"
+					y="0"
+					z="19" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="0"
+					y="-17"
+					z="19" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				MajorRadius="0"
+				MinorRadius="0"
+				Height="0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="False">
+				<Offset
+					x="0"
+					y="17"
+					z="19" />
+				</Shape>
 		</Geometry>
 		
 		<AudioArrayVoice>

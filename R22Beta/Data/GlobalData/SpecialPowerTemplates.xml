@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- RGA cooldown increased from 10s to 12s.-->
+
+	<SpecialPowerTemplate
+		id="SteelTalonsAdaptiveArmor"
+		ReloadTime="15s"
+		TargetType="NONE">
+		<GameDependency>
+			<NeededUpgrade>Upgrade_AdaptiveArmor</NeededUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+
 	<!-- R23 eradicator hexapod multiple prodigy cooldown buff, stacking limit of 3 with initial
 	modifier offsetting the initial cooldown, thats lower.  -->
 
