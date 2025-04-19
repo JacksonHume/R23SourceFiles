@@ -1168,7 +1168,7 @@
 				Active="True"
 				UsedForHealthBox="False">
 				<Offset
-					x="25.84"
+					x="25"
 					y="0"
 					z="19" />
 			</Shape>			
@@ -1182,7 +1182,7 @@
 				Active="True"
 				UsedForHealthBox="False">
 				<Offset
-					x="-25.84"
+					x="-25"
 					y="0"
 					z="19" />
 			</Shape>
