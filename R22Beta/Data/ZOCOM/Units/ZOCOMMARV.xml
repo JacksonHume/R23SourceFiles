@@ -2439,7 +2439,7 @@
 			<StatusBitsUpgrade
 				id="ModuleTag_ZOCOMNoVeterancyUpgrade"
 				StatusToSet="WEAPON_UPGRADED_02">
-				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
 			</StatusBitsUpgrade>
 
 			<StatusBitsUpgrade id="ModuleTag_VeterancyUpgrade" StatusToSet="WEAPON_UPGRADED_03"

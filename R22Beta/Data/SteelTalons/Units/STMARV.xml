@@ -20,7 +20,7 @@
 		WeaponCategory="CANNON"
 		VoicePriority="246"
 		EditorName="SteelTalonsMARV"
-		Description="DESC:ZOCOMMARV"
+		Description="Desc:GDIMARV"
 		WorldMapArmoryUpgradesAllowed="Upgrade_GDIAPAmmo"
 		TypeDescription="Type:GDIMARV"
 		MaxSimultaneousOfType="1"
@@ -2439,7 +2439,7 @@
 			<StatusBitsUpgrade
 				id="ModuleTag_ZOCOMNoVeterancyUpgrade"
 				StatusToSet="WEAPON_UPGRADED_02">
-				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
 			</StatusBitsUpgrade>
 
 			<StatusBitsUpgrade id="ModuleTag_VeterancyUpgrade" StatusToSet="WEAPON_UPGRADED_03"
