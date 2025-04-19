@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<AssetDeclaration xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<GameObject
 		id="Reaper17GrowthStimulator"
 		inheritFrom="BaseStructure"
@@ -118,7 +119,12 @@
 					<Animation
 						AnimationName="ABGrowthStim_IDLA"
 						AnimationMode="ONCE"
-						AnimationPriority="30" 
+						AnimationPriority="30"
+						AnimationBlendTime="15" />
+					<Animation
+						AnimationName="ABGrowthStim_IDLB"
+						AnimationMode="ONCE"
+						AnimationPriority="10"
 						AnimationBlendTime="15" />
 				</AnimationState>
 				<AnimationState
@@ -182,7 +188,7 @@
 				DepositInterval="5s"
 				DepositAmount="15"
 				GiveNoXP="true" />
-			<AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate"/>
+			<AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate" />
 			<FireWeaponWhenDead
 				id="ModuleTag_CatalystDeathWeapon"
 				InitiallyActive="true"
@@ -191,9 +197,9 @@
 			>
 				<DieMuxData DeathTypes="CATALYST" />
 			</FireWeaponWhenDead>
-		  <TemporarilyDefectUpdate
-			id="ModuleTag_TemporarilyDefect"
-			DefectionFrameCount="100" />
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="100" />
 			<FXListBehavior
 				id="ModuleTag_FXList">
 				<DieMuxData
@@ -228,7 +234,7 @@
 				id="ModuleTag_ObjectStatusForTibAgitation"
 				StatusToSet="DOES_CONTAIN_TIBERIUM">
 				<TriggeredBy>Upgrade_Reaper17Faction</TriggeredBy>
-			</StatusBitsUpgrade>		
+			</StatusBitsUpgrade>
 			<StructureUnpackUpdate
 				UnpackTime="1.5s" />
 			<RepairUpdate xmlns="uri:ea.com:eala:asset"
@@ -236,7 +242,7 @@
 				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
 				<SelfAudio></SelfAudio>
 			</RepairUpdate>
-			
+
 			<HordeTransportContain
 				id="ModuleTag_Contain"
 				ObjectStatusOfContained=""
@@ -262,14 +268,14 @@
 						Include="" />
 				</PassengerData>
 			</HordeTransportContain>
-			
+
 			<EngineerContain xmlns="uri:ea.com:eala:asset"
 				id="ModuleTag_EngineerContain"
 				NameOfVoiceToUseForFriendlyEnter="VoiceEngineerRepair"
-				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding" 
+				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding"
 				EvaEventForRepair="BuildingRepaired"
 				EvaEventForCapture="EnemyBuildingCaptured"
-				FXForRepair="FX_Building_Repaired" 
+				FXForRepair="FX_Building_Repaired"
 				FXForCapture="FX_Building_Captured"
 				FXForCaptureAndReplace="FX_Building_Captured"
 				ImmediatelyEnabled="true">
@@ -282,30 +288,30 @@
 					<IncludeThing>BlackHandSaboteur</IncludeThing>
 					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
 					<IncludeThing>Traveler59Assimilator</IncludeThing>
-			</CanEnterFilter>
+				</CanEnterFilter>
 			</EngineerContain>
 			<CreateObjectDie xmlns="uri:ea.com:eala:asset"
 				id="ModuleTag_CreateOccupiedDie"
-				CreationList="OCL_GenericReaper17BuildingDestruction" >
+				CreationList="OCL_GenericReaper17BuildingDestruction">
 				<DieMuxData
 					DeathTypes="ALL"
-					DeathTypesForbidden="DETONATED SUICIDED" 
+					DeathTypesForbidden="DETONATED SUICIDED"
 				/>
 				<UpgradeForbidden>Upgrade_NoSpawnUponDestruction</UpgradeForbidden>
 			</CreateObjectDie>
 			<CreateObjectDie xmlns="uri:ea.com:eala:asset"
 				id="ModuleTag_CreateOccupiedSuicide"
-				CreationList="OCL_GenericReaper17BuildingSuicide" >
+				CreationList="OCL_GenericReaper17BuildingSuicide">
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
 		</Behaviors>
 		<AI>
 			<AIUpdate
-			id="ModuleTag_AI"
-			AutoAcquireEnemiesWhenIdle="NO"
-			AILuaEventsList="BuildingPowerFunctions">
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="BuildingPowerFunctions">
 			</AIUpdate>
-		</AI>	
+		</AI>
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
@@ -394,22 +400,22 @@
 			<AudioEntry Sound="AudioEvent:ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
 			<AudioEntry Sound="AudioEvent:ALI_Building_Placed" AudioType="soundUnderConstruction" />
 		</AudioArraySound>
-		
+
 		<EvaEvents
-			EvaEventProductionStarted="BuildingConstructionStarted" 
-			EvaEventProductionComplete="BuildingConstructionComplete" 
-			EvaEventDamagedOwner="StructureUnderAttack" 	
+			EvaEventProductionStarted="BuildingConstructionStarted"
+			EvaEventProductionComplete="BuildingConstructionComplete"
+			EvaEventDamagedOwner="StructureUnderAttack"
 			EvaEventSoldOwner="StructureSold"
 			EvaEventRepairingOwner="StructureRepairing"
 			EvaEnemyObjectSightedEvent="EnemyCampSighted"
 			EvaEventAvailableForProduction="NewConstructionOptions"
-			EvaEventPlacementFailed="StructurePlacementFailed" 
-			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue" 
+			EvaEventPlacementFailed="StructurePlacementFailed"
+			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue"
 			EvaEventBuildOnHold="BuildOnHold"
-			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventBuildCancelled="BuildCancelled"
 			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
 			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
-		
+
 		<ShadowInfo
 			Type="VOLUME" />
 		<VisionInfo
