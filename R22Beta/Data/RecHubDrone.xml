@@ -90,7 +90,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="GDIRepairDroneLocomotor" />
 		<Draws>

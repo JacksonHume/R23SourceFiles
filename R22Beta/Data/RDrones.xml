@@ -106,7 +106,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="AlienRepairDroneLocomotor" />
 		<Draws>
@@ -696,7 +696,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="AlienRepairDroneLocomotor" />
 		<Draws>
@@ -1286,7 +1286,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="AlienRepairDroneLocomotor" />
 		<Draws>
@@ -1836,7 +1836,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="AlienRepairDroneLocomotor" />
 		<Draws>
@@ -2413,7 +2413,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="GDIRepairDroneLocomotor" />
 		<Draws>
@@ -3010,7 +3010,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="GDIRepairDroneLocomotor" />
 		<Draws>
@@ -3607,7 +3607,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="GDIRepairDroneLocomotor" />
 		<Draws>
@@ -4165,7 +4165,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="GDIRepairDroneLocomotor" />
 		<Draws>
@@ -4731,7 +4731,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="NODRepairDroneLocomotor" />
 		<Draws>
@@ -5292,7 +5292,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="NODRepairDroneLocomotor" />
 		<Draws>
@@ -5883,7 +5883,7 @@
 			DamageFX=""
 			Conditions="" />
 		<LocomotorSet
-			Speed="100"
+			Speed="75"
 			Condition="NORMAL"
 			Locomotor="NODAircraftRepairDroneLocomotor" />
 		<Draws>

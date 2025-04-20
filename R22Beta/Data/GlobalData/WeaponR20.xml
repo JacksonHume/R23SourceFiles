@@ -832,7 +832,7 @@
 	<WeaponTemplate
 		id="NODBunkerTruckFakeWeapon"
 		Name="NODBunkerTruckFakeWeapon"
-		AttackRange="250.0"
+		AttackRange="500.0"
 		WeaponSpeed="999999.0"
 		RequiredFiringObjectStatus=""
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
