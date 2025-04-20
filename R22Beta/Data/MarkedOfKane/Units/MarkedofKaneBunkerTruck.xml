@@ -2,7 +2,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
 		id="MarkedOfKaneBunkerTruck"
-		KindOf="SELECTABLE CAN_CAST_REFLECTIONS TRANSPORT PRELOAD SCORE CAN_REVERSE_MOVE VEHICLE CAN_BE_FAVORITE_UNIT"
+		KindOf="SELECTABLE CAN_CAST_REFLECTIONS TRANSPORT PRELOAD SCORE CAN_REVERSE_MOVE VEHICLE CAN_BE_FAVORITE_UNIT CAN_FIRE_EVEN_IF_CONTAINED_ARE_NOT_IN_RANGE"
 		Description="Desc:MarkedOfKaneBunkerTruck"
 		TypeDescription="Type:MarkedOfKaneBunkerTruck"
 		RadarPriority="UNIT"

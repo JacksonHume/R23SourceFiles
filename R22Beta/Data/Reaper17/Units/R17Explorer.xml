@@ -97,7 +97,7 @@
 			DamageFX="VehicleDamageFX"
 			Conditions="" />
 		<LocomotorSet
-			Speed="60"
+			Speed="66"
 			Condition="NORMAL"
 			Locomotor="AlienExplorerLocomotor" />
 		<SkirmishAIInformation
@@ -691,7 +691,7 @@
 				Permanent="False"
 				WaypointMode="False"
 				WaypointModeTerminal="True"
-				NewObjectUnpackTime="20s"
+				NewObjectUnpackTime="15s"
 				DisabledDuringUnpack="True"
 				CheckBuildAssistant="True">
 				<TriggeredBy>Upgrade_UnPack</TriggeredBy>

@@ -30,7 +30,7 @@
 		<LocomotorSet
 			Locomotor="NODEmissaryLocomotor"
 			Condition="NORMAL"
-			Speed="60.0" />
+			Speed="66.0" />
 		<Draws>
 			<TruckDraw
 				id="ModuleTag_01"
@@ -188,7 +188,7 @@
 			/>
 			<ReplaceSelfUpgrade
 				id="ModuleTag_ReplaceSelf"
-				NewObjectUnpackTime="20.0s"
+				NewObjectUnpackTime="15.0s"
 				CheckBuildAssistant="true">
 				<TriggeredBy>Upgrade_UnPack</TriggeredBy>
 				<ReplacementTemplate>MarkedOfKaneMiniMCVOutpost</ReplacementTemplate>
