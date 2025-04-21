@@ -165,25 +165,17 @@
 						Name="W3DContainer:NUMORNSTAR_SKN"
 						ExtraMesh="False" />
 					<WeaponFireFXBone
-						WeaponSlotID="1"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWEAPONMUZZLE" />
-					<WeaponFireFXBone
 						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWEAPONMUZZLE" />
 					<WeaponRecoilBone
-						WeaponSlotID="1"
+						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="BONE_BARREL" />
 					<WeaponMuzzleFlash
-						WeaponSlotID="1"
+						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="MUZZLEFLASH_01" />
-					<WeaponLaunchBone
-						WeaponSlotID="1"
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FXWEAPONMUZZLE" />
 					<WeaponLaunchBone
 						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -192,7 +184,9 @@
 						TurretNameKey="BONE_TURRET"
 						TurretArtAngle="0d"
 						TurretArtPitch="0d"
-						TurretID="1" />
+						TurretID="2" />
+					<Turret
+						TurretID="3" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -455,7 +449,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -488,7 +482,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -520,7 +514,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -552,7 +546,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -627,14 +621,14 @@
 						Name="W3DContainer:NUMORNSTARS_SKN"
 						ExtraMesh="False" />
 					<WeaponRecoilBone
-						WeaponSlotID="1"
+						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="BONE_BARREL" />
 					<Turret
 						TurretNameKey="BONE_TURRET"
 						TurretArtAngle="0d"
 						TurretArtPitch="0d"
-						TurretID="1" />
+						TurretID="2" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -671,7 +665,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -703,7 +697,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -735,7 +729,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -767,7 +761,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -924,8 +918,14 @@
 				DefectionFrameCount="300" />
 			<WeaponSetUpdate
 				id="720F4A50">
+				<WeaponSlotHardpoint
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NodMobileArtilleryCannonFake1" />
+				</WeaponSlotHardpoint>
 				<WeaponSlotTurret
-					ID="1"
+					ID="2"
 					InterleavedStyle="INTERLEAVE_RANDOM"
 					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
 					AllowInterleavedFiring="False">
@@ -945,7 +945,7 @@
 						TurretTurnRate="360"
 						TurretPitchRate="20"
 						MinimumPitch="-20d"
-						PitchHeight="98.99999%"
+						PitchHeight="99%"
 						ControlledWeaponSlots=""
 						MinIdleScanTime="1s"
 						MaxIdleScanTime="5s"
@@ -956,19 +956,36 @@
 						NaturalTurretAngle="0d"
 						AllowsPitch="True"
 						RecenterWhenOutOfTurnRange="True">
-						<TurretAITargetChooserData
-							IdleScanDelay="0.8s"
-							ReacquireDelay="5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="False"
-							CanAcquireDynamicIfAssignedOutOfRange="True"
-							CanPickTargetsOutOfTurretAngle="False" />
+						<TurretAITargetChooserData />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret
+					ID="3"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NodMobileArtilleryCannonFake"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" />
+					<TurretSettings
+						TurretTurnRate="360"
+						TurretPitchRate="20"
+						MinimumPitch="-20d"
+						PitchHeight="99%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="5s"
+						MinIdleScanAngle="0"
+						MaxIdleScanAngle="90"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="True"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData />
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
@@ -1037,6 +1054,27 @@
 					AcceptModelCondition=""
 					RejectModelCondition="" />
 			</SpecialPower>
+			<ProductionUpdate
+				id="37DA5033"
+				MaxQueueEntries="99"
+				NumDoorAnimations="0"
+				DoorOpeningTime="0s"
+				DoorOpeningTimeMetaUnit="0s"
+				DoorWaitOpenTime="0s"
+				DoorCloseTime="0s"
+				ConstructionCompleteDuration="0"
+				DisabledTypesToProcess=""
+				UnitInvulnerableTime="0"
+				SpecialPrepModelconditionTime="0"
+				BonusForType=""
+				SpeedBonusAudioLoop=""
+				Type="INVALID"
+				ProductionTimeDelayScalar="0s"
+				GiveNoXP="False"
+				VeteranUnitsFromVeteranFactory="False"
+				SetBonusModelConditionOnSpeedBonus="False"
+				SecondaryQueue="False"
+				IgnorePreReqs="False" />
 			<WeaponFireSpecialAbilityUpdate
 				id="E57FD838"
 				GrabPassengerHealGain="0%"
@@ -1085,7 +1123,7 @@
 				SpecialWeapon="NodMobileArtilleryBombardCannon"
 				WhichSpecialWeapon="1"
 				BusyForDuration="0s"
-				WeaponSlotID="1"
+				WeaponSlotID="2"
 				WeaponSlotType="PRIMARY_WEAPON"
 				SkipContinue="False"
 				NeedLivingTargets="False"
@@ -1121,13 +1159,13 @@
 					ForbiddenConditions="REALLYDAMAGED UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
 					ForbiddenConditionExceptions=""
 					ForbiddenWeaponSets=""
-					ForbiddenStatus="IS_FIRING_WEAPON"
+					ForbiddenStatus=""
 					CamouflageLevel="0"
 					InvisibilityType="STEALTH"
 					Options=""
 					EnteringStealthFX="FX_NODStealthTransitionOn"
 					LeavingStealthFX="FX_NODStealthTransitionOff"
-					HintDetectableStates="IS_ATTACKING"
+					HintDetectableStates=""
 					NoStealthForAttackWindow="0s" />
 			</InvisibilityUpdate>
 			<Physics
@@ -1159,27 +1197,6 @@
 				KillWhenRestingOnGround="False"
 				OrientToFlightPath="False"
 				IgnoreTerrainHeight="False" />
-			<ProductionUpdate
-				id="37DA5033"
-				MaxQueueEntries="99"
-				NumDoorAnimations="0"
-				DoorOpeningTime="0s"
-				DoorOpeningTimeMetaUnit="0s"
-				DoorWaitOpenTime="0s"
-				DoorCloseTime="0s"
-				ConstructionCompleteDuration="0"
-				DisabledTypesToProcess=""
-				UnitInvulnerableTime="0"
-				SpecialPrepModelconditionTime="0"
-				BonusForType=""
-				SpeedBonusAudioLoop=""
-				Type="INVALID"
-				ProductionTimeDelayScalar="0s"
-				GiveNoXP="False"
-				VeteranUnitsFromVeteranFactory="False"
-				SetBonusModelConditionOnSpeedBonus="False"
-				SecondaryQueue="False"
-				IgnorePreReqs="False" />
 			<SlowDeath
 				id="73542D4A"
 				SinkRate="1"
@@ -1336,46 +1353,27 @@
 				ApplyToContained="False">
 				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
 			</StatusBitsUpgrade>
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeapon">
+				<FireWeaponNugget
+					WeaponName="NodMobileArtilleryUndeploy"
+					FireDelay="0s"
+					FireInterval="0.4s"
+				/>
+			</FireWeaponUpdate>
 		</Behaviors>
 		<AI>
 			<DeployStyleAIUpdate
-				id="12FA48BA"
+				id="ModuleTag_AI"
 				AutoAcquireEnemiesWhenIdle="YES"
-				StopChaseDistance="500"
-				HoldGroundCloseRangeDistance="0"
 				AILuaEventsList="NodMobileArtilleryFunctions"
-				MinCowerTime="0s"
-				MaxCowerTime="0s"
-				RampageTime="0s"
-				BurningDeathTime="0s"
-				TimeToEjectPassengersOnRampage="0"
-				ComboLocomotorSet="NORMAL"
-				ComboLocoAttackDistance="80"
-				IdleTargetTime="0s"
-				MaxCombineChildren="1"
-				SpawnOffsetRadius="0"
-				StandGround="False"
-				CanAttackWhileContained="False"
-				RampageRequiresAflame="False"
-				FadeOnPortals="False"
 				UnpackTime="3.5s"
 				PackTime="3.5s"
-				DeployedAttributeModifierName=""
-				ResetTurretBeforePacking="False"
-				TurretsFunctionOnlyWhenDeployed="False"
-				TurretsMustCenterBeforePacking="False"
-				MustDeployToAttack="True"
-				CannotUndeploy="False">
+				MustDeployToAttack="true">
 				<UnitAITargetChooserData
-					IdleScanDelay="0.8s"
-					ReacquireDelay="5s"
-					StartupDelay="0s"
-					SympathyRange="100"
-					CheckVisionRange="False"
-					CanPickDynamicTargets="False"
-					RotateToTargetWhenAiming="False"
-					CanAutoAcquireNonAutoAcquirable="False"
-					TargetingCompareList="DefaultTargetingCompareList" />
+					CheckVisionRange="false"
+					CanPickDynamicTargets="false"
+					RotateToTargetWhenAiming="false" />
 			</DeployStyleAIUpdate>
 		</AI>
 		<Body>
@@ -1451,8 +1449,8 @@
 			<AudioEntry
 				Sound="Multisound:NOD_Spectre_VoiceSelectMS"
 				AudioType="voiceSelect" />
-			<NamedEntry 
-				Sound="AudioEvent:NOD_Spectre_VoiceAttackBombard" 
+			<NamedEntry
+				Sound="AudioEvent:NOD_Spectre_VoiceAttackBombard"
 				Name="InitiateSpotTargetBombard" />
 		</AudioArrayVoice>
 		<AudioArraySound>
@@ -1474,8 +1472,8 @@
 			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
 			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
-			EvaEventSecondDamageFarFromFirstScanRange="600"    
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
 			EvaEventAmbushed="UnitAmbushed"
 			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
 			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"

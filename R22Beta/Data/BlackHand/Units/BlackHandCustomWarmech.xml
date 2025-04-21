@@ -1611,18 +1611,6 @@
 						Upgrade=""
 						ObjectStatus="WEAPON_UPGRADED_01"
 						IsPlayerUpgradePermanent="False" />
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="BlackHandCustomWarmechFlamer_Raged"
-						Upgrade="Upgrade_Raged"
-						ObjectStatus=""
-						IsPlayerUpgradePermanent="False" />
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="BlackHandCustomWarmechUpgradedFlamer_Raged"
-						Upgrade="Upgrade_Raged"
-						ObjectStatus="WEAPON_UPGRADED_01"
-						IsPlayerUpgradePermanent="False" />
 					<TurretSettings
 						TurretTurnRate="180"
 						TurretPitchRate="60"

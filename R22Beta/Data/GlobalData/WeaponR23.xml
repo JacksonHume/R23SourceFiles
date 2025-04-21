@@ -1,6 +1,139 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<WeaponTemplate
+			id="NodMobileArtilleryBombardCannon"
+			Name="NodMobileArtilleryBombardCannon"
+			AttackRange="50000.0"
+			WeaponSpeed="300"
+			MinWeaponSpeed="300"
+			MaxWeaponSpeed="350"
+			MinimumAttackRange="300.0"
+			MinTargetPitch="-30d"
+			MaxTargetPitch="30d"
+			ClipSize="1"
+			AutoReloadsClip="AUTO"
+			CanFireWhileMoving="false"
+			CanFireWhileCharging="false"
+			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+			AntiMask="ANTI_GROUND"
+			ReAcquireDetailType="PER_SHOT"
+			ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+			FireFX="FX_NODMobileArtilleryBombardCannon"
+			ShotsPerBarrel="1"
+			DisableScatterForTargetsOnWall="true"
+			FireVeteranFX="FX_NODMobileArtilleryBombardCannonHeroic"
+			ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+ 		>
+		<ClipReloadTime MinSeconds="5s"
+				MaxSeconds="5s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="NODMobileArtilleryWarhead"
+				ProjectileTemplate="NodMobileArtilleryShell">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="NodMobileArtilleryShell_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+		<ScatterRadiusVsType
+		Radius="50.0">
+			<Filter
+				Rule="NONE"
+				Include="INFANTRY" />
+		</ScatterRadiusVsType>
+		<ScatterRadiusVsType
+			Radius="50.0">
+			<Filter
+				Rule="NONE"
+				Include="VEHICLE" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<!-- fake weapon added for specters to not undeploy in below their minimum range -->
+
+	<WeaponTemplate
+		id="NodMobileArtilleryCannonFake1"
+		Name="NodMobileArtilleryCannonFake1"
+		AttackRange="750.0"
+		WeaponSpeed="200"
+		ClipSize="0"
+		RadiusDamageAffects="ALLIES SELF"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		ReAcquireDetailType="PER_SHOT"
+		FireFX=""
+		FireVeteranFX=""
+		RequiredFiringObjectStatus="DEPLOYED"
+		CheckStatusFlagsInRangeChecks="false"
+	>
+		<ClipReloadTime MinSeconds="0s"
+				MaxSeconds="0s" />
+		<Nuggets>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NodMobileArtilleryCannonFake"
+		Name="NodMobileArtilleryCannonFake"
+		AttackRange="250.0"
+		WeaponSpeed="200"
+		ClipSize="0"
+		RadiusDamageAffects="ALLIES SELF"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		ReAcquireDetailType="PER_SHOT"
+		FireFX=""
+		FireVeteranFX=""
+		RequiredFiringObjectStatus="DEPLOYED"
+		CheckStatusFlagsInRangeChecks="false"
+	>
+		<ClipReloadTime MinSeconds="0s"
+				MaxSeconds="0s" />
+		<Nuggets>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NodMobileArtilleryUndeploy"
+		Name="NodMobileArtilleryUndeploy"
+		AttackRange="250.0"
+		WeaponSpeed="200"
+		ClipSize="1"
+		RadiusDamageAffects="ALLIES SELF"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		ReAcquireDetailType="PER_SHOT"
+		FireFX=""
+		FireVeteranFX=""
+		RequiredFiringObjectStatus="DEPLOYED"
+		CheckStatusFlagsInRangeChecks="false"
+	>
+		<ClipReloadTime MinSeconds="0s"
+				MaxSeconds="0s" />
+		<Nuggets>
+			<MetaImpactNugget
+				ShockWaveAmount="5.0"
+				ShockWaveRadius="5.0"
+				CyclonicFactor="0.05"
+				FlipDirection="false"
+				ShockWaveZMult="0">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					AcceptModelCondition="WEAPONSLOTID_03"
+					RejectModelCondition="PACKING">
+					<IncludeThing>MarkedOfKaneMobileArtillery</IncludeThing>
+					<IncludeThing>NODMobileArtillery</IncludeThing>
+					<IncludeThing>BlackHandMobileArtillery</IncludeThing>
+				</SpecialObjectFilter>
+			</MetaImpactNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
 	<!-- reload reduced by 10% , range increased to match sniper team -->
 
 	<WeaponTemplate
@@ -646,140 +779,6 @@
 				DamageType="GUN"
 				DeathType="NORMAL" />
 		</Nuggets>
-	</WeaponTemplate>
-
-	<!-- Nod Mobile Stealth Artillery -->
-
-	<WeaponTemplate
-		id="NodMobileArtilleryCannon"
-		Name="NodMobileArtilleryCannon"
-		AttackRange="750.0"
-		MinimumAttackRange="250.0"
-		WeaponSpeed="200"
-		ClipSize="1"
-		AcceptableAimDelta="20d"
-		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		CanFireWhileMoving="false"
-		CanFireWhileCharging="false"
-		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
-		ReAcquireDetailType="PER_SHOT"
-		FireFX="FX_NODMobileArtilleryCannon"
-		FireVeteranFX="FX_NODMobileArtilleryCannonHeroic"
-		RequiredFiringObjectStatus="DEPLOYED"
-		CheckStatusFlagsInRangeChecks="false"
-		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
-	>
-		<ClipReloadTime MinSeconds="5s"
-			MaxSeconds="5s" />
-		<Nuggets>
-			<ProjectileNugget
-				WarheadTemplate="NODMobileArtilleryWarhead"
-				ProjectileTemplate="NodMobileArtilleryShell">
-				<VeterancyProjectiles
-					VeterancyLevel="HEROIC"
-					ProjectileTemplate="NodMobileArtilleryShell_Veteran" />
-			</ProjectileNugget>
-		</Nuggets>
-		<ScatterRadiusVsType
-			Radius="50.0">
-			<Filter
-				Rule="NONE"
-				Include="INFANTRY" />
-		</ScatterRadiusVsType>
-		<ScatterRadiusVsType
-			Radius="50.0">
-			<Filter
-				Rule="NONE"
-				Include="VEHICLE" />
-		</ScatterRadiusVsType>
-	</WeaponTemplate>
-
-	<WeaponTemplate
-		id="NodMobileArtilleryCannonCloned"
-		Name="NodMobileArtilleryCannonCloned"
-		AttackRange="750.0"
-		MinimumAttackRange="250.0"
-		WeaponSpeed="200"
-		ClipSize="1"
-		AcceptableAimDelta="20d"
-		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		CanFireWhileMoving="false"
-		CanFireWhileCharging="false"
-		ReAcquireDetailType="PER_SHOT"
-		FireFX="FX_NODMobileArtilleryCannon"
-		FireVeteranFX="FX_NODMobileArtilleryCannonHeroic"
-		RequiredFiringObjectStatus="DEPLOYED"
-		CheckStatusFlagsInRangeChecks="false"
-		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
-	>
-		<ClipReloadTime MinSeconds="5s"
-			MaxSeconds="5s" />
-		<Nuggets>
-			<ProjectileNugget
-				WarheadTemplate="NODMobileArtilleryWarheadCloned"
-				ProjectileTemplate="NodMobileArtilleryShell">
-				<VeterancyProjectiles
-					VeterancyLevel="HEROIC"
-					ProjectileTemplate="NodMobileArtilleryShell_Veteran" />
-			</ProjectileNugget>
-		</Nuggets>
-		<ScatterRadiusVsType
-			Radius="50.0">
-			<Filter
-				Rule="NONE"
-				Include="INFANTRY" />
-		</ScatterRadiusVsType>
-		<ScatterRadiusVsType
-			Radius="50.0">
-			<Filter
-				Rule="NONE"
-				Include="VEHICLE" />
-		</ScatterRadiusVsType>
-	</WeaponTemplate>
-
-	<WeaponTemplate
-		id="NodMobileArtilleryBombardCannon"
-		Name="NodMobileArtilleryBombardCannon"
-		AttackRange="50000.0"
-		WeaponSpeed="300"
-		MinWeaponSpeed="300"
-		MaxWeaponSpeed="350"
-		MinimumAttackRange="125.0"
-		AcceptableAimDelta="20d"
-		ClipSize="1"
-		AutoReloadsClip="AUTO"
-		CanFireWhileMoving="false"
-		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		AntiMask="ANTI_GROUND"
-		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
-		FireFX="FX_NODMobileArtilleryBombardCannon"
-		FireVeteranFX="FX_NODMobileArtilleryBombardCannonHeroic"
-		RequiredFiringObjectStatus="DEPLOYED"
-		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
-	>
-		<ClipReloadTime MinSeconds="5s"
-			MaxSeconds="5s" />
-		<Nuggets>
-			<ProjectileNugget
-				WarheadTemplate="NODMobileArtilleryWarhead"
-				ProjectileTemplate="NodMobileArtilleryShell">
-				<VeterancyProjectiles
-					VeterancyLevel="HEROIC"
-					ProjectileTemplate="NodMobileArtilleryShell_Veteran" />
-			</ProjectileNugget>
-		</Nuggets>
-		<ScatterRadiusVsType
-			Radius="50.0">
-			<Filter
-				Rule="NONE"
-				Include="INFANTRY" />
-		</ScatterRadiusVsType>
-		<ScatterRadiusVsType
-			Radius="50.0">
-			<Filter
-				Rule="NONE"
-				Include="VEHICLE" />
-		</ScatterRadiusVsType>
 	</WeaponTemplate>
 
 </AssetDeclaration>
