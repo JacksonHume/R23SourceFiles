@@ -3658,7 +3658,6 @@
 				<SpecialObjectFilter
 					Rule="NONE"
 					Include="INFANTRY">
-
 				</SpecialObjectFilter>
 			</DamageNugget>
 
@@ -3679,7 +3678,18 @@
 				DamageType="GRENADE">
 				<SpecialObjectFilter
 					Rule="ALL"
-					Exclude="INFANTRY HORDE"
+					Exclude="INFANTRY HORDE STRUCTURE"
+				/>
+			</DamageNugget>
+
+			<!-- Damage to structures -->
+			<DamageNugget
+				Damage="33.0"
+				Radius="25.0"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="STRUCTURE"
 				/>
 			</DamageNugget>
 

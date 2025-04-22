@@ -1,43 +1,87 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- cultist nerf -->
+
 	<WeaponTemplate
-			id="NodMobileArtilleryBombardCannon"
-			Name="NodMobileArtilleryBombardCannon"
-			AttackRange="50000.0"
-			WeaponSpeed="300"
-			MinWeaponSpeed="300"
-			MaxWeaponSpeed="350"
-			MinimumAttackRange="300.0"
-			MinTargetPitch="-30d"
-			MaxTargetPitch="30d"
-			ClipSize="1"
-			AutoReloadsClip="AUTO"
-			CanFireWhileMoving="false"
-			CanFireWhileCharging="false"
-			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-			AntiMask="ANTI_GROUND"
-			ReAcquireDetailType="PER_SHOT"
-			ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
-			FireFX="FX_NODMobileArtilleryBombardCannon"
-			ShotsPerBarrel="1"
-			DisableScatterForTargetsOnWall="true"
-			FireVeteranFX="FX_NODMobileArtilleryBombardCannonHeroic"
-			ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
- 		>
+		id="CultistMindControlWeaponTrigger"
+		Name="CultistMindControlWeaponTrigger"
+		AttackRange="180.0"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="180d"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.25s"
+			MaxSeconds="0.25s" />
+		<ClipReloadTime
+			MinSeconds="15s"
+			MaxSeconds="15s" />
+		<Nuggets>
+			<SpecialPowerNugget
+				SpecialPowerTemplate="SpecialPower_CultistMindControlGetInRange"/>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="CultistMindControlWeaponRangeFinder"
+		Name="CultistMindControlWeaponRangeFinder"
+		AttackRange="210.0"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AcceptableAimDelta="180d"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.25s"
+			MaxSeconds="0.25s" />
+		<ClipReloadTime
+			MinSeconds="15s"
+			MaxSeconds="15s" />
+		<Nuggets>
+			<SpecialPowerNugget
+				SpecialPowerTemplate="SpecialPower_CultistMindControlGetInRange"/>
+		</Nuggets>
+	</WeaponTemplate>	
+
+	<WeaponTemplate
+		id="NodMobileArtilleryBombardCannon"
+		Name="NodMobileArtilleryBombardCannon"
+		AttackRange="50000.0"
+		WeaponSpeed="300"
+		MinWeaponSpeed="300"
+		MaxWeaponSpeed="350"
+		MinimumAttackRange="300.0"
+		MinTargetPitch="-30d"
+		MaxTargetPitch="30d"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND"
+		ReAcquireDetailType="PER_SHOT"
+		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		FireFX="FX_NODMobileArtilleryBombardCannon"
+		ShotsPerBarrel="1"
+		DisableScatterForTargetsOnWall="true"
+		FireVeteranFX="FX_NODMobileArtilleryBombardCannonHeroic"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+	>
 		<ClipReloadTime MinSeconds="5s"
-				MaxSeconds="5s" />
+			MaxSeconds="5s" />
 		<Nuggets>
 			<ProjectileNugget
 				WarheadTemplate="NODMobileArtilleryWarhead"
 				ProjectileTemplate="NodMobileArtilleryShell">
 				<VeterancyProjectiles
 					VeterancyLevel="HEROIC"
-					ProjectileTemplate="NodMobileArtilleryShell_Veteran"/>
+					ProjectileTemplate="NodMobileArtilleryShell_Veteran" />
 			</ProjectileNugget>
 		</Nuggets>
 		<ScatterRadiusVsType
-		Radius="50.0">
+			Radius="50.0">
 			<Filter
 				Rule="NONE"
 				Include="INFANTRY" />
@@ -69,7 +113,7 @@
 		CheckStatusFlagsInRangeChecks="false"
 	>
 		<ClipReloadTime MinSeconds="0s"
-				MaxSeconds="0s" />
+			MaxSeconds="0s" />
 		<Nuggets>
 		</Nuggets>
 	</WeaponTemplate>
@@ -91,7 +135,7 @@
 		CheckStatusFlagsInRangeChecks="false"
 	>
 		<ClipReloadTime MinSeconds="0s"
-				MaxSeconds="0s" />
+			MaxSeconds="0s" />
 		<Nuggets>
 		</Nuggets>
 	</WeaponTemplate>
@@ -113,7 +157,7 @@
 		CheckStatusFlagsInRangeChecks="false"
 	>
 		<ClipReloadTime MinSeconds="0s"
-				MaxSeconds="0s" />
+			MaxSeconds="0s" />
 		<Nuggets>
 			<MetaImpactNugget
 				ShockWaveAmount="5.0"
@@ -150,14 +194,14 @@
 		FireFX="FX_GDISniperFire"
 		FireVeteranFX="FX_GDISniperFireHeroic">
 		<PreAttackDelay
-		  MinSeconds=".2s"
-		  MaxSeconds=".2s" />
+			MinSeconds=".2s"
+			MaxSeconds=".2s" />
 		<FiringDuration
-				MinSeconds="0.20s"
-				MaxSeconds="0.22s" />
+			MinSeconds="0.20s"
+			MaxSeconds="0.22s" />
 		<ClipReloadTime
-				MinSeconds="1.89s"
-				MaxSeconds="1.89s" />
+			MinSeconds="1.89s"
+			MaxSeconds="1.89s" />
 		<Nuggets>
 			<DamageNugget
 				Damage="500.0"
@@ -166,7 +210,7 @@
 				DamageType="SNIPER"
 				DamageFXType="GDI_RIFLE"
 				DeathType="NORMAL">
-				<SpecialObjectFilter 
+				<SpecialObjectFilter
 					Rule="ALL"
 					Exclude="STRUCTURE FS_BASE_DEFENSE VEHICLE" />
 			</DamageNugget>
@@ -174,12 +218,12 @@
 				Radius="15.0"
 				Suppression="250"
 				DurationSeconds="10s">
-				<SpecialObjectFilter 
+				<SpecialObjectFilter
 					Rule="ALL"
 					Exclude="STRUCTURE FS_BASE_DEFENSE VEHICLE" />
 			</SuppressionNugget>
 		</Nuggets>
-	</WeaponTemplate>	
+	</WeaponTemplate>
 
 	<!-- MARV grenade damage increased vs structures by 25% -->
 
@@ -189,7 +233,7 @@
 		ProjectileCollidesWith="ENEMIES"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
 		HitStoredTarget="true"
- 		>
+	>
 		<Nuggets>
 			<DamageContainedNugget
 				MaxUnitsToDamage="100"
@@ -414,7 +458,19 @@
 				DamageType="GRENADE">
 				<SpecialObjectFilter
 					Rule="ALL"
-					Exclude="INFANTRY HORDE"
+					Exclude="INFANTRY HORDE STRUCTURE HUSK"
+				/>
+			</DamageNugget>
+
+			<!-- Damage to structures and husks -->
+			<DamageNugget
+				Damage="100.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="STRUCTURE HUSK"
 				/>
 			</DamageNugget>
 
@@ -506,7 +562,19 @@
 				DamageType="GRENADE">
 				<SpecialObjectFilter
 					Rule="ALL"
-					Exclude="INFANTRY HORDE"
+					Exclude="INFANTRY HORDE STRUCTURE HUSK"
+				/>
+			</DamageNugget>
+
+			<!-- Damage to structures and husks -->
+			<DamageNugget
+				Damage="100.0"
+				Radius="25.0"
+				DamageFXType="ALIEN_TIOXIN"
+				DamageType="GRENADE">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="STRUCTURE HUSK"
 				/>
 			</DamageNugget>
 

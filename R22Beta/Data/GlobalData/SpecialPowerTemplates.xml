@@ -1,6 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- voices instead of hashes-->
+
+	<!-- ######################################################### -->
+	<SpecialPowerTemplate
+		id="SpecialPower_CultistMindControl"
+		TargetType="OBJECT"
+		InitiateSound="AudioEvent:ALI_Cultist_Manipulate"
+		ReloadTime="20s"
+		DisallowedTargetObjectStatus="UNATTACKABLE"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateManipulateObject"
+		WaypointModeTerminal="false"
+		Flags="NEEDS_OBJECT_FILTER"
+		PreventConditions="AIRBORNE_TARGET IGNORE_AI_COMMAND">
+		<ObjectFilter
+			Rule="ANY"
+			Relationship="ENEMIES NEUTRAL"
+			Include="VEHICLE INFANTRY"
+			Exclude="AIRCRAFT METAUNIT HUSK">
+			<ExcludeThing>SubwayNode</ExcludeThing>
+			<ExcludeThing>AlienMastermind</ExcludeThing>
+			<ExcludeThing>GDICommando</ExcludeThing>
+			<ExcludeThing>NODCommando</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>AlienWormHole</ExcludeThing>
+			<ExcludeThing>AlienMothership</ExcludeThing>
+			<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+			<ExcludeThing>Traveler59Cultist</ExcludeThing>
+			<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+			<ExcludeThing>BlackHandCommando</ExcludeThing>
+			<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+			<ExcludeThing>ZOCOMCommando</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_CultistMindControlGetInRange"
+		TargetType="OBJECT"
+		InitiateSound="AudioEvent:ALI_Cultist_Manipulate"
+		ReloadTime="15s"
+		DisallowedTargetObjectStatus="UNATTACKABLE"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateManipulateObject"
+		WaypointModeTerminal="false"
+		Flags="NEEDS_OBJECT_FILTER"
+		PreventConditions="AIRBORNE_TARGET IGNORE_AI_COMMAND">
+		<ObjectFilter
+			Rule="ANY"
+			Relationship="ENEMIES NEUTRAL"
+			Include="VEHICLE INFANTRY"
+			Exclude="AIRCRAFT METAUNIT HUSK">
+			<ExcludeThing>SubwayNode</ExcludeThing>
+			<ExcludeThing>AlienMastermind</ExcludeThing>
+			<ExcludeThing>GDICommando</ExcludeThing>
+			<ExcludeThing>NODCommando</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>AlienWormHole</ExcludeThing>
+			<ExcludeThing>AlienMothership</ExcludeThing>
+			<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+			<ExcludeThing>Traveler59Cultist</ExcludeThing>
+			<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+			<ExcludeThing>BlackHandCommando</ExcludeThing>
+			<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+			<ExcludeThing>ZOCOMCommando</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_ManipulateObject"
+		TargetType="OBJECT"
+		InitiateSound="ALI_MasterMind_ManipulateStart"
+		ReloadTime="30s"
+		DisallowedTargetObjectStatus="UNATTACKABLE"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateManipulateObject"
+		WaypointModeTerminal="false"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter
+			Rule="ALL"
+			Relationship="ENEMIES NEUTRAL"
+			Exclude="HUSK CIVILIAN_BUILDING FS_BASE_DEFENSE METAUNIT SUPER_WEAPON BRIDGE BRIDGE_SEGMENT BRIDGE_ENDCAP BRIDGE_GATEHOUSE CRATE TIBERIUM TIBERIUM_FIELD CAN_TOPPLE SIMPLE_OBJECT_PROP OPTIMIZED_PROP WALL_HUB WALL_SEGMENT">
+			<ExcludeThing>SubwayNode</ExcludeThing>
+			<ExcludeThing>AlienWormHole</ExcludeThing>
+			<ExcludeThing>ABTower</ExcludeThing>
+			<ExcludeThing>AlienMastermind</ExcludeThing>
+			<ExcludeThing>AlienBlinkMastermind</ExcludeThing>
+			<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+			<ExcludeThing>GDICommando</ExcludeThing>
+			<ExcludeThing>NODCommando</ExcludeThing>
+			<ExcludeThing>BlackHandCommando</ExcludeThing>
+			<ExcludeThing>ZOCOMCommando</ExcludeThing>
+			<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>AlienMothership</ExcludeThing>
+			<ExcludeThing>Traveler59Cultist</ExcludeThing>
+			<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+			<!-- removed base defence references, added FS_BASE_DEFENSE to exclude instead -->
+			<IncludeThing>GDIBattleBase</IncludeThing>
+			<IncludeThing>SteelTalonsBattleBase</IncludeThing>
+			<IncludeThing>ZOCOMBattleBase</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_ManipulateObject_Others"
+		TargetType="OBJECT"
+		ReloadTime="30s"
+		DisallowedTargetObjectStatus="UNATTACKABLE"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateManipulateObject"
+		WaypointModeTerminal="false"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter
+			Rule="ALL"
+			Relationship="ENEMIES NEUTRAL"
+			Exclude="STRUCTURE HUSK CIVILIAN_BUILDING FS_BASE_DEFENSE METAUNIT SUPER_WEAPON BRIDGE BRIDGE_SEGMENT BRIDGE_ENDCAP BRIDGE_GATEHOUSE CRATE TIBERIUM TIBERIUM_FIELD CAN_TOPPLE SIMPLE_OBJECT_PROP OPTIMIZED_PROP WALL_HUB WALL_SEGMENT">
+			<ExcludeThing>AlienMastermind</ExcludeThing>
+			<ExcludeThing>AlienBlinkMastermind</ExcludeThing>
+			<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+			<ExcludeThing>GDICommando</ExcludeThing>
+			<ExcludeThing>NODCommando</ExcludeThing>
+			<ExcludeThing>BlackHandCommando</ExcludeThing>
+			<ExcludeThing>ZOCOMCommando</ExcludeThing>
+			<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>AlienMothership</ExcludeThing>
+			<ExcludeThing>Traveler59Cultist</ExcludeThing>
+			<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+			<!-- removed base defence references, added FS_BASE_DEFENSE to exclude instead -->
+			<IncludeThing>GDIBattleBase</IncludeThing>
+			<IncludeThing>SteelTalonsBattleBase</IncludeThing>
+			<IncludeThing>ZOCOMBattleBase</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
+	<!-- NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateAreaMindControl" -->
+	<SpecialPowerTemplate
+		id="SpecialPower_AOEMindControl"
+		TargetType="LOCATION"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE NO_FORBIDDEN_MODEL_STATES"
+		InitiateSound="AudioEvent:ALI_MasterMind_ManipulateStart"
+		RadiusCursorRadius="50"
+		ReloadTime="30s"
+		MaxCastRange="400"
+		DisallowedTargetObjectStatus="IN_STASIS STEALTHED UNATTACKABLE"
+		DisallowedTargetModelStates="INVISIBLE_STEALTH"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateAreaMindControl"
+		WaypointModeTerminal="false">
+		<ObjectFilter
+			Rule="ALL"
+			Relationship="ENEMIES NEUTRAL"
+			Exclude="HUSK CIVILIAN_BUILDING FS_BASE_DEFENSE METAUNIT AIRCRAFT STRUCTURE SUPER_WEAPON BRIDGE BRIDGE_SEGMENT BRIDGE_ENDCAP BRIDGE_GATEHOUSE CRATE TIBERIUM TIBERIUM_FIELD CAN_TOPPLE SIMPLE_OBJECT_PROP OPTIMIZED_PROP WALL_HUB WALL_SEGMENT">
+			<ExcludeThing>SubwayNode</ExcludeThing>
+			<ExcludeThing>AlienMastermind</ExcludeThing>
+			<ExcludeThing>BlackHandCommando</ExcludeThing>
+			<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+			<ExcludeThing>ZOCOMCommando</ExcludeThing>
+			<ExcludeThing>GDICommando</ExcludeThing>
+			<ExcludeThing>NODCommando</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>AlienWormHole</ExcludeThing>
+			<ExcludeThing>AlienMothership</ExcludeThing>
+			<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+			<ExcludeThing>Traveler59Cultist</ExcludeThing>
+			<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+			<ExcludeThing>ABTower</ExcludeThing>
+			<!-- removed base defence references, added FS_BASE_DEFENSE to exclude instead -->
+			<IncludeThing>GDIBattleBase</IncludeThing>
+			<IncludeThing>SteelTalonsBattleBase</IncludeThing>
+			<IncludeThing>ZOCOMBattleBase</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
+	<!-- Blink nerf -->
+	<SpecialPowerTemplate
+		id="SpecialPower_UseTraveler59ProdigyBlinkPack"
+		TargetType="LOCATION"
+		InitiateSound="AudioEvent:ALI_ShockTrooper_Blink"
+		WaypointModeTerminal="false"
+		RadiusCursorRadius="16"
+		ForbiddenObjectRange="16"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="BlinkPack"
+		Flags="PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		ReloadTime="10s">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE CRUSHABLE_OBSTACLE VEHICLE" />
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_TargetedRepairVehicleMRT"
+		ReloadTime="0s"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateRepair"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE"
+		MaxCastRange="99999">
+		<ObjectFilter
+			Rule="ANY"
+			Include="VEHICLE HUSK AIRCRAFT HUGE_VEHICLE STRUCTURE"
+			Exclude="INFANTRY">
+			<IncludeThing>NODCyborgInfantry</IncludeThing>
+			<IncludeThing>MarkedOfKaneImprovedCyborgInfantry</IncludeThing>
+			<IncludeThing>MOKCyborgInfantry</IncludeThing>
+			<IncludeThing>MarkedOfKaneImprovedCyborgInfantrySquad</IncludeThing>
+			<IncludeThing>MOKCyborgInfantrySquad</IncludeThing>
+			<IncludeThing>NODCyborgInfantrySquad</IncludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
+	<!--
+	############################################################################################# -->
+
+	<!-- NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateSpotTargetBombard" -->
+	<SpecialPowerTemplate
+		id="SpecialPower_SpotBeaconBombard"
+		Flags="LIMIT_DISTANCE NEEDS_OBJECT_FILTER FIND_REACHABLE_TARGETS WATER_OK TARGET_NEEDS_OBJECT_STATUS"
+		RequiredTargetObjectStatus="CAN_SPOT_FOR_BOMBARD"
+		ReloadTime="20s"
+		RadiusCursorRadius="110"
+		TargetType="LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateSpotTargetBombard"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		MinCastRange="300"
+		MaxCastRange="50000"
+		ReachableTargetsCircleDisplayRadius="400">
+		<ObjectFilter
+			Relationship="ALLIES"
+			Rule="ALL" />
+		<GameDependency>
+			<ObjectFilter
+				Relationship="ALLIES">
+				<IncludeThing>NODShadowSquadBeacon</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+
+	</SpecialPowerTemplate>
+
 	<!-- RGA cooldown increased from 10s to 12s.-->
 
 	<SpecialPowerTemplate

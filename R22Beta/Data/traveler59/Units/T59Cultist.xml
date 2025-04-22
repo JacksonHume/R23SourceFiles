@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+    <GameObject id="Traveler59Cultist"
+        KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS INFANTRY PRELOAD ATTACK_NEEDS_LINE_OF_SIGHT PATH_THROUGH_INFANTRY HEALED_BY_TIBERIUM"
+        Description="Desc:Traveler59Cultist" TypeDescription="Type:Traveler59Cultist"
+        RadarPriority="UNIT" Side="Traveler59" EditorName="Traveler59Cultist" EditorSorting="UNIT"
+        BuildTime="0.7" CommandSet="Traveler59CultistCommandSet" SelectPortrait="Portrait_Cultist"
+        ButtonImage="Portrait_Cultist" VoicePriority="113" ProductionQueueType="INFANTRY"
+        UnitCategory="INFANTRY" WeaponCategory="GUN"
+        WorldMapArmoryUpgradesAllowed="Upgrade_Traveler59AdvancedArticulators" BuildCost="70"
+        TransportSlotCount="1">
+        <DisplayName>NAME:Traveler59Cultist</DisplayName>
+        <ArmorSet Armor="Traveler59CultistArmor" DamageFX="InfantryAlienDamageFX" />
+        <LocomotorSet Speed="50" Locomotor="AlienRazorDroneLocomotor" />
+        <Draws>
+            <ScriptedModelDraw id="0x50DF2C46" MaxRecoilDistance="3" RecoilDamping="0.4"
+                OkToChangeModelColor="True">
+                <ModelConditionState ParseCondStateType="PARSE_DEFAULT">
+                    <Model Name="W3DContainer:AUCULTIST_SKN" />
+                    <WeaponFireFXBone BoneName="Bone_Head" />
+                    <WeaponLaunchBone BoneName="Bone_Head" />
+                </ModelConditionState>
+                <ModelConditionState ParseCondStateType="PARSE_NORMAL"
+                    ConditionsYes="FORMATION_PREVIEW">
+                    <Model Name="W3DContainer:FXINFANTRY_FP" />
+                </ModelConditionState>
+                <ModelConditionState ParseCondStateType="PARSE_NORMAL"
+                    ConditionsYes="INSIDE_GARRISON">
+                    <Model />
+                    <WeaponFireFXBone />
+                    <WeaponLaunchBone />
+                </ModelConditionState>
+                <ModelConditionState ParseCondStateType="PARSE_NORMAL" ConditionsYes="REALLYDAMAGED">
+                    <Model Name="W3DContainer:AUCULTIST_SKN" />
+                    <ParticleSysBone BoneName="NONE"
+                        FXParticleSystemTemplate="AlienDamageInfantryIchor"
+                        FollowBone="True" />
+                </ModelConditionState>
+                <ModelConditionState ParseCondStateType="PARSE_NORMAL" ConditionsYes="WORLD_BUILDER">
+                    <Model Name="W3DContainer:AUCULTIST_SKN" />
+                </ModelConditionState>
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="FORMATION_PREVIEW" />
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="INSIDE_GARRISON" />
+                <AnimationState ParseCondStateType="PARSE_DEFAULT" StateName="STATE_bored"
+                    Flags="RESTART_ANIM_WHEN_COMPLETE">
+                    <Animation AnimationName="AUCULTIST_BIDA" AnimationMode="ONCE"
+                        AnimationBlendTime="15"
+                        AnimationPriority="80" />
+                    <Animation AnimationName="AUCULTIST_BIDB" AnimationMode="ONCE"
+                        AnimationBlendTime="15"
+                        AnimationPriority="80" />
+                    <Animation AnimationName="AUCULTIST_BIDC" AnimationMode="ONCE"
+                        AnimationBlendTime="15"
+                        AnimationPriority="80" />
+                    <Animation AnimationName="AUCULTIST_BIFA" AnimationMode="ONCE"
+                        AnimationPriority="40" />
+                    <Animation AnimationName="AUCULTIST_BIFB" AnimationMode="ONCE"
+                        AnimationPriority="40" />
+                    <Animation AnimationName="AUCULTIST_BIFC" AnimationMode="ONCE"
+                        AnimationPriority="40" />
+                    <Animation AnimationName="AUCULTIST_BIFD" AnimationMode="ONCE"
+                        AnimationPriority="40" />
+                    <Script> Prev = CurDrawablePrevAnimationState(); if Prev == "STATE_Selected" or
+                        Prev ==
+                        "ATNB" or Prev == "STATE_Run" then
+                        CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle") end; </Script>
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="FRONTCRUSHED">
+                    <Animation AnimationName="AUCULTIST_CDTA" AnimationMode="ONCE" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="BACKCRUSHED">
+                    <Animation AnimationName="AUCULTIST_CDTB" AnimationMode="ONCE" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="DYING">
+                    <Animation AnimationName="AUCULTIST_DIEA" AnimationMode="ONCE" />
+                    <Animation AnimationName="AUCULTIST_DIEB" AnimationMode="ONCE" />
+                    <Animation AnimationName="AUCULTIST_FDIA" AnimationMode="ONCE" />
+                    <Animation AnimationName="AUCULTIST_FDIB" AnimationMode="ONCE" />
+                    <Animation AnimationName="AUCULTIST_FDIC" AnimationMode="ONCE" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_NORMAL"
+                    ConditionsYes="MOVING FIRING_OR_PREATTACK_A" StateName="STATE_Run"
+                    Flags="RANDOMSTART">
+                    <Animation AnimationName="AUCULTIST_RUNB" AnimationMode="LOOP" Distance="80" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="MOVING"
+                    StateName="STATE_Run" Flags="RANDOMSTART">
+                    <Animation AnimationName="AUCULTIST_RUNA" AnimationMode="LOOP" Distance="80"
+                        AnimationBlendTime="10" AnimationSpeedFactorMin="3"
+                        AnimationSpeedFactorMax="3"
+                        AnimationPriority="30" />
+                    <Animation AnimationName="AUCULTIST_RUNB" AnimationMode="LOOP" Distance="80"
+                        AnimationSpeedFactorMin="3" AnimationSpeedFactorMax="3"
+                        AnimationPriority="25" />
+                    <Animation AnimationName="AUCULTIST_RUNC" AnimationMode="LOOP" Distance="80"
+                        AnimationSpeedFactorMin="3" AnimationSpeedFactorMax="3"
+                        AnimationPriority="20" />
+                    <Script>
+                        Prev = CurDrawablePrevAnimationState()
+                        if Prev == "STATE_Cover" then
+                        CurDrawableSetTransitionAnimState("TRANS_CoverToRun")
+                        end
+                    </Script>
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_NORMAL"
+                    ConditionsYes="FIRING_OR_PREATTACK_A"
+                    FrameForPristineBonePositions="5">
+                    <Animation AnimationName="AUCULTIST_ATKA" AnimationMode="ONCE"
+                        AnimationBlendTime="10"
+                        UseWeaponTiming="True" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="ATTACKING">
+                    <Animation AnimationName="AUCULTIST_ATKA" AnimationMode="MANUAL"
+                        AnimationBlendTime="10" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="SELECTED"
+                    StateName="STATE_Selected" Flags="RESTART_ANIM_WHEN_COMPLETE">
+                    <Animation AnimationName="AUCULTIST_AIDA" AnimationMode="ONCE"
+                        AnimNickName="ATNB"
+                        AnimationPriority="80" />
+                    <Animation AnimationName="AUCULTIST_AIDB" AnimationMode="ONCE"
+                        AnimNickName="ATNB"
+                        AnimationPriority="40" />
+                    <Animation AnimationName="AUCULTIST_AIFA" AnimationMode="ONCE"
+                        AnimNickName="ATNB"
+                        AnimationPriority="20" />
+                    <Animation AnimationName="AUCULTIST_AIFB" AnimationMode="ONCE"
+                        AnimNickName="ATNB"
+                        AnimationPriority="20" />
+                    <Animation AnimationName="AUCULTIST_AIFC" AnimationMode="ONCE"
+                        AnimNickName="ATNB"
+                        AnimationPriority="20" />
+                    <Script> Prev = CurDrawablePrevAnimationState(); if Prev == "STATE_bored" then
+                        CurDrawableSetTransitionAnimState("TRANS_boredToAttention") end; </Script>
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_TRANSITION"
+                    StateName="TRANS_boredToAttention">
+                    <Animation AnimationName="AUCULTIST_BATA" AnimationMode="ONCE" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_TRANSITION"
+                    StateName="TRANS_attentionToBored">
+                    <Animation AnimationName="AUCULTIST_ABTA" AnimationMode="ONCE"
+                        AnimationBlendTime="8" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_TRANSITION"
+                    StateName="TRANS_IdleToSelected">
+                    <Animation AnimationName="AUCULTIST_BATA" AnimationMode="ONCE" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_TRANSITION"
+                    StateName="TRANS_SelectedToIdle">
+                    <Animation AnimationName="AUCULTIST_ABTA" AnimationMode="ONCE" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_TRANSITION" StateName="TRANS_RunToCover">
+                    <Animation AnimationName="AURAZDRO_KATB" AnimationMode="ONCE" />
+                </AnimationState>
+                <AnimationState ParseCondStateType="PARSE_TRANSITION" StateName="TRANS_CoverToRun">
+                    <Animation AnimationName="AURAZDRO_KATA" AnimationMode="ONCE" />
+                </AnimationState>
+            </ScriptedModelDraw>
+            <ScriptedModelDraw id="0x452D167A" MaxRecoilDistance="3" RecoilDamping="0.4"
+                AttachToBoneInAnotherModule="bone_rightarm">
+                <ModelConditionState ParseCondStateType="PARSE_DEFAULT">
+                    <Model Name="W3DContainer:FXINVISBONE" />
+                </ModelConditionState>
+                <AnimationState ParseCondStateType="PARSE_DEFAULT" />
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="USER_3 MOVING">
+                    <ParticleSysBone BoneName="INVISBONE01"
+                        FXParticleSystemTemplate="AlienSpeedTrails"
+                        FollowBone="True" />
+                </AnimationState>
+            </ScriptedModelDraw>
+            <ScriptedModelDraw id="0x8CE523F1" MaxRecoilDistance="3" RecoilDamping="0.4"
+                AttachToBoneInAnotherModule="bone_leftarm">
+                <ModelConditionState ParseCondStateType="PARSE_DEFAULT">
+                    <Model Name="W3DContainer:FXINVISBONE" />
+                </ModelConditionState>
+                <AnimationState ParseCondStateType="PARSE_DEFAULT" />
+                <AnimationState ParseCondStateType="PARSE_NORMAL" ConditionsYes="USER_3 MOVING">
+                    <ParticleSysBone BoneName="INVISBONE01"
+                        FXParticleSystemTemplate="AlienSpeedTrails"
+                        FollowBone="True" />
+                </AnimationState>
+            </ScriptedModelDraw>
+        </Draws>
+        <Behaviors>
+            <AttributeModifierPoolUpdate id="0x513BC476" />
+            <SquishCollide id="0x8CCB269A" />
+            <CrushDie id="0xD696466A">
+                <DieMuxData DeathTypes="CRUSHED" />
+            </CrushDie>
+            <FXListBehavior id="0xBC2FBBCA">
+                <DieMuxData DeathTypes="CRUSHED" />
+                <Event FX="FX_InfantrySquished" />
+            </FXListBehavior>
+            <FireWeaponWhenDead id="0xDDED328F" DeathWeapon="CatalystInfantryDeathWeapon"
+                InitiallyActive="True">
+                <DieMuxData DeathTypes="CATALYST" />
+            </FireWeaponWhenDead>
+            <AutoHealBehavior id="0xC07BF5C0" HealingAmount="10" HealingDelay="0.5s"
+                StartHealingDelay="1s">
+                <TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+            </AutoHealBehavior>
+            <AttributeModifierUpgrade id="0xAA36A1AA"
+                AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+                <TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+            </AttributeModifierUpgrade>
+            <AttributeModifierUpgrade id="0x81C6F752"
+                AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+                <TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+            </AttributeModifierUpgrade>
+            <AttributeModifierUpgrade id="0xE35F7EC4"
+                AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+                <TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+            </AttributeModifierUpgrade>
+            <LevelUpUpgrade id="0xA92BDFEA" LevelsToGain="1" LevelCap="4">
+                <TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+            </LevelUpUpgrade>
+            <LevelUpUpgrade id="0x5C3F216A" LevelsToGain="2" LevelCap="4">
+                <TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+            </LevelUpUpgrade>
+            <LevelUpUpgrade id="0x379F3CE2" LevelsToGain="3" LevelCap="4">
+                <TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+            </LevelUpUpgrade>
+            <TemporarilyDefectUpdate id="0x3473AFD2" DefectionFrameCount="300" />
+            <WeaponSetUpdate id="0x720F4A50">
+                <WeaponSlotHardpoint ID="1">
+                    <Weapon Template="CultistMindControlWeaponTrigger" />
+                </WeaponSlotHardpoint>
+            </WeaponSetUpdate>
+            <!--
+            <SpecialPower id="0x3A60150D" SpecialPowerTemplate="SpecialPower_CultistMindControl"
+                UpdateModuleStartsAttack="True">
+                <AttributeModifierAffects Rule="UNPARSED" />
+                <RequirementsFilterMP Rule="UNPARSED" />
+                <RequirementsFilterStrategic Rule="UNPARSED" />
+            </SpecialPower>
+            <ActivateModuleSpecialPower id="0xE5550C5E"
+                SpecialPowerTemplate="SpecialPower_CultistMindControl" StartAbilityRange="225"
+                Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE" FaceTarget="True">
+                <SpecialPowerModules ModuleId="0xB465A870" TriggerType="TARGET_OBJECT" />
+            </ActivateModuleSpecialPower>
+            <TemporaryOwnerSpecialPower id="0xB465A870"
+                SpecialPowerTemplate="SpecialPowerDummyTriggered3">
+                <AttributeModifierAffects Rule="UNPARSED" />
+                <RequirementsFilterMP Rule="UNPARSED" />
+                <RequirementsFilterStrategic Rule="UNPARSED" />
+            </TemporaryOwnerSpecialPower>
+            -->
+            <Physics id="0x6D41764B" />
+            <SlowDeath id="0x73542D4A" SinkRate="2.4" SinkDelay="5s" DestructionDelay="6.5s">
+                <Sound List="ALI_Cultist_DieMS" />
+                <DieMuxData DeathTypes="ALL" />
+            </SlowDeath>
+            <FindCoverBehavior id="0x53580964" AttributeModifierInCover="Modifier_Cover"
+                CoverScanRange="10" />
+            <StatusBitsUpgrade id="0xD305500E" StatusToSet="WEAPON_UPGRADED_01">
+                <TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+            </StatusBitsUpgrade>
+            <AttributeModifierUpgrade id="0x2455F97B"
+                AttributeModifier="AttributeModifier_AdvancedArticulators">
+                <TriggeredBy>Upgrade_Traveler59AdvancedArticulators</TriggeredBy>
+            </AttributeModifierUpgrade>
+            <ModelConditionUpgrade id="0x6A992A8D" AddConditionFlags="USER_3">
+                <TriggeredBy>Upgrade_Traveler59AdvancedArticulators</TriggeredBy>
+            </ModelConditionUpgrade>
+            <AudioLoopUpgrade id="0xCDA6A0B8" SoundToPlay="AudioEvent:ALI_AdvancedArticulators_Upgrade">
+                <TriggeredBy>Upgrade_Traveler59AdvancedArticulators</TriggeredBy>
+            </AudioLoopUpgrade>
+            <FXListBehavior id="0xC74C39D8">
+                <DieMuxData DeathTypes="ALL" />
+                <Event Index="onBecomingTemporaryOwner" FX="FX_MasterMindLinkFX" />
+            </FXListBehavior>
+        </Behaviors>
+        <AI>
+            <AIUpdate id="0x12FA48BA" AutoAcquireEnemiesWhenIdle="YES">
+                <UnitAITargetChooserData CheckVisionRange="True"
+                    TargetingCompareList="DefaultTargetingCompareList" />
+            </AIUpdate>
+        </AI>
+        <Body>
+            <ActiveBody id="0xB313F576" MaxHealth="250" />
+        </Body>
+        <ClientBehaviors>
+            <ModelConditionAudioLoopClientBehavior id="0x53658098">
+                <ModelConditionSound Sound="AudioEvent:NOD_ShadowSquad_RunningLoop" RequiredFlags="MOVING" ExcludedFlags="DECELERATE DYING"/>
+            </ModelConditionAudioLoopClientBehavior>
+        </ClientBehaviors>
+        <Geometry IsSmall="True">
+            <Shape Type="CYLINDER" ContactPointGeneration="SQUAD_MEMBER" MajorRadius="5" Height="10" />
+        </Geometry>
+        <AudioArrayVoice>
+			<AudioEntry Sound="Multisound:ALI_Cultist_VoiceAttackMS" AudioType="voiceAttack"/>
+			<AudioEntry Sound="Multisound:ALI_Cultist_VoiceCreateMS" AudioType="voiceFullyCreated"/>
+			<AudioEntry Sound="Multisound:ALI_Cultist_VoiceGarrisonMS" AudioType="voiceGarrison" />
+			<AudioEntry Sound="Multisound:ALI_Cultist_VoiceMoveMS" AudioType="voiceMove"/>
+			<AudioEntry Sound="Multisound:ALI_Cultist_VoiceMoveAttackMS" AudioType="voiceAttackAfterMoving" />
+			<AudioEntry Sound="Multisound:ALI_Cultist_VoiceRetreatMS" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="Multisound:ALI_Cultist_VoiceSelectMS" AudioType="voiceSelect"/>
+			<AudioEntry Sound="Multisound:ALI_Cultist_VoiceSelectBattleMS" AudioType="voiceSelectBattle"/>
+			<NamedEntry Sound="AudioEvent:ALI_Cultist_VoiceMoveAttack" Name="InitiateManipulateObject" />
+		</AudioArrayVoice>
+        <EvaEvents EvaEventDieOwner="UnitLost" EvaEventDamagedOwner="UnitUnderAttack"
+            EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+            EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
+            EvaEventSecondDamageFarFromFirstScanRange="600"
+            EvaEventSecondDamageFarFromFirstTimeoutMS="31000" EvaEventAmbushed="UnitAmbushed"
+            EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
+            EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+            EvaEventAvailableForProduction="NewConstructionOptions"
+            EvaEventProductionStarted="UnitConstructionStarted" EvaEventBuildOnHold="BuildOnHold"
+            EvaEventBuildCancelled="BuildCancelled" EvaEventPromotedOwner="UnitPromoted" />
+        <ShadowInfo Type="VOLUME" />
+        <VisionInfo VisionRange="350" ShroudClearingRange="400" />
+        <CrusherInfo CrushableLevel="0" />
+        <DisplayUpgrade>Upgrade_Traveler59AdvancedArticulators</DisplayUpgrade>
+    </GameObject>
+</AssetDeclaration>
