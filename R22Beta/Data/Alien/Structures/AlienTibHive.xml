@@ -66,8 +66,8 @@
 		UnitTypeIcon=""
 		ReinvisibilityDelay="4s"
 		CaptureTime="0s"
-		BuildCost="800"
-		RefundValue="400"
+		BuildCost="1000"
+		RefundValue="500"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
 		TransportSlotCount="0"
@@ -86,7 +86,7 @@
 		BuildInProximityToSamePlayerStucture="False">
 		<DisplayName>NAME:TiberiumHive</DisplayName>
 		<ArmorSet
-			Armor="AlienTibHiveArmor"
+			Armor="AlienBuzzerHiveArmor"
 			DamageFX="FactionStructureDamageFX"
 			Conditions="" />
 		<SkirmishAIInformation
@@ -478,7 +478,7 @@
 		<Body>
 			<ActiveBody
 				id="C026F3D9"
-				MaxHealth="1000"
+				MaxHealth="1600"
 				MaxHealthDamaged="0"
 				MaxHealthReallyDamaged="0"
 				InitialHealth="-1"
