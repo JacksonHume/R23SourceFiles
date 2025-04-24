@@ -3496,14 +3496,6 @@
 					Animation="NUREDEEMER_DIEA"
 					Frame="95" />
 				<Sound
-					Sound="AudioEvent:NOD_Redeemer_Bodyfall"
-					Animation="Asset not found in stream: [C2995DE9]"
-					Frame="60 105" />
-				<Sound
-					Sound="AudioEvent:NOD_Redeemer_Bodyfall"
-					Animation="Asset not found in stream: [A544C894]"
-					Frame="118" />
-				<Sound
 					Sound="AudioEvent:NOD_Redeemer_DieCreak"
 					Animation="NUREDEEMER_DIEA"
 					Frame="73" />
@@ -3538,14 +3530,6 @@
 				<Sound
 					Sound="AudioEvent:NOD_Redeemer_Footstep"
 					Animation="NUREDEEMER_WLKA"
-					Frame="25 50 75 100" />
-				<Sound
-					Sound="AudioEvent:NOD_Redeemer_Footstep"
-					Animation="Asset not found in stream: [0149273C]"
-					Frame="25 50 75 100" />
-				<Sound
-					Sound="AudioEvent:NOD_Redeemer_Footstep"
-					Animation="Asset not found in stream: [D06270E8]"
 					Frame="25 50 75 100" />
 				<Sound
 					Sound="AudioEvent:NOD_AvatarWarMech_Commandeer"

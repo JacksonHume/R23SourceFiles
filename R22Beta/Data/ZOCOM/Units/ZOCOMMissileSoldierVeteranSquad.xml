@@ -883,42 +883,6 @@
 				UpgradeToGrant="Upgrade_CallSupportZOCOMUpgrade"
 				ExemptStatus=""
 				GiveOnBuildComplete="False" />
-			<AISpecialPowerUpdate
-				id="7795C520"
-				CommandButtonName="Asset not found in stream: [D39107AF]"
-				SecondaryCommandButtonName=""
-				SpecialPowerAIType="SPECIAL_POWER_BUFF_ALLY"
-				SpecialPowerRadius="300"
-				ReinforceDistance="0"
-				SpellMakesAStructure=""
-				SpecificUnit=""
-				UnitKindOf="TRANSPORT"
-				AllyUnitInclude="TRANSPORT"
-				AllyUnitExclude="INFANTRY"
-				EnemyUnitInclude=""
-				EnemyUnitExclude=""
-				MinimumCutoff="0"
-				UpdateTime="1s"
-				MaxFrequency="0"
-				RandomizeTargetLocation="False" />
-			<AISpecialPowerUpdate
-				id="F40741AA"
-				CommandButtonName="Asset not found in stream: [D39107AF]"
-				SecondaryCommandButtonName=""
-				SpecialPowerAIType="SPECIAL_POWER_BUFF_ALLY"
-				SpecialPowerRadius="300"
-				ReinforceDistance="0"
-				SpellMakesAStructure=""
-				SpecificUnit=""
-				UnitKindOf="METAUNIT"
-				AllyUnitInclude="METAUNIT"
-				AllyUnitExclude="INFANTRY"
-				EnemyUnitInclude=""
-				EnemyUnitExclude=""
-				MinimumCutoff="0"
-				UpdateTime="1s"
-				MaxFrequency="0"
-				RandomizeTargetLocation="False" />
 		</Behaviors>
 		<AI>
 			<HordeAIUpdate

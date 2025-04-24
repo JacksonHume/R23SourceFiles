@@ -657,46 +657,7 @@
 				DisabledTypesToContinueSoundsFor="HELD"
 				StartRechargeOnExit="False"
 				GoIdleInStartPreparation="True"
-				FaceTarget="True" />
-			
-			<!-- AI use transports! -->
-			<AISpecialPowerUpdate
-				id="335B0612"
-				CommandButtonName="Command_EnterTransport"
-				SecondaryCommandButtonName=""
-				SpecialPowerAIType="SPECIAL_POWER_BUFF_ALLY"
-				SpecialPowerRadius="300"
-				ReinforceDistance="0"
-				SpellMakesAStructure=""
-				SpecificUnit=""
-				UnitKindOf="TRANSPORT"
-				AllyUnitInclude="TRANSPORT"
-				AllyUnitExclude="INFANTRY"
-				EnemyUnitInclude=""
-				EnemyUnitExclude=""
-				MinimumCutoff="0"
-				UpdateTime="1s"
-				MaxFrequency="0"
-				RandomizeTargetLocation="False" />
-			<AISpecialPowerUpdate
-				id="335B0613"
-				CommandButtonName="Command_EnterTransport"
-				SecondaryCommandButtonName=""
-				SpecialPowerAIType="SPECIAL_POWER_BUFF_ALLY"
-				SpecialPowerRadius="300"
-				ReinforceDistance="0"
-				SpellMakesAStructure=""
-				SpecificUnit=""
-				UnitKindOf="METAUNIT"
-				AllyUnitInclude="METAUNIT"
-				AllyUnitExclude="INFANTRY"
-				EnemyUnitInclude=""
-				EnemyUnitExclude=""
-				MinimumCutoff="0"
-				UpdateTime="1s"
-				MaxFrequency="0"
-				RandomizeTargetLocation="False" />				
-				
+				FaceTarget="True" />		
 		</Behaviors>
 		<AI>
 			<HordeAIUpdate
@@ -770,7 +731,7 @@
 		<EvaEvents
 			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventSecondDamageFarFromFirstScanRange="200"
-			EvaEventSecondDamageFarFromFirstTimeoutMS="155"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
 			EvaEventAvailableForProduction="NewConstructionOptions"
 			EvaEventProductionStarted="UnitConstructionStarted"
 			EvaEventBuildOnHold="BuildOnHold"

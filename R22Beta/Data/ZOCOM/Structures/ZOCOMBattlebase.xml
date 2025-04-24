@@ -1529,7 +1529,6 @@
 						Include="" />
 				</PassengerData>
 			</HordeTransportContain>
-			</HordeGarrisonContain>
 			
 			<EngineerContain
 				id="E2BE8599"

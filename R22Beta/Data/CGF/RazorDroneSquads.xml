@@ -1361,7 +1361,7 @@
 		<EvaEvents
 			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventSecondDamageFarFromFirstScanRange="200"
-			EvaEventSecondDamageFarFromFirstTimeoutMS="155"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
 			EvaEventAvailableForProduction="NewConstructionOptions"
 			EvaEventProductionStarted="UnitConstructionStarted"
 			EvaEventBuildOnHold="BuildOnHold"

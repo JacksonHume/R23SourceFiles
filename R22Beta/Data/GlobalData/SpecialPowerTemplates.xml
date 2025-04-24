@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<SpecialPowerTemplate
+		id="SpecialPower_ConversionBeamUpgraded"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		ReloadTime="3s"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		RequiredTargetObjectStatus="DOES_CONTAIN_TIBERIUM"
+		DisallowedTargetObjectStatus="IS_BEING_HARVESTED"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateConversionBeam"
+		WaypointModeTerminal="false">
+		<ObjectFilter
+			Rule="ANY"
+			Include="FS_MONEY_STORAGE TIBERIUM">
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+
 	<!-- voices instead of hashes-->
 
 	<!-- ######################################################### -->

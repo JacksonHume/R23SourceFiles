@@ -70,7 +70,7 @@
 		HasFiredRecentlyTime="2s"
 		UnitTypeIcon=""
 		ReinvisibilityDelay="7s"
-		WorldMapArmoryUpgradesAllowed="Upgrade_STArmoryRailgunTech Upgrade_AdaptiveArmor"
+		WorldMapArmoryUpgradesAllowed="Upgrade_STArmoryRailgunTech Upgrade_AdaptiveArmor Upgrade_GDIArmoryRailgunTech"
 		CaptureTime="0s"
 		BuildCost="1300"
 		RefundValue="0"

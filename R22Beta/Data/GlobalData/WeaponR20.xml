@@ -2216,7 +2216,7 @@
 			</SuppressionNugget>		  
 		</Nuggets>
 	</WeaponTemplate>
-	-->
+	
 
 	<WeaponTemplate
 		id="NodMobileArtilleryBombardCannon"
@@ -2263,7 +2263,7 @@
 				Include="VEHICLE" />
 		</ScatterRadiusVsType>
 	</WeaponTemplate>
-
+	-->
 
 	<!-- suppression resistance -->
 	<!--

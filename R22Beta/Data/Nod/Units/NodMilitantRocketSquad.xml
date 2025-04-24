@@ -1,4 +1,6 @@
-<GameObject
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
 		id="NODMilitantRocketSquad"
 		KindOf="SELECTABLE CAN_ATTACK INFANTRY SCORE ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAPTURE HORDE PATH_THROUGH_INFANTRY ARMY_SUMMARY LARGE_RECTANGLE_PATHFIND CAN_BE_FAVORITE_UNIT"
 		Description="Desc:NODMilitantRocket"
@@ -300,10 +302,10 @@
 						IsPlayerUpgradePermanent="False" />
 				</WeaponSlotHardpoint>
 			</WeaponSetUpdate>
-			<StealthDetectorUpdate 
-			id="ModuleTag_StealthDetect" 
-		  DetectionRange="100" 
-		  ExtraForbiddenKindOf="AIRCRAFT"/>
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="100"
+				ExtraForbiddenKindOf="AIRCRAFT" />
 			<Physics
 				id="7806EAE5"
 				MaxXRotationVelocity="360"
@@ -695,46 +697,8 @@
 				DisabledTypesToContinueSoundsFor="HELD"
 				StartRechargeOnExit="False"
 				GoIdleInStartPreparation="True"
-				FaceTarget="True" />				
-				
-			<!-- AI use transports! -->
-			<AISpecialPowerUpdate
-				id="335B0612"
-				CommandButtonName="Command_EnterTransport"
-				SecondaryCommandButtonName=""
-				SpecialPowerAIType="SPECIAL_POWER_BUFF_ALLY"
-				SpecialPowerRadius="300"
-				ReinforceDistance="0"
-				SpellMakesAStructure=""
-				SpecificUnit=""
-				UnitKindOf="TRANSPORT"
-				AllyUnitInclude="TRANSPORT"
-				AllyUnitExclude="INFANTRY"
-				EnemyUnitInclude=""
-				EnemyUnitExclude=""
-				MinimumCutoff="0"
-				UpdateTime="1s"
-				MaxFrequency="0"
-				RandomizeTargetLocation="False" />
-			<AISpecialPowerUpdate
-				id="335B0613"
-				CommandButtonName="Command_EnterTransport"
-				SecondaryCommandButtonName=""
-				SpecialPowerAIType="SPECIAL_POWER_BUFF_ALLY"
-				SpecialPowerRadius="300"
-				ReinforceDistance="0"
-				SpellMakesAStructure=""
-				SpecificUnit=""
-				UnitKindOf="METAUNIT"
-				AllyUnitInclude="METAUNIT"
-				AllyUnitExclude="INFANTRY"
-				EnemyUnitInclude=""
-				EnemyUnitExclude=""
-				MinimumCutoff="0"
-				UpdateTime="1s"
-				MaxFrequency="0"
-				RandomizeTargetLocation="False" />						
-				
+				FaceTarget="True" />
+
 		</Behaviors>
 		<AI>
 			<HordeAIUpdate
@@ -742,7 +706,7 @@
 				AutoAcquireEnemiesWhenIdle="YES"
 				StopChaseDistance="500"
 				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="GenericSquadFunctions_103"	
+				AILuaEventsList="GenericSquadFunctions_103"
 				MinCowerTime="3s"
 				MaxCowerTime="5s"
 				RampageTime="0s"
@@ -808,7 +772,7 @@
 		<EvaEvents
 			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventSecondDamageFarFromFirstScanRange="200"
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
 			EvaEventAvailableForProduction="NewConstructionOptions"
 			EvaEventProductionStarted="UnitConstructionStarted"
 			EvaEventBuildOnHold="BuildOnHold"
@@ -842,3 +806,4 @@
 		<DisplayUpgrade>Upgrade_TiberiumInfusion</DisplayUpgrade>
 		<DisplayUpgrade>Upgrade_NODConfessorUpgrade</DisplayUpgrade>
 	</GameObject>
+</AssetDeclaration>
