@@ -205,6 +205,9 @@
 			Percent="400%" />
 		<Armor
 			Damage="MINE"
+			Percent="400%" />
+		<Armor
+			Damage="CRUSH"
 			Percent="400%" />	
 	</ArmorTemplate>
 	
@@ -233,6 +236,9 @@
 		<Armor
 			Damage="MINE"
 			Percent="400%" />	
+		<Armor
+			Damage="CRUSH"
+			Percent="400%" />
 	</ArmorTemplate>
 	<!-- 20% ROCKET -->
 	<!--

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
-		id="Reaper17ShockTrooperSquad"
+		id="Traveler59ShockTrooperSquad"
 		KindOf="SELECTABLE CAN_ATTACK INFANTRY SCORE ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAPTURE HORDE PATH_THROUGH_INFANTRY ARMY_SUMMARY LARGE_RECTANGLE_PATHFIND SKIRMISH_AI_DONT_GARRISON CAN_BE_FAVORITE_UNIT"
-		Description="Desc:Reaper17ShockTrooper"
-		TypeDescription="Type:Reaper17ShockTrooper"
+		Description="Desc:Traveler59ShockTrooper"
+		TypeDescription="Type:Traveler59ShockTrooper"
 		RadarPriority="NOT_ON_RADAR"
 		BuildCompletion="INVALID"
 		FenceWidth="0"
@@ -15,15 +15,15 @@
 		BuildFadeInOnCreateTimeSeconds="0s"
 		FactoryExitWidth="0"
 		FactoryExtraBibWidth="0"
-		Side="Reaper17"
-		EditorName="Reaper17ShockTrooperSquad"
+		Side="Traveler59"
+		EditorName="Traveler59ShockTrooperSquad"
 		EditorSorting="UNIT"
 		BountyValue="0"
 		BuildTime="8"
 		BuildFadeInOnCreateTime="0"
 		EnergyProduction="0"
 		EnergyBonus="0"
-		CommandSet="AlienShockTrooperSquadCommandSet"
+		CommandSet="Traveler59ShockTrooperSquadCommandSet"
 		SelectPortrait="Portrait_ALIENShockTrooper"
 		ButtonImage="Portrait_ALIENShockTrooper"
 		VoicePriority="0"
@@ -66,7 +66,7 @@
 		HasFiredRecentlyTime="2s"
 		UnitTypeIcon="ShockTrooperIcon"
 		ReinvisibilityDelay="4s"
-		WorldMapArmoryUpgradesAllowed="Upgrade_AlienShockTrooperPlasmaDiskLauncher Upgrade_AlienShockTrooperBlinkPack"
+		WorldMapArmoryUpgradesAllowed="Upgrade_Traveler59AdvancedArticulators Upgrade_AlienShockTrooperPlasmaDiskLauncher"
 		CaptureTime="0s"
 		BuildCost="800"
 		RefundValue="0"
@@ -91,8 +91,8 @@
 			RequiredModelConditionsAny=""
 			ForbiddenModelConditions=""
 			RequiredObjectStatusAny="">
-			<RequiredObject>Reaper17StasisChamber</RequiredObject>
-			<RequiredObject>Reaper17ControlCenter</RequiredObject>
+			<RequiredObject>Traveler59StatisChamber</RequiredObject>
+			<RequiredObject>Traveler59ControlCenter</RequiredObject>
 		</GameDependency>
 		<ArmorSet
 			Armor="NoArmor"
@@ -297,133 +297,6 @@
 			id="ModuleTag_StealthDetect" 
 		  DetectionRange="100" 
 		  ExtraForbiddenKindOf="AIRCRAFT"/>
-			<UnpauseSpecialPowerUpgrade
-				id="0FE6C3F6"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="True"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				SpecialPowerTemplate="SpecialPower_UseBlinkPack"
-				ObeyRechageOnTrigger="False">
-				<TriggeredBy>Upgrade_AlienShockTrooperBlinkPack</TriggeredBy>
-			</UnpauseSpecialPowerUpgrade>
-			<SpecialPower
-				id="E17B1625"
-				SpecialPowerTemplate="SpecialPower_UseBlinkPack"
-				AntiCategory=""
-				AntiFX=""
-				AttributeModifier=""
-				AttributeModifierRange="0"
-				AttributeModifierFX="FX_AlienInfantryHitFX"
-				WeatherDuration="0"
-				InitiateFX=""
-				TriggerFX=""
-				SetModelCondition="TOPPLED"
-				SetModelConditionTime="0s"
-				GiveLevels="0"
-				ChangeWeather="NORMAL"
-				OnTriggerRechargeSpecialPower=""
-				BurnDecayModifier="0"
-				MaxDistanceFromCommandCenter="0"
-				UpdateModuleStartsAttack="True"
-				StartsPaused="True"
-				ReEnableAntiCategory="False"
-				AttributeModifierAffectsSelf="False"
-				AttributeModifierWeatherBased="False"
-				TargetEnemy="False"
-				TargetAllSides="False"
-				DisableDuringAnimDuration="False"
-				IdleWhenStartingPower="False"
-				AffectGood="False"
-				AffectEvil="False"
-				AffectAllies="True"
-				AvailableAtStart="True"
-				AdjustVictim="False"
-				UseDistanceFromCommandCenter="False"
-				ChildModuleHandlesFX="False">
-				<AttributeModifierAffects
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterMP
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-				<RequirementsFilterStrategic
-					Rule="UNPARSED"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-			</SpecialPower>
-			<TeleportSpecialAbilityUpdate
-				id="3474B978"
-				GrabPassengerHealGain="0%"
-				SpecialPowerTemplate="SpecialPower_UseBlinkPack"
-				StartAbilityRange="750"
-				AbilityAbortRange="1E+07"
-				PreparationTime="0s"
-				PersistentPrepTime="0s"
-				PersistentCount="-1"
-				PackTime="0s"
-				UnpackTime="0s"
-				PreTriggerUnstealthTime="0s"
-				Options=""
-				PackUnpackVariationFactor="0"
-				ParalyzeDurationWhenCompleted="0s"
-				ParalyzeDurationWhenAborted="0s"
-				SpecialObject=""
-				MaxSpecialObjects="1"
-				EffectDuration="0s"
-				EffectValue="1"
-				EffectRange="0"
-				FleeRangeAfterCompletion="0"
-				DisableFXParticleSystem=""
-				PackSound=""
-				UnpackSound=""
-				PrepSoundLoop=""
-				TriggerSound=""
-				ActiveLoopSound=""
-				AwardXPForTriggering="0"
-				SkillPointsForTriggering="-1"
-				UnpackingVariation="1"
-				FreezeAfterTriggerDuration="0s"
-				RequiredConditions=""
-				RejectedConditions=""
-				SetObjectStatusOnTrigger=""
-				ClearObjectStatusOnExit=""
-				TriggerAttributeModifier=""
-				AttributeModifierDuration="0s"
-				ChainedButton=""
-				RequireAndSpendTiberiumOnCaster="0"
-				DisabledTypesToProcess="HELD"
-				DisabledTypesToContinueSoundsFor="HELD"
-				StartRechargeOnExit="False"
-				GoIdleInStartPreparation="True"
-				FaceTarget="True"
-				BusyDuration="1.5s"
-				DestinationWeapon="AlienShockTrooperBlinkWeapon2"
-				SourceWeapon="AlienShockTrooperBlinkWeapon"
-				MaxDistance="750"
-				HeightToTeleportTo="0"
-				FadeInTime="1s" />
 			<StatusBitsUpgrade
 				RequiresAllTriggers="False"
 				RequiresAllConflictingTriggers="False"
@@ -487,7 +360,7 @@
 				IgnorePreReqs="False" />
 			<AISpecialPowerUpdate
 				id="B6FE6BE7"
-				CommandButtonName="Command_UseBlinkPack"
+				CommandButtonName="Command_UseTraveler59BlinkPack"
 				SecondaryCommandButtonName=""
 				SpecialPowerAIType="SPECIAL_POWER_MOVEMENT"
 				SpecialPowerRadius="-1"
@@ -613,6 +486,122 @@
 				StartRechargeOnExit="False"
 				GoIdleInStartPreparation="True"
 				FaceTarget="True" />
+			<SpecialPower
+				id="E17B1625"
+				SpecialPowerTemplate="SpecialPower_UseTraveler59BlinkPack"
+				AntiCategory=""
+				AntiFX=""
+				AttributeModifier=""
+				AttributeModifierRange="0"
+				AttributeModifierFX="FX_AlienInfantryHitFX"
+				WeatherDuration="0"
+				InitiateFX=""
+				TriggerFX=""
+				SetModelCondition="TOPPLED"
+				SetModelConditionTime="0s"
+				GiveLevels="0"
+				ChangeWeather="NORMAL"
+				OnTriggerRechargeSpecialPower=""
+				BurnDecayModifier="0"
+				MaxDistanceFromCommandCenter="0"
+				UpdateModuleStartsAttack="True"
+				StartsPaused="False"
+				ReEnableAntiCategory="False"
+				AttributeModifierAffectsSelf="False"
+				AttributeModifierWeatherBased="False"
+				TargetEnemy="False"
+				TargetAllSides="False"
+				DisableDuringAnimDuration="False"
+				IdleWhenStartingPower="False"
+				AffectGood="False"
+				AffectEvil="False"
+				AffectAllies="True"
+				AvailableAtStart="True"
+				AdjustVictim="False"
+				UseDistanceFromCommandCenter="False"
+				ChildModuleHandlesFX="False">
+				<AttributeModifierAffects
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterMP
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+				<RequirementsFilterStrategic
+					Rule="UNPARSED"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="" />
+			</SpecialPower>
+			<TeleportSpecialAbilityUpdate
+				id="3474B978"
+				GrabPassengerHealGain="0%"
+				SpecialPowerTemplate="SpecialPower_UseTraveler59BlinkPack"
+				StartAbilityRange="750"
+				AbilityAbortRange="1E+07"
+				PreparationTime="0s"
+				PersistentPrepTime="0s"
+				PersistentCount="-1"
+				PackTime="0s"
+				UnpackTime="0s"
+				PreTriggerUnstealthTime="0s"
+				Options=""
+				PackUnpackVariationFactor="0"
+				ParalyzeDurationWhenCompleted="0s"
+				ParalyzeDurationWhenAborted="0s"
+				SpecialObject=""
+				MaxSpecialObjects="1"
+				EffectDuration="0s"
+				EffectValue="1"
+				EffectRange="0"
+				FleeRangeAfterCompletion="0"
+				DisableFXParticleSystem=""
+				PackSound=""
+				UnpackSound=""
+				PrepSoundLoop=""
+				TriggerSound=""
+				ActiveLoopSound=""
+				AwardXPForTriggering="0"
+				SkillPointsForTriggering="-1"
+				UnpackingVariation="1"
+				FreezeAfterTriggerDuration="0s"
+				RequiredConditions=""
+				RejectedConditions=""
+				SetObjectStatusOnTrigger=""
+				ClearObjectStatusOnExit=""
+				TriggerAttributeModifier=""
+				AttributeModifierDuration="0s"
+				ChainedButton=""
+				RequireAndSpendTiberiumOnCaster="0"
+				DisabledTypesToProcess="HELD"
+				DisabledTypesToContinueSoundsFor="HELD"
+				StartRechargeOnExit="False"
+				GoIdleInStartPreparation="True"
+				FaceTarget="True"
+				BusyDuration="1.5s"
+				DestinationWeapon="AlienShockTrooperBlinkWeapon2"
+				SourceWeapon="AlienShockTrooperBlinkWeapon"
+				MaxDistance="750"
+				HeightToTeleportTo="0"
+				FadeInTime="1s" />
 			<HordeContain
 				id="D8175399"
 				ContainMax="0"
@@ -707,13 +696,13 @@
 					DeathTypes=""
 					DeathTypesForbidden="" />
 				<InitialPayload
-					Name="Reaper17ShockTrooper"
+					Name="Traveler59ShockTrooper"
 					Count="3" />
 				<MeleeBehavior
 					Type="AMOEBA" />
 				<RankInfo
 					RankID="1"
-					UnitType="Reaper17ShockTrooper">
+					UnitType="Traveler59ShockTrooper">
 					<Position
 						X="-10"
 						Y="-20"
@@ -732,6 +721,16 @@
 				</RankInfo>
 				<RankToReleaseWhenAttacking>1</RankToReleaseWhenAttacking>
 			</HordeContain>
+			<AttributeModifierUpgrade
+				id="EDB35FB5"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifier="AttributeModifier_AdvancedArticulators2">
+				<TriggeredBy>Upgrade_Traveler59AdvancedArticulators</TriggeredBy>
+			</AttributeModifierUpgrade>
 			<AISpecialPowerUpdate
 				id="7795C520"
 				CommandButtonName="Asset not found in stream: [D39107AF]"
@@ -873,6 +872,6 @@
 			CrushOnlyWhileCharging="False"
 			CrushAllies="False" />
 		<DisplayUpgrade>Upgrade_AlienShockTrooperPlasmaDiskLauncher</DisplayUpgrade>
-		<DisplayUpgrade>Upgrade_AlienShockTrooperBlinkPack</DisplayUpgrade>
+		<DisplayUpgrade>Upgrade_Traveler59AdvancedArticulators</DisplayUpgrade>
 	</GameObject>
 </AssetDeclaration>

@@ -1703,8 +1703,8 @@
 		AntiMask="ANTI_GROUND"
 		CanFireWhileMoving="true">
 		<FiringDuration
-			MinSeconds="0.4s"
-			MaxSeconds="0.4s" />
+			MinSeconds="0.3s"
+			MaxSeconds="0.3s" />
 		<ClipReloadTime
 			MinSeconds="0.75s"
 			MaxSeconds="0.75s" />
@@ -1714,7 +1714,7 @@
 				LaserId="1"
 				HitGroundFX="FX_RailGunHit" />
 			<DamageNugget
-				Damage="670.0"
+				Damage="625.0"
 				DamageType="CANNON"
 				DamageFXType="GDI_RAILGUN"
 				DeathType="NORMAL">
@@ -1748,8 +1748,8 @@
 		AntiMask="ANTI_GROUND"
 		CanFireWhileMoving="true">
 		<FiringDuration
-			MinSeconds="0.4s"
-			MaxSeconds="0.4s" />
+			MinSeconds="0.3s"
+			MaxSeconds="0.3s" />
 		<ClipReloadTime
 			MinSeconds="0.75s"
 			MaxSeconds="0.75s" />
@@ -1759,7 +1759,7 @@
 				LaserId="2"
 				HitGroundFX="FX_RailGunHit" />
 			<DamageNugget
-				Damage="670.0"
+				Damage="625.0"
 				DamageType="CANNON"
 				DamageFXType="GDI_RAILGUN"
 				DeathType="NORMAL">
@@ -1794,8 +1794,8 @@
 		AntiMask="ANTI_GROUND"
 		CanFireWhileMoving="true">
 		<FiringDuration
-			MinSeconds="0.4s"
-			MaxSeconds="0.4s" />
+			MinSeconds="0.3s"
+			MaxSeconds="0.3s" />
 		<ClipReloadTime
 			MinSeconds="0.75s"
 			MaxSeconds="0.75s" />
@@ -1805,7 +1805,7 @@
 				LaserId="0"
 				HitGroundFX="FX_RailGunHit" />
 			<DamageNugget
-				Damage="670.0"
+				Damage="625.0"
 				DamageType="CANNON"
 				DamageFXType="GDI_RAILGUN"
 				DeathType="NORMAL">
@@ -2364,7 +2364,6 @@
 			</AttributeModifierNugget>
 		</Nuggets>
 	</WeaponTemplate>
-
 	<!-- MAIN WEAPON MANTIS -->
 	<!--
 <WeaponTemplate
@@ -2721,8 +2720,8 @@
 	 
     -->
 	<PreAttackDelay
-	  MinSeconds="2s"
-	  MaxSeconds="2s" />
+	  MinSeconds="2.5s"
+	  MaxSeconds="2.5s" />
 	<Nuggets>	
 		<AttributeModifierNugget
 			Radius="10607.0"

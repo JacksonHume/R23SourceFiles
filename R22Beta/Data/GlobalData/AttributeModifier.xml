@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- to ensure traveler 59 do not get faster infantry with the base infantry speed buff --> 
+
+	<AttributeModifier
+		id="AttributeModifier_AdvancedArticulators2"
+		Category="NONE">
+		<Modifier Type="SPEED" Value="159.1%" />
+	</AttributeModifier>
 	
 	<!-- R23 eradicator hexapod multiple prodigy cooldown buff, stacking limit of 3 with initial modifier offsetting the initial cooldown, thats lower.  -->
 

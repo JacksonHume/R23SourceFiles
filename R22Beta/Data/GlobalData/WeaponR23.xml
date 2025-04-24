@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- shatterers now kill friendly neutral and enemy husks -->
+
+	<WeaponTemplate
+		id="ShattererSweepWeapon2"
+		Name="ShattererSweepWeapon2"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<!-- For killing husks -->
+             <DamageNugget 
+				Damage="1000.0" 
+				Radius="20"
+				DamageType="CANNON" >
+               <SpecialObjectFilter
+					Rule="ANY"
+					Include="HUSK TIBERIUM" >
+               </SpecialObjectFilter> 			   
+             </DamageNugget> 
+			<!-- As friendly-fire is disabled on the sonic wave, we use this for damaging targeted single allies -->
+             <DamageNugget 
+				Damage="1000.0" 
+				Radius="20"
+				DamageType="CANNON" >
+               <SpecialObjectFilter
+					Rule="ANY"
+					Relationship="ALLIES NEUTRAL"
+					Include="VEHICLE INFANTRY STRUCTURE" >
+               </SpecialObjectFilter> 			   
+             </DamageNugget> 
+		</Nuggets>
+	</WeaponTemplate>	
+
+	<WeaponTemplate
+		id="SteelTalonsOverloadBeamWarhead"
+		Name="SteelTalonsOverloadBeamWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE" >
+		<Nuggets>
+			<!-- Note the wave ALSO does an additional 1000 dmg on the sp target (and any enemy along the way) -->		
+			<DamageNugget
+				Damage="1500.0"
+				Radius="20"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DeathType="NORMAL" >
+               <SpecialObjectFilter
+					Rule="ALL"
+					Relationship="ENEMIES"
+					Exclude="HUSK TIBERIUM" >
+               </SpecialObjectFilter> 					
+             </DamageNugget> 
+			 <!-- 1000 more dmg because the wave does NOT damage husks at all -->	
+			<DamageNugget
+				Damage="2500.0"
+				Radius="20"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DeathType="NORMAL" >
+               <SpecialObjectFilter
+					Rule="NONE"
+					Include="HUSK TIBERIUM" >
+               </SpecialObjectFilter> 					
+             </DamageNugget> 			 
+			<!-- 1000 more dmg because the wave no longer damages allies -->
+			<DamageNugget
+				Damage="2500.0"
+				Radius="20"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DeathType="NORMAL" >
+               <SpecialObjectFilter
+					Rule="ALL"
+					Relationship="ALLIES NEUTRAL" >
+               </SpecialObjectFilter> 					
+             </DamageNugget> 	
+		</Nuggets>
+	</WeaponTemplate>
+
 	<!-- cultist nerf -->
 
 	<WeaponTemplate

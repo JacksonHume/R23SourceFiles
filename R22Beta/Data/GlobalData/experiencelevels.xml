@@ -159,16 +159,93 @@
 	<ExperienceLevelTemplate
 		id="ViceroidExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="100"
+		ExperienceAward="150"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"
 			g="1.0"
 			b="1.0" />
-		<LevelUpFxList
-			FxList="FX_None"
-			BoneName="NoBone" />
 		<Target>Viceroid</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- veteran -->
+	<ExperienceLevelTemplate
+		id="ViceroidExperienceLevel_2"
+		RequiredExperience="900"
+		ExperienceAward="195"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_01" />
+		<Target>Viceroid</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- elite -->
+
+	<ExperienceLevelTemplate
+		id="ViceroidExperienceLevel_3"
+		RequiredExperience="1800"
+		ExperienceAward="240"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_02" />
+		<Target>Viceroid</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_Good_CO"
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="75"
+			MaxRadius="200"
+			MaxSelectedUnits="40" />
+	</ExperienceLevelTemplate>
+
+	<!-- heroic -->
+
+	<ExperienceLevelTemplate
+		id="ViceroidExperienceLevel_4"
+		RequiredExperience="2700"
+		ExperienceAward="300"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_03" />
+		<Target>Viceroid</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
 		<Decal
 			Texture="decal_G_level1"
 			Texture2="decal_Good_CO"

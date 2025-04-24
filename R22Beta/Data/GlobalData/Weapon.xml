@@ -266,7 +266,7 @@
 				DamageType="GUN"
 				DamageFXType="NOD_PARTICLEBM"
 				DeathType="LASERED">
-				<DamageScalarDetails Scalar="80%">
+				<DamageScalarDetails Scalar="75%">
 					<Filter
 						Rule="NONE"
 						Include="VEHICLE" />
@@ -313,7 +313,7 @@
 				DamageType="GUN"
 				DamageFXType="NOD_PARTICLEBM"
 				DeathType="LASERED" >
-				<DamageScalarDetails Scalar="80%">
+				<DamageScalarDetails Scalar="75%">
 					<Filter
 						Rule="NONE"
 						Include="VEHICLE" />
@@ -953,7 +953,7 @@
 				DamageType="GUN"
 				DamageFXType="GDI_MACHINEGUN"
 				DeathType="NORMAL">
-				<DamageScalarDetails Scalar="80%">
+				<DamageScalarDetails Scalar="75%">
 					<Filter
 						Rule="NONE"
 						Include="VEHICLE" />

@@ -28,7 +28,7 @@
 		<LocomotorSet
 			Locomotor="HumanLocomotor"
 			Condition="NORMAL"
-			Speed="80.0" />
+			Speed="87.5" />
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"
@@ -363,7 +363,7 @@
 			</AttributeModifierUpgrade>
 			<AttributeModifierUpgrade
 				id="Upgrade_Traveler59AdvancedArticulators"
-				AttributeModifier="AttributeModifier_AdvancedArticulators">
+				AttributeModifier="AttributeModifier_AdvancedArticulators2">
 				<TriggeredBy>Upgrade_Traveler59AdvancedArticulators</TriggeredBy>
 			</AttributeModifierUpgrade>	
 			<ModelConditionUpgrade

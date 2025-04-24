@@ -35,7 +35,7 @@
 		<LocomotorSet
 			Locomotor="NormalRangedSquadLocomotor"
 			Condition="NORMAL"
-			Speed="75.0" />
+			Speed="82.5" />
 		<SkirmishAIInformation
 			UnitBuilderStandardCombatUnit="true" />
 		<Draws>
@@ -83,7 +83,7 @@
 			</AttributeModifierUpgrade>
 			<AttributeModifierUpgrade
 				id="Upgrade_Traveler59AdvancedArticulators"
-				AttributeModifier="AttributeModifier_AdvancedArticulators">
+				AttributeModifier="AttributeModifier_AdvancedArticulators2">
 				<TriggeredBy>Upgrade_Traveler59AdvancedArticulators</TriggeredBy>
 			</AttributeModifierUpgrade>
 			<StancesBehavior

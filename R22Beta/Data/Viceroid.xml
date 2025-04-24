@@ -14,7 +14,7 @@
 		BuildFadeInOnCreateTimeSeconds="0s"
 		FactoryExitWidth="0"
 		FactoryExtraBibWidth="0"
-		Side="Neutral"
+		Side="GDI"
 		EditorName="Viceroid"
 		EditorSorting="UNIT"
 		BountyValue="0"
