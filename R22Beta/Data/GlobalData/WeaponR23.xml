@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- fake weapon added for juggernauts/behemoths to not undeploy in below their minimum range -->
+
+	<WeaponTemplate
+		id="GDIJuggernaughtArtilleryFake1"
+		Name="GDIJuggernaughtArtilleryFake1"
+		AttackRange="600.0"
+		WeaponSpeed="500"
+		ClipSize="0"
+		RadiusDamageAffects="ALLIES SELF"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		ReAcquireDetailType="PER_SHOT"
+		FireFX=""
+		FireVeteranFX=""
+		RequiredFiringObjectStatus="DEPLOYED"
+		CheckStatusFlagsInRangeChecks="false"
+ 		>
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s" />
+		<Nuggets>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GDIJuggernaughtArtilleryFake"
+		Name="GDIJuggernaughtArtilleryFake"
+		AttackRange="100.0"
+		WeaponSpeed="500"
+		ClipSize="0"
+		RadiusDamageAffects="ALLIES SELF"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		ReAcquireDetailType="PER_SHOT"
+		FireFX=""
+		FireVeteranFX=""
+		RequiredFiringObjectStatus="DEPLOYED"
+		CheckStatusFlagsInRangeChecks="false"
+ 		>
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s" />
+		<Nuggets>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GDIJuggernaughtArtilleryUndeploy"
+		Name="GDIJuggernaughtArtilleryUndeploy"
+		AttackRange="100.0"
+		WeaponSpeed="500"
+		ClipSize="0"
+		RadiusDamageAffects="ALLIES SELF"
+		CanFireWhileMoving="false"
+		CanFireWhileCharging="false"
+		ReAcquireDetailType="PER_SHOT"
+		FireFX=""
+		FireVeteranFX=""
+		RequiredFiringObjectStatus="DEPLOYED"
+		CheckStatusFlagsInRangeChecks="false"
+ 		>
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s" />
+			<Nuggets>
+				<MetaImpactNugget
+					ShockWaveAmount="5.0"
+					ShockWaveRadius="5.0"
+					CyclonicFactor="0.05"
+					FlipDirection="false"
+					ShockWaveZMult="0">
+					<SpecialObjectFilter
+						Rule="NONE"
+						Relationship="SAME_PLAYER"
+						AcceptModelCondition="WEAPONSLOTID_03"
+						RejectModelCondition="PACKING">
+						<IncludeThing>GDIJuggernaught</IncludeThing>
+						<IncludeThing>SteelTalonsBehemoth</IncludeThing>
+					</SpecialObjectFilter>
+				</MetaImpactNugget>
+			</Nuggets>
+	</WeaponTemplate>
+
 	<!-- shatterers now kill friendly neutral and enemy husks -->
 
 	<WeaponTemplate

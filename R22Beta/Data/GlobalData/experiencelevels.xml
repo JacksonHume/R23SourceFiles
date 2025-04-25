@@ -536,7 +536,7 @@
 	<ExperienceLevelTemplate
 		id="AlienTibHive_1"
 		RequiredExperience="1"
-		ExperienceAward="800"
+		ExperienceAward="1000"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"

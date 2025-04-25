@@ -176,19 +176,19 @@
 						Name="W3DContainer:GUBEHEMOTH_SKN"
 						ExtraMesh="False" />
 					<WeaponFireFXBone
-						WeaponSlotID="1"
+						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXMUZZLE" />
 					<WeaponRecoilBone
-						WeaponSlotID="1"
+						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXMuzzle" />
 					<WeaponMuzzleFlash
-						WeaponSlotID="1"
+						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="MuzzleFlash_" />
 					<WeaponLaunchBone
-						WeaponSlotID="1"
+						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXMUZZLE" />
 					<Turret
@@ -196,7 +196,9 @@
 						TurretArtAngle="0d"
 						TurretPitch="Turret"
 						TurretArtPitch="0d"
-						TurretID="1" />
+						TurretID="2" />
+					<Turret
+						TurretID="3" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -527,7 +529,7 @@
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="90"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -544,7 +546,7 @@
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -561,7 +563,7 @@
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="25"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -578,7 +580,7 @@
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -595,7 +597,7 @@
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="35"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -631,7 +633,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -661,7 +663,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -691,7 +693,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -708,7 +710,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -725,7 +727,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -755,7 +757,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -786,7 +788,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -817,7 +819,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -847,7 +849,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -877,7 +879,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -907,7 +909,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -937,7 +939,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -967,7 +969,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1011,7 +1013,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1055,7 +1057,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1099,7 +1101,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1143,7 +1145,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1173,7 +1175,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1203,7 +1205,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1220,7 +1222,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1270,7 +1272,7 @@
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="85"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1287,7 +1289,7 @@
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="55"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1304,7 +1306,7 @@
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="50"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1321,7 +1323,7 @@
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="50"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1338,7 +1340,7 @@
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="5"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1373,7 +1375,7 @@
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1390,7 +1392,7 @@
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1420,7 +1422,7 @@
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
+						WeaponTimingSlotID="2"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -1588,8 +1590,14 @@
 				DefectionFrameCount="300" />
 			<WeaponSetUpdate
 				id="720F4A50">
+				<WeaponSlotHardpoint
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIJuggernaughtArtilleryFake1" />
+				</WeaponSlotHardpoint>
 				<WeaponSlotTurret
-					ID="1"
+					ID="2"
 					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
 					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
 					AllowInterleavedFiring="False">
@@ -1627,6 +1635,35 @@
 							ActiveWhenPerformingSpecialAbility="False"
 							CanAcquireDynamicIfAssignedOutOfRange="False"
 							CanPickTargetsOutOfTurretAngle="False" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+				<WeaponSlotTurret
+					ID="3"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIJuggernaughtArtilleryFake" />
+					<TurretSettings
+						TurretTurnRate="40"
+						TurretPitchRate="20"
+						AllowsPitch="true"
+						MinimumPitch="-15d">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.8s"
+							ReacquireDelay="5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="False"
+							CanAcquireDynamicIfAssignedOutOfRange="False"
+							CanPickTargetsOutOfTurretAngle="False" />  <!-- changed turretturnrate
+						from 50 to 40 in R19 -->
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
@@ -1961,6 +1998,14 @@
 				TempConditionTime="0s">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeapon">
+				<FireWeaponNugget
+					WeaponName="GDIJuggernaughtArtilleryUndeploy"
+					FireDelay="0s"
+					FireInterval="0.4s"
+				/>
+			</FireWeaponUpdate>
 		</Behaviors>
 		<AI>
 			<DeployStyleAIUpdate

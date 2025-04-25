@@ -501,7 +501,7 @@
 		ReloadTime="120s"
 		RadiusCursorRadius="20"
 		ForbiddenObjectRange="100"
-		Money="-800">
+		Money="-1000">
 		<ObjectFilter
 			Rule="ANY">
 			<IncludeThing>TiberiumField</IncludeThing>

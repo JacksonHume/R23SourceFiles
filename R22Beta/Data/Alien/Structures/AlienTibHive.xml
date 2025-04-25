@@ -1,99 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<AssetDeclaration xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<!-- NerveCenter -->
 	<GameObject
 		id="AlienTibHive"
-		KindOf="SELECTABLE IMMOBILE CAN_ATTACK CAN_CAST_REFLECTIONS STRUCTURE CAN_SEE_THROUGH_STRUCTURE IGNORE_FOR_VICTORY TIBERIUM_BASED CAN_ATTACK_STEALTHED AUTO_ACQUIRABLE_BY_AI"
-		Description="DESC:TiberiumHive"
-		RadarPriority="STRUCTURE"
-		BuildCompletion="INVALID"
-		FenceWidth="0"
-		FenceXOffset="0"
-		RemoveTerrainRadius="0"
-		EmotionRange="0"
-		PlacementViewAngle="270d"
-		BuildFadeInOnCreateTimeSeconds="0s"
-		FactoryExitWidth="0"
-		FactoryExtraBibWidth="0"
-		Side="ALIEN"
-		EditorName="AlienTibHive"
-		EditorSorting="STRUCTURE"
-		BountyValue="0"
-		BuildTime="10"
-		BuildFadeInOnCreateTime="0"
-		EnergyProduction="0"
-		EnergyBonus="0"
-		CommandSet="AlienPhotonCannonCommandSet"
+		inheritFrom="BaseStructure"
 		SelectPortrait="Portrait_TiberiumHive"
 		ButtonImage="Portrait_TiberiumHive"
-		VoicePriority="0"
-		MinZIncreaseForVoiceMoveToHigherGround="-1"
-		CrowdResponse=""
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="1000"
+		BuildTime="10"
+		PlacementViewAngle="270d"
 		CampnessValue="2000"
 		CampnessValueRadius="300"
-		Scale="1"
-		HealthBoxScale="1.5"
-		HealthBoxHeightOffset="10"
-		OcclusionDelay="0"
-		LiveCameraPitch="0"
-		FormationWidth="1"
-		FormationDepth="1"
-		InstanceScaleFuzziness="0"
-		ThreatRadius="-1"
-		RamPower="0"
-		RamZMult="1"
-		ShockwaveResistance="0"
-		CommandPoints="0"
-		CommandPointBonus="0"
-		VoiceAttackChargeTimeout="0"
-		MaxDistanceForEngaged="0"
-		EngagedStateTimeout="0"
-		ThreatLevel="1"
-		SlopeLimitIndex="0"
-		PathfindDiameter="-1"
-		SupplyOverride="0"
-		DisplayMeleeDamage="-1"
-		DisplayRangedDamage="-1"
-		HeroSortOrder="2147483647"
-		FiringArc="360"
-		CamouflageDetectionMultiplier="1"
-		SelectionPriority="2147483647"
+		UnitCategory="STRUCTURE"
+		CommandSet="AlienPhotonCannonCommandSet"
+		KindOf="STRUCTURE SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS CAN_ATTACK_STEALTHED CAN_ATTACK CAN_SEE_THROUGH_STRUCTURE TIBERIUM_BASED AUTO_ACQUIRABLE_BY_AI NOT_SELLABLE IGNORE_FOR_VICTORY"
+		RadarPriority="STRUCTURE"
 		ProductionQueueType="OTHER_STRUCTURE"
 		BuildPlacementTypeFlag="TIBERIUM_FIELD"
+		BuildInProximityToSamePlayerStucture="false"
 		BuildOnRequiredObjectKindOf="TIBERIUM_FIELD HARVESTABLE"
-		UnitCategory="STRUCTURE"
-		WeaponCategory="NONE"
-		HasFiredRecentlyTime="2s"
-		UnitTypeIcon=""
-		ReinvisibilityDelay="4s"
-		CaptureTime="0s"
-		BuildCost="1000"
-		RefundValue="500"
-		ThreatValue="0"
-		MaxSimultaneousOfType="0"
-		TransportSlotCount="0"
-		IsTrainable="True"
-		IsForbidden="False"
-		IsPrerequisite="False"
-		IsGrabbable="False"
-		IsHarvestable="False"
-		StructureRubbleHeight="0"
-		ForceLuaRegistration="False"
-		ShowHealthInSelectionDecal="False"
-		KeepSelectableWhenDead="False"
-		IsAutoBuilt="False"
-		CanPathThroughGates="True"
-		ShouldClearShotsOnIdle="False"
-		BuildInProximityToSamePlayerStucture="False">
+		EditorName="AlienTibHive"
+		Description="DESC:TiberiumHive">
 		<DisplayName>NAME:TiberiumHive</DisplayName>
 		<ArmorSet
-			Armor="AlienBuzzerHiveArmor"
-			DamageFX="FactionStructureDamageFX"
-			Conditions="" />
+			Armor="AlienTibHiveArmor"
+			DamageFX="FactionStructureDamageFX" />
 		<SkirmishAIInformation
-			BaseBuildingLocation="SIDE"
-			ConquerMetricsOverrideDamageType="UNDEFINED"
-			ConquerMetricsOverrideAntiMask="ANTI_GROUND"
-			UnitBuilderStandardCombatUnit="False" />
+			BaseBuildingLocation="SIDE" />
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"
@@ -229,7 +165,7 @@
 						AnimationBlendTime="0" />
 				</AnimationState>
 			</ScriptedModelDraw>
-			
+
 			<!-- draw door -->
 			<ScriptedModelDraw
 				id="ModuleTag_DrawDoor"
@@ -253,12 +189,12 @@
 					<Animation
 						AnimationName="ABTibBHiveDr_OPN"
 						AnimationMode="ONCE"
-						AnimationPriority="30" 
+						AnimationPriority="30"
 						AnimationBlendTime="15" />
 					<Animation
 						AnimationName="ABTibBHiveDr_CLS"
 						AnimationMode="ONCE"
-						AnimationPriority="10" 
+						AnimationPriority="10"
 						AnimationBlendTime="15" />
 					<FXEvent
 						Frame="29"
@@ -271,199 +207,78 @@
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble">
-				</AnimationState>			
+				</AnimationState>
 			</ScriptedModelDraw>
 		</Draws>
 		<Behaviors>
-			<AttributeModifierPoolUpdate
-				id="788FFB50" />
+			<AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate" />
 			<FireWeaponWhenDead
-				id="E84F2471"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				DelayTime="0s"
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
 				DeathWeapon="CatalystBuildingDeathWeapon"
-				FocusFireKindOfFlag=""
-				InitiallyActive="True"
-				ActiveDuringConstruction="False"
-				ContinueToBezierDestination="False">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="CATALYST"
-					DeathTypesForbidden="" />
+				ContinueToBezierDestination="false"
+			>
+				<DieMuxData DeathTypes="CATALYST" />
 			</FireWeaponWhenDead>
 			<TemporarilyDefectUpdate
-				id="01009D1F"
+				id="ModuleTag_TemporarilyDefect"
 				DefectionFrameCount="100" />
+
 			<FXListBehavior
-				id="57E81491">
+				id="ModuleTag_FXList">
 				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
+					DeathTypes="ALL" />
 				<Event
 					Index="onTransitionToDamaged"
-					FX="FX_AlienBuildingDamagedS"
-					MinThreshold="0"
-					MaxThreshold="0"
-					Direction="Default"
-					OrientToObject="True"
-					ForceUseDoFXObj="False" />
+					FX="FX_AlienBuildingDamagedS" />
 				<Event
 					Index="onTransitionToReallyDamaged"
-					FX="FX_AlienBuildingDamagedS"
-					MinThreshold="0"
-					MaxThreshold="0"
-					Direction="Default"
-					OrientToObject="True"
-					ForceUseDoFXObj="False" />
+					FX="FX_AlienBuildingDamagedS" />
 				<Event
 					Index="onTransitionToRubble"
-					FX="FX_AlienBuildingRubbleS"
-					MinThreshold="0"
-					MaxThreshold="0"
-					Direction="Default"
-					OrientToObject="True"
-					ForceUseDoFXObj="False" />
+					FX="FX_AlienBuildingRubbleS" />
 			</FXListBehavior>
 			<SlowDeath
-				id="1673247C"
-				SinkRate="4"
-				ProbabilityModifier="10"
-				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="3s"
-				SinkDelayVariance="0s"
-				DestructionDelay="8s"
-				DestructionDelayVariance="0s"
-				DecayBeginTime="0s"
-				FlingForce="0"
-				FlingForceVariance="0"
-				FlingPitch="0d"
-				FlingPitchVariance="0d"
-				DeathFlags=""
-				FadeTime="0s"
-				FadeDelay="0s"
-				DeathTypes=""
-				DeathObjectStatusBits=""
-				ShadowWhenDead="False"
-				Fade="False">
-				<Sound
-					Type="INITIAL"
-					List="ALI_Building_Die" />
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
 				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
+					DeathTypes="ALL" />
 			</SlowDeath>
 			<TiberiumFieldModBehavior
-				id="60636857"
+				id="ModuleTag_FieldMod"
 				ObjectStatus="WEAPON_UPGRADED_01"
 				ModelCondition="USER_4">
 				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
+					DeathTypes="ALL" />
 			</TiberiumFieldModBehavior>
 			<FireWeaponUpdate
-				id="62997CF4"
-				ActiveWhenDisabled=""
-				HeroModeTrigger="False"
-				ChargingModeTrigger="False"
-				AliveOnly="False">
+				id="ModuleTag_CrystalWeapon">
 				<FireWeaponNugget
 					WeaponName="TiberiumHiveWeapon"
 					FireDelay="1s"
-					FireInterval="0s"
-					OneShot="False" />
+				/>
 			</FireWeaponUpdate>
 			<StructureUnpackUpdate
 				UnpackTime="1.5s" />
-			<RepairUpdate
-				id="23C74182"
-				RepopThreshold="0.2"
-				HealAmountPerSecond="90"
-				Toggleable="True"
-				RepairableWhenDead="False">
-				<PercentOfBuildCostToRebuildInfo
-					Pristine="50%"
-					Damaged="50%"
-					ReallyDamaged="50%"
-					Rubble="50%" />
-				<SelfAudio
-					SelfRepairFromDamageLoop=""
-					SelfRepairFromRubbleLoop="" />
+			<RepairUpdate xmlns="uri:ea.com:eala:asset"
+				id="ModuleTag_RepairUpdate">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
 			</RepairUpdate>
-			
-			<HealContain
-				id="ModuleTag_HordeGarrison"
-				ObjectStatusOfContained="UNSELECTABLE ENCLOSED"
-				ContainMax="1"
-				AllowEnemiesInside="true"
-				AllowAlliesInside="false"
-				AllowNeutralInside="false"
-				AllowOwnPlayerInsideOverride="true"
-				ShowPips="false"
-				KillPassengersOnDeath="false"
-				TimeForFullHeal="5s"
-				ResetInitialTeamOnCapture="true">
-				<PassengerFilter
-					Rule="ANY"
-					Relationship="ENEMIES"
-					Include="ENGINEER" />
-				<DieMuxData
-					DeathTypes="ALL" />
-				<PassengerData
-					BonePrefix="BONEGARRISON">
-					<Filter
-						Rule="NONE"
-						Relationship="ENEMIES"
-						Include="ENGINEER" />
-				</PassengerData>
-				<ExitOffset
-					x="50"
-					y="0"
-					z="0" />
-			</HealContain>
-			
-			<EngineerContain
-				id="D16751DE"
-				ReplaceWith=""
+			<EngineerContain xmlns="uri:ea.com:eala:asset"
+				id="ModuleTag_EngineerContain"
 				NameOfVoiceToUseForFriendlyEnter="VoiceEngineerRepair"
-				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding" 
+				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding"
+				EvaEventForRepair="BuildingRepaired"
+				EvaEventForCapture="EnemyBuildingCaptured"
 				FXForRepair="FX_Building_Repaired"
 				FXForCapture="FX_Building_Captured"
 				FXForCaptureAndReplace="FX_Building_Captured"
-				EvaEventForRepair="BuildingRepaired"
-				EvaEventForCapture="EnemyBuildingCaptured">
-				<CanEnterFilter
-					Rule="NONE"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="">
+				ImmediatelyEnabled="true">
+				<CanEnterFilter Rule="NONE">
 					<IncludeThing>GDIEngineer</IncludeThing>
 					<IncludeThing>NODSaboteur</IncludeThing>
 					<IncludeThing>AlienAssimilator</IncludeThing>
@@ -474,66 +289,53 @@
 					<IncludeThing>Traveler59Assimilator</IncludeThing>
 				</CanEnterFilter>
 			</EngineerContain>
+			<CreateObjectDie xmlns="uri:ea.com:eala:asset"
+				id="ModuleTag_CreateOccupiedDie"
+				CreationList="OCL_GenericAlienBuildingDestruction">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="DETONATED SUICIDED"
+				/>
+				<UpgradeForbidden>Upgrade_NoSpawnUponDestruction</UpgradeForbidden>
+			</CreateObjectDie>
+			<CreateObjectDie xmlns="uri:ea.com:eala:asset"
+				id="ModuleTag_CreateOccupiedSuicide"
+				CreationList="OCL_GenericAlienBuildingSuicide">
+				<DieMuxData DeathTypes="SUICIDED" />
+			</CreateObjectDie>
 		</Behaviors>
 		<Body>
 			<ActiveBody
-				id="C026F3D9"
-				MaxHealth="1600"
-				MaxHealthDamaged="0"
-				MaxHealthReallyDamaged="0"
-				InitialHealth="-1"
-				RecoveryTime="0"
-				DodgePercent="0"
-				EnteringDamagedTransitionTime="0s"
-				EnteringReallyDamagedTransitionTime="0s"
-				GrabFX=""
-				GrabDamage="200"
-				HealingBuffFX=""
-				DamagedAttributeModifier=""
-				ReallyDamagedAttributeModifier=""
-				CheerRadius="200"
-				BurningDeathFX=""
-				SecondChanceUpgrade=""
-				SecondChanceHeal="0"
-				UseDefaultDamageSettings="True"
-				RemoveUpgradesOnDeath="False"
-				BurningDeathBehavior="False" />
+				id="ModuleTag_Body"
+				MaxHealth="1000.0" />
 		</Body>
 		<Geometry
-			IsSmall="False">
+			IsSmall="false">
 			<Shape
 				Type="CYLINDER"
-				ContactPointGeneration="NONE"
 				MajorRadius="12.1114"
 				MinorRadius="12.1114"
-				Height="52.6624"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="True">
+				Height="52.6624">
 				<Offset
-					x="0"
-					y="0"
-					z="0" />
+					x="0.0"
+					y="0.0"
+					z="0.0" />
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				ContactPointGeneration="NONE"
 				MajorRadius="23.2912"
 				MinorRadius="23.2912"
-				Height="26.3312"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="True">
+				Height="26.3312">
 				<Offset
-					x="0"
-					y="-9.53674E-07"
-					z="0" />
+					x="0.0"
+					y="-9.53674e-007"
+					z="0.0" />
 			</Shape>
 			<ContactPoint>
 				<Pos
 					x="-14.9777"
 					y="-15.975"
-					z="0" />
+					z="0.0" />
 			</ContactPoint>
 			<ContactPoint>
 				<Pos
@@ -545,7 +347,7 @@
 				<Pos
 					x="15.8223"
 					y="14.825"
-					z="0" />
+					z="0.0" />
 			</ContactPoint>
 			<ContactPoint>
 				<Pos
@@ -563,7 +365,7 @@
 				<Pos
 					x="15.8223"
 					y="-15.975"
-					z="0" />
+					z="0.0" />
 			</ContactPoint>
 			<ContactPoint>
 				<Pos
@@ -575,44 +377,29 @@
 				<Pos
 					x="-14.9777"
 					y="14.825"
-					z="0" />
+					z="0.0" />
 			</ContactPoint>
 		</Geometry>
 		<AudioArrayVoice>
-			<AudioEntry
-				EvaEvent="BuildingStolen"
-				AudioType="voiceDefectingAway" />
-			<AudioEntry
-				EvaEvent="EnemyBuildingCaptured"
-				AudioType="voiceDefectingTowards" />
+			<AudioEntry EvaEvent="BuildingStolen" AudioType="voiceDefectingAway" />
+			<AudioEntry EvaEvent="EnemyBuildingCaptured" AudioType="voiceDefectingTowards" />
 			<AudioEntry
 				Sound="AudioEvent:ALI_TiberiumHive_Select"
 				AudioType="voiceSelect" />
 		</AudioArrayVoice>
 		<AudioArraySound>
-			<AudioEntry
-				Sound="AudioEvent:GDI_BuildingPlaced"
-				AudioType="soundUnderConstruction" />
-			<AudioEntry
-				Sound="AudioEvent:ALI_Building_LightDamage"
-				AudioType="soundOnDamaged" />
-			<AudioEntry
-				Sound="AudioEvent:ALI_Building_HeavyDamage"
-				AudioType="soundOnReallyDamaged" />
-			<AudioEntry
-				Sound="AudioEvent:ALI_Building_Placed"
-				AudioType="soundUnderConstruction" />
+			<AudioEntry Sound="AudioEvent:ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="AudioEvent:ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="AudioEvent:ALI_Building_Placed" AudioType="soundUnderConstruction" />
 		</AudioArraySound>
 		<EvaEvents
-			EvaEventSoldOwner="StructureSold"
+			EvaEventProductionStarted="BuildingConstructionStarted"
+			EvaEventProductionComplete="BuildingConstructionComplete"
 			EvaEventDamagedOwner="StructureUnderAttack"
-			EvaEventSecondDamageFarFromFirstScanRange="200"
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
+			EvaEventSoldOwner="StructureSold"
 			EvaEventRepairingOwner="StructureRepairing"
 			EvaEnemyObjectSightedEvent="EnemyCampSighted"
 			EvaEventAvailableForProduction="NewConstructionOptions"
-			EvaEventProductionStarted="BuildingConstructionStarted"
-			EvaEventProductionComplete="BuildingConstructionComplete"
 			EvaEventPlacementFailed="StructurePlacementFailed"
 			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue"
 			EvaEventBuildOnHold="BuildOnHold"
@@ -620,38 +407,12 @@
 			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
 			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
 		<ShadowInfo
-			Type="VOLUME"
-			Texture=""
-			AdditionalTexture=""
-			SizeX="0"
-			SizeY="0"
-			OffsetX="0"
-			OffsetY="0"
-			OpacityStart="0"
-			OpacityFadeInTime="0s"
-			OpacityPeak="1"
-			OpacityFadeOutTime="0s"
-			OpacityEnd="0"
-			MaxHeight="20"
-			SunAngle="0"
-			OverrideLODVisibility="False"
-			UseHouseColor="False"
-			IsRotatingWithObject="True"
-			LocalPlayerOnly="False" />
+			Type="VOLUME" />
 		<VisionInfo
 			VisionRange="200"
-			ShroudClearingRange="400"
-			VisionSide="100%"
-			VisionRear="100%"
-			VisionBonusTestRadius="100"
-			VisionBonusTestSegments="8"
-			VisionBonusPercentPerFoot="0%"
-			MaxVisionBonusPercent="50%"
-			MinVisionBonusPercent="-50%" />
+			ShroudClearingRange="400" />
 		<ProjectedBuildabilityInfo
-			Radius="10"
-			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE"
-			StatusToReject=""
-			ModelConditionsToReject="" />
+			Radius="10.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
 	</GameObject>
 </AssetDeclaration>
