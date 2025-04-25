@@ -1373,7 +1373,7 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="MammothTankRailCannon_Accelerated"
-						ObjectStatus="WEAPON_UPGRADED_01 WEAPON_UPGRADED_02" />
+						ObjectStatus="WEAPON_UPGRADED_01 RIDERLESS" />
 					<TurretSettings
 						TurretTurnRate="135"
 						TurretPitchRate="20"

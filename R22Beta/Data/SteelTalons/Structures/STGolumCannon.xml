@@ -516,7 +516,7 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="GDIGolemCannonRailgun_Accelerated"
-						ObjectStatus="WEAPON_UPGRADED_01 WEAPON_UPGRADED_02" />
+						ObjectStatus="WEAPON_UPGRADED_01 RIDERLESS" />
 					<TurretSettings
 						TurretTurnRate="290"
 						TurretPitchRate="100"

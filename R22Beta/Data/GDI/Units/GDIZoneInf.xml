@@ -1113,12 +1113,12 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="ZoneTrooperMachineGun_Accelerated"
-						ObjectStatus="WEAPON_UPGRADED_02" />
+						ObjectStatus="RIDERLESS" />
 						<!-- MORE RANGE I GUESS -->
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="ZoneTrooperMachineGun_Accelerated1"
-						ObjectStatus="WEAPON_UPGRADED_01 WEAPON_UPGRADED_02" />
+						ObjectStatus="WEAPON_UPGRADED_01 RIDERLESS" />
 				</WeaponSlotHardpoint>
 			</WeaponSetUpdate>
 

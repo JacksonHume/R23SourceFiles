@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="us-ascii" ?>
+<?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
 		id="ZOCOMMammoth"
@@ -236,8 +236,8 @@
 						TurretPitch="Bone_Rails"
 						TurretArtPitch="0d"
 						TurretID="3" />
-				</ModelConditionState>			
-	
+				</ModelConditionState>
+
 
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -316,8 +316,8 @@
 						New="GUMammD" />
 
 				</ModelConditionState>
-	
-	
+
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					Name=""
@@ -394,7 +394,7 @@
 						Original="GUMamm"
 						New="GUMammD" />
 				</ModelConditionState>
-				
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					Name=""
@@ -412,7 +412,7 @@
 					<Texture
 						Original="GUMamm"
 						New="GUMamm_K" />
-				</ModelConditionState>	
+				</ModelConditionState>
 
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -429,9 +429,11 @@
 						Name="W3DMesh:GUMAMM_FP"
 						ExtraMesh="False" />
 				</ModelConditionState>
-				
-	<!-- **********************************************************************************  ANIMATIONS ********************************************************* -->
-				
+
+				<!--
+				**********************************************************************************
+				ANIMATIONS ********************************************************* -->
+
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					AnimNickName=""
@@ -454,10 +456,10 @@
 						CurDrawableHideSubObject("UGRailAccelerator_02")
 					</Script>
 				</AnimationState>
-				
 
-				<!-- !!! REMOVED WEAPON_C ANIMATIONSTATES !!! ZOCOM DOESNT GET RAILS -->	
-				
+
+				<!-- !!! REMOVED WEAPON_C ANIMATIONSTATES !!! ZOCOM DOESNT GET RAILS -->
+
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
@@ -487,12 +489,12 @@
 						AnimationMustCompleteBlend="False"
 						UseWeaponTiming="False"
 						FadingIn="False" />
-					<Script>	
+					<Script>
 						CurDrawableHideSubObject("UGRailAccelerator_01")
 						CurDrawableHideSubObject("UGRailAccelerator_02")
-					</Script>				
+					</Script>
 				</AnimationState>
-				
+
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
@@ -522,12 +524,12 @@
 						AnimationMustCompleteBlend="False"
 						UseWeaponTiming="False"
 						FadingIn="False" />
-					<Script>	
+					<Script>
 						CurDrawableHideSubObject("UGRailAccelerator_01")
 						CurDrawableHideSubObject("UGRailAccelerator_02")
 					</Script>
 				</AnimationState>
-				
+
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
@@ -547,7 +549,7 @@
 						CurDrawableHideSubObject("TREADSRIGHT")
 						CurDrawableHideSubObject("TREADSMOVE")
 						CurDrawableHideSubObject("UGRailAccelerator_01")
-						CurDrawableHideSubObject("UGRailAccelerator_02")						
+						CurDrawableHideSubObject("UGRailAccelerator_02")
 					</Script>
 				</AnimationState>
 
@@ -570,7 +572,7 @@
 						CurDrawableHideSubObject("TREADSRIGHT")
 						CurDrawableHideSubObject("TREADSMOVE")
 						CurDrawableHideSubObject("UGRailAccelerator_01")
-						CurDrawableHideSubObject("UGRailAccelerator_02")						
+						CurDrawableHideSubObject("UGRailAccelerator_02")
 					</Script>
 				</AnimationState>
 				<AnimationState
@@ -592,7 +594,7 @@
 						CurDrawableShowSubObject("TREADSRIGHT")
 						CurDrawableHideSubObject("TREADSMOVE")
 						CurDrawableHideSubObject("UGRailAccelerator_01")
-						CurDrawableHideSubObject("UGRailAccelerator_02")						
+						CurDrawableHideSubObject("UGRailAccelerator_02")
 					</Script>
 				</AnimationState>
 				<AnimationState
@@ -614,7 +616,7 @@
 						CurDrawableHideSubObject("TREADSRIGHT")
 						CurDrawableShowSubObject("TREADSMOVE")
 						CurDrawableHideSubObject("UGRailAccelerator_01")
-						CurDrawableHideSubObject("UGRailAccelerator_02")						
+						CurDrawableHideSubObject("UGRailAccelerator_02")
 					</Script>
 				</AnimationState>
 				<LeftTread>TreadsL1</LeftTread>
@@ -634,7 +636,7 @@
 					ArticulationBoneName="Bone_TreadLR"
 					ArticulationHelperBoneName="FXTracksLR" />
 			</TankDraw>
-			
+
 			<ScriptedModelDraw
 				id="B4CD3005"
 				Name=""
@@ -702,7 +704,7 @@
 						Name="W3DContainer:GUMAMM_FX"
 						ExtraMesh="False" />
 				</ModelConditionState>
-				
+
 				<!-- REMOVED WEAPON_C ANIMATIONSTATE -->
 
 				<AnimationState
@@ -718,7 +720,7 @@
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False">
 				</AnimationState>
-				
+
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
@@ -826,8 +828,8 @@
 						OnlyIfOnLand="False" />
 				</AnimationState>
 			</ScriptedModelDraw>
-			
-			
+
+			<!--
 			<LaserDraw
 				id="5FC0AD86"
 				Texture1_UTile="1"
@@ -862,6 +864,7 @@
 					</Constants>
 				</FXShader>
 			</LaserDraw>
+			-->
 		</Draws>
 		<Behaviors>
 			<AttributeModifierPoolUpdate
@@ -1282,8 +1285,8 @@
 				RespawnNearbyHordeMembers="False">
 				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
 			</AutoHealBehavior>
-			
-		<!--
+
+			<!--
 			<StatusBitsUpgrade
 				id="85B2DF85"
 				RequiresAllTriggers="False"
@@ -1335,7 +1338,7 @@
 				<TriggeredBy>Upgrade_HighSpeed1</TriggeredBy>				
 			</AttributeModifierUpgrade>			
 			-->
-			
+
 			<StatusBitsUpgrade
 				id="D305500E"
 				RequiresAllTriggers="False"
@@ -1361,7 +1364,7 @@
 				TempConditionTime="0s">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
-			
+
 			<!--
 			<AudioLoopUpgrade
 				id="96024CFB"
@@ -1374,7 +1377,7 @@
 				KillAfterMS="0">
 				<TriggeredBy>Upgrade_GDIArmoryRailgunTech</TriggeredBy>
 			</AudioLoopUpgrade> -->
-			
+
 		</Behaviors>
 		<AI>
 			<AIUpdate
@@ -1499,8 +1502,8 @@
 			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
 			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
-			EvaEventSecondDamageFarFromFirstScanRange="600"    
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
 			EvaEventAmbushed="UnitAmbushed"
 			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
 			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"

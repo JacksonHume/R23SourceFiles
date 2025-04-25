@@ -4283,7 +4283,7 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="TitanCannonRailgun_Accelerated"
-						ObjectStatus="WEAPON_UPGRADED_01 WEAPON_UPGRADED_02" />
+						ObjectStatus="WEAPON_UPGRADED_01 RIDERLESS" />
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="40"

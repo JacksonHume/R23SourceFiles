@@ -1115,7 +1115,7 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="GDIBattleBaseRailgun01_Accelerated"
-						ObjectStatus="WEAPON_UPGRADED_01 WEAPON_UPGRADED_02" />
+						ObjectStatus="WEAPON_UPGRADED_01 RIDERLESS" />
 					<TurretSettings
 						NaturalTurretAngle="90d"
 						TurretTurnRate="200"
@@ -1144,7 +1144,7 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="GDIBattleBaseRailgun01_Accelerated"
-						ObjectStatus="WEAPON_UPGRADED_01 WEAPON_UPGRADED_02" />
+						ObjectStatus="WEAPON_UPGRADED_01 RIDERLESS" />
 					<TurretSettings
 						NaturalTurretAngle="270d"
 						TurretTurnRate="200"
