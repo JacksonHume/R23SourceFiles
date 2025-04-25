@@ -51,6 +51,7 @@
 				    <IncludeThing>GDIMARV</IncludeThing>
 				    <IncludeThing>ZOCOMMARV</IncludeThing>
 				    <IncludeThing>SteelTalonsMARV</IncludeThing>
+					<!--
 					<ExcludeThing>AlienBuzzers</ExcludeThing>
 					<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
 					<ExcludeThing>AlienAssimilator</ExcludeThing>
@@ -94,6 +95,7 @@
 					<ExcludeThing>MarkedOfKaneImprovedCyborgInfantrySquad</ExcludeThing>
 					<ExcludeThing>NODCyborgInfantrySquad</ExcludeThing>
 					<ExcludeThing>NODCyborgInfantry</ExcludeThing>
+					-->
 				</DamageFilter>
 			
 				<!-- The HealFilter works similar to the damage filter. It turns on or off
