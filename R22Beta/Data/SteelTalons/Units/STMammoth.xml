@@ -104,7 +104,7 @@
 		<LocomotorSet
 			Speed="45"
 			Condition="NORMAL"
-			Locomotor="GDIMammothLocomotor1" />
+			Locomotor="GDIMammothLocomotor" />
 		<LocomotorSet
 			Speed="80"
 			Condition="NORMAL_UPGRADED"

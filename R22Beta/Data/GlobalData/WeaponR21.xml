@@ -3683,7 +3683,7 @@
 
 			<!-- Damage to structures -->
 			<DamageNugget
-				Damage="33.0"
+				Damage="25.0"
 				Radius="25.0"
 				DamageType="GRENADE">
 				<SpecialObjectFilter

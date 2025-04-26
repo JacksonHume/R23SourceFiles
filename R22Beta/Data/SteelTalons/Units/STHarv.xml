@@ -1303,7 +1303,7 @@
 					Include="INFANTRY"
 					Exclude=""
 					StatusBitFlags=""
-					RejectStatusBitFlags="DOCKING"
+					RejectStatusBitFlags=""
 					AcceptModelCondition=""
 					RejectModelCondition="" />
 				<DieMuxData

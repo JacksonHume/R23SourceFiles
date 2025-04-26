@@ -1517,7 +1517,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="MOVING ATTACKING"
+					ConditionsYes="MOVING WEAPONSLOTID_01"
 					StateName="STATE_moving"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
@@ -1673,7 +1673,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="MOVING ATTACKING"
+					ConditionsYes="MOVING WEAPONSLOTID_01"
 					StateName="STATE_moving"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
@@ -1713,7 +1713,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="TURN_LEFT ATTACKING"
+					ConditionsYes="TURN_LEFT WEAPONSLOTID_01"
 					StateName="STATE_moving"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
@@ -1830,7 +1830,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="TURN_RIGHT ATTACKING"
+					ConditionsYes="TURN_RIGHT WEAPONSLOTID_01"
 					StateName="STATE_moving"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
@@ -1947,7 +1947,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="ATTACKING"
+					ConditionsYes="WEAPONSLOTID_01"
 					StateName="STATE_moving"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"

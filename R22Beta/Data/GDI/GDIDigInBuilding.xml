@@ -376,7 +376,7 @@
 				id="ModuleTag_AttributeModifierAura" 
 				InitiallyActive="true"
 				AttributeModifierName="AttributeModifier_GarrisonFix"
-				RefreshDelay="0s"
+				RefreshDelay="0.5s"
 				AllowSelf="false"
 				AffectContainedOnly="true">
 				<ObjectFilter

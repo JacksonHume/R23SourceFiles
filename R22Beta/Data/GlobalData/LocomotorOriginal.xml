@@ -44,7 +44,7 @@
   <LocomotorTemplate
 		id="WolverineLocomotor"
 		Name="WolverineBLocomotor"
-		Surfaces="GROUND" 
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
 		TurnTimeSeconds="0.5s" 
 		TurnTimeDamagedSeconds="0.5s" 
 		FastTurnRadius="9.0" 
@@ -276,7 +276,7 @@
 	<LocomotorTemplate
 		id="GDIPitbullLocomotor"
 		Name="GDIPitbullLocomotor"
-		Surfaces="GROUND" 
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
 		TurnTimeSeconds="0.5s" 
 		TurnTimeDamagedSeconds="1.0s" 
 		MaxSpeedDamaged="75%"
@@ -467,7 +467,7 @@
 	<LocomotorTemplate
 		id="GDIRigLocomotor"
 		Name="GDIRigLocomotor"
-		Surfaces="GROUND" 
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
 		TurnTimeSeconds="3s" 
 		TurnTimeDamagedSeconds="3s" 
 		AccelerationSeconds="1.5s"
@@ -608,7 +608,7 @@
 	<LocomotorTemplate
 		id="NODEmissaryLocomotor"
 		Name="NODEmissaryLocomotor"
-		Surfaces="GROUND" 
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
 		TurnTimeSeconds="4.5s" 
 		TurnTimeDamagedSeconds="4.5s" 
 		MaxSpeedDamaged="75%"
@@ -865,7 +865,7 @@
 	<LocomotorTemplate
 		id="NODScorpionBuggyLocomotor"
 		Name="NODScorpionBuggyLocomotor"
-		Surfaces="GROUND" 
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
 		TurnTimeSeconds="0.8s" 
 		TurnTimeDamagedSeconds="0.8s" 
 		MaxSpeedDamaged="75%"
@@ -940,7 +940,7 @@
 	<LocomotorTemplate
 		id="NODAttackBikeLocomotor"
 		Name="NODAttackBikeLocomotor"
-		Surfaces="GROUND" 
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
 		TurnTimeSeconds="1.0s" 
 		TurnTimeDamagedSeconds="1.0s" 
 		MaxSpeedDamaged="75%"
@@ -1032,7 +1032,7 @@
 	<LocomotorTemplate
 		id="AlienExplorerLocomotor"
 		Name="AlienExplorerLocomotor"
-		Surfaces="GROUND" 
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
 		TurnTimeSeconds="4.5s" 
 		TurnTimeDamagedSeconds="4.5s" 
 		MaxSpeedDamaged="75%"
@@ -1287,7 +1287,7 @@
 	<LocomotorTemplate
 		id="AlienCorrupterLocomotor"
 		Name="AlienCorrupterLocomotor"
-		Surfaces="GROUND RUBBLE" 
+		Surfaces="GROUND RUBBLE CRUSHABLE_OBSTACLE" 
 		TurnTimeSeconds="1s" 
 		TurnTimeDamagedSeconds="1s" 
 		MaxSpeedDamaged="75%"
@@ -1555,7 +1555,7 @@
 	<LocomotorTemplate
 		id="MillipedeLocomotor"
 		Name="MillipedeLocomotor"
-		Surfaces="GROUND" 
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
 		TurnTimeSeconds="0.0s" 
 		TurnTimeDamagedSeconds="0.0s" 
 		FastTurnRadius="20.0" 
