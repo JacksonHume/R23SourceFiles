@@ -47,11 +47,11 @@
 				     If something matching the filter is found within the field, the weapons are turned on. -->
 				<DamageFilter
 					Rule="ANY"
-					Include="INFANTRY HARVESTER SUPPLY_GATHERING_CENTER">
-					<IncludeThing>GDIMARV</IncludeThing>
-					<IncludeThing>ZOCOMMARV</IncludeThing>
-					<IncludeThing>SteelTalonsMARV</IncludeThing>
+					Include="INFANTRY VEHICLE HARVESTER SUPPLY_GATHERING_CENTER">
 					<!--
+					 <IncludeThing>GDIMARV</IncludeThing>
+					 <IncludeThing>ZOCOMMARV</IncludeThing>
+					 <IncludeThing>SteelTalonsMARV</IncludeThing>
 					 <ExcludeThing>AlienBuzzers</ExcludeThing>
 					 <ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
 					 <ExcludeThing>AlienAssimilator</ExcludeThing>

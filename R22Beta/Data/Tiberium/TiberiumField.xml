@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="us-ascii"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<AssetDeclaration xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<GameObject
 		id="TiberiumField"
 		Side="Neutral"
@@ -41,86 +42,86 @@
 				SpawnOffset="15.0"
 				ClusterScaleFactor="1.0"
 				ClusterPowerFactor="1.0"
-				CrystalGrowthRate="20" >
+				CrystalGrowthRate="20">
 				<!-- The DamageFilter is simply an on/off switch for the crystal weapons.
 				     If something matching the filter is found within the field, the weapons are turned on. -->
-				
+
 				<DamageFilter
 					Rule="ANY"
-					Include="INFANTRY HARVESTER SUPPLY_GATHERING_CENTER" >
-				    <IncludeThing>GDIMARV</IncludeThing>
-				    <IncludeThing>ZOCOMMARV</IncludeThing>
-				    <IncludeThing>SteelTalonsMARV</IncludeThing>
+					Include="INFANTRY VEHICLE HARVESTER SUPPLY_GATHERING_CENTER">
 					<!--
-					<ExcludeThing>AlienBuzzers</ExcludeThing>
-					<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
-					<ExcludeThing>AlienAssimilator</ExcludeThing>
-					<ExcludeThing>AlienMastermind</ExcludeThing>
-					<ExcludeThing>AlienBlinkMastermind</ExcludeThing>
-					<ExcludeThing>AlienRazorDrones</ExcludeThing>
-					<ExcludeThing>AlienRazorDroneSquad</ExcludeThing>
-					<ExcludeThing>AlienShockTrooper</ExcludeThing>
-					<ExcludeThing>AlienShockTrooperSquad</ExcludeThing>
-					<ExcludeThing>AlienShockTrooperSquad_Veteran</ExcludeThing>
-					<ExcludeThing>AlienStalker</ExcludeThing>
-					<ExcludeThing>AlienStalkerSquad</ExcludeThing>
-					<ExcludeThing>Reaper17ShockTrooper</ExcludeThing>
-					<ExcludeThing>Reaper17ShockTrooperSquad</ExcludeThing>		
-					<ExcludeThing>Reaper17Stalker</ExcludeThing>
-					<ExcludeThing>Reaper17StalkerSquad</ExcludeThing>
-					<ExcludeThing>Traveler59RazorDrone</ExcludeThing>		
-					<ExcludeThing>Traveler59RazorDroneSquad</ExcludeThing>
-					<ExcludeThing>Traveler59ShockTrooper</ExcludeThing>
-					<ExcludeThing>Traveler59ShockTrooperSquad</ExcludeThing>		
-					<ExcludeThing>Traveler59Stalker</ExcludeThing>
-					<ExcludeThing>Traveler59StalkerSquad</ExcludeThing>		
-					<ExcludeThing>Traveler59Assimilator</ExcludeThing>
-					<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing> 		
-					<ExcludeThing>Traveler59Cultist</ExcludeThing> 
-					<ExcludeThing>Traveler59CultistSquad</ExcludeThing>   		
-					<ExcludeThing>MutantMarauder</ExcludeThing>
-					<ExcludeThing>MutantMarauderSquad</ExcludeThing>
-					<ExcludeThing>Viceroid</ExcludeThing>
-					<ExcludeThing>GDIZoneTrooper</ExcludeThing>
-					<ExcludeThing>GDIZoneTrooperSquad</ExcludeThing>
-					<ExcludeThing>SteelTalonsZoneTrooper</ExcludeThing>
-					<ExcludeThing>SteelTalonsZoneTrooperSquad</ExcludeThing>
-					<ExcludeThing>ZOCOMZoneRaider</ExcludeThing>
-					<ExcludeThing>ZOCOMZoneRaiderSquad</ExcludeThing>
-					<ExcludeThing>MarkedOfKaneTibTrooper</ExcludeThing>
-					<ExcludeThing>MarkedOfKaneTiberiumTrooperSquad</ExcludeThing>
-					<ExcludeThing>MOKCyborgInfantry</ExcludeThing>
-					<ExcludeThing>MOKCyborgInfantrySquad</ExcludeThing>
-					<ExcludeThing>MarkedOfKaneImprovedCyborgInfantry</ExcludeThing>
-					<ExcludeThing>MarkedOfKaneImprovedCyborgInfantrySquad</ExcludeThing>
-					<ExcludeThing>NODCyborgInfantrySquad</ExcludeThing>
-					<ExcludeThing>NODCyborgInfantry</ExcludeThing>
-					-->
+					  <IncludeThing>GDIMARV</IncludeThing>
+					  <IncludeThing>ZOCOMMARV</IncludeThing>
+					  <IncludeThing>SteelTalonsMARV</IncludeThing>
+					  <ExcludeThing>AlienBuzzers</ExcludeThing>
+					  <ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+					  <ExcludeThing>AlienAssimilator</ExcludeThing>
+					  <ExcludeThing>AlienMastermind</ExcludeThing>
+					  <ExcludeThing>AlienBlinkMastermind</ExcludeThing>
+					  <ExcludeThing>AlienRazorDrones</ExcludeThing>
+					  <ExcludeThing>AlienRazorDroneSquad</ExcludeThing>
+					  <ExcludeThing>AlienShockTrooper</ExcludeThing>
+					  <ExcludeThing>AlienShockTrooperSquad</ExcludeThing>
+					  <ExcludeThing>AlienShockTrooperSquad_Veteran</ExcludeThing>
+					  <ExcludeThing>AlienStalker</ExcludeThing>
+					  <ExcludeThing>AlienStalkerSquad</ExcludeThing>
+					  <ExcludeThing>Reaper17ShockTrooper</ExcludeThing>
+					  <ExcludeThing>Reaper17ShockTrooperSquad</ExcludeThing>		
+					  <ExcludeThing>Reaper17Stalker</ExcludeThing>
+					  <ExcludeThing>Reaper17StalkerSquad</ExcludeThing>
+					  <ExcludeThing>Traveler59RazorDrone</ExcludeThing>		
+					  <ExcludeThing>Traveler59RazorDroneSquad</ExcludeThing>
+					  <ExcludeThing>Traveler59ShockTrooper</ExcludeThing>
+					  <ExcludeThing>Traveler59ShockTrooperSquad</ExcludeThing>		
+					  <ExcludeThing>Traveler59Stalker</ExcludeThing>
+					  <ExcludeThing>Traveler59StalkerSquad</ExcludeThing>		
+					  <ExcludeThing>Traveler59Assimilator</ExcludeThing>
+					  <ExcludeThing>Traveler59BlinkMastermind</ExcludeThing> 		
+					  <ExcludeThing>Traveler59Cultist</ExcludeThing> 
+					  <ExcludeThing>Traveler59CultistSquad</ExcludeThing>   		
+					  <ExcludeThing>MutantMarauder</ExcludeThing>
+					  <ExcludeThing>MutantMarauderSquad</ExcludeThing>
+					  <ExcludeThing>Viceroid</ExcludeThing>
+					  <ExcludeThing>GDIZoneTrooper</ExcludeThing>
+					  <ExcludeThing>GDIZoneTrooperSquad</ExcludeThing>
+					  <ExcludeThing>SteelTalonsZoneTrooper</ExcludeThing>
+					  <ExcludeThing>SteelTalonsZoneTrooperSquad</ExcludeThing>
+					  <ExcludeThing>ZOCOMZoneRaider</ExcludeThing>
+					  <ExcludeThing>ZOCOMZoneRaiderSquad</ExcludeThing>
+					  <ExcludeThing>MarkedOfKaneTibTrooper</ExcludeThing>
+					  <ExcludeThing>MarkedOfKaneTiberiumTrooperSquad</ExcludeThing>
+					  <ExcludeThing>MOKCyborgInfantry</ExcludeThing>
+					  <ExcludeThing>MOKCyborgInfantrySquad</ExcludeThing>
+					  <ExcludeThing>MarkedOfKaneImprovedCyborgInfantry</ExcludeThing>
+					  <ExcludeThing>MarkedOfKaneImprovedCyborgInfantrySquad</ExcludeThing>
+					  <ExcludeThing>NODCyborgInfantrySquad</ExcludeThing>
+					  <ExcludeThing>NODCyborgInfantry</ExcludeThing>
+					  -->
 				</DamageFilter>
-			
+
 				<!-- The HealFilter works similar to the damage filter. It turns on or off
 						 the PassiveAreaEffectBehavior of the cystals if a matching object is found in the field. -->
 				<HealFilter Rule="NONE"
-							Include="HEALED_BY_TIBERIUM"/>
+					Include="HEALED_BY_TIBERIUM" />
 			</TiberiumField>
-	</Behaviors>
-	<Body>
-		<ActiveBody
-			id="ModuleTag_02"
-			MaxHealth="100.0" />
-	</Body>
-	<Geometry
-		IsSmall="false">
-		<Shape
-			Type="CYLINDER"
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_02"
+				MaxHealth="100.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="CYLINDER"
 				MajorRadius="27.0"
 				Height="20.0"></Shape>
 		</Geometry>
 		<VisionInfo
 			VisionRange="0" />
 		<ProjectedBuildabilityInfo
-					Radius="25.0"
-					BuildPlacementTypes="TIBERIUM_FIELD"
-					StatusToReject="HAS_TIBERIUM_GROWTH_MOD"/>		
+			Radius="25.0"
+			BuildPlacementTypes="TIBERIUM_FIELD"
+			StatusToReject="HAS_TIBERIUM_GROWTH_MOD" />
 	</GameObject>
 </AssetDeclaration>
