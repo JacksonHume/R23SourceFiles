@@ -424,7 +424,7 @@
 			Include="STRUCTURE" />
 	</WeaponTemplate>
 
-	<!-- AP Ammo grants a 35% increase. -->
+	<!-- AP Ammo grants a 25% increase. -->
 	<WeaponTemplate
 		id="MARVRifleWeaponAPAmmo"
 		Name="MARVRifleWeaponAPAmmo"
@@ -433,7 +433,7 @@
 		FireFX="FX_GDIHammerheadChaingunAP"
 		FireVeteranFX="FX_GDIHammerheadChaingunAPHeroic"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		ReAcquireDetailType="PER_SHOT"
+		ReAcquireDetailType="PER_CLIP"
 		AntiMask="ANTI_GROUND"
 		CanFireWhileMoving="true"
 		ClipSize="2"
@@ -444,7 +444,7 @@
 			MaxSeconds="0.08s" />
 		<Nuggets>
 			<DamageNugget
-				Damage="47.0"
+				Damage="43.0"
 				Radius="0.0"
 				DelayTimeSeconds="0.0s"
 				DamageType="GUN"
@@ -465,7 +465,7 @@
 		FireFX="FX_GDIHammerheadChaingunAP"
 		FireVeteranFX="FX_GDIHammerheadChaingunAPHeroic"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		ReAcquireDetailType="PER_SHOT"
+		ReAcquireDetailType="PER_CLIP"
 		AntiMask="ANTI_GROUND"
 		CanFireWhileMoving="true"
 		ClipSize="2"

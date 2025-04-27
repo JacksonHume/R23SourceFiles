@@ -1836,12 +1836,12 @@
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
 		RequiredFiringObjectStatus="RIDERLESS">
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="1.15s" />
 		<FiringDuration
 			MinSeconds="1.11s"
 			MaxSeconds="1.26s" />
-		<ClipReloadTime
-			MinSeconds="1.0s"
-			MaxSeconds="1.15s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
@@ -1878,12 +1878,12 @@
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
 		RequiredFiringObjectStatus="RIDERLESS">
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="1.15s" />
 		<FiringDuration
 			MinSeconds="1.11s"
 			MaxSeconds="1.26s" />
-		<ClipReloadTime
-			MinSeconds="1.0s"
-			MaxSeconds="1.15s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
@@ -1920,12 +1920,12 @@
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
 		RequiredFiringObjectStatus="RIDERLESS">
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="1.15s" />
 		<FiringDuration
 			MinSeconds="1.11s"
 			MaxSeconds="1.26s" />
-		<ClipReloadTime
-			MinSeconds="1.0s"
-			MaxSeconds="1.15s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
@@ -1962,12 +1962,12 @@
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
 		RequiredFiringObjectStatus="RIDERLESS">
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="1.15s" />
 		<FiringDuration
 			MinSeconds="1.11s"
 			MaxSeconds="1.26s" />
-		<ClipReloadTime
-			MinSeconds="1.0s"
-			MaxSeconds="1.15s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
