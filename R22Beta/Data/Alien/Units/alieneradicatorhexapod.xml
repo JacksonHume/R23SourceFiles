@@ -211,8 +211,8 @@
 						WeaponSlotID="13"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_AUPLASMAGUN_LR" />
-						
-						
+
+
 					<WeaponFireFXBone
 						WeaponSlotID="14"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -237,9 +237,9 @@
 						WeaponSlotID="19"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_AUSTALK_LR" />
-					
+
 					<!-- blue shard -->
-					
+
 					<WeaponFireFXBone
 						WeaponSlotID="20"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -264,10 +264,10 @@
 						WeaponSlotID="25"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_AUSTALK_LR" />
-					
+
 					<!-- -->
-						
-						
+
+
 					<WeaponLaunchBone
 						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -320,7 +320,7 @@
 						WeaponSlotID="13"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_AUPLASMAGUN_LR" />
-						
+
 					<WeaponLaunchBone
 						WeaponSlotID="14"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -345,9 +345,9 @@
 						WeaponSlotID="19"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_AUSTALK_LR" />
-						
+
 					<!-- blue shard -->
-					
+
 					<WeaponLaunchBone
 						WeaponSlotID="20"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -372,9 +372,9 @@
 						WeaponSlotID="25"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FX_AUSTALK_LR" />
-					
+
 					<!-- -->
-					
+
 					<Turret
 						TurretNameKey="B_TurretA"
 						TurretArtAngle="0d"
@@ -392,7 +392,7 @@
 						TurretArtAngle="0d"
 						TurretPitch="B_PitchC1"
 						TurretArtPitch="0d"
-						TurretID="3" />
+						TurretID="3" /> 
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -418,9 +418,9 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
-				
+
 				<!-- blue shard -->
-				
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING USER_3"
@@ -438,7 +438,7 @@
 						New="AUEradHex2BT_D" />
 					<Texture
 						Original="AUEradHex2_SPM"
-						New="AUEradHex2_D_SPM" />	
+						New="AUEradHex2_D_SPM" />
 					<ParticleSysBone
 						BoneName="FX_R08"
 						FXParticleSystemTemplate="AlienCorrupterAmbientCloud"
@@ -548,7 +548,7 @@
 						New="AUEradHex2BT_D" />
 					<Texture
 						Original="AUEradHex2_SPM"
-						New="AUEradHex2_D_SPM" />	
+						New="AUEradHex2_D_SPM" />
 					<ParticleSysBone
 						BoneName="FX_R08"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -588,7 +588,7 @@
 						New="AUEradHex2BT_D" />
 					<Texture
 						Original="AUEradHex2_SPM"
-						New="AUEradHex2_D_SPM" />	
+						New="AUEradHex2_D_SPM" />
 					<ParticleSysBone
 						BoneName="FX_R08"
 						FXParticleSystemTemplate="AlienCorrupterAmbientCloud"
@@ -660,10 +660,10 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
-				
+
 				<!-- end of blue shard -->
-				
-				
+
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING USER_6"
@@ -681,7 +681,7 @@
 						New="AUEradHex2_D" />
 					<Texture
 						Original="AUEradHex2_SPM"
-						New="AUEradHex2_D_SPM" />	
+						New="AUEradHex2_D_SPM" />
 					<ParticleSysBone
 						BoneName="FX_R08"
 						FXParticleSystemTemplate="AlienCorrupterAmbientCloud"
@@ -791,7 +791,7 @@
 						New="AUEradHex2_D" />
 					<Texture
 						Original="AUEradHex2_SPM"
-						New="AUEradHex2_D_SPM" />	
+						New="AUEradHex2_D_SPM" />
 					<ParticleSysBone
 						BoneName="FX_R08"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -831,7 +831,7 @@
 						New="AUEradHex2_D" />
 					<Texture
 						Original="AUEradHex2_SPM"
-						New="AUEradHex2_D_SPM" />	
+						New="AUEradHex2_D_SPM" />
 					<ParticleSysBone
 						BoneName="FX_R08"
 						FXParticleSystemTemplate="AlienCorrupterAmbientCloud"
@@ -920,7 +920,7 @@
 						New="AUEradHex2_D" />
 					<Texture
 						Original="AUEradHex2_SPM"
-						New="AUEradHex2_D_SPM" />	
+						New="AUEradHex2_D_SPM" />
 					<ParticleSysBone
 						BoneName="FX_R08"
 						FXParticleSystemTemplate="AlienCorrupterAmbientCloud"
@@ -1034,10 +1034,10 @@
 						New="AUEradHex_D" />
 					<Texture
 						Original="AUEradHex2"
-						New="AUEradHex2_D" /> 
+						New="AUEradHex2_D" />
 					<Texture
 						Original="AUEradHex2_SPM"
-						New="AUEradHex2_D_SPM" />	
+						New="AUEradHex2_D_SPM" />
 					<ParticleSysBone
 						BoneName="FX_R08"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -1077,7 +1077,7 @@
 						New="AUEradHex2_D" />
 					<Texture
 						Original="AUEradHex2_SPM"
-						New="AUEradHex2_D_SPM" />	
+						New="AUEradHex2_D_SPM" />
 					<ParticleSysBone
 						BoneName="FX_R08"
 						FXParticleSystemTemplate="AlienCorrupterAmbientCloud"
@@ -1149,7 +1149,7 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
-				
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_3"
@@ -1163,7 +1163,7 @@
 						Original="AUEradHex2"
 						New="AUEradHex2BT" />
 				</ModelConditionState>
-				
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_6"
@@ -1179,1743 +1179,703 @@
 				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FORMATION_PREVIEW"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False" />
+					ConditionsYes="FORMATION_PREVIEW">
+					<!-- no anim -->
+
+				</AnimationState>
+
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
-					StateName="STATE_bored"
 					Flags="RESTART_ANIM_WHEN_COMPLETE"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					StateName="STATE_bored">
 					<Animation
-						AnimationName="AUERADHEX_BIDZ"
+						AnimationName="AUEradHex_BIDZ"
 						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="5"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationPriority="5" />
 					<Animation
-						AnimationName="AUERADHEX_BIDB"
+						AnimationName="AUEradHex_BIDB"
 						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="3"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationPriority="3" />
 					<Animation
-						AnimationName="AUERADHEX_BIDC"
+						AnimationName="AUEradHex_BIDC"
 						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="2"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationPriority="2" />
 					<Script>
 						Prev = CurDrawablePrevAnimationState();
-						if Prev == "STATE_Selected" or Prev == "ATNB" or Prev == "STATE_moving" then CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle") end;
+						if Prev == "STATE_Selected" or Prev == "ATNB" or Prev == "STATE_moving" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle") end;
 					</Script>
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_DIEA"
-						AnimationMode="ONCE"
-						AnimNickName="DIEA"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="50"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Animation
-						AnimationName="AUERADHEX_DIEA"
-						AnimationMode="ONCE"
-						AnimNickName="DIEB"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="50"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<FXEvent
-						Frame="6"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienTripodFP"
-						Bone="B_FRONTRIGHT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="39"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="B_FRONTRIGHT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="23"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="B_FRONTLEFT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="55"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="B_FRONTLEFT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="12"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="B_BACK"
-						FireWhenSkipped="True" />
+					ConditionsYes="DYING">
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
+					<Animation
+						AnimNickName="DIEA"
+						AnimationName="AUEradHex_DIEA"
+						AnimationMode="ONCE"
+						AnimationPriority="50" />
+					<Animation
+						AnimNickName="DIEB"
+						AnimationName="AUEradHex_DIEA"
+						AnimationMode="ONCE"
+						AnimationPriority="50" />
+					<FXEvent
+						Frame="6"
+						FireWhenSkipped="true"
+						Effect="FX_AlienTripodFP"
+						Bone="B_FRONTRIGHT" />
+					<FXEvent
+						Frame="39"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="B_FRONTRIGHT" />
+					<FXEvent
+						Frame="23"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="B_FRONTLEFT" />
+					<FXEvent
+						Frame="55"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="B_FRONTLEFT" />
+					<FXEvent
+						Frame="12"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="B_BACK" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="AFFECTED_BY_EMP"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					ConditionsYes="AFFECTED_BY_EMP">
 					<Animation
-						AnimationName="AUERADHEX_BIDZ"
+						AnimationName="AUEradHex_BIDZ"
 						AnimationMode="MANUAL"
-						Distance="0"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationBlendTime="15" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="COMING_OUT_OF_FACTORY"
-					StateName="STATE_built"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					StateName="STATE_built">
 					<Animation
-						AnimationName="AUERADHEX_BLDA"
-						AnimationMode="MANUAL"
-						Distance="0"
+						AnimationName="AUEradHex_BLDA"
 						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationMode="MANUAL" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_5"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_GTPA"
-						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FIRING_OR_PREATTACK_A"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_ATKA"
-						AnimationMode="LOOP"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<FXEvent
-						Frame="11"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="19"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="34"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="14"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="19"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="37"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="49"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="117"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="129"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="52"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="117"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="129"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="MOVING WEAPONSLOTID_01"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_WLKA"
-						AnimationMode="LOOP"
-						AnimNickName="WLKA"
-						Distance="70"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Animation
-						AnimationName="AUERADHEX_WLKB"
-						AnimationMode="LOOP"
-						AnimNickName="WLKB"
-						Distance="70"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Animation
-						AnimationName="AUERADHEX_WLKC"
-						AnimationMode="LOOP"
-						AnimNickName="WLKC"
-						Distance="70"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<FXEvent
-						Frame="32"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="49"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="50"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="27"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="32"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="49"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="50"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="27"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="MOVING WEAPONSLOTID_01"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_WLKA"
-						AnimationMode="LOOP"
-						AnimNickName="ATNB"
-						Distance="0"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="TURN_LEFT WEAPONSLOTID_01"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_TRNL"
-						AnimationMode="LOOP"
-						AnimNickName="ATNB"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<FXEvent
-						Frame="16"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="23"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="14"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="20"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="23"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="39"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="39"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="TURN_RIGHT WEAPONSLOTID_01"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_TRNR"
-						AnimationMode="LOOP"
-						AnimNickName="ATNB"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<FXEvent
-						Frame="11"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="20"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="23"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="16"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="23"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="14"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="39"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="39"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="44"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="WEAPONSLOTID_01"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_AIDA"
-						AnimationMode="LOOP"
-						AnimNickName="ATNB"
-						Distance="0"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</AnimationState>
+
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="TURN_LEFT_HIGH_SPEED"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					StateName="STATE_moving">
 					<Animation
-						AnimationName="AUERADHEX_WLKA"
-						AnimationMode="LOOP"
 						AnimNickName="WLKA"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Animation
-						AnimationName="AUERADHEX_WLKB"
+						AnimationName="AUEradHex_WLKA"
 						AnimationMode="LOOP"
+						Distance="60" />
+					<Animation
 						AnimNickName="WLKB"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Animation
-						AnimationName="AUERADHEX_WLKC"
+						AnimationName="AUEradHex_WLKB"
 						AnimationMode="LOOP"
+						Distance="60" />
+					<Animation
 						AnimNickName="WLKC"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<FXEvent
-						Frame="25"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="21"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="30"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="30"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="22"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="16"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="55"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="51"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="60"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="60"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="52"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="46"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
+						AnimationName="AUEradHex_WLKC"
+						AnimationMode="LOOP"
+						Distance="60" />
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
+					<FXEvent
+						Frame="25"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+					<FXEvent
+						Frame="21"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTMID" />
+					<FXEvent
+						Frame="30"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="30"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="22"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
+					<FXEvent
+						Frame="16"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
+					<FXEvent
+						Frame="55"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+					<FXEvent
+						Frame="51"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTMID" />
+					<FXEvent
+						Frame="60"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="60"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="52"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
+					<FXEvent
+						Frame="46"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="TURN_RIGHT_HIGH_SPEED"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_WLKA"
-						AnimationMode="LOOP"
-						AnimNickName="WLKA"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Animation
-						AnimationName="AUERADHEX_WLKB"
-						AnimationMode="LOOP"
-						AnimNickName="WLKB"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Animation
-						AnimationName="AUERADHEX_WLKC"
-						AnimationMode="LOOP"
-						AnimNickName="WLKC"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<FXEvent
-						Frame="25"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="21"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="30"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="30"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="22"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="16"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="55"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="51"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="60"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="60"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="52"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="46"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
+					StateName="STATE_moving">
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
+					<Animation
+						AnimNickName="WLKA"
+						AnimationName="AUEradHex_WLKA"
+						AnimationMode="LOOP"
+						Distance="60" />
+					<Animation
+						AnimNickName="WLKB"
+						AnimationName="AUEradHex_WLKB"
+						AnimationMode="LOOP"
+						Distance="60" />
+					<Animation
+						AnimNickName="WLKC"
+						AnimationName="AUEradHex_WLKC"
+						AnimationMode="LOOP"
+						Distance="60" />
+					<FXEvent
+						Frame="25"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+					<FXEvent
+						Frame="21"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTMID" />
+					<FXEvent
+						Frame="30"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="30"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="22"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
+					<FXEvent
+						Frame="16"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
+					<FXEvent
+						Frame="55"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+					<FXEvent
+						Frame="51"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTMID" />
+					<FXEvent
+						Frame="60"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="60"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="52"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
+					<FXEvent
+						Frame="46"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="TURN_LEFT"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_TRNL"
-						AnimationMode="LOOP"
-						AnimNickName="ATNB"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<FXEvent
-						Frame="16"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="23"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="14"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="20"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="23"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="39"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="39"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
+					StateName="STATE_moving">
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
+					<Animation
+						AnimNickName="ATNB"
+						AnimationName="AUEradHex_TRNL"
+						AnimationMode="LOOP"
+						Distance="60" />
+					<FXEvent
+						Frame="16"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+					<FXEvent
+						Frame="23"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTMID" />
+					<FXEvent
+						Frame="14"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="10"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="20"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
+					<FXEvent
+						Frame="23"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
+					<FXEvent
+						Frame="39"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+					<FXEvent
+						Frame="39"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTMID" />
+					<FXEvent
+						Frame="45"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="45"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="45"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="TURN_RIGHT"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_TRNR"
-						AnimationMode="LOOP"
-						AnimNickName="ATNB"
-						Distance="60"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<FXEvent
-						Frame="11"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="20"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="23"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="16"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="23"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="14"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="45"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="39"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="39"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
-					<FXEvent
-						Frame="44"
-						FrameStep="0"
-						FrameStop="0"
-						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
+					StateName="STATE_moving">
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
+					<Animation
+						AnimNickName="ATNB"
+						AnimationName="AUEradHex_TRNR"
+						AnimationMode="LOOP"
+						Distance="60" />
+					<FXEvent
+						Frame="11"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+					<FXEvent
+						Frame="20"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTMID" />
+					<FXEvent
+						Frame="23"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="16"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="23"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
+					<FXEvent
+						Frame="14"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
+					<FXEvent
+						Frame="45"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+
+					<FXEvent
+						Frame="45"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="39"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="39"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
+					<FXEvent
+						Frame="44"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="MOVING"
-					StateName="STATE_moving"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					StateName="STATE_moving">
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TreadDust_Light"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TreadDirt_Light"
+						FollowBone="true" />
 					<Animation
-						AnimationName="AUERADHEX_WLKA"
-						AnimationMode="LOOP"
 						AnimNickName="WLKA"
-						Distance="70"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Animation
-						AnimationName="AUERADHEX_WLKB"
+						AnimationName="AUEradHex_WLKA"
 						AnimationMode="LOOP"
+						Distance="70" />
+					<Animation
 						AnimNickName="WLKB"
-						Distance="70"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Animation
-						AnimationName="AUERADHEX_WLKC"
+						AnimationName="AUEradHex_WLKB"
 						AnimationMode="LOOP"
+						Distance="70" />
+					<Animation
 						AnimNickName="WLKC"
-						Distance="70"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationName="AUEradHex_WLKC"
+						AnimationMode="LOOP"
+						Distance="70" />
+					<FXEvent
+						Frame="32"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+					<FXEvent
+						Frame="10"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTMID" />
+					<FXEvent
+						Frame="48"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="10"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="50"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
+					<FXEvent
+						Frame="27"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
+					<FXEvent
+						Frame="32"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
+					<FXEvent
+						Frame="10"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTMID" />
+					<FXEvent
+						Frame="48"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_LEFTREAR" />
+					<FXEvent
+						Frame="10"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
+					<FXEvent
+						Frame="50"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTMID" />
+					<FXEvent
+						Frame="27"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
 					<Script>
 						Prev = CurDrawablePrevAnimationState()
 						if Prev == "STATE_built" then
 						CurDrawableSetTransitionAnimState("TRANS_built")
 						end
 					</Script>
+				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WEAPONSLOTID_01">
+					<Animation
+						AnimationName="AUEradHex_ATKA"
+						AnimationMode="ONCE" />
 					<FXEvent
-						Frame="32"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="11"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
 					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="19"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_LEFTMID" />
 					<FXEvent
-						Frame="48"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="34"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_LEFTREAR" />
 					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="14"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
 					<FXEvent
-						Frame="50"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="19"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_RIGHTMID" />
 					<FXEvent
-						Frame="27"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="37"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
 					<FXEvent
-						Frame="32"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="49"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
 					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="117"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_LEFTMID" />
 					<FXEvent
-						Frame="48"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="129"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_LEFTREAR" />
 					<FXEvent
-						Frame="10"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="52"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
 					<FXEvent
-						Frame="50"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="117"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_RIGHTMID" />
 					<FXEvent
-						Frame="27"
-						FrameStep="0"
-						FrameStop="0"
+						Frame="129"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ATTACKING"
+					StateName="STATE_moving">
+					<Animation
+						AnimationName="AUEradHex_ATKA"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="15" />
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDust_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
 					<ParticleSysBone
 						BoneName="NONE"
 						FXParticleSystemTemplate="TreadDirt_Light"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
 				</AnimationState>
+
+				<!-- SELECTED -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="SELECTED"
-					StateName="STATE_Selected"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					StateName="STATE_Selected">
 					<Animation
-						AnimationName="AUERADHEX_AIDA"
-						AnimationMode="LOOP"
 						AnimNickName="ATNB"
-						Distance="0"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationName="AUEradHex_AIDA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
 					<Script>
 						Prev = CurDrawablePrevAnimationState();
-							if Prev == "STATE_bored" then CurDrawableSetTransitionAnimState("TRANS_IdleToSelected") end;
+						if Prev == "STATE_bored" then
+						CurDrawableSetTransitionAnimState("TRANS_IdleToSelected") end;
 					</Script>
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_2"
-					StateName="STATE_Selected"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="AUERADHEX_AIDA"
-						AnimationMode="LOOP"
-						AnimNickName="ATNB"
-						Distance="0"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Script>
-						Prev = CurDrawablePrevAnimationState();
-							if Prev == "STATE_bored" then CurDrawableSetTransitionAnimState("TRANS_IdleToSelected") end;
-					</Script>
-				</AnimationState>
+				<!-- TRANSITIONS -->
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
-					StateName="TRANS_boredToAttention"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					StateName="TRANS_boredToAttention">
 					<Animation
-						AnimationName="AUERADHEX_BATA"
-						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationName="AUEradHex_BATA"
+						AnimationMode="ONCE" />
 					<FXEvent
 						Frame="30"
-						FrameStep="0"
-						FrameStop="0"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTFRONT"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_LEFTFRONT" />
 					<FXEvent
 						Frame="16"
-						FrameStep="0"
-						FrameStop="0"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTMID"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_LEFTMID" />
 					<FXEvent
 						Frame="30"
-						FrameStep="0"
-						FrameStop="0"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_LEFTREAR"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_LEFTREAR" />
 					<FXEvent
 						Frame="30"
-						FrameStep="0"
-						FrameStop="0"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTFRONT"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_RIGHTFRONT" />
 					<FXEvent
 						Frame="16"
-						FrameStep="0"
-						FrameStop="0"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTMID"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_RIGHTMID" />
 					<FXEvent
 						Frame="30"
-						FrameStep="0"
-						FrameStop="0"
+						FireWhenSkipped="true"
 						Effect="FX_AlienEradicatorFP"
-						Bone="FX_FOOTPRINT_RIGHTREAR"
-						FireWhenSkipped="True" />
+						Bone="FX_FOOTPRINT_RIGHTREAR" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
 					StateName="TRANS_attentionToBored"
-					Flags="START_FRAME_LAST"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					Flags="START_FRAME_LAST">
 					<Animation
-						AnimationName="AUERADHEX_BATA"
-						AnimationMode="ONCE_BACKWARDS"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationName="AUEradHex_BATA"
+						AnimationMode="ONCE_BACKWARDS" />
+					<!--						
+					<FXEvent
+						Frame="49"
+						FireWhenSkipped="true"
+						Effect="FX_AlienTripodFP"
+						Bone="B_FRONTRIGHT" />
+					<FXEvent
+						Frame="23"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="B_FRONTLEFT" />
+					<FXEvent
+						Frame="73"
+						FireWhenSkipped="true"
+						Effect="FX_AlienEradicatorFP"
+						Bone="B_BACK" />
+-->
 				</AnimationState>
+				<!-- TRANSITIONS -->
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
-					StateName="TRANS_built"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					StateName="TRANS_built">
 					<Animation
-						AnimationName="AUERADHEX_BLDA"
-						AnimationMode="ONCE"
-						Distance="0"
+						AnimationName="AUEradHex_BLDA"
 						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationMode="ONCE"></Animation>
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
-					StateName="TRANS_IdleToSelected"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					StateName="TRANS_IdleToSelected">
 					<Animation
-						AnimationName="AUERADHEX_BATA"
-						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationName="AUEradHex_BATA"
+						AnimationMode="ONCE" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
 					StateName="TRANS_SelectedToIdle"
-					Flags="START_FRAME_LAST"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					Flags="START_FRAME_LAST">
 					<Animation
-						AnimationName="AUERADHEX_BATA"
-						AnimationMode="ONCE_BACKWARDS"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationName="AUEradHex_BATA"
+						AnimationMode="ONCE_BACKWARDS" />
 				</AnimationState>
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
@@ -3676,9 +2636,9 @@
 				<ObjectStatusValidation
 					RequiredStatus="WEAPON_UPGRADED_02" />
 			</LaserDraw>
-			
+
 			<!-- end of laser draws -->
-			
+
 			<ScriptedModelDraw
 				id="D01B969B"
 				InitialRecoilSpeed="2"
@@ -3748,6 +2708,7 @@
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
 			</ScriptedModelDraw>
+			<!--
 			<ScriptedModelDraw
 				id="E100F908"
 				InitialRecoilSpeed="2"
@@ -3806,6 +2767,7 @@
 						ExtraMesh="False" />
 				</ModelConditionState>
 			</ScriptedModelDraw>
+		-->
 		</Draws>
 		<Behaviors>
 			<AttributeModifierPoolUpdate
@@ -3903,7 +2865,7 @@
 
 			<AttributeModifierUpgrade
 				id="ModuleTag_AttributeModifierUpgrade_CooldownSpeed2"
-				AttributeModifier="AttributeModifierUpgrade_CooldownSpeed">			
+				AttributeModifier="AttributeModifierUpgrade_CooldownSpeed">
 				<TriggeredBy>Upgrade_EradicatorTeleportMiddle</TriggeredBy>
 			</AttributeModifierUpgrade>
 
@@ -3989,43 +2951,23 @@
 				id="720F4A50">
 				<WeaponSlotTurret
 					ID="1"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_RANDOM">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="AlienEradicatorPlasmaDiskBatteryG"
-						Upgrade=""
-						ObjectStatus=""
-						IsPlayerUpgradePermanent="False" />
+						Template="AlienEradicatorPlasmaDiskBatteryG" />
 					<TurretSettings
 						TurretTurnRate="100"
 						TurretPitchRate="25"
+						AllowsPitch="true"
 						MinimumPitch="-85d"
 						PitchHeight="50%"
-						ControlledWeaponSlots=""
-						MinIdleScanTime="1s"
-						MaxIdleScanTime="5s"
-						MinIdleScanAngle="0"
-						MaxIdleScanAngle="45"
-						MaxDeflectionClockwise="180d"
-						MaxDeflectionAntiClockwise="180d"
-						NaturalTurretAngle="0d"
-						AllowsPitch="True"
-						RecenterWhenOutOfTurnRange="True">
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="45.0">
 						<TurretAITargetChooserData
-							IdleScanDelay="0.8s"
-							ReacquireDelay="5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="False"
-							CanAcquireDynamicIfAssignedOutOfRange="True"
-							CanPickTargetsOutOfTurretAngle="False" />
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
 					</TurretSettings>
 				</WeaponSlotTurret>
 				<WeaponSlotTurret
@@ -4275,7 +3217,7 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 				<!-- Razor Drones Plasma Laser -->
-			<!-- Right Side -->
+				<!-- Right Side -->
 				<WeaponSlotTurret
 					ID="8">
 					<Weapon
@@ -4294,7 +3236,7 @@
 						MaxIdleScanAngle="180.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>						
+					</TurretSettings>
 				</WeaponSlotTurret>
 				<WeaponSlotTurret
 					ID="9">
@@ -4314,7 +3256,7 @@
 						MaxIdleScanAngle="180.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>						
+					</TurretSettings>
 				</WeaponSlotTurret>
 				<WeaponSlotTurret
 					ID="10">
@@ -4334,9 +3276,9 @@
 						MaxIdleScanAngle="180.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>						
+					</TurretSettings>
 				</WeaponSlotTurret>
-			<!-- Left Side -->
+				<!-- Left Side -->
 				<WeaponSlotTurret
 					ID="11">
 					<Weapon
@@ -4355,7 +3297,7 @@
 						MaxIdleScanAngle="180.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>						
+					</TurretSettings>
 				</WeaponSlotTurret>
 				<WeaponSlotTurret
 					ID="12">
@@ -4375,7 +3317,7 @@
 						MaxIdleScanAngle="180.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>						
+					</TurretSettings>
 				</WeaponSlotTurret>
 				<WeaponSlotTurret
 					ID="13">
@@ -4395,7 +3337,7 @@
 						MaxIdleScanAngle="180.0">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>						
+					</TurretSettings>
 				</WeaponSlotTurret>
 				<WeaponSlotTurret
 					ID="14"
@@ -4643,9 +3585,9 @@
 							CanPickTargetsOutOfTurretAngle="False" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				
+
 				<!-- blue shard segments -->
-				
+
 				<WeaponSlotTurret
 					ID="20"
 					InterleavedStyle="INTERLEAVE_RANDOM"
@@ -4892,12 +3834,11 @@
 							CanPickTargetsOutOfTurretAngle="False" />
 					</TurretSettings>
 				</WeaponSlotTurret>
-				
-				
+
+
 				<!-- end of blue shard segments -->
-				
-				
-				
+
+
 			</WeaponSetUpdate>
 			<SlaughterHordeContain
 				id="9DC593B0"
@@ -5356,20 +4297,20 @@
 				UnHideSubObjectsOnRemove="False">
 				<TriggeredBy>Upgrade_EradicatorTeleportRear</TriggeredBy>
 			</SubObjectsUpgrade>
-			
+
 			<StatusBitsUpgrade
 				id="ModuleTag_VeterancyUpgrade"
 				StatusToSet="WEAPON_UPGRADED_02">
 				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
-			</StatusBitsUpgrade>	
-			
+			</StatusBitsUpgrade>
+
 			<!-- blue shard -->
-			
+
 			<StatusBitsUpgrade
 				id="ModuleTag_UpgradeBlueShardWeapon"
 				StatusToSet="WEAPON_UPGRADED_01">
 				<TriggeredBy>Upgrade_AlienBlueShardWeapon</TriggeredBy>
-			</StatusBitsUpgrade> 
+			</StatusBitsUpgrade>
 			<!--
 			<ModelConditionUpgrade
 				id="ModuleTag_BlackHandNormalFlameUpgrade"
@@ -5381,10 +4322,10 @@
 				AddConditionFlags="USER_3">
 				<TriggeredBy>Upgrade_AlienBlueShardWeapon</TriggeredBy>
 			</ModelConditionUpgrade>
-			
+
 			<!-- end of blue shard -->
-			
-			
+
+
 			<Physics
 				id="6D41764B"
 				MaxXRotationVelocity="360"
@@ -5525,7 +4466,8 @@
 				TempConditionTime="0s">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
-			<AudioLoopUpgrade id="BlueShardUpgrade" SoundToPlay="AudioEvent:ALI_Stalker_BlueShardUpgrade">
+			<AudioLoopUpgrade id="BlueShardUpgrade"
+				SoundToPlay="AudioEvent:ALI_Stalker_BlueShardUpgrade">
 				<TriggeredBy>Upgrade_AlienBlueShardWeapon</TriggeredBy>
 			</AudioLoopUpgrade>
 			<SalvagerInfo
@@ -6047,8 +4989,8 @@
 			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
 			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
-			EvaEventSecondDamageFarFromFirstScanRange="600"    
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
 			EvaEventAmbushed="UnitAmbushed"
 			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
 			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"

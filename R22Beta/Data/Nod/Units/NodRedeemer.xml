@@ -1203,7 +1203,7 @@
 						AnimationMode="ONCE"
 						AnimationBlendTime="15" />
 				</AnimationState>
-				<!--
+			
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="ATTACKING"
@@ -1212,7 +1212,7 @@
 						AnimationName="NURedeemer_ATKA2"
 						AnimationMode="MANUAL" />
 				</AnimationState>
-				-->
+			
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="SELECTED"
