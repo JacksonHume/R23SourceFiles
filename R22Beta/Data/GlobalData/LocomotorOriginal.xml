@@ -460,7 +460,7 @@
 		ForwardAccelerationPitchFactor="0.0"
 		LateralAccelerationRollFactor="0.0"
 		CanMoveBackward="false"
-		ClampOrientationToPathTangent="false"
+		ClampOrientationToPathTangent="true"
 		ReorientIfTurnTooSharp="true"
 		/>
 

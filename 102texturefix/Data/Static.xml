@@ -4,6 +4,7 @@
 		 <Include type="reference" source="Global.xml" />
 		<!-- <Include type="all" source="ART:Models/NUMECHH_SKN.FLAMETANK.w3x" /> -->
 		<!-- R21 -->
+		<Include type="all" source="ART:Models/EXDISK_G.MUZZLEFLASHA02.w3x" />
 		<Include type="all" source="ART:Models/FXSPOTLIGHT.w3x" />
 		<Include type="all" source="ART:Models/FXASPOTLIGHT.w3x" />
 		<Include type="all" source="ART:Models/FXSHLDCARRIER.DIFFUSE.w3x" />
@@ -231,7 +232,7 @@
 		<Include type="all" source="ART:Models/NBDHub_QS_D2_SKN.w3x" />
 		<Include type="all" source="ART:Models/NBDHub_QS_D2_AAN.w3x" /> -->
 	    <Include type="all" source="MPSettings.xml" />
-		<Include type="all" source="GlobalData/FXParticleSystem.xml" /> <!-- alt rocket trails -->
+		<!--<Include type="all" source="GlobalData/FXParticleSystem.xml" />  alt rocket trails -->
  	</Includes>
 	<!-- R22 -->
 	<Texture id="PackedImages_025" File="ART:Textures/PackedImages_025.dds" />

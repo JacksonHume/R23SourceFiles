@@ -1051,7 +1051,7 @@
 		RollDamping="0.3"
 		ForwardAccelerationPitchFactor="0.0"
 		LateralAccelerationRollFactor="0.0"
-		ClampOrientationToPathTangent="false"
+		ClampOrientationToPathTangent="true"
 		ReorientIfTurnTooSharp="true"
 		BrakeBeforeReorienting="true"
 	/>					
