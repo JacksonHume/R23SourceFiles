@@ -1832,6 +1832,7 @@
 		FireFX="FX_RailGunFire"
 		FireVeteranFX="FX_RailGunFireHeroic"
 		ReAcquireDetailType="PER_CLIP"
+		PreAttackType="PER_SHOT"
 		DisableScatterForTargetsOnWall="true"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
@@ -1842,6 +1843,9 @@
 		<FiringDuration
 			MinSeconds="1.11s"
 			MaxSeconds="1.26s" />
+		<ClipReloadTime
+			MinSeconds="0.01s"
+			MaxSeconds="0.01s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
@@ -1874,6 +1878,7 @@
 		FireFX="FX_RailGunFire"
 		FireVeteranFX="FX_RailGunFireHeroic"
 		ReAcquireDetailType="PER_CLIP"
+		PreAttackType="PER_SHOT"
 		DisableScatterForTargetsOnWall="true"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
@@ -1884,6 +1889,9 @@
 		<FiringDuration
 			MinSeconds="1.11s"
 			MaxSeconds="1.26s" />
+		<ClipReloadTime
+			MinSeconds="0.01s"
+			MaxSeconds="0.01s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
@@ -1916,6 +1924,7 @@
 		FireFX="FX_RailGunFire"
 		FireVeteranFX="FX_RailGunFireHeroic"
 		ReAcquireDetailType="PER_CLIP"
+		PreAttackType="PER_SHOT"
 		DisableScatterForTargetsOnWall="true"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
@@ -1926,6 +1935,9 @@
 		<FiringDuration
 			MinSeconds="1.11s"
 			MaxSeconds="1.26s" />
+		<ClipReloadTime
+			MinSeconds="0.01s"
+			MaxSeconds="0.01s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
@@ -1958,6 +1970,7 @@
 		FireFX="FX_RailGunFire"
 		FireVeteranFX="FX_RailGunFireHeroic"
 		ReAcquireDetailType="PER_CLIP"
+		PreAttackType="PER_SHOT"
 		DisableScatterForTargetsOnWall="true"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		AntiMask="ANTI_GROUND"
@@ -1968,6 +1981,9 @@
 		<FiringDuration
 			MinSeconds="1.11s"
 			MaxSeconds="1.26s" />
+		<ClipReloadTime
+			MinSeconds="0.01s"
+			MaxSeconds="0.01s" />
 		<Nuggets>
 			<ActivateLaserNugget
 				Lifetime="0.5s"
