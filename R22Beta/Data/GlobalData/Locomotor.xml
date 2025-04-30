@@ -316,7 +316,7 @@
 		MaxSpeedDamaged="75%"
 		BrakingSeconds="0.5s"
 		SlowTurnRadius="0.0" 
-		FastTurnRadius="15.0" 
+		FastTurnRadius="25.0" 
 		BehaviorZ="NO_MOTIVE_FORCE"	
 		Appearance="TREADS" 
 		
@@ -343,7 +343,7 @@
 		AccelerationSeconds="0.5s"
 		BrakingSeconds="0.5s"
 		SlowTurnRadius="0.0" 
-		FastTurnRadius="15.0" 
+		FastTurnRadius="25.0" 
 		BehaviorZ="NO_MOTIVE_FORCE"	
 		Appearance="TREADS" 
 	
@@ -370,7 +370,7 @@
 		AccelerationSeconds="0.5s"
 		BrakingSeconds="0.5s"
 		SlowTurnRadius="0.0" 
-		FastTurnRadius="15.0" 
+		FastTurnRadius="25.0" 
 		BehaviorZ="NO_MOTIVE_FORCE"	
 		Appearance="TREADS" 
 		UseTerrainSmoothing="true"
