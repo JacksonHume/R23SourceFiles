@@ -1150,28 +1150,27 @@
 				UpdateTime="1s"
 				MaxFrequency="0"
 				RandomizeTargetLocation="False" />
-				<!--
+			<!-- Nod Cloaking Field -->
 			<InvisibilityUpdate
-				id="54C3E34C"
-				Options="STARTS_ACTIVE"
-				UpdatePeriod="0.2s"
+				id="ModuleTag_Invisibility"
+				Options=""
+				UpdatePeriod="0.5s"
 				BroadcastRange="0"
-				OpacityMin="30%"
-				OpacityMax="100%">
+				OpacityMin="40%">
 				<InvisibilityNugget
-					ForbiddenConditions="REALLYDAMAGED UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
+					ForbiddenConditions="PACKING UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
 					ForbiddenConditionExceptions=""
 					ForbiddenWeaponSets=""
 					ForbiddenStatus=""
 					CamouflageLevel="0"
 					InvisibilityType="STEALTH"
 					Options=""
-					EnteringStealthFX="FX_NODStealthTransitionOn"
-					LeavingStealthFX="FX_NODStealthTransitionOff"
+					EnteringStealthFX=""
+					LeavingStealthFX=""
 					HintDetectableStates=""
 					NoStealthForAttackWindow="0s" />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
 			</InvisibilityUpdate>
-		-->
 			<Physics
 				id="E128C6A2"
 				MaxXRotationVelocity="360"

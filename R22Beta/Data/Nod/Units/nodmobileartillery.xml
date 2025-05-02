@@ -1156,7 +1156,7 @@
 				OpacityMin="30%"
 				OpacityMax="100%">
 				<InvisibilityNugget
-					ForbiddenConditions="REALLYDAMAGED UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
+					ForbiddenConditions="REALLYDAMAGED PACKING UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
 					ForbiddenConditionExceptions=""
 					ForbiddenWeaponSets=""
 					ForbiddenStatus=""
@@ -1167,6 +1167,28 @@
 					LeavingStealthFX="FX_NODStealthTransitionOff"
 					HintDetectableStates=""
 					NoStealthForAttackWindow="0s" />
+			</InvisibilityUpdate>
+
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				Options=""
+				UpdatePeriod="0.5s"
+				BroadcastRange="0"
+				OpacityMin="40%">
+				<InvisibilityNugget
+					ForbiddenConditions="PACKING UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
+					ForbiddenConditionExceptions=""
+					ForbiddenWeaponSets=""
+					ForbiddenStatus=""
+					CamouflageLevel="0"
+					InvisibilityType="STEALTH"
+					Options=""
+					EnteringStealthFX=""
+					LeavingStealthFX=""
+					HintDetectableStates=""
+					NoStealthForAttackWindow="0s" />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
 			</InvisibilityUpdate>
 			<Physics
 				id="E128C6A2"

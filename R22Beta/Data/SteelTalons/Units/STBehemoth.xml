@@ -1557,22 +1557,22 @@
 				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
 			</LevelUpUpgrade>
 			<InvisibilityUpdate
-				id="3BD7F2F5"
+				id="ModuleTag_Invisibility"
 				Options=""
 				UpdatePeriod="0.5s"
 				BroadcastRange="0"
 				OpacityMin="40%">
 				<InvisibilityNugget
-					ForbiddenConditions="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_A USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenConditions="PACKING UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
 					ForbiddenConditionExceptions=""
 					ForbiddenWeaponSets=""
-					ForbiddenStatus="IS_FIRING_WEAPON USING_ABILITY IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"
+					ForbiddenStatus=""
 					CamouflageLevel="0"
 					InvisibilityType="STEALTH"
 					Options=""
 					EnteringStealthFX=""
 					LeavingStealthFX=""
-					HintDetectableStates="IS_ATTACKING"
+					HintDetectableStates=""
 					NoStealthForAttackWindow="0s" />
 				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
 			</InvisibilityUpdate>

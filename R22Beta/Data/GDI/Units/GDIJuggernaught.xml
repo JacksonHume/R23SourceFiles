@@ -636,8 +636,22 @@
 			<!-- Nod Cloaking Field -->
 			<InvisibilityUpdate
 				id="ModuleTag_Invisibility"
-				UpdatePeriod="0.5s">
-				<InvisibilityNugget />
+				Options=""
+				UpdatePeriod="0.5s"
+				BroadcastRange="0"
+				OpacityMin="40%">
+				<InvisibilityNugget
+					ForbiddenConditions="PACKING UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
+					ForbiddenConditionExceptions=""
+					ForbiddenWeaponSets=""
+					ForbiddenStatus=""
+					CamouflageLevel="0"
+					InvisibilityType="STEALTH"
+					Options=""
+					EnteringStealthFX=""
+					LeavingStealthFX=""
+					HintDetectableStates=""
+					NoStealthForAttackWindow="0s" />
 				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
 			</InvisibilityUpdate>
 			<StealthUpgrade
