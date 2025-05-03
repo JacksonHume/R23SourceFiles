@@ -782,7 +782,7 @@
 					DeathTypes="CATALYST"
 					DeathTypesForbidden="" />
 			</FireWeaponWhenDead>
-			
+
 			<AutoHealBehavior
 				id="C07BF5C0"
 				RequiresAllTriggers="False"
@@ -1020,6 +1020,14 @@
 					HintDetectableStates="IS_ATTACKING"
 					NoStealthForAttackWindow="0s" />
 			</InvisibilityUpdate>
+
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
 			<SlowDeath
 				id="73542D4A"
 				SinkRate="1"
@@ -1112,46 +1120,46 @@
 				KillAfterMS="0">
 				<TriggeredBy>Upgrade_NODTechCenterTibCoreMissiles</TriggeredBy>
 			</AudioLoopUpgrade>
-		
+
 			<AttributeModifierAuraUpdate
-                id="ModuleTag_Collisions"
-                RequiresAllTriggers="False"
-                RequiresAllConflictingTriggers="False"
-                Permanent="False"
-                WaypointMode="False"
-                WaypointModeTerminal="True"
-                AttributeModifierName="AttributeModifier_RemoveCollisions"
-                RefreshDelay="0.50s"
-                Range="300"
-                RequiredConditions=""
-                AntiCategory=""
-                AntiFX=""
-                MaxActiveRank="0"
-                RequiredObjectStatusFlags="IS_ATTACKING"
-                TargetEnemy="False"
-                AllowPowerWhenAttacking="True"
-                InitiallyActive="True"
-                AffectGood="False"
-                AffectEvil="False"
-                RunWhileDead="False"
-                AllowSelf="True"
-                AffectContainedOnly="False"
-                AffectHordeMembersOnly="False">
-                <ObjectFilter
-                    Rule="ANY"
-                    Relationship="ALLIES"
-                    Alignment="NONE"
-                    Include=""
-                    Exclude=""
-                    StatusBitFlags=""
-                    RejectStatusBitFlags=""
-                    AcceptModelCondition=""
-                    RejectModelCondition="MOVING ATTACKING_POSITION">
+				id="ModuleTag_Collisions"
+				RequiresAllTriggers="False"
+				RequiresAllConflictingTriggers="False"
+				Permanent="False"
+				WaypointMode="False"
+				WaypointModeTerminal="True"
+				AttributeModifierName="AttributeModifier_RemoveCollisions"
+				RefreshDelay="0.50s"
+				Range="300"
+				RequiredConditions=""
+				AntiCategory=""
+				AntiFX=""
+				MaxActiveRank="0"
+				RequiredObjectStatusFlags="IS_ATTACKING"
+				TargetEnemy="False"
+				AllowPowerWhenAttacking="True"
+				InitiallyActive="True"
+				AffectGood="False"
+				AffectEvil="False"
+				RunWhileDead="False"
+				AllowSelf="True"
+				AffectContainedOnly="False"
+				AffectHordeMembersOnly="False">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="ALLIES"
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="MOVING ATTACKING_POSITION">
 					<IncludeThing>NODStealthTank</IncludeThing>
 					<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
 					<IncludeThing>BlackHandStealthTank</IncludeThing>
-				 </ObjectFilter>	
-            </AttributeModifierAuraUpdate>
+				</ObjectFilter>
+			</AttributeModifierAuraUpdate>
 		</Behaviors>
 		<AI>
 			<AIUpdate
@@ -1263,8 +1271,8 @@
 			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
 			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
-			EvaEventSecondDamageFarFromFirstScanRange="600"    
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
 			EvaEventAmbushed="UnitAmbushed"
 			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
 			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"

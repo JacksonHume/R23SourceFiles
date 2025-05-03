@@ -1009,6 +1009,14 @@
 					HintDetectableStates="IS_ATTACKING"
 					NoStealthForAttackWindow="0s" />
 			</InvisibilityUpdate>
+
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>	
 			<SlowDeath
 				id="73542D4A"
 				SinkRate="1"
