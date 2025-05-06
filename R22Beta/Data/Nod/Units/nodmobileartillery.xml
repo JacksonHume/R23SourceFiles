@@ -564,62 +564,23 @@
 				<LeftTread>"TreadsL"</LeftTread>
 				<RightTread>"TreadsR"</RightTread>
 			</TankDraw>
+			
 			<TankDraw
-				id="E2B3E27B"
+				id="ModuleTag_ArtilleryStealth"
+				OkToChangeModelColor="true"
+				InvertStealthOpacity="true"
 				InitialRecoilSpeed="2"
-				MaxRecoilDistance="5"
-				RecoilDamping="2"
+				MaxRecoilDistance="5.0"
+				RecoilDamping="2.0"
 				RecoilSettleSpeed="1"
-				MinLODRequired="LOW"
-				ProjectileBoneFeedbackEnabledSlots=""
-				TrackMarks=""
 				ExtraPublicBone="FXTracksL FXTracksR Bone_head"
-				DependencySharedModelFlags=""
-				HighDetailLODThreshold="0"
-				LowDetailLODThreshold="0"
-				WadingParticleSys=""
-				AlphaCameraFadeOuterRadius="0"
-				AlphaCameraFadeInnerRadius="0"
-				AlphaCameraAtInnerRadius="100%"
-				StaticSortLevelWhileFading="-1"
-				BirthFadeTime="0"
-				OkToChangeModelColor="True"
-				AnimationsRequirePower="True"
-				UseYAxisForTurretRotation="False"
-				TrackMarksOnlyWhenCorneringQuickly="False"
-				UseProducerTexture="False"
-				NoRotate="False"
-				UseFiringArcRotation="False"
-				Selectable="True"
-				RandomTextureFixedRandomIndex="False"
-				ParticlesAttachedToAnimatedBones="False"
-				ParticleBonesCheckDrawable="False"
-				ShadowForceDisable="False"
-				SwitchModelLODMode="False"
-				StaticModelLODMode="False"
-				ShowShadowWhileContained="False"
-				UseStandardModelNames="False"
-				UseDefaultAnimation="False"
-				BirthFadeAdditive="False"
-				ZWriteDisableOverride="False"
-				MultiPlayerOnly="False"
-				AffectedByStealth="True"
-				InvertStealthOpacity="True"
-				HighDetailOnly="False"
-				SetAnimsToLastFrameOnConstructionComplete="True"
 				TreadAnimationRate="0.15"
-				TreadPivotSpeedFraction="0.9"
 				TreadDriveSpeedFraction="0.25"
-				TreadDebrisRight=""
-				TreadDebrisLeft="">
+				TreadPivotSpeedFraction="0.9">
 				<ModelConditionState
-					ParseCondStateType="PARSE_DEFAULT"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
+					ParseCondStateType="PARSE_DEFAULT">
 					<Model
-						Name="W3DContainer:NUMORNSTARS_SKN"
-						ExtraMesh="False" />
+						Name="W3DContainer:NUMORNSTARS_SKN" />
 					<WeaponRecoilBone
 						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
@@ -629,49 +590,10 @@
 						TurretArtAngle="0d"
 						TurretArtPitch="0d"
 						TurretID="2" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="REALLYDAMAGED">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DAMAGED">
-					<Model
-						Name="W3DContainer:NUMORNSTARS_SKN"
-						ExtraMesh="False" />
-				</ModelConditionState>
+				</ModelConditionState>		
+
 				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="UNPACKING"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						AnimationName="NUMORNSTAR_ATKA"
-						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="2"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+					ParseCondStateType="PARSE_DEFAULT">
 					<Script>
 						CurDrawableShowSubObject("TREDS")
 						CurDrawableHideSubObject("TREDSSTOP")
@@ -679,103 +601,141 @@
 						CurDrawableHideSubObject("TREADSTURNLEFT")
 						CurDrawableHideSubObject("TREADSTURNRIGHT")
 					</Script>
+				</AnimationState>	
+
+			 	<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT_HIGH_SPEED">
+					<Script>
+						CurDrawableHideSubObject("TREDS")
+						CurDrawableHideSubObject("TREDSSTOP")
+						CurDrawableHideSubObject("TREDSMOVE")
+						CurDrawableShowSubObject("TREADSTURNLEFT")
+						CurDrawableHideSubObject("TREADSTURNRIGHT")
+					</Script>
 				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED">
+					<Script>
+						CurDrawableHideSubObject("TREDS")
+						CurDrawableHideSubObject("TREDSSTOP")
+						CurDrawableHideSubObject("TREDSMOVE")
+						CurDrawableHideSubObject("TREADSTURNLEFT")
+						CurDrawableShowSubObject("TREADSTURNRIGHT")
+					</Script>
+				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT">
+					<Script>
+						CurDrawableHideSubObject("TREDS")
+						CurDrawableHideSubObject("TREDSSTOP")
+						CurDrawableHideSubObject("TREDSMOVE")
+						CurDrawableShowSubObject("TREADSTURNLEFT")
+						CurDrawableHideSubObject("TREADSTURNRIGHT")
+					</Script>
+				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT">
+					<Script>
+						CurDrawableHideSubObject("TREDS")
+						CurDrawableHideSubObject("TREDSSTOP")
+						CurDrawableHideSubObject("TREDSMOVE")
+						CurDrawableHideSubObject("TREADSTURNLEFT")
+						CurDrawableShowSubObject("TREADSTURNRIGHT")
+					</Script>
+				</AnimationState> 
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Script>
+						CurDrawableHideSubObject("TREDS")
+						CurDrawableHideSubObject("TREDSSTOP")
+						CurDrawableShowSubObject("TREDSMOVE")
+						CurDrawableHideSubObject("TREADSTURNLEFT")
+						CurDrawableHideSubObject("TREADSTURNRIGHT")
+					</Script>
+				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+				</AnimationState>	
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="UNPACKING">
+					<Animation
+						AnimationName="NUMornstar_ATKA"
+						AnimationMode="ONCE" 
+						WeaponTimingSlotID="2"
+						AnimationBlendTime="15"/>
+					<Script>
+						CurDrawableShowSubObject("TREDS")
+						CurDrawableHideSubObject("TREDSSTOP")
+						CurDrawableHideSubObject("TREDSMOVE")
+						CurDrawableHideSubObject("TREADSTURNLEFT")
+						CurDrawableHideSubObject("TREADSTURNRIGHT")
+					</Script>						
+				</AnimationState>
+				
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PACKING"
-					Flags="START_FRAME_LAST"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					Flags="START_FRAME_LAST">
 					<Animation
-						AnimationName="NUMORNSTAR_ATKA"
+						AnimationName="NUMornstar_ATKA"
 						AnimationMode="ONCE_BACKWARDS"
-						Distance="0"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
 						WeaponTimingSlotID="2"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationBlendTime="15"/>
 					<Script>
 						CurDrawableShowSubObject("TREDS")
 						CurDrawableHideSubObject("TREDSSTOP")
 						CurDrawableHideSubObject("TREDSMOVE")
 						CurDrawableHideSubObject("TREADSTURNLEFT")
 						CurDrawableHideSubObject("TREADSTURNRIGHT")
-					</Script>
+					</Script>						
 				</AnimationState>
+												
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="SPECIAL_WEAPON_ONE"
-					Flags="START_FRAME_FIRST"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					Flags="START_FRAME_FIRST">
 					<Animation
-						AnimationName="NUMORNSTAR_FIRE"
-						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
+						AnimationName="NUMornstar_FIRE"
 						WeaponTimingSlotID="2"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationMode="ONCE" />
 					<Script>
 						CurDrawableShowSubObject("TREDS")
 						CurDrawableHideSubObject("TREDSSTOP")
 						CurDrawableHideSubObject("TREDSMOVE")
 						CurDrawableHideSubObject("TREADSTURNLEFT")
 						CurDrawableHideSubObject("TREADSTURNRIGHT")
-					</Script>
-				</AnimationState>
+					</Script>						
+				</AnimationState>				
+		
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DEPLOYED"
-					Flags="START_FRAME_FIRST"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					Flags="START_FRAME_FIRST">
 					<Animation
-						AnimationName="NUMORNSTAR_FIRE"
-						AnimationMode="ONCE"
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
+						AnimationName="NUMornstar_FIRE"
 						WeaponTimingSlotID="2"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
+						AnimationMode="ONCE" />
 					<Script>
 						CurDrawableShowSubObject("TREDS")
 						CurDrawableHideSubObject("TREDSSTOP")
 						CurDrawableHideSubObject("TREDSMOVE")
 						CurDrawableHideSubObject("TREADSTURNLEFT")
 						CurDrawableHideSubObject("TREADSTURNRIGHT")
-					</Script>
-				</AnimationState>
+					</Script>						
+				</AnimationState>		
 				<LeftTread>"TreadsL"</LeftTread>
 				<RightTread>"TreadsR"</RightTread>
 			</TankDraw>

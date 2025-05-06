@@ -23,7 +23,7 @@
 		BuildFadeInOnCreateTime="0"
 		EnergyProduction="0"
 		EnergyBonus="0"
-		CommandSet="NODBeamCannonCommandSet"
+		CommandSet="MarkedOfKaneBeamCannonCommandSet"
 		SelectPortrait="Portrait_NODBeamCannon"
 		ButtonImage="Portrait_NODBeamCannon"
 		VoicePriority="208"

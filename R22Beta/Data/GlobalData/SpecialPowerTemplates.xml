@@ -242,8 +242,7 @@
 			Relationship="ALLIES"
 			Rule="ALL" />
 		<GameDependency>
-			<ObjectFilter
-				Relationship="ALLIES">
+			<ObjectFilter>
 				<IncludeThing>NODShadowSquadBeacon</IncludeThing>
 			</ObjectFilter>
 		</GameDependency>
@@ -1192,14 +1191,15 @@
 			Relationship="ENEMIES NEUTRAL"
 			RejectModelCondition="USER_68"
 			Rule="ALL" />
+		
 		<GameDependency>
 			<ObjectFilter
-				Rule="ANY"
-				Relationship="ALLIES">
+				Rule="ANY">
 				<IncludeThing>NODVenom</IncludeThing>
-				<IncludeThing>MarkedOfKaneVenom</IncludeThing>
+				<IncludeThing>MarkedOfKaneVenom</IncludeThing>	
 			</ObjectFilter>
 		</GameDependency>
+
 	</SpecialPowerTemplate>
 	<SpecialPowerTemplate
 		id="SpecialPower_SonicRepulsionField"
@@ -2094,8 +2094,7 @@
 			Relationship="ALLIES"
 			Rule="ALL" />
 		<GameDependency>
-			<ObjectFilter
-				Relationship="ALLIES">
+			<ObjectFilter>
 				<IncludeThing>GDISniperSquad</IncludeThing>
 				<IncludeThing>ZOCOMSniperSquad</IncludeThing>
 			</ObjectFilter>
