@@ -106,7 +106,7 @@
 				<Mesh>NUREDEEMER_SKN.FTL</Mesh>
 			</RenderObject>
 		</SubObject>
-		<SubObject SubObjectID="FX_FTPILOTFLAMEL" BoneIndex="79">
+		<SubObject SubObjectID="FX_FTPILOTFLAMEL" BoneIndex="104">
 			<RenderObject>
 				<Mesh>NUREDEEMER_SKN.FX_FTPILOTFLAMEL</Mesh>
 			</RenderObject>
@@ -121,7 +121,7 @@
 				<Mesh>NUREDEEMER_SKN.FTR</Mesh>
 			</RenderObject>
 		</SubObject>
-		<SubObject SubObjectID="FX_FTPILOTFLAMER" BoneIndex="75">
+		<SubObject SubObjectID="FX_FTPILOTFLAMER" BoneIndex="103">
 			<RenderObject>
 				<Mesh>NUREDEEMER_SKN.FX_FTPILOTFLAMER</Mesh>
 			</RenderObject>
