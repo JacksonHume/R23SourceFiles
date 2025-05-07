@@ -2,6 +2,12 @@
 1.02+ R23 source files for reference. Assets may be used but credit would be appreciated.
 This cannot be compiled as a standalone mod as it does not contain all of the 1.02+ files, only the ones I have modified or added over the years.
 
+# R23a Changelog
+* The game should no longer exhibit frame drops whilst selecting Juggernauts, Specter Artillery or Beam Cannons, performance improved substantially compared to any version of Kane’s Wrath.
+* Juggernauts, really damaged Specters now stealth again with Disruption Towers, Vertigo Disruption Pods.
+* Stealth Tanks and Specter artillery can now be stealthed using the Cloaking Field support power (useful for when really damaged).
+* The maps Wicked Ways, Bluezone Rampage, Bordertown Showdown, Desolated Resistance and Sands of Time have been updated by DesolatorTrooper.
+
 # R23 Release Changelog
 
 ## General Changes
