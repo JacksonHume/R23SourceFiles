@@ -1161,7 +1161,7 @@
 				Active="True"
 				UsedForHealthBox="True" />
 			<Shape
-				Type="BOX"
+				Type="SPHERE"
 				ContactPointGeneration="NONE"
 				MajorRadius="0"
 				MinorRadius="0"
@@ -1175,7 +1175,7 @@
 					z="30.00001" />
 			</Shape>			
 			<Shape
-				Type="BOX"
+				Type="SPHERE"
 				ContactPointGeneration="NONE"
 				MajorRadius="0"
 				MinorRadius="0"
@@ -1189,7 +1189,7 @@
 					z="30.00001" />
 			</Shape>
 			<Shape
-				Type="BOX"
+				Type="SPHERE"
 				ContactPointGeneration="NONE"
 				MajorRadius="0"
 				MinorRadius="0"
@@ -1203,7 +1203,7 @@
 					z="30.00001" />
 			</Shape>
 			<Shape
-				Type="BOX"
+				Type="SPHERE"
 				ContactPointGeneration="NONE"
 				MajorRadius="0"
 				MinorRadius="0"
