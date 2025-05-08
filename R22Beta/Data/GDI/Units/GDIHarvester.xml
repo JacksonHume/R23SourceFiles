@@ -1161,7 +1161,7 @@
 				<Offset
 					x="0"
 					y="10"
-					z="15" />
+					z="15.00001" />
 			</Shape>			
 			<Shape
 				Type="BOX"
@@ -1175,7 +1175,7 @@
 				<Offset
 					x="0"
 					y="-10"
-					z="15" />
+					z="15.00001" />
 			</Shape>
 			<Shape
 				Type="BOX"
@@ -1189,7 +1189,7 @@
 				<Offset
 					x="-20"
 					y="0"
-					z="15" />
+					z="15.00001" />
 			</Shape>
 			<Shape
 				Type="BOX"
@@ -1203,7 +1203,7 @@
 				<Offset
 					x="20"
 					y="0"
-					z="15" />
+					z="15.00001" />
 			</Shape>
 		</Geometry>
 		<AudioArrayVoice>

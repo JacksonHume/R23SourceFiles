@@ -592,6 +592,26 @@
 						TurretID="2" />
 				</ModelConditionState>		
 
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="W3DContainer:NUMORNSTARS_SKN"
+						ExtraMesh="False" />
+				</ModelConditionState>
+
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT">
 					<Script>
