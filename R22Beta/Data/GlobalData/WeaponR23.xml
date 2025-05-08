@@ -75,7 +75,7 @@
 				CyclonicFactor="0.05"
 				FlipDirection="false"
 				RequiredObjectStatus="DEPLOYED"
-				ForbiddenTargetModelCondition="WEAPONSLOTID_04"
+				ForbiddenTargetModelCondition=""
 				ShockWaveZMult="0">
 				<SpecialObjectFilter
 					Rule="NONE"
@@ -95,6 +95,7 @@
 		id="GDIJuggernaughtArtilleryUndeployFix"
 		Name="GDIJuggernaughtArtilleryUndeployFix"
 		AttackRange="600.0"
+		MinimumAttackRange="100.0"
 		WeaponSpeed="500"
 		ClipSize="1"
 		RadiusDamageAffects="ALLIES SELF"
@@ -340,7 +341,7 @@
 		RadiusDamageAffects="ALLIES SELF"
 		CanFireWhileMoving="false"
 		CanFireWhileCharging="false"
-		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
+		ForbiddenFiringObjectStatus=""
 		ReAcquireDetailType="PER_SHOT"
 		FireFX=""
 		FireVeteranFX=""
@@ -360,7 +361,7 @@
 				CyclonicFactor="0.05"
 				FlipDirection="false"
 				RequiredObjectStatus="DEPLOYED"
-				ForbiddenTargetModelCondition="WEAPONSLOTID_02"
+				ForbiddenTargetModelCondition=""
 				ShockWaveZMult="0">
 				<SpecialObjectFilter
 					Rule="NONE"
