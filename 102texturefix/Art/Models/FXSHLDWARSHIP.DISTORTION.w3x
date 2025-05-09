@@ -2,8 +2,8 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<W3DMesh id="FXSHLDWARSHIP.DISTORTION" GeometryType="Normal">
 		<BoundingBox>
-			<Min X="-35.000000" Y="-18.000000" Z="-4.000000"/>
-			<Max X="35.000000" Y="18.000000" Z="4.000000"/>
+			<Min X="-42.083401" Y="-20.674086" Z="-12.350026"/>
+			<Max X="46.323372" Y="20.674055" Z="25.189768"/>
 		</BoundingBox>
 		<BoundingSphere Radius="00.000000">
 			<Center X="0.000000" Y="-0.000000" Z="0.000000"/>

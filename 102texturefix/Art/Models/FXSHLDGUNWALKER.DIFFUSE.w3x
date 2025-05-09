@@ -2,8 +2,8 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<W3DMesh id="FXSHLDGUNWALKER.DIFFUSE" GeometryType="Normal" SortLevel="1">
 		<BoundingBox>
-			<Min X="-20.000000" Y="-10.000000" Z="-5.000000"/>
-			<Max X="20.000000" Y="10.000000" Z="5.000000"/>
+			<Min X="-26.764128" Y="-28.143240" Z="-27.696671"/>
+			<Max X="31.004101" Y="28.143145" Z="36.651291"/>
 		</BoundingBox>
 		<BoundingSphere Radius="00.000000">
 			<Center X="0.000000" Y="-0.000000" Z="0.000000"/>

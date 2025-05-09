@@ -2,8 +2,8 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<W3DMesh id="FXSHLDTRIPOD.DIFFUSE" GeometryType="Normal" SortLevel="1">
 		<BoundingBox>
-			<Min X="-20.000000" Y="-20.000000" Z="-35.000000"/>
-			<Max X="20.000000" Y="20.000000" Z="35.000000"/>
+			<Min X="-37.071865" Y="-38.675919" Z="-68.141190"/>
+			<Max X="41.311840" Y="38.675835" Z="80.980904"/>
 		</BoundingBox>
 		<BoundingSphere Radius="00.000000">
 			<Center X="0.000000" Y="-0.000000" Z="0.000000"/>

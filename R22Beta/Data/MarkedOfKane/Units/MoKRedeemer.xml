@@ -117,7 +117,7 @@
 				MinLODRequired="LOW"
 				ProjectileBoneFeedbackEnabledSlots=""
 				TrackMarks=""
-				ExtraPublicBone="B_FTPITCHL B_FTPITCHR B_FTturretR FX_FTFireR FX_FTFireL B_FTturretL FX_HvyMGFlashR B_HvyMGturretR B_HvyMGturretR FX_HvyMGFlashL B_HvyMGturretL SecondaryWepBone04 SubSystemBone01 SubSystemBone02 SubSystemBone03"
+				ExtraPublicBone="B_FTPITCHL B_FTPITCHR B_FTturretR FX_FTFireR2 FX_FTFireL2 B_FTturretL FX_HvyMGFlashR B_HvyMGturretR B_HvyMGturretR FX_HvyMGFlashL B_HvyMGturretL SecondaryWepBone04 SubSystemBone01 SubSystemBone02 SubSystemBone03 FX_ROCKETPODR2 FX_ROCKETPODL2 B_ROCKETRPITCH B_ROCKETLPITCH B_ROCKETPODTURRETR B_ROCKETPODTURRETL"
 				DependencySharedModelFlags=""
 				HighDetailLODThreshold="0"
 				LowDetailLODThreshold="0"
@@ -157,7 +157,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN2"
+						Name="W3DContainer:NUREDEEMER_SKN3"
 						ExtraMesh="False" />
 					<!-- MACHINE GUN -->
 					<WeaponFireFXBone
@@ -188,36 +188,36 @@
 					<WeaponFireFXBone
 						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
+						BoneName="FX_FTFireR2" />
 					<WeaponFireFXBone
 						WeaponSlotID="3"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
+						BoneName="FX_FTFireL2" />
 					<WeaponLaunchBone
 						WeaponSlotID="2"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireR" />
+						BoneName="FX_FTFireR2" />
 					<WeaponLaunchBone
 						WeaponSlotID="3"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_FTFireL" />
+						BoneName="FX_FTFireL2" />
 					<!-- ROCKET LAUNCHER -->
 					<WeaponFireFXBone
 						WeaponSlotID="6"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_RocketPodR" />
+						BoneName="FX_RocketPodR2" />
 					<WeaponFireFXBone
 						WeaponSlotID="7"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_RocketPodL" />
+						BoneName="FX_RocketPodL2" />
 					<WeaponLaunchBone
 						WeaponSlotID="6"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_RocketPodR" />
+						BoneName="FX_RocketPodR2" />
 					<WeaponLaunchBone
 						WeaponSlotID="7"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_RocketPodL" />
+						BoneName="FX_RocketPodL2" />
 					<!-- MAIN LASERS -->
 					<WeaponFireFXBone
 						WeaponSlotID="1"
@@ -276,13 +276,13 @@
 					<Turret
 						TurretNameKey="B_RocketPodturretR"
 						TurretArtAngle="0d"
-						TurretPitch="B_ROCKETPODTURRETRPITCH"
+						TurretPitch="B_ROCKETRPITCH"
 						TurretArtPitch="0d"
 						TurretID="6" />
 					<Turret
 						TurretNameKey="B_RocketPodturretL"
 						TurretArtAngle="0d"
-						TurretPitch="B_ROCKETPODTURRETLPITCH"
+						TurretPitch="B_ROCKETLPITCH"
 						TurretArtPitch="0d"
 						TurretID="7" />
 				</ModelConditionState>
@@ -337,7 +337,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN2"
+						Name="W3DContainer:NUREDEEMER_SKN3"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer"
@@ -383,7 +383,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN2"
+						Name="W3DContainer:NUREDEEMER_SKN3"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer"
@@ -423,7 +423,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN2"
+						Name="W3DContainer:NUREDEEMER_SKN3"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer"
@@ -539,7 +539,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN2"
+						Name="W3DContainer:NUREDEEMER_SKN3"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer"
@@ -859,7 +859,7 @@
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_6">
 					<Model
-						Name="W3DContainer:NUREDEEMER_SKN2"
+						Name="W3DContainer:NUREDEEMER_SKN3"
 						ExtraMesh="False" />
 					<Texture
 						Original="NURedeemer3"
@@ -1212,7 +1212,7 @@
 						AnimationName="NURedeemer_ATKA2"
 						AnimationMode="MANUAL" />
 				</AnimationState>
-			
+				
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="SELECTED"
@@ -1275,7 +1275,7 @@
 				MinLODRequired="LOW"
 				ProjectileBoneFeedbackEnabledSlots=""
 				TrackMarks=""
-				AttachToBoneInAnotherModule="FX_FTFireL"
+				AttachToBoneInAnotherModule="FX_FTFireL2"
 				DependencySharedModelFlags=""
 				HighDetailLODThreshold="0"
 				LowDetailLODThreshold="0"
@@ -1417,7 +1417,7 @@
 				MinLODRequired="LOW"
 				ProjectileBoneFeedbackEnabledSlots=""
 				TrackMarks=""
-				AttachToBoneInAnotherModule="FX_FTFireR"
+				AttachToBoneInAnotherModule="FX_FTFireR2"
 				DependencySharedModelFlags=""
 				HighDetailLODThreshold="0"
 				LowDetailLODThreshold="0"
