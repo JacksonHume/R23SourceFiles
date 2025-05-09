@@ -1177,62 +1177,6 @@
 					y="0"
 					z="0" />
 			</Shape>
-			<Shape
-				Type="SPHERE"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="25.84"
-					y="0"
-					z="19.00001" />
-			</Shape>			
-			<Shape
-				Type="SPHERE"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="-24.16"
-					y="0"
-					z="19.00001" />
-			</Shape>
-			<Shape
-				Type="SPHERE"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="0"
-					y="-17"
-					z="19.00001" />
-			</Shape>
-			<Shape
-				Type="SPHERE"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="0"
-					y="17"
-					z="19.00001" />
-				</Shape>
 		</Geometry>
 		
 		<AudioArrayVoice>
