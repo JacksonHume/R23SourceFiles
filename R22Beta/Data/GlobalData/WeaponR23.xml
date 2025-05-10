@@ -1,52 +1,78 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
-	<!-- fake weapon added for juggernauts/behemoths to not undeploy in below their minimum range -->
-
+	<!-- hardpoint weapon, to prevent the juggernaut from undeploying. -->
 	<WeaponTemplate
 		id="GDIJuggernaughtArtilleryFake1"
 		Name="GDIJuggernaughtArtilleryFake1"
 		AttackRange="600.0"
 		WeaponSpeed="500"
-		ClipSize="0"
-		RadiusDamageAffects="ALLIES SELF"
+		ClipSize="1"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
 		CanFireWhileMoving="false"
 		CanFireWhileCharging="false"
-		ReAcquireDetailType="PER_SHOT"
 		FireFX=""
 		FireVeteranFX=""
 		RequiredFiringObjectStatus="DEPLOYED"
 		CheckStatusFlagsInRangeChecks="false"
 	>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
 		<ClipReloadTime
-			MinSeconds="0s"
-			MaxSeconds="0s" />
+			MinSeconds="9999s"
+			MaxSeconds="9999s"
+		/>
 		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "0.001%">
+					<Filter
+						Rule="ALL" />
+				</DamageScalarDetails>
+			</DamageNugget>
 		</Nuggets>
-	</WeaponTemplate>
+	</WeaponTemplate>	
 
+	<!-- keeps the unit deployed at this range , nothing more -->
 	<WeaponTemplate
 		id="GDIJuggernaughtArtilleryFake"
 		Name="GDIJuggernaughtArtilleryFake"
 		AttackRange="100.0"
 		WeaponSpeed="500"
-		ClipSize="0"
-		RadiusDamageAffects="ALLIES SELF"
+		ClipSize="1"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
 		CanFireWhileMoving="false"
 		CanFireWhileCharging="false"
-		ReAcquireDetailType="PER_SHOT"
 		FireFX=""
 		FireVeteranFX=""
 		RequiredFiringObjectStatus="DEPLOYED"
 		CheckStatusFlagsInRangeChecks="false"
 	>
 		<ClipReloadTime
-			MinSeconds="0s"
-			MaxSeconds="0s" />
+			MinSeconds="0.01s"
+			MaxSeconds="0.01s"
+		/>
 		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "0.001%">
+					<Filter
+						Rule="ALL" />
+				</DamageScalarDetails>
+			</DamageNugget>
 		</Nuggets>
 	</WeaponTemplate>
 
+	<!-- undeploys the unit when GDIJuggernaughtArtilleryFake1 isnt firing  (which is a hardpoint). -->
 	<WeaponTemplate
 		id="GDIJuggernaughtArtilleryUndeploy"
 		Name="GDIJuggernaughtArtilleryUndeploy"
@@ -62,9 +88,6 @@
 		RequiredFiringObjectStatus="DEPLOYED"
 		CheckStatusFlagsInRangeChecks="false"
 	>
-		<PreAttackDelay
-			MinSeconds="4s"
-			MaxSeconds="4s" />
 		<ClipReloadTime
 			MinSeconds="0s"
 			MaxSeconds="0s" />
@@ -80,36 +103,12 @@
 				<SpecialObjectFilter
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
-					AcceptModelCondition=""
-					RejectModelCondition="WEAPONSLOTID_04">
+					AcceptModelCondition="WEAPONSLOTID_03"
+					RejectModelCondition="">
 					<IncludeThing>GDIJuggernaught</IncludeThing>
 					<IncludeThing>SteelTalonsBehemoth</IncludeThing>
 				</SpecialObjectFilter>
 			</MetaImpactNugget>
-		</Nuggets>
-	</WeaponTemplate>
-
-	<!-- workaround for slow turret turn rate. -->
-
-	<WeaponTemplate
-		id="GDIJuggernaughtArtilleryUndeployFix"
-		Name="GDIJuggernaughtArtilleryUndeployFix"
-		AttackRange="600.0"
-		MinimumAttackRange="100.0"
-		WeaponSpeed="500"
-		ClipSize="1"
-		RadiusDamageAffects="ALLIES SELF"
-		CanFireWhileMoving="false"
-		CanFireWhileCharging="false"
-		ReAcquireDetailType="PER_SHOT"
-		FireFX=""
-		FireVeteranFX=""
-		RequiredFiringObjectStatus="DEPLOYED"
-		CheckStatusFlagsInRangeChecks="false"
-	>
-		<ClipReloadTime MinSeconds="5s"
-			MaxSeconds="5s" />
-		<Nuggets>
 		</Nuggets>
 	</WeaponTemplate>
 
@@ -286,52 +285,83 @@
 		</ScatterRadiusVsType>
 	</WeaponTemplate>
 
-	<!-- fake weapon added for specters to not undeploy in below their minimum range -->
-
+	<!-- hardpoint weapon, to prevent the juggernaut from undeploying. -->
 	<WeaponTemplate
 		id="NodMobileArtilleryCannonFake1"
 		Name="NodMobileArtilleryCannonFake1"
 		AttackRange="750.0"
 		WeaponSpeed="200"
-		ClipSize="0"
-		RadiusDamageAffects="ALLIES SELF"
+		ClipSize="1"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
 		CanFireWhileMoving="false"
 		CanFireWhileCharging="false"
 		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
-		ReAcquireDetailType="PER_SHOT"
 		FireFX=""
 		FireVeteranFX=""
 		RequiredFiringObjectStatus="DEPLOYED"
 		CheckStatusFlagsInRangeChecks="false"
 	>
-		<ClipReloadTime MinSeconds="0s"
-			MaxSeconds="0s" />
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="9999s"
+			MaxSeconds="9999s"
+		/>
 		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "0.001%">
+					<Filter
+						Rule="ALL" />
+				</DamageScalarDetails>
+			</DamageNugget>
 		</Nuggets>
 	</WeaponTemplate>
 
+	<!-- keeps the unit deployed at this range , nothing more -->
 	<WeaponTemplate
 		id="NodMobileArtilleryCannonFake"
 		Name="NodMobileArtilleryCannonFake"
 		AttackRange="250.0"
 		WeaponSpeed="200"
 		ClipSize="0"
-		RadiusDamageAffects="ALLIES SELF"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
 		CanFireWhileMoving="false"
 		CanFireWhileCharging="false"
 		ForbiddenFiringObjectStatus="WEAPON_UPGRADED_01"
-		ReAcquireDetailType="PER_SHOT"
 		FireFX=""
 		FireVeteranFX=""
 		RequiredFiringObjectStatus="DEPLOYED"
 		CheckStatusFlagsInRangeChecks="false"
 	>
-		<ClipReloadTime MinSeconds="0s"
-			MaxSeconds="0s" />
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s"
+		/>
 		<Nuggets>
+			<DamageNugget
+				Damage="1.0"
+				Radius="1.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GUN"
+				DeathType="NORMAL">
+				<DamageScalarDetails Scalar= "0.001%">
+					<Filter
+						Rule="ALL" />
+				</DamageScalarDetails>
+			</DamageNugget>
 		</Nuggets>
 	</WeaponTemplate>
 
+	<!-- undeploys the unit when NodMobileArtilleryCannonFake1 isnt firing  (which is a hardpoint). -->
 	<WeaponTemplate
 		id="NodMobileArtilleryUndeploy"
 		Name="NodMobileArtilleryUndeploy"
@@ -348,9 +378,6 @@
 		RequiredFiringObjectStatus="DEPLOYED"
 		CheckStatusFlagsInRangeChecks="false"
 	>
-		<PreAttackDelay
-			MinSeconds="4s"
-			MaxSeconds="4s" />
 		<ClipReloadTime
 			MinSeconds="0s"
 			MaxSeconds="0s" />
@@ -366,8 +393,8 @@
 				<SpecialObjectFilter
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
-					AcceptModelCondition=""
-					RejectModelCondition="WEAPONSLOTID_02">
+					AcceptModelCondition="WEAPONSLOTID_03"
+					RejectModelCondition="">
 					<IncludeThing>MarkedOfKaneMobileArtillery</IncludeThing>
 					<IncludeThing>NODMobileArtillery</IncludeThing>
 					<IncludeThing>BlackHandMobileArtillery</IncludeThing>
