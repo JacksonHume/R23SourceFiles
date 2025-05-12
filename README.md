@@ -3,7 +3,7 @@
 This cannot be compiled as a standalone mod as it does not contain all of the 1.02+ files, only the ones I have modified or added over the years.
 
 # R23b Changelog
-* A desync caused by garrisoning Rocket Squares into the Redeemer has been fixed.
+* A desync caused by garrisoning Rocket Squads into the Redeemer has been fixed.
 * Players can no longer force fire an object to permanently deploy Specter Artillery and Juggernauts.
 * Forcefields will no longer visually disappear at the edge of the screen.
 * The maps Sands of Time, Bluezone Rampage, Bordertown Showdown have been fixed in this version.
