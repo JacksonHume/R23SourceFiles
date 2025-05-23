@@ -72,7 +72,7 @@
 		</Nuggets>
 	</WeaponTemplate>
 
-	<!-- undeploys the unit when GDIJuggernaughtArtilleryFake1 isnt firing  (which is a hardpoint). -->
+	<!-- undeploys the unit when GDIJuggernaughtArtilleryFake is firing. -->
 	<WeaponTemplate
 		id="GDIJuggernaughtArtilleryUndeploy"
 		Name="GDIJuggernaughtArtilleryUndeploy"
@@ -361,7 +361,7 @@
 		</Nuggets>
 	</WeaponTemplate>
 
-	<!-- undeploys the unit when NodMobileArtilleryCannonFake1 isnt firing  (which is a hardpoint). -->
+	<!-- undeploys the unit when NodMobileArtilleryCannonFake is firing. -->
 	<WeaponTemplate
 		id="NodMobileArtilleryUndeploy"
 		Name="NodMobileArtilleryUndeploy"

@@ -3072,24 +3072,6 @@
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
 			</SlowDeath>
-			<AISpecialPowerUpdate
-				id="404E4BA6"
-				CommandButtonName="Command_AvatarCommandeerGetInRange"
-				SecondaryCommandButtonName=""
-				SpecialPowerAIType="SPECIAL_POWER_BASIC_SELF_BUFF"
-				SpecialPowerRadius="-1"
-				ReinforceDistance="0"
-				SpellMakesAStructure=""
-				SpecificUnit=""
-				UnitKindOf=""
-				AllyUnitInclude=""
-				AllyUnitExclude=""
-				EnemyUnitInclude=""
-				EnemyUnitExclude=""
-				MinimumCutoff="0"
-				UpdateTime="1s"
-				MaxFrequency="0"
-				RandomizeTargetLocation="False" />
 			<SpecialPower
 				id="1EE61750"
 				SpecialPowerTemplate="NodRageGenerator"
