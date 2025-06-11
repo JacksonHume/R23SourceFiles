@@ -1334,45 +1334,6 @@
 				ApplyToContained="False">
 				<TriggeredBy>Upgrade_Traveler59Faction</TriggeredBy>
 			</StatusBitsUpgrade>
-			<AttributeModifierAuraUpdate
-				id="2F4453FB"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				AttributeModifierName="Asset not found in stream: [C5E07887:ECC792EB]"
-				RefreshDelay="0s"
-				Range="5"
-				RequiredConditions=""
-				AntiCategory=""
-				AntiFX=""
-				MaxActiveRank="0"
-				RequiredObjectStatusFlags=""
-				TargetEnemy="False"
-				AllowPowerWhenAttacking="True"
-				InitiallyActive="True"
-				AffectGood="False"
-				AffectEvil="False"
-				RunWhileDead="False"
-				AllowSelf="False"
-				AffectContainedOnly="False"
-				AffectHordeMembersOnly="False">
-				<ObjectFilter
-					Rule="ANY"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="">
-					<IncludeThing>NODRefinery</IncludeThing>
-					<IncludeThing>MarkedOfKaneRefinery</IncludeThing>
-					<IncludeThing>BlackHandRefinery</IncludeThing>
-				</ObjectFilter>
-			</AttributeModifierAuraUpdate>
 			<SpawnBehavior
 				id="EB2D043D"
 				RequiresAllTriggers="False"
