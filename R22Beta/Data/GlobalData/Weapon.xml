@@ -2073,7 +2073,8 @@
 				<SpecialObjectFilter 
 					Rule="NONE" 
 					Include="INFANTRY STRUCTURE"
-					Relationship="ENEMIES NEUTRAL" />
+					Relationship="ENEMIES NEUTRAL"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2086,7 +2087,8 @@
 				<SpecialObjectFilter 
 					Rule="ALL" 
 					Exclude="INFANTRY STRUCTURE"
-					Relationship="ENEMIES NEUTRAL" />
+					Relationship="ENEMIES NEUTRAL"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2099,7 +2101,49 @@
 				<SpecialObjectFilter 
 					Rule="NONE" 
 					Include="HUSK"
-					Relationship="ALLIES" />
+					Relationship="ALLIES"
+					RejectModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
+
+			<!-- RAGE GENERATOR -->
+
+			<DamageNugget
+				Damage="52.5"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="INFANTRY STRUCTURE"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="70.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Exclude="INFANTRY STRUCTURE"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="70.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 		</Nuggets>
@@ -2139,7 +2183,8 @@
 				<SpecialObjectFilter 
 					Rule="ALL" 
 					Exclude="INFANTRY STRUCTURE"
-					Relationship="ENEMIES NEUTRAL" />
+					Relationship="ENEMIES NEUTRAL"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2152,7 +2197,8 @@
 				<SpecialObjectFilter 
 					Rule="NONE" 
 					Include="INFANTRY STRUCTURE"
-					Relationship="ENEMIES NEUTRAL" />
+					Relationship="ENEMIES NEUTRAL"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2165,7 +2211,49 @@
 				<SpecialObjectFilter 
 					Rule="NONE" 
 					Include="HUSK"
-					Relationship="ALLIES" />
+					Relationship="ALLIES"
+					RejectModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
+			
+			<!-- RAGE GENERATOR -->
+
+			<DamageNugget
+				Damage="70.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Exclude="INFANTRY STRUCTURE"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="52.5"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="INFANTRY STRUCTURE"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="70.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.4s"
+				DamageType="CANNON"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 		</Nuggets>
@@ -2223,7 +2311,8 @@
 				DamageFXType="ALIEN_PLASMADISK">
 				<SpecialObjectFilter 
 					Rule="NONE" 
-					Include="AIRCRAFT"/>
+					Include="AIRCRAFT"
+					RejectModelCondition="EMOTION_DISSIDENT"/>
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2234,7 +2323,8 @@
 				<SpecialObjectFilter 
 					Rule="ALL" 
 					Exclude="AIRCRAFT"
-					Relationship="ENEMIES NEUTRAL" />
+					Relationship="ENEMIES NEUTRAL"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2245,7 +2335,43 @@
 				<SpecialObjectFilter 
 					Rule="NONE" 
 					Include="HUSK"
-					Relationship="ALLIES" />
+					Relationship="ALLIES"
+					RejectModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
+
+			<!-- RAGE GENERATOR -->
+
+			<DamageNugget
+				Damage="72.0"
+				Radius="10.0"
+				DamageType="ROCKET"
+				DamageFXType="ALIEN_PLASMADISK">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="AIRCRAFT"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="16.0"
+				Radius="10.0"
+				DamageType="ROCKET"
+				DamageFXType="ALIEN_PLASMADISK">
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Exclude="AIRCRAFT"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="16.0"
+				Radius="10.0"
+				DamageType="ROCKET"
+				DamageFXType="ALIEN_PLASMADISK">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 		</Nuggets>
@@ -2327,7 +2453,8 @@
 				<SpecialObjectFilter 
 					Rule="NONE" 
 					Include="VEHICLE"
-					Relationship="ENEMIES NEUTRAL" />
+					Relationship="ENEMIES NEUTRAL"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2337,7 +2464,8 @@
 				<SpecialObjectFilter 
 					Rule="NONE" 
 					Include="STRUCTURE"
-					Relationship="ENEMIES NEUTRAL" />
+					Relationship="ENEMIES NEUTRAL"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2347,7 +2475,8 @@
 				<SpecialObjectFilter 
 					Rule="NONE" 
 					Include="AIRCRAFT"
-					Relationship="ENEMIES NEUTRAL" />
+					Relationship="ENEMIES NEUTRAL"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2357,7 +2486,8 @@
 				<SpecialObjectFilter 
 					Rule="NONE" 
 					Include="HUSK"
-					Relationship="ALLIES" />
+					Relationship="ALLIES"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
 			<DamageNugget
@@ -2367,32 +2497,61 @@
 				<SpecialObjectFilter 
 					Rule="ALL" 
 					Exclude="VEHICLE STRUCTURE AIRCRAFT"
-					Relationship="ENEMIES NEUTRAL" />
+					Relationship="ENEMIES NEUTRAL"
+					RejectModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
 			
-			<!--
+			<!-- RAGE GENERATOR -->
+
+			<DamageNugget
+				Damage="169.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="VEHICLE"
+					AcceptModelCondition="EMOTION_DISSIDENT"/>
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="57.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="STRUCTURE"
+					AcceptModelCondition="EMOTION_DISSIDENT"/>
+			</DamageNugget>
+			
+			<DamageNugget
+				Damage="15.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="AIRCRAFT"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
 			
 			<DamageNugget
 				Damage="75.0"
 				DamageType="GUN"
 				DamageFXType="ALIEN_TIBSHARD" >
-				<DamageScalarDetails Scalar= "225%">
-					<Filter
-						Rule="NONE"
-						Include="VEHICLE" />
-				</DamageScalarDetails>
-				<DamageScalarDetails Scalar= "75%">
-					<Filter
-						Rule="NONE"
-						Include="STRUCTURE" />
-				</DamageScalarDetails>
-				<DamageScalarDetails Scalar= "20%">
-					<Filter
-						Rule="NONE"
-						Include="AIRCRAFT" />
-				</DamageScalarDetails>
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
 			</DamageNugget>
-			-->
+			
+			<DamageNugget
+				Damage="75.0"
+				DamageType="GUN"
+				DamageFXType="ALIEN_TIBSHARD" >
+				<SpecialObjectFilter 
+					Rule="ALL" 
+					Exclude="VEHICLE STRUCTURE AIRCRAFT"
+					AcceptModelCondition="EMOTION_DISSIDENT" />
+			</DamageNugget>
 			
 		</Nuggets>
 	</WeaponTemplate>
