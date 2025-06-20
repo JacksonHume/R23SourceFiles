@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- zone raider allied husk targeting fix -->
+
+	<WeaponTemplate
+		id="ZoneRaiderSonicRifleWarhead"
+		Name="ZoneRaiderSonicRifleWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="false"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE">
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="250.0"
+				Radius="50.0"
+				DamageTaperOff="20.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_ECHOCANNON"
+				DeathType="NORMAL">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Relationship="ENEMIES NEUTRAL" />
+			</DamageNugget>
+			<!-- workaround to hit allied husks -->
+			<DamageNugget
+				Damage="250.0"
+				Radius="50.0"
+				DamageTaperOff="20.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_ECHOCANNON"
+				DeathType="NORMAL">
+				<SpecialObjectFilter 
+					Rule="NONE" 
+					Include="HUSK"
+					Relationship="ALLIES" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
 	<!-- hardpoint weapon, to prevent the juggernaut from undeploying. -->
 	<WeaponTemplate
 		id="GDIJuggernaughtArtilleryFake1"
@@ -30,13 +74,13 @@
 				DelayTimeSeconds="0.0s"
 				DamageType="GUN"
 				DeathType="NORMAL">
-				<DamageScalarDetails Scalar= "0.001%">
+				<DamageScalarDetails Scalar="0.001%">
 					<Filter
 						Rule="ALL" />
 				</DamageScalarDetails>
 			</DamageNugget>
 		</Nuggets>
-	</WeaponTemplate>	
+	</WeaponTemplate>
 
 	<!-- keeps the unit deployed at this range , nothing more -->
 	<WeaponTemplate
@@ -64,7 +108,7 @@
 				DelayTimeSeconds="0.0s"
 				DamageType="GUN"
 				DeathType="NORMAL">
-				<DamageScalarDetails Scalar= "0.001%">
+				<DamageScalarDetails Scalar="0.001%">
 					<Filter
 						Rule="ALL" />
 				</DamageScalarDetails>
@@ -315,7 +359,7 @@
 				DelayTimeSeconds="0.0s"
 				DamageType="GUN"
 				DeathType="NORMAL">
-				<DamageScalarDetails Scalar= "0.001%">
+				<DamageScalarDetails Scalar="0.001%">
 					<Filter
 						Rule="ALL" />
 				</DamageScalarDetails>
@@ -353,7 +397,7 @@
 				DelayTimeSeconds="0.0s"
 				DamageType="GUN"
 				DeathType="NORMAL">
-				<DamageScalarDetails Scalar= "0.001%">
+				<DamageScalarDetails Scalar="0.001%">
 					<Filter
 						Rule="ALL" />
 				</DamageScalarDetails>
