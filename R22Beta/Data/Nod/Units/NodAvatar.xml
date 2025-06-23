@@ -1321,7 +1321,7 @@
 				AlphaCameraAtInnerRadius="100%"
 				StaticSortLevelWhileFading="-1"
 				BirthFadeTime="0"
-				OkToChangeModelColor="False"
+				OkToChangeModelColor="True"
 				AnimationsRequirePower="True"
 				UseYAxisForTurretRotation="False"
 				TrackMarksOnlyWhenCorneringQuickly="False"
