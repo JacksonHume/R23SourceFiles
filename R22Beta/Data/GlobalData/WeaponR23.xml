@@ -733,7 +733,7 @@
 
 			<!-- Damage to structures and husks -->
 			<DamageNugget
-				Damage="100.0"
+				Damage="144.0"
 				Radius="25.0"
 				DamageFXType="ALIEN_TIOXIN"
 				DamageType="GRENADE">
@@ -837,7 +837,7 @@
 
 			<!-- Damage to structures and husks -->
 			<DamageNugget
-				Damage="100.0"
+				Damage="144.0"
 				Radius="25.0"
 				DamageFXType="ALIEN_TIOXIN"
 				DamageType="GRENADE">
