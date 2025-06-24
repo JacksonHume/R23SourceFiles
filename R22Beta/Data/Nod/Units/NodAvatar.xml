@@ -1650,79 +1650,27 @@
 			</LaserDraw>
 		
 			<SpotlightDraw
-				id="F591F97E"
-				InitialRecoilSpeed="2"
-				MaxRecoilDistance="3"
-				RecoilDamping="0.4"
-				RecoilSettleSpeed="0.065"
-				MinLODRequired="LOW"
-				ProjectileBoneFeedbackEnabledSlots=""
-				TrackMarks=""
-				AttachToBoneInAnotherModule="S_DETECTOR"
-				DependencySharedModelFlags=""
-				HighDetailLODThreshold="0"
-				LowDetailLODThreshold="0"
-				WadingParticleSys=""
-				AlphaCameraFadeOuterRadius="0"
-				AlphaCameraFadeInnerRadius="0"
-				AlphaCameraAtInnerRadius="100%"
-				StaticSortLevelWhileFading="-1"
-				BirthFadeTime="0"
-				OkToChangeModelColor="False"
-				AnimationsRequirePower="True"
-				UseYAxisForTurretRotation="False"
-				TrackMarksOnlyWhenCorneringQuickly="False"
-				UseProducerTexture="False"
-				NoRotate="False"
-				UseFiringArcRotation="False"
-				Selectable="True"
-				RandomTextureFixedRandomIndex="False"
-				ParticlesAttachedToAnimatedBones="False"
-				ParticleBonesCheckDrawable="False"
-				ShadowForceDisable="False"
-				SwitchModelLODMode="False"
-				StaticModelLODMode="False"
-				ShowShadowWhileContained="False"
-				UseStandardModelNames="False"
-				UseDefaultAnimation="False"
-				BirthFadeAdditive="False"
-				ZWriteDisableOverride="False"
-				MultiPlayerOnly="False"
-				AffectedByStealth="False"
-				InvertStealthOpacity="False"
-				HighDetailOnly="False"
-				SetAnimsToLastFrameOnConstructionComplete="True"
-				RefreshTime="2s"
-				SweepTime="1s"
-				AlwaysOn="False">
+				id="ModuleTag_Spotlight"
+				AttachToBoneInAnotherModule="s_generator"
+				RefreshTime="2.0s"
+				SweepTime="1.0s">
 				<ModelConditionState
-					ParseCondStateType="PARSE_DEFAULT"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
+					ParseCondStateType="PARSE_DEFAULT">
 					<Model
-						Name="W3DMesh:FXSPOTLIGHT"
-						ExtraMesh="False" />
+						Name="FXspotlight" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="BUILD_PLACEMENT_CURSOR"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
+					ConditionsYes="BUILD_PLACEMENT_CURSOR">
 					<Model
-						Name=""
-						ExtraMesh="False" />
+						Name="" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FORMATION_PREVIEW"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
+					ConditionsYes="FORMATION_PREVIEW">
+					<!-- Draw nothing when in Formation Preview -->
 					<Model
-						Name=""
-						ExtraMesh="False" />
+						Name="" />
 				</ModelConditionState>
 			</SpotlightDraw>
 		

@@ -177,7 +177,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GBREFINERY_ASN"
+						Name="W3DContainer:GBREFINERY_ASN2"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
