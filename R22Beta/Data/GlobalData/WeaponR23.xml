@@ -7,7 +7,7 @@
 		id="ZoneRaiderSonicRifleWarhead"
 		Name="ZoneRaiderSonicRifleWarhead"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
-		RadiusDamageAffects="ENEMIES NEUTRALS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
 		AutoReloadsClip="AUTO"
 		CanFireWhileMoving="false"
