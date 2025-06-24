@@ -1838,22 +1838,6 @@
 					<Filter
 						AcceptModelCondition="MONEY_STORED_AMOUNT_1" />
 				</DamageScalarDetails>
-				<DamageScalarDetails
-					Scalar="50%">
-					<Filter
-						Rule="NONE"
-						Relationship=""
-						Alignment="NONE"
-						Include=""
-						Exclude=""
-						StatusBitFlags=""
-						RejectStatusBitFlags=""
-						AcceptModelCondition=""
-						RejectModelCondition="">
-						<IncludeThing>AlienMillipedeHead</IncludeThing>
-						<IncludeThing>AlienMillipedeBody</IncludeThing>
-					</Filter>
-				</DamageScalarDetails>
 			</DamageNugget>
 		</Nuggets>
 	</WeaponTemplate>	
