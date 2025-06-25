@@ -2,6 +2,21 @@
 1.02+ R23 source files for reference. Assets may be used but credit would be appreciated.
 This cannot be compiled as a standalone mod as it does not contain all of the 1.02+ files, only the ones I have modified or added over the years.
 
+# R23c Changelog
+* Zone Raiders can now kill friendly husks.
+* Flame pilot fx is no longer visible on stealthed avatars.
+* A mod specific bug related to Mechapedes being unaffected by the Rage Generator has been fixed.
+* Geometry from the multiplayer beacon has been removed.
+* Mechapede stealth detection range increased from 100 to 135..
+* Redeemer Tiberium Trooper damage vs structures, husks increased from 100 to 144 per shot..
+* A bug, exploit involving GDI faction refineries has been fixed. [Video Link](https://www.youtube.com/watch?v=HRStmMIen38)
+* Laser Capacitor Scorpion Tank damage reduced by 7% vs Scorpion Tanks to require one extra shot. 
+* Shard Photon Cannon damage scaler vs infantry increased from 50% to 75%.
+* More unnecessary code removed.
+* Nod Avatar stealth detection spotlight now displays properly.
+* Pipeline Problems updated to EA official patch 1.03 version in the legacy pack, pre order maps added and Tournament Decision with alt lighting has been added.
+
+
 # R23b Changelog
 * A desync caused by garrisoning Rocket Squads into the Redeemer has been fixed.
 * Players can no longer force fire an object to permanently deploy Specter Artillery and Juggernauts.
