@@ -8,12 +8,16 @@
 		EditorSorting="UNIT"
 		CommandSet="EmptyCommandSet"
 		IsTrainable="false"
-		KindOf="CAN_CAST_REFLECTIONS BEACON NO_COLLIDE IGNORE_FOR_VICTORY UNATTACKABLE NOT_AUTOACQUIRABLE"
+		KindOf="CAN_CAST_REFLECTIONS BEACON NO_COLLIDE IGNORE_FOR_VICTORY UNATTACKABLE NOT_AUTOACQUIRABLE AIRCRAFT"
 		RadarPriority="UNIT"
 		EditorName="MultiplayerBeacon">
 		<DisplayName>CONTROLBAR:Beacon</DisplayName>
 		<ArmorSet
 			Armor="NoArmor" />
+		<LocomotorSet
+			Locomotor="FlyingShadowLocomotor"
+			Condition="NORMAL"
+			Speed="0" />
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"
@@ -36,14 +40,19 @@
 				id="ModuleTag_Body"
 				MaxHealth="100.0" />
 		</Body>
-		<!--
+
 		<Geometry
 			IsSmall="true">
 			<Shape
 				Type="CYLINDER"
 				MajorRadius="7.0"
-				Height="13.0"/>
-		</Geometry> -->
+				Height="13.0">
+			<Offset
+					x="0"
+					y="35"
+					z="0" />
+			</Shape>
+		</Geometry> 
 		<CrusherInfo
 			CrushableLevel="0" />
 	</GameObject>
