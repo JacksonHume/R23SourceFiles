@@ -28,7 +28,7 @@
 		</Nuggets>
 	</WeaponTemplate>
 
-	<!-- laser scorp damage nerf vs scorps -->
+	<!-- laser scorp damage nerf vs scorps
 
 	<WeaponTemplate
 		id="NODRaiderTankCannonLaser"
@@ -82,7 +82,7 @@
 				LaserId="1"
 				HitGroundFX="FX_NODSpitfireHit"/>
 		</Nuggets>
-	</WeaponTemplate>
+	</WeaponTemplate>  -->
 
 	<!-- zone raider allied husk targeting fix -->
 
