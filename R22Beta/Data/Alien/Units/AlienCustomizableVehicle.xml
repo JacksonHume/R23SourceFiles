@@ -134,7 +134,7 @@
 			</WeaponSetUpdate>
 			<StealthDetectorUpdate
 				id="ModuleTag_StealthDetect"
-				DetectionRange="135" />
+				DetectionRange="125" />
 			<Physics
 				id="ModuleTag_Physics"></Physics>
 
