@@ -821,9 +821,14 @@
 				DamageFXType="ALIEN_TIOXIN"
 				DamageType="GRENADE">
 				<SpecialObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Include="STRUCTURE HUSK"
 				/>
+				<DamageScalarDetails Scalar="300%">
+					<Filter
+						Rule="NONE"
+						Include="HUSK" />
+				</DamageScalarDetails>
 			</DamageNugget>
 
 			<!-- Garrison clear -->
@@ -925,9 +930,14 @@
 				DamageFXType="ALIEN_TIOXIN"
 				DamageType="GRENADE">
 				<SpecialObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Include="STRUCTURE HUSK"
 				/>
+				<DamageScalarDetails Scalar="300%">
+					<Filter
+						Rule="NONE"
+						Include="HUSK" />
+				</DamageScalarDetails>
 			</DamageNugget>
 
 			<!-- Garrison clear -->
