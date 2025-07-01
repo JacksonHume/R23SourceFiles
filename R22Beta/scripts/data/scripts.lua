@@ -592,6 +592,55 @@ function OnGDIJuggernaughtCreated(self)
 	
 end
 
+
+-- This function will check if the slaughterer is not an epic unit 
+-- and if not will store the owner of self in a local variable and then assign slaughterer the owner obtained from self.
+function OnGDIJuggernaughtHusk(self, slaughterer)
+
+    local unitOwner = ObjectTeamName(self)
+	
+	-- play the husk capture workaround eva sound
+	-- we need to save the frames so that this doesnt play longer than 30 seconds (30*30 = 900), this variable is stored as a global variable
+	-- ExecuteAction("PLAY_SOUND_AS_IF_IT_WAS_AN_EVA_EVENT", "Geva_UnitRecovered")
+	--ObjectBroadcastEventToEnemies(slaughterer, HuskRepaired, 99999)
+	
+	
+	-- not sure if this will show the minimap flash on this object.
+	ObjectCapturingObjectPlayerSide(slaughterer)
+
+	
+	-- play the husk capture sound found on EngineerContain
+	ObjectPlaySound(slaughterer, "BuildingCaptured")	
+	
+	if strfind(tostring(unitOwner), "teamPlayer_1") then 
+		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_1/teamPlayer_1")
+	elseif strfind(tostring(unitOwner), "teamPlayer_2") then 
+		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_2/teamPlayer_2")
+	elseif strfind(tostring(unitOwner), "teamPlayer_3") then
+		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_3/teamPlayer_3")
+	elseif strfind(tostring(unitOwner), "teamPlayer_4") then
+		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_4/teamPlayer_4")
+	elseif strfind(tostring(unitOwner), "teamPlayer_5") then
+		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_5/teamPlayer_5")
+	elseif strfind(tostring(unitOwner), "teamPlayer_6") then
+		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_6/teamPlayer_6")
+	elseif strfind(tostring(unitOwner), "teamPlayer_7") then
+		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_7/teamPlayer_7")
+	elseif strfind(tostring(unitOwner), "teamPlayer_8") then
+		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_8/teamPlayer_8")
+	end
+
+	ObjectCreateAndFireTempWeapon(slaughterer, "HuskToJuggernaut")
+		
+	-- after firing weapon assign the husk to neutral
+	ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")
+end
+
+function OnGDIKillHusk(self)
+	--ExecuteAction("SHOW_MILITARY_CAPTION", "HUSK KILL.", 2)		
+	ExecuteAction("NAMED_DELETE",self)
+end
+
 function OnGDIWatchTowerCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_01", true )
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_02", true )

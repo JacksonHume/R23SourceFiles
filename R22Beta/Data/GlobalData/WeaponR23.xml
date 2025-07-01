@@ -1,25 +1,52 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<WeaponTemplate
+		id="HuskToJuggernaut"
+		Name="HuskToJuggernaut"
+		RequiredFiringObjectStatus=""
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS SELF">
+		<Nuggets>
+			<WeaponOCLNugget
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus=""
+				RequiredObjectStatus=""
+				WeaponOCL="GDIJuggernaughtHuskReplace" />
+
+			<AttributeModifierNugget
+				Radius="10.0"
+				PartitionFilterTestType="CIRCLE"
+				AttributeModifierName="AttributeModifier_HuskTimer">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship=""
+					Alignment="NONE">
+					<IncludeThing>GDIJuggernaughtHusk</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+
 	<!-- shard photon cannon buff vs infantry -->
 
 	<WeaponTemplate
 		id="AlienPhotonCannonShardLauncherWarhead"
-			Name="AlienPhotonCannonShardLauncherWarhead"
-			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-			ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS">
+		Name="AlienPhotonCannonShardLauncherWarhead"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS">
 		<Nuggets>
 			<DamageNugget
 				Damage="140.0"
 				Radius="5.0"
 				DamageType="CANNON"
-				DamageFXType="ALIEN_TIBSHARD" >
-				<DamageScalarDetails Scalar= "200%">
+				DamageFXType="ALIEN_TIBSHARD">
+				<DamageScalarDetails Scalar="200%">
 					<Filter
 						Rule="NONE"
 						Include="CIVILIAN_BUILDING" />
 				</DamageScalarDetails>
-				<DamageScalarDetails Scalar= "75%">
+				<DamageScalarDetails Scalar="75%">
 					<Filter
 						Rule="NONE"
 						Include="INFANTRY" />
@@ -120,8 +147,8 @@
 				DamageType="CANNON"
 				DamageFXType="GDI_ECHOCANNON"
 				DeathType="NORMAL">
-				<SpecialObjectFilter 
-					Rule="NONE" 
+				<SpecialObjectFilter
+					Rule="NONE"
 					Include="HUSK"
 					Relationship="ALLIES" />
 			</DamageNugget>

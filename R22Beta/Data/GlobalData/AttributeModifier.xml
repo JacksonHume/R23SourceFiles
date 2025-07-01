@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<AttributeModifier
+		id="AttributeModifier_HuskTimer"
+		Category="NONE"
+		Duration="4s"
+		ObjectStatusToSet="UNATTACKABLE"
+		ModelConditionsSet="USER_9">
+		<Modifier Type="CRUSHABLE_LEVEL" Value="400%" />
+	</AttributeModifier>
+
 	<!-- to ensure traveler 59 do not get faster infantry with the base infantry speed buff --> 
 
 	<AttributeModifier

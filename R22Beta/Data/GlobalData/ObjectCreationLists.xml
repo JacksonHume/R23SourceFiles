@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<ObjectCreationList
+		id="GDIJuggernaughtHuskReplace">
+		<CreateObject
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="LIKE_EXISTING"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="3.0s"
+			StartingBusyTime="3.0s"
+			DisabledWhileBusy="true"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>GDIJuggernaught</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
 	<!-- emp fix attempt
 	<ObjectCreationList
 		id="OCL_EMPWeaponObjectSW">

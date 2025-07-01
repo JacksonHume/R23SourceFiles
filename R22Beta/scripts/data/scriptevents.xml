@@ -109,6 +109,10 @@
 		
 		<ObjectStatusEvent Name="OnLeavingFactory1">
 			<Conditions>-UNSELECTABLE</Conditions>
+		</ObjectStatusEvent>	
+		
+			<ObjectStatusEvent Name="OnEnclosed">
+			<Conditions>+ENCLOSED</Conditions>
 		</ObjectStatusEvent>		
 
 		<!-- Used for raged units -->
@@ -739,6 +743,10 @@
 		<EventHandler EventName="OnErrorChecker" ScriptFunctionName="OnErrorChecker_renwars" DebugSingleStep="false"/>
 	</EventList>
 	
+	<EventList Name="GDIEngineerFunctions" Inherit="BaseScriptFunctions">  	
+		<EventHandler EventName="OnSlaughtered"	ScriptFunctionName="OnGDIJuggernaughtHusk" DebugSingleStep="false"/>
+	</EventList>
+	
 	<!-- r21 -->
 	
 	<EventList Name="AlienHarvesterFunctions_R21" Inherit="BaseScriptFunctions">	
@@ -924,6 +932,8 @@
     <!-- ############################################################################ -->
     <EventList Name="GDIJuggernaughtFunctions" Inherit="BaseScriptFunctions">
         <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
+		<!--<EventHandler EventName="OnRider1"	ScriptFunctionName="OnGDIJuggernaughtHusk" DebugSingleStep="false"/> -->
+		<EventHandler EventName="OnUser9End"	ScriptFunctionName="OnGDIKillHusk" DebugSingleStep="false"/>
     </EventList>
 
     <EventList Name="NODShredderFunctions" Inherit="BaseScriptFunctions">

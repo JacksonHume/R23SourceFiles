@@ -11,7 +11,7 @@
 		ShockwaveResistance="100"
 		ReinvisibilityDelay="7s"
 		CommandSet="EmptyCommandSet"
-		KindOf="PRELOAD SELECTABLE CAN_CAST_REFLECTIONS NOT_AUTOACQUIRABLE IMMOBILE HUSK VALID_TARGET_FOR_C4"
+		KindOf="PRELOAD SELECTABLE CAN_CAST_REFLECTIONS NOT_AUTOACQUIRABLE IMMOBILE METAUNIT VALID_TARGET_FOR_C4 GARRISONABLE_UNTIL_DESTROYED HUSK"
 		RadarPriority="UNIT"
 		EditorName="GDIJuggernaughtHusk"
 		Description="Desc:JuggernautHusk">
@@ -41,6 +41,20 @@
 						Original="GUJugg_D"
 						New="GUJuggD_K" />
 				</ModelConditionState>
+				<!-- invisible whilst still in the game and captured for 4s -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
+				<!-- kane edition -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6 USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					Flags="START_FRAME_LAST"
@@ -122,7 +136,7 @@
 				LevelsToGain="3">
 				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
 			</LevelUpUpgrade>
-			<!-- Nod Cloaking Field -->
+			<!-- Nod Cloaking Field
 			<InvisibilityUpdate
 				id="ModuleTag_Invisibility"
 				UpdatePeriod="0.5s">
@@ -132,11 +146,23 @@
 			<StealthUpgrade
 				id="ModuleTag_InvisibilityTrigger">
 				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>  -->
+
+			<!-- after changing husk to neutral we will stealth this to stop health bar showing  -->
+			<InvisibilityUpdate
+				id="ModuleTag_InvisibilityJugg"
+				UpdatePeriod="0.1s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_EngineerCapture</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTriggerJugg">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
 			</StealthUpgrade>
+	
 			<TemporarilyDefectUpdate
 				id="ModuleTag_TemporarilyDefect"
 				DefectionFrameCount="300" />
-
 			<Physics
 				id="ModuleTag_07" />
 			<SlowDeath
@@ -145,7 +171,8 @@
 				SinkRate="2.4"
 				DestructionDelay="8s">
 				<DieMuxData
-					DeathTypes="ALL" />
+					DeathTypes="ALL"
+					ExemptStatus="RIDER1"/>
 				<OCL
 					Type="INITIAL">
 					<OCL>OCL_GDIJuggernaughtHuskDebris</OCL>
@@ -164,32 +191,56 @@
 				AddConditionFlags="USER_6">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
-
-			<HordeTransportContain
+			<!-- i can add to this sound the other sound  -->
+			<SlaughterHordeContain
 				id="ModuleTag_Contain"
 				ObjectStatusOfContained=""
-				ContainMax="0"
-				Slots="0"
-				AllowEnemiesInside="false"
-				AllowAlliesInside="false"
-				AllowNeutralInside="false"
-				AllowOwnPlayerInsideOverride="false"
-				ShowPips="false"
-				EnterSound=""
+				ContainMax="1"
+				CashBackPercent="100"
+				MobileGarrison="false"
+				ImmuneToClearBuildingAttacks="true"
+				AllowEnemiesInside="true"
+				AllowAlliesInside="true"
+				CollidePickup="True"
+				AllowNeutralInside="true"
+				EjectPassengersOnDeath="False"
+				AllowOwnPlayerInsideOverride="true"
+				ShowPips="true"
+				EnterSound="AudioEvent:BuildingRepaired"
 				ExitSound=""
-				KillPassengersOnDeath="false">
+				ResetInitialTeamOnCapture="true"
+				KillPassengersOnDeath="true">
+				<CanAlwaysEnterObjectFilter
+					Rule="ANY">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</CanAlwaysEnterObjectFilter>
 				<PassengerFilter
-					Rule="NONE"
-					Include="" />
+					Rule="ANY">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</PassengerFilter>
 				<DieMuxData
 					DeathTypes="ALL" />
 				<PassengerData
-					BonePrefix="ROOTTRANSFORM">
+					BonePrefix="INVISBONE01">
 					<Filter
 						Rule="NONE"
-						Include="" />
+						Include="INFANTRY"
+						Relationship="" />
 				</PassengerData>
-			</HordeTransportContain>
+				<UpgradeContainerOnContain
+					ID="Engineer">
+					<UnitFilter>
+						<IncludeThing>GDIEngineer</IncludeThing>
+						<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+						<IncludeThing>ZOCOMEngineer</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_EngineerCapture</UpgradeList>
+				</UpgradeContainerOnContain>
+			</SlaughterHordeContain>  
 
 			<EngineerContain
 				id="ModuleTag_EngineerContain"
@@ -198,7 +249,7 @@
 				EvaEventForReplace="HuskRepaired"
 				EvaEventForCaptureAndReplace="HuskRepaired"
 				FXForReplace="FX_Husk_Repaired"
-				FXForCapture="FX_Husk_Captured"
+				FXForCapture="FX_Husk_Repaired"
 				FXForCaptureAndReplace="FX_Husk_Captured"
 				ReplaceWith="GDIJuggernaughtHuskReplace">
 				<CanEnterFilter
@@ -212,12 +263,30 @@
 					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
 					<IncludeThing>ZOCOMEngineer</IncludeThing>
 				</CanEnterFilter>
-			</EngineerContain>
+			</EngineerContain> 
+
 			<LifetimeUpdate
 				id="ModuleTag_HuskLifetime"
 				MinLifetime="300s"
 				MaxLifetime="300s"
-			/>
+			/>	
+
+			<StatusBitsUpgrade id="ModuleTag_VeterancyUpgrade" 
+				StatusToSet="RIDER1">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<StatusBitsUpgrade id="ModuleTag_Unselectable" 
+				StatusToSet="UNSELECTABLE">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<ModelConditionUpgrade
+				id="ModuleTag_GiveModelStatus"
+				AddConditionFlags="USER_3">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+			</ModelConditionUpgrade>
+
 		</Behaviors>
 		<AI>
 			<AIUpdate
