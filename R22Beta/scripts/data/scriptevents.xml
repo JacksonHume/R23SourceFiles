@@ -944,6 +944,7 @@
     <!-- ############################################################################ -->
     <EventList Name="GDIJuggernaughtFunctions" Inherit="BaseScriptFunctions">
         <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
+		 <EventHandler EventName="OnUser3"	ScriptFunctionName="OnGDIHide" DebugSingleStep="false"/>
 		<!--<EventHandler EventName="OnRider1"	ScriptFunctionName="OnGDIJuggernaughtHusk" DebugSingleStep="false"/> -->
 		<EventHandler EventName="OnUser9End"	ScriptFunctionName="OnGDIKillHusk" DebugSingleStep="false"/>
 		

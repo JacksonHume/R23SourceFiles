@@ -151,7 +151,7 @@
 			<!-- after changing husk to neutral we will stealth this to stop health bar showing -->
 			<InvisibilityUpdate
 				id="ModuleTag_InvisibilityJugg"
-				UpdatePeriod="0.5s">
+				UpdatePeriod="0.1s">
 				<InvisibilityNugget />
 				<RequiresUpgrade>Upgrade_EngineerCapture</RequiresUpgrade>
 			</InvisibilityUpdate>
@@ -287,14 +287,7 @@
 				StatusToSet="UNSELECTABLE">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
 			</StatusBitsUpgrade>
-			
-			<!--
-			<ModelConditionUpgrade													
-				id="ModuleTag_GiveModelStatus2"
-				AddConditionFlags="USER_3">
-				<TriggeredBy>Upgrade_HideHusk</TriggeredBy>
-			</ModelConditionUpgrade>
-		-->
+
 		</Behaviors>
 		<AI>
 			<AIUpdate

@@ -23,8 +23,8 @@
 		<Behaviors>
 			<LifetimeUpdate
 				id="ModuleTag_Lifetime"
-				MinLifetime="0.01s"
-				MaxLifetime="0.01s" />
+				MinLifetime="0s"
+				MaxLifetime="0s" />
 			<DestroyDie
 				id="ModuleTag_DestroyDie">
 				<DieMuxData

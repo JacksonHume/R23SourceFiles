@@ -637,8 +637,12 @@ function OnGDIJuggernaughtHusk(self, slaughterer)
 	ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
 	
 	-- after firing weapon assign the husk to neutral
-	ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")	
+	-- ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")	
 		
+end
+
+function OnGDIHide(self)
+	ExecuteAction("UNIT_SET_TEAM", self, "PlyrCivilian/teamPlyrCivilian")	
 end
 
 function OnGDIKillHusk(self)
