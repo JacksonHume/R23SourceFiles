@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<GameObject
-		id="TempProp"
+		id="TempDelayHusk"
 		Side="Neutral"
 		EditorSorting="MISC_MAN_MADE"
-		KindOf="PRELOAD SELECTABLE IGNORE_FOR_VICTORY STRUCTURE IGNORED_IN_FINDPOSITIONAROUND"
-		EditorName="TempProp">
+		KindOf="NO_COLLIDE HIDE_IF_FOGGED IMMOBILE UNATTACKABLE NOT_AUTOACQUIRABLE"
+		EditorName="TempDelayHusk">
 		<DisplayName>PropName</DisplayName>
 		<ArmorSet
 			Armor="NoArmor" />
@@ -21,36 +21,23 @@
 			</ScriptedModelDraw>
 		</Draws>
 		<Behaviors>
-			<!--
-			<AttachUpdate
-				id="ModuleTag_Attach"
-				Range="25.0"
-				Teleport="true"
-				UseGeometry="true"
-				DetachWhenParentHealed="true">
-				<ObjectFilter
-					Rule="ALL">
-					<ExcludeThing>AlienCrystalShield</ExcludeThing>
-				</ObjectFilter>
-			</AttachUpdate>
-	
-			
-			<FireWeaponUpdate
-				id="ModuleTag_FireWeaponUpdate">
-				<FireWeaponNugget
-					WeaponName="AlienWormholeWeaponTrigger"
-				/>
-			</FireWeaponUpdate>
-		-->
 			<LifetimeUpdate
 				id="ModuleTag_Lifetime"
-				MinLifetime="1.0s"
-				MaxLifetime="1.0s" />
+				MinLifetime="0.01s"
+				MaxLifetime="0.01s" />
 			<DestroyDie
 				id="ModuleTag_DestroyDie">
 				<DieMuxData
 					DeathTypes="ALL" />
 			</DestroyDie>
+
+			<FireWeaponWhenDead
+				id="ModuleTag_FireWeaponWhenDead"
+				DeathWeapon="DelayHuskHide"
+				InitiallyActive="true">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</FireWeaponWhenDead>
 		</Behaviors>
 		<Body>
 			<ActiveBody
@@ -58,60 +45,5 @@
 				MaxHealth="100.0"
 				InitialHealth="100.0" />
 		</Body>
-		<Geometry
-			IsSmall="True">
-			<!--
-			<Shape
-				Type="BOX"
-				MajorRadius="1"
-				MinorRadius="9"
-				Height="11.5"
-				FrontAngle="0d"
-				Active="True"
-				ContactPointGeneration="VEHICLE"
-				UsedForHealthBox="True">
-				<Offset
-					x="20.0"
-					y="0.0"
-					z="0.0" />
-			</Shape>
-
-			<Shape
-				Type="BOX"
-				MajorRadius="8"
-				MinorRadius="1"
-				Height="11.5"
-				FrontAngle="0d"
-				Active="True"
-				ContactPointGeneration="VEHICLE"
-				UsedForHealthBox="True">
-				<Offset
-					x="8.0" 
-					y="9"
-					z="0.0" />
-			</Shape>
-			
-			<Shape
-				Type="BOX"
-				MajorRadius="8"
-				MinorRadius="1"
-				Height="11.5"
-				FrontAngle="0d"
-				Active="True"
-				ContactPointGeneration="VEHICLE"
-				UsedForHealthBox="True">
-				<Offset
-					x="8.0"
-					y="-9"
-					z="0.0" />
-			</Shape>
-			-->
-			<Shape
-				Type="BOX"
-				MajorRadius="5.0"
-				MinorRadius="9.0"
-				Height="11.5"
-				ContactPointGeneration="VEHICLE" />
-		</Geometry>
 	</GameObject>
 </AssetDeclaration>

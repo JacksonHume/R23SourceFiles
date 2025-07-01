@@ -148,10 +148,10 @@
 				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
 			</StealthUpgrade>  -->
 
-			<!-- after changing husk to neutral we will stealth this to stop health bar showing  -->
+			<!-- after changing husk to neutral we will stealth this to stop health bar showing -->
 			<InvisibilityUpdate
 				id="ModuleTag_InvisibilityJugg"
-				UpdatePeriod="0.1s">
+				UpdatePeriod="0.5s">
 				<InvisibilityNugget />
 				<RequiresUpgrade>Upgrade_EngineerCapture</RequiresUpgrade>
 			</InvisibilityUpdate>
@@ -271,7 +271,14 @@
 				MaxLifetime="300s"
 			/>	
 
-			<StatusBitsUpgrade id="ModuleTag_VeterancyUpgrade" 
+			<OCLSpecialPower
+				id="ModuleTag_SpawnHuskOCL"
+				SpecialPowerTemplate="SpecialPower_SpawnHuskOCL"
+				OCL="GDIJuggernaughtHuskReplace"
+				CreateLocation="USE_OWNER_OBJECT"
+			/>
+
+			<StatusBitsUpgrade id="ModuleTag_EventTrigger" 
 				StatusToSet="RIDER1">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
 			</StatusBitsUpgrade>
@@ -280,13 +287,14 @@
 				StatusToSet="UNSELECTABLE">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
 			</StatusBitsUpgrade>
-
-			<ModelConditionUpgrade
-				id="ModuleTag_GiveModelStatus"
+			
+			<!--
+			<ModelConditionUpgrade													
+				id="ModuleTag_GiveModelStatus2"
 				AddConditionFlags="USER_3">
-				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+				<TriggeredBy>Upgrade_HideHusk</TriggeredBy>
 			</ModelConditionUpgrade>
-
+		-->
 		</Behaviors>
 		<AI>
 			<AIUpdate

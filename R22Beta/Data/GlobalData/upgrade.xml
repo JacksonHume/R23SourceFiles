@@ -18,6 +18,10 @@
 	/>
 -->
 
+	<UpgradeTemplate id="Upgrade_HideHusk"
+		Type="OBJECT"
+	/>
+
 	<UpgradeTemplate id="Upgrade_EngineerCapture"
 		Type="OBJECT"
 		BuildCost="0"

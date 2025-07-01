@@ -2,6 +2,11 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<AttributeModifier
+		id="AttributeModifier_HuskHide"
+		Category="NONE"
+		ModelConditionsSet="USER_3" />
+
+	<AttributeModifier
 		id="AttributeModifier_HuskTimer"
 		Category="NONE"
 		Duration="4s"

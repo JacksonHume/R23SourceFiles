@@ -630,16 +630,31 @@ function OnGDIJuggernaughtHusk(self, slaughterer)
 		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_8/teamPlayer_8")
 	end
 
+	-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0.01s and this triggers the USER_3 state on the husk which hides it.
 	ObjectCreateAndFireTempWeapon(slaughterer, "HuskToJuggernaut")
-		
+	
+	-- spawn the jugg
+	ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
+	
 	-- after firing weapon assign the husk to neutral
-	ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")
+	ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")	
+		
 end
 
 function OnGDIKillHusk(self)
 	--ExecuteAction("SHOW_MILITARY_CAPTION", "HUSK KILL.", 2)		
 	ExecuteAction("NAMED_DELETE",self)
 end
+
+--function OnHuskSPUse(slaughterer)
+	-- now hide the husk after spawning the jugg so it doesnt flash on screen
+--	if ObjectHasUpgrade(slaughterer, "Upgrade_EngineerCapture") then
+--	ExecuteAction("SHOW_MILITARY_CAPTION", "condition met", 2)	
+		-- grant an upgrade that triggers the stealth detection
+--		ObjectGrantUpgrade(slaughterer, "Upgrade_HideHusk")
+		-- ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", slaughterer, "USER_3", 999999, 100)
+--	end
+--end
 
 function OnGDIWatchTowerCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_01", true )

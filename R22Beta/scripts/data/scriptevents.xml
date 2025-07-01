@@ -480,7 +480,11 @@
 		</ModelConditionEvent>									
 		<ModelConditionEvent Name="OnCapturedEnd">
 			<Conditions>-CAPTURED</Conditions>
-		</ModelConditionEvent>									
+		</ModelConditionEvent>		
+		
+		<ModelConditionEvent Name="OnUsingWeaponA">
+			<Conditions>+USING_WEAPON_A</Conditions>
+		</ModelConditionEvent>					
 
 		<ObjectStatusEvent Name="OnTempDefected">
 			<Conditions>+TEMPORARILY_DEFECTED</Conditions>
@@ -746,6 +750,14 @@
 	<EventList Name="GDIEngineerFunctions" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnSlaughtered"	ScriptFunctionName="OnGDIJuggernaughtHusk" DebugSingleStep="false"/>
 	</EventList>
+
+	<EventList Name="R23GDIHuskFunctions" Inherit="BaseScriptFunctions">  	
+		<EventHandler EventName="OnUsingWeaponA"	ScriptFunctionName="OnHuskSPUse" DebugSingleStep="false"/>
+
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
+		<!--<EventHandler EventName="OnRider1"	ScriptFunctionName="OnGDIJuggernaughtHusk" DebugSingleStep="false"/> -->
+		<EventHandler EventName="OnUser9End"	ScriptFunctionName="OnGDIKillHusk" DebugSingleStep="false"/>
+	</EventList>
 	
 	<!-- r21 -->
 	
@@ -934,6 +946,7 @@
         <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
 		<!--<EventHandler EventName="OnRider1"	ScriptFunctionName="OnGDIJuggernaughtHusk" DebugSingleStep="false"/> -->
 		<EventHandler EventName="OnUser9End"	ScriptFunctionName="OnGDIKillHusk" DebugSingleStep="false"/>
+		
     </EventList>
 
     <EventList Name="NODShredderFunctions" Inherit="BaseScriptFunctions">

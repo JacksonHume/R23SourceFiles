@@ -2,6 +2,10 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<SpecialPowerTemplate
+		id="SpecialPower_SpawnHuskOCL"
+		TargetType="LOCATION" />
+
+	<SpecialPowerTemplate
 		id="SpecialPower_ConversionBeamUpgraded"
 		TargetType="OBJECT"
 		MaxCastRange="100"

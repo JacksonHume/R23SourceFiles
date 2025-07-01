@@ -5,14 +5,20 @@
 		id="GDIJuggernaughtHuskReplace">
 		<CreateObject
 			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
-			Disposition="LIKE_EXISTING"
+			Disposition="RELATIVE_ANGLE"
 			TempModelCondition="USER_5"
 			TempModelConditionTime="3.0s"
 			StartingBusyTime="3.0s"
 			DisabledWhileBusy="true"
-			MinHealth="0.5"
-			MaxHealth="0.5">
+			MinHealth="0.3"
+			MaxHealth="0.3">
 			<CreateObject>GDIJuggernaught</CreateObject>
+		</CreateObject>
+		<!-- workaround to hide husk -->
+		<CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			Options="IGNORE_ALL_OBJECTS">
+			<CreateObject>TempDelayHusk</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
 
