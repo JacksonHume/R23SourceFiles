@@ -597,6 +597,8 @@ end
 -- and if not will store the owner of self in a local variable and then assign slaughterer the owner obtained from self.
 function OnGDIJuggernaughtHusk(self, slaughterer)
 
+	-- might have to save all these objects in a table.
+
     local unitOwner = ObjectTeamName(self)
 	
 	-- play the husk capture workaround eva sound
@@ -628,6 +630,8 @@ function OnGDIJuggernaughtHusk(self, slaughterer)
 		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_7/teamPlayer_7")
 	elseif strfind(tostring(unitOwner), "teamPlayer_8") then
 		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_8/teamPlayer_8")
+	else 
+		ExecuteAction("UNIT_SET_TEAM", slaughterer, "SkirmishNeutral/teamSkirmishNeutral")
 	end
 
 	-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0.01s and this triggers the USER_3 state on the husk which hides it.
@@ -648,6 +652,17 @@ end
 function OnGDIKillHusk(self)
 	--ExecuteAction("SHOW_MILITARY_CAPTION", "HUSK KILL.", 2)		
 	ExecuteAction("NAMED_DELETE",self)
+end
+
+-- check if its a player or not and sets RIDER2 to it which will prevent the SlaughterHordeContain module from activating on this engineer.
+function OnGDIEngineerCreated(self)
+	local unitOwner = ObjectTeamName(self)
+
+	if strfind(tostring(unitOwner), "teamPlayer_1") == nil and strfind(tostring(unitOwner), "teamPlayer_2") == nil and 
+	strfind(tostring(unitOwner), "teamPlayer_3") == nil and strfind(tostring(unitOwner), "teamPlayer_4") == nil and 
+	strfind(tostring(unitOwner), "teamPlayer_5") == nil and strfind(tostring(unitOwner), "teamPlayer_6") == nil and 
+	strfind(tostring(unitOwner), "teamPlayer_7") == nil and strfind(tostring(unitOwner), "teamPlayer_8") == nil 
+	then ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "RIDER2", 999999, 100) end
 end
 
 --function OnHuskSPUse(slaughterer)

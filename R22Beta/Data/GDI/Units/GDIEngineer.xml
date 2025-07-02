@@ -503,7 +503,7 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_06"
-				AILuaEventsList="GDIEngineerFunctions"
+				AILuaEventsList="GDIEngineerFunctions_R23"
 				AutoAcquireEnemiesWhenIdle="YES" />
 		</AI>
 		<Body>

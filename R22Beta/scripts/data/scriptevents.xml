@@ -747,8 +747,9 @@
 		<EventHandler EventName="OnErrorChecker" ScriptFunctionName="OnErrorChecker_renwars" DebugSingleStep="false"/>
 	</EventList>
 	
-	<EventList Name="GDIEngineerFunctions" Inherit="BaseScriptFunctions">  	
+	<EventList Name="GDIEngineerFunctions_R23" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnSlaughtered"	ScriptFunctionName="OnGDIJuggernaughtHusk" DebugSingleStep="false"/>
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIEngineerCreated" DebugSingleStep="false"/>
 	</EventList>
 
 	<EventList Name="R23GDIHuskFunctions" Inherit="BaseScriptFunctions">  	

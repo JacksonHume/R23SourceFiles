@@ -211,13 +211,15 @@
 				ResetInitialTeamOnCapture="true"
 				KillPassengersOnDeath="true">
 				<CanAlwaysEnterObjectFilter
-					Rule="ANY">
+					Rule="ANY"
+					RejectModelCondition="RIDER2">
 					<IncludeThing>GDIEngineer</IncludeThing>
 					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
 					<IncludeThing>ZOCOMEngineer</IncludeThing>
 				</CanAlwaysEnterObjectFilter>
 				<PassengerFilter
-					Rule="ANY">
+					Rule="ANY"
+					RejectModelCondition="RIDER2">
 					<IncludeThing>GDIEngineer</IncludeThing>
 					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
 					<IncludeThing>ZOCOMEngineer</IncludeThing>
