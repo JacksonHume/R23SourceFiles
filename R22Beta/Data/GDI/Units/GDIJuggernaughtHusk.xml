@@ -231,7 +231,7 @@
 					BonePrefix="">
 					<Filter
 						Rule="NONE"
-						Include="INFANTRY"
+						Include="ENGINEER"
 						Relationship="" />
 				</PassengerData>
 				<UpgradeContainerOnContain

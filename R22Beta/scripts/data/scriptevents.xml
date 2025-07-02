@@ -753,8 +753,9 @@
 	</EventList>
 
 	<EventList Name="HuskFunctions_R23" Inherit="BaseScriptFunctions">  	
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
-		<EventHandler EventName="OnUser9End"	ScriptFunctionName="OnGDIKillHusk" DebugSingleStep="false"/>
+		<!--<EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/> -->
+		<EventHandler EventName="OnUser9End"	ScriptFunctionName="OnKillHusk" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
 	</EventList>
 	
 	<!-- r21 -->
@@ -942,10 +943,9 @@
     <!-- ############################################################################ -->
     <EventList Name="GDIJuggernaughtFunctions" Inherit="BaseScriptFunctions">
         <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
-		 <EventHandler EventName="OnUser3"	ScriptFunctionName="OnGDIHide" DebugSingleStep="false"/>
-		<!--<EventHandler EventName="OnRider1"	ScriptFunctionName="OnHuskCapture" DebugSingleStep="false"/> -->
-		<EventHandler EventName="OnUser9End"	ScriptFunctionName="OnGDIKillHusk" DebugSingleStep="false"/>
-		
+		<!--<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
+		<EventHandler EventName="OnRider1"	ScriptFunctionName="OnHuskCapture" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser9End"	ScriptFunctionName="OnKillHusk" DebugSingleStep="false"/> -->
     </EventList>
 
     <EventList Name="NODShredderFunctions" Inherit="BaseScriptFunctions">

@@ -680,7 +680,7 @@ function OnHuskCapture(self, slaughterer)
 			end
 			
 			if not matched then
-				ExecuteAction("UNIT_SET_TEAM", slaughterer, "SkirmishNeutral/teamSkirmishNeutral")
+				ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")
 			end
 
 			-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0s and this triggers the USER_3 state on the husk which hides it.
@@ -692,11 +692,11 @@ function OnHuskCapture(self, slaughterer)
 	end
 end
 
-function OnGDIHide(self)
+function OnHuskHide(self)
 	ExecuteAction("UNIT_SET_TEAM", self, "PlyrCivilian/teamPlyrCivilian")	
 end
 
-function OnGDIKillHusk(self)	
+function OnKillHusk(self)	
 	ExecuteAction("NAMED_DELETE",self)
 end
 
