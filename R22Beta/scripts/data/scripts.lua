@@ -55,6 +55,17 @@ bar2 = {} -- for tracking the bar two of the harvester.
 bar3 = {} -- for tracking the bar three of the harvester.
 bar4 = {} -- for tracking the bar four of the harvester.
 
+--player1 = 0
+--player2 = 0
+--player3 = 0
+--player4 = 0
+--player5 = 0
+--player6 = 0
+--player7 = 0
+--player8 = 0
+
+playerTimes = {}
+
 mobatest = {}
 mobaspawnrego = {}
 
@@ -571,7 +582,6 @@ function OnHarvDestroyed_103(self)
 	harvturncounttable[a] = nil
 end
 
-
 -- ###################################################################
 
 -- ################ NEW FUNCTION FOR 1.03 RGA #######################
@@ -592,65 +602,66 @@ function OnGDIJuggernaughtCreated(self)
 	
 end
 
-
 -- This function will check if the slaughterer is not an epic unit 
 -- and if not will store the owner of self in a local variable and then assign slaughterer the owner obtained from self.
 function OnGDIJuggernaughtHusk(self, slaughterer)
 
-	-- might have to save all these objects in a table.
-
-    local unitOwner = ObjectTeamName(self)
-	
-	-- play the husk capture workaround eva sound
-	-- we need to save the frames so that this doesnt play longer than 30 seconds (30*30 = 900), this variable is stored as a global variable
-	-- ExecuteAction("PLAY_SOUND_AS_IF_IT_WAS_AN_EVA_EVENT", "Geva_UnitRecovered")
-	--ObjectBroadcastEventToEnemies(slaughterer, HuskRepaired, 99999)
-	
-	
-	-- not sure if this will show the minimap flash on this object.
-	ObjectCapturingObjectPlayerSide(slaughterer)
-
-	
-	-- play the husk capture sound found on EngineerContain
-	ObjectPlaySound(slaughterer, "BuildingCaptured")	
-	
-	if strfind(tostring(unitOwner), "teamPlayer_1") then 
-		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_1/teamPlayer_1")
-	elseif strfind(tostring(unitOwner), "teamPlayer_2") then 
-		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_2/teamPlayer_2")
-	elseif strfind(tostring(unitOwner), "teamPlayer_3") then
-		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_3/teamPlayer_3")
-	elseif strfind(tostring(unitOwner), "teamPlayer_4") then
-		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_4/teamPlayer_4")
-	elseif strfind(tostring(unitOwner), "teamPlayer_5") then
-		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_5/teamPlayer_5")
-	elseif strfind(tostring(unitOwner), "teamPlayer_6") then
-		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_6/teamPlayer_6")
-	elseif strfind(tostring(unitOwner), "teamPlayer_7") then
-		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_7/teamPlayer_7")
-	elseif strfind(tostring(unitOwner), "teamPlayer_8") then
-		ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_8/teamPlayer_8")
-	else 
-		ExecuteAction("UNIT_SET_TEAM", slaughterer, "SkirmishNeutral/teamSkirmishNeutral")
-	end
-
-	-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0.01s and this triggers the USER_3 state on the husk which hides it.
-	ObjectCreateAndFireTempWeapon(slaughterer, "HuskToJuggernaut")
-	
-	-- spawn the jugg
-	ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
-	
-	-- after firing weapon assign the husk to neutral
-	-- ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")	
+	if self ~= nil and slaughterer ~= nil then
 		
+		local matched = false
+		local unitOwner = ObjectTeamName(self)
+		-- gets current frame and then compares it to the players frame
+		local curFrame = GetFrame()
+			
+		-- play the husk capture sound found on EngineerContain.
+		ObjectPlaySound(slaughterer, "BuildingCaptured")
+
+		-- fire a weapon of the player that controls the engineer on the husk (0% scaler of 1) to substitute the fx of before.
+
+		-- for now the radar event works on all players.
+		ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)		
+		
+		for i = 1, 8 do
+			local teamStr = "teamPlayer_" .. i
+			
+			if strfind(tostring(unitOwner), teamStr) then
+				-- Change the team of the player
+				ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_" .. i .. "/" .. teamStr)
+
+				-- Initialize value to 0 if it doesnt exist yet
+				if playerTimes[i] == nil then
+					playerTimes[i] = 0
+				end
+				
+				-- Play sound if 900 frames has passed.
+				if playerTimes[i] == 0 or curFrame - playerTimes[i] >= 900 then
+					ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Geva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
+					playerTimes[i] = curFrame
+				end
+
+				matched = true
+				break
+			end
+		end
+		
+		if not matched then
+			ExecuteAction("UNIT_SET_TEAM", slaughterer, "SkirmishNeutral/teamSkirmishNeutral")
+		end
+
+		-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0s and this triggers the USER_3 state on the husk which hides it.
+		ObjectCreateAndFireTempWeapon(slaughterer, "HuskToJuggernaut")
+		
+		-- spawn the jugg
+		ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
+
+	end
 end
 
 function OnGDIHide(self)
 	ExecuteAction("UNIT_SET_TEAM", self, "PlyrCivilian/teamPlyrCivilian")	
 end
 
-function OnGDIKillHusk(self)
-	--ExecuteAction("SHOW_MILITARY_CAPTION", "HUSK KILL.", 2)		
+function OnGDIKillHusk(self)	
 	ExecuteAction("NAMED_DELETE",self)
 end
 
@@ -664,16 +675,6 @@ function OnGDIEngineerCreated(self)
 	strfind(tostring(unitOwner), "teamPlayer_7") == nil and strfind(tostring(unitOwner), "teamPlayer_8") == nil 
 	then ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "RIDER2", 999999, 100) end
 end
-
---function OnHuskSPUse(slaughterer)
-	-- now hide the husk after spawning the jugg so it doesnt flash on screen
---	if ObjectHasUpgrade(slaughterer, "Upgrade_EngineerCapture") then
---	ExecuteAction("SHOW_MILITARY_CAPTION", "condition met", 2)	
-		-- grant an upgrade that triggers the stealth detection
---		ObjectGrantUpgrade(slaughterer, "Upgrade_HideHusk")
-		-- ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", slaughterer, "USER_3", 999999, 100)
---	end
---end
 
 function OnGDIWatchTowerCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_01", true )

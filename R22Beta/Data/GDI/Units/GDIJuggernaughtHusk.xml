@@ -204,11 +204,11 @@
 				CollidePickup="True"
 				AllowNeutralInside="true"
 				EjectPassengersOnDeath="False"
-				AllowOwnPlayerInsideOverride="true"
+				AllowOwnPlayerInsideOverride="false"
 				ShowPips="true"
 				EnterSound="AudioEvent:BuildingRepaired"
 				ExitSound=""
-				ResetInitialTeamOnCapture="true"
+				ResetInitialTeamOnCapture="false"
 				KillPassengersOnDeath="true">
 				<CanAlwaysEnterObjectFilter
 					Rule="ANY"
