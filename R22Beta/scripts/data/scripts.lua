@@ -604,56 +604,91 @@ end
 
 -- This function will check if the slaughterer is not an epic unit 
 -- and if not will store the owner of self in a local variable and then assign slaughterer the owner obtained from self.
-function OnGDIJuggernaughtHusk(self, slaughterer)
+function OnHuskCapture(self, slaughterer)
 
 	if self ~= nil and slaughterer ~= nil then
+	
+		local unitType = ObjectDescription(slaughterer)
 		
-		local matched = false
-		local unitOwner = ObjectTeamName(self)
-		-- gets current frame and then compares it to the players frame
-		local curFrame = GetFrame()
-			
-		-- play the husk capture sound found on EngineerContain.
-		ObjectPlaySound(slaughterer, "BuildingCaptured")
-
-		-- fire a weapon of the player that controls the engineer on the husk (0% scaler of 1) to substitute the fx of before.
-
-		-- for now the radar event works on all players.
-		ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)		
+		-- gdi marv 30354418                  GDI CCA0AB62
+		-- zocom marv 37F0A5F5                ZOCOM 8E3D36F8
+		-- steel talons marv 565BE825		  STEEL TALONS
+		-- nod redeemer D8BE0529              NOD ED46C05A
+		-- black hand redeeemer CD5A5360      BLACK HAND 5D10A932
+		-- mok redeemer 711A18DF              MARKED OF KANE
+		-- scrin hexapod 1D137C85             SCRIN
+		-- reaper hexapod 146C2890            REAPER17
+		-- t59 hexapod A4FD281B               TRAVELER59
 		
-		for i = 1, 8 do
-			local teamStr = "teamPlayer_" .. i
-			
-			if strfind(tostring(unitOwner), teamStr) then
-				-- Change the team of the player
-				ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_" .. i .. "/" .. teamStr)
+		-- only do this if it not an epic unit 
+		if strfind(tostring(unitType), "30354418") == nil and strfind(tostring(unitType), "37F0A5F5") == nil and 
+		   strfind(tostring(unitType), "565BE825") == nil and strfind(tostring(unitType), "D8BE0529") == nil and 
+		   strfind(tostring(unitType), "CD5A5360") == nil and strfind(tostring(unitType), "711A18DF") == nil and 
+		   strfind(tostring(unitType), "1D137C85") == nil and strfind(tostring(unitType), "146C2890") == nil and 
+		   strfind(tostring(unitType), "A4FD281B") == nil then
 
-				-- Initialize value to 0 if it doesnt exist yet
-				if playerTimes[i] == nil then
-					playerTimes[i] = 0
-				end
+			local matched = false
+			local unitOwner = ObjectTeamName(self)
+			-- gets current frame and then compares it to the players frame
+			local curFrame = GetFrame()
 				
-				-- Play sound if 900 frames has passed.
-				if playerTimes[i] == 0 or curFrame - playerTimes[i] >= 900 then
-					ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Geva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
-					playerTimes[i] = curFrame
+			-- play the husk capture sound found on EngineerContain.
+			ObjectPlaySound(slaughterer, "BuildingCaptured")
+
+			-- fire a weapon of the player that controls the engineer on the husk (0% scaler of 1) to substitute the fx of before.
+
+			-- for now the radar event works on all players.
+			ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)		
+			
+			for i = 1, 8 do
+				local teamStr = "teamPlayer_" .. i
+				
+				if strfind(tostring(unitOwner), teamStr) then
+					-- Change the team of the player
+					ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_" .. i .. "/" .. teamStr)
+
+					-- Initialize value to 0 if it doesnt exist yet
+					if playerTimes[i] == nil then
+						playerTimes[i] = 0
+					end
+					
+					-- Play sound if 300 frames has passed.
+					if playerTimes[i] == 0 or curFrame - playerTimes[i] >= 300 then	
+						
+						local playerFaction = ObjectPlayerSide(self) 					
+						-- print(playerFaction)
+							
+						if strfind(tostring(playerFaction), "CCA0AB62") ~= nil or strfind(tostring(playerFaction), "8E3D36F8") ~= nil then 
+							-- GDI EVA
+							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Geva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
+						elseif 
+							strfind(tostring(playerFaction), "ED46C05A") ~= nil then 
+							-- NOD EVA
+							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Neva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
+						elseif 
+							strfind(tostring(playerFaction), "30354418") ~= nil then 
+							-- SCRIN EVA
+							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Aeva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
+						end
+
+						playerTimes[i] = curFrame
+					end
+
+					matched = true
+					break
 				end
-
-				matched = true
-				break
 			end
-		end
-		
-		if not matched then
-			ExecuteAction("UNIT_SET_TEAM", slaughterer, "SkirmishNeutral/teamSkirmishNeutral")
-		end
+			
+			if not matched then
+				ExecuteAction("UNIT_SET_TEAM", slaughterer, "SkirmishNeutral/teamSkirmishNeutral")
+			end
 
-		-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0s and this triggers the USER_3 state on the husk which hides it.
-		ObjectCreateAndFireTempWeapon(slaughterer, "HuskToJuggernaut")
-		
-		-- spawn the jugg
-		ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
-
+			-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0s and this triggers the USER_3 state on the husk which hides it.
+			ObjectCreateAndFireTempWeapon(slaughterer, "DelayHuskDeletion")
+			
+			-- spawn the husk
+			ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
+		end
 	end
 end
 
@@ -666,7 +701,7 @@ function OnGDIKillHusk(self)
 end
 
 -- check if its a player or not and sets RIDER2 to it which will prevent the SlaughterHordeContain module from activating on this engineer.
-function OnGDIEngineerCreated(self)
+function OnEngineerCreated(self)
 	local unitOwner = ObjectTeamName(self)
 
 	if strfind(tostring(unitOwner), "teamPlayer_1") == nil and strfind(tostring(unitOwner), "teamPlayer_2") == nil and 

@@ -191,7 +191,8 @@
 				AddConditionFlags="USER_6">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
-			<!-- i can add to this sound the other sound  -->
+
+			<!-- husk crash workaround module -->
 			<SlaughterHordeContain
 				id="ModuleTag_Contain"
 				ObjectStatusOfContained=""
@@ -227,7 +228,7 @@
 				<DieMuxData
 					DeathTypes="ALL" />
 				<PassengerData
-					BonePrefix="INVISBONE01">
+					BonePrefix="">
 					<Filter
 						Rule="NONE"
 						Include="INFANTRY"
@@ -272,19 +273,20 @@
 				MinLifetime="300s"
 				MaxLifetime="300s"
 			/>	
-
+			<!-- husk crash workaround module -->
 			<OCLSpecialPower
 				id="ModuleTag_SpawnHuskOCL"
 				SpecialPowerTemplate="SpecialPower_SpawnHuskOCL"
 				OCL="GDIJuggernaughtHuskReplace"
 				CreateLocation="USE_OWNER_OBJECT"
 			/>
-
+			<!-- husk crash workaround module -->
 			<StatusBitsUpgrade id="ModuleTag_EventTrigger" 
 				StatusToSet="RIDER1">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
 			</StatusBitsUpgrade>
 
+			<!-- husk crash workaround module -->
 			<StatusBitsUpgrade id="ModuleTag_Unselectable" 
 				StatusToSet="UNSELECTABLE">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
@@ -294,7 +296,7 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AI"
-				AILuaEventsList="GDIJuggernaughtFunctions" />
+				AILuaEventsList="HuskFunctions_R23" />
 		</AI>
 		<Body>
 			<ActiveBody

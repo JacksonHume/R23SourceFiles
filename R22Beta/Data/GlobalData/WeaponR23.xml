@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- Engineer crash workaround weapons -->
+
 	<WeaponTemplate
 		id="DelayHuskHide"
 		Name="DelayHuskHide"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS SELF">
 		<Nuggets>
-			<!-- flags need to be changed here -->
 			<AttributeModifierNugget
 				Radius="5.0"
 				PartitionFilterTestType="CIRCLE"
@@ -16,39 +17,24 @@
 					StatusBitFlags=""
 					Alignment="NONE">
 					<IncludeThing>GDIJuggernaughtHusk</IncludeThing>
+					<IncludeThing>SteelTalonsBehemothHusk</IncludeThing>
+					<IncludeThing>NODAvatarHusk</IncludeThing>
+					<IncludeThing>BlackHandCustomWarmechHusk</IncludeThing>
+					<IncludeThing>MarkedOfKaneAvatarHusk</IncludeThing>
+					<IncludeThing>AlienAnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>Reaper17AnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>Traveler59AnnihilatorTripodHusk</IncludeThing>
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 		</Nuggets>
 	</WeaponTemplate>
 
 	<WeaponTemplate
-		id="HuskToJuggernaut"
-		Name="HuskToJuggernaut"
+		id="DelayHuskDeletion"
+		Name="DelayHuskDeletion"
 		RequiredFiringObjectStatus=""
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS SELF">
 		<Nuggets>
-			<!-- maybe instead of trhis we assign the ocl on a status trigger and spawn it via xml 
-			 
-				<OCLSpecialPower
-				id="ModuleTag_TemporalWormholePower"
-				SpecialPowerTemplate="SpecialPower_TemporalWormhole"
-				OCL="OCL_TemporalWormhole"
-				CreateLocation="CREATE_AT_LOCATION"
-			/>
-
-			
-			<SpecialPowerNugget
-				ForbiddenTargetObjectStatus=""
-				SpecialPowerTemplate="SpecialPower_SpawnHuskOCL"
-			/>
-			-->
-			<!--
-			<WeaponOCLNugget
-				PartitionFilterTestType="EXTENTS_3D"
-				ForbiddenTargetObjectStatus=""
-				RequiredObjectStatus=""
-				WeaponOCL="GDIJuggernaughtHuskReplace" />
-		-->
 			<AttributeModifierNugget
 				Radius="5.0"
 				PartitionFilterTestType="CIRCLE"
@@ -59,6 +45,13 @@
 					StatusBitFlags=""
 					Alignment="NONE">
 					<IncludeThing>GDIJuggernaughtHusk</IncludeThing>
+					<IncludeThing>SteelTalonsBehemothHusk</IncludeThing>
+					<IncludeThing>NODAvatarHusk</IncludeThing>
+					<IncludeThing>BlackHandCustomWarmechHusk</IncludeThing>
+					<IncludeThing>MarkedOfKaneAvatarHusk</IncludeThing>
+					<IncludeThing>AlienAnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>Reaper17AnnihilatorTripodHusk</IncludeThing>
+					<IncludeThing>Traveler59AnnihilatorTripodHusk</IncludeThing>
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 		</Nuggets>
