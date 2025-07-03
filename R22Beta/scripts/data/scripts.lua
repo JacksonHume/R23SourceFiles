@@ -608,6 +608,11 @@ function OnHuskCapture(self, slaughterer)
 
 	if self ~= nil and slaughterer ~= nil then
 	
+		-- upgrade the husk and apply status to it
+		if ObjectHasUpgrade(slaughterer, "Upgrade_EngineerCapture") == 0 then
+			ObjectGrantUpgrade(slaughterer, "Upgrade_EngineerCapture")
+		end
+	
 		local unitType = ObjectDescription(slaughterer)
 		
 		-- gdi marv 30354418                  GDI CCA0AB62

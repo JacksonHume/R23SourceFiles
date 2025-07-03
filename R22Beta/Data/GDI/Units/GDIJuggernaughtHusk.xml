@@ -11,7 +11,7 @@
 		ShockwaveResistance="100"
 		ReinvisibilityDelay="7s"
 		CommandSet="EmptyCommandSet"
-		KindOf="PRELOAD SELECTABLE CAN_CAST_REFLECTIONS NOT_AUTOACQUIRABLE IMMOBILE METAUNIT VALID_TARGET_FOR_C4 GARRISONABLE_UNTIL_DESTROYED HUSK"
+		KindOf="PRELOAD SELECTABLE CAN_CAST_REFLECTIONS NOT_AUTOACQUIRABLE IMMOBILE VALID_TARGET_FOR_C4 GARRISONABLE_UNTIL_DESTROYED HUSK"
 		RadarPriority="UNIT"
 		EditorName="GDIJuggernaughtHusk"
 		Description="Desc:JuggernautHusk">
@@ -234,6 +234,7 @@
 						Include="ENGINEER"
 						Relationship="" />
 				</PassengerData>
+				<!--
 				<UpgradeContainerOnContain
 					ID="Engineer">
 					<UnitFilter>
@@ -243,6 +244,7 @@
 					</UnitFilter>
 					<UpgradeList>Upgrade_EngineerCapture</UpgradeList>
 				</UpgradeContainerOnContain>
+			-->
 			</SlaughterHordeContain>  
 
 			<EngineerContain

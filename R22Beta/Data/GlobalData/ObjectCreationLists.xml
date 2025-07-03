@@ -10,8 +10,8 @@
 			TempModelConditionTime="3.0s"
 			StartingBusyTime="3.0s"
 			DisabledWhileBusy="true"
-			MinHealth="0.3"
-			MaxHealth="0.3">
+			MinHealth="0.5"
+			MaxHealth="0.5">
 			<CreateObject>GDIJuggernaught</CreateObject>
 		</CreateObject>
 		<!-- workaround to hide husk -->
