@@ -65,6 +65,7 @@ bar4 = {} -- for tracking the bar four of the harvester.
 --player8 = 0
 
 playerTimes = {}
+epicUnits = {"30354418", "565BE825", "CD5A5360", "1D137C85", "A4FD281B", "37F0A5F5", "D8BE0529", "711A18DF", "146C2890"}
 
 mobatest = {}
 mobaspawnrego = {}
@@ -612,7 +613,7 @@ function OnHuskCapture(self, slaughterer)
 			ObjectGrantUpgrade(slaughterer, "Upgrade_EngineerCapture")
 		end
 	
-		local unitType = ObjectDescription(slaughterer)
+		local unitType = tostring(ObjectDescription(slaughterer))
 		
 		-- gdi marv 30354418                  GDI CCA0AB62
 		-- zocom marv 37F0A5F5                ZOCOM 8E3D36F8
@@ -624,16 +625,21 @@ function OnHuskCapture(self, slaughterer)
 		-- reaper hexapod 146C2890            REAPER17 D1C1A775
 		-- t59 hexapod A4FD281B               TRAVELER59 B6FF40B1
 		
+		local isEpicUnit = false
+		
+		for k, v in epicUnits do 
+		   if strfind(unitType, v) then
+			 isEpicUnit = true
+			 break
+		   end	  
+		end
+		
 		-- only do this if it not an epic unit 
-		if strfind(tostring(unitType), "30354418") == nil and strfind(tostring(unitType), "37F0A5F5") == nil and 
-		   strfind(tostring(unitType), "565BE825") == nil and strfind(tostring(unitType), "D8BE0529") == nil and 
-		   strfind(tostring(unitType), "CD5A5360") == nil and strfind(tostring(unitType), "711A18DF") == nil and 
-		   strfind(tostring(unitType), "1D137C85") == nil and strfind(tostring(unitType), "146C2890") == nil and 
-		   strfind(tostring(unitType), "A4FD281B") == nil then
+		if isEpicUnit == false then
 
 			local matched = false
-			local unitOwner = ObjectTeamName(self)
-			local slaughtererOwner = ObjectTeamName(slaughterer)
+			local unitOwner = tostring(ObjectTeamName(self))
+			local slaughtererOwner = tostring(ObjectTeamName(slaughterer))
 			-- gets current frame and then compares it to the players frame
 			local curFrame = GetFrame()
 				
@@ -646,9 +652,9 @@ function OnHuskCapture(self, slaughterer)
 			for i = 1, 8 do
 				local teamStr = "teamPlayer_" .. i
 				
-				if strfind(tostring(unitOwner), teamStr) then
+				if strfind(unitOwner, teamStr) then
 					-- Change the team of the player if it isnt the same team as the slaughterer.
-					if strfind(tostring(slaughtererOwner), teamStr) == nil then 
+					if strfind(slaughtererOwner, teamStr) == nil then 
 						ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_" .. i .. "/" .. teamStr)
 					end
 
@@ -660,18 +666,18 @@ function OnHuskCapture(self, slaughterer)
 					-- Play sound if 300 frames has passed.
 					if playerTimes[i] == 0 or curFrame - playerTimes[i] >= 300 then	
 						
-						local playerFaction = ObjectPlayerSide(self) 					
+						local playerFaction = tostring(ObjectPlayerSide(self)) 					
 						-- print(playerFaction)
 							
-						if strfind(tostring(playerFaction), "CCA0AB62") ~= nil or strfind(tostring(playerFaction), "8E3D36F8") ~= nil or strfind(tostring(playerFaction), "0B2DE3F6") ~= nil then 
+						if strfind(playerFaction, "CCA0AB62") ~= nil or strfind(playerFaction, "8E3D36F8") ~= nil or strfind(playerFaction, "0B2DE3F6") ~= nil then 
 							-- GDI EVA
 							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Geva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
 						elseif 
-							strfind(tostring(playerFaction), "ED46C05A") ~= nil or strfind(tostring(playerFaction), "5D10A932") ~= nil or strfind(tostring(playerFaction), "CE39C6B1") ~= nil then 
+							strfind(playerFaction, "ED46C05A") ~= nil or strfind(playerFaction, "5D10A932") ~= nil or strfind(playerFaction, "CE39C6B1") ~= nil then 
 							-- NOD EVA
 							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Neva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
 						elseif 
-							strfind(tostring(playerFaction), "59C60CEF") ~= nil or strfind(tostring(playerFaction), "D1C1A775") ~= nil or strfind(tostring(playerFaction), "B6FF40B1") ~= nil then 
+							strfind(playerFaction, "59C60CEF") ~= nil or strfind(playerFaction, "D1C1A775") ~= nil or strfind(playerFaction, "B6FF40B1") ~= nil then 
 							-- SCRIN EVA
 							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Aeva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
 						end
@@ -710,12 +716,12 @@ end
 
 -- check if its a player or not and sets RIDER2 to it which will prevent the SlaughterHordeContain module from activating on this engineer.
 function OnEngineerCreated(self)
-	local unitOwner = ObjectTeamName(self)
+	local unitOwner = tostring(ObjectTeamName(self))
 
-	if strfind(tostring(unitOwner), "teamPlayer_1") == nil and strfind(tostring(unitOwner), "teamPlayer_2") == nil and 
-	strfind(tostring(unitOwner), "teamPlayer_3") == nil and strfind(tostring(unitOwner), "teamPlayer_4") == nil and 
-	strfind(tostring(unitOwner), "teamPlayer_5") == nil and strfind(tostring(unitOwner), "teamPlayer_6") == nil and 
-	strfind(tostring(unitOwner), "teamPlayer_7") == nil and strfind(tostring(unitOwner), "teamPlayer_8") == nil 
+	if strfind(unitOwner, "teamPlayer_1") == nil and strfind(unitOwner, "teamPlayer_2") == nil and 
+	strfind(unitOwner, "teamPlayer_3") == nil and strfind(unitOwner, "teamPlayer_4") == nil and 
+	strfind(unitOwner, "teamPlayer_5") == nil and strfind(unitOwner, "teamPlayer_6") == nil and 
+	strfind(unitOwner, "teamPlayer_7") == nil and strfind(unitOwner, "teamPlayer_8") == nil 
 	then ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "RIDER2", 999999, 100) end
 end
 
