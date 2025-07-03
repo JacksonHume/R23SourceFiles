@@ -57,6 +57,37 @@
 		</Nuggets>
 	</WeaponTemplate>
 
+	<!-- a workaround to send an alert to the player if an enemy has captured the husk -->
+	<WeaponTemplate
+		id="AlertEnemyPlayer"
+		Name="AlertEnemyPlayer"
+		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="1000.0"
+				Radius="0"
+				DamageTaperOff="20.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="GDI_ECHOCANNON"
+				DeathType="NORMAL">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship=""
+					StatusBitFlags=""
+					Include="HUSK" />
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
 
 	<!-- shard photon cannon buff vs infantry -->
 
