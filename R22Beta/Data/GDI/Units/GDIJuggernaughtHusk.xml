@@ -313,6 +313,12 @@
 				id="ModuleTag_03"
 				MaxHealth="2000" />
 		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior
+				id="ModuleTag_ASCB">
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJugg_DIEA" Frame="60 79" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
 		<Geometry
 			IsSmall="true">
 			<Shape

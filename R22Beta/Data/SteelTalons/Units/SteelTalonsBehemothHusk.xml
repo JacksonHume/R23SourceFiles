@@ -583,6 +583,12 @@
 				RemoveUpgradesOnDeath="False"
 				BurningDeathBehavior="False" />
 		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior
+				id="ModuleTag_ASCB">
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJugg_DIEA" Frame="60 79" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
 		<Geometry
 			IsSmall="True">
 			<Shape
