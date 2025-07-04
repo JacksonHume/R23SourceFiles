@@ -61,6 +61,8 @@ playerTimes = {}
 epicUnits = {"30354418", "565BE825", "CD5A5360", "1D137C85", "A4FD281B", "37F0A5F5", "D8BE0529", "711A18DF", "146C2890"}
 clientOnline = ""
 clientNetwork = ""
+LocalClientNameInit = false
+LocalClientName = nil
 
 -- dependencies
 CNC3EP1FOLDER = {  
@@ -166,6 +168,25 @@ function error_(message) --mild error for manual use
   else return nil end
 end
 
+function GetFirstHumanPlayerName()
+	for k,v in globals() do
+		if strfind(k,"ObjID") then
+			if IsPlayerAI(GetTeamName(v))==0 then 
+				LocalClientName=strupper(gsub(gsub(strsub(ObjectDescription(v),strfind(ObjectDescription(v), "player ")+10),"%s",""),"%p",""))
+				LocalClientTeam=GetTeamName(v) 
+				LocalClientNameInit=true 
+				return LocalClientName 
+			end
+		end
+	end
+	return NeutralTeam --"Player_1/teamPlayer_1"
+end
+
+function RegisterNonLuaObjectRefInLua(Object) --don't even consider use
+	globals["ObjID" .. RandomString(5)]=Object
+end
+
+
 function GetLocalClientName()
 	
 	local finalName = ""
@@ -198,28 +219,45 @@ function GetLocalClientName()
 	
 	--network name
 	if ProfileFolderPath~=nil and PathExists(ProfileFolderPath) then
-		 if FileExists(ProfileFolderPath .. "\\NetworkPref.ini") then
-			local data2 = LoadFileData(ProfileFolderPath .. "\\NetworkPref.ini")
-			local start_pos = strfind(data2,"UserName = ")
-			local end_pos   = strfind(data2,"\n",start_pos)
-			LocalClientNetworkName = gsub(gsub(gsub(strsub(data2,start_pos,end_pos),"_00",""),"UserName = ",""),"\n","")
-		else return failsafe() end 
-		--online name
-		--if FileExists(ProfileFolderPath .. "\\GameSpyLogin.ini") then
-			--local data3 = LoadFileData(ProfileFolderPath .. "\\GameSpyLogin.ini")
-			--local start_pos = strfind(data3,"lastName = ") 
-			--local end_pos   = strfind(data3,"\n",start_pos)
-			--LocalClientOnlineName = gsub(gsub(strsub(data3,start_pos,end_pos),"lastName = ",""),"\n","")  
-		--else failsafe() end
+		 -- if FileExists(ProfileFolderPath .. "\\NetworkPref.ini") then
+			-- local data2 = LoadFileData(ProfileFolderPath .. "\\NetworkPref.ini")
+			-- local start_pos = strfind(data2,"UserName = ")
+			-- local end_pos   = strfind(data2,"\n",start_pos)
+			-- LocalClientNetworkName = gsub(gsub(gsub(strsub(data2,start_pos,end_pos),"_00",""),"UserName = ",""),"\n","")
+		-- else return failsafe() end 
+		
+		--online name (for now only works with online name)
+		if FileExists(ProfileFolderPath .. "\\GameSpyLogin.ini") then
+			local data3 = LoadFileData(ProfileFolderPath .. "\\GameSpyLogin.ini")
+			local start_pos = strfind(data3,"lastName = ") 
+			local end_pos   = strfind(data3,"\n",start_pos)
+			LocalClientOnlineName = gsub(gsub(strsub(data3,start_pos,end_pos),"lastName = ",""),"\n","")  
+			LocalClientName = LocalClientOnlineName
+			return LocalClientName
+		else failsafe() end
 	else return failsafe() end
 	
-	-- pvp only at the moment as i cant make the below check work 
-	return LocalClientNetworkName
+	-- return the online name even if playing skirmish or network (for now)
+	return LocalClientName
+	
+	-- for k,v in globals() do
+		-- if strfind(k,"ObjID") then
+			-- if strfind(strupper(LocalClientNetworkName),strupper(gsub(gsub(strsub(ObjectDescription(v),strfind(ObjectDescription(v), "player ")+10),"%s",""),"%p",""))) then LocalClientName=LocalClientNetworkName LocalClientNameInit=true return LocalClientName
+				-- elseif strfind(strupper(LocalClientOnlineName),strupper(gsub(gsub(strsub(ObjectDescription(v),strfind(ObjectDescription(v), "player ")+10),"%s",""),"%p",""))) then LocalClientName=LocalClientOnlineName LocalClientNameInit=true return LocalClientName
+			-- end
+		-- end
+	-- end
+	-- for k,v in globals() do
+		-- if strfind(k,"ObjID") then
+			-- if IsPlayerAI(v)~=1 then LocalClientName=gsub(gsub(strsub(ObjectDescription(v),strfind(ObjectDescription(v), "player ")+10),"%s",""),"%p","") LocalClientNameInit=true return LocalClientName end
+		-- end
+	-- end
+	-- error_("no client name found")
+	-- return failsafe()
 
 end
 
--- get the last online name of this client
-clientPlayerName = GetLocalClientName()
+GetLocalClientName()
 
 function NoOp(self, source)
 end
@@ -795,17 +833,17 @@ function OnHuskCapture(self, slaughterer)
 			-- play the husk capture sound found on EngineerContain.
 			ObjectPlaySound(slaughterer, "BuildingCaptured")
 
-			print(unitType)
-
-			-- radar event for the same player as the player read from GameSpyLogin.ini.
-			-- husk is the same owner as the client and engineer is not the same owner as the husk
-
-			-- i need a way to extract the name from the last parentesis.
-
-			if strfind(unitType, "masterleaf") ~= nil and strfind(tostring(ObjectDescription(self)), "masterleaf") ~= nil then
-				ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)		
+			-- Extract exact player names from ObjectDescription
+			local huskPlayerName = tostring(getPlayerNameExact(slaughterer))
+			local engineerPlayerName = tostring(getPlayerNameExact(self))
+			
+			-- print(huskPlayerName .. " " .. tostring(LocalClientName))
+			
+			-- Check if husk owner matches client AND engineer owner is different
+			if strfind(strupper(huskPlayerName), strupper(LocalClientName)) ~= nil and strfind(strupper(engineerPlayerName), strupper(LocalClientName)) == nil then
+				ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)	
 			end
-
+			
 			for i = 1, 8 do
 				local teamStr = "teamPlayer_" .. i				
 				if strfind(engiOwner, teamStr) then
@@ -4921,6 +4959,29 @@ end
 
 function getPlayerName(x)
 	return strsub(ObjectDescription(x),strfind(ObjectDescription(x), "owned by ") + 16) -- Player full name
+end
+
+-- Extract just the player name from ObjectDescription output
+-- Example: 'Object 3525 [(0,0)DCB85878, owned by player 3 (masterleaf)]' -> 'masterleaf'
+function getPlayerNameExact(x)
+	local desc = ObjectDescription(x)
+	local startPos = strfind(desc, "%(")
+	local endPos = strfind(desc, "%)")
+	
+	if startPos and endPos and endPos > startPos then
+		-- Find the last occurrence of "(" before ")"
+		local lastStartPos = startPos
+		local nextPos = strfind(desc, "%(" , startPos + 1)
+		while nextPos and nextPos < endPos do
+			lastStartPos = nextPos
+			nextPos = strfind(desc, "%(" , nextPos + 1)
+		end
+		
+		-- Extract the name between the last "(" and ")"
+		return strsub(desc, lastStartPos + 1, endPos - 1)
+	end
+	
+	return nil
 end
 
 -- #################################################################
