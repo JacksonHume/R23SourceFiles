@@ -45,33 +45,182 @@ mobatimecount = {} -- tracks time elapsed per player
 mobadetectionhackstatus = {} -- tracks detection hack enabled for player
 mobaregenpods = {} -- tracks regen pod count
 mobaenergypods = {} -- tracks energy pod count
+mobatest = {}
+mobaspawnrego = {}
+
 
 harvbluetib = {} -- for counting blue tiberium in harvester
 harvgreentib = {} -- for counting green tiberium harvester
-
 -- 1 is green tiberium 0 is for blue 
 bar1 = {} -- for tracking the bar one of the harvester.
 bar2 = {} -- for tracking the bar two of the harvester.
 bar3 = {} -- for tracking the bar three of the harvester.
 bar4 = {} -- for tracking the bar four of the harvester.
 
---player1 = 0
---player2 = 0
---player3 = 0
---player4 = 0
---player5 = 0
---player6 = 0
---player7 = 0
---player8 = 0
-
 playerTimes = {}
 epicUnits = {"30354418", "565BE825", "CD5A5360", "1D137C85", "A4FD281B", "37F0A5F5", "D8BE0529", "711A18DF", "146C2890"}
+clientOnline = ""
+clientNetwork = ""
 
-mobatest = {}
-mobaspawnrego = {}
+-- dependencies
+CNC3EP1FOLDER = {  
+"Command & Conquer 3 Kane's Wrath",
+"Command & Conquer 3 Kanes Rache",
+"Command & Conquer 3 La Ira de Kane",
+"Command & Conquer 3 La Fureur de Kane",
+"Command & Conquer 3 L'ira di Kane",
+"Command and Conquer 3 Kane’s Wrath",
+"Command & Conquer 3 Gniew Kane'a",
+"Command & Conquer 3 Ярость Кейна",
+"커맨드 & 컨커 3 케인의 분노",
+"《命令与征服3 凯恩之怒》",
+"《命令与征服3 : 凯恩之怒》",
+"《終極動員令3肯恩之怒》",
+"《終極動員令3:肯恩之怒》",
+"《終極動員令3 : 肯恩之怒》",
+"命令与征服3：凯恩之怒",
+"命令与征服3 ： 凯恩之怒",
+"คอมมานด์ & คองเคอร์(tm) 3 เคนแรธ",
+"คอมมานด์ & คองเคอร์ 3 เคนแรธ",
+""
+}
+CNC3EP1FOLDERPATH = {
+"C:\\Users\\" .. getenv("USERNAME") .. "\\Documents\\",
+"C:\\Users\\" .. getenv("USERNAME") .. "\\AppData\Roaming\\"
+}
+FilePathInitialized = 0
+FilePath = ""--GetFilePath()
+MainFolder="MetaModIO"
+ErrorLogToFile                = yes
+ErrorWarnings                 = 2
+ErrorSound                    = 1
+ErrorExitType                 = 0
 
 --- ============================ FUNCTIONS ====================================
 --- define lua functions 
+
+function PathExists(PathToTest)
+    local tmppath="" .. PathToTest .. "\\" .. tmpname() .. ""
+	local filehandle = writeto(tmppath)
+	if filehandle ~= nil then closefile(filehandle) end
+	local IsPathExistent = rename(tmppath, tmppath)
+	remove(tmppath)
+	if IsPathExistent then return true	
+	else return false end
+end
+
+function FileExists(FilePathToTest)
+	local IsFileExistent = rename(FilePathToTest, FilePathToTest)
+	if IsFileExistent then return 1	
+	else return 0 end
+end
+
+function LoadFileData(file)
+   if FilePathInitialized ~= 1 then FilePath = GetFilePath() end 
+   if file == nil then return "" end
+   if FileExists(file) then
+	   local filehandle = openfile(file, 'r')
+	   local data = read(filehandle, '*a') 
+	   closefile(filehandle)
+	   return data
+   end
+end
+
+function GetFilePath()   
+ if FilePathInitialized == 1 then return FilePath
+ else
+   for i=1,getn(CNC3EP1FOLDER)-1,1 do 
+    for j=1,getn(CNC3EP1FOLDERPATH),1 do 
+      if PathExists(CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i]) then
+	    local FinalPath="" .. CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i] .. "\\" .. MainFolder .. "\\"
+	    if PathExists(FinalPath) then 
+	      FilePathInitialized = 1 
+          FilePath=FinalPath
+	      return FinalPath
+	     else 
+	      return "" .. CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i] .. "\\"
+		    --CreateFolder(CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i],MainFolder)
+		    --if PathExists(FinalPath) then return FinalPath
+		    --else return "" .. CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i] .. "\\" end
+	    end
+      end
+    end   
+   end
+    return CNC3EP1FOLDER[getn(CNC3EP1FOLDER)]
+ end
+end
+
+function error_(message) --mild error for manual use
+  --local errorlevel = 4
+  if reason==nil then reason="unknown" end
+  if ErrorLogToFile==1 then WriteToFile("ErrorLogToFile(" .. date() .. "): " .. message,GetFilePath() .. ErrorFileLog,nil,"hide") end   --"function " .. getinfo(errorlevel).name .. ", line " .. getinfo(errorlevel).currentline .. ", LineOfFunctionCall " .. getinfo(errorlevel+1).currentline .. ", reason "
+  if ErrorWarnings==1 then 
+    --local printinfo="LUA error in function: " .. getinfo(errorlevel).name .. ", line: " .. getinfo(errorlevel).currentline .. ",\nreason: "
+    print("LUA error(" .. date() .. "): " .. message) 
+    ExecuteAction("DISPLAY_TEXT","MESSAGE:ERROR") 
+  end
+  if ErrorWarnings==2 then ExecuteAction("DISPLAY_TEXT","MESSAGE:ERROR") end
+  if ErrorSound==1 then ExecuteAction("PLAY_SOUND_EFFECT", "Tutorial_TrainingStation_Select1") end
+  if ErrorExitType==1 then ExecuteAction("MAP_EXIT")   --for multiplayer
+  elseif ErrorExitType == 2 then exit()
+  else return nil end
+end
+
+function GetLocalClientName()
+	
+	local finalName = ""
+	if LocalClientNameInit then return LocalClientName end
+	local ProfileFolderPath
+	local LocalClientNetworkName
+	local LocalClientOnlineName
+	local failsafe = function()
+		LocalClientNameInit=true 
+		LocalClientName=GetFirstHumanPlayerName() --failsafe semi optimal solution
+		return LocalClientName 
+	end
+	local FolderPath = "C:\\Users\\" .. getenv("USERNAME") .. "\\AppData\\Roaming\\"
+	for i=1,getn(CNC3EP1FOLDER),1 do 
+		if PathExists(FolderPath .. CNC3EP1FOLDER[i]) then
+			FolderPath = FolderPath .. CNC3EP1FOLDER[i] .. "\\Profiles"
+			break
+		end
+	end	
+	
+	if PathExists(FolderPath) and FileExists(FolderPath .. "\\directory.ini")==1 then
+		 local data1 = LoadFileData(FolderPath .. "\\directory.ini")
+		 local start_pos = strfind(data1,"e_00_3D_00")
+		 local end_pos   = strfind(data1,"\n",start_pos)
+		 ProfileName=gsub(gsub(gsub(strsub(data1,start_pos,end_pos),"_00","") ,"e_3D",""),"\n","")
+		 ProfileFolderPath = FolderPath .. "\\" .. ProfileName
+	else return failsafe() end
+
+	-- check the files for the names and store them in local vars.
+	
+	--network name
+	if ProfileFolderPath~=nil and PathExists(ProfileFolderPath) then
+		 if FileExists(ProfileFolderPath .. "\\NetworkPref.ini") then
+			local data2 = LoadFileData(ProfileFolderPath .. "\\NetworkPref.ini")
+			local start_pos = strfind(data2,"UserName = ")
+			local end_pos   = strfind(data2,"\n",start_pos)
+			LocalClientNetworkName = gsub(gsub(gsub(strsub(data2,start_pos,end_pos),"_00",""),"UserName = ",""),"\n","")
+		else return failsafe() end 
+		--online name
+		--if FileExists(ProfileFolderPath .. "\\GameSpyLogin.ini") then
+			--local data3 = LoadFileData(ProfileFolderPath .. "\\GameSpyLogin.ini")
+			--local start_pos = strfind(data3,"lastName = ") 
+			--local end_pos   = strfind(data3,"\n",start_pos)
+			--LocalClientOnlineName = gsub(gsub(strsub(data3,start_pos,end_pos),"lastName = ",""),"\n","")  
+		--else failsafe() end
+	else return failsafe() end
+	
+	-- pvp only at the moment as i cant make the below check work 
+	return LocalClientNetworkName
+
+end
+
+-- get the last online name of this client
+clientPlayerName = GetLocalClientName()
+
 function NoOp(self, source)
 end
 
@@ -627,8 +776,8 @@ function OnHuskCapture(self, slaughterer)
 		
 		local isEpicUnit = false
 		
-		for k, v in epicUnits do 
-		   if strfind(unitType, v) then
+		for key, epicUnit in epicUnits do 
+		   if strfind(unitType, epicUnit) then
 			 isEpicUnit = true
 			 break
 		   end	  
@@ -638,37 +787,39 @@ function OnHuskCapture(self, slaughterer)
 		if isEpicUnit == false then
 
 			local matched = false
-			local unitOwner = tostring(ObjectTeamName(self))
-			local slaughtererOwner = tostring(ObjectTeamName(slaughterer))
+			local engiOwner = tostring(ObjectTeamName(self))
+			local huskOwner = tostring(ObjectTeamName(slaughterer))
 			-- gets current frame and then compares it to the players frame
 			local curFrame = GetFrame()
 				
 			-- play the husk capture sound found on EngineerContain.
 			ObjectPlaySound(slaughterer, "BuildingCaptured")
 
-			-- for now the radar event works on all players.
-			-- ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)		
-			
+			print(unitType)
+
+			-- radar event for the same player as the player read from GameSpyLogin.ini.
+			-- husk is the same owner as the client and engineer is not the same owner as the husk
+
+			-- i need a way to extract the name from the last parentesis.
+
+			if strfind(unitType, "masterleaf") ~= nil and strfind(tostring(ObjectDescription(self)), "masterleaf") ~= nil then
+				ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)		
+			end
+
 			for i = 1, 8 do
-				local teamStr = "teamPlayer_" .. i
-				
-				if strfind(unitOwner, teamStr) then
+				local teamStr = "teamPlayer_" .. i				
+				if strfind(engiOwner, teamStr) then
 					-- Change the team of the player if it isnt the same team as the slaughterer.
-					if strfind(slaughtererOwner, teamStr) == nil then 
+					if strfind(huskOwner, teamStr) == nil then 
 						ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_" .. i .. "/" .. teamStr)
 					end
-
 					-- Initialize value to 0 if it doesnt exist yet
 					if playerTimes[i] == nil then
 						playerTimes[i] = 0
-					end
-					
+					end			
 					-- Play sound if 300 frames has passed.
-					if playerTimes[i] == 0 or curFrame - playerTimes[i] >= 300 then	
-						
-						local playerFaction = tostring(ObjectPlayerSide(self)) 					
-						-- print(playerFaction)
-							
+					if playerTimes[i] == 0 or curFrame - playerTimes[i] >= 300 then						
+						local playerFaction = tostring(ObjectPlayerSide(self)) 											
 						if strfind(playerFaction, "CCA0AB62") ~= nil or strfind(playerFaction, "8E3D36F8") ~= nil or strfind(playerFaction, "0B2DE3F6") ~= nil then 
 							-- GDI EVA
 							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Geva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
@@ -681,10 +832,8 @@ function OnHuskCapture(self, slaughterer)
 							-- SCRIN EVA
 							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Aeva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
 						end
-
 						playerTimes[i] = curFrame
 					end
-
 					matched = true
 					break
 				end
@@ -710,18 +859,14 @@ function OnHuskHide(self)
 	ExecuteAction("UNIT_SET_TEAM", self, "PlyrCivilian/teamPlyrCivilian")	
 end
 
-function OnKillHusk(self)	
-	ExecuteAction("NAMED_DELETE",self)
-end
-
 -- check if its a player or not and sets RIDER2 to it which will prevent the SlaughterHordeContain module from activating on this engineer.
 function OnEngineerCreated(self)
-	local unitOwner = tostring(ObjectTeamName(self))
+	local engiOwner = tostring(ObjectTeamName(self))
 
-	if strfind(unitOwner, "teamPlayer_1") == nil and strfind(unitOwner, "teamPlayer_2") == nil and 
-	strfind(unitOwner, "teamPlayer_3") == nil and strfind(unitOwner, "teamPlayer_4") == nil and 
-	strfind(unitOwner, "teamPlayer_5") == nil and strfind(unitOwner, "teamPlayer_6") == nil and 
-	strfind(unitOwner, "teamPlayer_7") == nil and strfind(unitOwner, "teamPlayer_8") == nil 
+	if strfind(engiOwner, "teamPlayer_1") == nil and strfind(engiOwner, "teamPlayer_2") == nil and 
+	strfind(engiOwner, "teamPlayer_3") == nil and strfind(engiOwner, "teamPlayer_4") == nil and 
+	strfind(engiOwner, "teamPlayer_5") == nil and strfind(engiOwner, "teamPlayer_6") == nil and 
+	strfind(engiOwner, "teamPlayer_7") == nil and strfind(engiOwner, "teamPlayer_8") == nil 
 	then ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "RIDER2", 999999, 100) end
 end
 
