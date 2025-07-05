@@ -4,6 +4,7 @@
 		id="TempDelayHusk"
 		Side="Neutral"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
 		KindOf="NO_COLLIDE HIDE_IF_FOGGED IMMOBILE UNATTACKABLE NOT_AUTOACQUIRABLE"
 		EditorName="TempDelayHusk">
 		<DisplayName>PropName</DisplayName>

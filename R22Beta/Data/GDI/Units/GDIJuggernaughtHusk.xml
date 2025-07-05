@@ -137,18 +137,7 @@
 				LevelsToGain="3">
 				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
 			</LevelUpUpgrade>
-			<!-- Nod Cloaking Field
-			<InvisibilityUpdate
-				id="ModuleTag_Invisibility"
-				UpdatePeriod="0.5s">
-				<InvisibilityNugget />
-				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
-			</InvisibilityUpdate>
-			<StealthUpgrade
-				id="ModuleTag_InvisibilityTrigger">
-				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
-			</StealthUpgrade>  -->
-
+			
 			<InvisibilityUpdate
 				id="ModuleTag_Invisibility"
 				UpdatePeriod="0.5s">
@@ -237,6 +226,11 @@
 					Rule="ANY"
 					RejectModelCondition="RIDER2">
 					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
 					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
 					<IncludeThing>ZOCOMEngineer</IncludeThing>
 				</CanAlwaysEnterObjectFilter>
@@ -244,6 +238,11 @@
 					Rule="ANY"
 					RejectModelCondition="RIDER2">
 					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
 					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
 					<IncludeThing>ZOCOMEngineer</IncludeThing>
 				</PassengerFilter>
@@ -260,6 +259,11 @@
 					ID="Engineer">
 					<UnitFilter>
 						<IncludeThing>GDIEngineer</IncludeThing>
+						<IncludeThing>NODSaboteur</IncludeThing>
+						<IncludeThing>BlackHandSaboteur</IncludeThing>
+						<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+						<IncludeThing>AlienAssimilator</IncludeThing>
+						<IncludeThing>Traveler59Assimilator</IncludeThing>
 						<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
 						<IncludeThing>ZOCOMEngineer</IncludeThing>
 					</UnitFilter>
@@ -274,7 +278,7 @@
 				EvaEventForReplace="HuskRepaired"
 				EvaEventForCaptureAndReplace="HuskRepaired"
 				FXForReplace="FX_Husk_Repaired"
-				FXForCapture="FX_Husk_Repaired"
+				FXForCapture="FX_Husk_Captured"
 				FXForCaptureAndReplace="FX_Husk_Captured"
 				ReplaceWith="GDIJuggernaughtHuskReplace">
 				<CanEnterFilter

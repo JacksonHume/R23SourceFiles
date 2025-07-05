@@ -2,31 +2,18 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<GameObject
 		id="CreateHuskEffect"
-		inheritFrom="BaseStructure"
-		ButtonImage="Portrait_GDIPowerPlant"
-		SelectPortrait="Portrait_GDIPowerPlant"
 		Side="Neutral"
-		EditorSorting="STRUCTURE"
+		EditorSorting="MISC_MAN_MADE"
 		TransportSlotCount="1"
-		BuildCost="700"
-		BuildTime="7"
 		EnergyProduction="0"
 		EnergyBonus="0"
-		CampnessValue="2000"
-		CampnessValueRadius="300"
-		UnitCategory="STRUCTURE"
 		CommandSet="HuskCommandSet"
-		KindOf="STRUCTURE IMMOBILE CAN_CAST_REFLECTIONS NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE FS_POWER" 
-		RadarPriority="STRUCTURE"
-		EditorName="GDIPowerPlant"
-		Description="Desc:GDIPowerPlant"
-		TypeDescription="Type:GDIPowerPlant">
+		KindOf="IMMOBILE NO_COLLIDE HIDE_IF_FOGGED UNATTACKABLE NOT_AUTOACQUIRABLE FS_POWER" 
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="CreateHuskEffect">
 		<DisplayName>Name:GDIPowerPlant</DisplayName>
 		<ArmorSet
-			Armor="GDIPowerPlantArmor"
-			DamageFX="FactionStructureDamageFX" />
-		<SkirmishAIInformation
-			BaseBuildingLocation="SPREAD" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"
@@ -63,42 +50,5 @@
 				id="ModuleTag_Body"
 				MaxHealth="100.0" />
 		</Body>
-		<!--
-		<AudioArrayVoice>
-			<AudioEntry EvaEvent="BuildingStolen" AudioType="voiceDefectingAway" />
-			<AudioEntry EvaEvent="EnemyBuildingCaptured" AudioType="voiceDefectingTowards" />
-			<AudioEntry
-				Sound="AudioEvent:GDI_PowerPlantSelect"
-				AudioType="voiceSelect" />
-		</AudioArrayVoice>
-		<AudioArraySound>
-			<AudioEntry Sound="Multisound:HumanFaction_MediumBuilding_LightDamageMS" AudioType="soundOnDamaged" />
-			<AudioEntry Sound="Multisound:HumanFaction_MediumBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
-			<AudioEntry Sound="AudioEvent:GDI_BuildingPlaced" AudioType="soundUnderConstruction" />
-			<AudioEntry Sound="AudioEvent:Amb_FireRubble" AudioType="soundAmbientReallyDamaged" />
-		</AudioArraySound>
-		<EvaEvents
-			EvaEventProductionStarted="BuildingConstructionStarted" 
-			EvaEventProductionComplete="BuildingConstructionComplete" 
-			EvaEventDamagedOwner="StructureUnderAttack" 	
-			EvaEventSoldOwner="StructureSold"
-			EvaEventRepairingOwner="StructureRepairing"
-			EvaEnemyObjectSightedEvent="EnemyCampSighted"
-			EvaEventAvailableForProduction="NewConstructionOptions"
-			EvaEventPlacementFailed="StructurePlacementFailed" 
-			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue" 
-			EvaEventBuildOnHold="BuildOnHold"
-			EvaEventBuildCancelled="BuildCancelled" 
-			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
-			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
-		<ShadowInfo
-			Type="VOLUME" />
-		<VisionInfo
-			VisionRange="100"
-			ShroudClearingRange="400" />
-		<ProjectedBuildabilityInfo
-			Radius="0"
-			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
-	-->
 	</GameObject>
 </AssetDeclaration>

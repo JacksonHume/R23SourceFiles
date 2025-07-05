@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- husk ocl's-->
+
 	<ObjectCreationList
 		id="OCL_CreateHuskEffect">
 		<CreateObject
@@ -11,6 +13,8 @@
 			<CreateObject>CreateHuskEffect</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
+
+	<!-- gdi husk -->
 
 	<ObjectCreationList
 		id="GDIJuggernaughtHuskReplace">
@@ -32,6 +36,31 @@
 			<CreateObject>TempDelayHusk</CreateObject>
 		</CreateObject>  
 	</ObjectCreationList>
+
+	<!-- behemoth husk -->
+
+	<ObjectCreationList
+		id="SteelTalonsBehemothHuskReplace">
+		<CreateObject
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="RELATIVE_ANGLE"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="3.0s"
+			StartingBusyTime="3.0s"
+			DisabledWhileBusy="true"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>SteelTalonsBehemoth</CreateObject>
+		</CreateObject>
+		<!-- workaround to hide husk -->
+		<CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			Options="IGNORE_ALL_OBJECTS">
+			<CreateObject>TempDelayHusk</CreateObject>
+		</CreateObject>  
+	</ObjectCreationList>
+
+	
 
 	<!-- emp fix attempt
 	<ObjectCreationList
