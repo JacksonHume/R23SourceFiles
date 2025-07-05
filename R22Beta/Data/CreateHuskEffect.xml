@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<GameObject
+		id="CreateHuskEffect"
+		inheritFrom="BaseStructure"
+		ButtonImage="Portrait_GDIPowerPlant"
+		SelectPortrait="Portrait_GDIPowerPlant"
+		Side="GDI"
+		EditorSorting="STRUCTURE"
+		TransportSlotCount="1"
+		BuildCost="700"
+		BuildTime="7"
+		EnergyProduction="0"
+		EnergyBonus="50"
+		CampnessValue="2000"
+		CampnessValueRadius="300"
+		UnitCategory="STRUCTURE"
+		CommandSet="HuskCommandSet"
+		KindOf="STRUCTURE IMMOBILE CAN_CAST_REFLECTIONS FS_POWER NOT_AUTOACQUIRABLE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE" 
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="315d"
+		ProductionQueueType="MAIN_STRUCTURE"
+		BuildPlacementTypeFlag="MAIN_STRUCTURE"
+		EditorName="GDIPowerPlant"
+		Description="Desc:GDIPowerPlant"
+		TypeDescription="Type:GDIPowerPlant">
+		<DisplayName>Name:GDIPowerPlant</DisplayName>
+		<GameDependency>
+			<ObjectFilter
+				Rule="ANY">
+				<IncludeThing>GDIConstructionYard</IncludeThing>
+				<IncludeThing>SteelTalonsConstructionYard</IncludeThing>
+				<IncludeThing>GDICrane</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+		<ArmorSet
+			Armor="GDIPowerPlantArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="SPREAD" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					ConditionsYes="NONE">
+					<Model
+						Name="" />					
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+	  	 <AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate"/>	
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				MinLifetime="1s"
+				MaxLifetime="1s" />
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate"
+				GiveNoXP="true" />
+			<PowerUpgrade
+				id="ModuleTag_Turbines">
+				<TriggeredBy>Upgrade_HuskCaptureFX</TriggeredBy>
+			</PowerUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModulTag_AIForLua"
+				AILuaEventsList="HuskFXFunctions_R23" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="4000.0" />
+		</Body>
+	
+		<AudioArrayVoice>
+			<AudioEntry EvaEvent="BuildingStolen" AudioType="voiceDefectingAway" />
+			<AudioEntry EvaEvent="EnemyBuildingCaptured" AudioType="voiceDefectingTowards" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_PowerPlantSelect"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="Multisound:HumanFaction_MediumBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="Multisound:HumanFaction_MediumBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="AudioEvent:GDI_BuildingPlaced" AudioType="soundUnderConstruction" />
+			<AudioEntry Sound="AudioEvent:Amb_FireRubble" AudioType="soundAmbientReallyDamaged" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventProductionStarted="BuildingConstructionStarted" 
+			EvaEventProductionComplete="BuildingConstructionComplete" 
+			EvaEventDamagedOwner="StructureUnderAttack" 	
+			EvaEventSoldOwner="StructureSold"
+			EvaEventRepairingOwner="StructureRepairing"
+			EvaEnemyObjectSightedEvent="EnemyCampSighted"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventPlacementFailed="StructurePlacementFailed" 
+			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue" 
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
+			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="400" />
+		<ProjectedBuildabilityInfo
+			Radius="0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	
+	</GameObject>
+</AssetDeclaration>

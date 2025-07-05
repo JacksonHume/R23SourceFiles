@@ -2,6 +2,17 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<ObjectCreationList
+		id="OCL_CreateHuskEffect">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>CreateHuskEffect</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
 		id="GDIJuggernaughtHuskReplace">
 		<CreateObject
 			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
@@ -19,7 +30,7 @@
 			Disposition="ON_GROUND_ALIGNED"
 			Options="IGNORE_ALL_OBJECTS">
 			<CreateObject>TempDelayHusk</CreateObject>
-		</CreateObject>
+		</CreateObject>  
 	</ObjectCreationList>
 
 	<!-- emp fix attempt

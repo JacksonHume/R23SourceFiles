@@ -49,4 +49,13 @@
 		</Data>
 	</UnitAbilityButtonTemplate>
 
+	<UnitAbilityButtonTemplate
+		id="ButtonUpgradeHuskCaptureFX"
+		LogicCommand="Command_HuskCaptureFX">
+		<Data>
+			<ObjectUpgrade
+				StateData="ButtonStateUpgradeAdvancedTurbines" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+
 </AssetDeclaration>

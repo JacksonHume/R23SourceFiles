@@ -30,7 +30,6 @@
 				<DieMuxData
 					DeathTypes="ALL" />
 			</DestroyDie>
-
 			<FireWeaponWhenDead
 				id="ModuleTag_FireWeaponWhenDead"
 				DeathWeapon="DelayHuskHide"
@@ -38,6 +37,15 @@
 				<DieMuxData
 					DeathTypes="ALL" />
 			</FireWeaponWhenDead>
+			<!-- hide the husk 
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate">
+				<FireWeaponNugget
+					WeaponName="DelayHuskHide"
+					OneShot="True"
+				/>
+			</FireWeaponUpdate>
+			-->
 		</Behaviors>
 		<Body>
 			<ActiveBody

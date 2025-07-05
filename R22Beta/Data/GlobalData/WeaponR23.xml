@@ -14,7 +14,8 @@
 				AttributeModifierName="AttributeModifier_HuskHide">
 				<SpecialObjectFilter
 					Rule="NONE"
-					StatusBitFlags=""
+					StatusBitFlags="RIDER1"
+					RejectModelCondition="USER_3"
 					Alignment="NONE">
 					<IncludeThing>GDIJuggernaughtHusk</IncludeThing>
 					<IncludeThing>SteelTalonsBehemothHusk</IncludeThing>
@@ -32,7 +33,6 @@
 	<WeaponTemplate
 		id="DelayHuskDeletion"
 		Name="DelayHuskDeletion"
-		RequiredFiringObjectStatus=""
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS SELF">
 		<Nuggets>
 			<AttributeModifierNugget
@@ -42,7 +42,8 @@
 				<SpecialObjectFilter
 					Rule="NONE"
 					Relationship=""
-					StatusBitFlags=""
+					StatusBitFlags="RIDER1"
+					RejectModelCondition="USER_9"
 					Alignment="NONE">
 					<IncludeThing>GDIJuggernaughtHusk</IncludeThing>
 					<IncludeThing>SteelTalonsBehemothHusk</IncludeThing>
@@ -59,8 +60,8 @@
 
 	<!-- a workaround to send an alert to the player if an enemy has captured the husk -->
 	<WeaponTemplate
-		id="AlertEnemyPlayer"
-		Name="AlertEnemyPlayer"
+		id="AlertHuskPlayer"
+		Name="AlertHuskPlayer"
 		ProjectileCollidesWith="ENEMIES NEUTRAL"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
@@ -71,6 +72,7 @@
 			MinSeconds="0.1s"
 			MaxSeconds="0.1s" />
 		<Nuggets>
+			<!--
 			<DamageNugget
 				Damage="1000.0"
 				Radius="0"
@@ -85,6 +87,8 @@
 					StatusBitFlags=""
 					Include="HUSK" />
 			</DamageNugget>
+		-->
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect" />
 		</Nuggets>
 	</WeaponTemplate>
 

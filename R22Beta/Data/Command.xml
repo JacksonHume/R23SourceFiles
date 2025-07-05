@@ -28,6 +28,13 @@
   </LogicCommand>
 
 -->
+
+  <LogicCommand
+		Type="OBJECT_UPGRADE"
+		id="Command_HuskCaptureFX">
+    <Upgrade>Upgrade_HuskCaptureFX</Upgrade>
+  </LogicCommand>
+
   <LogicCommand
     Type="SPECIAL_POWER"
     Options="NEED_TARGET_ENEMY_OBJECT"

@@ -9,6 +9,7 @@
 		Side="GDI"
 		EditorSorting="UNIT"
 		ShockwaveResistance="100"
+		TransportSlotCount="1"
 		ReinvisibilityDelay="7s"
 		CommandSet="EmptyCommandSet"
 		KindOf="PRELOAD SELECTABLE CAN_CAST_REFLECTIONS NOT_AUTOACQUIRABLE IMMOBILE VALID_TARGET_FOR_C4 GARRISONABLE_UNTIL_DESTROYED HUSK"
@@ -212,12 +213,9 @@
 				AllowAlliesInside="true"
 				CollidePickup="True"
 				AllowNeutralInside="true"
-				EjectPassengersOnDeath="False"
 				AllowOwnPlayerInsideOverride="false"
 				ShowPips="true"
 				EnterSound="AudioEvent:BuildingRepaired"
-				ExitSound=""
-				ResetInitialTeamOnCapture="false"
 				KillPassengersOnDeath="true">
 				<CanAlwaysEnterObjectFilter
 					Rule="ANY"
@@ -236,25 +234,14 @@
 				<DieMuxData
 					DeathTypes="ALL" />
 				<PassengerData
-					BonePrefix="">
+					BonePrefix="SUBBONE_">
 					<Filter
 						Rule="NONE"
 						Include="ENGINEER"
 						Relationship="" />
 				</PassengerData>
-				<!--
-				<UpgradeContainerOnContain
-					ID="Engineer">
-					<UnitFilter>
-						<IncludeThing>GDIEngineer</IncludeThing>
-						<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
-						<IncludeThing>ZOCOMEngineer</IncludeThing>
-					</UnitFilter>
-					<UpgradeList>Upgrade_EngineerCapture</UpgradeList>
-				</UpgradeContainerOnContain>
-			-->
 			</SlaughterHordeContain>  
-
+		
 			<EngineerContain
 				id="ModuleTag_EngineerContain"
 				NameOfVoiceToUseForFriendlyEnter="VoiceCaptureHusk"
@@ -277,7 +264,7 @@
 					<IncludeThing>ZOCOMEngineer</IncludeThing>
 				</CanEnterFilter>
 			</EngineerContain> 
-
+	
 			<LifetimeUpdate
 				id="ModuleTag_HuskLifetime"
 				MinLifetime="300s"

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
 	<!--
 	<UpgradeTemplate id="Upgrade_EngineerArmor"
 		Type="OBJECT"
 	/>
-	
-	
 	<UpgradeTemplate id="Upgrade_ClearCollision"
 		Type="OBJECT"
 	/>
@@ -17,6 +16,14 @@
 		Type="OBJECT"
 	/>
 -->
+	<!-- new upgrade for husks-->
+	<UpgradeTemplate id="Upgrade_HuskCaptureFX"
+		DisplayName="APT:UnitsLost"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="3.0s"
+   	    ResearchCompleteEvaEvent ="None">
+	</UpgradeTemplate>
 
 	<UpgradeTemplate id="Upgrade_HideHusk"
 		Type="OBJECT"

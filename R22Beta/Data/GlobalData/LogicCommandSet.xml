@@ -37,6 +37,11 @@
 		<Cmd>Command_TempRemoveEMP</Cmd>-->
 
 	<LogicCommandSet
+		id="HuskCommandSet">
+		<Cmd>Command_HuskCaptureFX</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
 		id="MarkedOfKaneSecretShrineCommandSet">
 		<Cmd>Command_PurchaseUpgradeCyberneticLegs</Cmd>
 		<Cmd>Command_PurchaseUpgradeMoKTiberiumInfusion</Cmd>
