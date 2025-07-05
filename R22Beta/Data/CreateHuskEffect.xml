@@ -5,7 +5,7 @@
 		inheritFrom="BaseStructure"
 		ButtonImage="Portrait_GDIPowerPlant"
 		SelectPortrait="Portrait_GDIPowerPlant"
-		Side="GDI"
+		Side="Neutral"
 		EditorSorting="STRUCTURE"
 		TransportSlotCount="1"
 		BuildCost="700"
@@ -18,9 +18,6 @@
 		CommandSet="HuskCommandSet"
 		KindOf="STRUCTURE IMMOBILE CAN_CAST_REFLECTIONS NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE FS_POWER" 
 		RadarPriority="STRUCTURE"
-		PlacementViewAngle="315d"
-		ProductionQueueType="MAIN_STRUCTURE"
-		BuildPlacementTypeFlag="MAIN_STRUCTURE"
 		EditorName="GDIPowerPlant"
 		Description="Desc:GDIPowerPlant"
 		TypeDescription="Type:GDIPowerPlant">
@@ -66,7 +63,7 @@
 				id="ModuleTag_Body"
 				MaxHealth="100.0" />
 		</Body>
-	
+		<!--
 		<AudioArrayVoice>
 			<AudioEntry EvaEvent="BuildingStolen" AudioType="voiceDefectingAway" />
 			<AudioEntry EvaEvent="EnemyBuildingCaptured" AudioType="voiceDefectingTowards" />
@@ -102,6 +99,6 @@
 		<ProjectedBuildabilityInfo
 			Radius="0"
 			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
-	
+	-->
 	</GameObject>
 </AssetDeclaration>

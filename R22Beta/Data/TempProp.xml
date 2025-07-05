@@ -23,13 +23,14 @@
 		<Behaviors>
 			<LifetimeUpdate
 				id="ModuleTag_Lifetime"
-				MinLifetime="0s"
-				MaxLifetime="0s" />
+				MinLifetime="0.01s"
+				MaxLifetime="0.01s" />
 			<DestroyDie
 				id="ModuleTag_DestroyDie">
 				<DieMuxData
 					DeathTypes="ALL" />
 			</DestroyDie>
+			<!-- could be even faster doing this on create with lua -->
 			<FireWeaponWhenDead
 				id="ModuleTag_FireWeaponWhenDead"
 				DeathWeapon="DelayHuskHide"
