@@ -219,6 +219,7 @@
 				KillPassengersOnDeath="true">
 				<CanAlwaysEnterObjectFilter
 					Rule="ANY"
+					RejectStatusBitFlags="RIDER1"
 					RejectModelCondition="RIDER2">
 					<IncludeThing>GDIEngineer</IncludeThing>
 					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
@@ -226,6 +227,7 @@
 				</CanAlwaysEnterObjectFilter>
 				<PassengerFilter
 					Rule="ANY"
+					RejectStatusBitFlags="RIDER1"
 					RejectModelCondition="RIDER2">
 					<IncludeThing>GDIEngineer</IncludeThing>
 					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
@@ -253,7 +255,8 @@
 				FXForCaptureAndReplace="FX_Husk_Captured"
 				ReplaceWith="GDIJuggernaughtHuskReplace">
 				<CanEnterFilter
-					Rule="NONE">
+					Rule="NONE"
+					RejectStatusBitFlags="RIDER1">
 					<IncludeThing>GDIEngineer</IncludeThing>
 					<IncludeThing>NODSaboteur</IncludeThing>
 					<IncludeThing>BlackHandSaboteur</IncludeThing>

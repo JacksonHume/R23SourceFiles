@@ -59,205 +59,7 @@ bar4 = {} -- for tracking the bar four of the harvester.
 
 playerTimes = {}
 epicUnits = {"30354418", "565BE825", "CD5A5360", "1D137C85", "A4FD281B", "37F0A5F5", "D8BE0529", "711A18DF", "146C2890"}
-clientOnline = ""
-clientNetwork = ""
-LocalClientNameInit = false
-LocalClientName = nil
 
--- dependencies
-CNC3EP1FOLDER = {  
-"Command & Conquer 3 Kane's Wrath",
-"Command & Conquer 3 Kanes Rache",
-"Command & Conquer 3 La Ira de Kane",
-"Command & Conquer 3 La Fureur de Kane",
-"Command & Conquer 3 L'ira di Kane",
-"Command and Conquer 3 Kane’s Wrath",
-"Command & Conquer 3 Gniew Kane'a",
-"Command & Conquer 3 Ярость Кейна",
-"커맨드 & 컨커 3 케인의 분노",
-"《命令与征服3 凯恩之怒》",
-"《命令与征服3 : 凯恩之怒》",
-"《終極動員令3肯恩之怒》",
-"《終極動員令3:肯恩之怒》",
-"《終極動員令3 : 肯恩之怒》",
-"命令与征服3：凯恩之怒",
-"命令与征服3 ： 凯恩之怒",
-"คอมมานด์ & คองเคอร์(tm) 3 เคนแรธ",
-"คอมมานด์ & คองเคอร์ 3 เคนแรธ",
-""
-}
-CNC3EP1FOLDERPATH = {
-"C:\\Users\\" .. getenv("USERNAME") .. "\\Documents\\",
-"C:\\Users\\" .. getenv("USERNAME") .. "\\AppData\Roaming\\"
-}
-FilePathInitialized = 0
-FilePath = ""--GetFilePath()
-MainFolder="MetaModIO"
-ErrorLogToFile                = yes
-ErrorWarnings                 = 2
-ErrorSound                    = 1
-ErrorExitType                 = 0
-
---- ============================ FUNCTIONS ====================================
---- define lua functions 
-
-function PathExists(PathToTest)
-    local tmppath="" .. PathToTest .. "\\" .. tmpname() .. ""
-	local filehandle = writeto(tmppath)
-	if filehandle ~= nil then closefile(filehandle) end
-	local IsPathExistent = rename(tmppath, tmppath)
-	remove(tmppath)
-	if IsPathExistent then return true	
-	else return false end
-end
-
-function FileExists(FilePathToTest)
-	local IsFileExistent = rename(FilePathToTest, FilePathToTest)
-	if IsFileExistent then return 1	
-	else return 0 end
-end
-
-function LoadFileData(file)
-   if FilePathInitialized ~= 1 then FilePath = GetFilePath() end 
-   if file == nil then return "" end
-   if FileExists(file) then
-	   local filehandle = openfile(file, 'r')
-	   local data = read(filehandle, '*a') 
-	   closefile(filehandle)
-	   return data
-   end
-end
-
-function GetFilePath()   
- if FilePathInitialized == 1 then return FilePath
- else
-   for i=1,getn(CNC3EP1FOLDER)-1,1 do 
-    for j=1,getn(CNC3EP1FOLDERPATH),1 do 
-      if PathExists(CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i]) then
-	    local FinalPath="" .. CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i] .. "\\" .. MainFolder .. "\\"
-	    if PathExists(FinalPath) then 
-	      FilePathInitialized = 1 
-          FilePath=FinalPath
-	      return FinalPath
-	     else 
-	      return "" .. CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i] .. "\\"
-		    --CreateFolder(CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i],MainFolder)
-		    --if PathExists(FinalPath) then return FinalPath
-		    --else return "" .. CNC3EP1FOLDERPATH[j] .. CNC3EP1FOLDER[i] .. "\\" end
-	    end
-      end
-    end   
-   end
-    return CNC3EP1FOLDER[getn(CNC3EP1FOLDER)]
- end
-end
-
-function error_(message) --mild error for manual use
-  --local errorlevel = 4
-  if reason==nil then reason="unknown" end
-  if ErrorLogToFile==1 then WriteToFile("ErrorLogToFile(" .. date() .. "): " .. message,GetFilePath() .. ErrorFileLog,nil,"hide") end   --"function " .. getinfo(errorlevel).name .. ", line " .. getinfo(errorlevel).currentline .. ", LineOfFunctionCall " .. getinfo(errorlevel+1).currentline .. ", reason "
-  if ErrorWarnings==1 then 
-    --local printinfo="LUA error in function: " .. getinfo(errorlevel).name .. ", line: " .. getinfo(errorlevel).currentline .. ",\nreason: "
-    print("LUA error(" .. date() .. "): " .. message) 
-    ExecuteAction("DISPLAY_TEXT","MESSAGE:ERROR") 
-  end
-  if ErrorWarnings==2 then ExecuteAction("DISPLAY_TEXT","MESSAGE:ERROR") end
-  if ErrorSound==1 then ExecuteAction("PLAY_SOUND_EFFECT", "Tutorial_TrainingStation_Select1") end
-  if ErrorExitType==1 then ExecuteAction("MAP_EXIT")   --for multiplayer
-  elseif ErrorExitType == 2 then exit()
-  else return nil end
-end
-
-function GetFirstHumanPlayerName()
-	for k,v in globals() do
-		if strfind(k,"ObjID") then
-			if IsPlayerAI(GetTeamName(v))==0 then 
-				LocalClientName=strupper(gsub(gsub(strsub(ObjectDescription(v),strfind(ObjectDescription(v), "player ")+10),"%s",""),"%p",""))
-				LocalClientTeam=GetTeamName(v) 
-				LocalClientNameInit=true 
-				return LocalClientName 
-			end
-		end
-	end
-	return NeutralTeam --"Player_1/teamPlayer_1"
-end
-
-function RegisterNonLuaObjectRefInLua(Object) --don't even consider use
-	globals["ObjID" .. RandomString(5)]=Object
-end
-
-
-function GetLocalClientName()
-	
-	local finalName = ""
-	if LocalClientNameInit then return LocalClientName end
-	local ProfileFolderPath
-	local LocalClientNetworkName
-	local LocalClientOnlineName
-	local failsafe = function()
-		LocalClientNameInit=true 
-		LocalClientName=GetFirstHumanPlayerName() --failsafe semi optimal solution
-		return LocalClientName 
-	end
-	local FolderPath = "C:\\Users\\" .. getenv("USERNAME") .. "\\AppData\\Roaming\\"
-	for i=1,getn(CNC3EP1FOLDER),1 do 
-		if PathExists(FolderPath .. CNC3EP1FOLDER[i]) then
-			FolderPath = FolderPath .. CNC3EP1FOLDER[i] .. "\\Profiles"
-			break
-		end
-	end	
-	
-	if PathExists(FolderPath) and FileExists(FolderPath .. "\\directory.ini")==1 then
-		 local data1 = LoadFileData(FolderPath .. "\\directory.ini")
-		 local start_pos = strfind(data1,"e_00_3D_00")
-		 local end_pos   = strfind(data1,"\n",start_pos)
-		 ProfileName=gsub(gsub(gsub(strsub(data1,start_pos,end_pos),"_00","") ,"e_3D",""),"\n","")
-		 ProfileFolderPath = FolderPath .. "\\" .. ProfileName
-	else return failsafe() end
-
-	-- check the files for the names and store them in local vars.
-	
-	--network name
-	if ProfileFolderPath~=nil and PathExists(ProfileFolderPath) then
-		 -- if FileExists(ProfileFolderPath .. "\\NetworkPref.ini") then
-			-- local data2 = LoadFileData(ProfileFolderPath .. "\\NetworkPref.ini")
-			-- local start_pos = strfind(data2,"UserName = ")
-			-- local end_pos   = strfind(data2,"\n",start_pos)
-			-- LocalClientNetworkName = gsub(gsub(gsub(strsub(data2,start_pos,end_pos),"_00",""),"UserName = ",""),"\n","")
-		-- else return failsafe() end 
-		
-		--online name (for now only works with online name)
-		if FileExists(ProfileFolderPath .. "\\GameSpyLogin.ini") then
-			local data3 = LoadFileData(ProfileFolderPath .. "\\GameSpyLogin.ini")
-			local start_pos = strfind(data3,"lastName = ") 
-			local end_pos   = strfind(data3,"\n",start_pos)
-			LocalClientOnlineName = gsub(gsub(strsub(data3,start_pos,end_pos),"lastName = ",""),"\n","")  
-			LocalClientName = LocalClientOnlineName
-			return LocalClientName
-		else failsafe() end
-	else return failsafe() end
-	
-	-- return the online name even if playing skirmish or network (for now)
-	return LocalClientName
-	
-	-- for k,v in globals() do
-		-- if strfind(k,"ObjID") then
-			-- if strfind(strupper(LocalClientNetworkName),strupper(gsub(gsub(strsub(ObjectDescription(v),strfind(ObjectDescription(v), "player ")+10),"%s",""),"%p",""))) then LocalClientName=LocalClientNetworkName LocalClientNameInit=true return LocalClientName
-				-- elseif strfind(strupper(LocalClientOnlineName),strupper(gsub(gsub(strsub(ObjectDescription(v),strfind(ObjectDescription(v), "player ")+10),"%s",""),"%p",""))) then LocalClientName=LocalClientOnlineName LocalClientNameInit=true return LocalClientName
-			-- end
-		-- end
-	-- end
-	-- for k,v in globals() do
-		-- if strfind(k,"ObjID") then
-			-- if IsPlayerAI(v)~=1 then LocalClientName=gsub(gsub(strsub(ObjectDescription(v),strfind(ObjectDescription(v), "player ")+10),"%s",""),"%p","") LocalClientNameInit=true return LocalClientName end
-		-- end
-	-- end
-	-- error_("no client name found")
-	-- return failsafe()
-
-end
-
-GetLocalClientName()
 
 function NoOp(self, source)
 end
@@ -834,21 +636,23 @@ function OnHuskCapture(self, slaughterer)
 			ObjectPlaySound(slaughterer, "BuildingCaptured")
 
 			-- Extract exact player names from ObjectDescription
-			local huskPlayerName = tostring(getPlayerNameExact(slaughterer))
-			local engineerPlayerName = tostring(getPlayerNameExact(self))
+			--local huskPlayerName = tostring(getPlayerNameExact(slaughterer))
+			--local engineerPlayerName = tostring(getPlayerNameExact(self))
 			
 			-- print(huskPlayerName .. " " .. tostring(LocalClientName))
 			
 			-- Check if husk owner matches client AND engineer owner is different
-			if strfind(strupper(huskPlayerName), strupper(LocalClientName)) ~= nil and strfind(strupper(engineerPlayerName), strupper(LocalClientName)) == nil then
-				ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)	
-			end
-			
+			--if strfind(strupper(huskPlayerName), strupper(LocalClientName)) ~= nil and strfind(strupper(engineerPlayerName), strupper(LocalClientName)) == nil then
+			--	ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)	
+			--end
+
 			for i = 1, 8 do
 				local teamStr = "teamPlayer_" .. i				
 				if strfind(engiOwner, teamStr) then
-					-- Change the team of the player if it isnt the same team as the slaughterer.
 					if strfind(huskOwner, teamStr) == nil then 
+						-- alert the owner of the husk that it got captured by another player.
+						ObjectCreateAndFireTempWeapon(slaughterer, "AlertHuskPlayer")
+						-- Change the team of the player if it isnt the same team as the slaughterer.
 						ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_" .. i .. "/" .. teamStr)
 					end
 					-- Initialize value to 0 if it doesnt exist yet
@@ -906,6 +710,14 @@ function OnEngineerCreated(self)
 	strfind(engiOwner, "teamPlayer_5") == nil and strfind(engiOwner, "teamPlayer_6") == nil and 
 	strfind(engiOwner, "teamPlayer_7") == nil and strfind(engiOwner, "teamPlayer_8") == nil 
 	then ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "RIDER2", 999999, 100) end
+end
+
+-- workaround for the original radar event
+function OnHuskFXCreated(self)
+	 ExecuteAction("NAMED_USE_COMMANDBUTTON_ABILITY", self, "Command_HuskCaptureFX")
+	--if ObjectHasUpgrade(self, "Upgrade_PowerPlantTurbine") == 0 then
+	--	ObjectGrantUpgrade(self, "Upgrade_PowerPlantTurbine")
+	--end
 end
 
 function OnGDIWatchTowerCreated(self)
@@ -1087,6 +899,9 @@ function OnNODTechAssembleyPlantCreated(self)
 end
 
 function OnNODSecretShrineCreated(self)
+
+	--ExecuteAction("NAMED_USE_COMMANDBUTTON_ABILITY", self, "Command_PurchaseUpgradeTiberiumInfusion")
+
 	ObjectHideSubObjectPermanently( self, "GLOWS", true )	
 	ObjectHideSubObjectPermanently( self, "ConfUpgrd", true )
 	ObjectHideSubObjectPermanently( self, "CYBERNETICLEGS_01", true )

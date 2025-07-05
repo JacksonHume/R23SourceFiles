@@ -757,6 +757,10 @@
 		<EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
 	</EventList>
+
+	<EventList Name="HuskFXFunctions_R23" Inherit="BaseScriptFunctions">  	
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHuskFXCreated" DebugSingleStep="false"/>
+	</EventList>
 	
 	<!-- r21 -->
 	
