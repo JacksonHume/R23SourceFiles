@@ -204,7 +204,7 @@
 			<!-- husk crash workaround module -->
 			
 			 <SlaughterHordeContain
-				id="9DC593B0"
+				id="ModuleTag_Contain"
 				ContainMax="1"
 				EnterSound="AudioEvent:BuildingRepaired"
 				ExitSound=""

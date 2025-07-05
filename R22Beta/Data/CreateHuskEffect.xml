@@ -11,12 +11,12 @@
 		BuildCost="700"
 		BuildTime="7"
 		EnergyProduction="0"
-		EnergyBonus="50"
+		EnergyBonus="0"
 		CampnessValue="2000"
 		CampnessValueRadius="300"
 		UnitCategory="STRUCTURE"
 		CommandSet="HuskCommandSet"
-		KindOf="STRUCTURE IMMOBILE CAN_CAST_REFLECTIONS FS_POWER NOT_AUTOACQUIRABLE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE" 
+		KindOf="STRUCTURE IMMOBILE CAN_CAST_REFLECTIONS NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE FS_POWER" 
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="315d"
 		ProductionQueueType="MAIN_STRUCTURE"
@@ -25,14 +25,6 @@
 		Description="Desc:GDIPowerPlant"
 		TypeDescription="Type:GDIPowerPlant">
 		<DisplayName>Name:GDIPowerPlant</DisplayName>
-		<GameDependency>
-			<ObjectFilter
-				Rule="ANY">
-				<IncludeThing>GDIConstructionYard</IncludeThing>
-				<IncludeThing>SteelTalonsConstructionYard</IncludeThing>
-				<IncludeThing>GDICrane</IncludeThing>
-			</ObjectFilter>
-		</GameDependency>
 		<ArmorSet
 			Armor="GDIPowerPlantArmor"
 			DamageFX="FactionStructureDamageFX" />
@@ -72,7 +64,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="4000.0" />
+				MaxHealth="100.0" />
 		</Body>
 	
 		<AudioArrayVoice>
