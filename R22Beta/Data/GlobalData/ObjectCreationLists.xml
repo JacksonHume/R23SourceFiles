@@ -29,12 +29,12 @@
 			MaxHealth="0.5">
 			<CreateObject>GDIJuggernaught</CreateObject>
 		</CreateObject>
-		<!-- workaround to hide husk -->
+		<!-- workaround to hide husk 
 		<CreateObject
 			Disposition="ON_GROUND_ALIGNED"
 			Options="IGNORE_ALL_OBJECTS">
 			<CreateObject>TempDelayHusk</CreateObject>
-		</CreateObject>  
+		</CreateObject>  -->
 	</ObjectCreationList>
 
 	<!-- behemoth husk -->

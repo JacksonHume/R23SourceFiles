@@ -616,6 +616,7 @@ function OnHuskCapture(self, slaughterer)
 			ObjectGrantUpgrade(slaughterer, "Upgrade_EngineerCapture")
 		end
 
+		-- assign husk to the husktable
 		local a = getObjectId(self)
 		husksTable[a] = slaughterer
 	
