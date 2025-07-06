@@ -59,6 +59,7 @@ bar4 = {} -- for tracking the bar four of the harvester.
 
 playerTimes = {}
 epicUnits = {"30354418", "565BE825", "CD5A5360", "1D137C85", "A4FD281B", "37F0A5F5", "D8BE0529", "711A18DF", "146C2890"}
+husksTable = {}
 
 
 function NoOp(self, source)
@@ -591,6 +592,19 @@ function OnGDIJuggernaughtCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_03", true )
 end
 
+-- triggered when a unit such as a juggernaught spawns from a husk, this simply checks in the table of husks to see if there are any without these status 
+-- then applies them.
+function DelayHuskHide(self)
+	for key, husk in husksTable do
+		if key ~= nil then
+			ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "USER_3", 999999, 100)
+			ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "INVISIBLE_STEALTH", 999999, 100)
+			husksTable[key] = nil
+			break
+		end
+	end
+end
+
 -- This function will check if the slaughterer is not an epic unit 
 -- and if not will store the owner of self in a local variable and then assign slaughterer the owner obtained from self.
 function OnHuskCapture(self, slaughterer)
@@ -601,6 +615,9 @@ function OnHuskCapture(self, slaughterer)
 		if ObjectHasUpgrade(slaughterer, "Upgrade_EngineerCapture") == 0 then
 			ObjectGrantUpgrade(slaughterer, "Upgrade_EngineerCapture")
 		end
+
+		local a = getObjectId(self)
+		husksTable[a] = slaughterer
 	
 		local unitType = tostring(ObjectDescription(slaughterer))
 		
@@ -685,7 +702,7 @@ function OnHuskCapture(self, slaughterer)
 				ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")
 			end
 
-			-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0s and this triggers the USER_3 state on the husk which hides it. 
+			-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0s.
 			ObjectCreateAndFireTempWeapon(slaughterer, "DelayHuskDeletion")
 			
 			--  fire a weapon at ENEMIES that deals 0% of 1 damage.

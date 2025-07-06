@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!--
 	<AttributeModifier
 		id="AttributeModifier_HuskHide"
 		Category="NONE"
-		ModelConditionsSet="USER_3" />
-
+		ModelConditionsSet="USER_3 INVISIBLE_STEALTH" />
+-->
 	<AttributeModifier
 		id="AttributeModifier_HuskTimer"
 		Category="NONE"

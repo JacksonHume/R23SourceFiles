@@ -1667,7 +1667,7 @@
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
 			<FireWeaponUpdate
-				id="1957388F"
+				id="ModuleTag_FireWeapon"
 				ActiveWhenDisabled=""
 				HeroModeTrigger="False"
 				ChargingModeTrigger="False"
@@ -1677,6 +1677,11 @@
 					FireDelay="0.1s"
 					FireInterval="0s"
 					OneShot="True" />
+				<FireWeaponNugget
+					WeaponName="GDIJuggernaughtArtilleryUndeploy"
+					FireDelay="0s"
+					FireInterval="0.4s"
+				/>
 			</FireWeaponUpdate>
 			<ProductionUpdate
 				id="749674DE"
@@ -1997,14 +2002,6 @@
 				TempConditionTime="0s">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
-			<FireWeaponUpdate
-				id="ModuleTag_FireWeapon">
-				<FireWeaponNugget
-					WeaponName="GDIJuggernaughtArtilleryUndeploy"
-					FireDelay="0s"
-					FireInterval="0.4s"
-				/>
-			</FireWeaponUpdate>
 		</Behaviors>
 		<AI>
 			<DeployStyleAIUpdate

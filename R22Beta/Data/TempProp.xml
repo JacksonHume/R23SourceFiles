@@ -24,22 +24,22 @@
 		<Behaviors>
 			<LifetimeUpdate
 				id="ModuleTag_Lifetime"
-				MinLifetime="0.01s"
-				MaxLifetime="0.01s" />
+				MinLifetime="1s"
+				MaxLifetime="1s" />
 			<DestroyDie
 				id="ModuleTag_DestroyDie">
 				<DieMuxData
 					DeathTypes="ALL" />
 			</DestroyDie>
-			<!-- could be even faster doing this on create with lua -->
+			<!-- could be even faster doing this on create with lua
 			<FireWeaponWhenDead
 				id="ModuleTag_FireWeaponWhenDead"
 				DeathWeapon="DelayHuskHide"
 				InitiallyActive="true">
 				<DieMuxData
 					DeathTypes="ALL" />
-			</FireWeaponWhenDead>
-			<!-- hide the husk 
+			</FireWeaponWhenDead>  
+
 			<FireWeaponUpdate
 				id="ModuleTag_FireWeaponUpdate">
 				<FireWeaponNugget

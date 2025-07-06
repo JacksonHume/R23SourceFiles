@@ -145,19 +145,19 @@
 				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
 			</InvisibilityUpdate>
 
-			<!-- after changing husk to neutral we will stealth this to stop health bar showing -->
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+
+			<!-- after changing husk to neutral we will stealth this to stop health bar showing
 			<InvisibilityUpdate
 				id="ModuleTag_InvisibilityJugg"
 				UpdatePeriod="0.1s">
 				<InvisibilityNugget />
 				<RequiresUpgrade>Upgrade_EngineerCapture</RequiresUpgrade>
 			</InvisibilityUpdate>
-			<StealthUpgrade
-				id="ModuleTag_InvisibilityTriggerJugg">
-				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
-				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
-			</StealthUpgrade>
-	
+			 -->
 			<TemporarilyDefectUpdate
 				id="ModuleTag_TemporarilyDefect"
 				DefectionFrameCount="300" />

@@ -761,7 +761,11 @@
 	<EventList Name="HuskFXFunctions_R23" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHuskFXCreated" DebugSingleStep="false"/>
 	</EventList>
-	
+	<!--
+	<EventList Name="TempDelayHuskFunctions_R23" Inherit="BaseScriptFunctions">  	
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="FireDelayHuskHide" DebugSingleStep="false"/>
+	</EventList>
+-->
 	<!-- r21 -->
 	
 	<EventList Name="AlienHarvesterFunctions_R21" Inherit="BaseScriptFunctions">	
@@ -946,10 +950,8 @@
     </EventList>	
     <!-- ############################################################################ -->
     <EventList Name="GDIJuggernaughtFunctions" Inherit="BaseScriptFunctions">
-        <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
-		<!--<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
-		<EventHandler EventName="OnRider1"	ScriptFunctionName="OnHuskCapture" DebugSingleStep="false"/>
-		<EventHandler EventName="OnUser9End"	ScriptFunctionName="OnKillHusk" DebugSingleStep="false"/> -->
+       <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
     </EventList>
 
     <EventList Name="NODShredderFunctions" Inherit="BaseScriptFunctions">

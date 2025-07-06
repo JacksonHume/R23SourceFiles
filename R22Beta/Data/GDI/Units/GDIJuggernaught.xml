@@ -729,6 +729,14 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeapon">
+				<FireWeaponNugget
+					WeaponName="GDIJuggernaughtArtilleryUndeploy"
+					FireDelay="0s"
+					FireInterval="0.4s"
+				/>
+			</FireWeaponUpdate>
 			<ProductionUpdate
 				id="ModuleTag_ProductionUpdate"
 				GiveNoXP="true" />
@@ -787,14 +795,6 @@
 				AddConditionFlags="USER_6">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
-			<FireWeaponUpdate
-				id="ModuleTag_FireWeapon">
-				<FireWeaponNugget
-					WeaponName="GDIJuggernaughtArtilleryUndeploy"
-					FireDelay="0s"
-					FireInterval="0.4s"
-				/>
-			</FireWeaponUpdate>
 		</Behaviors>
 		<AI>
 			<DeployStyleAIUpdate
