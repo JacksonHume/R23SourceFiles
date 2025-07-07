@@ -620,7 +620,7 @@ function OnHuskCapture(self, slaughterer)
 		local a = getObjectId(self)
 		husksTable[a] = slaughterer
 	
-		local unitType = tostring(ObjectDescription(slaughterer))
+		local unitType = tostring(ObjectTemplateName(slaughterer))
 		
 		-- gdi marv 30354418                  GDI CCA0AB62
 		-- zocom marv 37F0A5F5                ZOCOM 8E3D36F8
@@ -677,7 +677,7 @@ function OnHuskCapture(self, slaughterer)
 					if playerTimes[i] == nil then
 						playerTimes[i] = 0
 					end			
-					-- Play sound if 300 frames has passed.
+					-- Play EVA sound if 300 frames has passed.
 					if playerTimes[i] == 0 or (curFrame - playerTimes[i]) >= 300 then						
 						local playerFaction = tostring(ObjectPlayerSide(self)) 											
 						if strfind(playerFaction, "CCA0AB62") ~= nil or strfind(playerFaction, "8E3D36F8") ~= nil or strfind(playerFaction, "0B2DE3F6") ~= nil then 
@@ -706,7 +706,7 @@ function OnHuskCapture(self, slaughterer)
 			-- for the 4s delay before husk is deleted.
 			ObjectCreateAndFireTempWeapon(slaughterer, "DelayHuskDeletion")
 			
-			-- spawn the husk
+			-- spawn the unit obtained from the husk
 			ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
 		end
 	end
@@ -716,7 +716,7 @@ function OnHuskHide(self)
 	ExecuteAction("UNIT_SET_TEAM", self, "PlyrCivilian/teamPlyrCivilian")	
 end
 
--- check if its a player or not and sets RIDER2 to it which will prevent the SlaughterHordeContain module from activating on this engineer.
+-- check if its a player or not and sets RIDER2 to it which will prevent the SlaughterHordeContain module from activating on this engineer, prevents skirmish AI from using it.
 function OnEngineerCreatedR23(self)
 	local engiOwner = tostring(ObjectTeamName(self))
 
@@ -731,7 +731,7 @@ function OnCombatEngineerCreatedR23(self)
 	ObjectHideSubObjectPermanently( self, "MUZZLEFLASH", true )
 	ObjectHideSubObjectPermanently( self, "LASER", true )
 	-- call the generic engineer function
-	OnEngineerCreated(self)
+	OnEngineerCreatedR23(self)
 end
 
 -- workaround for the original radar event
