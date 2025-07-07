@@ -58,6 +58,10 @@
 		<ModelConditionEvent Name="ReallyDamaged">
 			<Conditions>+REALLYDAMAGED</Conditions>
 		</ModelConditionEvent>
+
+		<ModelConditionEvent Name="OnDeployed">
+			<Conditions>+DEPLOYED</Conditions>
+		</ModelConditionEvent>
 	
 		<ModelConditionEvent Name="RecoverFromTerror">
 			<Conditions>-EMOTION_TERROR -DYING</Conditions>
@@ -756,12 +760,12 @@
 		<EventHandler EventName="OnSlaughtered"	ScriptFunctionName="OnHuskCapture" DebugSingleStep="false"/>
 	    <EventHandler EventName="OnCreated"	ScriptFunctionName="OnCombatEngineerCreatedR23" DebugSingleStep="false"/>
 	</EventList>
-
+	<!-- for tripods and juggs -->
 	<EventList Name="HuskFunctions_R23" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
 	</EventList>
-
+	<!-- for purifiers and avatars-->
 	<EventList Name="NODAvatarHuskFunctions_R23" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODAvatarCreated" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
@@ -772,7 +776,17 @@
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHuskFXCreated" DebugSingleStep="false"/>
 	</EventList>
 
-	 <EventList Name="HuskWorkaround_R23" Inherit="BaseScriptFunctions">
+	 <EventList Name="NODAvatarFunctions_R23" Inherit="BaseScriptFunctions">
+	   <EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODAvatarCreated" DebugSingleStep="false"/>
+	   <EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
+    </EventList>
+
+	 <EventList Name="TripodFunctions_R23" Inherit="BaseScriptFunctions">
+	   <EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
+    </EventList>
+
+	 <EventList Name="GDIJuggernaughtFunctions_R23" Inherit="BaseScriptFunctions">
+       <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
 	   <EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
     </EventList>
 

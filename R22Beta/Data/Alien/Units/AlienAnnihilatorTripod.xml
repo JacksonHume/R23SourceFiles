@@ -1141,13 +1141,15 @@
       </AudioLoopUpgrade>
 		</Behaviors>
 		<AI>
-			<AIUpdate
+			<DeployStyleAIUpdate
 				id="ModuleTag_AI"
-				AutoAcquireEnemiesWhenIdle="YES">
+				AutoAcquireEnemiesWhenIdle="YES"
+				AILuaEventsList="TripodFunctions_R23"
+				MustDeployToAttack="false">
 				<UnitAITargetChooserData
 					CanPickDynamicTargets="false"
 					SympathyRange="25.0" />
-			</AIUpdate>
+			</DeployStyleAIUpdate>
 		</AI>
 		<Body>
 			<ShieldBody

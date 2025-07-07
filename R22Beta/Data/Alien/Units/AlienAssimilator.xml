@@ -387,7 +387,8 @@
 		</Behaviors>
 		<AI>
 			<AIUpdate
-				id="ModuleTag_AI" />
+				id="ModuleTag_AI"
+				AILuaEventsList="EngineerFunctions_R23" />
 		</AI>
 		<Body>
 			<ActiveBody

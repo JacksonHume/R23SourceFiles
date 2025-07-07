@@ -2005,44 +2005,16 @@
 		</Behaviors>
 		<AI>
 			<DeployStyleAIUpdate
-				id="12FA48BA"
-				AttackPriority=""
+				id="ModuleTag_AI"
 				AutoAcquireEnemiesWhenIdle="YES"
-				StopChaseDistance="500"
-				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="GDIJuggernaughtFunctions"
-				MinCowerTime="0s"
-				MaxCowerTime="0s"
-				RampageTime="0s"
-				BurningDeathTime="0s"
-				TimeToEjectPassengersOnRampage="0"
-				ComboLocomotorSet="NORMAL"
-				ComboLocoAttackDistance="80"
-				IdleTargetTime="0s"
-				MaxCombineChildren="1"
-				SpawnOffsetRadius="0"
-				StandGround="False"
-				CanAttackWhileContained="False"
-				RampageRequiresAflame="False"
-				FadeOnPortals="False"
+				AILuaEventsList="GDIJuggernaughtFunctions_R23"
 				UnpackTime="1s"
 				PackTime="1s"
-				DeployedAttributeModifierName=""
-				ResetTurretBeforePacking="False"
-				TurretsFunctionOnlyWhenDeployed="False"
-				TurretsMustCenterBeforePacking="False"
-				MustDeployToAttack="True"
-				CannotUndeploy="False">
+				MustDeployToAttack="true">
 				<UnitAITargetChooserData
-					IdleScanDelay="0.8s"
-					ReacquireDelay="5s"
-					StartupDelay="0s"
-					SympathyRange="25"
-					CheckVisionRange="False"
-					CanPickDynamicTargets="False"
-					RotateToTargetWhenAiming="False"
-					CanAutoAcquireNonAutoAcquirable="False"
-					TargetingCompareList="DefaultTargetingCompareList" />
+					CheckVisionRange="false"
+					CanPickDynamicTargets="false"
+					RotateToTargetWhenAiming="false" />
 			</DeployStyleAIUpdate>
 		</AI>
 		<Body>

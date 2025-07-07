@@ -2,7 +2,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
 		id="AlienAnnihilatorTripodHusk"
-		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK"
+		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK GARRISONABLE_UNTIL_DESTROYED METAUNIT"
 		Description="Desc:AnnihilatorTripodHusk"
 		RadarPriority="UNIT"
 		BuildCompletion="INVALID"
@@ -70,7 +70,7 @@
 		RefundValue="0"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
-		TransportSlotCount="0"
+		TransportSlotCount="1"
 		IsTrainable="True"
 		IsForbidden="False"
 		IsPrerequisite="False"
@@ -161,6 +161,13 @@
 						Original="AUAnhlTrpd_D"
 						New="AUAnhlTrpdD_K" />
 				</ModelConditionState>
+				<!-- kane edition -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1 USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING USER_1"
@@ -216,6 +223,13 @@
 						Original="AUAnhlTrpd"
 						New="AUAnhlTrpd_D" />
 				</ModelConditionState>
+				<!-- invisible whilst still in the game and captured for 4s -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					Flags="START_FRAME_LAST"
@@ -288,7 +302,7 @@
 				ActiveDuringConstruction="False"
 				ContinueToBezierDestination="False">
 				<DieMuxData
-					ExemptStatus=""
+					ExemptStatus="RIDER1"
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"
@@ -506,31 +520,86 @@
 					ForceUseDoFXObj="False" />
 			</FXListBehavior>
 			
-			<HordeTransportContain
+			<!-- husk crash workaround module -->
+			
+			 <SlaughterHordeContain
 				id="ModuleTag_Contain"
-				ObjectStatusOfContained=""
-				ContainMax="0"
-				Slots="0"
-				AllowEnemiesInside="false"
-				AllowAlliesInside="false"
-				AllowNeutralInside="false"
-				AllowOwnPlayerInsideOverride="false"
-				ShowPips="false"
-				EnterSound=""
+				ContainMax="1"
+				EnterSound="AudioEvent:BuildingRepaired"
 				ExitSound=""
-				KillPassengersOnDeath="false">
+				DamagePercentToUnits="0%"
+				PassengersTestCollisionHeight="-1000"
+				NumberOfExitPaths="1"
+				DoorOpenTime="1"
+				ObjectStatusOfContained=""
+				ModifierRequiredTime="100"
+				KillIfEmptyTime="0s"
+				ModelConditionsWhenNotEmpty=""
+				PassengersInTurret="False"
+				AllowOwnPlayerInsideOverride="True"
+				AllowAlliesInside="True"
+				AllowEnemiesInside="True"
+				AllowNeutralInside="True"
+				ShowPips="True"
+				CollidePickup="True"
+				EjectPassengersOnDeath="True"
+				KillPassengersOnDeath="True"
+				HasObjectStatusOfContainedEntry="True"
+				Enabled="True"
+				MobileGarrison="True"
+				ImmuneToClearBuildingAttacks="True"
+				ResetInitialTeamOnCapture="False"
+				ExitDelay="0"
+				CashBackPercent="100"
+				CanAlwaysEnterStatus="">
+				<CanAlwaysEnterObjectFilter
+					Rule="ANY"
+					RejectModelCondition="RIDER2">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</CanAlwaysEnterObjectFilter>
 				<PassengerFilter
-					Rule="NONE"
-					Include="" />
+					Rule="ANY"
+					RejectModelCondition="RIDER2">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</PassengerFilter>
 				<DieMuxData
 					DeathTypes="ALL" />
 				<PassengerData
 					BonePrefix="ROOTTRANSFORM">
 					<Filter
 						Rule="NONE"
-						Include="" />
+						Include="ENGINEER"
+						Relationship="" />
 				</PassengerData>
-			</HordeTransportContain>
+				<UpgradeContainerOnContain
+					ID="Engineer">
+					<UnitFilter>
+						<IncludeThing>GDIEngineer</IncludeThing>
+						<IncludeThing>NODSaboteur</IncludeThing>
+						<IncludeThing>BlackHandSaboteur</IncludeThing>
+						<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+						<IncludeThing>AlienAssimilator</IncludeThing>
+						<IncludeThing>Traveler59Assimilator</IncludeThing>
+						<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+						<IncludeThing>ZOCOMEngineer</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_EngineerCapture</UpgradeList>
+				</UpgradeContainerOnContain>
+			</SlaughterHordeContain>  
 			
 			<EngineerContain
 				id="E2BE8599"
@@ -584,6 +653,25 @@
 				TempConditionTime="0s">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
+
+			<!-- husk crash workaround module -->
+			<OCLSpecialPower
+				id="ModuleTag_SpawnHuskOCL"
+				SpecialPowerTemplate="SpecialPower_SpawnHuskOCL"
+				OCL="AlienAnnihilatorTripodHuskReplace"
+				CreateLocation="USE_OWNER_OBJECT"
+			/>
+			<!-- husk crash workaround module -->
+			<StatusBitsUpgrade id="ModuleTag_EventTrigger" 
+				StatusToSet="RIDER1">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<!-- husk crash workaround module -->
+			<StatusBitsUpgrade id="ModuleTag_Unselectable" 
+				StatusToSet="UNSELECTABLE">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+			</StatusBitsUpgrade>
 		</Behaviors>
 		<Body>
 			<ActiveBody
@@ -609,6 +697,11 @@
 				RemoveUpgradesOnDeath="False"
 				BurningDeathBehavior="False" />
 		</Body>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AILuaEventsList="HuskFunctions_R23" />
+		</AI>
 		<Geometry
 			IsSmall="False">
 			<Shape

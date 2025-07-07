@@ -29,13 +29,6 @@
 			MaxHealth="0.5">
 			<CreateObject>GDIJuggernaught</CreateObject>
 		</CreateObject>
-		<CreateObject
-			Disposition="ON_GROUND_ALIGNED"
-			TempModelCondition="USER_5"
-			TempModelConditionTime="1s"
-			Options="IGNORE_ALL_OBJECTS">
-			<CreateObject>TempDelayHusk</CreateObject>
-		</CreateObject>
 	</ObjectCreationList>
 
 	<!-- behemoth husk -->
@@ -52,13 +45,6 @@
 			MinHealth="0.5"
 			MaxHealth="0.5">
 			<CreateObject>SteelTalonsBehemoth</CreateObject>
-		</CreateObject>
-		<CreateObject
-			Disposition="ON_GROUND_ALIGNED"
-			TempModelCondition="USER_5"
-			TempModelConditionTime="1s"
-			Options="IGNORE_ALL_OBJECTS">
-			<CreateObject>TempDelayHusk</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
 
@@ -77,14 +63,39 @@
 			MaxHealth="0.5">
 			<CreateObject>NODAvatar</CreateObject>
 		</CreateObject>
+	</ObjectCreationList>
+
+	<!-- annihilator tripod husk -->
+
+	<ObjectCreationList
+		id="AlienAnnihilatorTripodHuskReplace">
 		<CreateObject
-			Disposition="ON_GROUND_ALIGNED"
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="RELATIVE_ANGLE"
 			TempModelCondition="USER_5"
-			TempModelConditionTime="1s"
-			Options="IGNORE_ALL_OBJECTS">
-			<CreateObject>TempDelayHusk</CreateObject>
+			TempModelConditionTime="2.5s"
+			StartingBusyTime="2.5s"
+			DisabledWhileBusy="true"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>AlienAnnihilatorTripod</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
+
+	<!-- purifier husk -->
+
+
+
+	<!-- mok avatar husk -->
+
+
+
+	<!-- reaper tripod husk -->
+
+	
+
+	<!-- t59 tripod husk -->
+
 
 	<!-- emp fix attempt
 	<ObjectCreationList

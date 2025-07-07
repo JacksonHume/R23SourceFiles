@@ -819,6 +819,9 @@ function OnNODAvatarCreated(self)
 	ObjectHideSubObjectPermanently( self, "S_GENERATOR", true )
 end
 
+--function UnitDeployed(self)
+--	print("unit deployed")
+--end
 
 -- ################### NEW FUNCTIONS FOR 1.03 AVATAR MULTI UPGRADE FIX ###########
 function OnCommandeerFlameTank(self, other)
