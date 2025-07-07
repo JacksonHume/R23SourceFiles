@@ -4259,26 +4259,11 @@
 			</AudioLoopUpgrade>
 		</Behaviors>
 		<AI>
-			<AIUpdate
-				id="12FA48BA"
+			<DeployStyleAIUpdate
+				id="ModuleTag_AI"
 				AutoAcquireEnemiesWhenIdle="YES"
-				StopChaseDistance="500"
-				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="NODAvatarFunctions"
-				MinCowerTime="0s"
-				MaxCowerTime="0s"
-				RampageTime="0s"
-				BurningDeathTime="0s"
-				TimeToEjectPassengersOnRampage="0"
-				ComboLocomotorSet="NORMAL"
-				ComboLocoAttackDistance="80"
-				IdleTargetTime="0s"
-				MaxCombineChildren="1"
-				SpawnOffsetRadius="0"
-				StandGround="False"
-				CanAttackWhileContained="False"
-				RampageRequiresAflame="False"
-				FadeOnPortals="False">
+				AILuaEventsList="NODAvatarFunctions_R23"
+				MustDeployToAttack="false">
 				<UnitAITargetChooserData
 					IdleScanDelay="0.8s"
 					ReacquireDelay="5s"
@@ -4289,7 +4274,7 @@
 					RotateToTargetWhenAiming="True"
 					CanAutoAcquireNonAutoAcquirable="False"
 					TargetingCompareList="DefaultTargetingCompareList" />
-			</AIUpdate>
+			</DeployStyleAIUpdate>
 		</AI>
 		<Body>
 			<ActiveBody

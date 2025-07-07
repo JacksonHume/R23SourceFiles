@@ -677,8 +677,8 @@ function OnHuskCapture(self, slaughterer)
 					if playerTimes[i] == nil then
 						playerTimes[i] = 0
 					end			
-					-- Play EVA sound if 300 frames has passed.
-					if playerTimes[i] == 0 or (curFrame - playerTimes[i]) >= 300 then						
+					-- Play EVA sound if 900 (30s) frames has passed.
+					if playerTimes[i] == 0 or (curFrame - playerTimes[i]) >= 900 then						
 						local playerFaction = tostring(ObjectPlayerSide(self)) 											
 						if strfind(playerFaction, "CCA0AB62") ~= nil or strfind(playerFaction, "8E3D36F8") ~= nil or strfind(playerFaction, "0B2DE3F6") ~= nil then 
 							-- GDI EVA

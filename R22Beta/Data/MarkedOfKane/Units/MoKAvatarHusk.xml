@@ -2,7 +2,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
 		id="MarkedOfKaneAvatarHusk"
-		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK"
+		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK GARRISONABLE_UNTIL_DESTROYED METAUNIT"
 		ReviveText=""
 		RecruitText=""
 		Description="Desc:AvatarWarmechHusk"
@@ -74,7 +74,7 @@
 		RefuntValue="0"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
-		TransportSlotCount="0"
+		TransportSlotCount="1"
 		IsTrainable="True"
 		IsForbidden="False"
 		IsPrerequisite="False"
@@ -203,6 +203,20 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
+				<!-- invisible whilst still in the game and captured for 4s -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
+				<!-- kane edition -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6 USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					AnimNickName=""
@@ -476,7 +490,7 @@
 					<OCL>OCL_NODAvatarHuskDebris</OCL>
 				</OCL>
 				<DieMuxData
-					ExemptStatus=""
+					ExemptStatus="RIDER1"
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="0.9999999d"
@@ -504,52 +518,41 @@
 					ForceUseDoFXObj="False" />
 			</FXListBehavior>
 			
-			<HordeTransportContain
-				id="ModuleTag_Contain"
-				ObjectStatusOfContained=""
-				ContainMax="0"
-				Slots="0"
-				AllowEnemiesInside="false"
-				AllowAlliesInside="false"
-				AllowNeutralInside="false"
-				AllowOwnPlayerInsideOverride="false"
-				ShowPips="false"
-				EnterSound=""
-				ExitSound=""
-				KillPassengersOnDeath="false">
-				<PassengerFilter
-					Rule="NONE"
-					Include="" />
-				<DieMuxData
-					DeathTypes="ALL" />
-				<PassengerData
-					BonePrefix="ROOTTRANSFORM">
-					<Filter
-						Rule="NONE"
-						Include="" />
-				</PassengerData>
-			</HordeTransportContain>
+			<!-- husk crash workaround module -->
 			
-			<EngineerContain
-				id="E2BE8599"
-				ReplaceWith="MOKAvatarHuskReplace"
-				NameOfVoiceToUseForFriendlyEnter="9A3D3D56"
-				NameOfVoiceToUseForHostileEnter="9A3D3D56"
-				FXForCapture="FX_Husk_Captured"
-				FXForReplace="FX_Husk_Repaired"
-				FXForCaptureAndReplace="FX_Husk_Captured"
-				EvaEventForReplace="HuskRepaired"
-				EvaEventForCaptureAndReplace="HuskRepaired">
-				<CanEnterFilter
-					Rule="NONE"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="">
+			 <SlaughterHordeContain
+				id="ModuleTag_Contain"
+				ContainMax="1"
+				EnterSound="AudioEvent:BuildingRepaired"
+				ExitSound=""
+				DamagePercentToUnits="0%"
+				PassengersTestCollisionHeight="-1000"
+				NumberOfExitPaths="1"
+				DoorOpenTime="1"
+				ObjectStatusOfContained=""
+				ModifierRequiredTime="100"
+				KillIfEmptyTime="0s"
+				ModelConditionsWhenNotEmpty=""
+				PassengersInTurret="False"
+				AllowOwnPlayerInsideOverride="True"
+				AllowAlliesInside="True"
+				AllowEnemiesInside="True"
+				AllowNeutralInside="True"
+				ShowPips="True"
+				CollidePickup="True"
+				EjectPassengersOnDeath="True"
+				KillPassengersOnDeath="True"
+				HasObjectStatusOfContainedEntry="True"
+				Enabled="True"
+				MobileGarrison="True"
+				ImmuneToClearBuildingAttacks="True"
+				ResetInitialTeamOnCapture="False"
+				ExitDelay="0"
+				CashBackPercent="100"
+				CanAlwaysEnterStatus="">
+				<CanAlwaysEnterObjectFilter
+					Rule="ANY"
+					RejectModelCondition="RIDER2">
 					<IncludeThing>GDIEngineer</IncludeThing>
 					<IncludeThing>NODSaboteur</IncludeThing>
 					<IncludeThing>BlackHandSaboteur</IncludeThing>
@@ -558,8 +561,66 @@
 					<IncludeThing>Traveler59Assimilator</IncludeThing>
 					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
 					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</CanAlwaysEnterObjectFilter>
+				<PassengerFilter
+					Rule="ANY"
+					RejectModelCondition="RIDER2">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</PassengerFilter>
+				<DieMuxData
+					DeathTypes="ALL" />
+				<PassengerData
+					BonePrefix="ROOTTRANSFORM">
+					<Filter
+						Rule="NONE"
+						Include="ENGINEER"
+						Relationship="" />
+				</PassengerData>
+				<UpgradeContainerOnContain
+					ID="Engineer">
+					<UnitFilter>
+						<IncludeThing>GDIEngineer</IncludeThing>
+						<IncludeThing>NODSaboteur</IncludeThing>
+						<IncludeThing>BlackHandSaboteur</IncludeThing>
+						<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+						<IncludeThing>AlienAssimilator</IncludeThing>
+						<IncludeThing>Traveler59Assimilator</IncludeThing>
+						<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+						<IncludeThing>ZOCOMEngineer</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_EngineerCapture</UpgradeList>
+				</UpgradeContainerOnContain>
+			</SlaughterHordeContain>  
+			
+			<EngineerContain
+				id="ModuleTag_EngineerContain"
+				NameOfVoiceToUseForFriendlyEnter="VoiceCaptureHusk"
+				NameOfVoiceToUseForHostileEnter="VoiceCaptureHusk"
+				EvaEventForReplace="HuskRepaired"
+				EvaEventForCaptureAndReplace="HuskRepaired"
+				FXForReplace="FX_Husk_Repaired" 
+				FXForCapture="FX_Husk_Captured"
+				FXForCaptureAndReplace="FX_Husk_Captured" 
+				ReplaceWith="MarkedOfKaneAvatarHuskReplace">
+				<CanEnterFilter
+					Rule="NONE">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>					
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
 				</CanEnterFilter>
-			</EngineerContain>
+			</EngineerContain>			
 			<LifetimeUpdate
 				id="FD76F2F2"
 				MinLifetime="300s"
@@ -645,39 +706,30 @@
 				TempConditionTime="0s">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
+
+			<!-- husk crash workaround module -->
+			<OCLSpecialPower
+				id="ModuleTag_SpawnHuskOCL"
+				SpecialPowerTemplate="SpecialPower_SpawnHuskOCL"
+				OCL="MarkedOfKaneAvatarHuskReplace"
+				CreateLocation="USE_OWNER_OBJECT"
+			/>
+			<!-- husk crash workaround module -->
+			<StatusBitsUpgrade id="ModuleTag_EventTrigger" 
+				StatusToSet="RIDER1">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<!-- husk crash workaround module -->
+			<StatusBitsUpgrade id="ModuleTag_Unselectable" 
+				StatusToSet="UNSELECTABLE">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+			</StatusBitsUpgrade>
 		</Behaviors>
 		<AI>
 			<AIUpdate
-				id="12FA48BA"
-				AttackPriority=""
-				AutoAcquireEnemiesWhenIdle="YES"
-				StopChaseDistance="500"
-				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="NODAvatarHuskFunctions"
-				MinCowerTime="0s"
-				MaxCowerTime="0s"
-				RampageTime="0s"
-				BurningDeathTime="0s"
-				TimeToEjectPassengersOnRampage="0"
-				ComboLocomotorSet="NORMAL"
-				ComboLocoAttackDistance="80"
-				IdleTargetTime="0s"
-				MaxCombineChildren="1"
-				SpawnOffsetRadius="0"
-				StandGround="False"
-				CanAttackWhileContained="False"
-				RampageRequiresAflame="False"
-				FadeOnPortals="False">
-				<UnitAITargetChooserData
-					IdleScanDelay="0.8s"
-					ReacquireDelay="5s"
-					StartupDelay="0s"
-					SympathyRange="25"
-					CheckVisionRange="False"
-					CanPickDynamicTargets="True"
-					RotateToTargetWhenAiming="True"
-					CanAutoAcquireNonAutoAcquirable="False"
-					TargetingCompareList="DefaultTargetingCompareList" />
+				id="ModuleTag_AI"
+				AILuaEventsList="NODAvatarHuskFunctions_R23">
 			</AIUpdate>
 		</AI>
 		<Body>

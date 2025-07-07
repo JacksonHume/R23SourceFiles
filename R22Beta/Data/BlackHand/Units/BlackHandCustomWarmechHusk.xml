@@ -259,7 +259,7 @@
 				ActiveDuringConstruction="False"
 				ContinueToBezierDestination="False">
 				<DieMuxData
-					ExemptStatus="RIDER1"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"
@@ -449,7 +449,7 @@
 					<OCL>OCL_NODAvatarHuskDebris</OCL>
 				</OCL>
 				<DieMuxData
-					ExemptStatus=""
+					ExemptStatus="RIDER1"
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"

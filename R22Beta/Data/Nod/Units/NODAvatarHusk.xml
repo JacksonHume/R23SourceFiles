@@ -288,7 +288,7 @@
 				MaxLifetime="300s" 
 			/>			
 
-<!-- somehow we need to display the upgrade the model had when it was dead -->
+			<!-- somehow we need to display the upgrade the model had when it was dead -->
 			
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowStealth"
