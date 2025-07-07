@@ -585,7 +585,8 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AI"
-				AutoAcquireEnemiesWhenIdle="YES">
+				AutoAcquireEnemiesWhenIdle="YES"
+				AILuaEventsList="EngineerFunctions_R23">
 				<UnitAITargetChooserData
 					SympathyRange="100.0" />
 			</AIUpdate>

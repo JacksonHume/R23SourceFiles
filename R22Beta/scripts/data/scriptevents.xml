@@ -753,7 +753,7 @@
 	
 	<EventList Name="EngineerFunctions_R23" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnSlaughtered"	ScriptFunctionName="OnHuskCapture" DebugSingleStep="false"/>
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnEngineerCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnEngineerCreatedR23" DebugSingleStep="false"/>
 	</EventList>
 
 	<EventList Name="CombatEngineerFunctions_R23" Inherit="BaseScriptFunctions">
@@ -765,9 +765,15 @@
 		<EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
 	</EventList>
-	<!-- for purifiers and avatars-->
+	<!-- for avatars-->
 	<EventList Name="NODAvatarHuskFunctions_R23" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODAvatarCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
+	</EventList>
+	 <!-- for purifiers-->
+	 <EventList Name="BlackHandCustomWarmechHuskFunctions_R23" Inherit="BaseScriptFunctions">
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnBlackHandCustomWarmechCreated" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
 	</EventList>
@@ -780,6 +786,11 @@
 	   <EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODAvatarCreated" DebugSingleStep="false"/>
 	   <EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
     </EventList>
+
+	<EventList Name="BlackHandCustomWarmechFunctions_R23" Inherit="BaseScriptFunctions">
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnBlackHandCustomWarmechCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
+	</EventList>
 
 	 <EventList Name="TripodFunctions_R23" Inherit="BaseScriptFunctions">
 	   <EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>

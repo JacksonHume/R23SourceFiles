@@ -2,7 +2,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
 		id="BlackHandCustomWarmechHusk"
-		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK"
+		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK GARRISONABLE_UNTIL_DESTROYED METAUNIT"
 		Description="Desc:BlackHandPurifierHusk"
 		RadarPriority="UNIT"
 		BuildCompletion="INVALID"
@@ -70,7 +70,7 @@
 		RefundValue="0"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
-		TransportSlotCount="0"
+		TransportSlotCount="1"
 		IsTrainable="True"
 		IsForbidden="False"
 		IsPrerequisite="False"
@@ -151,6 +151,13 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
+				<!-- invisible whilst still in the game and captured for 4s -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_9"
@@ -252,7 +259,7 @@
 				ActiveDuringConstruction="False"
 				ContinueToBezierDestination="False">
 				<DieMuxData
-					ExemptStatus=""
+					ExemptStatus="RIDER1"
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"
@@ -561,31 +568,86 @@
 				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
 			</ModelConditionUpgrade>
 			
-			<HordeTransportContain
+			<!-- husk crash workaround module -->
+			
+			 <SlaughterHordeContain
 				id="ModuleTag_Contain"
-				ObjectStatusOfContained=""
-				ContainMax="0"
-				Slots="0"
-				AllowEnemiesInside="false"
-				AllowAlliesInside="false"
-				AllowNeutralInside="false"
-				AllowOwnPlayerInsideOverride="false"
-				ShowPips="false"
-				EnterSound=""
+				ContainMax="1"
+				EnterSound="AudioEvent:BuildingRepaired"
 				ExitSound=""
-				KillPassengersOnDeath="false">
+				DamagePercentToUnits="0%"
+				PassengersTestCollisionHeight="-1000"
+				NumberOfExitPaths="1"
+				DoorOpenTime="1"
+				ObjectStatusOfContained=""
+				ModifierRequiredTime="100"
+				KillIfEmptyTime="0s"
+				ModelConditionsWhenNotEmpty=""
+				PassengersInTurret="False"
+				AllowOwnPlayerInsideOverride="True"
+				AllowAlliesInside="True"
+				AllowEnemiesInside="True"
+				AllowNeutralInside="True"
+				ShowPips="True"
+				CollidePickup="True"
+				EjectPassengersOnDeath="True"
+				KillPassengersOnDeath="True"
+				HasObjectStatusOfContainedEntry="True"
+				Enabled="True"
+				MobileGarrison="True"
+				ImmuneToClearBuildingAttacks="True"
+				ResetInitialTeamOnCapture="False"
+				ExitDelay="0"
+				CashBackPercent="100"
+				CanAlwaysEnterStatus="">
+				<CanAlwaysEnterObjectFilter
+					Rule="ANY"
+					RejectModelCondition="RIDER2">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</CanAlwaysEnterObjectFilter>
 				<PassengerFilter
-					Rule="NONE"
-					Include="" />
+					Rule="ANY"
+					RejectModelCondition="RIDER2">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</PassengerFilter>
 				<DieMuxData
 					DeathTypes="ALL" />
 				<PassengerData
 					BonePrefix="ROOTTRANSFORM">
 					<Filter
 						Rule="NONE"
-						Include="" />
+						Include="ENGINEER"
+						Relationship="" />
 				</PassengerData>
-			</HordeTransportContain>
+				<UpgradeContainerOnContain
+					ID="Engineer">
+					<UnitFilter>
+						<IncludeThing>GDIEngineer</IncludeThing>
+						<IncludeThing>NODSaboteur</IncludeThing>
+						<IncludeThing>BlackHandSaboteur</IncludeThing>
+						<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+						<IncludeThing>AlienAssimilator</IncludeThing>
+						<IncludeThing>Traveler59Assimilator</IncludeThing>
+						<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+						<IncludeThing>ZOCOMEngineer</IncludeThing>
+					</UnitFilter>
+					<UpgradeList>Upgrade_EngineerCapture</UpgradeList>
+				</UpgradeContainerOnContain>
+			</SlaughterHordeContain>  
 			
 			<EngineerContain
 				id="E2BE8599"
@@ -618,6 +680,24 @@
 					<IncludeThing>ZOCOMEngineer</IncludeThing>
 				</CanEnterFilter>
 			</EngineerContain>
+			<!-- husk crash workaround module -->
+			<OCLSpecialPower
+				id="ModuleTag_SpawnHuskOCL"
+				SpecialPowerTemplate="SpecialPower_SpawnHuskOCL"
+				OCL="BlackHandCustomWarmechHuskReplace"
+				CreateLocation="USE_OWNER_OBJECT"
+			/>
+			<!-- husk crash workaround module -->
+			<StatusBitsUpgrade id="ModuleTag_EventTrigger" 
+				StatusToSet="RIDER1">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<!-- husk crash workaround module -->
+			<StatusBitsUpgrade id="ModuleTag_Unselectable" 
+				StatusToSet="UNSELECTABLE">
+				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
+			</StatusBitsUpgrade>
 		</Behaviors>
 		<AI>
 			<AIUpdate
@@ -625,7 +705,7 @@
 				AutoAcquireEnemiesWhenIdle="YES"
 				StopChaseDistance="500"
 				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="BlackHandCustomWarmechHuskFunctions"
+				AILuaEventsList="BlackHandCustomWarmechHuskFunctions_R23"
 				MinCowerTime="0s"
 				MaxCowerTime="0s"
 				RampageTime="0s"

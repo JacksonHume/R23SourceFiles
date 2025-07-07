@@ -84,18 +84,71 @@
 
 	<!-- purifier husk -->
 
-
+	<ObjectCreationList
+		id="BlackHandCustomWarmechHuskReplace">
+		<CreateObject
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE COPY_CREATORS_UPGRADES PRESERVE_LAYER INHERIT_SCRIPTING_NAME"
+			Disposition="RELATIVE_ANGLE"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="2.5s"
+			DisabledWhileBusy="true"
+			StartingBusyTime="2.5s"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>BlackHandCustomWarmech</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
 
 	<!-- mok avatar husk -->
 
-
+	<ObjectCreationList
+		id="MarkedOfKaneAvatarHuskReplace">
+		<CreateObject
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE COPY_CREATORS_UPGRADES PRESERVE_LAYER"
+			Disposition="RELATIVE_ANGLE"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="2.5s"
+			DisabledWhileBusy="true"
+			StartingBusyTime="2.5s"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>MarkedOfKaneAvatar</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
 
 	<!-- reaper tripod husk -->
 
-	
+	<ObjectCreationList
+		id="Reaper17AnnihilatorTripodHuskReplace">
+		<CreateObject
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="RELATIVE_ANGLE"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="2.5s"
+			StartingBusyTime="2.5s"
+			DisabledWhileBusy="true"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>Reaper17AnnihilatorTripod</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
 
 	<!-- t59 tripod husk -->
 
+	<ObjectCreationList
+		id="Traveler59AnnihilatorTripodHuskReplace">
+		<CreateObject
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="RELATIVE_ANGLE"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="2.5s"
+			StartingBusyTime="2.5s"
+			DisabledWhileBusy="true"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>Traveler59AnnihilatorTripod</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
 
 	<!-- emp fix attempt
 	<ObjectCreationList

@@ -717,7 +717,7 @@ function OnHuskHide(self)
 end
 
 -- check if its a player or not and sets RIDER2 to it which will prevent the SlaughterHordeContain module from activating on this engineer.
-function OnEngineerCreated(self)
+function OnEngineerCreatedR23(self)
 	local engiOwner = tostring(ObjectTeamName(self))
 
 	if strfind(engiOwner, "teamPlayer_1") == nil and strfind(engiOwner, "teamPlayer_2") == nil and 
@@ -921,9 +921,6 @@ function OnNODTechAssembleyPlantCreated(self)
 end
 
 function OnNODSecretShrineCreated(self)
-
-	--ExecuteAction("NAMED_USE_COMMANDBUTTON_ABILITY", self, "Command_PurchaseUpgradeTiberiumInfusion")
-
 	ObjectHideSubObjectPermanently( self, "GLOWS", true )	
 	ObjectHideSubObjectPermanently( self, "ConfUpgrd", true )
 	ObjectHideSubObjectPermanently( self, "CYBERNETICLEGS_01", true )
