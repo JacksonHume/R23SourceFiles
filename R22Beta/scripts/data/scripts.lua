@@ -678,7 +678,7 @@ function OnHuskCapture(self, slaughterer)
 						playerTimes[i] = 0
 					end			
 					-- Play sound if 300 frames has passed.
-					if playerTimes[i] == 0 or curFrame - playerTimes[i] >= 300 then						
+					if playerTimes[i] == 0 or (curFrame - playerTimes[i]) >= 300 then						
 						local playerFaction = tostring(ObjectPlayerSide(self)) 											
 						if strfind(playerFaction, "CCA0AB62") ~= nil or strfind(playerFaction, "8E3D36F8") ~= nil or strfind(playerFaction, "0B2DE3F6") ~= nil then 
 							-- GDI EVA
@@ -706,9 +706,6 @@ function OnHuskCapture(self, slaughterer)
 			-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0s.
 			ObjectCreateAndFireTempWeapon(slaughterer, "DelayHuskDeletion")
 			
-			--  fire a weapon at ENEMIES that deals 0% of 1 damage.
-			-- ObjectCreateAndFireTempWeapon(self, "AlertEnemyPlayer")
-			
 			-- spawn the husk
 			ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
 		end
@@ -730,12 +727,16 @@ function OnEngineerCreated(self)
 	then ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "RIDER2", 999999, 100) end
 end
 
+function OnCombatEngineerCreatedR23(self)
+	ObjectHideSubObjectPermanently( self, "MUZZLEFLASH", true )
+	ObjectHideSubObjectPermanently( self, "LASER", true )
+	-- call the generic engineer function
+	OnEngineerCreated(self)
+end
+
 -- workaround for the original radar event
 function OnHuskFXCreated(self)
 	 ExecuteAction("NAMED_USE_COMMANDBUTTON_ABILITY", self, "Command_HuskCaptureFX")
-	--if ObjectHasUpgrade(self, "Upgrade_PowerPlantTurbine") == 0 then
-	--	ObjectGrantUpgrade(self, "Upgrade_PowerPlantTurbine")
-	--end
 end
 
 function OnGDIWatchTowerCreated(self)

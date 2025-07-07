@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
-	<!-- Engineer crash workaround weapons -->
+	<!-- Engineer crash workaround weapons 
 
 	<WeaponTemplate
 		id="DelayHuskHide"
@@ -28,7 +28,7 @@
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 		</Nuggets>
-	</WeaponTemplate>
+	</WeaponTemplate> -->
 
 	<WeaponTemplate
 		id="DelayHuskDeletion"

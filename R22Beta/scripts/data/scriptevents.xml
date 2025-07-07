@@ -747,13 +747,17 @@
 		<EventHandler EventName="OnErrorChecker" ScriptFunctionName="OnErrorChecker_renwars" DebugSingleStep="false"/>
 	</EventList>
 	
-	<EventList Name="GDIEngineerFunctions_R23" Inherit="BaseScriptFunctions">  	
+	<EventList Name="EngineerFunctions_R23" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnSlaughtered"	ScriptFunctionName="OnHuskCapture" DebugSingleStep="false"/>
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnEngineerCreated" DebugSingleStep="false"/>
 	</EventList>
 
+	<EventList Name="CombatEngineerFunctions_R23" Inherit="BaseScriptFunctions">
+		<EventHandler EventName="OnSlaughtered"	ScriptFunctionName="OnHuskCapture" DebugSingleStep="false"/>
+	    <EventHandler EventName="OnCreated"	ScriptFunctionName="OnCombatEngineerCreatedR23" DebugSingleStep="false"/>
+	</EventList>
+
 	<EventList Name="HuskFunctions_R23" Inherit="BaseScriptFunctions">  	
-		<!--<EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/> -->
 		<EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
 	</EventList>
@@ -761,11 +765,12 @@
 	<EventList Name="HuskFXFunctions_R23" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHuskFXCreated" DebugSingleStep="false"/>
 	</EventList>
-	<!--
-	<EventList Name="TempDelayHuskFunctions_R23" Inherit="BaseScriptFunctions">  	
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="FireDelayHuskHide" DebugSingleStep="false"/>
-	</EventList>
--->
+
+	 <EventList Name="GDIJuggernaughtFunctions_R23" Inherit="BaseScriptFunctions">
+       <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
+	   <EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
+    </EventList>
+
 	<!-- r21 -->
 	
 	<EventList Name="AlienHarvesterFunctions_R21" Inherit="BaseScriptFunctions">	
@@ -951,7 +956,6 @@
     <!-- ############################################################################ -->
     <EventList Name="GDIJuggernaughtFunctions" Inherit="BaseScriptFunctions">
        <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
-		<EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
     </EventList>
 
     <EventList Name="NODShredderFunctions" Inherit="BaseScriptFunctions">
@@ -1333,8 +1337,6 @@
 	<EventList Name="GDIAirfieldFunctions" Inherit="BaseScriptFunctions">
 	    <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIAirfieldCreated" DebugSingleStep="false"/>
 	</EventList>	
-	
-	
 
 	<!-- ################################################ NEW FUNCTIONS FOR MOBA/RENEGADE WARS ########################################################## -->
 	
