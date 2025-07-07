@@ -2,7 +2,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
 		id="Reaper17AnnihilatorTripodHusk"
-		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK GARRISONABLE_UNTIL_DESTROYED METAUNIT"
+		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK GARRISONABLE_UNTIL_DESTROYED METAUNIT RESIST_EMP"
 		Description="Desc:Reaper17AnnihilatorTripodHusk"
 		RadarPriority="UNIT"
 		BuildCompletion="INVALID"
@@ -145,6 +145,13 @@
 						Original="AUAnhlTrpd"
 						New="AURprTripod_D" />
 				</ModelConditionState>
+				<!-- invisible whilst still in the game and captured for 4s -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING"
@@ -184,13 +191,6 @@
 						Original="AUAnhlTrpd"
 						New="AURprTripod_D" />
 				</ModelConditionState>
-				<!-- invisible whilst still in the game and captured for 4s -->
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_3">
-					<Model
-						Name="" />
-				</ModelConditionState>   
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					Flags="START_FRAME_LAST"
@@ -630,7 +630,7 @@
 				AutoAcquireEnemiesWhenIdle=""
 				StopChaseDistance="500"
 				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="ReaperTripodFunctions_R23"
+				AILuaEventsList="ReaperTripodHuskFunctions_R23"
 				MinCowerTime="0s"
 				MaxCowerTime="0s"
 				RampageTime="0s"

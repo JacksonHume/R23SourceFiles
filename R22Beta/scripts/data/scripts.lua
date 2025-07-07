@@ -594,7 +594,13 @@ end
 
 -- triggered when a unit such as a juggernaught spawns from a husk, this simply checks in the table of husks to see if there are any without these status 
 -- then applies them.
-function DelayHuskHide()
+function DelayHuskHide(self)
+
+	if ObjectHasUpgrade(self, "Upgrade_EngineerCapture") == 0 then
+		print("has upgrade, removing it.")
+		ObjectRemoveUpgrade(self, "Upgrade_EngineerCapture")
+	end
+
 	for key, husk in husksTable do
 		if key ~= nil then
 			ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "USER_3", 999999, 100)

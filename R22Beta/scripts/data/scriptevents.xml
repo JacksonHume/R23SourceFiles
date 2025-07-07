@@ -806,6 +806,12 @@
 		<EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
    	 </EventList>
 
+	 <EventList Name="ReaperTripodHuskFunctions_R23" Inherit="BaseScriptFunctions">
+  		<EventHandler EventName="OnCreated" ScriptFunctionName="OnReaperTripodCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
+   	 </EventList>
+
 	<!-- r21 -->
 	
 	<EventList Name="AlienHarvesterFunctions_R21" Inherit="BaseScriptFunctions">	

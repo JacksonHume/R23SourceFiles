@@ -2,7 +2,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<GameObject
 		id="Traveler59AnnihilatorTripodHusk"
-		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK GARRISONABLE_UNTIL_DESTROYED METAUNIT"
+		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS PRELOAD NOT_AUTOACQUIRABLE VALID_TARGET_FOR_C4 HUSK GARRISONABLE_UNTIL_DESTROYED METAUNIT RESIST_EMP"
 		Description="Desc:Traveler59AnnihilatorTripodHusk"
 		RadarPriority="UNIT"
 		BuildCompletion="INVALID"
@@ -168,6 +168,13 @@
 					<Model
 						Name="" />
 				</ModelConditionState>   
+				<!-- invisible whilst still in the game and captured for 4s -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING USER_1"
@@ -223,13 +230,6 @@
 						Original="AUAnhlTrpd"
 						New="AUAnhlTrpd_D" />
 				</ModelConditionState>
-				<!-- invisible whilst still in the game and captured for 4s -->
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_3">
-					<Model
-						Name="" />
-				</ModelConditionState>   
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					Flags="START_FRAME_LAST"
