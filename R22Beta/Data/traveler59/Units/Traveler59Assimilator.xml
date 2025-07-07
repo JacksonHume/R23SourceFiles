@@ -402,7 +402,9 @@
 		</Behaviors>
 		<AI>
 			<AIUpdate
-				id="ModuleTag_AI" />
+				id="ModuleTag_06"
+				AILuaEventsList="EngineerFunctions_R23"
+				AutoAcquireEnemiesWhenIdle="YES" />
 		</AI>
 		<Body>
 			<ActiveBody

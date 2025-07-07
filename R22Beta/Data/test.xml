@@ -111,7 +111,7 @@
 		<Include source="MarkedOfKane\Units\MoKAvatarHusk.xml" type="all"/>	
 		<Include source="MarkedOfKane\Units\markedofkanesaboteur.xml" type="all"/>	
 		<Include source="MarkedOfKane\Units\MoKAvatar.xml" type="all"/>	
-
+		
 		
 	</Includes>
 </AssetDeclaration>
