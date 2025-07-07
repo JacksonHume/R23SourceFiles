@@ -800,7 +800,7 @@
 			<DeployStyleAIUpdate
 				id="ModuleTag_AI"
 				AutoAcquireEnemiesWhenIdle="YES"
-				AILuaEventsList="GDIJuggernaughtFunctions_R23"
+				AILuaEventsList="GDIJuggernaughtFunctions"
 				UnpackTime="1s"
 				PackTime="1s"
 				MustDeployToAttack="true">

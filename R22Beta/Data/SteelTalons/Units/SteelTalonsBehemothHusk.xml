@@ -70,7 +70,7 @@
 		RefundValue="0"
 		ThreatValue="0"
 		MaxSimultaneousOfType="0"
-		TransportSlotCount="0"
+		TransportSlotCount="1"
 		IsTrainable="True"
 		IsForbidden="False"
 		IsPrerequisite="False"

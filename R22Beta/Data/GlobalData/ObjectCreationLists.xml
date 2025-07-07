@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
-	<!-- husk ocl's-->
+	<!-- husk ocl's (change Disposition to RELATIVE_ANGLE) -->
 
 	<ObjectCreationList
 		id="OCL_CreateHuskEffect">
@@ -29,6 +29,13 @@
 			MaxHealth="0.5">
 			<CreateObject>GDIJuggernaught</CreateObject>
 		</CreateObject>
+		<CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="1s"
+			Options="IGNORE_ALL_OBJECTS">
+			<CreateObject>TempDelayHusk</CreateObject>
+		</CreateObject>
 	</ObjectCreationList>
 
 	<!-- behemoth husk -->
@@ -46,9 +53,38 @@
 			MaxHealth="0.5">
 			<CreateObject>SteelTalonsBehemoth</CreateObject>
 		</CreateObject>
+		<CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="1s"
+			Options="IGNORE_ALL_OBJECTS">
+			<CreateObject>TempDelayHusk</CreateObject>
+		</CreateObject>
 	</ObjectCreationList>
 
-	
+	<!-- nod avatar husk -->
+
+	<ObjectCreationList
+		id="NODAvatarHuskReplace">
+		<CreateObject
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE COPY_CREATORS_UPGRADES PRESERVE_LAYER"
+			Disposition="RELATIVE_ANGLE"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="2.5s"
+			DisabledWhileBusy="true"
+			StartingBusyTime="2.5s"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>NODAvatar</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="1s"
+			Options="IGNORE_ALL_OBJECTS">
+			<CreateObject>TempDelayHusk</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
 
 	<!-- emp fix attempt
 	<ObjectCreationList

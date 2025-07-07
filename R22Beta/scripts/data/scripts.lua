@@ -594,7 +594,7 @@ end
 
 -- triggered when a unit such as a juggernaught spawns from a husk, this simply checks in the table of husks to see if there are any without these status 
 -- then applies them.
-function DelayHuskHide(self)
+function DelayHuskHide()
 	for key, husk in husksTable do
 		if key ~= nil then
 			ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "USER_3", 999999, 100)
@@ -703,7 +703,7 @@ function OnHuskCapture(self, slaughterer)
 				ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")
 			end
 
-			-- for the 4s delay before husk is deleted, also spawns a tempprop that dies after 0s.
+			-- for the 4s delay before husk is deleted.
 			ObjectCreateAndFireTempWeapon(slaughterer, "DelayHuskDeletion")
 			
 			-- spawn the husk

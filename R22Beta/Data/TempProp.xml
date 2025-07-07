@@ -49,6 +49,14 @@
 			</FireWeaponUpdate>
 			-->
 		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				AILuaEventsList="HuskWorkaround_R23">
+				<UnitAITargetChooserData />
+			</AIUpdate>
+		</AI>
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"

@@ -766,8 +766,7 @@
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHuskFXCreated" DebugSingleStep="false"/>
 	</EventList>
 
-	 <EventList Name="GDIJuggernaughtFunctions_R23" Inherit="BaseScriptFunctions">
-       <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
+	 <EventList Name="HuskWorkaround_R23" Inherit="BaseScriptFunctions">
 	   <EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
     </EventList>
 
