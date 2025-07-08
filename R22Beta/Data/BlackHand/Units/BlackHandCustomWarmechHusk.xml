@@ -160,7 +160,7 @@
 				</ModelConditionState>   
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_9"
+					ConditionsYes="USER_10"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
@@ -564,7 +564,7 @@
 			</ModelConditionUpgrade> -->
 			<ModelConditionUpgrade
 				id="ModuleTag_PurifyingFlameUpgrade"
-				AddConditionFlags="USER_9">
+				AddConditionFlags="USER_10">
 				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
 			</ModelConditionUpgrade>
 			
