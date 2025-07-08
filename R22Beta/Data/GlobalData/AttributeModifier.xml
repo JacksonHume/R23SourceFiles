@@ -11,7 +11,7 @@
 		id="AttributeModifier_HuskTimer"
 		Category="NONE"
 		Duration="4s"
-		ObjectStatusToSet="UNATTACKABLE"
+		ObjectStatusToSet="UNATTACKABLE NO_COLLISIONS"
 		ModelConditionsSet="USER_9">
 		<Modifier Type="CRUSHABLE_LEVEL" Value="500%" />
 		<Modifier Type="ARMOR" Value="0%" />
