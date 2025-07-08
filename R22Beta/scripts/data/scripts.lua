@@ -602,8 +602,15 @@ function DelayHuskHide(self)
 
 	for key, husk in husksTable do
 		if key ~= nil then
-			ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "USER_3", 999999, 100)
-			ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "INVISIBLE_STEALTH", 999999, 100)
+
+			if ObjectTestModelCondition(husk, "USER_3") == false then
+				ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "USER_3", 999999, 100)
+			end
+			
+			if ObjectTestModelCondition(husk, "INVISIBLE_STEALTH") == false then
+				ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "INVISIBLE_STEALTH", 999999, 100)
+			end
+
 			husksTable[key] = nil
 			break
 		end
@@ -629,13 +636,13 @@ function OnHuskCapture(self, slaughterer)
 		
 		-- gdi marv 30354418                  GDI CCA0AB62
 		-- zocom marv 37F0A5F5                ZOCOM 8E3D36F8
-		-- steel talons marv 565BE825		  STEEL TALONS 0B2DE3F6
+		-- steel talons marv 565BE825		  STEEL TALONS 38EA5BC0
 		-- nod redeemer D8BE0529              NOD ED46C05A
 		-- black hand redeeemer CD5A5360      BLACK HAND 5D10A932
-		-- mok redeemer 711A18DF              MARKED OF KANE CE39C6B1
-		-- scrin hexapod 1D137C85             SCRIN 59C60CEF
-		-- reaper hexapod 146C2890            REAPER17 D1C1A775
-		-- t59 hexapod A4FD281B               TRAVELER59 B6FF40B1
+		-- mok redeemer 711A18DF              MARKED OF KANE FB53CCFD
+		-- scrin hexapod 1D137C85             SCRIN 5B7BAA66
+		-- reaper hexapod 146C2890            REAPER17 30883A9F
+		-- t59 hexapod A4FD281B               TRAVELER59 92CC2C04
 		
 		local isEpicUnit = false
 		
@@ -684,16 +691,17 @@ function OnHuskCapture(self, slaughterer)
 					end			
 					-- Play EVA sound if 900 (30s) frames has passed.
 					if playerTimes[i] == 0 or (curFrame - playerTimes[i]) >= 900 then						
-						local playerFaction = tostring(ObjectPlayerSide(self)) 											
-						if strfind(playerFaction, "CCA0AB62") ~= nil or strfind(playerFaction, "8E3D36F8") ~= nil or strfind(playerFaction, "0B2DE3F6") ~= nil then 
+						local playerFaction = tostring(ObjectPlayerSide(self)) 		
+						
+						if strfind(playerFaction, "CCA0AB62") ~= nil or strfind(playerFaction, "8E3D36F8") ~= nil or strfind(playerFaction, "38EA5BC0") ~= nil then 
 							-- GDI EVA
 							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Geva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
 						elseif 
-							strfind(playerFaction, "ED46C05A") ~= nil or strfind(playerFaction, "5D10A932") ~= nil or strfind(playerFaction, "CE39C6B1") ~= nil then 
+							strfind(playerFaction, "ED46C05A") ~= nil or strfind(playerFaction, "5D10A932") ~= nil or strfind(playerFaction, "FB53CCFD") ~= nil then 
 							-- NOD EVA
 							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Neva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
 						elseif 
-							strfind(playerFaction, "59C60CEF") ~= nil or strfind(playerFaction, "D1C1A775") ~= nil or strfind(playerFaction, "B6FF40B1") ~= nil then 
+							strfind(playerFaction, "5B7BAA66") ~= nil or strfind(playerFaction, "30883A9F") ~= nil or strfind(playerFaction, "92CC2C04") ~= nil then 
 							-- SCRIN EVA
 							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Aeva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
 						end
