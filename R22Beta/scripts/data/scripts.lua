@@ -393,10 +393,8 @@ end
 function OffMoney0_R21g(self) 
 	local a = getObjectId(self)		
 	if ObjectTestModelCondition(self, "DOCKING") then 
-		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueOne") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueOne") 
-			elseif ObjectHasUpgrade(self, "Upgrade_UpgradeGreenOne") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenOne") 
-		end
-		
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueOne") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueOne") end 
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeGreenOne") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenOne") end
 		if bar1[a] == 0 then harvbluetib[a] = harvbluetib[a] - 1
 			elseif bar1[a] == 1 then harvgreentib[a] = harvgreentib[a] - 1
 		end
@@ -406,10 +404,8 @@ end
 function OffMoney1_R21g(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") then 
-		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTwo") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTwo") 
-			elseif ObjectHasUpgrade(self, "Upgrade_UpgradeGreenTwo") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenTwo") 
-		end
-		
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTwo") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTwo") end 
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeGreenTwo") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenTwo") end	
 		if bar2[a] == 0 then harvbluetib[a] = harvbluetib[a] - 1
 			elseif bar2[a] == 1 then harvgreentib[a] = harvgreentib[a] - 1
 		end
@@ -419,10 +415,8 @@ end
 function OffMoney2_R21g(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") then 
-		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueThree") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueThree") 
-			elseif ObjectHasUpgrade(self, "Upgrade_UpgradeGreenThree") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenThree") 
-		end
-		
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueThree") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueThree") end
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeGreenThree") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenThree") end		
 		if bar3[a] == 0 then harvbluetib[a] = harvbluetib[a] - 1
 			elseif bar3[a] == 1 then harvgreentib[a] = harvgreentib[a] - 1
 		end
@@ -432,10 +426,8 @@ end
 function OffMoney3_R21g(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") then 
-		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueFour") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueFour") 
-			elseif ObjectHasUpgrade(self, "Upgrade_UpgradeGreenFour") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenFour") 
-		end
-		
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueFour") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueFour") end
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeGreenFour") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenFour") end	
 		if bar4[a] == 0 then harvbluetib[a] = harvbluetib[a] - 1
 			elseif bar4[a] == 1 then harvgreentib[a] = harvgreentib[a] - 1
 		end
