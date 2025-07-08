@@ -203,129 +203,6 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					Name=""
-					ConditionsYes="REALLYDAMAGED USER_6"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:GUBEHEMOTH_SKND"
-						ExtraMesh="False" />
-					<Texture
-						Original="GUBehemoth"
-						New="GUBehemoth_D" />
-					<ParticleSysBone
-						BoneName="B_PISTONLA"
-						FXParticleSystemTemplate="GDIDebrisSmallFire"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="B_PISTONLA"
-						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="B_PISTONLA"
-						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					Name=""
-					ConditionsYes="DYING USER_6"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:GUBEHEMOTH_SKNR"
-						ExtraMesh="False" />
-					<ParticleSysBone
-						BoneName="B_PISTONLA"
-						FXParticleSystemTemplate="GDIDebrisSmallFire"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="B_PISTONLA"
-						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="B_PISTONLA"
-						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="B_SHELL01"
-						FXParticleSystemTemplate="GDIDebrisSmallFire"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="B_SHELL01"
-						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="B_SHELL01"
-						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					Name=""
 					ConditionsYes="REALLYDAMAGED"
 					Skeleton=""
 					ModelAnimationPrefix=""
@@ -456,21 +333,6 @@
 					RetainSubObjects="False">
 					<Model
 						Name="W3DContainer:GUBEHEMOTH_FP"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					Name=""
-					ConditionsYes="USER_6"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:GUBEHEMOTH_SKN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
@@ -1989,19 +1851,6 @@
 					OrientToObject="True"
 					ForceUseDoFXObj="False" />
 			</FXListBehavior>
-			<ModelConditionUpgrade
-				id="081018FB"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				AddConditionFlags="USER_6"
-				RemoveConditionFlags=""
-				AddTempConditionFlag="TOPPLED"
-				TempConditionTime="0s">
-				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
-			</ModelConditionUpgrade>
 		</Behaviors>
 		<AI>
 			<DeployStyleAIUpdate

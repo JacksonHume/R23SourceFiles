@@ -145,75 +145,44 @@
 				HighDetailOnly="False"
 				SetAnimsToLastFrameOnConstructionComplete="True">
 				<ModelConditionState
-					ParseCondStateType="PARSE_DEFAULT"
-					Name=""
-					ConditionsYes=""
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
+					ParseCondStateType="PARSE_DEFAULT">
 					<Model
-						Name="W3DContainer:NUMECHH_SKN"
-						ExtraMesh="False" />
+						Name="W3DContainer:NUMechH_SKN" />
 					<Texture
 						Original="NUFlameTank"
 						New="NUFlameTankD" />
 					<ParticleSysBone
 						BoneName="B_UArmL"
 						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
 				</ModelConditionState>
+				<!-- kane edition -->
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					Name=""
-					ConditionsYes="USER_6"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
+					ConditionsYes="USER_6 USER_3">
 					<Model
-						Name="W3DContainer:NUMECHH_SKN"
-						ExtraMesh="False" />
+						Name="" />
+				</ModelConditionState>   
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6">
+					<Model
+						Name="W3DContainer:NUMechH_SKN" />
 					<Texture
 						Original="NUMechD"
-						New="NUMechD_K" />
+						New="NUMechD_K" />	
 					<Texture
 						Original="NUFlameTank"
 						New="NUFlameTankD" />
 					<ParticleSysBone
 						BoneName="B_UArmL"
 						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						FXTrigger=""
-						Persist=""
-						PersistID="0"
-						id=""
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
+						FollowBone="true" />
 				</ModelConditionState>
 				<!-- invisible whilst still in the game and captured for 4s -->
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_3">
-					<Model
-						Name="" />
-				</ModelConditionState>   
-				<!-- kane edition -->
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_6 USER_3">
 					<Model
 						Name="" />
 				</ModelConditionState>   

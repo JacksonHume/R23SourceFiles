@@ -145,6 +145,13 @@
 						Original="AUAnhlTrpd"
 						New="AUAnhlTrpd_D" />
 				</ModelConditionState>
+				<!-- kane edition -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1 USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_1"
@@ -161,20 +168,13 @@
 						Original="AUAnhlTrpd_D"
 						New="AUAnhlTrpdD_K" />
 				</ModelConditionState>
-				<!-- kane edition -->
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_1 USER_3">
-					<Model
-						Name="" />
-				</ModelConditionState>  
 				<!-- invisible whilst still in the game and captured for 4s -->
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_3">
 					<Model
 						Name="" />
-				</ModelConditionState>    
+				</ModelConditionState>   
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING USER_1"

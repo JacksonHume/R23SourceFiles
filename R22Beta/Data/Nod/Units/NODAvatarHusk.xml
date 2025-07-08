@@ -33,6 +33,13 @@
 						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
 						FollowBone="true" />
 				</ModelConditionState>
+				<!-- kane edition -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6 USER_3">
+					<Model
+						Name="" />
+				</ModelConditionState>   
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_6">
@@ -53,13 +60,6 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_3">
-					<Model
-						Name="" />
-				</ModelConditionState>   
-				<!-- kane edition -->
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_6 USER_3">
 					<Model
 						Name="" />
 				</ModelConditionState>   
