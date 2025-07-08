@@ -597,7 +597,6 @@ end
 function DelayHuskHide(self)
 
 	if ObjectHasUpgrade(self, "Upgrade_EngineerCapture") == 0 then
-		print("has upgrade, removing it.")
 		ObjectRemoveUpgrade(self, "Upgrade_EngineerCapture")
 	end
 
