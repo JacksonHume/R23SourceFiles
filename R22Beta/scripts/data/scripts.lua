@@ -681,8 +681,8 @@ function OnHuskCapture(self, slaughterer)
 					if playerTimes[i] == nil then
 						playerTimes[i] = 0
 					end			
-					-- Play EVA sound if 900 (30s) frames has passed.
-					if playerTimes[i] == 0 or (curFrame - playerTimes[i]) >= 900 then						
+					-- Play EVA sound if 450 (30s) frames has passed.
+					if playerTimes[i] == 0 or (curFrame - playerTimes[i]) >= 450 then						
 						local playerFaction = tostring(ObjectPlayerSide(self)) 		
 						
 						if strfind(playerFaction, "CCA0AB62") ~= nil or strfind(playerFaction, "8E3D36F8") ~= nil or strfind(playerFaction, "38EA5BC0") ~= nil then 
