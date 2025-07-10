@@ -60,6 +60,10 @@ bar4 = {} -- for tracking the bar four of the harvester.
 playerTimes = {}
 epicUnits = {"30354418", "565BE825", "CD5A5360", "1D137C85", "A4FD281B", "37F0A5F5", "D8BE0529", "711A18DF", "146C2890"}
 husksTable = {}
+playerTable = {"Player_1","Player_2","Player_3","Player_4","Player_5","Player_6","Player_7","Player_8","PlyrGDI", "Neutral", "PlyrNOD", "PlyrBlackHand", 
+"PlyrSteelTalons", "PlyrAlien", "PlyrTraveler59", "PlyrZOCOM", "PlyrMarkedOfKane", "PlyrNeutral", "PlyrReaper17", "Skirmish", "SkirmishAlien", 
+"SkirmishBlackHand", "SkirmishCivilian", "SkirmishCommentator", "SkirmishGDI", "SkirmishMarkedOfKane",
+"SkirmishNeutral", "SkirmishNod", "SkirmishNull", "SkirmishObserver", "SkirmishReaper17","SkirmishSteelTalons", "SkirmishTraveler59", "SkirmishZOCOM", "PlyrCreeps", "PlyrCivilian"}
 
 
 function NoOp(self, source)
@@ -593,16 +597,29 @@ function DelayHuskHide(self)
 	end
 
 	for key, husk in husksTable do
-		if key ~= nil then
+	
+		if key ~= nil then		
 
 			if ObjectTestModelCondition(husk, "USER_3") == false then
 				ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "USER_3", 999999, 100)
 			end
-			
+
+			-- issue with this is that it can be detected by enemies.
 			if ObjectTestModelCondition(husk, "INVISIBLE_STEALTH") == false then
 				ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "INVISIBLE_STEALTH", 999999, 100)
 			end
 
+			local huskOwner = tostring(ObjectTeamName(husk))
+			-- one solution is to teleport to a waypoint added to each map to the start location of the owner of the husk.
+			-- only teleport if this waypoint exists 
+			for i = 1, 8 do 
+				local player = "Player_" .. i
+				if strfind(huskOwner, player) ~= nil then
+					ExecuteAction("UNIT_TELEPORT_TO_WAYPOINT", husk, player .. "_Start")
+					break
+				end
+			end
+				
 			husksTable[key] = nil
 			break
 		end
@@ -655,27 +672,19 @@ function OnHuskCapture(self, slaughterer)
 			local curFrame = GetFrame()
 				
 			-- play the husk capture sound found on EngineerContain.
-			ObjectPlaySound(slaughterer, "BuildingCaptured")
-
-			-- Extract exact player names from ObjectDescription
-			--local huskPlayerName = tostring(getPlayerNameExact(slaughterer))
-			--local engineerPlayerName = tostring(getPlayerNameExact(self))
+			ObjectPlaySound(slaughterer, "BuildingCaptured")	
 			
-			-- print(huskPlayerName .. " " .. tostring(LocalClientName))
+			for i = 1, getn(playerTable),1 do
+				local player = playerTable[i]
 			
-			-- Check if husk owner matches client AND engineer owner is different
-			--if strfind(strupper(huskPlayerName), strupper(LocalClientName)) ~= nil and strfind(strupper(engineerPlayerName), strupper(LocalClientName)) == nil then
-			--	ExecuteAction("OBJECT_CREATE_RADAR_EVENT", slaughterer, 5)	
-			--end
-
-			for i = 1, 8 do
-				local teamStr = "teamPlayer_" .. i				
+				local teamStr =  "team" .. playerTable[i]
+			
 				if strfind(engiOwner, teamStr) then
 					if strfind(huskOwner, teamStr) == nil then 
 						-- alert the owner of the husk that it got captured by another player.
 						ObjectCreateAndFireTempWeapon(slaughterer, "AlertHuskPlayer")
 						-- Change the team of the player if it isnt the same team as the slaughterer.
-						ExecuteAction("UNIT_SET_TEAM", slaughterer, "Player_" .. i .. "/" .. teamStr)
+						ExecuteAction("UNIT_SET_TEAM", slaughterer, playerTable[i] .. "/" .. teamStr)
 					end
 					-- Initialize value to 0 if it doesnt exist yet
 					if playerTimes[i] == nil then
@@ -687,25 +696,25 @@ function OnHuskCapture(self, slaughterer)
 						
 						if strfind(playerFaction, "CCA0AB62") ~= nil or strfind(playerFaction, "8E3D36F8") ~= nil or strfind(playerFaction, "38EA5BC0") ~= nil then 
 							-- GDI EVA
-							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Geva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
+							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Geva_UnitRecovered", playerTable[i] .. "/" .. teamStr)
 						elseif 
 							strfind(playerFaction, "ED46C05A") ~= nil or strfind(playerFaction, "5D10A932") ~= nil or strfind(playerFaction, "FB53CCFD") ~= nil then 
 							-- NOD EVA
-							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Neva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
+							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Neva_UnitRecovered", playerTable[i] .. "/" .. teamStr)
 						elseif 
 							strfind(playerFaction, "5B7BAA66") ~= nil or strfind(playerFaction, "30883A9F") ~= nil or strfind(playerFaction, "92CC2C04") ~= nil then 
 							-- SCRIN EVA
-							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Aeva_UnitRecovered", "Player_" .. i .. "/" .. teamStr)
+							ExecuteAction("PLAY_SOUND_EFFECT_AT_TEAM", "Aeva_UnitRecovered", playerTable[i] .. "/" .. teamStr)
 						end
 						playerTimes[i] = curFrame
-					end
+					end	
 					matched = true
 					break
 				end
 			end
 			
 			if not matched then
-				ExecuteAction("UNIT_SET_TEAM", slaughterer, "PlyrCivilian/teamPlyrCivilian")
+				--ExecuteAction("UNIT_SET_TEAM", slaughterer, "/team")
 			end
 
 			-- for the 4s delay before husk is deleted.
@@ -718,18 +727,24 @@ function OnHuskCapture(self, slaughterer)
 end
 
 function OnHuskHide(self)
-	ExecuteAction("UNIT_SET_TEAM", self, "PlyrCivilian/teamPlyrCivilian")	
+	ExecuteAction("UNIT_SET_TEAM", self, "/team")	
 end
 
 -- check if its a player or not and sets RIDER2 to it which will prevent the SlaughterHordeContain module from activating on this engineer, prevents skirmish AI from using it.
 function OnEngineerCreatedR23(self)
 	local engiOwner = tostring(ObjectTeamName(self))
+	local isPlayer = false
+	
+	for i = 1, getn(playerTable),1 do
+		if(strfind(engiOwner, "team" .. playerTable[i])) ~= nil then
+			isPlayer = true
+			break
+		end
+	end
 
-	if strfind(engiOwner, "teamPlayer_1") == nil and strfind(engiOwner, "teamPlayer_2") == nil and 
-	strfind(engiOwner, "teamPlayer_3") == nil and strfind(engiOwner, "teamPlayer_4") == nil and 
-	strfind(engiOwner, "teamPlayer_5") == nil and strfind(engiOwner, "teamPlayer_6") == nil and 
-	strfind(engiOwner, "teamPlayer_7") == nil and strfind(engiOwner, "teamPlayer_8") == nil 
-	then ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "RIDER2", 999999, 100) end
+	if(isPlayer == false) then
+		ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "RIDER2", 999999, 100) 
+	end
 end
 
 function OnCombatEngineerCreatedR23(self)
