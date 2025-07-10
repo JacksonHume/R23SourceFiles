@@ -525,7 +525,7 @@
 			 <SlaughterHordeContain
 				id="ModuleTag_Contain"
 				ContainMax="1"
-				EnterSound="AudioEvent:BuildingRepaired"
+				EnterSound=""
 				ExitSound=""
 				DamagePercentToUnits="0%"
 				PassengersTestCollisionHeight="-1000"

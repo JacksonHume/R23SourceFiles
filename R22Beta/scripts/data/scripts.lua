@@ -592,6 +592,10 @@ end
 -- then applies them.
 function DelayHuskHide(self)
 
+	-- play the husk repair sound found on EngineerContain at the spawned units location.
+	-- ObjectPlaySound(self, "BuildingCaptured")	
+	ObjectPlaySound(self, "BuildingRepaired")	
+
 	if ObjectHasUpgrade(self, "Upgrade_EngineerCapture") == 0 then
 		ObjectRemoveUpgrade(self, "Upgrade_EngineerCapture")
 	end
@@ -670,10 +674,7 @@ function OnHuskCapture(self, slaughterer)
 			local huskOwner = tostring(ObjectTeamName(slaughterer))
 			-- gets current frame and then compares it to the players frame
 			local curFrame = GetFrame()
-				
-			-- play the husk capture sound found on EngineerContain.
-			ObjectPlaySound(slaughterer, "BuildingCaptured")	
-			
+							
 			for i = 1, getn(playerTable),1 do
 				local player = playerTable[i]
 			
