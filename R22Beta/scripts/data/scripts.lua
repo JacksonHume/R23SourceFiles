@@ -714,7 +714,7 @@ function OnHuskCapture(self, slaughterer)
 			end
 			
 			if not matched then
-				--ExecuteAction("UNIT_SET_TEAM", slaughterer, "/team")
+				ExecuteAction("UNIT_SET_TEAM", slaughterer, "/team")
 			end
 
 			-- for the 4s delay before husk is deleted.
