@@ -76,6 +76,9 @@
 		<Include source="CreateHuskEffect.xml" type="all"/>
 		<!-- <Include source="TempProp.xml" type="all"/>  -->
 
+		<!-- ZOCOM engineer -->
+		<Include source="ZOCOM/Units/ZOCOMEngineer.xml" type="all"/>	
+
 		<!-- GDI HUSK -->
 		<Include source="GDI\Units\GDIJuggernaughtHusk.xml" type="all"/>
 		<Include source="GDI\Units\GDIEngineer.xml" type="all"/>
