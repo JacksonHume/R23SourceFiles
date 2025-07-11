@@ -596,7 +596,7 @@ function DelayHuskHide(self)
 	-- ObjectPlaySound(self, "BuildingCaptured")	
 	ObjectPlaySound(self, "BuildingRepaired")	
 
-	if ObjectHasUpgrade(self, "Upgrade_EngineerCapture") == 0 then
+	if ObjectHasUpgrade(self, "Upgrade_EngineerCapture") == 1 then
 		ObjectRemoveUpgrade(self, "Upgrade_EngineerCapture")
 	end
 
