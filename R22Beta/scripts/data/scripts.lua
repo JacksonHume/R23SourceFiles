@@ -625,9 +625,6 @@ function OnHuskCapture(self, slaughterer)
 			ObjectGrantUpgrade(slaughterer, "Upgrade_EngineerCapture")
 		end
 
-		-- assigning this again here just to be sure
-		ObjectSetObjectStatus(slaughterer, "UNSELECTABLE")
-
 		-- assign husk to the husktable
 		local a = getObjectId(self)
 		husksTable[a] = slaughterer

@@ -340,11 +340,6 @@
 				StatusToSet="RIDER1">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
 			</StatusBitsUpgrade>
-			<!-- prevents EngineerContain from spawning a unit -->
-			<StatusBitsUpgrade id="ModuleTag_Unselectable" 
-				StatusToSet="UNSELECTABLE">
-				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
-			</StatusBitsUpgrade>
 		</Behaviors>
 		<AI>
 			<AIUpdate

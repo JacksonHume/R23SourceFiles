@@ -536,7 +536,6 @@
 			<FXListBehavior
 				id="C74C39D8">
 				<DieMuxData
-					ExemptStatus=""
 					ExemptStatus="RIDER1"
 					RequiredStatus=""
 					DamageAmountRequired="-1"
@@ -698,11 +697,6 @@
 			<!-- husk crash workaround module, this one is used to assign the correct SlowDeath module -->
 			<StatusBitsUpgrade id="ModuleTag_EventTrigger" 
 				StatusToSet="RIDER1">
-				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
-			</StatusBitsUpgrade>
-			<!-- prevents EngineerContain from spawning a unit -->
-			<StatusBitsUpgrade id="ModuleTag_Unselectable" 
-				StatusToSet="UNSELECTABLE">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
 			</StatusBitsUpgrade>
 		</Behaviors>
