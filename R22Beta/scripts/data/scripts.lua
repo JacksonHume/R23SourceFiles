@@ -624,10 +624,6 @@ function OnHuskCapture(self, slaughterer)
 		if ObjectHasUpgrade(slaughterer, "Upgrade_EngineerCapture") == 0 then
 			ObjectGrantUpgrade(slaughterer, "Upgrade_EngineerCapture")
 		end
-
-		-- assign husk to the husktable
-		local a = getObjectId(self)
-		husksTable[a] = slaughterer
 	
 		local unitType = tostring(ObjectTemplateName(slaughterer))
 		
@@ -652,6 +648,10 @@ function OnHuskCapture(self, slaughterer)
 		
 		-- only do this if it not an epic unit 
 		if isEpicUnit == false then
+
+			-- assign husk to the husktable
+			local a = getObjectId(self)
+			husksTable[a] = slaughterer
 
 			local matched = false
 			local engiOwner = tostring(ObjectTeamName(self))
