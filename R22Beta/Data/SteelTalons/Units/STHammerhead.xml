@@ -1632,7 +1632,7 @@
 				ModifierBonusPerOverkillPercent="0%"
 				SinkDelay="0s"
 				SinkDelayVariance="0s"
-				DestructionDelay="0.01s"
+				DestructionDelay="5s"
 				DestructionDelayVariance="0s"
 				DecayBeginTime="0s"
 				FlingForce="0"
@@ -1976,4 +1976,3 @@
 		<DisplayUpgrade>Upgrade_GDIAPAmmo</DisplayUpgrade>
 	</GameObject>
 </AssetDeclaration>
-

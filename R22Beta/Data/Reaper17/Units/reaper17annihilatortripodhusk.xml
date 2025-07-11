@@ -461,10 +461,41 @@
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
 			</SlowDeath>
+
+			<SlowDeath
+				id="ModuleTag_SlowDeathHusk"
+				SinkRate="2.4"
+				ProbabilityModifier="10"
+				ModifierBonusPerOverkillPercent="0%"
+				SinkDelay="3s"
+				SinkDelayVariance="0s"
+				DestructionDelay="8s"
+				DestructionDelayVariance="0s"
+				DecayBeginTime="0s"
+				FlingForce="0"
+				FlingForceVariance="0"
+				FlingPitch="0d"
+				FlingPitchVariance="0d"
+				DeathFlags=""
+				FadeTime="0s"
+				FadeDelay="0s"
+				DeathTypes=""
+				DeathObjectStatusBits=""
+				ShadowWhenDead="False"
+				Fade="False">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus="RIDER1"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+			</SlowDeath>
 			<FXListBehavior
 				id="C74C39D8">
 				<DieMuxData
-					ExemptStatus=""
+					ExemptStatus="RIDER1"
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"
@@ -480,14 +511,6 @@
 					OrientToObject="True"
 					ForceUseDoFXObj="False" />
 			</FXListBehavior>
-			<LifetimeUpdate
-				id="FD76F2F2"
-				MinLifetime="300s"
-				MaxLifetime="300s"
-				DeathType="NONE"
-				WaitForWakeUp="False"
-				ScoreKill="False"
-				IgnoreProjectileState="False" />
 			<!-- husk crash workaround module -->
 			
 			 <SlaughterHordeContain
@@ -599,6 +622,16 @@
 					<IncludeThing>ZOCOMEngineer</IncludeThing>
 				</CanEnterFilter>
 			</EngineerContain>
+
+			<LifetimeUpdate
+				id="FD76F2F2"
+				MinLifetime="300s"
+				MaxLifetime="300s"
+				DeathType="NONE"
+				WaitForWakeUp="False"
+				ScoreKill="False"
+				IgnoreProjectileState="False" />
+
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowConversionReserveTanks"
 				ShowSubObjects="AU_RPRTRIPOD_UPGR01">
@@ -612,13 +645,12 @@
 				OCL="Reaper17AnnihilatorTripodHuskReplace"
 				CreateLocation="USE_OWNER_OBJECT"
 			/>
-			<!-- husk crash workaround module -->
+			<!-- husk crash workaround module, this one is used to assign the correct SlowDeath module -->
 			<StatusBitsUpgrade id="ModuleTag_EventTrigger" 
 				StatusToSet="RIDER1">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
 			</StatusBitsUpgrade>
-
-			<!-- husk crash workaround module -->
+			<!-- prevents EngineerContain from spawning a unit -->
 			<StatusBitsUpgrade id="ModuleTag_Unselectable" 
 				StatusToSet="UNSELECTABLE">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>

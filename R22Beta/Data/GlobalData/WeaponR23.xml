@@ -28,7 +28,7 @@
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 		</Nuggets>
-	</WeaponTemplate> -->
+	</WeaponTemplate> 
 
 	<WeaponTemplate
 		id="DelayHuskDeletion"
@@ -43,7 +43,7 @@
 					Rule="NONE"
 					Relationship=""
 					StatusBitFlags="RIDER1"
-					RejectModelCondition="USER_9"
+					RejectModelCondition=""
 					Alignment="NONE">
 					<IncludeThing>GDIJuggernaughtHusk</IncludeThing>
 					<IncludeThing>SteelTalonsBehemothHusk</IncludeThing>
@@ -56,7 +56,7 @@
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 		</Nuggets>
-	</WeaponTemplate>
+	</WeaponTemplate>   -->
 
 	<!-- a workaround to send an alert to the player if an enemy has captured the husk -->
 	<WeaponTemplate

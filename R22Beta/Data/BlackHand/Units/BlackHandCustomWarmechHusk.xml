@@ -424,43 +424,32 @@
 				OrientToFlightPath="False"
 				IgnoreTerrainHeight="False" />
 			<SlowDeath
-				id="73542D4A"
-				SinkRate="2.4"
-				ProbabilityModifier="10"
-				ModifierBonusPerOverkillPercent="0%"
+				id="ModuleTag_Death"
 				SinkDelay="0s"
-				SinkDelayVariance="0s"
-				DestructionDelay="4s"
-				DestructionDelayVariance="0s"
-				DecayBeginTime="0s"
-				FlingForce="0"
-				FlingForceVariance="0"
-				FlingPitch="0d"
-				FlingPitchVariance="0d"
-				DeathFlags=""
-				FadeTime="0s"
-				FadeDelay="0s"
-				DeathTypes=""
-				DeathObjectStatusBits=""
-				ShadowWhenDead="False"
-				Fade="False">
+				SinkRate="2.4"
+				DestructionDelay="8s">
+				<DieMuxData
+					DeathTypes="ALL"
+					ExemptStatus="RIDER1"/>
 				<OCL
 					Type="INITIAL">
 					<OCL>OCL_NODAvatarHuskDebris</OCL>
-				</OCL>
+				</OCL>						
+			</SlowDeath>
+
+			<SlowDeath
+				id="ModuleTag_SlowDeathHusk"
+				SinkDelay="0s"
+				SinkRate="2.4"
+				DestructionDelay="8s">
 				<DieMuxData
-					ExemptStatus="RIDER1"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="1d"
-					MaxKillerAngle="-1d"
 					DeathTypes="ALL"
-					DeathTypesForbidden="" />
+					RequiredStatus="RIDER1"/>						
 			</SlowDeath>
 			<FXListBehavior
 				id="C74C39D8">
 				<DieMuxData
-					ExemptStatus=""
+					ExemptStatus="RIDER1"
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"
@@ -687,13 +676,12 @@
 				OCL="BlackHandCustomWarmechHuskReplace"
 				CreateLocation="USE_OWNER_OBJECT"
 			/>
-			<!-- husk crash workaround module -->
+			<!-- husk crash workaround module, this one is used to assign the correct SlowDeath module -->
 			<StatusBitsUpgrade id="ModuleTag_EventTrigger" 
 				StatusToSet="RIDER1">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>
 			</StatusBitsUpgrade>
-
-			<!-- husk crash workaround module -->
+			<!-- prevents EngineerContain from spawning a unit -->
 			<StatusBitsUpgrade id="ModuleTag_Unselectable" 
 				StatusToSet="UNSELECTABLE">
 				<TriggeredBy>Upgrade_EngineerCapture</TriggeredBy>

@@ -1729,6 +1729,16 @@
 					AcceptModelCondition=""
 					RejectModelCondition="" />
 			</MoveToPositionAndEvacuateSpecialPower>
+			<!-- prevents crashing -->
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="0s"
+				SinkRate="0.5"
+				DestructionDelay="5s">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+			</SlowDeath>
 			<Physics
 				id="6D41764B"
 				MaxXRotationVelocity="360"

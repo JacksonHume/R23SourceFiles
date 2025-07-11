@@ -116,5 +116,9 @@
 		<Include source="MarkedOfKane\Units\MoKAvatar.xml" type="all"/>	
 		
 		
+		<!-- OTHER CRASH AFFECTED UNITS -->
+		<Include source="GDI\Units\GDIHammerhead.xml" type="all"/>
+		<Include source="ZOCOM/Units/ZOCOMHammerhead.xml" type="all"/>	
+		<Include source="SteelTalons/Units/STHammerhead.xml" type="all"/>	
 	</Includes>
 </AssetDeclaration>

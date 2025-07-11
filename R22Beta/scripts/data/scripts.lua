@@ -600,30 +600,16 @@ function DelayHuskHide(self)
 		ObjectRemoveUpgrade(self, "Upgrade_EngineerCapture")
 	end
 
+	-- kill the husk and delay its destruction in SlowDeath by 8s
 	for key, husk in husksTable do
-	
 		if key ~= nil then		
-
+			-- hide the husk here, this event prevents a flicker from appearing.
 			if ObjectTestModelCondition(husk, "USER_3") == false then
 				ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "USER_3", 999999, 100)
 			end
 
-			-- issue with this is that it can be detected by enemies.
-			if ObjectTestModelCondition(husk, "INVISIBLE_STEALTH") == false then
-				ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "INVISIBLE_STEALTH", 999999, 100)
-			end
-
-			local huskOwner = tostring(ObjectTeamName(husk))
-			-- one solution is to teleport to a waypoint added to each map to the start location of the owner of the husk.
-			-- only teleport if this waypoint exists 
-			for i = 1, 8 do 
-				local player = "Player_" .. i
-				if strfind(huskOwner, player) ~= nil then
-					ExecuteAction("UNIT_TELEPORT_TO_WAYPOINT", husk, player .. "_Start")
-					break
-				end
-			end
-				
+			-- kill the husk, but have it remain in play for 8s
+			ExecuteAction("NAMED_KILL", husk)			
 			husksTable[key] = nil
 			break
 		end
@@ -633,13 +619,14 @@ end
 -- This function will check if the slaughterer is not an epic unit 
 -- and if not will store the owner of self in a local variable and then assign slaughterer the owner obtained from self.
 function OnHuskCapture(self, slaughterer)
-
 	if self ~= nil and slaughterer ~= nil then
-	
 		-- upgrade the husk and apply status to it
 		if ObjectHasUpgrade(slaughterer, "Upgrade_EngineerCapture") == 0 then
 			ObjectGrantUpgrade(slaughterer, "Upgrade_EngineerCapture")
 		end
+
+		-- assigning this again here just to be sure
+		ObjectSetObjectStatus(slaughterer, "UNSELECTABLE")
 
 		-- assign husk to the husktable
 		local a = getObjectId(self)
@@ -717,10 +704,8 @@ function OnHuskCapture(self, slaughterer)
 			if not matched then
 				ExecuteAction("UNIT_SET_TEAM", slaughterer, "/team")
 			end
-
-			-- for the 4s delay before husk is deleted.
-			ObjectCreateAndFireTempWeapon(slaughterer, "DelayHuskDeletion")
-			
+			-- Prevent the engineercontain module (now handled by SlowDeath)
+			ObjectCreateAndFireTempWeapon(slaughterer, "DelayHuskDeletion")		
 			-- spawn the unit obtained from the husk
 			ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
 		end

@@ -5,17 +5,14 @@
 	<AttributeModifier
 		id="AttributeModifier_HuskHide"
 		Category="NONE"
-		ModelConditionsSet="USER_3 INVISIBLE_STEALTH" />
--->
+		ModelConditionsSet="USER_3 INVISIBLE_STEALTH" />  
+
 	<AttributeModifier
 		id="AttributeModifier_HuskTimer"
 		Category="NONE"
-		Duration="4s"
-		ObjectStatusToSet="UNATTACKABLE NO_COLLISIONS"
-		ModelConditionsSet="USER_9">
-		<Modifier Type="CRUSHABLE_LEVEL" Value="500%" />
-		<Modifier Type="ARMOR" Value="0%" />
-	</AttributeModifier>
+		ModelConditionsSet="USER_3"
+		ObjectStatusToSet="UNATTACKABLE NO_COLLISIONS">
+	</AttributeModifier> -->
 
 	<!-- to ensure traveler 59 do not get faster infantry with the base infantry speed buff --> 
 
