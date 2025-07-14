@@ -581,6 +581,78 @@
 	<!-- end of emp fix -->
 
 	<WeaponTemplate
+	id="BlueTiberiumCrystalWeapon"
+	Name="BlueTiberiumCrystalWeapon"
+	RadiusDamageAffects="ALLIES ENEMIES NEUTRALS NOT_SIMILAR">
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="2.5s"
+		/>
+		<FiringDuration
+			MinSeconds="0s"
+			MaxSeconds="0s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="15.0"
+				Radius="20.0"
+				UnderAttackOverrideEvaEvent="DamagedByTiberium"
+				DamageType="TIBERIUM"
+				DeathType="BURNED"
+				ForbiddenTargetObjectStatus="SHIELDBODY_ENABLED">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Exclude="HORDE"
+					Include="INFANTRY" >
+					<ExcludeThing>AlienBuzzers</ExcludeThing>
+					<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+					<ExcludeThing>AlienAssimilator</ExcludeThing>
+					<ExcludeThing>AlienMastermind</ExcludeThing>
+					<ExcludeThing>AlienBlinkMastermind</ExcludeThing>
+					<ExcludeThing>AlienRazorDrones</ExcludeThing>
+					<ExcludeThing>AlienRazorDroneSquad</ExcludeThing>
+					<ExcludeThing>AlienShockTrooper</ExcludeThing>
+					<ExcludeThing>AlienShockTrooperSquad</ExcludeThing>
+					<ExcludeThing>AlienShockTrooperSquad_Veteran</ExcludeThing>
+					<ExcludeThing>AlienStalker</ExcludeThing>
+					<ExcludeThing>AlienStalkerSquad</ExcludeThing>
+					<ExcludeThing>Reaper17ShockTrooper</ExcludeThing>
+					<ExcludeThing>Reaper17ShockTrooperSquad</ExcludeThing>
+					<ExcludeThing>Reaper17Stalker</ExcludeThing>
+					<ExcludeThing>Reaper17StalkerSquad</ExcludeThing>
+					<ExcludeThing>Traveler59RazorDrone</ExcludeThing>
+					<ExcludeThing>Traveler59RazorDroneSquad</ExcludeThing>
+					<ExcludeThing>Traveler59ShockTrooper</ExcludeThing>
+					<ExcludeThing>Traveler59ShockTrooperSquad</ExcludeThing>
+					<ExcludeThing>Traveler59Stalker</ExcludeThing>
+					<ExcludeThing>Traveler59StalkerSquad</ExcludeThing>
+					<ExcludeThing>Traveler59Assimilator</ExcludeThing>
+					<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+					<ExcludeThing>Traveler59Cultist</ExcludeThing>
+					<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+					<ExcludeThing>MutantMarauder</ExcludeThing>
+					<ExcludeThing>MutantMarauderSquad</ExcludeThing>
+					<ExcludeThing>Viceroid</ExcludeThing>
+					<ExcludeThing>GDIZoneTrooper</ExcludeThing>
+					<ExcludeThing>GDIZoneTrooperSquad</ExcludeThing>
+					<ExcludeThing>SteelTalonsZoneTrooper</ExcludeThing>
+					<ExcludeThing>SteelTalonsZoneTrooperSquad</ExcludeThing>
+					<ExcludeThing>ZOCOMZoneRaider</ExcludeThing>
+					<ExcludeThing>ZOCOMZoneRaiderSquad</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneTibTrooper</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneTibTrooperSquad</ExcludeThing>
+					<ExcludeThing>MOKCyborgInfantry</ExcludeThing>
+					<ExcludeThing>MOKCyborgInfantrySquad</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneImprovedCyborgInfantry</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneImprovedCyborgInfantrySquad</ExcludeThing>
+					<ExcludeThing>NODCyborgInfantry</ExcludeThing>
+					<ExcludeThing>NODCyborgInfantrySquad</ExcludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
 		id="TiberiumCrystalWeapon"
 		Name="TiberiumCrystalWeapon"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS NOT_SIMILAR">
