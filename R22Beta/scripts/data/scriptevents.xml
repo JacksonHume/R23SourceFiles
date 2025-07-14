@@ -761,7 +761,7 @@
 
 	<EventList Name="NodMobileArtilleryFunctionsR23" Inherit="BaseScriptFunctions">
 	    <EventHandler EventName="OnCreated"	ScriptFunctionName="OnMobileArtilleryCreated" DebugSingleStep="false"/>
-		<EventHandler EventName="OnDeployed1"	ScriptFunctionName="OnArtilleryUndeploy" DebugSingleStep="false"/>
+		<!--<EventHandler EventName="OnDeployed1"	ScriptFunctionName="OnArtilleryUndeploy" DebugSingleStep="false"/> -->
 	</EventList>
 
 	<EventList Name="MOBAErrorCheckerFunctions_103" Inherit="BaseScriptFunctions">  	
@@ -816,7 +816,7 @@
 	 <EventList Name="GDIJuggernaughtFunctions_R23" Inherit="BaseScriptFunctions">
        <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
 	   <EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
-	   <EventHandler EventName="OnDeployed1"	ScriptFunctionName="OnArtilleryUndeploy" DebugSingleStep="false"/>
+	   <!--<EventHandler EventName="OnDeployed1"	ScriptFunctionName="OnArtilleryUndeploy" DebugSingleStep="false"/> -->
     </EventList>
 
 	<EventList Name="ReaperTripodFunctions_R23" Inherit="BaseScriptFunctions">
