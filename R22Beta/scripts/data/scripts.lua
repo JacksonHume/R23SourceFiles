@@ -607,6 +607,11 @@ function DelayHuskHide(self)
 			if ObjectTestModelCondition(husk, "USER_3") == false then
 				ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", husk, "USER_3", 999999, 100)
 			end
+
+			ExecuteAction("UNIT_SET_TEAM", husk, "/team")	
+
+			-- kill the husk, but have it remain in play for 8s
+			ExecuteAction("NAMED_KILL", husk)	
 					
 			husksTable[key] = nil
 			break
@@ -705,13 +710,6 @@ function OnHuskCapture(self, slaughterer)
 			ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
 		end
 	end
-end
-
-function OnHuskHide(self)
-	ExecuteAction("UNIT_SET_TEAM", self, "/team")	
-
-	-- kill the husk, but have it remain in play for 8s
-	ExecuteAction("NAMED_KILL", self)	
 end
 
 -- check if its a player or not and sets RIDER2 to it which will prevent the SlaughterHordeContain module from activating on this engineer, prevents skirmish AI from using it.

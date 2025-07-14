@@ -779,20 +779,20 @@
 	</EventList>
 	<!-- for tripods and juggs -->
 	<EventList Name="HuskFunctions_R23" Inherit="BaseScriptFunctions">  	
-		<!-- <EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/> -->
-		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
+		<!-- <EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>  -->
 	</EventList>
 	<!-- for avatars-->
 	<EventList Name="NODAvatarHuskFunctions_R23" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODAvatarCreated" DebugSingleStep="false"/>
-		<!-- <EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/> -->
-		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
+		<!-- <EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>  -->
 	</EventList>
 	 <!-- for purifiers-->
 	<EventList Name="BlackHandCustomWarmechHuskFunctions_R23" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnBlackHandCustomWarmechCreated" DebugSingleStep="false"/>
-		<!-- <EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/> -->
-		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
+		<!-- <EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>  -->
 	</EventList>
 
 	<EventList Name="HuskFXFunctions_R23" Inherit="BaseScriptFunctions">  	
@@ -826,8 +826,8 @@
 
 	 <EventList Name="ReaperTripodHuskFunctions_R23" Inherit="BaseScriptFunctions">
   		<EventHandler EventName="OnCreated" ScriptFunctionName="OnReaperTripodCreated" DebugSingleStep="false"/>
-		<!-- <EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/> -->
-		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>
+		<!-- <EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
+		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>  -->
    	 </EventList>
 
 	<!-- r21 -->
