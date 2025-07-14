@@ -1098,7 +1098,6 @@
 				OpacityMax="100%"
 				Options="STARTS_ACTIVE">
 				<InvisibilityNugget
-					InvisibilityType="STEALTH"
 					ForbiddenConditions="REALLYDAMAGED DEPLOYED UNPACKING SPECIAL_WEAPON_ONE"
 					EnteringStealthFX="FX_NODStealthTransitionOn"
 					LeavingStealthFX="FX_NODStealthTransitionOff"

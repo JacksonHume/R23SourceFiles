@@ -1761,8 +1761,9 @@
 					ConditionsYes="ATTACKING"
 					StateName="STATE_moving">
 					<Animation
-						AnimationName="AUEradHex_ATKA"
-						AnimationMode="MANUAL"
+						AnimNickName="ATNB"
+						AnimationName="AUEradHex_AIDA"
+						AnimationMode="LOOP"
 						AnimationBlendTime="15" />
 					<ParticleSysBone
 						BoneName="NONE"
