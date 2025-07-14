@@ -62,6 +62,10 @@
 		<ModelConditionEvent Name="OnDeployed">
 			<Conditions>+DEPLOYED</Conditions>
 		</ModelConditionEvent>
+
+		<ModelConditionEvent Name="OnDeployed1">
+			<Conditions>-DEPLOYED</Conditions>
+		</ModelConditionEvent>
 	
 		<ModelConditionEvent Name="RecoverFromTerror">
 			<Conditions>-EMOTION_TERROR -DYING</Conditions>
@@ -470,7 +474,15 @@
 
 		<ModelConditionEvent Name="OnClipEmpty1">
 			<Conditions>+WEAPONSLOTID_01</Conditions>
-		</ModelConditionEvent>					
+		</ModelConditionEvent>	
+		
+		<ModelConditionEvent Name="OnWeapon2">
+			<Conditions>+WEAPONSLOTID_02</Conditions>
+		</ModelConditionEvent>	
+
+		<ModelConditionEvent Name="OnWeapon3">
+			<Conditions>+WEAPONSLOTID_03</Conditions>
+		</ModelConditionEvent>	
 
 		<ModelConditionEvent Name="OnStealthed">
 			<Conditions>+INVISIBLE_STEALTH</Conditions>
@@ -747,6 +759,11 @@
 		<!-- If there are any events that need to apply to all units, put them here. jba -->
     </EventList>
 
+	<EventList Name="NodMobileArtilleryFunctionsR23" Inherit="BaseScriptFunctions">
+	    <EventHandler EventName="OnCreated"	ScriptFunctionName="OnMobileArtilleryCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnDeployed1"	ScriptFunctionName="OnArtilleryUndeploy" DebugSingleStep="false"/>
+	</EventList>
+
 	<EventList Name="MOBAErrorCheckerFunctions_103" Inherit="BaseScriptFunctions">  	
 		<EventHandler EventName="OnErrorChecker" ScriptFunctionName="OnErrorChecker_renwars" DebugSingleStep="false"/>
 	</EventList>
@@ -799,6 +816,7 @@
 	 <EventList Name="GDIJuggernaughtFunctions_R23" Inherit="BaseScriptFunctions">
        <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIJuggernaughtCreated" DebugSingleStep="false"/>
 	   <EventHandler EventName="OnUser5"	ScriptFunctionName="DelayHuskHide" DebugSingleStep="false"/>
+	   <EventHandler EventName="OnDeployed1"	ScriptFunctionName="OnArtilleryUndeploy" DebugSingleStep="false"/>
     </EventList>
 
 	<EventList Name="ReaperTripodFunctions_R23" Inherit="BaseScriptFunctions">

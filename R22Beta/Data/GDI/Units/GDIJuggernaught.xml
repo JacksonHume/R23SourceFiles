@@ -56,27 +56,25 @@
 					<Model
 						Name="W3DContainer:GUJugg_SKN" />
 					<WeaponFireFXBone
-						WeaponSlotID="2"
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXMUZZLE" />
 					<WeaponRecoilBone
-						WeaponSlotID="2"
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXMuzzle" />
 					<WeaponMuzzleFlash
-						WeaponSlotID="2"
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="MuzzleFlash_" />
 					<WeaponLaunchBone
-						WeaponSlotID="2"
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXMUZZLE" />
 					<Turret
 						TurretNameKey="Chassis"
 						TurretPitch="Turret"
-						TurretID="2" />
-					<Turret
-						TurretID="3" />
+						TurretID="1" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -205,7 +203,7 @@
 						AnimationName="GUJugg_BIDA"
 						AnimationMode="ONCE"
 						AnimationBlendTime="15"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="90"
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2" />
@@ -213,7 +211,7 @@
 						AnimationName="GUJugg_BIFA"
 						AnimationMode="ONCE"
 						AnimationBlendTime="15"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2" />
@@ -221,7 +219,7 @@
 						AnimationName="GUJugg_BIFB"
 						AnimationMode="ONCE"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="25"
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2" />
@@ -229,7 +227,7 @@
 						AnimationName="GUJugg_BIFC"
 						AnimationMode="ONCE"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2" />
@@ -237,7 +235,7 @@
 						AnimationName="GUJugg_BIFD"
 						AnimationMode="ONCE"
 						AnimationBlendTime="15"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="35"
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2" />
@@ -258,7 +256,7 @@
 					StateName="STATE_built">
 					<Animation
 						AnimationName="GUJugg_BLDA"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationBlendTime="0"
 						AnimationMode="ONCE" />
 				</AnimationState>
@@ -277,15 +275,15 @@
 					ConditionsYes="DYING">
 					<Animation
 						AnimationName="GUJugg_DIEB"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE" />
 					<Animation
 						AnimationName="GUJugg_DIEC"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE" />
 					<Animation
 						AnimationName="GUJugg_DIED"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE" />
 					<!--		<Animation
 						AnimationName="GUJugg_DIEA"
@@ -296,7 +294,7 @@
 					ConditionsYes="AFFECTED_BY_EMP">
 					<Animation
 						AnimationName="GUJugg_BIDA"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="MANUAL"
 						AnimationBlendTime="15" />
 				</AnimationState>
@@ -307,7 +305,7 @@
 					ConditionsYes="USER_5">
 					<Animation
 						AnimationName="GUJugg_GTPA"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationBlendTime="0"
 						AnimationMode="ONCE" />
 				</AnimationState>
@@ -316,7 +314,7 @@
 					ConditionsYes="UNPACKING SPECIAL_WEAPON_ONE">
 					<Animation
 						AnimationName="GUJugg_ATKB1"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE" />
 				</AnimationState>
 				<AnimationState
@@ -325,7 +323,7 @@
 					Flags="START_FRAME_FIRST">
 					<Animation
 						AnimationName="GUJugg_ATKB2"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE" />
 				</AnimationState>
 				<AnimationState
@@ -333,7 +331,7 @@
 					ConditionsYes="UNPACKING">
 					<Animation
 						AnimationName="GUJugg_ATKA1"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE" />
 				</AnimationState>
 				<AnimationState
@@ -341,7 +339,7 @@
 					ConditionsYes="PACKING">
 					<Animation
 						AnimationName="GUJugg_ATKA3"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE" />
 				</AnimationState>
 				<AnimationState
@@ -350,7 +348,7 @@
 					Flags="START_FRAME_FIRST">
 					<Animation
 						AnimationName="GUJugg_ATKA2"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="MANUAL" />
 				</AnimationState>
 				<AnimationState
@@ -359,7 +357,7 @@
 					Flags="MAINTAIN_FRAME_ACROSS_STATES">
 					<Animation
 						AnimationName="GUJugg_WLKA"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="LOOP"
 						Distance="45" />
 					<FXEvent
@@ -379,7 +377,7 @@
 					Flags="MAINTAIN_FRAME_ACROSS_STATES">
 					<Animation
 						AnimationName="GUJugg_WLKA"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="LOOP"
 						Distance="45" />
 					<FXEvent
@@ -398,7 +396,7 @@
 					ConditionsYes="TURN_LEFT">
 					<Animation
 						AnimationName="GUJugg_TRNL"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="LOOP" />
 					<FXEvent
 						Frame="15"
@@ -416,7 +414,7 @@
 					ConditionsYes="TURN_RIGHT">
 					<Animation
 						AnimationName="GUJugg_TRNR"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="LOOP" />
 					<FXEvent
 						Frame="15"
@@ -434,7 +432,7 @@
 					ConditionsYes="ACCELERATE">
 					<Animation
 						AnimationName="GUJugg_ACCL"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE" />
 				</AnimationState>
 				<AnimationState
@@ -442,7 +440,7 @@
 					ConditionsYes="DECELERATE">
 					<Animation
 						AnimationName="GUJugg_DECL"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE" />
 				</AnimationState>
 				<AnimationState
@@ -451,12 +449,12 @@
 					Flags="MAINTAIN_FRAME_ACROSS_STATES">
 					<Animation
 						AnimationName="GUJugg_WLKA"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="LOOP"
 						Distance="45" />
 					<Animation
 						AnimationName="GUJugg_WLKB"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="LOOP"
 						Distance="45" />
 					<FXEvent
@@ -488,7 +486,7 @@
 						AnimationMode="ONCE"
 						AnimationPriority="85"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1" />
 					<Animation
@@ -496,7 +494,7 @@
 						AnimationMode="ONCE"
 						AnimationPriority="55"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1" />
 					<Animation
@@ -504,7 +502,7 @@
 						AnimationMode="ONCE"
 						AnimationPriority="50"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1" />
 					<Animation
@@ -512,7 +510,7 @@
 						AnimationMode="ONCE"
 						AnimationPriority="50"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1" />
 					<Animation
@@ -520,7 +518,7 @@
 						AnimationMode="ONCE"
 						AnimationPriority="5"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1" />
 					<Script>
@@ -537,7 +535,7 @@
 					<Animation
 						AnimationName="GUJugg_BLDA"
 						AnimationBlendTime="0"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationMode="ONCE"></Animation>
 				</AnimationState>
 				<AnimationState
@@ -547,14 +545,14 @@
 						AnimationName="GUJugg_BATA"
 						AnimationMode="ONCE"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationSpeedFactorMin="0.9"
 						AnimationSpeedFactorMax="1.1" />
 					<Animation
 						AnimationName="GUJugg_BATB"
 						AnimationMode="ONCE"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2" />
 				</AnimationState>
@@ -565,7 +563,7 @@
 						AnimationName="GUJugg_ABTA"
 						AnimationMode="ONCE"
 						AnimationBlendTime="10"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationSpeedFactorMin="0.8"
 						AnimationSpeedFactorMax="1.2" />
 				</AnimationState>
@@ -636,22 +634,8 @@
 			<!-- Nod Cloaking Field -->
 			<InvisibilityUpdate
 				id="ModuleTag_Invisibility"
-				Options=""
-				UpdatePeriod="0.5s"
-				BroadcastRange="0"
-				OpacityMin="40%">
-				<InvisibilityNugget
-					ForbiddenConditions="PACKING UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
-					ForbiddenConditionExceptions=""
-					ForbiddenWeaponSets=""
-					ForbiddenStatus=""
-					CamouflageLevel="0"
-					InvisibilityType="STEALTH"
-					Options=""
-					EnteringStealthFX=""
-					LeavingStealthFX=""
-					HintDetectableStates=""
-					NoStealthForAttackWindow="0s" />
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
 				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
 			</InvisibilityUpdate>
 			<StealthUpgrade
@@ -664,14 +648,8 @@
 
 			<WeaponSetUpdate
 				id="ModuleTag_WeaponSetUpdate">
-				<WeaponSlotHardpoint
-					ID="1">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="GDIJuggernaughtArtilleryFake1" />
-				</WeaponSlotHardpoint>
 				<WeaponSlotTurret
-					ID="2"
+					ID="1"
 					AllowInterleavedFiring="false"
 					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
 					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
@@ -699,44 +677,7 @@
 						from 50 to 40 in R19 -->
 					</TurretSettings>
 				</WeaponSlotTurret>
-			
-				<WeaponSlotTurret
-					ID="3"
-					AllowInterleavedFiring="false"
-					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="GDIJuggernaughtArtilleryFake" />
-					<TurretSettings
-						TurretTurnRate="40"
-						TurretPitchRate="20"
-						AllowsPitch="true"
-						MinimumPitch="-15d">
-						<TurretAITargetChooserData
-							IdleScanDelay="0.8s"
-							ReacquireDelay="5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="False"
-							CanAcquireDynamicIfAssignedOutOfRange="False"
-							CanPickTargetsOutOfTurretAngle="False" />  
-					</TurretSettings>
-				</WeaponSlotTurret>
 			</WeaponSetUpdate>
-			<FireWeaponUpdate
-				id="ModuleTag_FireWeapon">
-				<FireWeaponNugget
-					WeaponName="GDIJuggernaughtArtilleryUndeploy"
-					FireDelay="0s"
-					FireInterval="0.4s"
-				/>
-			</FireWeaponUpdate>
 			<ProductionUpdate
 				id="ModuleTag_ProductionUpdate"
 				GiveNoXP="true" />
@@ -755,7 +696,7 @@
 				BusyForDuration="0s"
 				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
 				WhichSpecialWeapon="1"
-				WeaponSlotID="2"
+				WeaponSlotID="1"
 				DestealthClosestObjectMatchingFilter="false" />
 			<AISpecialPowerUpdate
 				id="ModuleTag_JuggernautBombard"

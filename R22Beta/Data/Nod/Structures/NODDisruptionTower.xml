@@ -210,12 +210,6 @@
 					<ExcludeThing>MarkedOfKaneDisruptionTower</ExcludeThing>
 					<ExcludeThing>Viceroid</ExcludeThing>
 					<ExcludeThing>AlienCrystalShield</ExcludeThing>
-					<!-- EXCLUDE JUGGS BEHEMOTHS AND SPECTERS -->
-					<ExcludeThing>GDIJuggernaught</ExcludeThing>
-					<ExcludeThing>SteelTalonsBehemoth</ExcludeThing>
-					<ExcludeThing>NODMobileArtillery</ExcludeThing>
-					<ExcludeThing>MarkedOfKaneMobileArtillery</ExcludeThing>
-					<ExcludeThing>BlackHandMobileArtillery</ExcludeThing>
 				</BroadcastObjectFilter>
 			</InvisibilityUpdate>
 
@@ -235,36 +229,6 @@
 					RejectModelCondition="">
 					<IncludeThing>MarkedOfKaneVenom</IncludeThing>
 					<IncludeThing>NODVenom</IncludeThing>
-				</BroadcastObjectFilter>
-			</InvisibilityUpdate>
-
-			<InvisibilityUpdate
-				id="ModuleTag_InvisibilityArty"
-				Options="BROADCAST STARTS_ACTIVE"
-				BroadcastRange="450"
-				UpdatePeriod="1.0s">
-				<InvisibilityNugget
-					ForbiddenConditions="PACKING UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
-					ForbiddenConditionExceptions=""
-					ForbiddenWeaponSets=""
-					ForbiddenStatus=""
-					CamouflageLevel="0"
-					InvisibilityType="STEALTH"
-					Options=""
-					EnteringStealthFX=""
-					LeavingStealthFX=""
-					HintDetectableStates=""
-					NoStealthForAttackWindow="0s" />
-				<BroadcastObjectFilter
-					Rule="NONE"
-					Relationship="ALLIES"
-					RejectStatusBitFlags=""
-					RejectModelCondition="">
-					<IncludeThing>GDIJuggernaught</IncludeThing>
-					<IncludeThing>SteelTalonsBehemoth</IncludeThing>
-					<IncludeThing>NODMobileArtillery</IncludeThing>
-					<IncludeThing>MarkedOfKaneMobileArtillery</IncludeThing>
-					<IncludeThing>BlackHandMobileArtillery</IncludeThing>
 				</BroadcastObjectFilter>
 			</InvisibilityUpdate>
 

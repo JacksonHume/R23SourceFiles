@@ -165,28 +165,26 @@
 						Name="W3DContainer:NUMORNSTAR_SKN"
 						ExtraMesh="False" />
 					<WeaponFireFXBone
-						WeaponSlotID="2"
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWEAPONMUZZLE" />
 					<WeaponRecoilBone
-						WeaponSlotID="2"
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="BONE_BARREL" />
 					<WeaponMuzzleFlash
-						WeaponSlotID="2"
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="MUZZLEFLASH_01" />
 					<WeaponLaunchBone
-						WeaponSlotID="2"
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="FXWEAPONMUZZLE" />
 					<Turret
 						TurretNameKey="BONE_TURRET"
 						TurretArtAngle="0d"
 						TurretArtPitch="0d"
-						TurretID="2" />
-					<Turret
-						TurretID="3" />
+						TurretID="1" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -449,7 +447,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -482,7 +480,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -514,7 +512,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -546,7 +544,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -666,7 +664,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -698,7 +696,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -730,7 +728,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -762,7 +760,7 @@
 						AnimationSpeedFactorMin="1"
 						AnimationSpeedFactorMax="1"
 						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="2"
+						WeaponTimingSlotID="1"
 						AnimationPriority="1"
 						FadeBeginFrame="-1"
 						FadeEndFrame="-1"
@@ -920,14 +918,8 @@
 				DefectionFrameCount="300" />
 			<WeaponSetUpdate
 				id="720F4A50">
-				<WeaponSlotHardpoint
-					ID="1">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="NodMobileArtilleryCannonFake1" />
-				</WeaponSlotHardpoint>
 				<WeaponSlotTurret
-					ID="2"
+					ID="1"
 					InterleavedStyle="INTERLEAVE_RANDOM"
 					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
 					AllowInterleavedFiring="False">
@@ -942,35 +934,6 @@
 						Template="NodMobileArtilleryCannonCloned"
 						Upgrade=""
 						ObjectStatus="CLONED"
-						IsPlayerUpgradePermanent="False" />
-					<TurretSettings
-						TurretTurnRate="360"
-						TurretPitchRate="20"
-						MinimumPitch="-20d"
-						PitchHeight="99%"
-						ControlledWeaponSlots=""
-						MinIdleScanTime="1s"
-						MaxIdleScanTime="5s"
-						MinIdleScanAngle="0"
-						MaxIdleScanAngle="90"
-						MaxDeflectionClockwise="180d"
-						MaxDeflectionAntiClockwise="180d"
-						NaturalTurretAngle="0d"
-						AllowsPitch="True"
-						RecenterWhenOutOfTurnRange="True">
-						<TurretAITargetChooserData />
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret
-					ID="3"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="NodMobileArtilleryCannonFake"
-						Upgrade=""
-						ObjectStatus=""
 						IsPlayerUpgradePermanent="False" />
 					<TurretSettings
 						TurretTurnRate="360"
@@ -1125,7 +1088,7 @@
 				SpecialWeapon="NodMobileArtilleryBombardCannon"
 				WhichSpecialWeapon="1"
 				BusyForDuration="0s"
-				WeaponSlotID="2"
+				WeaponSlotID="1"
 				WeaponSlotType="PRIMARY_WEAPON"
 				SkipContinue="False"
 				NeedLivingTargets="False"
@@ -1153,22 +1116,8 @@
 			<!-- Nod Cloaking Field -->
 			<InvisibilityUpdate
 				id="ModuleTag_Invisibility"
-				Options=""
-				UpdatePeriod="0.5s"
-				BroadcastRange="0"
-				OpacityMin="40%">
-				<InvisibilityNugget
-					ForbiddenConditions="PACKING UNPACKING DEPLOYED SPECIAL_WEAPON_ONE"
-					ForbiddenConditionExceptions=""
-					ForbiddenWeaponSets=""
-					ForbiddenStatus=""
-					CamouflageLevel="0"
-					InvisibilityType="STEALTH"
-					Options=""
-					EnteringStealthFX=""
-					LeavingStealthFX=""
-					HintDetectableStates=""
-					NoStealthForAttackWindow="0s" />
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
 				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
 			</InvisibilityUpdate>
 			<Physics
@@ -1356,20 +1305,12 @@
 				ApplyToContained="False">
 				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
 			</StatusBitsUpgrade>
-			<FireWeaponUpdate
-				id="ModuleTag_FireWeapon">
-				<FireWeaponNugget
-					WeaponName="NodMobileArtilleryUndeploy"
-					FireDelay="0s"
-					FireInterval="0.4s"
-				/>
-			</FireWeaponUpdate>
 		</Behaviors>
 		<AI>
 			<DeployStyleAIUpdate
 				id="ModuleTag_AI"
 				AutoAcquireEnemiesWhenIdle="YES"
-				AILuaEventsList="NodMobileArtilleryFunctions"
+				AILuaEventsList="NodMobileArtilleryFunctionsR23"
 				UnpackTime="3.5s"
 				PackTime="3.5s"
 				MustDeployToAttack="true">
