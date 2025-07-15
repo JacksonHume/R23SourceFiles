@@ -821,7 +821,7 @@
 				<WeaponSlotHardpoint
 					ID="1"
 					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
-					WeaponChoiceCriteria="PREFER_LONGEST_RANGE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
 					AllowInterleavedFiring="False">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
