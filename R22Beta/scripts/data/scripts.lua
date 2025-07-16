@@ -703,9 +703,7 @@ function OnHuskCapture(self, slaughterer)
 			
 			if not matched then
 				ExecuteAction("UNIT_SET_TEAM", slaughterer, "/team")
-			end
-			-- Prevent the engineercontain module (now handled by SlowDeath)
-			ObjectCreateAndFireTempWeapon(slaughterer, "DelayHuskDeletion")		
+			end	
 			-- spawn the unit obtained from the husk
 			ObjectDoSpecialPower(slaughterer, "SpecialPower_SpawnHuskOCL")
 		end
@@ -742,11 +740,11 @@ function OnHuskFXCreated(self)
 end
 
 -- lua specter / juggernaut undeploy fix
-function OnArtilleryUndeploy(self)
-	 if ObjectTestModelCondition(self, "ATTACKING") then
-		 ExecuteAction("NAMED_STOP", self)
-	end
-end
+--function OnArtilleryUndeploy(self)
+--	 if ObjectTestModelCondition(self, "ATTACKING") then
+--		 ExecuteAction("NAMED_STOP", self)
+--	end
+--end
 
 function OnGDIWatchTowerCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_01", true )
