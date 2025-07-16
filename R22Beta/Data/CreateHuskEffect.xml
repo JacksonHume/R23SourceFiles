@@ -9,7 +9,7 @@
 		EnergyBonus="0"
 		CommandSet="HuskCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE HIDE_IF_FOGGED UNATTACKABLE NOT_AUTOACQUIRABLE FS_POWER" 
-		RadarPriority="NOT_ON_RADAR"
+		RadarPriority="STRUCTURE"
 		EditorName="CreateHuskEffect">
 		<DisplayName>Name:GDIPowerPlant</DisplayName>
 		<ArmorSet
