@@ -650,7 +650,7 @@ function OnHuskCapture(self, slaughterer)
 		end
 		
 		-- only do this if it not an epic unit 
-		if isEpicUnit == false then
+		if not isEpicUnit then
 
 			-- assign husk to the husktable
 			local a = getObjectId(self)
