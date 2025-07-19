@@ -4,10 +4,96 @@
 	<!-- husk ocl's (change Disposition to RELATIVE_ANGLE) -->
 
 	<ObjectCreationList
-		id="OCL_CreateHuskEffect">
+		id="OCL_CreateHuskEffect1">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
 			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_1"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>CreateHuskEffect</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+
+	<ObjectCreationList
+		id="OCL_CreateHuskEffect2">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_2"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>CreateHuskEffect</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_CreateHuskEffect3">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_3"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>CreateHuskEffect</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_CreateHuskEffect4">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_4"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>CreateHuskEffect</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_CreateHuskEffect5">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_5"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>CreateHuskEffect</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_CreateHuskEffect6">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_6"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>CreateHuskEffect</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_CreateHuskEffect7">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_7"
+			DispositionIntensity="0.0">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>CreateHuskEffect</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_CreateHuskEffect8">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED"
+			DestinationPlayer="Player_8"
 			DispositionIntensity="0.0">
 			<Offset x="0" y="0" z="0" />
 			<CreateObject>CreateHuskEffect</CreateObject>
@@ -465,8 +551,7 @@
 		id="HarvesterDeathGreenTiberiumOCL">
 		<CreateObject
 			Disposition="RELATIVE_ANGLE USE_WATER_SURFACE"
-			DestinationPlayer="DONT_SET_PRODUCER"
-			Options="IGNORE_ALL_OBJECTS SCALE_TIBERIUM_FIELD">
+			Options="IGNORE_ALL_OBJECTS SCALE_TIBERIUM_FIELD DONT_SET_PRODUCER">
 			<CreateObject>GreenTiberiumFieldFromHarvesterDeath</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
@@ -474,8 +559,7 @@
 		id="HarvesterDeathBlueTiberiumOCL">
 		<CreateObject
 			Disposition="RELATIVE_ANGLE USE_WATER_SURFACE"
-			DestinationPlayer="DONT_SET_PRODUCER"
-			Options="IGNORE_ALL_OBJECTS SCALE_TIBERIUM_FIELD">
+			Options="IGNORE_ALL_OBJECTS SCALE_TIBERIUM_FIELD DONT_SET_PRODUCER">
 			<CreateObject>BlueTiberiumFieldFromHarvesterDeath</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>

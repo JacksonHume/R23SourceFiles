@@ -664,13 +664,13 @@ function OnHuskCapture(self, slaughterer)
 							
 			for i = 1, getn(playerTable),1 do
 				local player = playerTable[i]
-			
+	
 				local teamStr =  "team" .. playerTable[i]
 			
 				if strfind(engiOwner, teamStr) then
-					if strfind(huskOwner, teamStr) == nil then 
+					if strfind(huskOwner, teamStr) == nil and i <= 8 then 
 						-- alert the owner of the husk that it got captured by another player.
-						ObjectCreateAndFireTempWeapon(slaughterer, "AlertHuskPlayer")
+						ObjectCreateAndFireTempWeapon(slaughterer, "AlertHuskPlayer" .. i)
 						-- Change the team of the player if it isnt the same team as the slaughterer.
 						ExecuteAction("UNIT_SET_TEAM", slaughterer, playerTable[i] .. "/" .. teamStr)
 					end

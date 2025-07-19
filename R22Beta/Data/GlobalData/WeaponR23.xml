@@ -60,8 +60,8 @@
 
 	<!-- a workaround to send an alert to the player if an enemy has captured the husk -->
 	<WeaponTemplate
-		id="AlertHuskPlayer"
-		Name="AlertHuskPlayer"
+		id="AlertHuskPlayer1"
+		Name="AlertHuskPlayer1"
 		ProjectileCollidesWith="ENEMIES NEUTRAL"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
@@ -72,26 +72,128 @@
 			MinSeconds="0.1s"
 			MaxSeconds="0.1s" />
 		<Nuggets>
-			<!--
-			<DamageNugget
-				Damage="1000.0"
-				Radius="0"
-				DamageTaperOff="20.0"
-				DelayTimeSeconds="0.0s"
-				DamageType="CANNON"
-				DamageFXType="GDI_ECHOCANNON"
-				DeathType="NORMAL">
-				<SpecialObjectFilter
-					Rule="NONE"
-					Relationship=""
-					StatusBitFlags=""
-					Include="HUSK" />
-			</DamageNugget>
-		-->
-			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect" />
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect1" />
 		</Nuggets>
 	</WeaponTemplate>
 
+	<WeaponTemplate
+		id="AlertHuskPlayer2"
+		Name="AlertHuskPlayer2"
+		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect2" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer3"
+		Name="AlertHuskPlayer3"
+		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect3" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer4"
+		Name="AlertHuskPlayer4"
+		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect4" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer5"
+		Name="AlertHuskPlayer5"
+		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect5" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer6"
+		Name="AlertHuskPlayer6"
+		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect6" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer7"
+		Name="AlertHuskPlayer7"
+		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect7" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlertHuskPlayer8"
+		Name="AlertHuskPlayer8"
+		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="true"
+		AntiMask="ANTI_GROUND">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_CreateHuskEffect8" />
+		</Nuggets>
+	</WeaponTemplate>
 
 	<!-- shard photon cannon buff vs infantry -->
 

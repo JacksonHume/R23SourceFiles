@@ -65,9 +65,7 @@
 		<Include source="GlobalData/LogicCommandSet.xml" type="all"/>
 		<Include source="Command.xml" type="all"/>
 		<Include source="GlobalData/UnitAbilityButtonTemplates.xml" type="all"/>	
-		<Include source="GlobalData/ObjectCreationLists.xml" type="all"/>
-		<Include source="GlobalData/SpecialPowerTemplates.xml" type="all"/>
-		<Include source="CreateHuskEffect.xml" type="all"/>   -->
+		<Include source="GlobalData/SpecialPowerTemplates.xml" type="all"/>  -->
 	
 		<!-- R23f -->
 		<Include source="GlobalData/WeaponR21.xml" type="all"/>	
@@ -77,7 +75,6 @@
 		<Include source="SteelTalons\Units\STBehemoth.xml" type="all"/>	
 		<Include source="GDI\Units\GDIJuggernaught.xml" type="all"/>	
 		<Include source="GlobalData/AttributeModifier.xml" type="all"/>	
-		<Include source="GlobalData/WeaponR23.xml" type="all"/>	
 		<Include source="Alien/Units/alieneradicatorhexapod.xml" type="all"/>
 		<Include source="MarkedOfKane\Structures\MarkedOfKaneDisruptionTower.xml" type="all"/>
 		<Include source="Nod\props\nodvertigodisruptionpod.xml" type="all"/>
@@ -94,5 +91,8 @@
 	    <Include source="Nod\Units\NODCommando.xml" type="all"/>
 	    <Include source="MarkedOfKane/Units/MoKCommando.xml" type="all"/>	
 		<Include source="BlackHand/Units/BHCommando.xml" type="all"/>	
+		<Include source="CreateHuskEffect.xml" type="all"/> 
+		<Include source="GlobalData/ObjectCreationLists.xml" type="all"/>
+		<Include source="GlobalData/WeaponR23.xml" type="all"/>	
 	</Includes>
 </AssetDeclaration>
