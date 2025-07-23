@@ -62,7 +62,7 @@
 	<WeaponTemplate
 		id="AlertHuskPlayer1"
 		Name="AlertHuskPlayer1"
-		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
 		AutoReloadsClip="AUTO"
@@ -79,7 +79,7 @@
 	<WeaponTemplate
 		id="AlertHuskPlayer2"
 		Name="AlertHuskPlayer2"
-		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
 		AutoReloadsClip="AUTO"
@@ -96,7 +96,7 @@
 	<WeaponTemplate
 		id="AlertHuskPlayer3"
 		Name="AlertHuskPlayer3"
-		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
 		AutoReloadsClip="AUTO"
@@ -113,7 +113,7 @@
 	<WeaponTemplate
 		id="AlertHuskPlayer4"
 		Name="AlertHuskPlayer4"
-		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
 		AutoReloadsClip="AUTO"
@@ -130,7 +130,7 @@
 	<WeaponTemplate
 		id="AlertHuskPlayer5"
 		Name="AlertHuskPlayer5"
-		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
 		AutoReloadsClip="AUTO"
@@ -147,7 +147,7 @@
 	<WeaponTemplate
 		id="AlertHuskPlayer6"
 		Name="AlertHuskPlayer6"
-		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
 		AutoReloadsClip="AUTO"
@@ -164,7 +164,7 @@
 	<WeaponTemplate
 		id="AlertHuskPlayer7"
 		Name="AlertHuskPlayer7"
-		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
 		AutoReloadsClip="AUTO"
@@ -181,7 +181,7 @@
 	<WeaponTemplate
 		id="AlertHuskPlayer8"
 		Name="AlertHuskPlayer8"
-		ProjectileCollidesWith="ENEMIES NEUTRAL"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRALS"
 		ClipSize="1"
 		AutoReloadsClip="AUTO"
