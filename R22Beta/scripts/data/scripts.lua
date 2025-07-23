@@ -722,7 +722,7 @@ function OnEngineerCreatedR23(self)
 		end
 	end
 
-	if(isPlayer == false) then
+	if not isPlayer then
 		ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "RIDER2", 999999, 100) 
 	end
 end
