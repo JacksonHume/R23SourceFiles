@@ -65,6 +65,8 @@ playerTable = {"Player_1","Player_2","Player_3","Player_4","Player_5","Player_6"
 "SkirmishBlackHand", "SkirmishCivilian", "SkirmishCommentator", "SkirmishGDI", "SkirmishMarkedOfKane",
 "SkirmishNeutral", "SkirmishNod", "SkirmishNull", "SkirmishObserver", "SkirmishReaper17","SkirmishSteelTalons", "SkirmishTraveler59", "SkirmishZOCOM", "PlyrCreeps", "PlyrCivilian"}
 
+harvestedTime = {}
+framesBeingHarvested = {}
 
 function NoOp(self, source)
 end
@@ -124,10 +126,6 @@ function OnGDIPowerPlantCreated(self)
 	ObjectHideSubObjectPermanently( self, "TurbineGlows", true )
 end
 
---function OnGDIRefineryCreated(self)
---	ObjectHideSubObjectPermanently( self, "BAR_01", true )
---end
-
 function OnGDICommandPostCreated(self)
 	ObjectHideSubObjectPermanently( self, "UG_StealthDetector", true )
 	ObjectHideSubObjectPermanently( self, "UG_StealthDetector01", true )
@@ -169,149 +167,11 @@ end
 
 -- Start of R21 Functions --
 
-function OnCyborgSquadCreated_R21(self)
-	ExecuteAction("NAMED_SET_SPECIAL_POWER_COUNTDOWN", self, "EMPBlastGetInRange", 2.5);
-end
-
-function OnCyborgCreated_R21(self)
-	ObjectHideSubObjectPermanently( self, "WEAPON_PARTICLEBM", true )
-	ExecuteAction("NAMED_SET_SPECIAL_POWER_COUNTDOWN", self, "EMPBlast", 2.5);
-end	
-
 function OnHarvesterCreated_R21(self)
 	local a = getObjectId(self)
 	harvbluetib[a] = 0
 	harvgreentib[a] = 0
 end
-
-function OffMoney0_R21(self) 
-	local a = getObjectId(self)		
-	if ObjectTestModelCondition(self, "DOCKING") then 
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueOne")	
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenOne")
-			if bar1[a] == 0 then harvbluetib[a] = harvbluetib[a] - 1
-				elseif bar1[a] == 1 then harvgreentib[a] = harvgreentib[a] - 1
-			end
-	end
-end
-
-function OffMoney1_R21(self)
-	local a = getObjectId(self)
-	if ObjectTestModelCondition(self, "DOCKING") then 
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTwo")	
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenTwo") 
-			if bar2[a] == 0 then harvbluetib[a] = harvbluetib[a] - 1
-				elseif bar2[a] == 1 then harvgreentib[a] = harvgreentib[a] - 1
-			end
-	end
-end
-
-function OffMoney2_R21(self)
-	local a = getObjectId(self)
-	if ObjectTestModelCondition(self, "DOCKING") then 
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueThree")	
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenThree") 
-		if bar3[a] == 0 then harvbluetib[a] = harvbluetib[a] - 1
-				elseif bar3[a] == 1 then harvgreentib[a] = harvgreentib[a] - 1
-			end
-	end
-end
-
-function OffMoney3_R21(self)
-	local a = getObjectId(self)
-	if ObjectTestModelCondition(self, "DOCKING") then 
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueFour")	
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenFour") 
-		if bar4[a] == 0 then harvbluetib[a] = harvbluetib[a] - 1
-				elseif bar4[a] == 1 then harvgreentib[a] = harvgreentib[a] - 1
-			end
-	end
-end
-
--- R21 --
-
-function OnHarvestingBlueScrin_R21(self)
-	if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") == 0 and ObjectTestModelCondition(self, "USER_25") == true then
-		ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTib")
-	   elseif 
-		ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") and ObjectTestModelCondition(self, "USER_25") == false then
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTib") 
-	end
-end
-
-function OnHarvestingBlue_R21(self)
-	if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") == 0 and ObjectTestModelCondition(self, "USER_25") == true then
-		ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTib")
-	   elseif 
-		ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") and ObjectTestModelCondition(self, "USER_24") == true then
-		ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTib") 
-	end
-end
-
-function OnMoney1_R21(self)
-	local a = getObjectId(self)
-	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if ObjectTestModelCondition(self, "USER_25") then 
-			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueOne")
-			harvbluetib[a] = harvbluetib[a] + 1
-			bar1[a] = 0
-		elseif ObjectTestModelCondition(self, "USER_24") then
-			ObjectGrantUpgrade(self, "Upgrade_UpgradeGreenOne")
-			harvgreentib[a] = harvgreentib[a] + 1
-			bar1[a] = 1			
-		end
-	end
-end
-
-function OnMoney2_R21(self)
-	local a = getObjectId(self)
-	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if ObjectTestModelCondition(self, "USER_25") then 
-			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTwo")
-			harvbluetib[a] = harvbluetib[a] + 1
-			bar2[a] = 0
-		elseif ObjectTestModelCondition(self, "USER_24") then
-			ObjectGrantUpgrade(self, "Upgrade_UpgradeGreenTwo")
-			harvgreentib[a] = harvgreentib[a] + 1 
-			bar2[a] = 1
-		end
-	end
-end
-
-function OnMoney3_R21(self)
-	local a = getObjectId(self)
-	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if ObjectTestModelCondition(self, "USER_25") then 
-			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueThree")
-			harvbluetib[a] = harvbluetib[a] + 1
-			bar3[a] = 0
-		elseif ObjectTestModelCondition(self, "USER_24") then
-			ObjectGrantUpgrade(self, "Upgrade_UpgradeGreenThree")
-			harvgreentib[a] = harvgreentib[a] + 1 
-			bar3[a] = 1
-		end
-	end
-end
-
-function OnMoney4_R21(self)
-	local a = getObjectId(self)
-	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if ObjectTestModelCondition(self, "USER_25") then 
-			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueFour")
-			harvbluetib[a] = harvbluetib[a] + 1
-			bar4[a] = 0
-		elseif ObjectTestModelCondition(self, "USER_24") then
-			ObjectGrantUpgrade(self, "Upgrade_UpgradeGreenFour")	
-			harvgreentib[a] = harvgreentib[a] + 1 
-			bar4[a] = 1
-		end
-	end
-end
-
--- end of R21 --
-
-
--- R21b --
 
 function OnUser25_R21(self)		
 	if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") == 0 then ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTib") end
@@ -364,6 +224,8 @@ function OnMoney3_R21b(self)
 			bar3[a] = 1
 		end
 	end
+
+	--ObjectCreateAndFireTempWeapon(self, "MarkCrystalBeingHarvested")
 end
 
 function OnMoney4_R21b(self)
@@ -380,19 +242,6 @@ function OnMoney4_R21b(self)
 		end
 	end
 end
-
--- end of R21B --
-
--- R21g --
-
-function OnCyborgSquadCreated_R21g(self)
-	ExecuteAction("NAMED_SET_SPECIAL_POWER_COUNTDOWN", self, "EMPBlastGetInRange", 1.75);
-end
-
-function OnCyborgCreated_R21g(self)
-	ObjectHideSubObjectPermanently( self, "WEAPON_PARTICLEBM", true )
-	ExecuteAction("NAMED_SET_SPECIAL_POWER_COUNTDOWN", self, "EMPBlast", 1.75);
-end	
 
 function OffMoney0_R21g(self) 
 	local a = getObjectId(self)		
@@ -438,8 +287,6 @@ function OffMoney3_R21g(self)
 	end
 end
 
--- end of R21g --
-
 function OnHarvesterDeath_R21(self)
 	local a = getObjectId(self)
 	if harvbluetib[a] >= 2 then
@@ -460,6 +307,15 @@ function OnHarvesterDeath_R21(self)
 		ObjectCreateAndFireTempWeapon(self, "DeployGreenTiberium")
 	end
 end
+
+function OnCyborgSquadCreated_R21g(self)
+	ExecuteAction("NAMED_SET_SPECIAL_POWER_COUNTDOWN", self, "EMPBlastGetInRange", 1.75);
+end
+
+function OnCyborgCreated_R21g(self)
+	ObjectHideSubObjectPermanently( self, "WEAPON_PARTICLEBM", true )
+	ExecuteAction("NAMED_SET_SPECIAL_POWER_COUNTDOWN", self, "EMPBlast", 1.75);
+end	
 
 -- End of R21 Functions --
 
@@ -586,6 +442,45 @@ function OnGDIJuggernaughtCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_01", true )
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_02", true )
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_03", true )
+end
+
+-- tiberium exploit fix
+-- this function assigns the frame when the harvester harvests it.
+function OnBlueTiberiumHarvested(self)
+	local a = getObjectId(self)
+	harvestedTime[a] = GetFrame()
+	-- fire the weapon on harvs here
+	ObjectCreateAndFireTempWeapon(self, "BlueTiberiumWeapon")
+end
+
+-- the same thing, but for green tiberium
+function OnGreenTiberiumHarvested(self)
+	local a = getObjectId(self)
+	harvestedTime[a] = GetFrame()
+	-- fire the weapon on harvs here
+	ObjectCreateAndFireTempWeapon(self, "GreenTiberiumWeapon")
+end
+
+-- checks if the crystal has been harvested for x frames and if it has kill it.
+function OffTiberiumHarvested(self)
+	local a = getObjectId(self)
+	if harvestedTime[a] ~= nil then 
+
+		if framesBeingHarvested[a] == nil then
+			framesBeingHarvested[a] = 0 
+			return
+		else 
+			framesBeingHarvested[a] = framesBeingHarvested[a] + (GetFrame() - harvestedTime[a])
+		end
+
+		if framesBeingHarvested[a] >= 20 and framesBeingHarvested[a] <= 60 then
+			ObjectSetObjectStatus(self, "RIDER1")
+			-- prevent an almost full harvester from killing the crystal, by checking if the animation is playing frames.
+			if ObjectTestModelCondition(self, "TIBERIUM_CRYSTAL_TYPE1") == true then
+				ExecuteAction("NAMED_KILL", self)
+			end
+		end
+	end
 end
 
 -- triggered when a unit such as a juggernaught spawns from a husk, this simply checks in the table of husks to see if there are any without these status 

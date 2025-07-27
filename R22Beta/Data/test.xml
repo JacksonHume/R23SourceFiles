@@ -52,7 +52,6 @@
 		<Include source="GlobalData/Armor.xml" type="all"/>
 		<Include source="Nod/Units/NodAvatar.xml" type="all"/>
 		<Include source="Alien/Structures/AlienTripodHusk.xml" type="all"/>
-		<Include source="Alien\Units\AlienHarv.xml" type="all"/>	
 		
 		<Include source="GDI\Units\GDIEngineer.xml" type="all"/>
 		
@@ -60,21 +59,18 @@
 		<Include source="Alien/Units/AlienCustomizableVehicle.xml" type="all"/>
 		<Include source="BlackHand\Units\BHHarvester.xml" type="all"/>	
 		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>	
-		<Include source="GDI/Structures/GDIBarracks.xml" type="all"/>
-		<Include source="GlobalData/upgrade.xml" type="all"/>	
+		<Include source="GDI/Structures/GDIBarracks.xml" type="all"/>	
 		<Include source="GlobalData/LogicCommandSet.xml" type="all"/>
 		<Include source="Command.xml" type="all"/>
 		<Include source="GlobalData/UnitAbilityButtonTemplates.xml" type="all"/>	
 		<Include source="GlobalData/SpecialPowerTemplates.xml" type="all"/>  -->
 	
-		<!-- R23f -->
-		<Include source="GlobalData/WeaponR21.xml" type="all"/>	
+		<!-- R23f 
 		<Include source="MarkedOfKane/Units/markedofkanemobileartillery.xml" type="all"/>	
 		<Include source="BlackHand/Units/blackhandmobileartillery.xml" type="all"/>	
 		<Include source="Nod/Units/nodmobileartillery.xml" type="all"/>	
 		<Include source="SteelTalons\Units\STBehemoth.xml" type="all"/>	
 		<Include source="GDI\Units\GDIJuggernaught.xml" type="all"/>	
-		<Include source="GlobalData/AttributeModifier.xml" type="all"/>	
 		<Include source="Alien/Units/alieneradicatorhexapod.xml" type="all"/>
 		<Include source="MarkedOfKane\Structures\MarkedOfKaneDisruptionTower.xml" type="all"/>
 		<Include source="Nod\props\nodvertigodisruptionpod.xml" type="all"/>
@@ -84,7 +80,7 @@
 
 		<Include source="Alien/Units/alieneradicatorhexapod.xml" type="all"/>
 		<Include source="traveler59\Units\t59eradicatorhexapod.xml" type="all"/>		
-		<Include source="Reaper17\Units\r17eradicatorhexapod.xml" type="all"/>
+		<Include source="Reaper17\Units\r17eradicatorhexapod.xml" type="all"/> -->
 
 
 		<!-- r23g -->
@@ -94,5 +90,18 @@
 		<Include source="CreateHuskEffect.xml" type="all"/> 
 		<Include source="GlobalData/ObjectCreationLists.xml" type="all"/>
 		<Include source="GlobalData/WeaponR23.xml" type="all"/>	
+
+		<Include source="GlobalData/WeaponR21.xml" type="all"/>	
+		<Include source="GlobalData/AttributeModifier.xml" type="all"/>	
+		<Include source="Alien\Units\AlienHarv.xml" type="all"/>	
+
+		<Include source="Tiberium/TiberiumCrystal.xml" type="all"/>	
+		<Include source="Tiberium/TiberiumCrystalBlue.xml" type="all"/>	
+		<Include source="Tiberium/BlueTiberiumFieldFromHarvesterDeath.xml" type="all"/>	
+		<Include source="Tiberium/TiberiumFieldBlue.xml" type="all"/>	
+		<Include source="Tiberium/TiberiumFieldBlueSeeded.xml" type="all"/>	
+		<Include source="GlobalData/upgrade.xml" type="all"/>
+
+		<Include source="ZOCOM\Units\ZOCOMHammerhead.xml" type="all"/>
 	</Includes>
 </AssetDeclaration>

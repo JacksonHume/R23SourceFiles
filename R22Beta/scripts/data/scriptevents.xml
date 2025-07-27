@@ -464,6 +464,22 @@
 			<Conditions>+USER_75</Conditions>
 		</ModelConditionEvent>			
 		
+		<!-- R23 tib events -->
+
+		<ObjectStatusEvent Name="OnBeingHarvested">
+			<Conditions>+IS_BEING_HARVESTED</Conditions>
+		</ObjectStatusEvent>									
+		<ObjectStatusEvent Name="OnBeingHarvested1">
+			<Conditions>-IS_BEING_HARVESTED</Conditions>
+		</ObjectStatusEvent>					
+
+		<ModelConditionEvent Name="OnTibGrowing">
+			<Conditions>+TIBERIUM_GROWING</Conditions>
+		</ModelConditionEvent>		
+		
+		<ModelConditionEvent Name="OnTibGrowing1">
+			<Conditions>-TIBERIUM_GROWING</Conditions>
+		</ModelConditionEvent>			
 		
 		<ModelConditionEvent Name="OnCover">
 			<Conditions>+COVER</Conditions>
@@ -528,7 +544,7 @@
 		</ObjectStatusEvent>			
 		<ObjectStatusEvent Name="OnAttackingEnd">
 			<Conditions>-IS_ATTACKING</Conditions>
-		</ObjectStatusEvent>			
+		</ObjectStatusEvent>
 		
 		<ObjectStatusEvent Name="OnRider1">
 			<Conditions>+RIDER1</Conditions>
@@ -759,6 +775,16 @@
 		<!-- If there are any events that need to apply to all units, put them here. jba -->
     </EventList>
 
+	<EventList Name="BlueTiberiumFunctions_R23" Inherit="BaseScriptFunctions">
+	    <EventHandler EventName="OnBeingHarvested"	ScriptFunctionName="OnBlueTiberiumHarvested" DebugSingleStep="false"/>
+		<EventHandler EventName="OnBeingHarvested1"	ScriptFunctionName="OffTiberiumHarvested" DebugSingleStep="false"/>
+	</EventList>
+
+	<EventList Name="GreenTiberiumFunctions_R23" Inherit="BaseScriptFunctions">
+	    <EventHandler EventName="OnBeingHarvested"	ScriptFunctionName="OnGreenTiberiumHarvested" DebugSingleStep="false"/>
+		<EventHandler EventName="OnBeingHarvested1"	ScriptFunctionName="OffTiberiumHarvested" DebugSingleStep="false"/>
+	</EventList>
+
 	<EventList Name="NodMobileArtilleryFunctionsR23" Inherit="BaseScriptFunctions">
 	    <EventHandler EventName="OnCreated"	ScriptFunctionName="OnMobileArtilleryCreated" DebugSingleStep="false"/>
 		<!--<EventHandler EventName="OnDeployed1"	ScriptFunctionName="OnArtilleryUndeploy" DebugSingleStep="false"/> -->
@@ -829,83 +855,13 @@
 		<!-- <EventHandler EventName="OnUser9End"	ScriptFunctionName="delete" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser3"	ScriptFunctionName="OnHuskHide" DebugSingleStep="false"/>  -->
    	 </EventList>
+	
+	<!-- r21g -->
 
-	<!-- r21 -->
-	
-	<EventList Name="AlienHarvesterFunctions_R21" Inherit="BaseScriptFunctions">	
-		<EventHandler EventName="OnHarvesting2"	ScriptFunctionName="OnHarvestingBlueScrin_R21" DebugSingleStep="false"/>			
-    </EventList>
-
-	<EventList Name="GDIHarvesterFunctions_R21" Inherit="BaseScriptFunctions">	
-	    <EventHandler EventName="OnMoney1"	ScriptFunctionName="OnMoney1_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney2"	ScriptFunctionName="OnMoney2_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney3"	ScriptFunctionName="OnMoney3_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney4"	ScriptFunctionName="OnMoney4_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney1"	ScriptFunctionName="OffMoney1_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney2"	ScriptFunctionName="OffMoney2_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney3"	ScriptFunctionName="OffMoney3_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney0"	ScriptFunctionName="OffMoney0_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnHarvesting"	ScriptFunctionName="OnHarvestingBlue_R21" DebugSingleStep="false"/>	
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHarvesterCreated_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>			
-    </EventList>
-	
-	<EventList Name="NodHarvesterFunctions_R21" Inherit="BaseScriptFunctions">	
-	    <EventHandler EventName="OnMoney1"	ScriptFunctionName="OnMoney1_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney2"	ScriptFunctionName="OnMoney2_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney3"	ScriptFunctionName="OnMoney3_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney4"	ScriptFunctionName="OnMoney4_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney1"	ScriptFunctionName="OffMoney1_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney2"	ScriptFunctionName="OffMoney2_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney3"	ScriptFunctionName="OffMoney3_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney0"	ScriptFunctionName="OffMoney0_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnHarvesting2"	ScriptFunctionName="OnHarvestingBlueScrin_R21" DebugSingleStep="false"/>	
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHarvesterCreated_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>			
-    </EventList>
-	
-	<!-- eof r21 -->
-	
-	<!-- r21b -->
-	
 	<EventList Name="AlienHarvesterFunctions_R21b" Inherit="BaseScriptFunctions">	
 		<EventHandler EventName="OnUser25"	ScriptFunctionName="OnUser25_R21" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser24"	ScriptFunctionName="OnUser24_R21" DebugSingleStep="false"/>
     </EventList>
-
-	<EventList Name="GDIHarvesterFunctions_R21b" Inherit="BaseScriptFunctions">	
-		<EventHandler EventName="OnUser25"	ScriptFunctionName="OnUser25_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnUser24"	ScriptFunctionName="OnUser24_R21" DebugSingleStep="false"/>
-	    <EventHandler EventName="OnMoney1"	ScriptFunctionName="OnMoney1_R21b" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney2"	ScriptFunctionName="OnMoney2_R21b" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney3"	ScriptFunctionName="OnMoney3_R21b" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney4"	ScriptFunctionName="OnMoney4_R21b" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney1"	ScriptFunctionName="OffMoney1_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney2"	ScriptFunctionName="OffMoney2_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney3"	ScriptFunctionName="OffMoney3_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney0"	ScriptFunctionName="OffMoney0_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHarvesterCreated_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>			
-    </EventList>
-	
-	<EventList Name="NodHarvesterFunctions_R21b" Inherit="BaseScriptFunctions">	
-		<EventHandler EventName="OnUser25"	ScriptFunctionName="OnUser25_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnUser24"	ScriptFunctionName="OnUser24_R21" DebugSingleStep="false"/>
-	    <EventHandler EventName="OnMoney1"	ScriptFunctionName="OnMoney1_R21b" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney2"	ScriptFunctionName="OnMoney2_R21b" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney3"	ScriptFunctionName="OnMoney3_R21b" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney4"	ScriptFunctionName="OnMoney4_R21b" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney1"	ScriptFunctionName="OffMoney1_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney2"	ScriptFunctionName="OffMoney2_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney3"	ScriptFunctionName="OffMoney3_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney0"	ScriptFunctionName="OffMoney0_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHarvesterCreated_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>			
-    </EventList>
-	
-	<!-- eof r21b -->
-	
-	<!-- r21g -->
 	
 	<EventList Name="GDIHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
 		<EventHandler EventName="OnUser25"	ScriptFunctionName="OnUser25_R21" DebugSingleStep="false"/>

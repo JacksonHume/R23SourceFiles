@@ -303,7 +303,7 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
-				
+			
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="TIBERIUM_CRYSTAL_TYPE2"
@@ -355,7 +355,7 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
-
+			
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="TIBERIUM_CRYSTAL_TYPE5"
@@ -373,7 +373,9 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
-				
+			
+				<!-- by default the animation is being harvested -->
+
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT">
 				</AnimationState>
@@ -437,14 +439,13 @@
 						AnimationName="TibCellBlue01"
 						AnimationMode="MANUAL"
 						AnimationBlendTime="0" />
-				</AnimationState>
-			
+				</AnimationState>	
 			</ScriptedModelDraw>
 		</Draws>
 		<Behaviors>
 			<RandomModelCondition
 				id="E6B33535"
-				Conditions="TIBERIUM_CRYSTAL_TYPE1 TIBERIUM_CRYSTAL_TYPE2 TIBERIUM_CRYSTAL_TYPE3 TIBERIUM_CRYSTAL_TYPE4 TIBERIUM_CRYSTAL_TYPE5" />
+				Conditions="TIBERIUM_CRYSTAL_TYPE1 TIBERIUM_CRYSTAL_TYPE2 TIBERIUM_CRYSTAL_TYPE3 TIBERIUM_CRYSTAL_TYPE4 TIBERIUM_CRYSTAL_TYPE5" /> 
 			<AttributeModifierPoolUpdate
 				id="513BC476" />
 			<DestroyDie
@@ -503,11 +504,13 @@
 				HeroModeTrigger="False"
 				ChargingModeTrigger="False"
 				AliveOnly="False">	
+				<!--
 				<FireWeaponNugget
 					WeaponName="BlueTiberiumWeapon"
 					FireDelay="0s"
 					FireInterval="0.25s"
 					OneShot="False" />
+				-->
 				<FireWeaponNugget
 					WeaponName="MARVTiberiumFXWeapon"
 					FireDelay="0s"
@@ -528,7 +531,7 @@
 			<FXListBehavior
 				id="C74C39D8">
 				<DieMuxData
-					ExemptStatus=""
+					ExemptStatus="RIDER1"
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"
@@ -545,6 +548,11 @@
 					ForceUseDoFXObj="False" />
 			</FXListBehavior>
 		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_06"
+				AILuaEventsList="BlueTiberiumFunctions_R23"/>
+		</AI>
 		<Body>
 			<ActiveBody
 				id="A5C3EB8A"

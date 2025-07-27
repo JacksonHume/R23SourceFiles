@@ -550,11 +550,13 @@
 				HeroModeTrigger="False"
 				ChargingModeTrigger="False"
 				AliveOnly="False">			
+				<!--
 				<FireWeaponNugget
 					WeaponName="GreenTiberiumWeapon"
 					FireDelay="0s"
 					FireInterval="0.25s"
 					OneShot="False" />
+				-->
 				<FireWeaponNugget
 					WeaponName="MARVTiberiumFXWeapon"
 					FireDelay="0s"
@@ -613,7 +615,7 @@
 			<FXListBehavior
 				id="C74C39D8">
 				<DieMuxData
-					ExemptStatus=""
+					ExemptStatus="RIDER1"
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"
@@ -630,6 +632,11 @@
 					ForceUseDoFXObj="False" />
 			</FXListBehavior>
 		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_06"
+				AILuaEventsList="GreenTiberiumFunctions_R23"/>
+		</AI>
 		<Body>
 			<ActiveBody
 				id="A5C3EB8A"
