@@ -631,6 +631,56 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_6"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:GUHAMHEAD_SKN"
+						ExtraMesh="False" />
+					<Texture
+						Original="GUHamhead"
+						New="GUHamhead_UGCA" />
+					<Texture
+						Original="GUHamHead_SPM"
+						New="GUHamHead_UGCA_SPM" />
+					<Texture
+						Original="GUHamHead_NRM"
+						New="GUHamhead_UGCA_NRM" />
+						<Texture
+						Original="HC_GUHamhead"
+						New="HC_GUHamhead_UGCA" />
+					<ParticleSysBone
+						BoneName="Bone_Engine_L"
+						FXParticleSystemTemplate="Venomexhaust"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="Bone_Engine_R"
+						FXParticleSystemTemplate="Venomexhaust"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="Bone_Engine_L"
+						FXParticleSystemTemplate="VenomDamagedSmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<!-- <ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="orcadamagesmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" /> -->
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED USER_6"
 					PortraitImage=""
 					ButtonImage=""
@@ -681,16 +731,16 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DAMAGED USER_6"
+					ConditionsYes="DYING USER_6"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GUHAMHEAD_SKN"
+						Name="W3DContainer:GUHAMHEADR_SKN"
 						ExtraMesh="False" />
 					<Texture
 						Original="GUHamhead"
-						New="GUHamhead_UGCA" />
+						New="GUHamhead_UGCA_D" />	
 					<Texture
 						Original="GUHamHead_SPM"
 						New="GUHamHead_UGCA_SPM" />
@@ -701,33 +751,26 @@
 						Original="HC_GUHamhead"
 						New="HC_GUHamhead_UGCA" />
 					<ParticleSysBone
-						BoneName="Bone_Engine_L"
-						FXParticleSystemTemplate="Venomexhaust"
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
 						PersistID="0"
 						FollowBone="True"
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 					<ParticleSysBone
-						BoneName="Bone_Engine_R"
-						FXParticleSystemTemplate="Venomexhaust"
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
 						PersistID="0"
 						FollowBone="True"
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 					<ParticleSysBone
-						BoneName="Bone_Engine_L"
-						FXParticleSystemTemplate="VenomDamagedSmoke"
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
 						PersistID="0"
 						FollowBone="True"
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
-					<!-- <ParticleSysBone
-						BoneName="FX_Rfan"
-						FXParticleSystemTemplate="orcadamagesmoke"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" /> -->
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -857,51 +900,6 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</ModelConditionState>
-				<!--
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_6"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:GUHAMHEADR_SKN"
-						ExtraMesh="False" />
-					<Texture
-						Original="GUHamhead"
-						New="GUHamhead_UGCA_D" />	
-					<Texture
-						Original="GUHamHead_SPM"
-						New="GUHamHead_UGCA_SPM" />
-					<Texture
-						Original="GUHamHead_NRM"
-						New="GUHamhead_UGCA_NRM" />
-						<Texture
-						Original="HC_GUHamhead"
-						New="HC_GUHamhead_UGCA" />
-					<ParticleSysBone
-						BoneName="ROOTTRANSFORM"
-						FXParticleSystemTemplate="GDIDebrisSmallFire"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="ROOTTRANSFORM"
-						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-					<ParticleSysBone
-						BoneName="ROOTTRANSFORM"
-						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						PersistID="0"
-						FollowBone="True"
-						OnlyIfOnWater="False"
-						OnlyIfOnLand="False" />
-				</ModelConditionState>
-				-->
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					Flags="RESTART_ANIM_WHEN_COMPLETE"
