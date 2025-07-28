@@ -48,6 +48,23 @@ mobaenergypods = {} -- tracks energy pod count
 mobatest = {}
 mobaspawnrego = {}
 
+playerTimes = {}
+epicUnits = {"30354418", "565BE825", "CD5A5360", "1D137C85", "A4FD281B", "37F0A5F5", "D8BE0529", "711A18DF", "146C2890"}
+husksTable = {}
+playerTable = {"Player_1","Player_2","Player_3","Player_4","Player_5","Player_6","Player_7","Player_8","PlyrGDI", "Neutral", "PlyrNOD", "PlyrBlackHand", 
+"PlyrSteelTalons", "PlyrAlien", "PlyrTraveler59", "PlyrZOCOM", "PlyrMarkedOfKane", "PlyrNeutral", "PlyrReaper17", "Skirmish", "SkirmishAlien", 
+"SkirmishBlackHand", "SkirmishCivilian", "SkirmishCommentator", "SkirmishGDI", "SkirmishMarkedOfKane",
+"SkirmishNeutral", "SkirmishNod", "SkirmishNull", "SkirmishObserver", "SkirmishReaper17","SkirmishSteelTalons", "SkirmishTraveler59", "SkirmishZOCOM", "PlyrCreeps", "PlyrCivilian"}
+
+
+--- HARVESTER RELATED --- 
+
+harvestedTime = {}
+framesBeingHarvested = {}
+flagSet = {}
+harvFrames = {}
+onMoney3HarvestedFrames = {}
+lastHarvestTime = {}
 
 harvbluetib = {} -- for counting blue tiberium in harvester
 harvgreentib = {} -- for counting green tiberium harvester
@@ -57,19 +74,9 @@ bar2 = {} -- for tracking the bar two of the harvester.
 bar3 = {} -- for tracking the bar three of the harvester.
 bar4 = {} -- for tracking the bar four of the harvester.
 
-playerTimes = {}
-epicUnits = {"30354418", "565BE825", "CD5A5360", "1D137C85", "A4FD281B", "37F0A5F5", "D8BE0529", "711A18DF", "146C2890"}
-husksTable = {}
-playerTable = {"Player_1","Player_2","Player_3","Player_4","Player_5","Player_6","Player_7","Player_8","PlyrGDI", "Neutral", "PlyrNOD", "PlyrBlackHand", 
-"PlyrSteelTalons", "PlyrAlien", "PlyrTraveler59", "PlyrZOCOM", "PlyrMarkedOfKane", "PlyrNeutral", "PlyrReaper17", "Skirmish", "SkirmishAlien", 
-"SkirmishBlackHand", "SkirmishCivilian", "SkirmishCommentator", "SkirmishGDI", "SkirmishMarkedOfKane",
-"SkirmishNeutral", "SkirmishNod", "SkirmishNull", "SkirmishObserver", "SkirmishReaper17","SkirmishSteelTalons", "SkirmishTraveler59", "SkirmishZOCOM", "PlyrCreeps", "PlyrCivilian"}
+MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
+MAX_FRAMES_SPENT_HARVESTING = 33 -- 2.2s
 
-harvestedTime = {}
-framesBeingHarvested = {}
-flagSet = {}
-harvFrames = {}
-onMoney3HarvestedFrames = {}
 
 function NoOp(self, source)
 end
@@ -447,21 +454,24 @@ function OnGDIJuggernaughtCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_03", true )
 end
 
+-- ####################### TIBERIUM EXPLOIT FIX ############################
 
-
-
-
-
-
--- tiberium exploit fix
 -- this function assigns the frame when the harvester harvests it.
 function OnBlueTiberiumHarvested(self)
 	local a = getObjectId(self)
 	harvestedTime[a] = GetFrame()
 
-	flagSet[a] = true
+	local flag = true
+	if lastHarvestTime[a] ~= nil then
+		if (GetFrame() - lastHarvestTime[a]) > MAX_FRAMES_WHEN_NOT_HARVESTED then
+			flag = false
+			-- reset harvestested frames
+			framesBeingHarvested[a] = nil
+			lastHarvestTime[a] = nil
+		end
+	end
 
-	-- fire the weapon on harvs here
+	flagSet[a] = flag
 	ObjectCreateAndFireTempWeapon(self, "BlueTiberiumWeapon")
 end
 
@@ -470,9 +480,17 @@ function OnGreenTiberiumHarvested(self)
 	local a = getObjectId(self)
 	harvestedTime[a] = GetFrame()
 
-	flagSet[a] = true
+	local flag = true
+	if lastHarvestTime[a] ~= nil then
+		if (GetFrame() - lastHarvestTime[a]) > MAX_FRAMES_WHEN_NOT_HARVESTED then
+			flag = false
+			-- reset harvestested frames
+			framesBeingHarvested[a] = nil
+			lastHarvestTime[a] = nil
+		end
+	end
 
-	-- fire the weapon on harvs here
+	flagSet[a] = flag
 	ObjectCreateAndFireTempWeapon(self, "GreenTiberiumWeapon")
 end
 
@@ -480,7 +498,7 @@ end
 function OffTiberiumHarvested(self)
 	local a = getObjectId(self)
 	if harvestedTime[a] ~= nil then 
-
+		
 		if framesBeingHarvested[a] == nil then
 			framesBeingHarvested[a] = 0 
 			return
@@ -488,8 +506,10 @@ function OffTiberiumHarvested(self)
 			framesBeingHarvested[a] = framesBeingHarvested[a] + (GetFrame() - harvestedTime[a])
 		end
 
-		-- if it has been harvested this long AND (TODO) has a flag set on it to conclude the harvester has harvested longer than it should then destroy it (set this to not, as we dont want to kill it if this is the case)
-		if framesBeingHarvested[a] > 33 and framesBeingHarvested[a] <= 900 and flagSet[a] == true then
+		-- time since last harvest
+		lastHarvestTime[a] = GetFrame()
+
+		if framesBeingHarvested[a] > MAX_FRAMES_SPENT_HARVESTING and flagSet[a] == true then
 			-- user 3 is set for a duration of the harv thats harvesting it either 1.7s or 2.2s, depends on the action time.
 			if ObjectTestModelCondition(self, "USER_3") == false then
 				-- stops the death fx from showing
@@ -504,7 +524,11 @@ function OffTiberiumHarvested(self)
 			end
 		end
 		-- reset flag if the prior condition hasnt been met, stops overlapping issue
-		flagSet[a] = false
+		if (GetFrame() - lastHarvestTime[a]) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
+			flagSet[a] = true
+		else
+			flagSet[a] = false
+		end
 	end
 end
 
@@ -515,8 +539,7 @@ function UpdateMoney3Frames(self)
 
 	if onMoney3HarvestedFrames[a] ~= nil then
 		-- duration the harv has spent harvesting in  +MONEY_STORED_AMOUNT_3 state
-		if onMoney3HarvestedFrames[a] > 33 then
-			print("over 4")
+		if onMoney3HarvestedFrames[a] > MAX_FRAMES_SPENT_HARVESTING then
 			-- assign USER_3 to the crystal
 			ObjectCreateAndFireTempWeapon(self, "PreventCrystalDeath")
 		end
@@ -533,11 +556,10 @@ function UpdateMoney3FramesEnd(self)
 	end
 end
 
+-- ###################################################################
 
 
-
-
-
+-- ####################### HUSK CAPTURE IMPLEMENTATION ############################
 
 -- triggered when a unit such as a juggernaught spawns from a husk, this simply checks in the table of husks to see if there are any without these status 
 -- then applies them.
@@ -689,6 +711,8 @@ end
 function OnHuskFXCreated(self)
 	 ExecuteAction("NAMED_USE_COMMANDBUTTON_ABILITY", self, "Command_HuskCaptureFX")
 end
+
+-- ###################################################################
 
 -- lua specter / juggernaut undeploy fix
 --function OnArtilleryUndeploy(self)
