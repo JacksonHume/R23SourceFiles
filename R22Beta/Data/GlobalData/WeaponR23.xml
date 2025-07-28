@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<WeaponTemplate
+		id="PreventCrystalDeath"
+		Name="PreventCrystalDeath"
+		RequiredFiringObjectStatus=""
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS NOT_SIMILAR">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="75.0"
+				PartitionFilterTestType="CIRCLE"
+				RequiredObjectStatus=""
+				AttributeModifierName="AttributeModifier_PreventCrystalDeath">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship=""
+					Alignment="NONE"
+					Include=""
+					Exclude=""
+					StatusBitFlags=""
+					RejectStatusBitFlags=""
+					AcceptModelCondition=""
+					RejectModelCondition="">
+					<IncludeThing>TiberiumCrystalBlue</IncludeThing>
+					<IncludeThing>TiberiumCrystal</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
 	<!-- Engineer crash workaround weapons 
 
 	<WeaponTemplate

@@ -67,6 +67,9 @@ playerTable = {"Player_1","Player_2","Player_3","Player_4","Player_5","Player_6"
 
 harvestedTime = {}
 framesBeingHarvested = {}
+flagSet = {}
+harvFrames = {}
+onMoney3HarvestedFrames = {}
 
 function NoOp(self, source)
 end
@@ -224,8 +227,6 @@ function OnMoney3_R21b(self)
 			bar3[a] = 1
 		end
 	end
-
-	--ObjectCreateAndFireTempWeapon(self, "MarkCrystalBeingHarvested")
 end
 
 function OnMoney4_R21b(self)
@@ -278,6 +279,10 @@ end
 
 function OffMoney3_R21g(self)
 	local a = getObjectId(self)
+
+	-- clear the amount of frames when docked and unloading tib
+	onMoney3HarvestedFrames[a] = 0
+
 	if ObjectTestModelCondition(self, "DOCKING") then 
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueFour") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueFour") end
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeGreenFour") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenFour") end	
@@ -289,23 +294,21 @@ end
 
 function OnHarvesterDeath_R21(self)
 	local a = getObjectId(self)
-	if harvbluetib[a] >= 2 then
-		harvbluetib[a] = nil
-		harvgreentib[a] = nil
-		bar1[a] = nil
-		bar2[a] = nil
-		bar3[a] = nil 
-		bar4[a] = nil	
+	if harvbluetib[a] >= 2 then	
 		ObjectCreateAndFireTempWeapon(self, "DeployBlueTiberium")
 	elseif harvbluetib[a] == 1 or harvgreentib[a] > 0 then
-		harvbluetib[a] = nil
-		harvgreentib[a] = nil
-		bar1[a] = nil
-		bar2[a] = nil
-		bar3[a] = nil 
-		bar4[a] = nil	
 		ObjectCreateAndFireTempWeapon(self, "DeployGreenTiberium")
 	end
+	
+	harvbluetib[a] = nil
+	harvgreentib[a] = nil
+	bar1[a] = nil
+	bar2[a] = nil
+	bar3[a] = nil 
+	bar4[a] = nil	
+	-- new for tib exploit fix
+	harvFrames[a] = nil	
+	onMoney3HarvestedFrames[a] = nil
 end
 
 function OnCyborgSquadCreated_R21g(self)
@@ -444,11 +447,20 @@ function OnGDIJuggernaughtCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_03", true )
 end
 
+
+
+
+
+
+
 -- tiberium exploit fix
 -- this function assigns the frame when the harvester harvests it.
 function OnBlueTiberiumHarvested(self)
 	local a = getObjectId(self)
 	harvestedTime[a] = GetFrame()
+
+	flagSet[a] = true
+
 	-- fire the weapon on harvs here
 	ObjectCreateAndFireTempWeapon(self, "BlueTiberiumWeapon")
 end
@@ -457,11 +469,14 @@ end
 function OnGreenTiberiumHarvested(self)
 	local a = getObjectId(self)
 	harvestedTime[a] = GetFrame()
+
+	flagSet[a] = true
+
 	-- fire the weapon on harvs here
 	ObjectCreateAndFireTempWeapon(self, "GreenTiberiumWeapon")
 end
 
--- checks if the crystal has been harvested for x frames and if it has kill it.
+-- checks if the crystal has been harvested for x frames and if it doesnt have a flag assigned it has kill it.
 function OffTiberiumHarvested(self)
 	local a = getObjectId(self)
 	if harvestedTime[a] ~= nil then 
@@ -473,15 +488,56 @@ function OffTiberiumHarvested(self)
 			framesBeingHarvested[a] = framesBeingHarvested[a] + (GetFrame() - harvestedTime[a])
 		end
 
-		if framesBeingHarvested[a] >= 20 and framesBeingHarvested[a] <= 60 then
-			ObjectSetObjectStatus(self, "RIDER1")
-			-- prevent an almost full harvester from killing the crystal, by checking if the animation is playing frames.
-			if ObjectTestModelCondition(self, "TIBERIUM_CRYSTAL_TYPE1") == true then
+		-- if it has been harvested this long AND (TODO) has a flag set on it to conclude the harvester has harvested longer than it should then destroy it (set this to not, as we dont want to kill it if this is the case)
+		if framesBeingHarvested[a] > 33 and framesBeingHarvested[a] <= 1800 and flagSet[a] == true then
+			-- user 3 is set for a duration of the harv thats harvesting it either 1.7s or 2.2s, depends on the action time.
+			if ObjectTestModelCondition(self, "USER_3") == false then
+				-- stops the death fx from showing
+				ObjectSetObjectStatus(self, "RIDER1")
+				-- clear from arrays
+				harvestedTime[a] = nil
+				flagSet[a] = nil 
+				framesBeingHarvested[a] = nil 
 				ExecuteAction("NAMED_KILL", self)
+				-- end the function to prevent the flag from being set again
+				return 
 			end
+		end
+		-- reset flag if the prior condition hasnt been met, stops overlapping issue
+		flagSet[a] = false
+	end
+end
+
+-- happens when +HARVEST_ACTION +MONEY_STORED_AMOUNT_3 event triggers.
+function UpdateMoney3Frames(self)
+	local a = getObjectId(self)
+	harvFrames[a] = GetFrame()
+
+	if onMoney3HarvestedFrames[a] ~= nil then
+		-- duration the harv has spent harvesting in  +MONEY_STORED_AMOUNT_3 state
+		if onMoney3HarvestedFrames[a] > 33 then
+			print("over 4")
+			-- assign USER_3 to the crystal
+			ObjectCreateAndFireTempWeapon(self, "PreventCrystalDeath")
 		end
 	end
 end
+
+function UpdateMoney3FramesEnd(self)
+	local a = getObjectId(self)
+
+	if onMoney3HarvestedFrames[a] == nil then
+		onMoney3HarvestedFrames[a] = 0 
+	else 
+		onMoney3HarvestedFrames[a] = onMoney3HarvestedFrames[a] + (GetFrame() - harvFrames[a])
+	end
+end
+
+
+
+
+
+
 
 -- triggered when a unit such as a juggernaught spawns from a husk, this simply checks in the table of husks to see if there are any without these status 
 -- then applies them.

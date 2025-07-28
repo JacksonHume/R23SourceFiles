@@ -182,8 +182,12 @@
 			<Conditions>+HARVEST_PREPARATION</Conditions>
 		</ModelConditionEvent>
 
-		<ModelConditionEvent  Name="OnHarvesting">
-			<Conditions>+HARVEST_ACTION</Conditions>
+		<ModelConditionEvent  Name="OnHarvestingMoney3">
+			<Conditions>+HARVEST_ACTION +MONEY_STORED_AMOUNT_3</Conditions>
+		</ModelConditionEvent>
+
+		<ModelConditionEvent  Name="OnHarvestingMoney3End">
+			<Conditions>-HARVEST_ACTION +MONEY_STORED_AMOUNT_3</Conditions>
 		</ModelConditionEvent>
 
 					
@@ -861,6 +865,8 @@
 	<EventList Name="AlienHarvesterFunctions_R21b" Inherit="BaseScriptFunctions">	
 		<EventHandler EventName="OnUser25"	ScriptFunctionName="OnUser25_R21" DebugSingleStep="false"/>
 		<EventHandler EventName="OnUser24"	ScriptFunctionName="OnUser24_R21" DebugSingleStep="false"/>
+		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
+		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="GDIHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
@@ -875,7 +881,9 @@
 		<EventHandler EventName="OffMoney3"	ScriptFunctionName="OffMoney3_R21g" DebugSingleStep="false"/>
 		<EventHandler EventName="OffMoney0"	ScriptFunctionName="OffMoney0_R21g" DebugSingleStep="false"/>
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHarvesterCreated_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>			
+		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>		
+		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
+		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="NodHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
@@ -890,7 +898,9 @@
 		<EventHandler EventName="OffMoney3"	ScriptFunctionName="OffMoney3_R21g" DebugSingleStep="false"/>
 		<EventHandler EventName="OffMoney0"	ScriptFunctionName="OffMoney0_R21g" DebugSingleStep="false"/>
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHarvesterCreated_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>			
+		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>		
+		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
+		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="NodCyborgFunctions_R21g" Inherit="BaseScriptFunctions">

@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<AttributeModifier
+		id="AttributeModifier_PreventCrystalDeath"
+		Category="NONE"
+		Duration="5s"
+		ModelConditionsSet="USER_3" />  
+
 	<!--
 	<AttributeModifier
 		id="AttributeModifier_HuskHide"
