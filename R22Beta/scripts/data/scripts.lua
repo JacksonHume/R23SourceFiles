@@ -316,6 +316,7 @@ function OnHarvesterDeath_R21(self)
 	-- new for tib exploit fix
 	harvFrames[a] = nil	
 	onMoney3HarvestedFrames[a] = nil
+	lastHarvestTime[a] = nil
 end
 
 function OnCyborgSquadCreated_R21g(self)
@@ -497,39 +498,40 @@ end
 -- checks if the crystal has been harvested for x frames and if it doesnt have a flag assigned it has kill it.
 function OffTiberiumHarvested(self)
 	local a = getObjectId(self)
-	if harvestedTime[a] ~= nil then 
-		
-		if framesBeingHarvested[a] == nil then
-			framesBeingHarvested[a] = 0 
-			return
-		else 
-			framesBeingHarvested[a] = framesBeingHarvested[a] + (GetFrame() - harvestedTime[a])
-		end
 
-		-- time since last harvest
-		lastHarvestTime[a] = GetFrame()
+	harvestedTime[a] = harvestedTime[a] or 0
+	framesBeingHarvested[a] = framesBeingHarvested[a] or 0
 
-		if framesBeingHarvested[a] > MAX_FRAMES_SPENT_HARVESTING and flagSet[a] == true then
-			-- user 3 is set for a duration of the harv thats harvesting it either 1.7s or 2.2s, depends on the action time.
-			if ObjectTestModelCondition(self, "USER_3") == false then
-				-- stops the death fx from showing
-				ObjectSetObjectStatus(self, "RIDER1")
-				-- clear from arrays
-				harvestedTime[a] = nil
-				flagSet[a] = nil 
-				framesBeingHarvested[a] = nil 
-				ExecuteAction("NAMED_KILL", self)
-				-- end the function to prevent the flag from being set again
-				return 
-			end
-		end
-		-- reset flag if the prior condition hasnt been met, stops overlapping issue
-		if (GetFrame() - lastHarvestTime[a]) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
-			flagSet[a] = true
-		else
-			flagSet[a] = false
+	-- if USER_3 is true dont count the framesBeingHarvested
+	if not ObjectTestModelCondition(self, "USER_3") then
+		print("counting frames!")
+		framesBeingHarvested[a] = framesBeingHarvested[a] + (GetFrame() - harvestedTime[a])
+	end
+
+	-- time since last harvest
+	lastHarvestTime[a] = GetFrame()
+	
+	if framesBeingHarvested[a] > MAX_FRAMES_SPENT_HARVESTING and flagSet[a] == true then
+		-- user 3 is set for a duration of the harv thats harvesting it either 1.7s or 2.2s, depends on the action time.
+		if not ObjectTestModelCondition(self, "USER_3") then
+			-- stops the death fx from showing
+			ObjectSetObjectStatus(self, "RIDER1")
+			-- clear from arrays
+			harvestedTime[a] = nil
+			flagSet[a] = nil 
+			framesBeingHarvested[a] = nil 
+			ExecuteAction("NAMED_KILL", self)
+			-- end the function to prevent the flag from being set again
+			return 
 		end
 	end
+	-- reset flag if the prior condition hasnt been met, stops overlapping issue
+	if (GetFrame() - lastHarvestTime[a]) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
+		flagSet[a] = true
+	else
+		flagSet[a] = false
+	end
+
 end
 
 -- happens when +HARVEST_ACTION +MONEY_STORED_AMOUNT_3 event triggers.
