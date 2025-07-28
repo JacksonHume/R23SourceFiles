@@ -489,7 +489,7 @@ function OffTiberiumHarvested(self)
 		end
 
 		-- if it has been harvested this long AND (TODO) has a flag set on it to conclude the harvester has harvested longer than it should then destroy it (set this to not, as we dont want to kill it if this is the case)
-		if framesBeingHarvested[a] > 33 and framesBeingHarvested[a] <= 1800 and flagSet[a] == true then
+		if framesBeingHarvested[a] > 33 and framesBeingHarvested[a] <= 900 and flagSet[a] == true then
 			-- user 3 is set for a duration of the harv thats harvesting it either 1.7s or 2.2s, depends on the action time.
 			if ObjectTestModelCondition(self, "USER_3") == false then
 				-- stops the death fx from showing

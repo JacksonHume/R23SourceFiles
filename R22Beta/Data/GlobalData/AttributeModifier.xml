@@ -4,7 +4,7 @@
 	<AttributeModifier
 		id="AttributeModifier_PreventCrystalDeath"
 		Category="NONE"
-		Duration="5s"
+		Duration="2.2s"
 		ModelConditionsSet="USER_3" />  
 
 	<!--

@@ -8,7 +8,7 @@
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS NOT_SIMILAR">
 		<Nuggets>
 			<AttributeModifierNugget
-				Radius="75.0"
+				Radius="25.0"
 				PartitionFilterTestType="CIRCLE"
 				RequiredObjectStatus=""
 				AttributeModifierName="AttributeModifier_PreventCrystalDeath">
