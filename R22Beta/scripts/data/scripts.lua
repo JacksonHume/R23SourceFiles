@@ -56,16 +56,6 @@ playerTable = {"Player_1","Player_2","Player_3","Player_4","Player_5","Player_6"
 "SkirmishBlackHand", "SkirmishCivilian", "SkirmishCommentator", "SkirmishGDI", "SkirmishMarkedOfKane",
 "SkirmishNeutral", "SkirmishNod", "SkirmishNull", "SkirmishObserver", "SkirmishReaper17","SkirmishSteelTalons", "SkirmishTraveler59", "SkirmishZOCOM", "PlyrCreeps", "PlyrCivilian"}
 
-
---- HARVESTER RELATED --- 
-
-harvestedTime = {}
-framesBeingHarvested = {}
-flagSet = {}
-harvFrames = {}
-onMoney3HarvestedFrames = {}
-lastHarvestTime = {}
-
 harvbluetib = {} -- for counting blue tiberium in harvester
 harvgreentib = {} -- for counting green tiberium harvester
 -- 1 is green tiberium 0 is for blue 
@@ -73,10 +63,6 @@ bar1 = {} -- for tracking the bar one of the harvester.
 bar2 = {} -- for tracking the bar two of the harvester.
 bar3 = {} -- for tracking the bar three of the harvester.
 bar4 = {} -- for tracking the bar four of the harvester.
-
-MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
-MAX_FRAMES_SPENT_HARVESTING = 33 -- 2.2s
-
 
 function NoOp(self, source)
 end
@@ -288,7 +274,7 @@ function OffMoney3_R21g(self)
 	local a = getObjectId(self)
 
 	-- clear the amount of frames when docked and unloading tib
-	onMoney3HarvestedFrames[a] = 0
+	harvestData[a].onMoney3HarvestedFrames = 0
 
 	if ObjectTestModelCondition(self, "DOCKING") then 
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueFour") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueFour") end
@@ -314,9 +300,7 @@ function OnHarvesterDeath_R21(self)
 	bar3[a] = nil 
 	bar4[a] = nil	
 	-- new for tib exploit fix
-	harvFrames[a] = nil	
-	onMoney3HarvestedFrames[a] = nil
-	lastHarvestTime[a] = nil
+	harvestData[a] = nil
 end
 
 function OnCyborgSquadCreated_R21g(self)
@@ -457,92 +441,110 @@ end
 
 -- ####################### TIBERIUM EXPLOIT FIX ############################
 
+harvestData = {}
+MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
+MAX_FRAMES_SPENT_HARVESTING = 33 -- 2.2s
+
 -- this function assigns the frame when the harvester harvests it.
 function OnBlueTiberiumHarvested(self)
-	local a = getObjectId(self)
-	harvestedTime[a] = GetFrame()
-
-	local flag = true
-	if lastHarvestTime[a] ~= nil then
-		if (GetFrame() - lastHarvestTime[a]) > MAX_FRAMES_WHEN_NOT_HARVESTED then
-			flag = false
-			-- reset harvestested frames
-			framesBeingHarvested[a] = nil
-			lastHarvestTime[a] = nil
-		end
-	end
-
-	flagSet[a] = flag
+	OnTiberiumHarvested(self)
 	ObjectCreateAndFireTempWeapon(self, "BlueTiberiumWeapon")
 end
 
--- the same thing, but for green tiberium
+-- same thing, but for green tiberium
 function OnGreenTiberiumHarvested(self)
-	local a = getObjectId(self)
-	harvestedTime[a] = GetFrame()
-
-	local flag = true
-	if lastHarvestTime[a] ~= nil then
-		if (GetFrame() - lastHarvestTime[a]) > MAX_FRAMES_WHEN_NOT_HARVESTED then
-			flag = false
-			-- reset harvestested frames
-			framesBeingHarvested[a] = nil
-			lastHarvestTime[a] = nil
-		end
-	end
-
-	flagSet[a] = flag
+	OnTiberiumHarvested(self)
 	ObjectCreateAndFireTempWeapon(self, "GreenTiberiumWeapon")
 end
 
--- checks if the crystal has been harvested for x frames and if it doesnt have a flag assigned it has kill it.
+function OnTiberiumHarvested(self)
+	local a = getObjectId(self)
+
+	-- initialize if not already set
+	harvestData[a] = harvestData[a] or {
+		harvestedTime = 0,
+		lastHarvestTime = nil,
+		framesBeingHarvested = 0,
+		flagSet = false,
+		onMoney3HarvestedFrames = 0,
+		harvFrames = 0,
+	}
+
+	local data = harvestData[a]
+	data.harvestedTime = GetFrame()
+
+	if data.lastHarvestTime ~= nil then
+		if (GetFrame() - data.lastHarvestTime) > MAX_FRAMES_WHEN_NOT_HARVESTED then
+			-- reset harvested frames
+			data.framesBeingHarvested = 0
+			data.lastHarvestTime = nil
+		end
+	end
+end
+
+-- checks if the crystal has been harvested for x frames and if it doesn't have a flag assigned, it kills it.
 function OffTiberiumHarvested(self)
 	local a = getObjectId(self)
 
-	harvestedTime[a] = harvestedTime[a] or 0
-	framesBeingHarvested[a] = framesBeingHarvested[a] or 0
+	-- initialize if not already set
+	harvestData[a] = harvestData[a] or {
+		harvestedTime = 0,
+		lastHarvestTime = nil,
+		framesBeingHarvested = 0,
+		flagSet = false,
+		onMoney3HarvestedFrames = 0,
+		harvFrames = 0,
+	}
 
-	-- if USER_3 is true dont count the framesBeingHarvested
+	local data = harvestData[a]
+
+	-- if USER_3 is true don't count the framesBeingHarvested
 	if not ObjectTestModelCondition(self, "USER_3") then
 		print("counting frames!")
-		framesBeingHarvested[a] = framesBeingHarvested[a] + (GetFrame() - harvestedTime[a])
+		data.framesBeingHarvested = data.framesBeingHarvested + (GetFrame() - data.harvestedTime)
 	end
 
 	-- time since last harvest
-	lastHarvestTime[a] = GetFrame()
-	
-	if framesBeingHarvested[a] > MAX_FRAMES_SPENT_HARVESTING and flagSet[a] == true then
-		-- user 3 is set for a duration of the harv thats harvesting it either 1.7s or 2.2s, depends on the action time.
+	data.lastHarvestTime = GetFrame()
+
+	if data.framesBeingHarvested > MAX_FRAMES_SPENT_HARVESTING and data.flagSet == true then
 		if not ObjectTestModelCondition(self, "USER_3") then
-			-- stops the death fx from showing
+			-- prevent death FX
 			ObjectSetObjectStatus(self, "RIDER1")
-			-- clear from arrays
-			harvestedTime[a] = nil
-			flagSet[a] = nil 
-			framesBeingHarvested[a] = nil 
+			-- cleanup
+			harvestData[a] = nil
 			ExecuteAction("NAMED_KILL", self)
-			-- end the function to prevent the flag from being set again
-			return 
+			return
 		end
 	end
-	-- reset flag if the prior condition hasnt been met, stops overlapping issue
-	if (GetFrame() - lastHarvestTime[a]) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
-		flagSet[a] = true
-	else
-		flagSet[a] = false
-	end
 
+	-- reset flag if time since last harvest is too high
+	if (GetFrame() - data.lastHarvestTime) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
+		data.flagSet = true
+	else
+		data.flagSet = false
+	end
 end
 
--- happens when +HARVEST_ACTION +MONEY_STORED_AMOUNT_3 event triggers.
+-- triggered on +HARVEST_ACTION +MONEY_STORED_AMOUNT_3
 function UpdateMoney3Frames(self)
 	local a = getObjectId(self)
-	harvFrames[a] = GetFrame()
 
-	if onMoney3HarvestedFrames[a] ~= nil then
-		-- duration the harv has spent harvesting in  +MONEY_STORED_AMOUNT_3 state
-		if onMoney3HarvestedFrames[a] > MAX_FRAMES_SPENT_HARVESTING then
-			-- assign USER_3 to the crystal
+	-- initialize
+	harvestData[a] = harvestData[a] or {
+		harvestedTime = 0,
+		lastHarvestTime = nil,
+		framesBeingHarvested = 0,
+		flagSet = false,
+		onMoney3HarvestedFrames = 0,
+		harvFrames = 0,
+	}
+
+	local data = harvestData[a]
+	data.harvFrames = GetFrame()
+
+	if data.onMoney3HarvestedFrames ~= nil then
+		if data.onMoney3HarvestedFrames > MAX_FRAMES_SPENT_HARVESTING then
 			ObjectCreateAndFireTempWeapon(self, "PreventCrystalDeath")
 		end
 	end
@@ -551,15 +553,24 @@ end
 function UpdateMoney3FramesEnd(self)
 	local a = getObjectId(self)
 
-	if onMoney3HarvestedFrames[a] == nil then
-		onMoney3HarvestedFrames[a] = 0 
-	else 
-		onMoney3HarvestedFrames[a] = onMoney3HarvestedFrames[a] + (GetFrame() - harvFrames[a])
+	-- initialize
+	harvestData[a] = harvestData[a] or {
+		harvestedTime = 0,
+		lastHarvestTime = nil,
+		framesBeingHarvested = 0,
+		flagSet = false,
+		onMoney3HarvestedFrames = 0,
+		harvFrames = 0,
+	}
+
+	local data = harvestData[a]
+
+	if data.onMoney3HarvestedFrames == nil then
+		data.onMoney3HarvestedFrames = 0
+	else
+		data.onMoney3HarvestedFrames = data.onMoney3HarvestedFrames + (GetFrame() - data.harvFrames)
 	end
 end
-
--- ###################################################################
-
 
 -- ####################### HUSK CAPTURE IMPLEMENTATION ############################
 
