@@ -100,5 +100,6 @@
 		<Include source="Tiberium/TiberiumFieldBlueSeeded.xml" type="all"/>	
 		<Include source="GlobalData/upgrade.xml" type="all"/>
 		<Include source="ZOCOM\Units\ZOCOMHammerhead.xml" type="all"/>
+		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>
 	</Includes>
 </AssetDeclaration>

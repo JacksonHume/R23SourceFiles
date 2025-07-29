@@ -551,7 +551,7 @@
 		id="HarvesterDeathGreenTiberiumOCL">
 		<CreateObject
 			Disposition="RELATIVE_ANGLE USE_WATER_SURFACE"
-			DestinationPlayer=""
+			DestinationPlayer="DONT_SET_PRODUCER"
 			Options="IGNORE_ALL_OBJECTS SCALE_TIBERIUM_FIELD">
 			<CreateObject>GreenTiberiumFieldFromHarvesterDeath</CreateObject>
 		</CreateObject>
@@ -560,7 +560,7 @@
 		id="HarvesterDeathBlueTiberiumOCL">
 		<CreateObject
 			Disposition="RELATIVE_ANGLE USE_WATER_SURFACE"
-			DestinationPlayer=""
+			DestinationPlayer="DONT_SET_PRODUCER"
 			Options="IGNORE_ALL_OBJECTS SCALE_TIBERIUM_FIELD">
 			<CreateObject>BlueTiberiumFieldFromHarvesterDeath</CreateObject>
 		</CreateObject>

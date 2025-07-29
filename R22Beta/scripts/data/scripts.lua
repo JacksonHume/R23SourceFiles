@@ -175,18 +175,10 @@ function OnHarvesterCreated_R21(self)
 	harvgreentib[a] = 0
 end
 
-function OnUser25_R21(self)		
-	if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") == 0 then ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTib") end
-end
-
-function OnUser24_R21(self)	
-	if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTib") end  
-end
-
 function OnMoney1_R21b(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if ObjectTestModelCondition(self, "USER_25") then 
+		if  harvestData[a].harvestingBlue then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueOne")
 			harvbluetib[a] = harvbluetib[a] + 1
 			bar1[a] = 0
@@ -201,7 +193,7 @@ end
 function OnMoney2_R21b(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if ObjectTestModelCondition(self, "USER_25") then 
+		if  harvestData[a].harvestingBlue then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTwo")
 			harvbluetib[a] = harvbluetib[a] + 1
 			bar2[a] = 0
@@ -216,7 +208,7 @@ end
 function OnMoney3_R21b(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if ObjectTestModelCondition(self, "USER_25") then 
+		if  harvestData[a].harvestingBlue then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueThree")
 			harvbluetib[a] = harvbluetib[a] + 1
 			bar3[a] = 0
@@ -231,7 +223,7 @@ end
 function OnMoney4_R21b(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if ObjectTestModelCondition(self, "USER_25") then 
+		if  harvestData[a].harvestingBlue then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueFour")
 			harvbluetib[a] = harvbluetib[a] + 1
 			bar4[a] = 0
@@ -446,20 +438,69 @@ function OnGDIJuggernaughtCreated(self)
 end
 
 
--- ####################### BROADCAST EVENT TO HARVS ############################
+-- ####################### BROADCASTED EVENT TO HARVS ############################
 
 -- self is the harvester, other is the green tiberium crystal
 function GreenTiberiumEvent(self, other)
-	if not ObjectTestModelCondition(self, "USER_25") and ObjectTestModelCondition(self, "HARVEST_ACTION") then 
-		ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_24", 3, 100)
+
+	local a = getObjectId(self)
+
+	--print(tostring(ObjectDescription(self)))
+	-- initialize if not already set
+	harvestData[a] = harvestData[a] or {
+		onMoney3HarvestedFrames = 0,
+		harvFrames = 0,
+		harvestingBlue = false,
+		isAlreadyHarvesting = false
+	}
+
+	local data = harvestData[a]
+
+	--local ObjectStringRef = "object_" .. a
+    --ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
+
+	-- if its not already harvesting, change it to be harvesting green tiberium
+	if not data.isAlreadyHarvesting and (ObjectTestModelCondition(self, "HARVEST_ACTION")) then 
+		data.harvestingBlue = false
+		-- remove the blue tib fx
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTib") end  
 	end
+	
+	data.isAlreadyHarvesting = true
 end
 
 -- self is the harvester, other is the blue tiberium crystal
 function BlueTiberiumEvent(self, other)
-	if not ObjectTestModelCondition(self, "USER_24") and ObjectTestModelCondition(self, "HARVEST_ACTION") then 
-		ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_25", 3, 100)
+
+	local a = getObjectId(self)
+
+	--print(tostring(ObjectDescription(self)))
+	-- initialize if not already set
+	harvestData[a] = harvestData[a] or {
+		onMoney3HarvestedFrames = 0,
+		harvFrames = 0,
+		harvestingBlue = false,
+		isAlreadyHarvesting = false
+	}
+
+	local data = harvestData[a]
+
+	--local ObjectStringRef = "object_" .. a
+    --ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
+
+	-- if its not already harvesting, change it to be harvesting blue tiberium
+	if not data.isAlreadyHarvesting and (ObjectTestModelCondition(self, "HARVEST_ACTION")) then 
+		data.harvestingBlue = true
+		-- show the blue tib fx
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") == 0 then ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTib") end
 	end
+
+	data.isAlreadyHarvesting = true
+end
+
+function ClearHarvestedType(self) 
+	local a = getObjectId(self)
+	harvestData[a].isAlreadyHarvesting = false
 end
 
 -- ###################################################################
@@ -468,29 +509,20 @@ end
 
 -- this function assigns the frame when the harvester harvests it.
 function OnBlueTiberiumHarvested(self)
-	OnTiberiumHarvested(self)
 	--ObjectCreateAndFireTempWeapon(self, "BlueTiberiumWeapon")
 	ObjectBroadcastEventToUnits(self, "BlueTiberium", 50)
+	OnTiberiumHarvested(self)
 end
 
 -- same thing, but for green tiberium
 function OnGreenTiberiumHarvested(self)
-	OnTiberiumHarvested(self)
 	--ObjectCreateAndFireTempWeapon(self, "GreenTiberiumWeapon")
 	ObjectBroadcastEventToUnits(self, "GreenTiberium", 50)
+	OnTiberiumHarvested(self)
 end
 
 function OnTiberiumHarvested(self)
 	local a = getObjectId(self)
-
-	-- initialize if not already set
-	harvestData[a] = harvestData[a] or {
-		harvestedTime = 0,
-		lastHarvestTime = nil,
-		framesBeingHarvested = 0,
-		flagSet = false
-	}
-
 	local data = harvestData[a]
 	data.harvestedTime = GetFrame()
 
@@ -503,7 +535,7 @@ function OnTiberiumHarvested(self)
 	end
 end
 
--- checks if the crystal has been harvested for x frames and if it doesn't have a flag assigned, it kills it.
+-- checks if the crystal has been harvested longer than the maximum frames and if it doesn't have a flag assigned, it kills it.
 function OffTiberiumHarvested(self)
 
 	local a = getObjectId(self)
@@ -521,7 +553,7 @@ function OffTiberiumHarvested(self)
 	-- if USER_3 is true don't count the framesBeingHarvested
 	if not ObjectTestModelCondition(self, "USER_3") then 
 		-- 7 frames accounts for the harvest preparation discrepency
-		data.framesBeingHarvested = data.framesBeingHarvested + (GetFrame() - data.harvestedTime) - 3
+		data.framesBeingHarvested = data.framesBeingHarvested + (GetFrame() - data.harvestedTime)
 	end
 
 	-- time since last harvest
@@ -538,7 +570,7 @@ function OffTiberiumHarvested(self)
 		end
 	end
 
-	-- reset flag if time since last harvest is too high
+	-- reset flag if time since last harvest is too long (like 60s)
 	if (GetFrame() - data.lastHarvestTime) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
 		data.flagSet = true
 	else
@@ -553,7 +585,8 @@ function UpdateMoney3Frames(self)
 	-- initialize
 	harvestData[a] = harvestData[a] or {
 		onMoney3HarvestedFrames = 0,
-		harvFrames = 0
+		harvFrames = 0,
+		harvestingBlue = false
 	}
 
 	local data = harvestData[a]
@@ -572,7 +605,8 @@ function UpdateMoney3FramesEnd(self)
 	-- initialize
 	harvestData[a] = harvestData[a] or {
 		onMoney3HarvestedFrames = 0,
-		harvFrames = 0
+		harvFrames = 0,
+		harvestingBlue = false
 	}
 
 	local data = harvestData[a]

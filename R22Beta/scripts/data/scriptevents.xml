@@ -190,6 +190,10 @@
 			<Conditions>-HARVEST_ACTION +MONEY_STORED_AMOUNT_3</Conditions>
 		</ModelConditionEvent>
 
+		<ModelConditionEvent  Name="OnHarvestingEnd">
+			<Conditions>-HARVEST_ACTION</Conditions>
+		</ModelConditionEvent>
+
 					
 		<!-- ============== NEW MOBA EVENTS ============= -->				
 		<!-- Used for Ox auto-evac -->
@@ -781,7 +785,7 @@
     <EventList Name="BaseScriptFunctions">
 		<!-- If there are any events that need to apply to all units, put them here. jba -->
     </EventList>
-
+	
 	<EventList Name="BlueTiberiumFunctions_R23" Inherit="BaseScriptFunctions">
 	    <EventHandler EventName="OnBeingHarvested"	ScriptFunctionName="OnBlueTiberiumHarvested" DebugSingleStep="false"/>
 		<EventHandler EventName="OnBeingHarvested1"	ScriptFunctionName="OffTiberiumHarvested" DebugSingleStep="false"/>
@@ -866,17 +870,14 @@
 	<!-- r21g -->
 
 	<EventList Name="AlienHarvesterFunctions_R21b" Inherit="BaseScriptFunctions">	
-		<EventHandler EventName="OnUser25"	ScriptFunctionName="OnUser25_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnUser24"	ScriptFunctionName="OnUser24_R21" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
 		<EventHandler EventName="GreenTiberium"	ScriptFunctionName="GreenTiberiumEvent" DebugSingleStep="false"/>
 		<EventHandler EventName="BlueTiberium"	ScriptFunctionName="BlueTiberiumEvent" DebugSingleStep="false"/>
+		<EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="ClearHarvestedType" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="GDIHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
-		<EventHandler EventName="OnUser25"	ScriptFunctionName="OnUser25_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnUser24"	ScriptFunctionName="OnUser24_R21" DebugSingleStep="false"/>
 	    <EventHandler EventName="OnMoney1"	ScriptFunctionName="OnMoney1_R21b" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney2"	ScriptFunctionName="OnMoney2_R21b" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney3"	ScriptFunctionName="OnMoney3_R21b" DebugSingleStep="false"/>
@@ -891,11 +892,10 @@
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
 		<EventHandler EventName="GreenTiberium"	ScriptFunctionName="GreenTiberiumEvent" DebugSingleStep="false"/>
 		<EventHandler EventName="BlueTiberium"	ScriptFunctionName="BlueTiberiumEvent" DebugSingleStep="false"/>
+		<EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="ClearHarvestedType" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="NodHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
-		<EventHandler EventName="OnUser25"	ScriptFunctionName="OnUser25_R21" DebugSingleStep="false"/>
-		<EventHandler EventName="OnUser24"	ScriptFunctionName="OnUser24_R21" DebugSingleStep="false"/>
 	    <EventHandler EventName="OnMoney1"	ScriptFunctionName="OnMoney1_R21b" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney2"	ScriptFunctionName="OnMoney2_R21b" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney3"	ScriptFunctionName="OnMoney3_R21b" DebugSingleStep="false"/>
@@ -910,6 +910,7 @@
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
 		<EventHandler EventName="GreenTiberium"	ScriptFunctionName="GreenTiberiumEvent" DebugSingleStep="false"/>
 		<EventHandler EventName="BlueTiberium"	ScriptFunctionName="BlueTiberiumEvent" DebugSingleStep="false"/>
+		<EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="ClearHarvestedType" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="NodCyborgFunctions_R21g" Inherit="BaseScriptFunctions">
