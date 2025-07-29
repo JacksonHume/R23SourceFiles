@@ -16,14 +16,12 @@
 					Rule="NONE"
 					Relationship=""
 					Alignment="NONE"
-					Include=""
+					Include="TIBERIUM"
 					Exclude=""
 					StatusBitFlags=""
 					RejectStatusBitFlags=""
 					AcceptModelCondition=""
 					RejectModelCondition="">
-					<IncludeThing>TiberiumCrystalBlue</IncludeThing>
-					<IncludeThing>TiberiumCrystal</IncludeThing>
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
 		</Nuggets>

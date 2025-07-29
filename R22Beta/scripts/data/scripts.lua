@@ -66,7 +66,7 @@ bar4 = {} -- for tracking the bar four of the harvester.
 
 harvestData = {}
 MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
-MAX_FRAMES_SPENT_HARVESTING = 33 -- 2.2s
+MAX_FRAMES_SPENT_HARVESTING = 33 -- 15 frames is 1s 
 
 function NoOp(self, source)
 end
@@ -484,6 +484,7 @@ end
 
 -- checks if the crystal has been harvested for x frames and if it doesn't have a flag assigned, it kills it.
 function OffTiberiumHarvested(self)
+
 	local a = getObjectId(self)
 
 	-- initialize if not already set
@@ -493,14 +494,13 @@ function OffTiberiumHarvested(self)
 		framesBeingHarvested = 0,
 		flagSet = false,
 		onMoney3HarvestedFrames = 0,
-		harvFrames = 0,
+		harvFrames = 0
 	}
 
 	local data = harvestData[a]
 
 	-- if USER_3 is true don't count the framesBeingHarvested
 	if not ObjectTestModelCondition(self, "USER_3") then
-		print("counting frames!")
 		data.framesBeingHarvested = data.framesBeingHarvested + (GetFrame() - data.harvestedTime)
 	end
 
@@ -532,12 +532,8 @@ function UpdateMoney3Frames(self)
 
 	-- initialize
 	harvestData[a] = harvestData[a] or {
-		harvestedTime = 0,
-		lastHarvestTime = nil,
-		framesBeingHarvested = 0,
-		flagSet = false,
 		onMoney3HarvestedFrames = 0,
-		harvFrames = 0,
+		harvFrames = 0
 	}
 
 	local data = harvestData[a]
@@ -555,12 +551,8 @@ function UpdateMoney3FramesEnd(self)
 
 	-- initialize
 	harvestData[a] = harvestData[a] or {
-		harvestedTime = 0,
-		lastHarvestTime = nil,
-		framesBeingHarvested = 0,
-		flagSet = false,
 		onMoney3HarvestedFrames = 0,
-		harvFrames = 0,
+		harvFrames = 0
 	}
 
 	local data = harvestData[a]
@@ -571,6 +563,8 @@ function UpdateMoney3FramesEnd(self)
 		data.onMoney3HarvestedFrames = data.onMoney3HarvestedFrames + (GetFrame() - data.harvFrames)
 	end
 end
+
+-- ###################################################################
 
 -- ####################### HUSK CAPTURE IMPLEMENTATION ############################
 
