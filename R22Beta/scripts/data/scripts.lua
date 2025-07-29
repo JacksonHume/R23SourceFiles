@@ -64,6 +64,10 @@ bar2 = {} -- for tracking the bar two of the harvester.
 bar3 = {} -- for tracking the bar three of the harvester.
 bar4 = {} -- for tracking the bar four of the harvester.
 
+harvestData = {}
+MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
+MAX_FRAMES_SPENT_HARVESTING = 33 -- 2.2s
+
 function NoOp(self, source)
 end
 
@@ -440,10 +444,6 @@ function OnGDIJuggernaughtCreated(self)
 end
 
 -- ####################### TIBERIUM EXPLOIT FIX ############################
-
-harvestData = {}
-MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
-MAX_FRAMES_SPENT_HARVESTING = 33 -- 2.2s
 
 -- this function assigns the frame when the harvester harvests it.
 function OnBlueTiberiumHarvested(self)
