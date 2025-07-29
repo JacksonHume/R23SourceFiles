@@ -773,6 +773,9 @@
 		<ScriptedEvent Name="OnManaBurn2" />		
 		<ScriptedEvent Name="OnCommandeered" />
 		<ScriptedEvent Name="OnBeamTargetInit" />	
+
+		<ScriptedEvent Name="GreenTiberium" />	
+		<ScriptedEvent Name="BlueTiberium" />	
     </Events>
     
     <EventList Name="BaseScriptFunctions">
@@ -867,6 +870,8 @@
 		<EventHandler EventName="OnUser24"	ScriptFunctionName="OnUser24_R21" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
+		<EventHandler EventName="GreenTiberium"	ScriptFunctionName="GreenTiberiumEvent" DebugSingleStep="false"/>
+		<EventHandler EventName="BlueTiberium"	ScriptFunctionName="BlueTiberiumEvent" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="GDIHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
@@ -884,6 +889,8 @@
 		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>		
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
+		<EventHandler EventName="GreenTiberium"	ScriptFunctionName="GreenTiberiumEvent" DebugSingleStep="false"/>
+		<EventHandler EventName="BlueTiberium"	ScriptFunctionName="BlueTiberiumEvent" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="NodHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
@@ -901,6 +908,8 @@
 		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>		
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
+		<EventHandler EventName="GreenTiberium"	ScriptFunctionName="GreenTiberiumEvent" DebugSingleStep="false"/>
+		<EventHandler EventName="BlueTiberium"	ScriptFunctionName="BlueTiberiumEvent" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="NodCyborgFunctions_R21g" Inherit="BaseScriptFunctions">

@@ -65,8 +65,10 @@ bar3 = {} -- for tracking the bar three of the harvester.
 bar4 = {} -- for tracking the bar four of the harvester.
 
 harvestData = {}
+
 MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
 MAX_FRAMES_SPENT_HARVESTING = 33 -- 15 frames is 1s 
+TIBERIUM_THRESHOLD = 1
 
 function NoOp(self, source)
 end
@@ -443,18 +445,39 @@ function OnGDIJuggernaughtCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_03", true )
 end
 
+
+-- ####################### BROADCAST EVENT TO HARVS ############################
+
+-- self is the harvester, other is the green tiberium crystal
+function GreenTiberiumEvent(self, other)
+	if not ObjectTestModelCondition(self, "USER_25") and ObjectTestModelCondition(self, "HARVEST_ACTION") then 
+		ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_24", 3, 100)
+	end
+end
+
+-- self is the harvester, other is the blue tiberium crystal
+function BlueTiberiumEvent(self, other)
+	if not ObjectTestModelCondition(self, "USER_24") and ObjectTestModelCondition(self, "HARVEST_ACTION") then 
+		ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_25", 3, 100)
+	end
+end
+
+-- ###################################################################
+
 -- ####################### TIBERIUM EXPLOIT FIX ############################
 
 -- this function assigns the frame when the harvester harvests it.
 function OnBlueTiberiumHarvested(self)
 	OnTiberiumHarvested(self)
-	ObjectCreateAndFireTempWeapon(self, "BlueTiberiumWeapon")
+	--ObjectCreateAndFireTempWeapon(self, "BlueTiberiumWeapon")
+	ObjectBroadcastEventToUnits(self, "BlueTiberium", 50)
 end
 
 -- same thing, but for green tiberium
 function OnGreenTiberiumHarvested(self)
 	OnTiberiumHarvested(self)
-	ObjectCreateAndFireTempWeapon(self, "GreenTiberiumWeapon")
+	--ObjectCreateAndFireTempWeapon(self, "GreenTiberiumWeapon")
+	ObjectBroadcastEventToUnits(self, "GreenTiberium", 50)
 end
 
 function OnTiberiumHarvested(self)
@@ -465,9 +488,7 @@ function OnTiberiumHarvested(self)
 		harvestedTime = 0,
 		lastHarvestTime = nil,
 		framesBeingHarvested = 0,
-		flagSet = false,
-		onMoney3HarvestedFrames = 0,
-		harvFrames = 0,
+		flagSet = false
 	}
 
 	local data = harvestData[a]
@@ -492,16 +513,15 @@ function OffTiberiumHarvested(self)
 		harvestedTime = 0,
 		lastHarvestTime = nil,
 		framesBeingHarvested = 0,
-		flagSet = false,
-		onMoney3HarvestedFrames = 0,
-		harvFrames = 0
+		flagSet = false
 	}
 
 	local data = harvestData[a]
 
 	-- if USER_3 is true don't count the framesBeingHarvested
-	if not ObjectTestModelCondition(self, "USER_3") then
-		data.framesBeingHarvested = data.framesBeingHarvested + (GetFrame() - data.harvestedTime)
+	if not ObjectTestModelCondition(self, "USER_3") then 
+		-- 7 frames accounts for the harvest preparation discrepency
+		data.framesBeingHarvested = data.framesBeingHarvested + (GetFrame() - data.harvestedTime) - 3
 	end
 
 	-- time since last harvest
@@ -540,7 +560,7 @@ function UpdateMoney3Frames(self)
 	data.harvFrames = GetFrame()
 
 	if data.onMoney3HarvestedFrames ~= nil then
-		if data.onMoney3HarvestedFrames > MAX_FRAMES_SPENT_HARVESTING then
+		if data.onMoney3HarvestedFrames > TIBERIUM_THRESHOLD then
 			ObjectCreateAndFireTempWeapon(self, "PreventCrystalDeath")
 		end
 	end

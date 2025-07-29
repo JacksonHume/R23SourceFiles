@@ -5599,7 +5599,7 @@
 			</DamageNugget>
 		</Nuggets>	
 	</WeaponTemplate>
--->
+
 
 	<WeaponTemplate
 		id="BlueTiberiumWeapon"
@@ -5726,7 +5726,7 @@
 			</AttributeModifierNugget>
 		</Nuggets>
 	</WeaponTemplate>
-
+-->
 	<WeaponTemplate
 		id="AlienShockTrooperProtonCannon"
 		Name="AlienShockTrooperProtonCannon"
