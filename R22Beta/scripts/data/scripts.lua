@@ -456,17 +456,19 @@ function GreenTiberiumEvent(self, other)
 
 	local data = harvestData[a]
 
-	--local ObjectStringRef = "object_" .. a
-    --ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
+    local ObjectStringRef = "object_" .. a
+    ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
 
 	-- if its not already harvesting, change it to be harvesting green tiberium
-	if not data.isAlreadyHarvesting and (ObjectTestModelCondition(self, "HARVEST_ACTION")) then 
+	if not data.isAlreadyHarvesting and EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 135)  then 
 		data.harvestingBlue = false
 		-- remove the blue tib fx
-		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTib") end  
-	end
-	
-	data.isAlreadyHarvesting = true
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") then 
+			ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTib") 
+		end  
+		data.isAlreadyHarvesting = true
+		return
+	end	
 end
 
 -- self is the harvester, other is the blue tiberium crystal
@@ -485,17 +487,19 @@ function BlueTiberiumEvent(self, other)
 
 	local data = harvestData[a]
 
-	--local ObjectStringRef = "object_" .. a
-    --ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
+	local ObjectStringRef = "object_" .. a
+    ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
 
 	-- if its not already harvesting, change it to be harvesting blue tiberium
-	if not data.isAlreadyHarvesting and (ObjectTestModelCondition(self, "HARVEST_ACTION")) then 
+	if not data.isAlreadyHarvesting and EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 135) then 
 		data.harvestingBlue = true
 		-- show the blue tib fx
-		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") == 0 then ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTib") end
+		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") == 0 then 
+			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTib") 
+		end
+		data.isAlreadyHarvesting = true
+		return
 	end
-
-	data.isAlreadyHarvesting = true
 end
 
 function ClearHarvestedType(self) 
@@ -510,18 +514,18 @@ end
 -- this function assigns the frame when the harvester harvests it.
 function OnBlueTiberiumHarvested(self)
 	--ObjectCreateAndFireTempWeapon(self, "BlueTiberiumWeapon")
-	ObjectBroadcastEventToUnits(self, "BlueTiberium", 50)
+	ObjectBroadcastEventToUnits(self, "BlueTiberium", 250)
 	OnTiberiumHarvested(self)
 end
 
 -- same thing, but for green tiberium
 function OnGreenTiberiumHarvested(self)
 	--ObjectCreateAndFireTempWeapon(self, "GreenTiberiumWeapon")
-	ObjectBroadcastEventToUnits(self, "GreenTiberium", 50)
+	ObjectBroadcastEventToUnits(self, "GreenTiberium", 250)
 	OnTiberiumHarvested(self)
 end
 
-function OnTiberiumHarvested(self)
+function OnTiberiumHarvested(self)	
 	local a = getObjectId(self)
 	local data = harvestData[a]
 	data.harvestedTime = GetFrame()

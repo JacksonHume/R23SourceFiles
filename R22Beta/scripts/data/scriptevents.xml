@@ -189,11 +189,14 @@
 		<ModelConditionEvent  Name="OnHarvestingMoney3End">
 			<Conditions>-HARVEST_ACTION +MONEY_STORED_AMOUNT_3</Conditions>
 		</ModelConditionEvent>
-
+		<!--
 		<ModelConditionEvent  Name="OnHarvestingEnd">
 			<Conditions>-HARVEST_ACTION</Conditions>
 		</ModelConditionEvent>
-
+	    -->
+		<ObjectStatusEvent Name="OnHarvestingEnd">
+			<Conditions>-HARVESTING</Conditions>
+		</ObjectStatusEvent>
 					
 		<!-- ============== NEW MOBA EVENTS ============= -->				
 		<!-- Used for Ox auto-evac -->
