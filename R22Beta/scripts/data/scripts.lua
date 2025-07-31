@@ -67,9 +67,10 @@ bar4 = {} -- for tracking the bar four of the harvester.
 harvesterData = {}
 crystalData = {}
 
-MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
-MAX_FRAMES_BEING_HARVESTED = 42 -- 15 frames is 1s (harvest action and harvest preparation is 2.7s -> 42 frames)
+MAX_FRAMES_WHEN_NOT_HARVESTED = 1800 -- 120s
+MAX_FRAMES_BEING_HARVESTED = 33 -- 15 frames is 1s (harvest action and harvest preparation is 2.7s -> 42 frames)
 TIBERIUM_THRESHOLD = 1 -- how long after reaching a 3/4 load should the crystal still continue to count its frames.
+PER_HARVEST_OFFSET = 5 -- subtract frames for each time the harvester is ordered to stop and harvest the same crystal again.
 
 function NoOp(self, source)
 end
@@ -533,12 +534,20 @@ function OffTiberiumHarvested(self)
 	-- if dontKillCrystal is false increment the framesBeingHarvested
 	if not data.dontKillCrystal then
 		local diff = curFrame - data.firstHarvestedFrame
-		data.framesBeingHarvested = data.framesBeingHarvested + diff - 3
-	end
 
+		if diff - PER_HARVEST_OFFSET <= 1 then
+			data.framesBeingHarvested = data.framesBeingHarvested + diff - PER_HARVEST_OFFSET + 3
+		elseif diff - PER_HARVEST_OFFSET <= 2 then
+			data.framesBeingHarvested = data.framesBeingHarvested + diff - PER_HARVEST_OFFSET + 2
+		elseif diff - PER_HARVEST_OFFSET <= 3 then
+			data.framesBeingHarvested = data.framesBeingHarvested + diff - PER_HARVEST_OFFSET + 1
+		else
+			data.framesBeingHarvested = data.framesBeingHarvested + diff - PER_HARVEST_OFFSET
+		end
+	end
 	-- time since last harvest
 	data.lastHarvestedFrame = GetFrame()
-	if data.framesBeingHarvested > MAX_FRAMES_BEING_HARVESTED and not data.crystalHasBeenReset and not data.dontKillCrystal then
+	if data.framesBeingHarvested >= MAX_FRAMES_BEING_HARVESTED and not data.crystalHasBeenReset and not data.dontKillCrystal then
 		-- prevent death FX
 		ObjectSetObjectStatus(self, "RIDER1")
 		-- cleanup
@@ -579,7 +588,7 @@ function UpdateMoney3FramesEnd(self)
 	data.totalFramesHarvested75Full = data.totalFramesHarvested75Full + (GetFrame() - data.frameOnHarvest75)
 end
 
-function UpdatefirstHarvestedFrame(self)
+function UpdateHarvestedTime(self)
 	local a, data = GetHarvesterData(self)
 	local crystal = data.crystalCurrentlyHarvesting
 
