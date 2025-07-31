@@ -64,11 +64,12 @@ bar2 = {} -- for tracking the bar two of the harvester.
 bar3 = {} -- for tracking the bar three of the harvester.
 bar4 = {} -- for tracking the bar four of the harvester.
 
-harvestData = {}
+harvesterData = {}
+crystalData = {}
 
 MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
-MAX_FRAMES_SPENT_HARVESTING = 33 -- 15 frames is 1s 
-TIBERIUM_THRESHOLD = 1
+MAX_FRAMES_SPENT_HARVESTING = 66 -- 15 frames is 1s (harvest action and harvest preparation is 2.7s -> 42 frames)
+TIBERIUM_THRESHOLD = 1 -- how long after reaching a 3/4 load should the crystal still continue to count its frames.
 
 function NoOp(self, source)
 end
@@ -178,7 +179,7 @@ end
 function OnMoney1_R21b(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if  harvestData[a].harvestingBlue then 
+		if  harvesterData[a].harvestingBlue then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueOne")
 			harvbluetib[a] = harvbluetib[a] + 1
 			bar1[a] = 0
@@ -193,7 +194,7 @@ end
 function OnMoney2_R21b(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if  harvestData[a].harvestingBlue then 
+		if  harvesterData[a].harvestingBlue then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTwo")
 			harvbluetib[a] = harvbluetib[a] + 1
 			bar2[a] = 0
@@ -208,7 +209,7 @@ end
 function OnMoney3_R21b(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if  harvestData[a].harvestingBlue then 
+		if  harvesterData[a].harvestingBlue then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueThree")
 			harvbluetib[a] = harvbluetib[a] + 1
 			bar3[a] = 0
@@ -223,7 +224,7 @@ end
 function OnMoney4_R21b(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") == false then
-		if  harvestData[a].harvestingBlue then 
+		if  harvesterData[a].harvestingBlue then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueFour")
 			harvbluetib[a] = harvbluetib[a] + 1
 			bar4[a] = 0
@@ -272,7 +273,7 @@ function OffMoney3_R21g(self)
 	local a = getObjectId(self)
 
 	-- clear the amount of frames when docked and unloading tib
-	harvestData[a].onMoney3HarvestedFrames = 0
+	harvesterData[a].onMoney3HarvestedFrames = 0
 
 	if ObjectTestModelCondition(self, "DOCKING") then 
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueFour") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueFour") end
@@ -298,7 +299,7 @@ function OnHarvesterDeath_R21(self)
 	bar3[a] = nil 
 	bar4[a] = nil	
 	-- new for tib exploit fix
-	harvestData[a] = nil
+	harvesterData[a] = nil
 end
 
 function OnCyborgSquadCreated_R21g(self)
@@ -440,21 +441,36 @@ end
 
 -- ####################### BROADCASTED EVENT TO HARVS ############################
 
--- self is the harvester, other is the green tiberium crystal
-function GreenTiberiumEvent(self, other)
-
+function GetHarvesterData(self)
 	local a = getObjectId(self)
-
-	--print(tostring(ObjectDescription(self)))
-	-- initialize if not already set
-	harvestData[a] = harvestData[a] or {
+	harvesterData[a] = harvesterData[a] or {
 		onMoney3HarvestedFrames = 0,
 		harvFrames = 0,
 		harvestingBlue = false,
-		isAlreadyHarvesting = false
+		isAlreadyHarvesting = false,
+		currentlyHarvesting = nil
 	}
+	return a, harvesterData[a]
+end
 
-	local data = harvestData[a]
+function GetCrystalData(self)
+	local a = getObjectId(self)
+	crystalData[a] = crystalData[a] or {
+		harvestedTime = 0,
+		lastHarvestTime = nil,
+		framesBeingHarvested = 0,
+		crystalReset = false,
+		preventDeletion = false
+	}
+	return crystalData[a]
+end
+
+-- self is the harvester, other is the green tiberium crystal
+function GreenTiberiumEvent(self, other)
+	local a, data = GetHarvesterData(self)
+
+	-- assign the crystal this harvester is currently harvesting to the table 
+	data.currentlyHarvesting = other
 
     local ObjectStringRef = "object_" .. a
     ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
@@ -465,7 +481,8 @@ function GreenTiberiumEvent(self, other)
 		-- remove the blue tib fx
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") then 
 			ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTib") 
-		end  
+		end 
+		
 		data.isAlreadyHarvesting = true
 		return
 	end	
@@ -473,19 +490,10 @@ end
 
 -- self is the harvester, other is the blue tiberium crystal
 function BlueTiberiumEvent(self, other)
+	local a, data = GetHarvesterData(self)
 
-	local a = getObjectId(self)
-
-	--print(tostring(ObjectDescription(self)))
-	-- initialize if not already set
-	harvestData[a] = harvestData[a] or {
-		onMoney3HarvestedFrames = 0,
-		harvFrames = 0,
-		harvestingBlue = false,
-		isAlreadyHarvesting = false
-	}
-
-	local data = harvestData[a]
+	-- assign the crystal this harvester is currently harvesting to the table 
+	data.currentlyHarvesting = other
 
 	local ObjectStringRef = "object_" .. a
     ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
@@ -497,37 +505,18 @@ function BlueTiberiumEvent(self, other)
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") == 0 then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTib") 
 		end
+	
 		data.isAlreadyHarvesting = true
 		return
 	end
-end
-
-function ClearHarvestedType(self) 
-	local a = getObjectId(self)
-	harvestData[a].isAlreadyHarvesting = false
 end
 
 -- ###################################################################
 
 -- ####################### TIBERIUM EXPLOIT FIX ############################
 
--- this function assigns the frame when the harvester harvests it.
-function OnBlueTiberiumHarvested(self)
-	--ObjectCreateAndFireTempWeapon(self, "BlueTiberiumWeapon")
-	ObjectBroadcastEventToUnits(self, "BlueTiberium", 250)
-	OnTiberiumHarvested(self)
-end
-
--- same thing, but for green tiberium
-function OnGreenTiberiumHarvested(self)
-	--ObjectCreateAndFireTempWeapon(self, "GreenTiberiumWeapon")
-	ObjectBroadcastEventToUnits(self, "GreenTiberium", 250)
-	OnTiberiumHarvested(self)
-end
-
 function OnTiberiumHarvested(self)	
-	local a = getObjectId(self)
-	local data = harvestData[a]
+	local data = GetCrystalData(self)
 	data.harvestedTime = GetFrame()
 
 	if data.lastHarvestTime ~= nil then
@@ -539,81 +528,69 @@ function OnTiberiumHarvested(self)
 	end
 end
 
+-- this function assigns the frame when the harvester harvests it.
+function OnBlueTiberiumHarvested(self)
+	ObjectBroadcastEventToUnits(self, "BlueTiberium", 75)
+end
+
+-- same thing, but for green tiberium
+function OnGreenTiberiumHarvested(self)
+	ObjectBroadcastEventToUnits(self, "GreenTiberium", 75)
+end
+
 -- checks if the crystal has been harvested longer than the maximum frames and if it doesn't have a flag assigned, it kills it.
 function OffTiberiumHarvested(self)
+	local data = GetCrystalData(self)
 
-	local a = getObjectId(self)
-
-	-- initialize if not already set
-	harvestData[a] = harvestData[a] or {
-		harvestedTime = 0,
-		lastHarvestTime = nil,
-		framesBeingHarvested = 0,
-		flagSet = false
-	}
-
-	local data = harvestData[a]
-
-	-- if USER_3 is true don't count the framesBeingHarvested
-	if not ObjectTestModelCondition(self, "USER_3") then 
-		-- 7 frames accounts for the harvest preparation discrepency
+	-- if preventDeletion is false increment the framesBeingHarvested
+	if not data.preventDeletion then 
 		data.framesBeingHarvested = data.framesBeingHarvested + (GetFrame() - data.harvestedTime)
 	end
 
 	-- time since last harvest
 	data.lastHarvestTime = GetFrame()
 
-	if data.framesBeingHarvested > MAX_FRAMES_SPENT_HARVESTING and data.flagSet == true then
-		if not ObjectTestModelCondition(self, "USER_3") then
-			-- prevent death FX
-			ObjectSetObjectStatus(self, "RIDER1")
-			-- cleanup
-			harvestData[a] = nil
-			ExecuteAction("NAMED_KILL", self)
-			return
-		end
+	if data.framesBeingHarvested > MAX_FRAMES_SPENT_HARVESTING and not data.crystalReset and not data.preventDeletion then
+		-- prevent death FX
+		ObjectSetObjectStatus(self, "RIDER1")
+		-- cleanup
+		crystalData[a] = nil
+		ExecuteAction("NAMED_KILL", self)
+		return
 	end
 
 	-- reset flag if time since last harvest is too long (like 60s)
 	if (GetFrame() - data.lastHarvestTime) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
-		data.flagSet = true
+		data.crystalReset = false
 	else
-		data.flagSet = false
+		data.crystalReset = true
+	end
+end
+
+-- when the crystal is completely harvested and not killed, clear the crystalData element
+function OffTiberiumGrowing(self)
+	local data = GetCrystalData(self)
+
+	if crystalData[a] ~= nil then
+		-- cleanup
+		crystalData[a] = nil
 	end
 end
 
 -- triggered on +HARVEST_ACTION +MONEY_STORED_AMOUNT_3
 function UpdateMoney3Frames(self)
-	local a = getObjectId(self)
-
-	-- initialize
-	harvestData[a] = harvestData[a] or {
-		onMoney3HarvestedFrames = 0,
-		harvFrames = 0,
-		harvestingBlue = false
-	}
-
-	local data = harvestData[a]
+	local a, data = GetHarvesterData(self)
 	data.harvFrames = GetFrame()
 
 	if data.onMoney3HarvestedFrames ~= nil then
 		if data.onMoney3HarvestedFrames > TIBERIUM_THRESHOLD then
-			ObjectCreateAndFireTempWeapon(self, "PreventCrystalDeath")
+			data.currentlyHarvesting.preventDeletion = true
 		end
 	end
 end
 
 function UpdateMoney3FramesEnd(self)
-	local a = getObjectId(self)
-
-	-- initialize
-	harvestData[a] = harvestData[a] or {
-		onMoney3HarvestedFrames = 0,
-		harvFrames = 0,
-		harvestingBlue = false
-	}
-
-	local data = harvestData[a]
+	local a, data = GetHarvesterData(self)
 
 	if data.onMoney3HarvestedFrames == nil then
 		data.onMoney3HarvestedFrames = 0
@@ -621,6 +598,29 @@ function UpdateMoney3FramesEnd(self)
 		data.onMoney3HarvestedFrames = data.onMoney3HarvestedFrames + (GetFrame() - data.harvFrames)
 	end
 end
+
+function UpdateHarvestedTime(self)
+	local a, data = GetHarvesterData(self)
+
+	data.harvestedTime = GetFrame()
+
+	if data.lastHarvestTime ~= nil then
+		if (GetFrame() - data.lastHarvestTime) > MAX_FRAMES_WHEN_NOT_HARVESTED then
+			-- reset harvested frames
+			data.framesBeingHarvested = 0
+			data.lastHarvestTime = nil
+		end
+	end
+	OnTiberiumHarvested(data.currentlyHarvesting)
+end
+
+function ClearHarvestedType(self) 
+	local a, data = GetHarvesterData(self)
+	-- count frames for the crystal harvested
+	OffTiberiumHarvested(data.currentlyHarvesting)
+	data.isAlreadyHarvesting = false
+end
+
 
 -- ###################################################################
 

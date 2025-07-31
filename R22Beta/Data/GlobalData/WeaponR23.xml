@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
-
+	<!--
 	<WeaponTemplate
 		id="PreventCrystalDeath"
 		Name="PreventCrystalDeath"
@@ -26,6 +26,7 @@
 			</AttributeModifierNugget>
 		</Nuggets>
 	</WeaponTemplate>
+-->
 
 	<!-- Engineer crash workaround weapons 
 
