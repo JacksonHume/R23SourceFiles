@@ -209,6 +209,7 @@ end
 
 function OnMoney3_R21b(self)
 	local a = getObjectId(self)
+
 	if ObjectTestModelCondition(self, "DOCKING") == false then
 		if  harvesterData[a].isHarvestingBlue then 
 			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueThree")
@@ -220,6 +221,17 @@ function OnMoney3_R21b(self)
 			bar3[a] = 1
 		end
 	end
+
+	--local key, data = GetHarvesterData(self)
+	--print("reached 75%")
+	--local crystal = data.crystalCurrentlyHarvesting
+	--if crystal then 
+	--	local crystalData = GetCrystalData(crystal)
+	--	-- safeguard incase the tib crystal is destroyed
+	--	if data.crystalCurrentlyHarvesting ~= nil then
+	--		crystalData.dontKillCrystal = true
+	--	end
+	--end
 end
 
 function OnMoney4_R21b(self)
@@ -550,7 +562,7 @@ function OffTiberiumHarvested(self)
 	-- time since last harvest
 	data.lastHarvestedFrame = GetFrame()
 	if data.framesBeingHarvested >= MAX_FRAMES_BEING_HARVESTED and not data.crystalHasBeenReset and not data.dontKillCrystal then
-		-- prevent death FX
+		-- prevent death FX in FXListBehaviour
 		ObjectSetObjectStatus(self, "RIDER1")
 		-- cleanup
 		crystalData[getObjectId(self)] = nil
@@ -561,7 +573,7 @@ function OffTiberiumHarvested(self)
 	-- reset dontKillCrystal if its set to true
 	data.dontKillCrystal = false
 
-	-- reset flag if time since last harvest is too long (like 60s)
+	-- reset flag if time since last harvest is more than MAX_FRAMES_WHEN_NOT_HARVESTED
 	if (GetFrame() - data.lastHarvestedFrame) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
 		data.crystalHasBeenReset = false
 	else
@@ -575,9 +587,12 @@ function OffTiberiumGrowing(self)
 	crystalData[getObjectId(self)] = nil
 end
 
+-- i also want to trigger this on just +MONEY_STORED_AMOUNT_3
 -- triggered on +HARVEST_ACTION +MONEY_STORED_AMOUNT_3
 function UpdateMoney3Frames(self)
 	local a, data = GetHarvesterData(self)
+	local crystal = data.crystalCurrentlyHarvesting
+	local crystalData = GetCrystalData(crystal)
 	data.frameOnHarvest75 = GetFrame()
 	
 	if data.totalFramesHarvested75Full > TIBERIUM_THRESHOLD then
