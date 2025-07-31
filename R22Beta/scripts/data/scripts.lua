@@ -565,7 +565,10 @@ function UpdateMoney3Frames(self)
 	data.harvFrames = GetFrame()
 	
 	if data.onMoney3HarvestedFrames > TIBERIUM_THRESHOLD then
-		data.currentlyHarvesting.preventDeletion = true
+		-- safeguard incase the tib crystal is destroyed
+		if data.currentlyHarvesting ~= nil then
+			data.currentlyHarvesting.preventDeletion = true
+		end
 	end
 end
 
