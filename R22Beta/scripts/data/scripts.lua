@@ -68,7 +68,7 @@ harvesterData = {}
 crystalData = {}
 
 MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
-MAX_FRAMES_SPENT_HARVESTING = 66 -- 15 frames is 1s (harvest action and harvest preparation is 2.7s -> 42 frames)
+MAX_FRAMES_SPENT_HARVESTING = 42 -- 15 frames is 1s (harvest action and harvest preparation is 2.7s -> 42 frames)
 TIBERIUM_THRESHOLD = 1 -- how long after reaching a 3/4 load should the crystal still continue to count its frames.
 
 function NoOp(self, source)
@@ -515,27 +515,14 @@ end
 
 -- ####################### TIBERIUM EXPLOIT FIX ############################
 
-function OnTiberiumHarvested(self)	
-	local data = GetCrystalData(self)
-	data.harvestedTime = GetFrame()
-
-	if data.lastHarvestTime ~= nil then
-		if (GetFrame() - data.lastHarvestTime) > MAX_FRAMES_WHEN_NOT_HARVESTED then
-			-- reset harvested frames
-			data.framesBeingHarvested = 0
-			data.lastHarvestTime = nil
-		end
-	end
-end
-
 -- this function assigns the frame when the harvester harvests it.
 function OnBlueTiberiumHarvested(self)
-	ObjectBroadcastEventToUnits(self, "BlueTiberium", 75)
+	ObjectBroadcastEventToUnits(self, "BlueTiberium", 100)
 end
 
 -- same thing, but for green tiberium
 function OnGreenTiberiumHarvested(self)
-	ObjectBroadcastEventToUnits(self, "GreenTiberium", 75)
+	ObjectBroadcastEventToUnits(self, "GreenTiberium", 100)
 end
 
 -- checks if the crystal has been harvested longer than the maximum frames and if it doesn't have a flag assigned, it kills it.
@@ -549,12 +536,11 @@ function OffTiberiumHarvested(self)
 
 	-- time since last harvest
 	data.lastHarvestTime = GetFrame()
-
 	if data.framesBeingHarvested > MAX_FRAMES_SPENT_HARVESTING and not data.crystalReset and not data.preventDeletion then
 		-- prevent death FX
 		ObjectSetObjectStatus(self, "RIDER1")
 		-- cleanup
-		crystalData[a] = nil
+		crystalData[getObjectId(self)] = nil
 		ExecuteAction("NAMED_KILL", self)
 		return
 	end
@@ -569,56 +555,48 @@ end
 
 -- when the crystal is completely harvested and not killed, clear the crystalData element
 function OffTiberiumGrowing(self)
-	local data = GetCrystalData(self)
-
-	if crystalData[a] ~= nil then
-		-- cleanup
-		crystalData[a] = nil
-	end
+	-- clear it
+	crystalData[getObjectId(self)] = nil
 end
 
 -- triggered on +HARVEST_ACTION +MONEY_STORED_AMOUNT_3
 function UpdateMoney3Frames(self)
 	local a, data = GetHarvesterData(self)
 	data.harvFrames = GetFrame()
-
-	if data.onMoney3HarvestedFrames ~= nil then
-		if data.onMoney3HarvestedFrames > TIBERIUM_THRESHOLD then
-			data.currentlyHarvesting.preventDeletion = true
-		end
+	
+	if data.onMoney3HarvestedFrames > TIBERIUM_THRESHOLD then
+		data.currentlyHarvesting.preventDeletion = true
 	end
 end
 
 function UpdateMoney3FramesEnd(self)
 	local a, data = GetHarvesterData(self)
-
-	if data.onMoney3HarvestedFrames == nil then
-		data.onMoney3HarvestedFrames = 0
-	else
-		data.onMoney3HarvestedFrames = data.onMoney3HarvestedFrames + (GetFrame() - data.harvFrames)
-	end
+	data.onMoney3HarvestedFrames = data.onMoney3HarvestedFrames + (GetFrame() - data.harvFrames)
 end
 
 function UpdateHarvestedTime(self)
 	local a, data = GetHarvesterData(self)
+	local crystal = data.currentlyHarvesting
 
-	data.harvestedTime = GetFrame()
+	if crystal then
+		local crystalData = GetCrystalData(crystal)
+		crystalData.harvestedTime = GetFrame()
 
-	if data.lastHarvestTime ~= nil then
-		if (GetFrame() - data.lastHarvestTime) > MAX_FRAMES_WHEN_NOT_HARVESTED then
-			-- reset harvested frames
-			data.framesBeingHarvested = 0
-			data.lastHarvestTime = nil
+		if crystalData.lastHarvestTime ~= nil then
+			if (GetFrame() - crystalData.lastHarvestTime) > MAX_FRAMES_WHEN_NOT_HARVESTED then
+				-- reset harvested frames
+				crystalData.framesBeingHarvested = 0
+				crystalData.lastHarvestTime = nil
+			end
 		end
 	end
-	OnTiberiumHarvested(data.currentlyHarvesting)
 end
 
 function ClearHarvestedType(self) 
 	local a, data = GetHarvesterData(self)
+	data.isAlreadyHarvesting = false
 	-- count frames for the crystal harvested
 	OffTiberiumHarvested(data.currentlyHarvesting)
-	data.isAlreadyHarvesting = false
 end
 
 
