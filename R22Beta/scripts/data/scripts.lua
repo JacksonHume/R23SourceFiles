@@ -68,7 +68,7 @@ harvesterData = {}
 crystalData = {}
 
 MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
-MAX_FRAMES_SPENT_HARVESTING = 42 -- 15 frames is 1s (harvest action and harvest preparation is 2.7s -> 42 frames)
+MAX_FRAMES_SPENT_HARVESTING = 33 -- 15 frames is 1s (harvest action and harvest preparation is 2.7s -> 42 frames)
 TIBERIUM_THRESHOLD = 1 -- how long after reaching a 3/4 load should the crystal still continue to count its frames.
 
 function NoOp(self, source)
@@ -528,10 +528,24 @@ end
 -- checks if the crystal has been harvested longer than the maximum frames and if it doesn't have a flag assigned, it kills it.
 function OffTiberiumHarvested(self)
 	local data = GetCrystalData(self)
+	local curFrame = GetFrame()
 
 	-- if preventDeletion is false increment the framesBeingHarvested
-	if not data.preventDeletion then 
-		data.framesBeingHarvested = data.framesBeingHarvested + (GetFrame() - data.harvestedTime)
+	if not data.preventDeletion then
+		local diff = curFrame - data.harvestedTime
+		if diff > 5 then
+			data.framesBeingHarvested = data.framesBeingHarvested + (diff - 5)
+		elseif diff > 4 then
+			data.framesBeingHarvested = data.framesBeingHarvested + (diff - 4)
+		elseif diff > 3 then
+			data.framesBeingHarvested = data.framesBeingHarvested + (diff - 3)
+		elseif diff > 2 then
+			data.framesBeingHarvested = data.framesBeingHarvested + (diff - 2)
+		elseif diff > 1 then
+			data.framesBeingHarvested = data.framesBeingHarvested + (diff - 1)
+		else
+			data.framesBeingHarvested = data.framesBeingHarvested + diff
+		end
 	end
 
 	-- time since last harvest
