@@ -492,7 +492,6 @@ function TiberiumEvent(self, other)
 
 		-- assign the crystal this harvester is currently harvesting to the table 
 		data.crystalCurrentlyHarvesting = self
-		print(ObjectDescription(self))
 		-- blue tiberium check
 		if strfind(ObjectDescription(self), "BA9F66AB") ~= nil then
 			data.isHarvestingBlue = true
