@@ -500,6 +500,7 @@ function TiberiumEvent(self, other)
 				ObjectGrantUpgrade(other, "Upgrade_UpgradeBlueTib") 
 			end		
 		else
+			data.isHarvestingBlue = false
 			-- hide the blue tib fx
 			if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") then 
 				ObjectRemoveUpgrade(other, "Upgrade_UpgradeBlueTib") 
