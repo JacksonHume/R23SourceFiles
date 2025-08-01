@@ -547,20 +547,26 @@ function OffTiberiumHarvested(self)
 	if not data.dontKillCrystal then
 		local diff = curFrame - data.firstHarvestedFrame - PER_HARVEST_OFFSET
 
+	    -- the lower diff is, the more the crystal has been repeatedly harvested
+
 		if diff <= -3 then
-			data.framesBeingHarvested = data.framesBeingHarvested + diff + 5
+			data.framesBeingHarvested = data.framesBeingHarvested + diff + 6
 		elseif diff <= -2 then
-			data.framesBeingHarvested = data.framesBeingHarvested + diff + 4
+			data.framesBeingHarvested = data.framesBeingHarvested + diff + 5
 		elseif diff <= -1 then
-			data.framesBeingHarvested = data.framesBeingHarvested + diff + 3
+			data.framesBeingHarvested = data.framesBeingHarvested + diff + 4
 		elseif diff <= 0 then
+			data.framesBeingHarvested = data.framesBeingHarvested + diff + 3
+		elseif diff <= 1 then
 			data.framesBeingHarvested = data.framesBeingHarvested + diff + 2
+		elseif diff <= 2 then
+			data.framesBeingHarvested = data.framesBeingHarvested + diff + 1
 		else
 			data.framesBeingHarvested = data.framesBeingHarvested + diff
 		end
 	end
 	-- time since last harvest
-	data.lastHarvestedFrame = GetFrame()
+	data.lastHarvestedFrame = curFrame
 	if data.framesBeingHarvested >= MAX_FRAMES_BEING_HARVESTED and not data.crystalHasBeenReset and not data.dontKillCrystal then
 		-- prevent death FX in FXListBehaviour
 		ObjectSetObjectStatus(self, "RIDER1")
