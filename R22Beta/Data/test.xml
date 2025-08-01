@@ -34,7 +34,6 @@
 		<Include source="Nod\Units\NodRedeemer.xml" type="all"/>
 		<Include source="MarkedOfKane\Units\markedofkanemobileartillery.xml" type="all"/>	
 		<Include source="MarkedOfKane\Units\MoKHarvester.xml" type="all"/>	
-		<Include source="Nod\Units\NODHarvester.xml" type="all"/>	
 		<Include source="Nod\Units\nodmobileartillery.xml" type="all"/>	
 		<Include source="Reaper17\Units\R17Harv.xml" type="all"/>	
 		<Include source="SteelTalons\Units\STHarv.xml" type="all"/>	
@@ -101,5 +100,6 @@
 		<Include source="GlobalData/upgrade.xml" type="all"/>
 		<Include source="ZOCOM\Units\ZOCOMHammerhead.xml" type="all"/>
 		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>
+		<Include source="Nod\Units\NODHarvester.xml" type="all"/>	
 	</Includes>
 </AssetDeclaration>

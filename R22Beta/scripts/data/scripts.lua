@@ -68,7 +68,8 @@ harvesterData = {}
 crystalData = {}
 
 MAX_FRAMES_WHEN_NOT_HARVESTED = 900 -- 60s
-MAX_FRAMES_BEING_HARVESTED = 33 -- 15 frames is 1s (harvest action and harvest preparation is 2.7s -> 42 frames)
+MAX_FRAMES_BEING_HARVESTED = 33 -- 15 frames is 1s (gdi/scrin harvest action time)
+MAX_FRAMES_BEING_HARVESTED_NOD = 26 -- 15 frames is 1s (1.7s harvest action time)
 TIBERIUM_THRESHOLD = 1 -- how long after reaching a 3/4 load should the crystal still continue to count its frames.
 PER_HARVEST_OFFSET = 4 -- subtract frames for each time the harvester is ordered to stop and harvest the same crystal again.
 
@@ -473,54 +474,41 @@ function GetCrystalData(self)
 		lastHarvestedFrame = nil, -- the frame where the crystal finishes being harvested
 		framesBeingHarvested = 0, -- the amount of frames the crystal has been harvested
 		crystalHasBeenReset = false, -- the crystal has undergone a reset
-		dontKillCrystal = false -- flag to prevent the crystal from being killed with NAMED_KILL
+		dontKillCrystal = false, -- flag to prevent the crystal from being killed with NAMED_KILL
+		beingHarvestedBy = nil -- harvester thats currently harvesting this crystal
 	}
 	return crystalData[a]
 end
 
--- self is the harvester, other is the green tiberium crystal
-function GreenTiberiumEvent(self, other)
-	local a, data = GetHarvesterData(self)
+-- self is the crystal, other is the harvester
+function TiberiumEvent(self, other)
 
-	-- assign the crystal this harvester is currently harvesting to the table 
-	data.crystalCurrentlyHarvesting = other
-
-    local ObjectStringRef = "object_" .. a
-    ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
-
-	-- if its not already harvesting, change it to be harvesting green tiberium
-	if not data.isAlreadyHarvesting and EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 135)  then 
-		data.isHarvestingBlue = false
-		-- remove the blue tib fx
-		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") then 
-			ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTib") 
-		end 
-		
-		data.isAlreadyHarvesting = true
-		return
-	end	
-end
-
--- self is the harvester, other is the blue tiberium crystal
-function BlueTiberiumEvent(self, other)
-	local a, data = GetHarvesterData(self)
-
-	-- assign the crystal this harvester is currently harvesting to the table 
-	data.crystalCurrentlyHarvesting = other
-
+	local a, data = GetHarvesterData(other)
 	local ObjectStringRef = "object_" .. a
     ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
 
-	-- if its not already harvesting, change it to be harvesting blue tiberium
-	if not data.isAlreadyHarvesting and EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 135) then 
-		data.isHarvestingBlue = true
-		-- show the blue tib fx
-		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTib") == 0 then 
-			ObjectGrantUpgrade(self, "Upgrade_UpgradeBlueTib") 
+	-- if IS_BEING_HARVESTED is true and the harvester is not already harvesting
+	if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 116) and not data.isAlreadyHarvesting then
+
+		-- assign the crystal this harvester is currently harvesting to the table 
+		data.crystalCurrentlyHarvesting = self
+		print(ObjectDescription(self))
+		-- blue tiberium check
+		if strfind(ObjectDescription(self), "BA9F66AB") ~= nil then
+			data.isHarvestingBlue = true
+			-- show the blue tib fx
+			if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") == 0 then 
+				ObjectGrantUpgrade(other, "Upgrade_UpgradeBlueTib") 
+			end		
+		else
+			-- hide the blue tib fx
+			if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") then 
+				ObjectRemoveUpgrade(other, "Upgrade_UpgradeBlueTib") 
+			end 
 		end
-	
+
 		data.isAlreadyHarvesting = true
-		return
+		UpdateHarvestedTime(other)
 	end
 end
 
@@ -529,13 +517,8 @@ end
 -- ####################### TIBERIUM EXPLOIT FIX ############################
 
 -- this function assigns the frame when the harvester harvests it.
-function OnBlueTiberiumHarvested(self)
-	ObjectBroadcastEventToUnits(self, "BlueTiberium", 100)
-end
-
--- same thing, but for green tiberium
-function OnGreenTiberiumHarvested(self)
-	ObjectBroadcastEventToUnits(self, "GreenTiberium", 100)
+function OnTiberiumHarvested(self)
+	ObjectBroadcastEventToUnits(self, "TiberiumEvent", 75)
 end
 
 -- checks if the crystal has been harvested longer than the maximum frames and if it doesn't have a flag assigned, it kills it.
@@ -548,7 +531,9 @@ function OffTiberiumHarvested(self)
 		local diff = curFrame - data.firstHarvestedFrame - PER_HARVEST_OFFSET
 
 	    -- the lower diff is, the more the crystal has been repeatedly harvested
-
+		--if data.firstHarvestedFrame > 1000 then
+		--	print("more than 100")
+		--end
 		if diff <= -3 then
 			data.framesBeingHarvested = data.framesBeingHarvested + diff + 6
 		elseif diff <= -2 then
@@ -567,7 +552,18 @@ function OffTiberiumHarvested(self)
 	end
 	-- time since last harvest
 	data.lastHarvestedFrame = curFrame
-	if data.framesBeingHarvested >= MAX_FRAMES_BEING_HARVESTED and not data.crystalHasBeenReset and not data.dontKillCrystal then
+
+	local factionHarvester = data.beingHarvestedBy
+	local maxFrames = 0
+
+	-- assign a different value to nod harvs as it has a 1.7s action time
+	if strfind(factionHarvester, "3A3D109A") ~= nil or strfind(factionHarvester, "21661DFB") ~= nil or strfind(factionHarvester, "C3785BFE") ~= nil then 
+		maxFrames = MAX_FRAMES_BEING_HARVESTED_NOD
+	else
+		maxFrames = MAX_FRAMES_BEING_HARVESTED
+	end
+
+	if data.framesBeingHarvested >= maxFrames and not data.crystalHasBeenReset and not data.dontKillCrystal then
 		-- prevent death FX in FXListBehaviour
 		ObjectSetObjectStatus(self, "RIDER1")
 		-- cleanup
@@ -626,6 +622,7 @@ function UpdateHarvestedTime(self)
 		if crystalData.lastHarvestedFrame ~= nil then
 			if (GetFrame() - crystalData.lastHarvestedFrame) > MAX_FRAMES_WHEN_NOT_HARVESTED then
 				-- reset harvested frames
+				print("resetting frames")
 				crystalData.framesBeingHarvested = 0
 				crystalData.lastHarvestedFrame = nil
 			end
@@ -636,6 +633,7 @@ end
 function ClearHarvestedType(self) 
 	local a, data = GetHarvesterData(self)
 	data.isAlreadyHarvesting = false
+	GetCrystalData(data.crystalCurrentlyHarvesting).beingHarvestedBy = ObjectDescription(self)
 	-- count frames for the crystal harvested
 	OffTiberiumHarvested(data.crystalCurrentlyHarvesting)
 end

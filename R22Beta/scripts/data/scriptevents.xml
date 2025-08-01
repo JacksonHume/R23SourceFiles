@@ -194,13 +194,13 @@
 			<Conditions>-HARVEST_ACTION</Conditions>
 		</ModelConditionEvent>
 	    -->
-		<ObjectStatusEvent Name="OnHarvestingEnd">
-			<Conditions>-HARVESTING</Conditions>
-		</ObjectStatusEvent>
+		<ModelConditionEvent  Name="OnHarvestingEnd">
+			<Conditions>-HARVEST_ACTION</Conditions>
+		</ModelConditionEvent>
 
-		<ObjectStatusEvent Name="OnHarvesting">
-			<Conditions>+HARVESTING</Conditions>
-		</ObjectStatusEvent>
+		<ModelConditionEvent  Name="OnHarvesting">
+			<Conditions>+HARVEST_ACTION</Conditions>
+		</ModelConditionEvent>
 					
 		<!-- ============== NEW MOBA EVENTS ============= -->				
 		<!-- Used for Ox auto-evac -->
@@ -785,8 +785,7 @@
 		<ScriptedEvent Name="OnCommandeered" />
 		<ScriptedEvent Name="OnBeamTargetInit" />	
 
-		<ScriptedEvent Name="GreenTiberium" />	
-		<ScriptedEvent Name="BlueTiberium" />	
+		<ScriptedEvent Name="TiberiumEvent" />		
     </Events>
     
     <EventList Name="BaseScriptFunctions">
@@ -794,13 +793,13 @@
     </EventList>
 	
 	<EventList Name="BlueTiberiumFunctions_R23" Inherit="BaseScriptFunctions">
-	    <EventHandler EventName="OnBeingHarvested"	ScriptFunctionName="OnBlueTiberiumHarvested" DebugSingleStep="false"/>
 		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OffTiberiumGrowing" DebugSingleStep="false"/> 
+		<EventHandler EventName="TiberiumEvent"	ScriptFunctionName="TiberiumEvent" DebugSingleStep="false"/>
 	</EventList>
 
 	<EventList Name="GreenTiberiumFunctions_R23" Inherit="BaseScriptFunctions">
-	    <EventHandler EventName="OnBeingHarvested"	ScriptFunctionName="OnGreenTiberiumHarvested" DebugSingleStep="false"/>
 	    <EventHandler EventName="OnDestroyed"	ScriptFunctionName="OffTiberiumGrowing" DebugSingleStep="false"/> 
+		<EventHandler EventName="TiberiumEvent"	ScriptFunctionName="TiberiumEvent" DebugSingleStep="false"/>
 	</EventList>
 
 	<EventList Name="NodMobileArtilleryFunctionsR23" Inherit="BaseScriptFunctions">
@@ -879,8 +878,6 @@
 	<EventList Name="AlienHarvesterFunctions_R21b" Inherit="BaseScriptFunctions">	
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
-		<EventHandler EventName="GreenTiberium"	ScriptFunctionName="GreenTiberiumEvent" DebugSingleStep="false"/>
-		<EventHandler EventName="BlueTiberium"	ScriptFunctionName="BlueTiberiumEvent" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvesting"	ScriptFunctionName="UpdateHarvestedTime" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="ClearHarvestedType" DebugSingleStep="false"/>
     </EventList>
@@ -898,8 +895,6 @@
 		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>		
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
-		<EventHandler EventName="GreenTiberium"	ScriptFunctionName="GreenTiberiumEvent" DebugSingleStep="false"/>
-		<EventHandler EventName="BlueTiberium"	ScriptFunctionName="BlueTiberiumEvent" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvesting"	ScriptFunctionName="UpdateHarvestedTime" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="ClearHarvestedType" DebugSingleStep="false"/>
     </EventList>
@@ -917,10 +912,10 @@
 		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath_R21" DebugSingleStep="false"/>		
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
-		<EventHandler EventName="GreenTiberium"	ScriptFunctionName="GreenTiberiumEvent" DebugSingleStep="false"/>
-		<EventHandler EventName="BlueTiberium"	ScriptFunctionName="BlueTiberiumEvent" DebugSingleStep="false"/>
-		<EventHandler EventName="OnHarvesting"	ScriptFunctionName="UpdateHarvestedTime" DebugSingleStep="false"/>
+		<!-- <EventHandler EventName="OnHarvesting"	ScriptFunctionName="UpdateHarvestedTime" DebugSingleStep="false"/> -->
 		<EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="ClearHarvestedType" DebugSingleStep="false"/>
+
+		<EventHandler EventName="OnHarvesting"	ScriptFunctionName="OnTiberiumHarvested" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="NodCyborgFunctions_R21g" Inherit="BaseScriptFunctions">
