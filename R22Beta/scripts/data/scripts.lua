@@ -531,9 +531,6 @@ function OffTiberiumHarvested(self)
 		local diff = curFrame - data.firstHarvestedFrame - PER_HARVEST_OFFSET
 
 	    -- the lower diff is, the more the crystal has been repeatedly harvested
-		--if data.firstHarvestedFrame > 1000 then
-		--	print("more than 100")
-		--end
 		if diff <= -3 then
 			data.framesBeingHarvested = data.framesBeingHarvested + diff + 6
 		elseif diff <= -2 then
@@ -622,7 +619,6 @@ function UpdateHarvestedTime(self)
 		if crystalData.lastHarvestedFrame ~= nil then
 			if (GetFrame() - crystalData.lastHarvestedFrame) > MAX_FRAMES_WHEN_NOT_HARVESTED then
 				-- reset harvested frames
-				print("resetting frames")
 				crystalData.framesBeingHarvested = 0
 				crystalData.lastHarvestedFrame = nil
 			end
