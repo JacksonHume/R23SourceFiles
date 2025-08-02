@@ -484,11 +484,12 @@ end
 function TiberiumEvent(self, other)
 
 	local a, data = GetHarvesterData(other)
+	local crystal = GetCrystalData(self)
 	local ObjectStringRef = "object_" .. a
     ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
 
-	-- if IS_BEING_HARVESTED is true and the harvester is not already harvesting
-	if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 116) and not data.isAlreadyHarvesting then
+	-- if IS_BEING_HARVESTED is true and the harvester is not already harvesting nor crystal is the crystal also being harvested 
+	if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 116) and not data.isAlreadyHarvesting and crystal.beingHarvestedBy == nil then
 
 		-- assign the crystal this harvester is currently harvesting to the table 
 		data.crystalCurrentlyHarvesting = self
@@ -507,7 +508,9 @@ function TiberiumEvent(self, other)
 			end 
 		end
 
+		-- maybe misplaced
 		data.isAlreadyHarvesting = true
+		crystal.beingHarvestedBy = ObjectDescription(other)
 		UpdateHarvestedTime(other)
 	end
 end
@@ -559,6 +562,8 @@ function OffTiberiumHarvested(self)
 	else
 		maxFrames = MAX_FRAMES_BEING_HARVESTED
 	end
+	
+	data.beingHarvestedBy = nil
 
 	if data.framesBeingHarvested >= maxFrames and not data.crystalHasBeenReset and not data.dontKillCrystal then
 		-- prevent death FX in FXListBehaviour
@@ -629,7 +634,6 @@ end
 function ClearHarvestedType(self) 
 	local a, data = GetHarvesterData(self)
 	data.isAlreadyHarvesting = false
-	GetCrystalData(data.crystalCurrentlyHarvesting).beingHarvestedBy = ObjectDescription(self)
 	-- count frames for the crystal harvested
 	OffTiberiumHarvested(data.crystalCurrentlyHarvesting)
 end
