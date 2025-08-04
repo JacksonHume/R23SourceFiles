@@ -188,10 +188,10 @@ function OnMoney1(self)
 			harvgreentib[a] = harvgreentib[a] + 1
 			bar1[a] = 1			
 		end
-	end
 
-	if harvesterData[a].crystalCurrentlyHarvesting ~= nil then 
-		HarvestedCrystalCheck(harvesterData[a].crystalCurrentlyHarvesting)
+		if harvesterData[a].lastCrystalHarvested ~= nil then 
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested)
+		end
 	end
 end
 
@@ -207,10 +207,10 @@ function OnMoney2(self)
 			harvgreentib[a] = harvgreentib[a] + 1 
 			bar2[a] = 1
 		end
-	end
 
-	if harvesterData[a].crystalCurrentlyHarvesting ~= nil then 
-		HarvestedCrystalCheck(harvesterData[a].crystalCurrentlyHarvesting)
+		if harvesterData[a].lastCrystalHarvested ~= nil then 
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested)
+		end
 	end
 end
 
@@ -227,11 +227,10 @@ function OnMoney3(self)
 			harvgreentib[a] = harvgreentib[a] + 1 
 			bar3[a] = 1
 		end
-
 		UpdateMoney3Frames(self)
 
-		if harvesterData[a].crystalCurrentlyHarvesting ~= nil then 
-			HarvestedCrystalCheck(harvesterData[a].crystalCurrentlyHarvesting)
+		if harvesterData[a].lastCrystalHarvested ~= nil then 
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested )
 		end
 	end
 end
@@ -248,22 +247,23 @@ function OnMoney4(self)
 			harvgreentib[a] = harvgreentib[a] + 1 
 			bar4[a] = 1
 		end
-	end
 
-	if harvesterData[a].crystalCurrentlyHarvesting ~= nil then 
-		HarvestedCrystalCheck(harvesterData[a].crystalCurrentlyHarvesting)
+		if harvesterData[a].lastCrystalHarvested ~= nil then 
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested )
+		end
 	end
 end
 
 function OnMoneyScrin(self)
 	local a = getObjectId(self)
-
-	if ObjectTestModelCondition(self, "MONEY_STORED_AMOUNT_3") then 
-		UpdateMoney3Frames(self)
-	end
-
-	if harvesterData[a].crystalCurrentlyHarvesting ~= nil then 
-		HarvestedCrystalCheck(harvesterData[a].crystalCurrentlyHarvesting)
+	if ObjectTestModelCondition(self, "DOCKING") == false then
+		-- only do thiis when 75% full
+		if ObjectTestModelCondition(self, "MONEY_STORED_AMOUNT_3") then 
+			UpdateMoney3Frames(self)
+		end
+		if harvesterData[a].lastCrystalHarvested ~= nil then 
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested )
+		end
 	end
 end
 
@@ -302,7 +302,6 @@ end
 
 function OffMoney3(self)
 	local a = getObjectId(self)
-
 	-- clear the amount of frames when docked and unloading tib
 	harvesterData[a].totalFramesHarvested75Full = 0
 
@@ -476,7 +475,7 @@ function GetHarvesterData(self)
 		frameOnHarvest75 = 0, -- the frame since becoming >= 75% full of tiberium 
 		isHarvestingBlue = false, -- is harvesting blue tiberium or not
 		isAlreadyHarvesting = false, -- the harvester is already harvesting 
-		crystalCurrentlyHarvesting = nil -- object reference to the last crystal harvested
+		lastCrystalHarvested = nil -- object reference to the last crystal harvested
 	}
 	return a, harvesterData[a]
 end
@@ -504,9 +503,8 @@ function TiberiumEvent(self, other)
 
 		-- if IS_BEING_HARVESTED is true and the harvester is not already harvesting nor crystal is the crystal also being harvested 
 		if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 116) and not data.isAlreadyHarvesting and crystal.beingHarvestedBy == nil then
-
 			-- assign the crystal this harvester is currently harvesting to the table 
-			data.crystalCurrentlyHarvesting = self
+			data.lastCrystalHarvested = self
 			-- blue tiberium check
 			if strfind(ObjectDescription(self), "BA9F66AB") ~= nil then
 				data.isHarvestingBlue = true
@@ -541,50 +539,46 @@ function HarvestedCrystalCheck(self)
 	local curFrame = GetFrame()
 
 	-- if dontKillCrystal is false increment the framesBeingHarvested and check if it has been harvested longer than the max permitted frame count.
-	if not data.dontKillCrystal then
-		data.framesBeingHarvested = data.framesBeingHarvested + curFrame - data.firstHarvestedFrame	
-		-- time since last harvest
-		data.lastHarvestedFrame = curFrame
+	data.framesBeingHarvested = data.framesBeingHarvested + curFrame - data.firstHarvestedFrame	
+	-- time since last harvest
+	data.lastHarvestedFrame = curFrame
+	local factionHarvester = data.beingHarvestedBy
+	local maxFrames = GetMaxFrames(factionHarvester)
+	if data.framesBeingHarvested >= maxFrames and not data.crystalHasBeenReset and not data.dontKillCrystal then
+		-- prevent death FX in FXListBehaviour
+		ObjectSetObjectStatus(self, "RIDER1")
+		-- cleanup
+		crystalData[getObjectId(self)] = nil
+		ExecuteAction("NAMED_KILL", self)
+		return true
+	end
+	return false 
+end
 
-		local factionHarvester = data.beingHarvestedBy
-		local maxFrames = 0
-
-		-- assign a different value to nod harvs as it has a 1.7s action time
-		if strfind(factionHarvester, "3A3D109A") ~= nil or strfind(factionHarvester, "21661DFB") ~= nil or strfind(factionHarvester, "C3785BFE") ~= nil then 
-			maxFrames = MAX_FRAMES_BEING_HARVESTED_NOD
-		else
-			maxFrames = MAX_FRAMES_BEING_HARVESTED
-		end
-
-		if data.framesBeingHarvested >= maxFrames and not data.crystalHasBeenReset then
-			-- prevent death FX in FXListBehaviour
-			ObjectSetObjectStatus(self, "RIDER1")
-			-- cleanup
-			crystalData[getObjectId(self)] = nil
-			ExecuteAction("NAMED_KILL", self)
-		end
+function GetMaxFrames(factionHarvester)	
+	-- assign a different value to nod harvs as it has a 1.7s action time
+	if strfind(factionHarvester, "3A3D109A") ~= nil or strfind(factionHarvester, "21661DFB") ~= nil or strfind(factionHarvester, "C3785BFE") ~= nil then 
+		return MAX_FRAMES_BEING_HARVESTED_NOD
+	else
+		return MAX_FRAMES_BEING_HARVESTED
 	end
 end
 
 -- checks if the crystal has been harvested longer than the maximum frames and if it doesn't have a flag assigned, it kills it.
 function OffTiberiumHarvested(self)
 	local data = GetCrystalData(self)	
-	HarvestedCrystalCheck(self)
-	
-	local harvester = harvesterData[data.beingHarvestedBy]
-	if harvester and harvester.isAlreadyHarvesting ~= nil then
-		harvester.isAlreadyHarvesting = false
+	if not HarvestedCrystalCheck(self) then
+		-- reset dontKillCrystal if its set to true
+		data.dontKillCrystal = false
+		-- reset flag if time since last harvest is more than MAX_FRAMES_WHEN_NOT_HARVESTED
+		if (GetFrame() - data.lastHarvestedFrame) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
+			data.crystalHasBeenReset = false
+		else
+			data.crystalHasBeenReset = true
+		end
+		-- reset dontKillCrystal if its set to true
 	end
-	
 	data.beingHarvestedBy = nil
-	-- reset flag if time since last harvest is more than MAX_FRAMES_WHEN_NOT_HARVESTED
-	if (GetFrame() - data.lastHarvestedFrame) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
-		data.crystalHasBeenReset = false
-	else
-		data.crystalHasBeenReset = true
-	end
-	-- reset dontKillCrystal if its set to true
-	data.dontKillCrystal = false
 end
 
 -- when the crystal is completely harvested and not killed, clear the crystalData element
@@ -597,18 +591,13 @@ end
 -- triggered on +HARVEST_ACTION +MONEY_STORED_AMOUNT_3
 function UpdateMoney3Frames(self)
 	local a, data = GetHarvesterData(self)
-	local crystal = data.crystalCurrentlyHarvesting
-	if crystal ~= nil then 
-		local crystalData = GetCrystalData(crystal)
-		data.frameOnHarvest75 = GetFrame()
-		
-		-- ideally i want to also check if the harvester has harvested that crystal more than the max frames.
-		if data.totalFramesHarvested75Full > TIBERIUM_THRESHOLD and crystal.framesBeingHarvested < TIBERIUM_THRESHOLD then
-			-- safeguard incase the tib crystal is destroyed
-			if data.crystalCurrentlyHarvesting ~= nil then
-				local crystalData = GetCrystalData(data.crystalCurrentlyHarvesting)
-				crystalData.dontKillCrystal = true
-			end
+	data.frameOnHarvest75 = GetFrame()
+	local crystal = GetCrystalData(data.lastCrystalHarvested)
+	-- safeguard incase the tib crystal is destroyed
+	if crystal ~= nil then
+		if data.totalFramesHarvested75Full > TIBERIUM_THRESHOLD and crystal.framesBeingHarvested < GetMaxFrames(a) then
+			crystal.dontKillCrystal = true
+			print("setting crystal to not be killed")
 		end
 	end
 end
@@ -628,8 +617,17 @@ function UpdateHarvestedTime(self)
 			-- reset harvested frames
 			crystalData.framesBeingHarvested = 0
 			crystalData.lastHarvestedFrame = nil
+			print("resetting frames")
 		end
 	end
+end
+
+-- I need to call OffTiberiumHarvested on -HARVEST_ACTION of the harvester otherwise it will not even happen unless manually told to
+function ClearHarvestedType(self) 
+	local a, data = GetHarvesterData(self)
+	data.isAlreadyHarvesting = false
+	-- count frames for the crystal harvested
+	OffTiberiumHarvested(data.lastCrystalHarvested)
 end
 
 -- ###################################################################
