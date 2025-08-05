@@ -187,9 +187,9 @@ function OnMoney1(self)
 			harvgreentib[a] = harvgreentib[a] + 1
 			bar1[a] = 1			
 		end
-
+		
 		if harvesterData[a].lastCrystalHarvested ~= nil then 
-			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested)
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested, GetFrame())
 		end
 	end
 end
@@ -208,7 +208,7 @@ function OnMoney2(self)
 		end
 
 		if harvesterData[a].lastCrystalHarvested ~= nil then 
-			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested)
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested, GetFrame())
 		end
 	end
 end
@@ -229,7 +229,7 @@ function OnMoney3(self)
 		UpdateMoney3Frames(self)
 
 		if harvesterData[a].lastCrystalHarvested ~= nil then 
-			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested)
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested, GetFrame())
 		end
 	end
 end
@@ -248,7 +248,7 @@ function OnMoney4(self)
 		end
 
 		if harvesterData[a].lastCrystalHarvested ~= nil then 
-			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested)
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested, GetFrame())
 		end
 	end
 end
@@ -261,7 +261,7 @@ function OnMoneyScrin(self)
 			UpdateMoney3Frames(self)
 		end
 		if harvesterData[a].lastCrystalHarvested ~= nil then 
-			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested)
+			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested, GetFrame())
 		end
 	end
 end
