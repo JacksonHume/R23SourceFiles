@@ -497,9 +497,9 @@ function TiberiumEvent(self, other)
 
 		-- if IS_BEING_HARVESTED is true and the harvester is not already harvesting nor crystal is the crystal also being harvested 
 		if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 116) then
+			local data = GetHarvesterData(other)
+			local a, crystal = GetCrystalData(self)
 			if not data.isAlreadyHarvesting and crystal.beingHarvestedBy == nil then
-				local data = GetHarvesterData(other)
-				local a, crystal = GetCrystalData(self)
 				-- assign the crystal this harvester is currently harvesting to the table 
 				data.lastCrystalHarvested = self
 				-- blue tiberium check
