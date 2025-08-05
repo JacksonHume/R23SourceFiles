@@ -246,10 +246,6 @@ function OnMoney4(self)
 			harvgreentib[a] = harvgreentib[a] + 1 
 			bar4[a] = 1
 		end
-
-		if harvesterData[a].lastCrystalHarvested ~= nil then 
-			HarvestedCrystalCheck(harvesterData[a].lastCrystalHarvested, GetFrame())
-		end
 	end
 end
 
@@ -266,7 +262,7 @@ function OnMoneyScrin(self)
 	end
 end
 
-function OffMoney0(self) 
+function OffMoney1(self) 
 	local a = getObjectId(self)		
 	if ObjectTestModelCondition(self, "DOCKING") then 
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueOne") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueOne") end 
@@ -277,7 +273,7 @@ function OffMoney0(self)
 	end
 end
 
-function OffMoney1(self)
+function OffMoney2(self)
 	local a = getObjectId(self)
 	if ObjectTestModelCondition(self, "DOCKING") then 
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueTwo") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueTwo") end 
@@ -288,8 +284,11 @@ function OffMoney1(self)
 	end
 end
 
-function OffMoney2(self)
+function OffMoney3(self)
 	local a = getObjectId(self)
+	-- clear the amount of frames when docked and unloading tib
+	harvesterData[a].totalFramesHarvested75Full = 0
+	
 	if ObjectTestModelCondition(self, "DOCKING") then 
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueThree") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueThree") end
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeGreenThree") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeGreenThree") end		
@@ -299,10 +298,8 @@ function OffMoney2(self)
 	end
 end
 
-function OffMoney3(self)
+function OffMoney4(self)
 	local a = getObjectId(self)
-	-- clear the amount of frames when docked and unloading tib
-	harvesterData[a].totalFramesHarvested75Full = 0
 
 	if ObjectTestModelCondition(self, "DOCKING") then 
 		if ObjectHasUpgrade(self, "Upgrade_UpgradeBlueFour") then ObjectRemoveUpgrade(self, "Upgrade_UpgradeBlueFour") end

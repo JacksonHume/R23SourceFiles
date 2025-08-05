@@ -162,19 +162,19 @@
 			<Conditions>+MONEY_STORED_AMOUNT_4</Conditions>
 		</ModelConditionEvent>
 		
-		<ModelConditionEvent  Name="OffMoney0">
+		<ModelConditionEvent  Name="OffMoney1">
 			<Conditions>-MONEY_STORED_AMOUNT_1</Conditions>
 		</ModelConditionEvent>	
 		
-		<ModelConditionEvent Name="OffMoney1">
+		<ModelConditionEvent Name="OffMoney2">
 			<Conditions>-MONEY_STORED_AMOUNT_2</Conditions>
 		</ModelConditionEvent>
 		
-		<ModelConditionEvent Name="OffMoney2">
+		<ModelConditionEvent Name="OffMoney3">
 			<Conditions>-MONEY_STORED_AMOUNT_3</Conditions>
 		</ModelConditionEvent>
 			
-		<ModelConditionEvent Name="OffMoney3">
+		<ModelConditionEvent Name="OffMoney4">
 			<Conditions>-MONEY_STORED_AMOUNT_4</Conditions>
 		</ModelConditionEvent>
 		
@@ -877,7 +877,6 @@
 	    <EventHandler EventName="OnMoney1"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney2"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney3"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
-		<EventHandler EventName="OnMoney4"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="GDIHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
@@ -888,7 +887,7 @@
 		<EventHandler EventName="OffMoney1"	ScriptFunctionName="OffMoney1" DebugSingleStep="false"/>
 		<EventHandler EventName="OffMoney2"	ScriptFunctionName="OffMoney2" DebugSingleStep="false"/>
 		<EventHandler EventName="OffMoney3"	ScriptFunctionName="OffMoney3" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney0"	ScriptFunctionName="OffMoney0" DebugSingleStep="false"/>
+		<EventHandler EventName="OffMoney4"	ScriptFunctionName="OffMoney4" DebugSingleStep="false"/>
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHarvesterCreated" DebugSingleStep="false"/>
 		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath" DebugSingleStep="false"/>		
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
@@ -905,7 +904,7 @@
 		<EventHandler EventName="OffMoney1"	ScriptFunctionName="OffMoney1" DebugSingleStep="false"/>
 		<EventHandler EventName="OffMoney2"	ScriptFunctionName="OffMoney2" DebugSingleStep="false"/>
 		<EventHandler EventName="OffMoney3"	ScriptFunctionName="OffMoney3" DebugSingleStep="false"/>
-		<EventHandler EventName="OffMoney0"	ScriptFunctionName="OffMoney0" DebugSingleStep="false"/>
+		<EventHandler EventName="OffMoney4"	ScriptFunctionName="OffMoney4" DebugSingleStep="false"/>
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnHarvesterCreated" DebugSingleStep="false"/>
 		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeath" DebugSingleStep="false"/>		
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
