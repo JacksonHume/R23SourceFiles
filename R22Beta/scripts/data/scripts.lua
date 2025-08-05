@@ -537,22 +537,24 @@ end
 
 function HarvestedCrystalCheck(self, curFrame)
 	local data = GetCrystalData(self)
-	local factionHarvester = getObjectId(data.beingHarvestedBy)
-	local maxFrames = GetMaxFrames(factionHarvester)
+	if data.beingHarvestedBy ~= nil then 
+		local factionHarvester = getObjectId(data.beingHarvestedBy)
+		local maxFrames = GetMaxFrames(factionHarvester)
+		-- if dontKillCrystal is false increment the framesBeingHarvested and check if it has been harvested longer than the max permitted frame count.
+		if not data.dontKillCrystal then
+			data.framesBeingHarvested = data.framesBeingHarvested + curFrame - data.firstHarvestedFrame	
 
-	if not data.dontKillCrystal then
-		data.framesBeingHarvested = data.framesBeingHarvested + curFrame - data.firstHarvestedFrame	
-
-		if data.framesBeingHarvested >= maxFrames and not data.crystalHasBeenReset then
-			-- prevent death FX in FXListBehaviour
-			ObjectSetObjectStatus(self, "RIDER1")
-			-- cleanup
-			crystalData[getObjectId(self)] = nil
-			ExecuteAction("NAMED_KILL", self)
-			return true
+			if data.framesBeingHarvested >= maxFrames and not data.crystalHasBeenReset then
+				-- prevent death FX in FXListBehaviour
+				ObjectSetObjectStatus(self, "RIDER1")
+				-- cleanup
+				crystalData[getObjectId(self)] = nil
+				ExecuteAction("NAMED_KILL", self)
+				return true
+			end
 		end
+		return false 
 	end
-	return false 
 end
 
 function GetMaxFrames(factionHarvester)	
@@ -569,26 +571,25 @@ function OffTiberiumHarvested(self)
 	local a, data = GetHarvesterData(self)
 	local crystal = GetCrystalData(data.lastCrystalHarvested)	
 	local curFrame = GetFrame()
-
-	if data ~= nil then
-		data.isAlreadyHarvesting = false
-	end
-	if not HarvestedCrystalCheck(data.lastCrystalHarvested, curFrame) then
-		-- reset dontKillCrystal if its set to true
-		crystal.dontKillCrystal = false
-		-- reset flag if time since last harvest is more than MAX_FRAMES_WHEN_NOT_HARVESTED
-		if crystal.lastHarvestedFrame ~= nil then
-			if (GetFrame() - crystal.lastHarvestedFrame) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
-				crystal.crystalHasBeenReset = false
-			else
-				crystal.crystalHasBeenReset = true
+	data.isAlreadyHarvesting = false
+	
+	if crystal ~= nil then
+		if not HarvestedCrystalCheck(data.lastCrystalHarvested, curFrame) then
+			-- reset dontKillCrystal if its set to true
+			crystal.dontKillCrystal = false
+			-- reset flag if time since last harvest is more than MAX_FRAMES_WHEN_NOT_HARVESTED
+			if crystal.lastHarvestedFrame ~= nil then
+				if (GetFrame() - crystal.lastHarvestedFrame) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
+					crystal.crystalHasBeenReset = false
+				else
+					crystal.crystalHasBeenReset = true
+				end
 			end
+			-- time since last harvest
+			crystal.lastHarvestedFrame = curFrame
 		end
-		-- if dontKillCrystal is false increment the framesBeingHarvested and check if it has been harvested longer than the max permitted frame count.
-		-- time since last harvest
-		crystal.lastHarvestedFrame = curFrame
+		crystal.beingHarvestedBy = nil
 	end
-	crystal.beingHarvestedBy = nil
 end
 
 -- when the crystal is completely harvested and not killed, clear the crystalData element
