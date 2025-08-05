@@ -497,7 +497,7 @@ function TiberiumEvent(self, other)
 
 		-- if IS_BEING_HARVESTED is true and the harvester is not already harvesting nor crystal is the crystal also being harvested 
 		if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 116) then
-			local data = GetHarvesterData(other)
+			local a, data = GetHarvesterData(other)
 			local a, crystal = GetCrystalData(self)
 			if not data.isAlreadyHarvesting and crystal.beingHarvestedBy == nil then
 				-- assign the crystal this harvester is currently harvesting to the table 
@@ -567,7 +567,7 @@ end
 
 -- checks if the crystal has been harvested longer than the maximum frames and if it doesn't have a flag assigned, it kills it.
 function OffTiberiumHarvested(self)
-	local data = GetHarvesterData(self)
+	local a, data = GetHarvesterData(self)
 	local a, crystal = GetCrystalData(data.lastCrystalHarvested)	
 	local curFrame = GetFrame()
 	data.isAlreadyHarvesting = false
@@ -602,7 +602,7 @@ end
 -- i also want to trigger this on just +MONEY_STORED_AMOUNT_3
 -- triggered on +HARVEST_ACTION +MONEY_STORED_AMOUNT_3
 function UpdateMoney3Frames(self)
-	local data = GetHarvesterData(self)
+	local a, data = GetHarvesterData(self)
 	data.frameOnHarvest75 = GetFrame()
 	local a, crystal = GetCrystalData(data.lastCrystalHarvested)
 	-- safeguard incase the tib crystal is destroyed
@@ -617,7 +617,7 @@ end
 
 -- update the number of frames harvested since becoming 75% full of tiberium
 function UpdateMoney3FramesEnd(self)
-	local data = GetHarvesterData(self)
+	local a, data = GetHarvesterData(self)
 	data.totalFramesHarvested75Full = data.totalFramesHarvested75Full + (GetFrame() - data.frameOnHarvest75) - 1
 end
 
