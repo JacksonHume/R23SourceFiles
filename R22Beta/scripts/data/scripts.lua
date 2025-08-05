@@ -486,14 +486,14 @@ function GetCrystalData(self)
 		dontKillCrystal = false, -- flag to prevent the crystal from being killed with NAMED_KILL
 		beingHarvestedBy = nil -- harvester thats currently harvesting this crystal
 	}
-	return crystalData[a]
+	return a, crystalData[a]
 end
 
 -- self is the crystal, other is the harvester
 function TiberiumEvent(self, other)
 	if self ~= nil and other ~= nil then
 		local a, data = GetHarvesterData(other)
-		local crystal = GetCrystalData(self)
+		local a, crystal = GetCrystalData(self)
 		local ObjectStringRef = "object_" .. a
 		ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
 
@@ -533,7 +533,7 @@ function OnTiberiumHarvested(self)
 end
 
 function HarvestedCrystalCheck(self, curFrame)
-	local data = GetCrystalData(self)
+	local a, data = GetCrystalData(self)
 	if data.beingHarvestedBy ~= nil then 
 		local factionHarvester = getObjectId(data.beingHarvestedBy)
 		local maxFrames = GetMaxFrames(factionHarvester)
@@ -566,8 +566,9 @@ end
 -- checks if the crystal has been harvested longer than the maximum frames and if it doesn't have a flag assigned, it kills it.
 function OffTiberiumHarvested(self)
 	local a, data = GetHarvesterData(self)
-	local crystal = GetCrystalData(data.lastCrystalHarvested)	
+	local a, crystal = GetCrystalData(data.lastCrystalHarvested)	
 	local curFrame = GetFrame()
+	print("off harvesting")
 	data.isAlreadyHarvesting = false
 	
 	if crystal ~= nil then
@@ -592,8 +593,9 @@ end
 -- when the crystal is completely harvested and not killed, clear the crystalData element
 function OffTiberiumGrowing(self)
 	-- clear it
-	-- OffTiberiumHarvested(self)
-	crystalData[getObjectId(self)] = nil
+	local a, data = GetCrystalData(self)
+	OffTiberiumHarvested(data.beingHarvestedBy)
+	crystalData[a] = nil
 end
 
 -- i also want to trigger this on just +MONEY_STORED_AMOUNT_3
@@ -601,7 +603,7 @@ end
 function UpdateMoney3Frames(self)
 	local a, data = GetHarvesterData(self)
 	data.frameOnHarvest75 = GetFrame()
-	local crystal = GetCrystalData(data.lastCrystalHarvested)
+	local a, crystal = GetCrystalData(data.lastCrystalHarvested)
 	-- safeguard incase the tib crystal is destroyed
 	if crystal ~= nil then
 		-- if the harvester since becoming 75% full of tiberium has harvested more than the threshold and also the crystal its harvesting has been harvested less than the max frames it can be harvested 
@@ -620,7 +622,7 @@ end
 
 -- check if the last time the crystal was harvested was over a minute ago and update the the first frame value
 function UpdateHarvestedTime(self)
-	local crystalData = self
+	local a, crystalData = self
 	crystalData.firstHarvestedFrame = GetFrame()
 
 	if crystalData.lastHarvestedFrame ~= nil then
