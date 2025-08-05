@@ -473,7 +473,7 @@ function GetHarvesterData(self)
 		isAlreadyHarvesting = false, -- the harvester is already harvesting 
 		lastCrystalHarvested = nil -- object reference to the last crystal harvested
 	}
-	return a, harvesterData[a]
+	return harvesterData[a]
 end
 
 function GetCrystalData(self)
@@ -492,33 +492,35 @@ end
 -- self is the crystal, other is the harvester
 function TiberiumEvent(self, other)
 	if self ~= nil and other ~= nil then
-		local a, data = GetHarvesterData(other)
-		local a, crystal = GetCrystalData(self)
-		local ObjectStringRef = "object_" .. a
+		local ObjectStringRef = "object_" .. GetRandomNumber()
 		ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
 
 		-- if IS_BEING_HARVESTED is true and the harvester is not already harvesting nor crystal is the crystal also being harvested 
-		if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 116) and not data.isAlreadyHarvesting and crystal.beingHarvestedBy == nil then
-			-- assign the crystal this harvester is currently harvesting to the table 
-			data.lastCrystalHarvested = self
-			-- blue tiberium check
-			if strfind(ObjectDescription(self), "BA9F66AB") ~= nil then
-				data.isHarvestingBlue = true
-				-- show the blue tib fx
-				if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") == 0 then 
-					ObjectGrantUpgrade(other, "Upgrade_UpgradeBlueTib") 
-				end		
-			else
-				data.isHarvestingBlue = false
-				-- hide the blue tib fx
-				if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") then 
-					ObjectRemoveUpgrade(other, "Upgrade_UpgradeBlueTib") 
-				end 
+		if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 116) then
+			if not data.isAlreadyHarvesting and crystal.beingHarvestedBy == nil then
+				local data = GetHarvesterData(other)
+				local a, crystal = GetCrystalData(self)
+				-- assign the crystal this harvester is currently harvesting to the table 
+				data.lastCrystalHarvested = self
+				-- blue tiberium check
+				if strfind(ObjectDescription(self), "BA9F66AB") ~= nil then
+					data.isHarvestingBlue = true
+					-- show the blue tib fx
+					if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") == 0 then 
+						ObjectGrantUpgrade(other, "Upgrade_UpgradeBlueTib") 
+					end		
+				else
+					data.isHarvestingBlue = false
+					-- hide the blue tib fx
+					if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") then 
+						ObjectRemoveUpgrade(other, "Upgrade_UpgradeBlueTib") 
+					end 
+				end
+				data.isAlreadyHarvesting = true
+				crystal.beingHarvestedBy = other
+				-- updated crystal harvested time
+				UpdateHarvestedTime(crystal)
 			end
-			data.isAlreadyHarvesting = true
-			crystal.beingHarvestedBy = other
-			-- updated crystal harvested time
-			UpdateHarvestedTime(crystal)
 		end
 	end
 end
@@ -565,7 +567,7 @@ end
 
 -- checks if the crystal has been harvested longer than the maximum frames and if it doesn't have a flag assigned, it kills it.
 function OffTiberiumHarvested(self)
-	local a, data = GetHarvesterData(self)
+	local data = GetHarvesterData(self)
 	local a, crystal = GetCrystalData(data.lastCrystalHarvested)	
 	local curFrame = GetFrame()
 	data.isAlreadyHarvesting = false
@@ -600,7 +602,7 @@ end
 -- i also want to trigger this on just +MONEY_STORED_AMOUNT_3
 -- triggered on +HARVEST_ACTION +MONEY_STORED_AMOUNT_3
 function UpdateMoney3Frames(self)
-	local a, data = GetHarvesterData(self)
+	local data = GetHarvesterData(self)
 	data.frameOnHarvest75 = GetFrame()
 	local a, crystal = GetCrystalData(data.lastCrystalHarvested)
 	-- safeguard incase the tib crystal is destroyed
@@ -615,7 +617,7 @@ end
 
 -- update the number of frames harvested since becoming 75% full of tiberium
 function UpdateMoney3FramesEnd(self)
-	local a, data = GetHarvesterData(self)
+	local data = GetHarvesterData(self)
 	data.totalFramesHarvested75Full = data.totalFramesHarvested75Full + (GetFrame() - data.frameOnHarvest75) - 1
 end
 
