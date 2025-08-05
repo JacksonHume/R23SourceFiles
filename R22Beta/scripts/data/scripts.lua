@@ -473,7 +473,7 @@ function GetHarvesterData(self)
 		isAlreadyHarvesting = false, -- the harvester is already harvesting 
 		lastCrystalHarvested = nil -- object reference to the last crystal harvested
 	}
-	return harvesterData[a]
+	return a, harvesterData[a]
 end
 
 function GetCrystalData(self)
