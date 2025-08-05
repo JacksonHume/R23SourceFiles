@@ -592,7 +592,7 @@ end
 -- when the crystal is completely harvested and not killed, clear the crystalData element
 function OffTiberiumGrowing(self)
 	-- clear it
-	OffTiberiumHarvested(self)
+	-- OffTiberiumHarvested(self)
 	crystalData[getObjectId(self)] = nil
 end
 
