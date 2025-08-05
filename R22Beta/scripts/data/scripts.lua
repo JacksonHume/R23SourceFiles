@@ -492,7 +492,7 @@ end
 -- self is the crystal, other is the harvester
 function TiberiumEvent(self, other)
 	if self ~= nil and other ~= nil then
-		local ObjectStringRef = "object_" .. GetRandomNumber()
+		local ObjectStringRef = "object_" .. floor(GetRandomNumber()*99999999)
 		ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
 
 		-- if IS_BEING_HARVESTED is true and the harvester is not already harvesting nor crystal is the crystal also being harvested 
