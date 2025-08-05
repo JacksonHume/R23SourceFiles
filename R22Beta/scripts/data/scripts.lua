@@ -568,7 +568,6 @@ function OffTiberiumHarvested(self)
 	local a, data = GetHarvesterData(self)
 	local a, crystal = GetCrystalData(data.lastCrystalHarvested)	
 	local curFrame = GetFrame()
-	print("off harvesting")
 	data.isAlreadyHarvesting = false
 	
 	if crystal ~= nil then
