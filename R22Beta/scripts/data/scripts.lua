@@ -494,8 +494,6 @@ function TiberiumEvent(self, other)
 	if self ~= nil and other ~= nil then
 		local a, data = GetHarvesterData(other)
 		local crystal = GetCrystalData(self)
-		-- updated crystal harvested time
-		UpdateHarvestedTime(crystal)
 		local ObjectStringRef = "object_" .. a
 		ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
 
@@ -519,6 +517,8 @@ function TiberiumEvent(self, other)
 			end
 			data.isAlreadyHarvesting = true
 			crystal.beingHarvestedBy = other
+			-- updated crystal harvested time
+			UpdateHarvestedTime(crystal)
 		end
 	end
 end
