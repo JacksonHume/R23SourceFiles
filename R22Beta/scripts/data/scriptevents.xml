@@ -189,14 +189,14 @@
 		<ModelConditionEvent  Name="OnHarvestingMoney3End">
 			<Conditions>-HARVEST_ACTION +MONEY_STORED_AMOUNT_3</Conditions>
 		</ModelConditionEvent>
+		
+		<ObjectStatusEvent Name="OnHarvesting">
+			<Conditions>+HARVESTING</Conditions>
+		</ObjectStatusEvent>	
 
-		<ModelConditionEvent  Name="OnHarvestingEnd">
-			<Conditions>-HARVEST_ACTION</Conditions>
-		</ModelConditionEvent>
-
-		<ModelConditionEvent  Name="OnHarvesting">
-			<Conditions>+HARVEST_ACTION</Conditions>
-		</ModelConditionEvent>
+		<ObjectStatusEvent Name="OnHarvestingEnd">
+			<Conditions>-HARVESTING</Conditions>
+		</ObjectStatusEvent>	
 					
 		<!-- ============== NEW MOBA EVENTS ============= -->				
 		<!-- Used for Ox auto-evac -->
@@ -791,15 +791,11 @@
 	<EventList Name="BlueTiberiumFunctions_R23" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OffTiberiumGrowing" DebugSingleStep="false"/> 
 		<EventHandler EventName="TiberiumEvent"	ScriptFunctionName="TiberiumEvent" DebugSingleStep="false"/>
-		<EventHandler EventName="OnBeingHarvested1"	ScriptFunctionName="OffTiberiumHarvested" DebugSingleStep="false"/> 
-		<EventHandler EventName="OnBeingHarvested"	ScriptFunctionName="UpdateHarvestedTime" DebugSingleStep="false"/>
 	</EventList>
 
 	<EventList Name="GreenTiberiumFunctions_R23" Inherit="BaseScriptFunctions">
 	    <EventHandler EventName="OnDestroyed"	ScriptFunctionName="OffTiberiumGrowing" DebugSingleStep="false"/> 
 		<EventHandler EventName="TiberiumEvent"	ScriptFunctionName="TiberiumEvent" DebugSingleStep="false"/>
-		<EventHandler EventName="OnBeingHarvested1"	ScriptFunctionName="OffTiberiumHarvested" DebugSingleStep="false"/>
-		<EventHandler EventName="OnBeingHarvested"	ScriptFunctionName="UpdateHarvestedTime" DebugSingleStep="false"/>
 	</EventList>
 
 	<EventList Name="NodMobileArtilleryFunctionsR23" Inherit="BaseScriptFunctions">
@@ -877,7 +873,7 @@
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvesting"	ScriptFunctionName="OnTiberiumHarvested" DebugSingleStep="false"/>
-		<!-- <EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="ClearHarvestedType" DebugSingleStep="false"/> -->
+		<EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="OffTiberiumHarvested" DebugSingleStep="false"/>
 	    <EventHandler EventName="OnMoney1"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney2"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney3"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
@@ -898,7 +894,7 @@
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvesting"	ScriptFunctionName="OnTiberiumHarvested" DebugSingleStep="false"/>
-		<!-- <EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="ClearHarvestedType" DebugSingleStep="false"/> -->
+		<EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="OffTiberiumHarvested" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="NodHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
@@ -915,7 +911,7 @@
 		<EventHandler EventName="OnHarvestingMoney3"	ScriptFunctionName="UpdateMoney3Frames" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvestingMoney3End"	ScriptFunctionName="UpdateMoney3FramesEnd" DebugSingleStep="false"/>
 		<EventHandler EventName="OnHarvesting"	ScriptFunctionName="OnTiberiumHarvested" DebugSingleStep="false"/>
-		<!-- <EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="ClearHarvestedType" DebugSingleStep="false"/> -->
+		<EventHandler EventName="OnHarvestingEnd"	ScriptFunctionName="OffTiberiumHarvested" DebugSingleStep="false"/>
     </EventList>
 	
 	<EventList Name="NodCyborgFunctions_R21g" Inherit="BaseScriptFunctions">
