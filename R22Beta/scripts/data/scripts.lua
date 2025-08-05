@@ -621,7 +621,7 @@ end
 
 -- check if the last time the crystal was harvested was over a minute ago and update the the first frame value
 function UpdateHarvestedTime(self)
-	local a, crystalData = self
+	local crystalData = self
 	crystalData.firstHarvestedFrame = GetFrame()
 
 	if crystalData.lastHarvestedFrame ~= nil then
