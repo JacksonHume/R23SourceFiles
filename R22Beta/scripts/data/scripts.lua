@@ -736,13 +736,12 @@ function OnHuskCapture(self, slaughterer)
 			local curFrame = GetFrame()
 							
 			for i = 1, getn(playerTable),1 do
-				local player = playerTable[i]
 	
-				local teamStr =  "team" .. player
+				local teamStr =  "team" .. playerTable[i]
 			
 				-- i is the engineer owner
 				if strfind(engiOwner, teamStr) then
-					if strfind(huskOwner, teamStr) == nil and i <= 8 then 
+					if strfind(huskOwner, teamStr) == nil then 
 						-- Change the team of the player if it isnt the same team as the slaughterer.
 						ExecuteAction("UNIT_SET_TEAM", slaughterer, playerTable[i] .. "/" .. teamStr)
 					end
@@ -778,8 +777,7 @@ function OnHuskCapture(self, slaughterer)
 				ExecuteAction("UNIT_SET_TEAM", slaughterer, "/team")
 			else
 				for i = 1, getn(playerTable), 1 do
-					local player = playerTable[i]
-					local teamStr = "team" .. player
+					local teamStr = "team" .. playerTable[i]
 
 					if strfind(huskOwner, teamStr) and strfind(engiOwner, teamStr) == nil and i <= 8 then
 						ObjectCreateAndFireTempWeapon(slaughterer, "AlertHuskPlayer" .. i)
