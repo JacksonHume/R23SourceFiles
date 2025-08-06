@@ -2,6 +2,13 @@
 1.02+ R23 source files for reference. Assets may be used but credit would be appreciated.
 This cannot be compiled as a standalone mod as it does not contain all of the 1.02+ files, only the ones I have modified or added over the years.
 
+# R23g Changelog
+* Tiberium type detection while harvesting has been improved significantly. [Video Link](https://youtu.be/sA016u1djmI)  
+* Ceramic Armor Hammerheads no longer show an extra model while dying.
+* Nod factions Commando target selection changed to match the GDI Commando.
+* Husks now play a notification to the owner of the player whose husk has been captured.
+* An exploit resulting in Tiberium Crystals being harvestable indefinitely without depleting value has been fixed.
+
 # R23f Changelog
 * Husks no longer will play the sound “unit lost” when captured.
 * Avatars and Purifiers will no longer become uncapturable for enemies.
