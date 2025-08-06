@@ -588,7 +588,7 @@ function OffTiberiumHarvested(self)
 					crystal.dontKillCrystal = false
 					-- reset flag if time since last harvest is more than MAX_FRAMES_WHEN_NOT_HARVESTED
 					if crystal.lastHarvestedFrame ~= nil then
-						if (GetFrame() - crystal.lastHarvestedFrame) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
+						if (curFrame - crystal.lastHarvestedFrame) <= MAX_FRAMES_WHEN_NOT_HARVESTED then
 							crystal.crystalHasBeenReset = false
 						else
 							crystal.crystalHasBeenReset = true
@@ -612,8 +612,8 @@ function OffTiberiumGrowing(self)
 		if data ~= nil then
 			data.isAlreadyHarvesting = false
 		end
+		crystalData[a] = nil
 	end	
-	crystalData[a] = nil
 end
 
 -- i also want to trigger this on just +MONEY_STORED_AMOUNT_3
