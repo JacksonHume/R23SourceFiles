@@ -639,7 +639,7 @@ function UpdateMoney3FramesEnd(self)
 	local _, data = GetHarvesterData(self)
 	if data ~= nil then
 		-- subtracting one to partially resolve repeated OffTiberiumHarvested calls on the same crystal from prematurely killing it off
-		data.totalFramesHarvested75Full = data.totalFramesHarvested75Full + (GetFrame() - data.frameOnHarvest75) - 1
+		data.totalFramesHarvested75Full = data.totalFramesHarvested75Full + (GetFrame() - data.frameOnHarvest75) 
 	end
 end
 
