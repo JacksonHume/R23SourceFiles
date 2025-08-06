@@ -549,7 +549,7 @@ function HarvestedCrystalCheck(self, curFrame)
 		local factionHarvester = getObjectId(data.beingHarvestedBy)
 		local maxFrames = GetMaxFrames(factionHarvester)
 		-- if dontKillCrystal is false increment the framesBeingHarvested and check if it has been harvested longer than the max permitted frame count.
-		if not data.dontKillCrystal then
+		if not data.dontKillCrystal and ObjectTestModelCondition(data.beingHarvestedBy, "MONEY_STORED_AMOUNT_4") == false then
 			data.framesBeingHarvested = data.framesBeingHarvested + curFrame - data.firstHarvestedFrame	
 
 			if data.framesBeingHarvested >= maxFrames and not data.crystalHasBeenReset then
