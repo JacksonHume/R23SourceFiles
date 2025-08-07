@@ -20,13 +20,16 @@
 	<UpgradeTemplate id="Upgrade_HuskCaptureFX"
 		DisplayName="APT:UnitsLost"
 		Type="OBJECT"
-		BuildCost="0"
-		BuildTime="3.0s"
-   	    ResearchCompleteEvaEvent ="None">
+   	    SkirmishAIHeuristic="IGNORE">
 	</UpgradeTemplate>
 
 	<UpgradeTemplate id="Upgrade_HideHusk"
 		Type="OBJECT"
+	/>
+
+	<UpgradeTemplate id="Upgrade_DefaultHuskUpgrade"
+		Type="OBJECT"
+		SkirmishAIHeuristic="IGNORE"
 	/>
 
 	<UpgradeTemplate id="Upgrade_EngineerCapture"

@@ -5,11 +5,8 @@
 		Side="Neutral"
 		EditorSorting="MISC_MAN_MADE"
 		TransportSlotCount="1"
-		EnergyProduction="0"
-		EnergyBonus="0"
 		CommandSet="HuskCommandSet"
-		KindOf="IMMOBILE NO_COLLIDE HIDE_IF_FOGGED UNATTACKABLE NOT_AUTOACQUIRABLE FS_POWER" 
-		RadarPriority="STRUCTURE"
+		KindOf="IMMOBILE NO_COLLIDE HIDE_IF_FOGGED UNATTACKABLE NOT_AUTOACQUIRABLE" 
 		EditorName="CreateHuskEffect">
 		<DisplayName>Name:GDIPowerPlant</DisplayName>
 		<ArmorSet
@@ -35,10 +32,15 @@
 			<ProductionUpdate
 				id="ModuleTag_ProductionUpdate"
 				GiveNoXP="true" />
-			<PowerUpgrade
-				id="ModuleTag_Turbines">
+			<GrantUpgradeCreate
+				id="ModuleTag_GrantUpgradeCreate" 
+				UpgradeToGrant="Upgrade_DefaultHuskUpgrade"
+			/>
+			<RemoveUpgradeUpgrade
+				id="ModuleTag_CommandSet_RemoveFor_01">
 				<TriggeredBy>Upgrade_HuskCaptureFX</TriggeredBy>
-			</PowerUpgrade>
+				<UpgradeToRemove>Upgrade_DefaultHuskUpgrade</UpgradeToRemove>
+			</RemoveUpgradeUpgrade>
 		</Behaviors>
 		<AI>
 			<AIUpdate
