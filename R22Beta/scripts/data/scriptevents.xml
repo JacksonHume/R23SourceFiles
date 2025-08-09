@@ -877,6 +877,7 @@
 	    <EventHandler EventName="OnMoney1"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney2"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
 		<EventHandler EventName="OnMoney3"	ScriptFunctionName="OnMoneyScrin" DebugSingleStep="false"/>
+		<EventHandler EventName="OnDestroyed"	ScriptFunctionName="OnHarvesterDeathScrin" DebugSingleStep="false"/>	
     </EventList>
 	
 	<EventList Name="GDIHarvesterFunctions_R21g" Inherit="BaseScriptFunctions">	
