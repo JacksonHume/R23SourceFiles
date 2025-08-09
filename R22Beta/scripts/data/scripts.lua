@@ -508,7 +508,6 @@ function TiberiumEvent(self, other)
 	if self ~= nil and other ~= nil then
 		local ObjectStringRef = "object_" .. floor(GetRandomNumber()*99999999)
 		ExecuteAction("SET_UNIT_REFERENCE", ObjectStringRef , self)
-
 		-- if IS_BEING_HARVESTED is true
 		if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", ObjectStringRef , 116) then
 			local _, data = GetHarvesterData(other)
@@ -518,7 +517,7 @@ function TiberiumEvent(self, other)
 				-- assign the crystal this harvester is currently harvesting to the table 
 				data.lastCrystalHarvested = self
 				-- blue tiberium check
-				if strfind(ObjectDescription(self), "BA9F66AB") ~= nil then
+				if strfind(ObjectDescription(self), "BA9F66AB") ~= nil or strfind(ObjectDescription(self), "TiberiumCrystalBlue") ~= nil then
 					data.isHarvestingBlue = true
 					-- show the blue tib fx
 					if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") == 0 then 
@@ -552,7 +551,7 @@ end
 function HarvestedCrystalCheck(self, curFrame)
 	local a, data = GetCrystalData(self)
 	if data.beingHarvestedBy ~= nil then 
-		local factionHarvester = getObjectId(data.beingHarvestedBy)
+		local factionHarvester = ObjectDescription(data.beingHarvestedBy)
 		local maxFrames = GetMaxFrames(factionHarvester)
 		-- if dontKillCrystal is false increment the framesBeingHarvested and check if it has been harvested longer than the max permitted frame count.
 		if not data.dontKillCrystal and ObjectTestModelCondition(data.beingHarvestedBy, "MONEY_STORED_AMOUNT_4") == false then
