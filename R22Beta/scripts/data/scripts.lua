@@ -632,7 +632,7 @@ function UpdateMoney3Frames(self)
 		if crystal ~= nil then
 			-- if the harvester since becoming 75% full of tiberium has harvested more than the threshold and also the crystal its harvesting has been harvested less than the max frames it can be harvested 
 			-- and crystal.framesBeingHarvested < GetMaxFrames(a)
-			if data.totalFramesHarvested75Full >= GetMaxFrames(a)  then
+			if data.totalFramesHarvested75Full >= GetMaxFrames(ObjectDescription(self))  then
 				crystal.dontKillCrystal = true
 			end
 		end
