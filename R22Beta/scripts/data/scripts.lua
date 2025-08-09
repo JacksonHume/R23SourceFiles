@@ -518,24 +518,19 @@ function TiberiumEvent(self, other)
 				-- assign the crystal this harvester is currently harvesting to the table 
 				data.lastCrystalHarvested = self
 				-- blue tiberium check
-				local factionHarvester = getObjectId(other)
-				-- scrin harvester check, dont apply blue tib upgrades to scrin harvesters
-				if strfind(factionHarvester, "14E34DE2") == nil and strfind(factionHarvester, "C37F7227") == nil and strfind(factionHarvester, "998395BF") == nil then 
-					if strfind(ObjectDescription(self), "BA9F66AB") ~= nil then
-						data.isHarvestingBlue = true
-						-- show the blue tib fx
-						if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") == 0 then 
-							ObjectGrantUpgrade(other, "Upgrade_UpgradeBlueTib") 
-						end		
-					else
-						data.isHarvestingBlue = false
-						-- hide the blue tib fx
-						if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") then 
-							ObjectRemoveUpgrade(other, "Upgrade_UpgradeBlueTib") 
-						end 
-					end
+				if strfind(ObjectDescription(self), "BA9F66AB") ~= nil then
+					data.isHarvestingBlue = true
+					-- show the blue tib fx
+					if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") == 0 then 
+						ObjectGrantUpgrade(other, "Upgrade_UpgradeBlueTib") 
+					end		
+				else
+					data.isHarvestingBlue = false
+					-- hide the blue tib fx
+					if ObjectHasUpgrade(other, "Upgrade_UpgradeBlueTib") then 
+						ObjectRemoveUpgrade(other, "Upgrade_UpgradeBlueTib") 
+					end 
 				end
-
 				data.isAlreadyHarvesting = true
 				crystal.beingHarvestedBy = other
 				-- updated crystal harvested time
