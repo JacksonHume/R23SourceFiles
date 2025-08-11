@@ -81,8 +81,6 @@
 		<Include source="traveler59\Units\t59eradicatorhexapod.xml" type="all"/>		
 		<Include source="Reaper17\Units\r17eradicatorhexapod.xml" type="all"/> -->
 
-		<Include source="GlobalData/upgrade.xml" type="all"/>
-		<Include source="CreateHuskEffect.xml" type="all"/> 
 		<!-- r23g 
 	    <Include source="Nod\Units\NODCommando.xml" type="all"/>
 	    <Include source="MarkedOfKane/Units/MoKCommando.xml" type="all"/>	
@@ -99,6 +97,20 @@
 		<Include source="Tiberium/TiberiumFieldBlueSeeded.xml" type="all"/>	
 		<Include source="ZOCOM\Units\ZOCOMHammerhead.xml" type="all"/>
 		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>
-		<Include source="Nod\Units\NODHarvester.xml" type="all"/>	 -->
+		<Include source="Nod\Units\NODHarvester.xml" type="all"/>
+		<Include source="GlobalData/upgrade.xml" type="all"/>
+		<Include source="CreateHuskEffect.xml" type="all"/> 	 -->
+
+		<Include source="GDI\Units\GDIEngineer.xml" type="all"/>
+		<Include source="SteelTalons\Units\STEngineer.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMEngineer.xml" type="all"/>
+
+		<Include source="BlackHand\Units\BHSaboteur.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\markedofkanesaboteur.xml" type="all"/>
+		<Include source="Nod\Units\NODSaboteur.xml" type="all"/>
+
+		<Include source="Alien\Units\AlienAssimilator.xml" type="all"/>
+		<Include source="traveler59\Units\Traveler59Assimilator.xml" type="all"/>
+		
 	</Includes>
 </AssetDeclaration>

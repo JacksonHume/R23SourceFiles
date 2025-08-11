@@ -11,7 +11,7 @@
 		BuildTime="5"
 		CommandSet="AlienAssimilatorCommandSet"
 		IsTrainable="true"
-		KindOf="PRELOAD SELECTABLE ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY SCORE CAN_CAPTURE PATH_THROUGH_INFANTRY STEALTH_GARRISON HEALED_BY_TIBERIUM SKIRMISH_AI_DONT_GARRISON ENGINEER CAN_CAPTURE CAN_BE_FAVORITE_UNIT IGNORES_SELECT_ALL MOVE_FOR_NOONE"
+		KindOf="PRELOAD SELECTABLE ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY SCORE CAN_CAPTURE PATH_THROUGH_INFANTRY STEALTH_GARRISON HEALED_BY_TIBERIUM SKIRMISH_AI_DONT_GARRISON ENGINEER CAN_CAPTURE CAN_BE_FAVORITE_UNIT IGNORES_SELECT_ALL"
 		RadarPriority="UNIT"
 		BuildCompletion="APPEARS_AT_RALLY_POINT"
 		UnitCategory="INFANTRY"
@@ -396,63 +396,11 @@
 				MaxHealth="75.0" />
 		</Body>
 		<Geometry
-			IsSmall="True">
+			IsSmall="true">
 			<Shape
 				Type="CYLINDER"
-				ContactPointGeneration="NONE"
-				MajorRadius="3.5"
-				MinorRadius="3.5"
-				Height="13"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="True">
-				<Offset
-					x="0"
-					y="0"
-					z="0" />
-			</Shape>		
-			<Shape
-				Type="CYLINDER"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="16"
-					y="0"
-					z="15" />
-			</Shape>		
-			<Shape
-				Type="CYLINDER"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="16"
-					y="3.5"
-					z="15" />
-			</Shape>			
-			<Shape
-				Type="CYLINDER"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="16"
-					y="-3.5"
-					z="15" />
-			</Shape>	
+				MajorRadius="7.0"
+				Height="13.0"></Shape>
 		</Geometry>
 		<AudioArrayVoice>
 			<AudioEntry

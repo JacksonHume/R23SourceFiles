@@ -2122,63 +2122,11 @@
 			</AnimationSoundClientBehavior>
 		</ClientBehaviors>
 		<Geometry
-			IsSmall="True">
+			IsSmall="true">
 			<Shape
 				Type="CYLINDER"
-				ContactPointGeneration="NONE"
-				MajorRadius="3.5"
-				MinorRadius="3.5"
-				Height="13"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="True">
-				<Offset
-					x="0"
-					y="0"
-					z="0" />
-			</Shape>		
-			<Shape
-				Type="CYLINDER"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="16"
-					y="0"
-					z="15" />
-			</Shape>		
-			<Shape
-				Type="CYLINDER"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="16"
-					y="3.5"
-					z="15" />
-			</Shape>			
-			<Shape
-				Type="CYLINDER"
-				ContactPointGeneration="NONE"
-				MajorRadius="0"
-				MinorRadius="0"
-				Height="0"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="False">
-				<Offset
-					x="16"
-					y="-3.5"
-					z="15" />
-			</Shape>	
+				MajorRadius="7.0"
+				Height="13.0"></Shape>
 		</Geometry>
 		<AudioArrayVoice>
 			<AudioEntry
