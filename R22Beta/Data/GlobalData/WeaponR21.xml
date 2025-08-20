@@ -4805,6 +4805,17 @@
 					<ExcludeThing>Traveler59CustomizableVehicle</ExcludeThing>
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
+			<TintObjectsNugget
+				Radius="100"
+				PreColorTime="0s"
+				SustainedColorTime="1.25s"
+				ForbiddenTargetObjectStatus="USER_POWERED_DOWN"
+				ForbiddenTargetModelCondition="AFFECTED_BY_EMP"
+				PostColorTime="0s"
+				Frequency="0"
+				Amplitude="0">
+				<Color R="0.2" G="-0.0" B="0.5" />
+			</TintObjectsNugget>
 		</Nuggets>
 	</WeaponTemplate>
 
@@ -4843,16 +4854,6 @@
 					<ExcludeThing>AlienCrystalShield</ExcludeThing>
 				</SpecialObjectFilter>
 			</AttributeModifierNugget>
-
-			<TintObjectsNugget
-				Radius="100"
-				PreColorTime="0s"
-				SustainedColorTime="22.5s"
-				PostColorTime="0s"
-				Frequency="0"
-				Amplitude="0">
-				<Color R="0.2" G="-0.0" B="0.5" />
-			</TintObjectsNugget>
 		</Nuggets>
 	</WeaponTemplate>
 

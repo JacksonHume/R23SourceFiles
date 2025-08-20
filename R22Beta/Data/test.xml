@@ -80,16 +80,15 @@
 		<Include source="Alien/Units/alieneradicatorhexapod.xml" type="all"/>
 		<Include source="traveler59\Units\t59eradicatorhexapod.xml" type="all"/>		
 		<Include source="Reaper17\Units\r17eradicatorhexapod.xml" type="all"/> -->
-
 		<Include source="GlobalData/upgrade.xml" type="all"/>
 		<Include source="CreateHuskEffect.xml" type="all"/> 
+		<Include source="GlobalData/WeaponR21.xml" type="all"/>	
 		<!-- r23g 
 	    <Include source="Nod\Units\NODCommando.xml" type="all"/>
 	    <Include source="MarkedOfKane/Units/MoKCommando.xml" type="all"/>	
 		<Include source="BlackHand/Units/BHCommando.xml" type="all"/>			
 		<Include source="GlobalData/ObjectCreationLists.xml" type="all"/>
 		<Include source="GlobalData/WeaponR23.xml" type="all"/>	
-		<Include source="GlobalData/WeaponR21.xml" type="all"/>	
 		<Include source="GlobalData/AttributeModifier.xml" type="all"/>	
 		<Include source="Alien\Units\AlienHarv.xml" type="all"/>	
 		<Include source="Tiberium/TiberiumCrystal.xml" type="all"/>	
